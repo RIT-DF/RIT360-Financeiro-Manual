@@ -37,11 +37,46 @@ Para OSCs que estão migrando de outro sistema ou que precisam cadastrar muitos 
 2. **Baixe o template** CSV. O arquivo já vem com o cabeçalho correto e algumas linhas de exemplo.
 3. Preencha sua planilha. Campos **obrigatórios**: nome completo, e-mail e papel. **Opcionais**: telefone, data de nascimento, CPF, RG.
 4. Faça **upload** do arquivo. O RIT360 Financeiro mostra uma **pré-visualização** com cada linha classificada por status:
-   - **Novo** — vai receber convite por e-mail
-   - **Já cadastrado** — usuário existente em outra OSC; cria vínculo direto sem convite
+   - **Novo** — vai receber e-mail para definir a senha de acesso
+   - **Já cadastrado** — usuário existente em outra OSC; cria vínculo direto sem novo acesso
    - **Vínculo ativo na OSC** — usuário que já é membro; perfil pode ser atualizado (campos vazios apenas)
    - **Com erro** — linha que será pulada (motivo explícito ao lado)
-5. Clique em **Importar**. O RIT360 Financeiro dispara os convites por e-mail para os novos cadastros e atualiza os perfis dos demais.
+
+   [![Importar usuários — pré-visualização com linhas classificadas](/assets/screenshots/manual-config-usuarios-importar-preview.png)](/assets/screenshots/manual-config-usuarios-importar-preview.png)
+   *Pré-visualização — cada linha classificada por status (novo, já cadastrado, vínculo ativo, com erro)*
+
+5. Clique em **Importar**. A importação **começa a rodar em segundo plano** e a tela é liberada na hora — você não precisa esperar com o navegador aberto. Aparece a mensagem **"Importação iniciada — avisaremos quando concluir"** e você pode seguir usando o app normalmente.
+
+   [![Importação iniciada — processando em segundo plano](/assets/screenshots/manual-config-usuarios-importacao-iniciada.png)](/assets/screenshots/manual-config-usuarios-importacao-iniciada.png)
+   *Ao confirmar, a importação começa em segundo plano e a tela é liberada*
+
+> 📖 **Conceito · Por que a importação roda em segundo plano**
+>
+> Cadastrar muitos membros de uma vez (dezenas ou centenas) envolve criar cada acesso e disparar cada e-mail — o que leva tempo. Fazer tudo "na frente" travava a tela e, em planilhas grandes, chegava a **falhar por demora**. Agora o sistema recebe sua planilha, confirma na hora e faz o trabalho pesado por trás; ao terminar, ele te avisa. Você importa 5 ou 500 membros sem diferença na sua espera.
+
+### Aviso de conclusão
+
+Quando a importação termina, quem importou recebe um **e-mail e uma notificação** com o resumo: quantos foram convidados, quantos ficaram com **e-mail pendente**, quantos foram **vinculados**, quantos **perfis foram atualizados** e quantas linhas tiveram **erro**.
+
+Se alguma linha deu erro, o aviso é **acionável**: ele lista o **número da linha**, o **nome ou e-mail** e o **motivo** (ex.: *"Linha 5 (joao@exemplo.org): CPF deve ter 11 dígitos"*), para você corrigir na planilha e reimportar **apenas as linhas que faltaram**. Por segurança, o aviso nunca traz CPF nem RG no corpo — esses dados ficam só no arquivo completo, protegido por login (ver Histórico abaixo).
+
+### Histórico de importações
+
+A tela de importação tem uma aba **Histórico** que lista todas as importações já feitas na sua OSC, com **data**, **quem importou**, **progresso**, **totais** e **status**:
+
+- **Na fila** — recebida, aguardando processamento
+- **Processando** — rodando em segundo plano
+- **Concluída** — terminou (com ou sem linhas puladas)
+- **Falhou** — foi interrompida (o aviso explica o que aconteceu)
+
+Em cada importação com erros, você pode **baixar a planilha completa das linhas que falharam** — com todos os motivos — para corrigir e reimportar só o que faltou. Esse arquivo fica disponível apenas aqui, atrás de login, porque pode conter CPF/RG.
+
+[![Importar usuários — aba Histórico com uma importação concluída](/assets/screenshots/manual-config-usuarios-importar-historico.png)](/assets/screenshots/manual-config-usuarios-importar-historico.png)
+*Aba Histórico — importações da OSC com data, solicitante, totais, status e download da planilha de erros*
+
+> 💡 **Se a planilha tiver um problema de formato**
+>
+> Se faltar uma coluna obrigatória (por exemplo, "papel") ou o arquivo passar do tamanho máximo, o sistema mostra **exatamente o que está errado** já no upload — não uma mensagem técnica genérica. Ajuste a planilha conforme a indicação e tente de novo.
 
 > 📖 **Conceito · Upsert seletivo**
 >

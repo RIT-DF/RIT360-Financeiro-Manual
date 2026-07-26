@@ -11,6 +11,21 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.11.0] — 2026-07-26
+
+### Adicionado
+
+- **Importação de usuários em lote agora roda em segundo plano.** Ao confirmar a importação de uma planilha de membros, o RIT360 Financeiro **inicia o processamento e libera a tela na hora** — nada de esperar com o navegador travado. Você recebe a mensagem "Importação iniciada — avisaremos quando concluir" e segue usando o app. Planilhas grandes (dezenas ou centenas de membros), que antes falhavam por demora, agora concluem com tranquilidade.
+- **Aviso por e-mail e notificação ao concluir a importação.** Quando o processamento termina, quem importou recebe um **e-mail e uma notificação** com o resumo: quantos foram convidados, quantos ficaram com e-mail pendente, quantos foram vinculados, quantos perfis foram atualizados e quantas linhas tiveram erro. Havendo linhas com erro, o aviso é **acionável** — lista o número da linha, o nome/e-mail e o motivo, para você corrigir e reenviar só o que faltou (sem expor CPF/RG por segurança).
+- **Aba "Histórico" na tela de importação de usuários.** Uma aba nova mostra as importações já feitas na sua OSC, com **data, quem importou, progresso, totais e status** (na fila, processando, concluída ou falhou). Em cada importação você pode **baixar a planilha completa das linhas com erro** para corrigir e reimportar.
+
+### Corrigido
+
+- **Mensagem de erro clara na importação.** Quando a planilha tem algum problema (por exemplo, falta uma coluna obrigatória como "papel"), o sistema agora mostra **exatamente o que está errado** em vez da mensagem técnica genérica que aparecia antes.
+- **Membros já cadastrados são reconhecidos mesmo em OSCs grandes.** Ao importar uma planilha com pessoas que já têm conta, o RIT360 Financeiro agora as identifica corretamente — para **vincular** ou **atualizar o perfil** — em vez de tentar recriá-las. Antes, em organizações com muitos usuários, parte dos já cadastrados era tratada como nova por engano; o mesmo problema também afetava o "Esqueci minha senha", que agora encontra o usuário corretamente.
+
+---
+
 ## [1.10.0] — 2026-07-26
 
 ### Adicionado
