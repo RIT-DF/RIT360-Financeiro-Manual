@@ -2,8 +2,9 @@
 
 <!-- issue #53: ampliar imagens do manual em lightbox (overlay na mesma aba).
      Delegacao de evento no clique: nao depende de quando o DOM termina de carregar.
-     Vanilla, sem dependencias externas. ctrl/cmd/middle-click continuam abrindo a
-     imagem em nova aba (comportamento nativo preservado). -->
+     IMPORTANTE: o pipeline de publicacao minifica o HTML (colapsa quebras de linha),
+     entao o script NAO pode usar comentarios de linha `//` — apenas `/* */` —
+     senao o `//` comenta o resto do script inteiro numa unica linha. -->
 <style>
   .jtd-lightbox-overlay {
     position: fixed; inset: 0; z-index: 2000;
@@ -36,6 +37,7 @@
   }
 </style>
 <script>
+  /* Sem comentarios de linha // aqui dentro: a minificacao junta tudo numa linha. */
   (function () {
     var IMG_EXT = /\.(png|jpe?g|gif|webp|svg)(\?.*)?(#.*)?$/i;
     var overlay = null, dialogImg = null, dialogCap = null, lastFocused = null;
@@ -43,13 +45,13 @@
     function imageAnchorFrom(target) {
       var a = target && target.closest ? target.closest('a[href]') : null;
       if (!a) return null;
-      if (!a.closest('.main-content')) return null; // so conteudo, nao nav/sumario/rodape
+      if (!a.closest('.main-content')) return null; /* so conteudo, nao nav/rodape */
       var href = a.getAttribute('href') || '';
       if (IMG_EXT.test(href)) return a;
-      return a.querySelector('img') ? a : null; // ancora que envolve <img>
+      return a.querySelector('img') ? a : null; /* ancora que envolve imagem */
     }
 
-    function close() {
+    function closeBox() {
       if (!overlay) return;
       overlay.classList.remove('is-open');
       overlay.setAttribute('hidden', '');
@@ -69,7 +71,7 @@
       btn.type = 'button';
       btn.className = 'jtd-lightbox-close';
       btn.setAttribute('aria-label', 'Fechar');
-      btn.textContent = '×'; // ×
+      btn.textContent = '×';
 
       dialogImg = document.createElement('img');
       dialogImg.setAttribute('alt', '');
@@ -82,13 +84,12 @@
       overlay.appendChild(dialogCap);
 
       overlay.addEventListener('click', function (e) {
-        // fecha ao clicar no backdrop ou no botao; clicar na imagem nao fecha
-        if (e.target === overlay || e.target === btn) close();
+        if (e.target === overlay || e.target === btn) closeBox();
       });
       document.body.appendChild(overlay);
     }
 
-    function open(src, alt) {
+    function openBox(src, alt) {
       ensureOverlay();
       dialogImg.setAttribute('src', src);
       dialogImg.setAttribute('alt', alt || '');
@@ -98,7 +99,7 @@
       lastFocused = document.activeElement;
       overlay.removeAttribute('hidden');
       document.documentElement.style.overflow = 'hidden';
-      void overlay.offsetWidth; // reflow para a transicao de opacidade valer
+      void overlay.offsetWidth;
       overlay.classList.add('is-open');
       var btn = overlay.querySelector('.jtd-lightbox-close');
       if (btn && btn.focus) btn.focus();
@@ -106,17 +107,17 @@
 
     document.addEventListener('click', function (e) {
       if (e.defaultPrevented) return;
-      if (typeof e.button === 'number' && e.button !== 0) return; // middle-click: nova aba nativa
-      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return; // respeita modificadores (nova aba)
+      if (typeof e.button === 'number' && e.button !== 0) return; /* middle-click: nova aba nativa */
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return; /* respeita modificadores */
       var a = imageAnchorFrom(e.target);
       if (!a) return;
       e.preventDefault();
       var innerImg = a.querySelector('img');
-      open(a.href, innerImg ? innerImg.getAttribute('alt') : '');
+      openBox(a.href, innerImg ? innerImg.getAttribute('alt') : '');
     });
 
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && overlay && !overlay.hasAttribute('hidden')) close();
+      if (e.key === 'Escape' && overlay && !overlay.hasAttribute('hidden')) closeBox();
     });
   })();
 </script>

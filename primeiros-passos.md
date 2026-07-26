@@ -5,7 +5,9 @@ has_children: true
 permalink: /primeiros-passos/
 ---
 
-Bem-vindo ao **RIT360 Financeiro**. Esta página te leva do "primeiro e-mail de convite" até "operando o sistema com segurança" em poucos minutos.
+**Do Usuário** — o passo a passo de quem vai **usar** o sistema no dia a dia. O par deste guia é **[Da Organização](/primeiros-passos/organizacao/)**, para quem **prepara** a OSC (dados, contas, categorias, aprovações).
+
+Bem-vindo ao **RIT360 Financeiro**. Esta página te leva do "primeiro e-mail de acesso" até "operando o sistema com segurança" em poucos minutos.
 
 > 💡 **Acabou de criar a organização?**
 >
@@ -20,15 +22,15 @@ Bem-vindo ao **RIT360 Financeiro**. Esta página te leva do "primeiro e-mail de 
 
 ## Como funciona o acesso
 
-A entrada no RIT360 Financeiro é por **convite**, não por cadastro aberto. Isso garante que sua OSC mantém controle de quem entra. Quando o administrador (geralmente o presidente da OSC) cadastra você no sistema, você recebe um e-mail com link de configuração da conta.
+A entrada no RIT360 Financeiro é **controlada pela organização**, não por cadastro aberto. Isso garante que sua OSC mantém controle de quem entra. Quando o administrador (geralmente o presidente da OSC) **cadastra você**, sua conta já é criada e você recebe um **e-mail de acesso** com um link para definir sua senha e concluir a configuração.
 
 > 📖 **Conceito · Múltiplas organizações na mesma conta**
 >
 > Sua conta no RIT360 Financeiro é **única e atrelada ao seu e-mail**, mas você pode ser membro de várias OSCs simultaneamente. Útil para quem é voluntário em mais de um grupo, contador que atende várias OSCs, dirigente que participa de federação e grupo local. Use o **seletor de organização** no topo da tela para alternar — a tela inteira reage à OSC ativa, mostrando os dados dela.
 
-## Primeiro acesso (via convite)
+## Primeiro acesso (via e-mail de acesso)
 
-1. Abra o e-mail de convite enviado pelo administrador da sua organização (assunto começa com "RIT360 Financeiro").
+1. Abra o e-mail de acesso enviado pelo administrador da sua organização (assunto começa com "RIT360 Financeiro").
 2. Clique no link **Configurar minha conta**.
 3. Preencha **nome completo** e defina uma **senha** (mínimo 8 caracteres) — ou clique **Continuar com Google** para usar conta Google.
 4. Leia e aceite a **Política de Privacidade** e os **Termos de Uso** (ambos disponíveis em `docs.financeiro.rit360.org.br`).
@@ -38,7 +40,7 @@ Após o primeiro acesso, você cai direto no **Painel** da sua organização.
 
 ## Criar conta por conta própria
 
-Além do convite, é possível iniciar uma conta por conta própria pelo link **"Criar agora"** na tela de login (por exemplo, para propor o cadastro da sua OSC ou pedir vínculo a uma organização existente). Nesse caminho, antes de definir a senha:
+Além desse caminho, é possível iniciar uma conta por conta própria pelo link **"Criar agora"** na tela de login (por exemplo, para propor o cadastro da sua OSC ou pedir vínculo a uma organização existente). Nesse caminho, antes de definir a senha:
 
 1. Informe seu **e-mail**.
 2. No passo **"Confirme seu e-mail"**, clique para enviar o **código de 6 dígitos** que chega na sua caixa de entrada e digite-o (há botão para **reenviar**, com uma breve espera entre envios). Confira a caixa de spam se não chegar.
