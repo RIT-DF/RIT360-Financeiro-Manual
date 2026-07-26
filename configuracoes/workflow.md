@@ -81,6 +81,7 @@ A aba **Orçamento** define as regras de governança do [orçamento anual](/modu
 
 - **Papéis e pessoas elegíveis para aprovar** — quem pode dar o "sim" a um orçamento enviado para aprovação e às revisões que voltam para aprovação. É a permissão `budget.approve`. Default: Presidente e Tesoureiro. Você pode adicionar pessoas individuais, como nos demais fluxos.
 - **Quórum** — quantos votos positivos são necessários para aprovar (1 ou 2), mesma lógica de aprovação parcial da aba de Pagamentos e Reembolsos.
+- **Permitir auto-aprovação** — quando ligado, quem enviou o orçamento pode aprová-lo **apenas se for o único aprovador elegível** da OSC (mesma lógica conservadora dos demais fluxos: a auto-aprovação fica registrada na auditoria como `self_approved`).
 - **Limiar de revisão** — o tamanho de mudança a partir do qual uma revisão do orçamento aprovado **volta para aprovação** em vez de ser aplicada direto. Ajustes abaixo do limiar entram na hora; acima dele, exigem novo "sim" da diretoria. Toda revisão, grande ou pequena, exige um **motivo** registrado na auditoria.
 - **Alertas de execução** — a partir de quais percentuais do previsto o sistema avisa (padrão: **80%** e **100%**) e para quem (gestor do centro de custo e tesoureiro).
 

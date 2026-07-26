@@ -82,7 +82,8 @@ A barra de navegação no topo é o seu mapa:
 | **Painel** | Visão consolidada de saldos e pendências |
 | **Movimentações** | Receitas, despesas e transferências |
 | **Pagamentos e Reembolsos** | Pedidos de pagamento e reembolsos, em abas |
-| **Projetos** | Gestão de projetos *(em construção)* |
+| **Projetos** | Planejamento, execução e prestação de contas de projetos |
+| **Orçamento** | Orçamento anual por centro de custo e categoria — previsto × realizado |
 | **Relatórios** | Relatórios gerenciais — Visão Geral, Receitas, Despesas, Atenção e Previsão |
 
 À direita da TopNav ficam, em ordem:
