@@ -26,11 +26,15 @@ Bloco com cada conta financeira da OSC (corrente, poupança, cartão, caixa inte
 
 Três cards rápidos com:
 
-- **Receitas** do mês — total de receitas com data de pagamento no mês atual
-- **Despesas** do mês — total de despesas com data de pagamento no mês atual
+- **Receitas** do mês — total de receitas com **vencimento** no mês atual (pagas ou ainda pendentes; lançamentos estornados não entram)
+- **Despesas** do mês — total de despesas com **vencimento** no mês atual (mesma regra)
 - **Saldo do mês** — diferença entre as duas
 
 Útil para responder de relance: "como foi o mês até agora?"
+
+> ℹ️ **Observação**
+>
+> Este resumo considera o **mês inteiro** (do dia 1º ao último dia), pelo **vencimento** do lançamento — diferente dos **cards de saldo** no topo, que refletem só o que já foi efetivamente pago. Por isso os dois blocos podem mostrar números diferentes: um é a previsão do mês, o outro é o dinheiro em caixa.
 
 ## Pendências de pagamento
 

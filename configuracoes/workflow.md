@@ -49,11 +49,30 @@ Você pode indicar como aprovador até um **membro recém-cadastrado que ainda n
 >
 > A regra de "papéis aprovadores" cobre 95% dos casos da maioria das OSCs. **Pessoas específicas** são o mecanismo de exceção — use com parcimônia. Lista de aprovadores individuais com 8 nomes é sintoma de governança confusa: ou simplifique para papéis bem definidos, ou ajuste papéis no Cadastro de Usuários para cobrir esses casos.
 
+## Gestor de centro de custo como aprovador
+
+Além dos papéis e das pessoas específicas, a OSC pode permitir que o **gestor de um centro de custo** aprove os pagamentos e reembolsos **do próprio centro de custo que ele gerencia**. O ajuste fica no bloco **Quem pode aprovar** e começa **desligado** — cada OSC liga conforme o seu estatuto.
+
+Quando ligado, o gestor **soma-se** aos aprovadores já definidos (papéis + pessoas): ele passa a contar como aprovador elegível **apenas** para os itens do centro de custo sob sua responsabilidade, e **não** altera o número de aprovações exigidas nem os papéis configurados.
+
+> ✓ **Dica · Ligue só se o estatuto delegar ao gestor de CC**
+>
+> Em OSCs onde só a diretoria eleita autoriza saída de dinheiro (por exemplo, "quaisquer 2 diretores"), mantenha **desligado** — o gestor de CC coordena a área, mas não tem mandato de aprovação. Ligue quando o estatuto (ou a prática combinada) de fato delega ao responsável do centro de custo a autorização das despesas da sua área.
+
 ## Quem pode solicitar pedidos de pagamento
 
-Define quais papéis podem **criar** pedidos de pagamento. Default: Presidente, Tesoureiro, Coordenador de Projeto.
+Define quem pode **criar** pedidos de pagamento. Por padrão, a lista de papéis é **Presidente** e **Tesoureiro** — que solicitam pedidos de qualquer centro de custo ou projeto, sem restrição.
+
+Abaixo da lista de papéis, dois ajustes **por escopo** (cada um começa desligado, exceto onde indicado):
+
+- **Gestor de centro de custo solicita do próprio centro de custo** — quando ligado, o gestor pode criar pedidos **apenas** do centro de custo que gerencia.
+- **Coordenador de projeto solicita do próprio projeto** — quando ligado, o coordenador pode criar pedidos **apenas** dos projetos que coordena. Em OSCs que **já** permitiam o coordenador solicitar (ele estava na lista de papéis), o ajuste vem **ligado** — a permissão é preservada, agora restrita ao projeto dele.
 
 Voluntários não podem criar pedidos de pagamento (só reembolsos), por princípio: pedido de pagamento implica usar dinheiro da OSC, e voluntário sem papel específico não tem mandato para isso.
+
+> 📖 **Conceito · Solicitar por escopo, não em aberto**
+>
+> Presidente e Tesoureiro respondem pela OSC inteira, então solicitam sem restrição. Já o gestor de centro de custo e o coordenador de projeto respondem por **uma parte** — faz sentido que solicitem despesas **da sua parte**, não de qualquer área. Ao restringir cada um ao seu domínio, o pedido nasce já no lugar certo, e ninguém autoriza gasto fora do que administra. (Isso vale só para **pedidos de pagamento**; reembolso continua aberto a qualquer membro.)
 
 > 📖 **Conceito · Solicitante nunca aprova o próprio pedido**
 >
