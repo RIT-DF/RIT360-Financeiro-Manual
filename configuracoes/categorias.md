@@ -75,8 +75,8 @@ Com o cargo e o vínculo em dia, o Gestor de Centro de Custo passa a **criar e e
 
 A lista da aba **Centros de custo** tem uma coluna **"Gestor(es)"** que mostra, de relance, quem responde por cada centro — sem precisar abrir **Editar**. Centros sem responsável aparecem com **"—"**; quando há mais de um, a lista exibe o **primeiro nome com um "+N"**, e a lista completa aparece ao passar o mouse por cima.
 
-<!-- PRINT PENDENTE: config-cc-lista-gestores — ver planning/prints-manual-pendentes.md -->
-
+[![Lista de centros de custo com a coluna Gestor(es)](/assets/screenshots/config-cc-lista-gestores.png)](/assets/screenshots/config-cc-lista-gestores.png)
+*A coluna "Gestor(es)" mostra o responsável de cada centro de custo (ou "—" quando não há).*
 > ✓ **Dica · Confira os responsáveis de relance**
 >
 > Essa coluna é o jeito rápido de auditar quem está no comando de cada área: um centro de custo importante com "—" na coluna Gestor(es) é sinal de que falta atribuir responsável (ou que quem foi atribuído ainda não tem o cargo Gestor de Centro de Custo).

@@ -93,8 +93,8 @@ No editor de cargos, cada cargo tem a ação **Editar nome**:
 - **Cargos padrão** — troque o nome de exibição pelo vocabulário da sua OSC (por exemplo, "Presidente" para "Diretor Presidente"). Sempre que quiser voltar atrás, a opção **Restaurar padrão** devolve o nome de fábrica.
 - **Cargos personalizados** — podem ser **renomeados** normalmente, como qualquer outro dado do cargo.
 
-<!-- PRINT PENDENTE: config-cargos-editar-nome — ver planning/prints-manual-pendentes.md -->
-
+[![Diálogo Editar nome do cargo](/assets/screenshots/config-cargos-editar-nome.png)](/assets/screenshots/config-cargos-editar-nome.png)
+*Editar o nome de um cargo padrão, com a opção "Restaurar padrão".*
 > ✓ **Dica · Renomear é só o rótulo**
 >
 > Trocar o nome do cargo não mexe em quem pode o quê — as permissões continuam exatamente as mesmas. É só a etiqueta que muda, para o sistema falar a língua da sua OSC.

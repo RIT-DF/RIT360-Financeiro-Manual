@@ -23,8 +23,8 @@ A página tem cinco boxes consolidados: **Identificação**, **Dados para Reembo
 - **Data de nascimento** — opcional.
 - **CPF** e **RG / RNE** — opcionais; o **CPF** é formatado automaticamente (`000.000.000-00`). O campo de documento se chama **"RG / RNE"** porque quem é estrangeiro pode informar o **RNE** (Registro Nacional de Estrangeiro) no mesmo lugar. Armazenados **cifrados em repouso** (chave de criptografia gerenciada separadamente do banco). Usados apenas para emissão de comprovantes quando exigido por lei.
 
-<!-- PRINT PENDENTE: config-perfil-telefone-pais — ver planning/prints-manual-pendentes.md -->
-
+[![Campo Telefone com seletor de país](/assets/screenshots/config-perfil-telefone-pais.png)](/assets/screenshots/config-perfil-telefone-pais.png)
+*O campo Telefone com o seletor de país (Brasil por padrão).*
 Botão **Salvar alterações** ao final do box salva tudo de uma vez.
 
 > ⚠️ **Atenção · CPF e RG são dados sensíveis pela LGPD**

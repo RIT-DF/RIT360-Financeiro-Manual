@@ -74,8 +74,8 @@ No lugar das antigas abas por tipo, a lista agora tem **filtros por marcadores (
 
 Em cada um desses filtros você escolhe **vários valores** de uma vez e ainda decide se quer **incluir** apenas os selecionados ou **excluir** ("mostrar tudo, exceto…"). Some-se a isso uma **busca livre** por texto, que procura na descrição, no beneficiário, na conta, na categoria, no valor e na data.
 
-<!-- PRINT PENDENTE: mov-filtros-chips — ver planning/prints-manual-pendentes.md -->
-
+[![Filtros combináveis em Movimentações](/assets/screenshots/mov-filtros-chips.png)](/assets/screenshots/mov-filtros-chips.png)
+*Filtre por tipo, conta, categoria, status, projeto e centro de custo — combinando vários ao mesmo tempo.*
 > 💡 **Por que isso importa**
 >
 > Filtro combinável responde perguntas que aba única não alcança: "todas as despesas de material do projeto Feira, exceto as da conta Caixa". Antes você via um tipo de cada vez; agora cruza tipo, categoria, projeto e centro de custo numa consulta só — a conferência e a análise gerencial ficam muito mais rápidas.
