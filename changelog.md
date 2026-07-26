@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.13.10] — 2026-07-26
+
+### Melhorado
+
+- **Exportações de PDF não travam mais a tela.** Ao exportar o PDF de **Movimentações** ou gerar o **relatório de projeto** (parcial ou de encerramento), o sistema agora responde na hora e monta o documento em segundo plano. Você acompanha numa página própria e o download começa sozinho quando o arquivo fica pronto — e ainda recebe o link por e-mail. Assim dá para fechar a aba e voltar depois, sem ficar esperando a geração terminar. (A prestação de contas já funcionava assim; agora os demais relatórios seguem o mesmo padrão.)
+
+---
+
 ## [1.13.8] — 2026-07-26
 
 ### Adicionado
