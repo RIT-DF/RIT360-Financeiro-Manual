@@ -1,34 +1,122 @@
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 
-<!-- issue #53: abrir imagens ampliadas em nova aba (links de imagem no conteudo) -->
+<!-- issue #53: ampliar imagens do manual em lightbox (overlay na mesma aba).
+     Delegacao de evento no clique: nao depende de quando o DOM termina de carregar.
+     Vanilla, sem dependencias externas. ctrl/cmd/middle-click continuam abrindo a
+     imagem em nova aba (comportamento nativo preservado). -->
+<style>
+  .jtd-lightbox-overlay {
+    position: fixed; inset: 0; z-index: 2000;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 12px; padding: 24px;
+    background: rgba(0, 0, 0, 0.82);
+    cursor: zoom-out;
+    opacity: 0; transition: opacity 0.15s ease;
+  }
+  .jtd-lightbox-overlay.is-open { opacity: 1; }
+  .jtd-lightbox-overlay img {
+    max-width: 94vw; max-height: 86vh; object-fit: contain;
+    border-radius: 6px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    cursor: default;
+  }
+  .jtd-lightbox-caption {
+    color: #f2f2f2; font-size: 0.9rem; text-align: center;
+    max-width: 94vw; line-height: 1.4;
+  }
+  .jtd-lightbox-close {
+    position: fixed; top: 14px; right: 18px;
+    width: 40px; height: 40px; border: 0; border-radius: 999px;
+    background: rgba(255, 255, 255, 0.14); color: #fff;
+    font-size: 26px; line-height: 40px; text-align: center;
+    cursor: pointer;
+  }
+  .jtd-lightbox-close:hover { background: rgba(255, 255, 255, 0.28); }
+  @media (prefers-reduced-motion: reduce) {
+    .jtd-lightbox-overlay { transition: none; }
+  }
+</style>
 <script>
   (function () {
     var IMG_EXT = /\.(png|jpe?g|gif|webp|svg)(\?.*)?(#.*)?$/i;
+    var overlay = null, dialogImg = null, dialogCap = null, lastFocused = null;
 
-    function isImageLink(a) {
-      if (a.target === '_blank') return false; // idempotente
+    function imageAnchorFrom(target) {
+      var a = target && target.closest ? target.closest('a[href]') : null;
+      if (!a) return null;
+      if (!a.closest('.main-content')) return null; // so conteudo, nao nav/sumario/rodape
       var href = a.getAttribute('href') || '';
-      if (IMG_EXT.test(href)) return true;
-      return a.querySelector('img') !== null; // ancora que envolve <img>
+      if (IMG_EXT.test(href)) return a;
+      return a.querySelector('img') ? a : null; // ancora que envolve <img>
     }
 
-    function openImagesInNewTab() {
-      var container = document.querySelector('.main-content');
-      if (!container) return;
-      var links = container.querySelectorAll('a[href]');
-      for (var i = 0; i < links.length; i++) {
-        var a = links[i];
-        if (isImageLink(a)) {
-          a.setAttribute('target', '_blank');
-          a.setAttribute('rel', 'noopener noreferrer');
-        }
-      }
+    function close() {
+      if (!overlay) return;
+      overlay.classList.remove('is-open');
+      overlay.setAttribute('hidden', '');
+      document.documentElement.style.overflow = '';
+      if (lastFocused && lastFocused.focus) lastFocused.focus();
     }
 
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', openImagesInNewTab);
-    } else {
-      openImagesInNewTab();
+    function ensureOverlay() {
+      if (overlay) return;
+      overlay = document.createElement('div');
+      overlay.className = 'jtd-lightbox-overlay';
+      overlay.setAttribute('role', 'dialog');
+      overlay.setAttribute('aria-modal', 'true');
+      overlay.setAttribute('hidden', '');
+
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'jtd-lightbox-close';
+      btn.setAttribute('aria-label', 'Fechar');
+      btn.textContent = '×'; // ×
+
+      dialogImg = document.createElement('img');
+      dialogImg.setAttribute('alt', '');
+
+      dialogCap = document.createElement('div');
+      dialogCap.className = 'jtd-lightbox-caption';
+
+      overlay.appendChild(btn);
+      overlay.appendChild(dialogImg);
+      overlay.appendChild(dialogCap);
+
+      overlay.addEventListener('click', function (e) {
+        // fecha ao clicar no backdrop ou no botao; clicar na imagem nao fecha
+        if (e.target === overlay || e.target === btn) close();
+      });
+      document.body.appendChild(overlay);
     }
+
+    function open(src, alt) {
+      ensureOverlay();
+      dialogImg.setAttribute('src', src);
+      dialogImg.setAttribute('alt', alt || '');
+      dialogCap.textContent = alt || '';
+      dialogCap.style.display = alt ? '' : 'none';
+      overlay.setAttribute('aria-label', alt || 'Imagem ampliada');
+      lastFocused = document.activeElement;
+      overlay.removeAttribute('hidden');
+      document.documentElement.style.overflow = 'hidden';
+      void overlay.offsetWidth; // reflow para a transicao de opacidade valer
+      overlay.classList.add('is-open');
+      var btn = overlay.querySelector('.jtd-lightbox-close');
+      if (btn && btn.focus) btn.focus();
+    }
+
+    document.addEventListener('click', function (e) {
+      if (e.defaultPrevented) return;
+      if (typeof e.button === 'number' && e.button !== 0) return; // middle-click: nova aba nativa
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return; // respeita modificadores (nova aba)
+      var a = imageAnchorFrom(e.target);
+      if (!a) return;
+      e.preventDefault();
+      var innerImg = a.querySelector('img');
+      open(a.href, innerImg ? innerImg.getAttribute('alt') : '');
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && overlay && !overlay.hasAttribute('hidden')) close();
+    });
   })();
 </script>
