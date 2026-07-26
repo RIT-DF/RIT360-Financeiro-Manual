@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.13.2] — 2026-07-26
+
+### Melhorado
+
+- **Troca de telas mais fluida.** Ao navegar entre os menus (Painel, Movimentações, Projetos e demais), as telas visitadas há pouco reaproveitam os dados já carregados em vez de reconstruir tudo do zero — a navegação fica mais rápida e sem o "pisca". As informações continuam se atualizando normalmente após qualquer ação (criar, editar, aprovar, excluir).
+
+---
+
 ## [1.13.1] — 2026-07-26
 
 ### Melhorado
