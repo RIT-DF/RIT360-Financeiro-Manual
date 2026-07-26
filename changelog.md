@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.13.3] — 2026-07-26
+
+### Melhorado
+
+- **Enviar feedback e cadastrar usuário ficaram instantâneos.** As duas ações agora **respondem na hora**, assim que o essencial é salvo — o restante (avisar a equipe sobre o novo feedback; enviar o e-mail de acesso ao novo usuário) acontece em segundo plano, sem prender você na tela. Se o e-mail de acesso falhar, o registro da falha continua guardado e é possível reenviar normalmente.
+
+---
+
 ## [1.13.2] — 2026-07-26
 
 ### Melhorado
