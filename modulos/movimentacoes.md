@@ -133,6 +133,11 @@ As exportações são **fiéis ao que está na tela**: refletem exatamente os fi
 
 Ao escolher **PDF** ou **Excel**, antes de gerar o arquivo o RIT360 Financeiro abre um **seletor de colunas**: marque ou desmarque o que deve aparecer no relatório. Vêm marcadas por padrão oito colunas — Vencimento, Pagamento, Pagador/Beneficiário, Lançamento, Conta, Categoria, Status e Valor — e você pode acrescentar **Tipo**, **Forma de pagamento**, **Observações** e **Nº de anexos**. A seleção é **lembrada para a próxima exportação**, separada por organização (cada OSC mantém o formato que prefere). É preciso deixar pelo menos uma coluna marcada.
 
+O **Excel** baixa na hora. Já o **PDF** é montado **em segundo plano**: ao clicar em gerar, abre uma página de acompanhamento que mostra "Gerando…" e, assim que o documento fica pronto, **o download começa sozinho**. Você não precisa esperar parado — pode fechar a aba e continuar trabalhando, porque **o link do PDF também chega no seu e-mail**. É o mesmo comportamento da prestação de contas.
+
+[![Página de acompanhamento do PDF](/assets/screenshots/mov-exportar-pdf-acompanhamento.png)](/assets/screenshots/mov-exportar-pdf-acompanhamento.png)
+*A página de acompanhamento: quando o PDF fica pronto, o download começa sozinho (e o link também chega por e-mail).*
+
 ## Detalhe de uma movimentação
 
 [![Detalhe de movimentação](/assets/screenshots/manual-03-movimentacao-detalhe.png)](/assets/screenshots/manual-03-movimentacao-detalhe.png)

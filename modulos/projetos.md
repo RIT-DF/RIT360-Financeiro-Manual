@@ -219,6 +219,11 @@ A qualidade do encerramento depende do que é escrito nos campos de texto — é
 
 A partir dessa avaliação e de tudo que o projeto registrou, o RIT360 Financeiro monta um **relatório de encerramento** consolidado — identificação, resumo financeiro, saúde final, marcos, tarefas, contribuição da equipe, riscos materializados, evidências, status updates, partes interessadas e a avaliação do coordenador. Esse relatório pode ser **exportado em PDF** para a prestação de contas. Antes de finalizar, é possível gerar um **relatório parcial** (marcado como rascunho); ao **finalizar**, a saúde e os números ficam "congelados" como o retrato final do projeto.
 
+Tanto o relatório parcial quanto o final são montados **em segundo plano**: ao pedir o PDF, abre uma página de acompanhamento que mostra "Gerando…" e **o download começa sozinho** quando o documento fica pronto — você pode fechar a aba, porque **o link também chega no seu e-mail**.
+
+[![Página de acompanhamento do relatório do projeto](/assets/screenshots/projeto-relatorio-acompanhamento.png)](/assets/screenshots/projeto-relatorio-acompanhamento.png)
+*O relatório do projeto é gerado em segundo plano e baixado automaticamente pela página de acompanhamento.*
+
 > 💡 **Por que isso importa**
 >
 > A maioria das OSCs nunca **fecha** um projeto de verdade — o evento acaba, todo mundo vai embora cansado, e o aprendizado se perde. O encerramento estruturado obriga a parar 20 minutos e responder "deu certo? por quê? o que faríamos diferente?". As **lições aprendidas** viram patrimônio da OSC: o próximo coordenador de evento começa lendo o que o anterior aprendeu, em vez de repetir os mesmos tropeços. E o PDF resolve, de uma vez, a prestação de contas para o financiador.

@@ -62,7 +62,7 @@ Depende do status. Se o lançamento está **Pendente** ou **Atrasado**, clique e
 
 ### Posso exportar os lançamentos?
 
-Sim. Na lista de **Movimentações**, clique em **Exportar** e escolha PDF (formatado) ou Excel (planilha). A exportação inclui os filtros ativos no momento da exportação.
+Sim. Na lista de **Movimentações**, clique em **Exportar** e escolha PDF (formatado) ou Excel (planilha). A exportação inclui os filtros ativos no momento da exportação. O Excel baixa na hora; o **PDF** é montado em segundo plano — o download começa sozinho quando fica pronto e o link também chega no seu e-mail, então você pode fechar a aba.
 
 ### Como funcionam as recorrências?
 
