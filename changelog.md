@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.13.7] — 2026-07-26
+
+### Melhorado
+
+- **Menos espera após cada atualização do sistema.** Reorganizamos como o app é empacotado: as partes que raramente mudam (as bibliotecas de base) agora ficam separadas do código que atualizamos com frequência. Assim, quando publicamos uma novidade, o navegador só rebaixa a parte que de fato mudou — o resto continua reaproveitado do que já estava carregado, deixando a abertura mais rápida logo depois de cada atualização.
+
+---
+
 ## [1.13.5] — 2026-07-26
 
 ### Melhorado
