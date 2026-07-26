@@ -11,6 +11,18 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.13.4] — 2026-07-26
+
+### Corrigido
+
+- **"Resumo do mês corrente" agora reflete de fato o mês.** O card do Painel vinha somando **todo o histórico** da organização por causa de uma falha no filtro de período; passou a considerar corretamente **apenas o mês corrente**. Os valores de Receitas, Despesas e Saldo do mês podem parecer menores do que antes — agora estão certos.
+
+### Melhorado
+
+- **Painel mais leve para carregar.** O resumo do mês passou a ser calculado no servidor (em vez de baixar toda a lista de movimentos para somar na tela), reduzindo o tempo de carregamento do Painel.
+
+---
+
 ## [1.13.3] — 2026-07-26
 
 ### Melhorado
