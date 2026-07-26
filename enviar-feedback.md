@@ -35,4 +35,6 @@ Ao escolher o tipo **Depoimento**, aparece uma opção a mais: autorizar (ou nã
 
 ## O que acontece depois
 
+Ao clicar em enviar, a tela **responde na hora**: assim que o essencial é salvo, você recebe a confirmação e segue usando o app — o aviso para a equipe da RIT sobre o novo feedback acontece em segundo plano, sem prender você esperando.
+
 A equipe da RIT recebe seu feedback e pode respondê-lo. Se você autorizou o contato e tiver e-mail cadastrado, a resposta chega por e-mail. Ao enviar, o RIT360 Financeiro também anexa automaticamente algumas informações **técnicas e não pessoais** (como a versão do aplicativo e o navegador que você usa) — elas ajudam a equipe a entender e resolver mais rápido, e não incluem dados pessoais seus.

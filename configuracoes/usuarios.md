@@ -20,11 +20,15 @@ Listagem traz todos os membros da OSC com nome, e-mail, papel, status (ativo/pen
 
 ## Adicionar usuário
 
-Clique em **+ Adicionar usuário**. Informe o **e-mail** e o **papel** desejado. O RIT360 Financeiro dispara automaticamente um e-mail de convite com o link de primeiro acesso. O status do usuário fica como "Pendente" até ele aceitar.
+Clique em **+ Adicionar usuário**. Informe o **e-mail** e o **papel** desejado. A tela **responde na hora**, assim que o cadastro é salvo — o e-mail de convite com o link de primeiro acesso é enviado em segundo plano. O status do usuário fica como "Pendente" até ele aceitar. Se o envio do e-mail falhar, o registro da falha fica guardado e o convite pode ser **reenviado** normalmente (ver Ações por membro).
 
 > 📖 **Conceito · Convite vs acesso direto**
 >
 > O RIT360 Financeiro usa **convite por e-mail** como mecanismo de entrada, não cadastro aberto. Isso protege a OSC de spam, garante que a pessoa convidada confirma o acesso pelo próprio e-mail, e permite mensagem personalizada no convite. O convite tem prazo de validade — se expirar, o admin pode reenviar pelo mesmo fluxo.
+
+> 📖 **Conceito · Já dá para designar quem ainda não ativou o acesso**
+>
+> Um membro recém-cadastrado, que ainda não concluiu o primeiro acesso (não definiu a senha), **já pode ser escolhido** como **gestor de centro de custo**, **coordenador ou integrante de projeto** e **aprovador** (de reembolso, pedido de pagamento, orçamento e projeto) — sem esperar ele entrar no sistema pela primeira vez. Nessas listas o nome aparece com a marca discreta **"· acesso pendente"**. A permissão para *agir* (aprovar, coordenar, operar) continua valendo **só depois** que a pessoa ativa o acesso.
 
 ## Importar usuários em lote (planilha CSV)
 

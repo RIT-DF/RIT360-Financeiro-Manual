@@ -43,6 +43,8 @@ Além dos papéis, você pode adicionar **pessoas individuais** como aprovadores
 - Membro do comitê de finanças que aprova compras acima de certo valor
 - Pessoa em transição entre papéis que precisa manter capacidade de aprovação temporariamente
 
+Você pode indicar como aprovador até um **membro recém-cadastrado que ainda não ativou o acesso** — o nome aparece na lista com a marca **"· acesso pendente"**. Ele passa a *aprovar de fato* apenas depois de concluir o primeiro acesso.
+
 > ✓ **Dica · Use papéis primeiro, exceções como exceções**
 >
 > A regra de "papéis aprovadores" cobre 95% dos casos da maioria das OSCs. **Pessoas específicas** são o mecanismo de exceção — use com parcimônia. Lista de aprovadores individuais com 8 nomes é sintoma de governança confusa: ou simplifique para papéis bem definidos, ou ajuste papéis no Cadastro de Usuários para cobrir esses casos.

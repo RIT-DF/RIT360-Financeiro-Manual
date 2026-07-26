@@ -19,6 +19,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.13.9] — 2026-07-26
+
+### Adicionado
+
+- **Gestor de centro de custo pode aprovar (opcional, por organização).** Nas configurações de fluxo de aprovação de pagamentos e reembolsos, a organização passa a poder permitir que o gestor de um centro de custo aprove os pagamentos e reembolsos **do seu próprio centro de custo**. Começa **desligado** — cada organização ativa conforme seu estatuto. Quando ligado, o gestor soma-se aos aprovadores já definidos (não substitui o número de aprovações nem os papéis).
+
+---
+
 ## [1.13.7] — 2026-07-26
 
 ### Melhorado
