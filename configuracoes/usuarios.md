@@ -58,6 +58,9 @@ Para OSCs que estão migrando de outro sistema ou que precisam cadastrar muitos 
 
 Quando a importação termina, quem importou recebe um **e-mail e uma notificação** com o resumo: quantos foram convidados, quantos ficaram com **e-mail pendente**, quantos foram **vinculados**, quantos **perfis foram atualizados** e quantas linhas tiveram **erro**.
 
+[![E-mail de conclusão da importação com o resumo](/assets/screenshots/manual-config-usuarios-importacao-email.png)](/assets/screenshots/manual-config-usuarios-importacao-email.png)
+*E-mail de conclusão — resumo do que foi processado, criado, vinculado, atualizado e pulado*
+
 Se alguma linha deu erro, o aviso é **acionável**: ele lista o **número da linha**, o **nome ou e-mail** e o **motivo** (ex.: *"Linha 5 (joao@exemplo.org): CPF deve ter 11 dígitos"*), para você corrigir na planilha e reimportar **apenas as linhas que faltaram**. Por segurança, o aviso nunca traz CPF nem RG no corpo — esses dados ficam só no arquivo completo, protegido por login (ver Histórico abaixo).
 
 ### Histórico de importações
