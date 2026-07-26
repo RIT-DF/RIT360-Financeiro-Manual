@@ -14,6 +14,9 @@
     cursor: zoom-out;
     opacity: 0; transition: opacity 0.15s ease;
   }
+  /* [hidden] precisa vencer o display:flex acima, senao o overlay fechado (opacity:0)
+     continua cobrindo a tela e engolindo cliques -> nao reabre sem F5. */
+  .jtd-lightbox-overlay[hidden] { display: none; }
   .jtd-lightbox-overlay.is-open { opacity: 1; }
   .jtd-lightbox-overlay img {
     max-width: 94vw; max-height: 86vh; object-fit: contain;
