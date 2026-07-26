@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.13.5] — 2026-07-26
+
+### Melhorado
+
+- **Abertura do sistema mais rápida.** Ao entrar, o app deixou de repetir consultas iguais e de fazê-las em fila — as informações de conta, organização e preferências agora carregam de uma vez e em paralelo. O resultado é uma tela inicial que aparece mais rápido, sem mudança nenhuma no que você vê ou em como troca de organização.
+
+---
+
 ## [1.13.4] — 2026-07-26
 
 ### Corrigido
