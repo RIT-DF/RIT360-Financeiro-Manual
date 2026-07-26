@@ -11,6 +11,18 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.14.3] — 2026-07-26
+
+### Adicionado
+
+- **Baixar o PDF do relatório de encerramento mesmo depois de o projeto encerrar.** Antes, o botão para gerar o PDF de encerramento só existia enquanto o projeto estava na janela de encerramento; assim que ele era **concluído ou cancelado**, o botão sumia. Agora, em projetos já encerrados (com encerramento finalizado), presidente, tesoureiro e coordenadores do projeto conseguem baixar o **PDF de encerramento** direto das abas **Encerramento** e **Relatório** — no mesmo fluxo em segundo plano dos demais relatórios.
+
+### Melhorado
+
+- **Nomes de arquivo mais legíveis nos PDFs.** Os arquivos de relatório de **Movimentações** e de **relatório de projeto** passam a ser salvos e baixados com um nome que referencia o conteúdo (período, projeto e data) — por exemplo, `encerramento-<projeto>-<data>.pdf` — em vez de um código interno. Assim fica fácil reconhecer cada documento na pasta de downloads.
+
+---
+
 ## [1.14.0] — 2026-07-26
 
 ### Adicionado
