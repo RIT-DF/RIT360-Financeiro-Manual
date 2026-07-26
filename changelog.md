@@ -23,6 +23,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 - **Mensagem de erro clara na importação.** Quando a planilha tem algum problema (por exemplo, falta uma coluna obrigatória como "papel"), o sistema agora mostra **exatamente o que está errado** em vez da mensagem técnica genérica que aparecia antes.
 - **Membros já cadastrados são reconhecidos mesmo em OSCs grandes.** Ao importar uma planilha com pessoas que já têm conta, o RIT360 Financeiro agora as identifica corretamente — para **vincular** ou **atualizar o perfil** — em vez de tentar recriá-las. Antes, em organizações com muitos usuários, parte dos já cadastrados era tratada como nova por engano; o mesmo problema também afetava o "Esqueci minha senha", que agora encontra o usuário corretamente.
+- **Aprovação de orçamento mais clara e confiável.** Quem **envia** um orçamento para aprovação não vê mais os botões de aprovar/rejeitar da própria versão quando há outros responsáveis — no lugar aparece "Aguardando aprovação de outro responsável" (você não pode aprovar o próprio pedido). E a **aprovação pelos demais responsáveis voltou a funcionar** normalmente, incluindo aprovadores designados; a Comissão Fiscal continua apenas acompanhando, sem aprovar.
 
 ---
 
