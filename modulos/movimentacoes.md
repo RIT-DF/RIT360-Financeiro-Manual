@@ -228,45 +228,29 @@ Para estornar: vá no detalhe do lançamento → botão **Estornar** → informe
 >
 > Estornos podem ser feitos por motivos legítimos — devolução bancária, depósito duplicado, doação devolvida. Em todos esses casos, **estornar é o caminho correto, não excluir**. Excluir um lançamento pago não é nem permitido pelo RIT360 Financeiro justamente para preservar a integridade da prestação de contas.
 
-## Corrigir os dados de pagamento de um lançamento pago
+## Corrigir os dados de um lançamento pago
 
-Às vezes a data ou a conta registradas no pagamento saem diferentes do que aconteceu no banco — você pagou num dia e lançou no outro, ou marcou a conta errada. Antes era preciso estornar e refazer; agora dá para **corrigir direto**, sem desfazer o lançamento.
+Às vezes o que ficou registrado num lançamento pago sai diferente do que aconteceu — você pagou num dia e lançou no outro, marcou a conta errada, ou a despesa entrou na categoria/centro de custo errado. Antes era preciso estornar e refazer; agora dá para **corrigir direto**, sem desfazer o lançamento, pela mesma janela **Editar dados de pagamento**.
 
-[![Diálogo de edição dos dados de pagamento](/assets/screenshots/mov-editar-pagamento-01.png)](/assets/screenshots/mov-editar-pagamento-01.png)
-*Editar dados de pagamento — ajuste data e/ou conta e informe o motivo*
+[![Editar dados de pagamento de um lançamento pago](/assets/screenshots/mov-editar-cc-categoria-01.png)](/assets/screenshots/mov-editar-cc-categoria-01.png)
+*Editar dados de pagamento — ajuste data, conta, categoria e/ou centro de custo e informe o motivo*
 
-**Quem pode:** os responsáveis financeiros — o mesmo perfil que marca lançamentos como pagos e faz estornos.
+**Quem pode:** **Presidente** e **Tesoureiro** (o mesmo perfil que marca lançamentos como pagos e faz estornos).
 
 Para corrigir:
 
-1. Abra o **detalhe** do lançamento (ele precisa estar com status **Pago**).
-2. Clique em **Editar dados de pagamento**.
-3. Ajuste a **data de pagamento** e/ou a **conta financeira** e escreva um **motivo** — o motivo é obrigatório e fica guardado no histórico da movimentação.
+1. Abra o **detalhe** do lançamento (ele precisa estar com status **Pago**) e clique em **Editar dados de pagamento** — ou use **Editar** na linha da tabela de Movimentações.
+2. Ajuste o que precisar: **data de pagamento**, **conta financeira**, **categoria** e/ou **centro de custo**.
+3. Escreva um **motivo** (obrigatório) — ele fica guardado na **trilha de auditoria** do lançamento.
 4. Salve. Se você trocou a conta, os **saldos das contas envolvidas são recalculados** automaticamente.
 
-> ⚠️ **Atenção · Aqui é só data e conta**
+> ⚠️ **Atenção · O que esta janela NÃO muda**
 >
-> Por esta janela você corrige apenas a **data de pagamento** e a **conta**. Para corrigir o **centro de custo** e a **categoria** de um lançamento pago, use a correção descrita logo abaixo. Para corrigir o **valor**, o caminho continua sendo o **Estorno**. Transferências não usam essas correções.
-
-## Corrigir centro de custo e categoria de um lançamento pago
-
-Depois que um lançamento foi pago, ainda é possível que o **centro de custo** ou a **categoria** tenham ficado errados — a despesa foi para a área errada, ou entrou numa categoria que não era. Presidente e Tesoureiro podem **corrigir esses dois campos** sem estornar o lançamento.
-
-[![Corrigir centro de custo e categoria de um lançamento pago](/assets/screenshots/mov-editar-cc-categoria-01.png)](/assets/screenshots/mov-editar-cc-categoria-01.png)
-*Corrigir centro de custo e categoria — informe o motivo antes de salvar*
-
-**Quem pode:** **Presidente** e **Tesoureiro**.
-
-Para corrigir:
-
-1. Abra o **detalhe** do lançamento (ele precisa estar com status **Pago**).
-2. Acione a correção de **centro de custo e categoria**.
-3. Ajuste o **centro de custo** e/ou a **categoria** e escreva um **motivo** — o motivo é obrigatório e fica registrado na **trilha de auditoria** do lançamento.
-4. Salve.
+> Por aqui você corrige **data, conta, categoria e centro de custo**. Para corrigir o **valor**, o caminho continua sendo o **Estorno**. A correção **não altera o valor nem o status** do lançamento — ele continua pago, pelo mesmo valor. Transferências não usam essas correções.
 
 > 📖 **Conceito · Reclassificar não é remexer o dinheiro**
 >
-> Essa correção **não altera o valor nem o status** do lançamento — ele continua pago, pelo mesmo valor, na mesma conta. O que muda é só a **classificação gerencial** (para qual área e sob qual categoria a despesa/receita conta). Por isso ela pode ser feita depois de pago sem estorno: os saldos das contas não mudam. Como qualquer correção sobre lançamento pago, o **motivo** fica guardado na trilha de auditoria — quem prestar contas depois consegue ver o que foi reclassificado e por quê.
+> Mudar a **categoria** ou o **centro de custo** de um lançamento pago muda só a **classificação gerencial** (para qual área e sob qual categoria a despesa/receita conta) — os saldos das contas não mudam. Por isso pode ser feito depois de pago sem estorno. Como qualquer correção sobre lançamento pago, o **motivo** fica guardado na trilha de auditoria — quem prestar contas depois vê o que foi reclassificado e por quê.
 
 ## Importar lançamentos
 
