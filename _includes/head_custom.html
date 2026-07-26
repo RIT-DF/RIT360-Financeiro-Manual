@@ -1,1 +1,34 @@
 <link rel="icon" type="image/png" href="/assets/favicon.png">
+
+<!-- issue #53: abrir imagens ampliadas em nova aba (links de imagem no conteudo) -->
+<script>
+  (function () {
+    var IMG_EXT = /\.(png|jpe?g|gif|webp|svg)(\?.*)?(#.*)?$/i;
+
+    function isImageLink(a) {
+      if (a.target === '_blank') return false; // idempotente
+      var href = a.getAttribute('href') || '';
+      if (IMG_EXT.test(href)) return true;
+      return a.querySelector('img') !== null; // ancora que envolve <img>
+    }
+
+    function openImagesInNewTab() {
+      var container = document.querySelector('.main-content');
+      if (!container) return;
+      var links = container.querySelectorAll('a[href]');
+      for (var i = 0; i < links.length; i++) {
+        var a = links[i];
+        if (isImageLink(a)) {
+          a.setAttribute('target', '_blank');
+          a.setAttribute('rel', 'noopener noreferrer');
+        }
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', openImagesInNewTab);
+    } else {
+      openImagesInNewTab();
+    }
+  })();
+</script>
