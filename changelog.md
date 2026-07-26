@@ -11,6 +11,16 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.12.0] — 2026-07-26
+
+### Adicionado
+
+- **Novos filtros de Movimentações, combináveis e mais poderosos.** As abas deram lugar a **filtros por marcadores (chips)**: dá para filtrar por **tipo, conta, categoria, status, projeto e centro de custo** ao mesmo tempo, escolhendo **vários valores** em cada um e podendo **incluir** ou **excluir** ("mostrar tudo, exceto…"). Some-se a isso uma **busca livre** por texto (descrição, beneficiário, conta, categoria, valor ou data). No celular, os filtros abrem em um painel próprio e a tela nunca rola para o lado.
+- **Estornos e cancelados ocultos por padrão na conferência.** A visão de Movimentações passa a **esconder automaticamente** os lançamentos estornados (o par inteiro) e os cancelados, para facilitar a conferência contra o extrato — com um botão **"Mostrar estornados e cancelados"** quando você quiser vê-los, e a contagem indicando quantos estão ocultos.
+- **Exportação fiel ao que está na tela.** As exportações em Excel e PDF passam a refletir exatamente os filtros ativos — o que você vê é o que exporta.
+
+---
+
 ## [1.11.0] — 2026-07-26
 
 ### Adicionado
