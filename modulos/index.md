@@ -18,3 +18,4 @@ O RIT360 Financeiro é organizado em módulos, cada um responsável por uma áre
 | [Pedidos de Pagamento](/modulos/pedidos-pagamento/) | Autorizar pagamentos a fornecedores antes da despesa acontecer |
 | [Projetos](/modulos/projetos/) | Planejar, executar, acompanhar a saúde e encerrar iniciativas da OSC |
 | [Relatórios](/modulos/relatorios/) | Análises financeiras consolidadas — Visão Geral, Receitas, Despesas, Atenção e Previsão |
+| [Orçamento](/modulos/orcamento/) | Orçamento anual por centro de custo e categoria — previsto × realizado ao longo do ano |

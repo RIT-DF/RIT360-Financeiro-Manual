@@ -15,4 +15,4 @@ Configurações disponíveis para administradores e tesoureiros da OSC.
 | [Usuários](/configuracoes/usuarios/) | Membros da organização, papéis e convites |
 | [Contas Bancárias](/configuracoes/contas/) | Contas financeiras e saldos consolidados |
 | [Categorias](/configuracoes/categorias/) | Categorias de receita, despesa e centros de custo |
-| [Fluxo de Aprovações](/configuracoes/aprovacoes/) | Quórum e aprovadores elegíveis para reembolsos e pedidos |
+| [Fluxo de Aprovações](/configuracoes/aprovacoes/) | Quórum e aprovadores elegíveis para reembolsos, pedidos, projetos e orçamento |

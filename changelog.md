@@ -11,6 +11,43 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.10.0] — 2026-07-26
+
+### Adicionado
+
+- **Fechamento do orçamento: reconciliação e encerramento do exercício.** No fim do ano, o orçamento agora mostra uma **reconciliação** que junta as três origens do realizado — **planejado** (o que caiu nos centros de custo e categorias orçados), **projetos** (o que pertence a projetos, pela regra "projeto vence") e **não alocado** (movimentações fora do que foi orçado) — e fecha a conta batendo com o total movimentado no ano. Quando o ano está fechado, o botão **Encerrar o exercício** congela o orçamento definitivamente e o guarda como histórico para consulta.
+- **Orçamento em planilha: exportar e importar em XLSX.** Dá para levar o orçamento para uma planilha (Excel, Google Sheets) para trabalhar offline ou montar em conjunto na reunião da diretoria, e depois **importar de volta** para oficializar no sistema.
+- **Relatório de execução do orçamento (PDF e Excel).** Um relatório do previsto × realizado do ano, exportável em **PDF** (para anexar à prestação de contas ou enviar a financiadores) e em **Excel** (para análise).
+- **Prestação de contas com "Execução por Centro de Custo".** A prestação de contas da OSC ganhou uma seção nova que mostra, para cada área, o previsto, o realizado e o quanto do previsto já foi consumido — o previsto × realizado do orçamento agora dentro do relatório oficial.
+
+---
+
+## [1.9.0] — 2026-07-26
+
+### Adicionado
+
+- **Acompanhamento do orçamento: previsto × realizado com semáforo de saúde.** Depois de aprovado, o orçamento vira painel: para cada centro de custo e categoria você vê o previsto para o ano, o realizado até agora e um **semáforo** — verde (dentro), amarelo (passou de 80% do previsto) e vermelho (estourou os 100%). A diretoria enxerga de relance onde está o aperto, sem abrir linha por linha.
+- **Ciclo de aprovação e revisão do orçamento.** O orçamento agora passa por **rascunho → em aprovação → aprovado**; ao ser aprovado, vira o **baseline** congelado contra o qual o acompanhamento é feito. Revisar um orçamento aprovado **exige um motivo** (registrado na auditoria); ajustes acima de um **limiar** configurável voltam para aprovação, e ajustes pequenos são aplicados direto.
+- **Aba "Orçamento" no Fluxo de Aprovações.** Em **Configurações → Fluxo de Aprovações**, uma aba nova define quem aprova o orçamento, o quórum, o **limiar de revisão** e a partir de quais percentuais o sistema alerta.
+- **Alertas automáticos de execução.** Quando um centro de custo ou categoria passa de **80%** ou de **100%** do previsto, o sistema avisa automaticamente o **gestor do centro de custo** e o **tesoureiro** — você não precisa ficar olhando o painel todo dia.
+
+### Melhorado
+
+- **Regra "projeto vence" para não contar gasto duas vezes.** Um gasto vinculado a um projeto conta no **orçamento do projeto** e não infla o realizado do centro de custo — cada "balde" reflete só o que é dele, e a soma não engana.
+
+---
+
+## [1.8.0] — 2026-07-26
+
+### Adicionado
+
+- **Novo módulo: Orçamento anual da OSC.** Agora dá para planejar o ano inteiro — quanto a OSC pretende arrecadar e gastar — organizado por **centro de custo** e por **categoria**. É bússola, não cadeado: o orçamento **alerta, não bloqueia**, e não é um ERP — é planejamento financeiro anual.
+- **Elaborar receitas e despesas previstas.** Você escolhe o **ano**, lança cada linha com um **valor anual**, e o sistema **distribui automaticamente nos 12 meses** — com a opção de **ajustar mês a mês** quando o gasto se concentra num período (o evento de setembro, a taxa anual de março). Cada centro de custo pode ter uma **linha de contingência** (a reserva para imprevistos daquela área).
+- **Resultado previsto do ano.** Enquanto você monta o orçamento, o sistema mostra o **resultado previsto** — superávit (sobra) ou déficit (falta) planejado — comparando o total de receitas com o total de despesas previstas.
+- **Gerar o orçamento automaticamente a partir do histórico.** Quando a OSC já tem **pelo menos dois anos** de movimentações, o módulo monta um rascunho do orçamento baseado no que de fato arrecadou e gastou nos anos anteriores — você recebe uma base realista e só ajusta o que muda.
+
+---
+
 ## [1.7.0] — 2026-07-25
 
 ### Adicionado

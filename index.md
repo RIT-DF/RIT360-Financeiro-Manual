@@ -32,9 +32,9 @@ permalink: /
   <p>Esta documentação <strong>não é só um manual de botões</strong>: cada seção explica o porquê das funcionalidades, conceitos financeiros relevantes para OSC (fluxo de caixa, regime de caixa, estorno, quórum de aprovação) e boas práticas que vimos funcionarem na rede. Leia na ordem que quiser; comece pelos <a href="/primeiros-passos/">Primeiros Passos</a> se você acabou de chegar.</p>
 </div>
 
-<a class="home-highlight" href="/modulos/caca-diferencas/">
-  <span class="home-highlight-icon">🔎</span>
-  <span><strong>Novidade: Caça-diferenças.</strong> Informe o saldo do extrato do seu banco e descubra na hora onde está a diferença para o saldo do sistema — com sugestões de correção em um clique. <span class="home-highlight-cta">Ver como funciona →</span></span>
+<a class="home-highlight" href="/modulos/orcamento/">
+  <span class="home-highlight-icon">🎯</span>
+  <span><strong>Novidade: Orçamento anual.</strong> Planeje receitas e despesas do ano por centro de custo e categoria, e acompanhe o previsto contra o realizado com semáforo de saúde e alertas automáticos. <span class="home-highlight-cta">Ver como funciona →</span></span>
 </a>
 
 <div class="section-title">Módulos</div>
@@ -69,6 +69,11 @@ permalink: /
     <div class="module-card-icon">📈</div>
     <div class="module-card-title">Relatórios</div>
     <div class="module-card-desc">Análises financeiras consolidadas — Visão Geral, Receitas, Despesas, Atenção e Previsão</div>
+  </a>
+  <a class="module-card" href="/modulos/orcamento/">
+    <div class="module-card-icon">🎯</div>
+    <div class="module-card-title">Orçamento</div>
+    <div class="module-card-desc">Orçamento anual por centro de custo e categoria — previsto × realizado ao longo do ano</div>
   </a>
 </div>
 

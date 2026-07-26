@@ -16,7 +16,7 @@ A página **Fluxo de Aprovações** define **quem pode aprovar** reembolsos e pe
 >
 > Em OSC sem regra clara de aprovação, ou ninguém aprova nada (e despesas acontecem por inércia, sem controle) ou todo mundo aprova tudo (e a aprovação vira carimbo automático, sem real avaliação). **O fluxo bem configurado** define exatamente quem tem mandato para autorizar saída de dinheiro, quantos precisam concordar, e como o sistema lida com casos atípicos (auto-aprovação, situações onde o solicitante é também aprovador). Isso protege a OSC de gastos não autorizados e protege os aprovadores de questionamento futuro.
 
-A página tem **duas abas**: **Pagamentos e Reembolsos** (reembolsos e pedidos de pagamento, com regras próprias mas a mesma lógica) e **Projetos** (aprovação de abertura e encerramento de projetos). As seções abaixo descrevem a aba de Pagamentos e Reembolsos; a aba de Projetos é descrita no fim.
+A página tem **três abas**: **Pagamentos e Reembolsos** (reembolsos e pedidos de pagamento, com regras próprias mas a mesma lógica), **Projetos** (aprovação de abertura e encerramento de projetos) e **Orçamento** (aprovação e revisão do orçamento anual). As seções abaixo descrevem a aba de Pagamentos e Reembolsos; as abas de Projetos e Orçamento são descritas no fim.
 
 ## Aprovações necessárias (quórum)
 
@@ -72,6 +72,26 @@ A aba **Projetos** define **quem pode aprovar a abertura e o encerramento** de u
 >
 > Os dois portões dão governança ao projeto sem engessar o dia a dia: aprovar a **abertura** é a diretoria concordando com o escopo e o orçamento; aprovar o **encerramento** é reconhecer que o projeto acabou, com aquele resultado e aquela prestação de contas. Entre os dois, a equipe trabalha com autonomia.
 
+## Aprovação de orçamento (aba Orçamento) {#aba-orcamento}
+
+[![Fluxo de aprovação de orçamento](/assets/screenshots/orcamento-config-aprovacao.png)](/assets/screenshots/orcamento-config-aprovacao.png)
+*Aba Orçamento — quem aprova, quórum, limiar de revisão e alertas*
+
+A aba **Orçamento** define as regras de governança do [orçamento anual](/modulos/orcamento/) da OSC:
+
+- **Papéis e pessoas elegíveis para aprovar** — quem pode dar o "sim" a um orçamento enviado para aprovação e às revisões que voltam para aprovação. É a permissão `budget.approve`. Default: Presidente e Tesoureiro. Você pode adicionar pessoas individuais, como nos demais fluxos.
+- **Quórum** — quantos votos positivos são necessários para aprovar (1 ou 2), mesma lógica de aprovação parcial da aba de Pagamentos e Reembolsos.
+- **Limiar de revisão** — o tamanho de mudança a partir do qual uma revisão do orçamento aprovado **volta para aprovação** em vez de ser aplicada direto. Ajustes abaixo do limiar entram na hora; acima dele, exigem novo "sim" da diretoria. Toda revisão, grande ou pequena, exige um **motivo** registrado na auditoria.
+- **Alertas de execução** — a partir de quais percentuais do previsto o sistema avisa (padrão: **80%** e **100%**) e para quem (gestor do centro de custo e tesoureiro).
+
+> 💡 **Por que isso importa**
+>
+> O orçamento só é levado a sério se mudá-lo tiver um custo proporcional ao tamanho da mudança. Sem limiar, ou toda correção de centavo trava esperando aprovação (e ninguém usa), ou qualquer um reescreve o orçamento sem controle (e o "previsto" perde o sentido). O limiar é onde a sua OSC diz: "correção pequena segue; mudança grande precisa a diretoria concordar de novo". Combinado com o motivo obrigatório em toda revisão, isso mantém o baseline confiável para a prestação de contas.
+
+> ✓ **Dica · Calibre o limiar pelo porte da OSC**
+>
+> Numa OSC pequena, um limiar em valor absoluto baixo faz quase toda revisão voltar para aprovação — vira fricção. Numa OSC grande, um limiar alto deixa passar mudanças relevantes sem revisão. Ajuste ao seu porte: o limiar deve capturar "mudanças que mexem no combinado com a diretoria", não cada pequeno remanejamento entre categorias.
+
 ## Boas práticas
 
 > ✓ **Dica · Comece simples, complique conforme cresce**
@@ -87,4 +107,5 @@ A aba **Projetos** define **quem pode aprovar a abertura e o encerramento** de u
 - **Configurações → Usuários** — onde os papéis são atribuídos aos membros.
 - **Reembolsos** e **Pedidos de Pagamento** — onde o fluxo configurado aqui é aplicado.
 - **Projetos** — onde a aprovação de abertura e encerramento configurada na aba Projetos é aplicada.
+- **[Orçamento](/modulos/orcamento/)** — onde a aprovação, o limiar de revisão e os alertas configurados na aba Orçamento são aplicados.
 - **Papéis e Permissões** — para visão geral de quem pode fazer o quê.

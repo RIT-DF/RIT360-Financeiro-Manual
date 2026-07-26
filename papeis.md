@@ -38,6 +38,9 @@ Visão rápida do que cada papel pode fazer. **✓** = pode operar · **👁** =
 | Solicitar pedido de pagamento | ✓ | ✓ | — | — | ✓ | — |
 | Solicitar o **próprio** reembolso | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | Coordenar um projeto (do qual é coordenador) | ✓ | ✓ | — | — | ✓ | — |
+| Ver o orçamento anual (previsto × realizado) | ✓ | ✓ | 👁 | 👁 | 👁 | — |
+| Elaborar / gerenciar o orçamento | ✓ | ✓ | — | — | — | — |
+| Aprovar o orçamento (`budget.approve`) | conforme o fluxo | conforme o fluxo | — | — | conforme o fluxo | — |
 
 > "Conforme o fluxo" = depende do que a OSC configurou em Fluxo de Aprovações (padrão: Presidente e Tesoureiro). Diretor e Comissão Fiscal **nunca** são aprovadores.
 
@@ -51,6 +54,7 @@ O **Gestor de Centro de Custo** é para quem responde pelo dia a dia financeiro 
 
 - **Criar e editar** lançamentos vinculados ao(s) seu(s) centro(s) de custo
 - **Ver** as movimentações e os relatórios daquele CC
+- **Elaborar e acompanhar o orçamento** do(s) seu(s) centro(s) de custo (o previsto × realizado da sua área) — ver [Orçamento](/modulos/orcamento/)
 
 **O que ele *não* pode fazer:**
 

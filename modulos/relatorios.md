@@ -175,6 +175,10 @@ Botão **Exportar** no cabeçalho. Três opções:
 
 Todos os exports trazem **cabeçalho identificador** padrão: nome da OSC, escopo, período, lista de filtros aplicados, estado do comparativo (ligado/desligado) e data/hora de geração. Aba Receitas/Despesas exporta **todas** as categorias (não só o top 10). Aba Atenção exporta a lista completa de anomalias com mensagem, severidade textual e regra. Aba Previsão exporta a tabela mês a mês com coluna "Origem" textual.
 
+> 📖 **Novo · Seção "Execução por Centro de Custo" na prestação de contas**
+>
+> Quando a OSC usa o módulo de [Orçamento](/modulos/orcamento/), a prestação de contas ganha uma seção **"Execução por Centro de Custo"**: para cada área da OSC, ela mostra o **previsto**, o **realizado** e o quanto do previsto já foi consumido no ano. É a forma de mostrar a financiadores e à diretoria não só quanto foi gasto, mas quanto foi gasto **em relação ao que se planejou** — o mesmo previsto × realizado do orçamento, agora dentro do relatório oficial.
+
 > 📖 **Sobre gráficos no PDF**
 >
 > A primeira versão da exportação traz **tabelas e blocos textuais** — sem reprodução de gráficos visuais. Para enxergar a curva de saldo ou o gráfico de categorias, use a interface do RIT360 Financeiro. Gráficos no PDF entram em versão futura.
