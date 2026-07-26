@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.12.2] — 2026-07-26
+
+### Adicionado
+
+- **Gestor(es) à vista na lista de Centros de custo.** A aba "Centros de custo" (em Configurações → Categorias e centros de custo) ganhou uma coluna **"Gestor(es)"**, mostrando de relance quem responde por cada centro — sem precisar abrir "Editar". Centros sem responsável aparecem com "—"; havendo mais de um, o primeiro nome é exibido com um "+N" (a lista completa aparece ao passar o mouse).
+
+---
+
 ## [1.12.1] — 2026-07-26
 
 ### Corrigido
