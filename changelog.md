@@ -11,6 +11,20 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.7.0] — 2026-07-25
+
+### Adicionado
+
+- **Novo cargo: Gestor de Centro de Custo.** Agora dá para dar a alguém a responsabilidade sobre **uma área específica** da OSC — uma filial, uma coordenação, um núcleo — sem abrir o financeiro inteiro para essa pessoa. Quem tem esse cargo pode **criar e editar** os lançamentos do(s) centro(s) de custo sob sua responsabilidade e **ver** as movimentações e relatórios recortados àquela área. Não pode excluir/estornar, importar, aprovar reembolsos ou pedidos, nem mexer nas configurações. O rótulo do cargo pode ser renomeado pela sua OSC (ex.: "Responsável de Filial"). Presidente e Tesoureiro continuam enxergando todos os centros de custo.
+- **Responsáveis por centro de custo.** Em **Configurações → Categorias → Centros de custo**, ao criar ou editar um centro de custo, você define **quem responde por ele** marcando os membros na seção "Responsáveis pelo centro de custo". Atribuir alguém aqui só libera o acesso se a pessoa também tiver o cargo **Gestor de Centro de Custo** — as duas coisas trabalham juntas.
+- **Centro de custo no Pedido de Pagamento.** O formulário de novo pedido de pagamento ganhou um campo **Centro de custo** (opcional, lista só os centros de custo ativos). Vincular o pedido a uma área desde a origem faz o lançamento já nascer com o centro de custo certo quando o pedido é aprovado.
+
+### Melhorado
+
+- **Corrigir o centro de custo e a categoria de um lançamento já pago.** Presidente e Tesoureiro podem reclassificar um lançamento pago — ajustar o **centro de custo** e a **categoria** — informando um **motivo**, que fica registrado na trilha de auditoria. A correção não altera o valor nem o status do lançamento: é só a classificação gerencial que muda, sem precisar estornar.
+
+---
+
 ## [1.6.2] — 2026-07-16
 
 ### Corrigido

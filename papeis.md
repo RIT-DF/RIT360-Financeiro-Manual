@@ -4,19 +4,20 @@ nav_order: 8
 permalink: /papeis/
 ---
 
-O RIT360 Financeiro tem **seis papéis** que um usuário pode ocupar dentro de uma organização. Cada papel define o que aquele usuário **pode ver e pode fazer** no sistema — sempre dentro da OSC à qual está vinculado. Um usuário pode acumular **mais de um papel** na mesma OSC (ver "Múltiplos papéis", abaixo).
+O RIT360 Financeiro tem **sete papéis** que um usuário pode ocupar dentro de uma organização. Cada papel define o que aquele usuário **pode ver e pode fazer** no sistema — sempre dentro da OSC à qual está vinculado. Um usuário pode acumular **mais de um papel** na mesma OSC (ver "Múltiplos papéis", abaixo).
 
 > 💡 **Por que isso importa**
 >
 > Em OSC, função financeira não é "tudo ou nada". O presidente quer ter visão geral, autorizar saídas grandes, mas não necessariamente lançar cada conta de luz. O tesoureiro precisa operacionalizar o financeiro mas talvez não tenha por que mexer no cadastro de papéis. O voluntário só quer registrar seu reembolso, não ver dados de outras pessoas. **Papéis bem desenhados protegem todo mundo**: o presidente delega sem perder controle, o tesoureiro opera sem ter responsabilidade por configurar a OSC, o voluntário pede reembolso sem expor dados financeiros que não são dele saber.
 
-## Os seis papéis
+## Os sete papéis
 
 | Papel | Pode aprovar? | O que faz no dia a dia |
 |---|---|---|
 | **Presidente** (admin) | ✓ Sim | Tudo: configurações da OSC, gerenciamento de usuários, aprovações, lançamentos, conta bancária, categorias |
 | **Tesoureiro** | ✓ Sim | Lançar movimentações, aprovar reembolsos e pedidos, confirmar pagamentos, configurar contas bancárias e categorias |
 | **Diretor** | — | Membro da diretoria com **visão ampla de supervisão**: vê movimentações, relatórios e projetos para acompanhar, mas **não opera** (não lança, não aprova). Pode solicitar reembolso próprio |
+| **Gestor de Centro de Custo** | — | Cuida das movimentações **do(s) centro(s) de custo sob sua responsabilidade**: pode **criar e editar** lançamentos daquele CC e vê movimentações e relatórios recortados a ele. Não exclui/estorna, não importa, não aprova, não configura |
 | **Coordenador de Projeto** | — | Solicitar reembolsos e pedidos de pagamento, ver movimentações |
 | **Voluntário** | — | Solicitar reembolsos (apenas os próprios), ver o painel |
 | **Comissão Fiscal** | — | Lê tudo (movimentações, reembolsos, pedidos de pagamento, auditoria) **sem operar, aprovar ou solicitar pedidos de pagamento**. Pode solicitar reembolso próprio |
@@ -39,6 +40,32 @@ Visão rápida do que cada papel pode fazer. **✓** = pode operar · **👁** =
 | Coordenar um projeto (do qual é coordenador) | ✓ | ✓ | — | — | ✓ | — |
 
 > "Conforme o fluxo" = depende do que a OSC configurou em Fluxo de Aprovações (padrão: Presidente e Tesoureiro). Diretor e Comissão Fiscal **nunca** são aprovadores.
+
+> 💡 O **Gestor de Centro de Custo** não aparece nesse quadro porque o acesso dele não é da OSC inteira, e sim **recortado ao(s) centro(s) de custo sob sua responsabilidade** — ver a seção "Gestor de Centro de Custo", abaixo.
+
+## Gestor de Centro de Custo
+
+O **Gestor de Centro de Custo** é para quem responde pelo dia a dia financeiro de **uma área específica** da OSC — uma filial, uma coordenação, um núcleo com orçamento próprio — sem precisar de acesso ao financeiro inteiro. Diferente dos demais papéis, o acesso dele é **recortado ao(s) centro(s) de custo** que a OSC colocou sob sua responsabilidade.
+
+**O que o Gestor de Centro de Custo pode fazer** (sempre limitado ao seu CC):
+
+- **Criar e editar** lançamentos vinculados ao(s) seu(s) centro(s) de custo
+- **Ver** as movimentações e os relatórios daquele CC
+
+**O que ele *não* pode fazer:**
+
+- Excluir ou estornar lançamentos
+- Importar lançamentos (CSV, extrato bancário, WooCommerce)
+- Aprovar reembolsos ou pedidos de pagamento
+- Gerir configurações da OSC (dados, usuários, papéis, contas, categorias, fluxo de aprovações)
+
+> 📖 **Conceito · Dois requisitos para o acesso valer**
+>
+> Ter o **cargo** Gestor de Centro de Custo, sozinho, não abre nada. O acesso só se concretiza quando a pessoa também é marcada como **responsável** por pelo menos um centro de custo (em Configurações → Categorias → aba Centros de custo). São duas coisas complementares: o **cargo** diz *o que* a pessoa pode fazer; o **vínculo de responsável** diz *sobre qual CC*. Faltando qualquer um dos dois, a pessoa não enxerga nem opera aquele centro de custo. Ver [Configurações → Categorias](/configuracoes/categorias/#responsaveis-pelo-centro-de-custo).
+
+> 💡 **Presidente e Tesoureiro veem todos os centros de custo.** O recorte por CC vale para o Gestor de Centro de Custo; quem opera o financeiro consolidado (Presidente, Tesoureiro) continua enxergando e lançando em qualquer centro de custo, sem depender de vínculo de responsável.
+
+O **rótulo** desse cargo pode ser renomeado pela OSC (por exemplo, "Responsável de Filial" ou "Gestor de Núcleo"), como qualquer outro cargo — ver [Configurações → Cargos e Permissões](/configuracoes/cargos/#renomear-o-rotulo-de-um-cargo).
 
 ## Regras importantes
 
@@ -78,7 +105,9 @@ A configuração permite:
 
 ## Alterar os papéis de um usuário
 
-Apenas o **Presidente** pode alterar papéis. Acesse [Configurações → Usuários](/configuracoes/usuarios/), localize o membro, use o menu de ações da linha e selecione **Editar papéis**. Abrirá um painel lateral com checkboxes para os papéis disponíveis (Presidente, Tesoureiro, Diretor, Coordenador de Projeto, Comissão Fiscal e Voluntário). Marque os papéis desejados e clique em "Salvar". Pelo menos 1 papel é obrigatório.
+Apenas o **Presidente** pode alterar papéis. Acesse [Configurações → Usuários](/configuracoes/usuarios/), localize o membro, use o menu de ações da linha e selecione **Editar papéis**. Abrirá um painel lateral com checkboxes para os papéis disponíveis (Presidente, Tesoureiro, Diretor, Gestor de Centro de Custo, Coordenador de Projeto, Comissão Fiscal e Voluntário). Marque os papéis desejados e clique em "Salvar". Pelo menos 1 papel é obrigatório.
+
+> 💡 Marcar **Gestor de Centro de Custo** aqui é só metade do caminho — falta dizer *de qual* centro de custo a pessoa é responsável, em [Configurações → Categorias → Centros de custo](/configuracoes/categorias/#responsaveis-pelo-centro-de-custo).
 
 > ⚠️ **Atenção · Mudança de papel é mudança de poder**
 >

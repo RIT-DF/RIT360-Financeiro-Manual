@@ -244,9 +244,29 @@ Para corrigir:
 3. Ajuste a **data de pagamento** e/ou a **conta financeira** e escreva um **motivo** — o motivo é obrigatório e fica guardado no histórico da movimentação.
 4. Salve. Se você trocou a conta, os **saldos das contas envolvidas são recalculados** automaticamente.
 
-> ⚠️ **Atenção · Só data e conta**
+> ⚠️ **Atenção · Aqui é só data e conta**
 >
-> Por aqui você corrige apenas a **data de pagamento** e a **conta**. Valor, categoria e status permanecem intactos. Para corrigir o **valor** de um lançamento pago, o caminho continua sendo o **Estorno**. Transferências não usam essa correção.
+> Por esta janela você corrige apenas a **data de pagamento** e a **conta**. Para corrigir o **centro de custo** e a **categoria** de um lançamento pago, use a correção descrita logo abaixo. Para corrigir o **valor**, o caminho continua sendo o **Estorno**. Transferências não usam essas correções.
+
+## Corrigir centro de custo e categoria de um lançamento pago
+
+Depois que um lançamento foi pago, ainda é possível que o **centro de custo** ou a **categoria** tenham ficado errados — a despesa foi para a área errada, ou entrou numa categoria que não era. Presidente e Tesoureiro podem **corrigir esses dois campos** sem estornar o lançamento.
+
+[![Corrigir centro de custo e categoria de um lançamento pago](/assets/screenshots/mov-editar-cc-categoria-01.png)](/assets/screenshots/mov-editar-cc-categoria-01.png)
+*Corrigir centro de custo e categoria — informe o motivo antes de salvar*
+
+**Quem pode:** **Presidente** e **Tesoureiro**.
+
+Para corrigir:
+
+1. Abra o **detalhe** do lançamento (ele precisa estar com status **Pago**).
+2. Acione a correção de **centro de custo e categoria**.
+3. Ajuste o **centro de custo** e/ou a **categoria** e escreva um **motivo** — o motivo é obrigatório e fica registrado na **trilha de auditoria** do lançamento.
+4. Salve.
+
+> 📖 **Conceito · Reclassificar não é remexer o dinheiro**
+>
+> Essa correção **não altera o valor nem o status** do lançamento — ele continua pago, pelo mesmo valor, na mesma conta. O que muda é só a **classificação gerencial** (para qual área e sob qual categoria a despesa/receita conta). Por isso ela pode ser feita depois de pago sem estorno: os saldos das contas não mudam. Como qualquer correção sobre lançamento pago, o **motivo** fica guardado na trilha de auditoria — quem prestar contas depois consegue ver o que foi reclassificado e por quê.
 
 ## Importar lançamentos
 

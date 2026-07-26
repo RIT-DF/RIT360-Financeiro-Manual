@@ -52,6 +52,20 @@ Categorias para classificar saídas. Exemplos:
 
 OSC pequena geralmente não precisa de centros de custo. OSC com **múltiplas frentes operacionais** (sede + filiais; várias coordenações; diretorias com orçamentos separados) ganha muito ao usar.
 
+### Responsáveis pelo centro de custo
+{: #responsaveis-pelo-centro-de-custo }
+
+Ao **criar** ou **editar** um centro de custo, o formulário traz a seção **Responsáveis pelo centro de custo** — uma lista dos membros da OSC com uma caixa de seleção para cada. Marque quem responde por aquele centro de custo e salve.
+
+[![Responsáveis pelo centro de custo](/assets/screenshots/config-cc-responsaveis.png)](/assets/screenshots/config-cc-responsaveis.png)
+*Editar centro de custo — seção "Responsáveis pelo centro de custo"*
+
+> ⚠️ **Importante · Atribuir responsável não basta sozinho**
+>
+> Marcar alguém como responsável por um centro de custo **só concede acesso se a pessoa também tiver o cargo Gestor de Centro de Custo**. São duas coisas complementares: o **cargo** (em Configurações → Usuários → Editar papéis) diz que a pessoa *pode* gerir centros de custo; o **vínculo de responsável** aqui diz *quais* centros de custo. Faltando o cargo, o nome pode até estar marcado aqui, mas a pessoa não enxerga nem opera o centro de custo. Ver [Papéis e Permissões → Gestor de Centro de Custo](/papeis/#gestor-de-centro-de-custo).
+
+Com o cargo e o vínculo em dia, o Gestor de Centro de Custo passa a **criar e editar** lançamentos daquele CC e a **ver** as movimentações e relatórios recortados a ele — sem acesso ao restante do financeiro da OSC. Presidente e Tesoureiro continuam enxergando **todos** os centros de custo, independentemente dessa lista.
+
 ## Template de categorias
 
 Para começar rapidamente, clique em **Aplicar template**. O RIT360 Financeiro tem modelos prontos por tipo de OSC — há templates para **Grupo Escoteiro, Associação, Instituto, Fundação, ONG, Coletivo e Cooperativa**, cada um com as categorias de receita e despesa típicas daquele perfil. Escolha o modelo mais próximo da sua organização; aplicar o template importa as categorias do modelo para a sua OSC, sem apagar o que você já tinha.

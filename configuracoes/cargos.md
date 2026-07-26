@@ -7,20 +7,20 @@ permalink: /configuracoes/cargos/
 
 > Disponível para **Presidente (admin)**.
 
-A página **Cargos e permissões** vai além dos 6 cargos padrão da plataforma: além de **renomear** cada cargo, o Presidente pode **criar cargos novos** e **ajustar as permissões** com controle fino — por exemplo, um "Tesoureiro sem exclusão" que registra lançamentos mas não pode excluí-los.
+A página **Cargos e permissões** vai além dos 7 cargos padrão da plataforma: além de **renomear** cada cargo, o Presidente pode **criar cargos novos** e **ajustar as permissões** com controle fino — por exemplo, um "Tesoureiro sem exclusão" que registra lançamentos mas não pode excluí-los.
 
 [![Configurações — Cargos e permissões](/assets/screenshots/config-cargos.png)](/assets/screenshots/config-cargos.png)
 *Editor de cargos — à esquerda a lista, à direita as permissões do cargo selecionado*
 
 > 💡 **Por que isso importa**
 >
-> Cada OSC se organiza de um jeito. Os 6 papéis padrão cobrem a maioria dos casos, mas às vezes você precisa de uma função sob medida — um "Secretário" que só vê relatórios, um "Tesoureiro júnior" que lança mas não exclui, um "Captador de recursos" com acesso a reembolsos. Em vez de forçar a pessoa num papel que dá acesso demais (ou de menos), você monta o cargo certo e atribui. Tudo é validado **no servidor** — a tela só reflete o que a pessoa realmente pode fazer.
+> Cada OSC se organiza de um jeito. Os 7 papéis padrão cobrem a maioria dos casos, mas às vezes você precisa de uma função sob medida — um "Secretário" que só vê relatórios, um "Tesoureiro júnior" que lança mas não exclui, um "Captador de recursos" com acesso a reembolsos. Em vez de forçar a pessoa num papel que dá acesso demais (ou de menos), você monta o cargo certo e atribui. Tudo é validado **no servidor** — a tela só reflete o que a pessoa realmente pode fazer.
 
 ## Conceitos
 
 > 📖 **Conceito · Cargo padrão × cargo personalizado**
 >
-> **Cargos padrão** são os 6 que já vêm na plataforma (Presidente, Tesoureiro, Diretor, Coord. de projeto, Comissão Fiscal, Voluntário) — aparecem com a etiqueta **Padrão**. **Cargos personalizados** são os que a sua OSC cria — etiqueta **Personalizado**. A diferença prática está na edição (veja abaixo): cargo padrão tem um piso de permissões que não sai; cargo personalizado é totalmente editável.
+> **Cargos padrão** são os 7 que já vêm na plataforma (Presidente, Tesoureiro, Diretor, Gestor de Centro de Custo, Coord. de projeto, Comissão Fiscal, Voluntário) — aparecem com a etiqueta **Padrão**. **Cargos personalizados** são os que a sua OSC cria — etiqueta **Personalizado**. A diferença prática está na edição (veja abaixo): cargo padrão tem um piso de permissões que não sai; cargo personalizado é totalmente editável.
 
 > 📖 **Conceito · Permissões essenciais e acréscimos**
 >
@@ -84,6 +84,7 @@ A atribuição é feita em **Configurações → Usuários**: no menu de ações
 *Editar papéis: marque os cargos da pessoa (padrão e/ou personalizados)*
 
 ## Renomear o rótulo de um cargo
+{: #renomear-o-rotulo-de-um-cargo }
 
 Você também pode trocar **como cada cargo é chamado** na sua OSC (onde o RIT360 Financeiro diz "Tesoureiro", a sua associação pode dizer "Diretor Financeiro") — sem mudar as permissões. O novo rótulo aparece em toda a aplicação.
 

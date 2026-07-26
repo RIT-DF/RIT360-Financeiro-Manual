@@ -134,7 +134,9 @@ Clique em **+ Nova solicitação** para abrir o formulário.
 - **Descrição** — o que está sendo pago e para qual finalidade
 - **Dados de pagamento do destinatário**: PIX, TED ou Boleto (chave/conta/código de barras)
 
-**Campos opcionais:** Categoria, Projeto, Centro de custo, Observações, Documentos (orçamento, nota fiscal, contrato) e, **apenas no tipo Único**, a **Data de pagamento solicitada**.
+**Campos opcionais:** Categoria, Projeto, **Centro de custo**, Observações, Documentos (orçamento, nota fiscal, contrato) e, **apenas no tipo Único**, a **Data de pagamento solicitada**.
+
+> 💡 **Centro de custo no pedido** (opcional): a lista traz **apenas os centros de custo ativos** da OSC. Escolher um vincula o pedido àquela área desde a origem — quando ele for aprovado e virar movimentação, o lançamento já nasce com o centro de custo certo, sem precisar corrigir depois. Deixar em branco é normal para quem não usa centros de custo. Os centros de custo são cadastrados em [Configurações → Categorias → Centros de custo](/configuracoes/categorias/#centros-de-custo).
 
 > 💡 **Data de pagamento solicitada** (opcional, só no tipo Único): o prazo em que o fornecedor espera receber. Serve de **referência para o tesoureiro** na hora de pagar e aparece no detalhe do pedido. Deixá-la em branco não impede enviar o pedido.
 
