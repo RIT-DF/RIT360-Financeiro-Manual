@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.13.1] — 2026-07-26
+
+### Melhorado
+
+- **Campo de telefone mais consistente, com seletor de país.** Onde você digita telefone (seu perfil, dados da organização e cadastros), o campo agora tem uma **máscara única e uniforme** e um **seletor de país** — com **Brasil já selecionado por padrão**, e a opção de escolher outro país quando precisar. Ao abrir um cadastro salvo, o país é reconhecido automaticamente pelo número. Números brasileiros seguem no formato de sempre `(DDD) 9XXXX-XXXX`.
+
+---
+
 ## [1.12.4] — 2026-07-26
 
 ### Melhorado
