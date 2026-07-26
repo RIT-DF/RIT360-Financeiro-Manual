@@ -11,6 +11,15 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.12.4] — 2026-07-26
+
+### Melhorado
+
+- **Campo de documento aceita RG ou RNE.** No seu perfil, o campo agora se chama **"RG / RNE"** e deixa claro que estrangeiros podem informar o **RNE** (Registro Nacional de Estrangeiro) no mesmo lugar.
+- **Aviso de permissão de administrador mais elegante.** Ao conceder, em Cargos e Permissões, uma permissão que equivale a poder de administrador, o aviso de confirmação agora aparece como um diálogo do próprio sistema (no lugar do pop-up padrão do navegador), com Confirmar/Cancelar.
+
+---
+
 ## [1.12.2] — 2026-07-26
 
 ### Adicionado
