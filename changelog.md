@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.12.1] — 2026-07-26
+
+### Corrigido
+
+- **Já dá para designar quem ainda não definiu a senha.** Um membro recém-cadastrado, que ainda não concluiu o primeiro acesso, agora pode ser escolhido como **gestor de centro de custo**, **coordenador ou integrante de projeto** e **aprovador** (de reembolso, pedido de pagamento, orçamento e projeto) — sem precisar esperar ele entrar no sistema pela primeira vez. O nome aparece nas listas com a marca discreta **"· acesso pendente"**. A permissão para *agir* (aprovar, coordenar) continua valendo só depois que a pessoa ativa o acesso.
+
+---
+
 ## [1.12.0] — 2026-07-26
 
 ### Adicionado
