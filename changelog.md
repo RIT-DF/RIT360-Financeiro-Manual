@@ -11,6 +11,18 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.14.0] — 2026-07-26
+
+### Adicionado
+
+- **Solicitação de pagamento por gestor de centro de custo e por coordenador de projeto — restrita ao seu domínio.** Nas configurações de fluxo de aprovação de pagamentos e reembolsos, a organização pode permitir que o **gestor de centro de custo** solicite pagamentos **apenas do seu centro de custo**, e que o **coordenador de projeto** solicite **apenas do seu projeto**. Presidente e Tesoureiro seguem podendo solicitar sem restrição. Cada permissão é ligada por organização, conforme o estatuto.
+
+### Modificado
+
+- **Coordenador de projeto agora é restrito ao seu projeto ao solicitar pagamentos.** Antes, um coordenador podia solicitar pagamento para qualquer projeto; passa a criar pedidos **somente para os projetos que coordena**. Organizações que já permitiam o coordenador solicitar continuam permitindo — agora com esse escopo.
+
+---
+
 ## [1.13.10] — 2026-07-26
 
 ### Melhorado
