@@ -53,22 +53,42 @@ Ao abrir a tela, ela já vem filtrada pelo **mês corrente** — o que você est
 
 ### Filtros e período contábil
 
-Você pode filtrar por:
+O período segue sendo o recorte principal:
 
 - **Período** — atalhos contábeis prontos (Mês atual, Mês anterior, Trimestre atual, Trimestre anterior, Semestre atual, Ano atual até hoje, Ano anterior) + opção **Personalizado** para definir intervalo livre + **Todos** para ver tudo
-- **Conta** financeira
-- **Categoria**
-- **Status**
 
 > 💡 **Por que isso importa**
 >
 > Atalhos contábeis (trimestre, semestre, ano) parecem detalhe, mas eles existem porque **prestação de contas e análise gerencial seguem esses recortes**, não os meses corridos. Quando a diretoria pergunta "como foi o primeiro trimestre?", você seleciona "Trimestre anterior" e o relatório está pronto — sem precisar configurar datas no calendário toda vez.
 
-Quando há filtros ativos, uma linha "Filtrado por: …" aparece abaixo dos totais. O botão **Limpar filtros** remove todos de uma vez.
+### Filtros combináveis por marcadores (chips)
 
-### Abas por tipo
+No lugar das antigas abas por tipo, a lista agora tem **filtros por marcadores (chips)** que você combina livremente. Pode filtrar ao mesmo tempo por:
 
-A lista tem abas para filtrar por tipo: **Todas**, **Receitas**, **Despesas**, **Transferências**, **Estornadas** e **Canceladas**. Cada aba mostra a contagem entre parênteses (ex: "Receitas (12)") — útil para ver de relance o volume de cada tipo no período.
+- **Tipo** (receita, despesa, transferência)
+- **Conta**
+- **Categoria**
+- **Status**
+- **Projeto**
+- **Centro de custo**
+
+Em cada um desses filtros você escolhe **vários valores** de uma vez e ainda decide se quer **incluir** apenas os selecionados ou **excluir** ("mostrar tudo, exceto…"). Some-se a isso uma **busca livre** por texto, que procura na descrição, no beneficiário, na conta, na categoria, no valor e na data.
+
+<!-- PRINT PENDENTE: mov-filtros-chips — ver planning/prints-manual-pendentes.md -->
+
+> 💡 **Por que isso importa**
+>
+> Filtro combinável responde perguntas que aba única não alcança: "todas as despesas de material do projeto Feira, exceto as da conta Caixa". Antes você via um tipo de cada vez; agora cruza tipo, categoria, projeto e centro de custo numa consulta só — a conferência e a análise gerencial ficam muito mais rápidas.
+
+Quando há filtros ativos, uma linha "Filtrado por: …" aparece abaixo dos totais. O botão **Limpar filtros** remove todos de uma vez. Na barra inferior aparecem os **totais do recorte filtrado**: receitas, despesas e saldo (receitas menos despesas).
+
+> 📱 **No celular**
+>
+> Os filtros abrem em um **painel próprio**, e a tela nunca rola para o lado — você seleciona os marcadores no painel, aplica, e volta para a lista já filtrada.
+
+### Estornados e cancelados ocultos por padrão
+
+Para facilitar a conferência contra o extrato, a lista passa a **esconder automaticamente** os lançamentos **estornados** (o par inteiro — original e contrário) e os **cancelados** — eles não representam dinheiro que entrou ou saiu de fato. Um botão **"Mostrar estornados e cancelados"** traz esses lançamentos de volta quando você precisar vê-los, e a contagem indica quantos estão ocultos no momento.
 
 Na barra inferior aparecem os **totais do período filtrado**: receitas, despesas e saldo (receitas menos despesas).
 
@@ -105,7 +125,7 @@ Marque o checkbox no início das linhas para selecionar várias movimentações.
 
 ### Exportação
 
-O botão **Exportar** oferece três saídas:
+As exportações são **fiéis ao que está na tela**: refletem exatamente os filtros ativos (chips, busca e período) — o que você vê é o que exporta. O botão **Exportar** oferece três saídas:
 
 - **PDF** — relatório formatado com cabeçalho, filtros ativos e totais (bom para imprimir / enviar para diretoria)
 - **Excel** — planilha para análises customizadas

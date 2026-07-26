@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.13.8] — 2026-07-26
+
+### Adicionado
+
+- **Renomear cargos pela tela.** Em **Configurações → Cargos e permissões**, agora dá para **editar o nome de qualquer cargo** direto na interface (antes só era possível nos bastidores). Nos cargos padrão você troca o nome de exibição para o vocabulário da sua OSC — por exemplo, "Presidente" para "Diretor Presidente" — com a opção de **restaurar o nome de fábrica**. Cargos personalizados podem ser **renomeados** normalmente. A mudança aparece na hora em toda a plataforma, e não altera nenhuma permissão.
+
+---
+
 ## [1.13.7] — 2026-07-26
 
 ### Melhorado

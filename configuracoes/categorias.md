@@ -57,6 +57,10 @@ OSC pequena geralmente não precisa de centros de custo. OSC com **múltiplas fr
 
 Ao **criar** ou **editar** um centro de custo, o formulário traz a seção **Responsáveis pelo centro de custo** — uma lista dos membros da OSC com uma caixa de seleção para cada. Marque quem responde por aquele centro de custo e salve.
 
+> 📖 **Você já pode designar quem ainda não ativou o acesso**
+>
+> Um membro recém-cadastrado, que ainda não definiu a senha do primeiro acesso, já aparece nesta lista e pode ser marcado como responsável — sem esperar ele entrar no sistema pela primeira vez. O nome vem com a marca discreta **"· acesso pendente"**. A pessoa só passa a *operar* o centro de custo depois de ativar o acesso.
+
 [![Responsáveis pelo centro de custo](/assets/screenshots/config-cc-responsaveis.png)](/assets/screenshots/config-cc-responsaveis.png)
 *Editar centro de custo — seção "Responsáveis pelo centro de custo"*
 
@@ -65,6 +69,17 @@ Ao **criar** ou **editar** um centro de custo, o formulário traz a seção **Re
 > Marcar alguém como responsável por um centro de custo **só concede acesso se a pessoa também tiver o cargo Gestor de Centro de Custo**. São duas coisas complementares: o **cargo** (em Configurações → Usuários → Editar papéis) diz que a pessoa *pode* gerir centros de custo; o **vínculo de responsável** aqui diz *quais* centros de custo. Faltando o cargo, o nome pode até estar marcado aqui, mas a pessoa não enxerga nem opera o centro de custo. Ver [Papéis e Permissões → Gestor de Centro de Custo](/papeis/#gestor-de-centro-de-custo).
 
 Com o cargo e o vínculo em dia, o Gestor de Centro de Custo passa a **criar e editar** lançamentos daquele CC e a **ver** as movimentações e relatórios recortados a ele — sem acesso ao restante do financeiro da OSC. Presidente e Tesoureiro continuam enxergando **todos** os centros de custo, independentemente dessa lista.
+
+### Coluna "Gestor(es)" na lista
+{: #coluna-gestores }
+
+A lista da aba **Centros de custo** tem uma coluna **"Gestor(es)"** que mostra, de relance, quem responde por cada centro — sem precisar abrir **Editar**. Centros sem responsável aparecem com **"—"**; quando há mais de um, a lista exibe o **primeiro nome com um "+N"**, e a lista completa aparece ao passar o mouse por cima.
+
+<!-- PRINT PENDENTE: config-cc-lista-gestores — ver planning/prints-manual-pendentes.md -->
+
+> ✓ **Dica · Confira os responsáveis de relance**
+>
+> Essa coluna é o jeito rápido de auditar quem está no comando de cada área: um centro de custo importante com "—" na coluna Gestor(es) é sinal de que falta atribuir responsável (ou que quem foi atribuído ainda não tem o cargo Gestor de Centro de Custo).
 
 ## Template de categorias
 

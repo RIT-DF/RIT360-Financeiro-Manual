@@ -19,9 +19,11 @@ A página tem cinco boxes consolidados: **Identificação**, **Dados para Reembo
 
 - **Foto de perfil** — JPG, PNG ou WebP, até 2 MB. A imagem é redimensionada para 512×512 antes do envio.
 - **Nome completo** — como aparece em audit logs, aprovações, registros.
-- **Telefone** — digite no formato brasileiro `(11) 99999-9999` (o campo formata sozinho enquanto você digita); o RIT360 Financeiro guarda em formato internacional (com `+55`).
+- **Telefone** — o campo tem um **seletor de país** ao lado, com **Brasil já selecionado por padrão**; escolha outro país quando precisar. A máscara é única e uniforme — números brasileiros seguem o formato de sempre `(DDD) 9XXXX-XXXX` — e, ao abrir um cadastro salvo, o país é **reconhecido automaticamente** pelo número.
 - **Data de nascimento** — opcional.
-- **CPF** e **RG** — opcionais; o **CPF** é formatado automaticamente (`000.000.000-00`). Armazenados **cifrados em repouso** (chave de criptografia gerenciada separadamente do banco). Usados apenas para emissão de comprovantes quando exigido por lei.
+- **CPF** e **RG / RNE** — opcionais; o **CPF** é formatado automaticamente (`000.000.000-00`). O campo de documento se chama **"RG / RNE"** porque quem é estrangeiro pode informar o **RNE** (Registro Nacional de Estrangeiro) no mesmo lugar. Armazenados **cifrados em repouso** (chave de criptografia gerenciada separadamente do banco). Usados apenas para emissão de comprovantes quando exigido por lei.
+
+<!-- PRINT PENDENTE: config-perfil-telefone-pais — ver planning/prints-manual-pendentes.md -->
 
 Botão **Salvar alterações** ao final do box salva tudo de uma vez.
 

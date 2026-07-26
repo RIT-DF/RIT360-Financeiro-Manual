@@ -86,7 +86,18 @@ A atribuição é feita em **Configurações → Usuários**: no menu de ações
 ## Renomear o rótulo de um cargo
 {: #renomear-o-rotulo-de-um-cargo }
 
-Você também pode trocar **como cada cargo é chamado** na sua OSC (onde o RIT360 Financeiro diz "Tesoureiro", a sua associação pode dizer "Diretor Financeiro") — sem mudar as permissões. O novo rótulo aparece em toda a aplicação.
+Você também pode trocar **como cada cargo é chamado** na sua OSC (onde o RIT360 Financeiro diz "Tesoureiro", a sua associação pode dizer "Diretor Financeiro") — **sem mudar nenhuma permissão**. O novo nome aparece **na hora** em toda a aplicação.
+
+No editor de cargos, cada cargo tem a ação **Editar nome**:
+
+- **Cargos padrão** — troque o nome de exibição pelo vocabulário da sua OSC (por exemplo, "Presidente" para "Diretor Presidente"). Sempre que quiser voltar atrás, a opção **Restaurar padrão** devolve o nome de fábrica.
+- **Cargos personalizados** — podem ser **renomeados** normalmente, como qualquer outro dado do cargo.
+
+<!-- PRINT PENDENTE: config-cargos-editar-nome — ver planning/prints-manual-pendentes.md -->
+
+> ✓ **Dica · Renomear é só o rótulo**
+>
+> Trocar o nome do cargo não mexe em quem pode o quê — as permissões continuam exatamente as mesmas. É só a etiqueta que muda, para o sistema falar a língua da sua OSC.
 
 ## Por onde seguir
 

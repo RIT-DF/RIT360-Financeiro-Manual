@@ -21,7 +21,7 @@ A página **Organização** centraliza os dados da sua OSC e as **integrações*
 - **Nome** — como a OSC se identifica oficialmente
 - **CNPJ** — formatado automaticamente conforme você digita. Aceita tanto o CNPJ numérico tradicional quanto o novo **CNPJ alfanumérico** (que passa a valer a partir de julho/2026)
 - **E-mail institucional**
-- **Telefone**
+- **Telefone** — com **seletor de país** (Brasil já selecionado por padrão) e a mesma máscara única usada em todo o sistema; ao abrir o cadastro salvo, o país é reconhecido automaticamente pelo número
 - **Site** — endereço completo (`https://...`)
 - **Identificador único** — slug não editável usado em URLs e identificações internas (gerado a partir do nome no cadastro)
 
