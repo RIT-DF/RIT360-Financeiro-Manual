@@ -11,6 +11,18 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.17.0] — 2026-07-27
+
+### Adicionado
+
+- **Checklist "Primeiros passos" no Painel.** Quem administra a organização (cadastra a conta, gerencia a equipe) passa a ver um card "Primeiros passos" logo no topo do Painel, com uma lista de tarefas iniciais: cadastrar a primeira conta bancária, adicionar a equipe e lançar o primeiro movimento. Cada item se marca sozinho conforme a organização vai sendo configurada, e o card some automaticamente quando os três estiverem prontos. Também traz atalhos para revisar os dados da OSC e as categorias/centros de custo, e pode ser dispensado a qualquer momento por quem administra.
+
+## [1.16.0] — 2026-07-27
+
+### Adicionado
+
+- **Tour guiado de boas-vindas.** No primeiro acesso, um tour curto e opcional apresenta as principais áreas do sistema — ajustado a cada pessoa conforme o que ela realmente pode acessar — incluindo onde enviar feedback e onde ficam os dados do próprio perfil, terminando com um link para o Manual do usuário. Pode ser pulado a qualquer momento e não volta a aparecer sozinho depois; para rever quando quiser, há a opção "Rever tutorial" no menu do usuário (e, no celular, no menu "Mais").
+
 ## [1.15.3] — 2026-07-27
 
 ### Adicionado
