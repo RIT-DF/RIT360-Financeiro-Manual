@@ -15,13 +15,13 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ### Adicionado
 
-- **Checklist "Primeiros passos" no Painel.** Quem administra a organização (cadastra a conta, gerencia a equipe) passa a ver um card "Primeiros passos" logo no topo do Painel, com uma lista de tarefas iniciais: cadastrar a primeira conta bancária, adicionar a equipe e lançar o primeiro movimento. Cada item se marca sozinho conforme a organização vai sendo configurada, e o card some automaticamente quando os três estiverem prontos. Também traz atalhos para revisar os dados da OSC e as categorias/centros de custo, e pode ser dispensado a qualquer momento por quem administra.
+- **Checklist "Primeiros passos" no Painel.** Quem administra a OSC vê, no topo do Painel, um card que orienta a configuração inicial — cadastrar uma conta bancária, adicionar a equipe e lançar o primeiro movimento — com cada item se marcando sozinho conforme é concluído, além de atalhos para revisar os dados da OSC e as categorias/centros de custo. O card desaparece automaticamente quando os passos principais terminam, e pode ser dispensado a qualquer momento. Detalhes em [Painel](/modulos/painel/#checklist-primeiros-passos-para-quem-administra-a-osc).
 
 ## [1.16.0] — 2026-07-27
 
 ### Adicionado
 
-- **Tour guiado de boas-vindas.** No primeiro acesso, um tour curto e opcional apresenta as principais áreas do sistema — ajustado a cada pessoa conforme o que ela realmente pode acessar — incluindo onde enviar feedback e onde ficam os dados do próprio perfil, terminando com um link para o Manual do usuário. Pode ser pulado a qualquer momento e não volta a aparecer sozinho depois; para rever quando quiser, há a opção "Rever tutorial" no menu do usuário (e, no celular, no menu "Mais").
+- **Tour de boas-vindas.** No primeiro acesso, um tour rápido aponta as principais áreas do sistema — inclusive itens que costumam passar despercebidos, como o botão de Feedback e o Meu Perfil no menu do avatar — terminando com um link para este manual. Pode ser pulado a qualquer momento e revisto depois pelo item **Rever tutorial** (menu do avatar no computador; menu **Mais** no celular). Funciona em celular e computador. Detalhes em [Primeiros Passos](/primeiros-passos/#tour-de-boas-vindas).
 
 ## [1.15.3] — 2026-07-27
 

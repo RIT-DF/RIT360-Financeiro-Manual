@@ -68,7 +68,7 @@ O RIT360 Financeiro passa a ter uma janela própria (separada do navegador) e fi
 ## O que muda depois de instalar
 
 - **Aparência:** o app abre sem barra de endereços, sem abas, sem botões de voltar do navegador. Só a interface do RIT360 Financeiro.
-- **Navegação no celular:** a barra inferior do app (**Painel** / **Movim.** / **Pag./Reemb.** / **Relatórios** / **Mais**) substitui o que seria a navegação do navegador — cinco itens fixos, todos diretos. Tocar em **Mais** abre um painel deslizante com o **seletor de organização** (quando você tem acesso a mais de uma OSC), as rotas que não cabem na barra (**Projetos**, **Configurações da organização**, **Meu perfil**), os links auxiliares (**Manual do Usuário**, **Política de Privacidade**, **Termos de Uso** — todos abrem em nova aba) e o botão **Sair**:
+- **Navegação no celular:** a barra inferior do app (**Painel** / **Movim.** / **Pag./Reemb.** / **Relatórios** / **Mais**) substitui o que seria a navegação do navegador — cinco itens fixos, todos diretos. Tocar em **Mais** abre um painel deslizante com o **seletor de organização** (quando você tem acesso a mais de uma OSC), as rotas que não cabem na barra (**Projetos**, **Configurações da organização**, **Meu perfil**, **Rever tutorial**), os links auxiliares (**Manual do Usuário**, **Política de Privacidade**, **Termos de Uso** — todos abrem em nova aba) e o botão **Sair**:
 
 [![Painel "Mais" no celular com seletor de OSC](/assets/screenshots/mobile-more-sheet-org-switcher.png)](/assets/screenshots/mobile-more-sheet-org-switcher.png)
 *Painel "Mais" no celular — bloco da OSC ativa no topo (chevron expande a lista quando há múltiplas OSCs)*

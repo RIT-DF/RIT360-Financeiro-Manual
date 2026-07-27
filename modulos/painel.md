@@ -14,6 +14,20 @@ O **Painel** é a primeira tela após o login — a visão de cockpit da sua OSC
 >
 > A maioria das ferramentas financeiras te despeja em uma lista enorme de lançamentos no login. O Painel inverte isso: **mostra primeiro o que importa para você decidir o próximo passo** — saldo, resumo, pendências por papel. Tesoureiro vê quantos reembolsos esperam pagamento; presidente vê pedidos aguardando aprovação; voluntário vê seus próprios reembolsos pendentes. Resultado: você gasta menos tempo procurando informação, mais tempo decidindo.
 
+## Checklist "Primeiros passos" (para quem administra a OSC) {#checklist-primeiros-passos-para-quem-administra-a-osc}
+
+Se você é **admin da organização** e ela ainda está no início da configuração, o Painel mostra um card **"Primeiros passos"** logo no topo, com os itens principais para deixar a OSC pronta para operar:
+
+- **Cadastrar uma conta bancária**
+- **Adicionar a equipe** (convidar usuários)
+- **Lançar o primeiro movimento**
+
+Cada item **se marca sozinho** conforme você faz — não precisa voltar aqui para confirmar nada. O card também traz links de apoio para **revisar os dados da OSC** e as **categorias e centros de custo**, que fazem parte da mesma preparação inicial (o roteiro completo está em [Primeiros Passos da Organização](/primeiros-passos/organizacao/)).
+
+> ✓ **O card some sozinho**
+>
+> Assim que os itens principais são concluídos, o card desaparece do Painel — ele existe só para orientar o início, não fica ocupando espaço depois que a OSC já está operando. Se preferir, também dá para **dispensar o card** a qualquer momento, mesmo sem ter concluído tudo.
+
 ## Saldos por conta
 
 Bloco com cada conta financeira da OSC (corrente, poupança, cartão, caixa interno, etc.) e o **saldo atual** de cada uma. No rodapé, o **saldo consolidado** soma todas as contas ativas.

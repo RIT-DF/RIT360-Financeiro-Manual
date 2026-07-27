@@ -75,6 +75,21 @@ Cada documento é **versionado**: o link abre exatamente a versão vigente (por 
 
 Acompanhe atualizações em [Política de Privacidade](/privacidade/) e [Termos de Uso](/termos/).
 
+## Tour de boas-vindas {#tour-de-boas-vindas}
+
+Na primeira vez que você entra, aparece um **tour rápido** apontando as áreas principais da tela — inclusive algumas que costumam passar despercebidas, como o **botão de Feedback** e o **Meu Perfil** no menu do avatar. O tour termina com um link direto para este manual.
+
+> 💡 **Pode pular a qualquer momento**
+>
+> Se o tour não for útil no momento (por exemplo, você já conhece o sistema de outra OSC), clique em **Pular** — ele não volta a aparecer sozinho. Nada do que o tour mostra é obrigatório para usar o sistema.
+
+Quer rever mais tarde? O tour está sempre disponível pelo item **Rever tutorial**:
+
+- **No computador:** menu do avatar (canto superior direito).
+- **No celular:** menu **Mais** (barra inferior).
+
+O tour funciona igual em celular e computador, adaptando os pontos destacados ao que aparece em cada tamanho de tela.
+
 ## Navegação principal
 
 A barra de navegação no topo é o seu mapa:
@@ -94,7 +109,7 @@ A barra de navegação no topo é o seu mapa:
 - **Seletor de organização** — alterna entre OSCs em que você é membro
 - **Botão Superadmin** — só visível para administradores de plataforma RIT
 - **⚙️ Engrenagem** — atalho para **Configurações da organização**, **só visível para admin e tesoureiro**
-- **Avatar do usuário** — menu com **Meu perfil** e **Sair**
+- **Avatar do usuário** — menu com **Meu perfil**, **Rever tutorial** (reabre o [tour de boas-vindas](#tour-de-boas-vindas)) e **Sair**
 
 > 📖 **Conceito · Perfil x Configurações**
 >

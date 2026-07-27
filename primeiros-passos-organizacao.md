@@ -11,6 +11,10 @@ Você acabou de **criar ou assumir uma organização** no RIT360 Financeiro. Ant
 >
 > Lançamento financeiro precisa de uma **conta** e de uma **categoria** para fazer sentido; reembolso e pedido precisam de um **fluxo de aprovação** definido. Se você importar movimentações antes de ter essa base, vai gastar tempo corrigindo depois. A ordem abaixo monta a fundação primeiro e deixa a importação de dados por último.
 
+> 📖 **O Painel te ajuda a lembrar**
+>
+> Se você é admin, parte deste roteiro já aparece sozinha no **Painel**, num card **"Primeiros passos"** que marca sozinho os itens conforme você conclui (conta bancária, equipe, primeiro movimento) e traz atalhos para revisar dados da OSC e categorias. O card some quando os passos principais terminam, e pode ser dispensado a qualquer momento. Veja em [Painel → Checklist "Primeiros passos"](/modulos/painel/#checklist-primeiros-passos-para-quem-administra-a-osc).
+
 ## A ordem recomendada
 
 1. **Dados da organização** — identidade da OSC.
