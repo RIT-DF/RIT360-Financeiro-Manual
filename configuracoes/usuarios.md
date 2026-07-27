@@ -110,10 +110,28 @@ Cada linha tem menu de ações que muda conforme o status:
   [![Editar papéis — painel multi-select](/assets/screenshots/manual-config-usuarios-editar-papeis.png)](/assets/screenshots/manual-config-usuarios-editar-papeis.png)
   *Editor de papéis — marque os papéis desejados; combinações proibidas ficam visualmente desabilitadas*
 
+- **Alterar e-mail de acesso** — troca **imediata** do e-mail de login de outra pessoa, feita pelo admin. Veja o passo a passo logo abaixo.
 - **Desativar acesso** — bloqueia entrada sem excluir histórico
 - **Reativar acesso** — restaura entrada de quem estava desativado
-- **Cancelar convite pendente** — remove convite que ainda não foi aceito
-- **Reenviar convite** — re-dispara o e-mail de convite (útil quando o destinatário não recebeu ou o link expirou)
+- **Cancelar acesso pendente** — remove o acesso de quem ainda não concluiu o primeiro login
+- **Reenviar e-mail de acesso** — re-dispara o e-mail de acesso (útil quando o destinatário não recebeu ou o link expirou)
+
+## Alterar e-mail de acesso de outra pessoa
+
+[![Alterar e-mail de acesso — diálogo do admin](/assets/screenshots/manual-config-usuarios-alterar-email.png)](/assets/screenshots/manual-config-usuarios-alterar-email.png)
+*Diálogo "Alterar e-mail de acesso" — troca imediata, registrada em auditoria*
+
+Diferente da troca feita pelo próprio usuário em **Meu Perfil** (que exige confirmação por link enviado ao novo endereço), a troca pelo admin em **Configurações → Usuários** é **imediata** — sem link de confirmação. É a ferramenta certa para **resgatar quem perdeu acesso** ao próprio e-mail (conta antiga desativada, empresa trocou o domínio) ou para **corrigir um e-mail digitado errado** no convite.
+
+1. No menu de ações da pessoa, clique em **Alterar e-mail de acesso**.
+2. Confira o **e-mail atual** exibido e informe o **novo e-mail**.
+3. Clique em **Alterar e-mail**.
+
+Se a pessoa **ainda não concluiu o cadastro** (status "Aguardando setup"), o sistema **reenvia automaticamente o e-mail de acesso** para o endereço corrigido, para ela concluir a ativação por lá.
+
+> ⚠️ **Atenção · Ação imediata e sem confirmação da pessoa**
+>
+> Ao contrário da troca em Meu Perfil, aqui não existe etapa de confirmação — o e-mail muda assim que você clica em "Alterar e-mail". Use apenas quando tiver certeza do novo endereço; confirme com a própria pessoa antes, sempre que possível. A ação fica registrada no audit log com autor, data e e-mails anterior/novo.
 
 > ⚠️ **Atenção · Mudança de papel deve ser deliberada**
 >
@@ -136,3 +154,4 @@ A lista mostra a foto de cada membro (configurada por cada um no Meu Perfil). Ca
 - **Papéis e Permissões** — para entender o que cada papel pode fazer antes de atribuir.
 - **Configurações → Fluxo de Aprovações** — para definir quais papéis aprovam e quem é aprovador individual.
 - **Configurações → Organização** — para controlar o acesso público de vínculo.
+- **[Meu Perfil](/configuracoes/perfil/)** — troca de e-mail self-service, com confirmação por link; use quando a própria pessoa tem acesso ao e-mail atual.

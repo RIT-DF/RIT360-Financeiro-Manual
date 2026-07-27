@@ -107,8 +107,31 @@ Você pode **baixar uma cópia dos seus dados pessoais** no RIT360 Financeiro a 
 Ações administrativas sobre sua própria conta, cada uma com botão independente:
 
 - **Alterar senha** — campos de nova senha e confirmação; clique em "Alterar senha" para confirmar. Senha forte (8+ caracteres, mix de letras, números e símbolos) é exigida.
+- **Alterar e-mail de acesso** — troca o e-mail com o qual você entra no sistema (self-service). Veja o passo a passo logo abaixo.
 - **Encerrar todas as sessões** — desconecta sua conta de todos os dispositivos onde está logada. Útil se você perdeu acesso a um celular ou suspeita de uso indevido.
 - **Excluir minha conta (LGPD)** — exerce o **direito ao esquecimento**. Ao confirmar, sua conta entra em uma **carência de 30 dias**; passado o prazo, seus dados pessoais (nome, e-mail, telefone, CPF, RG, avatar) são **anonimizados de forma irreversível**. Por obrigação legal, **registros financeiros e de auditoria são retidos por 5 anos sem identificação pessoal**.
+
+### Como trocar o e-mail de login
+
+[![Alterar e-mail de acesso — Meu Perfil](/assets/screenshots/config-perfil-alterar-email.png)](/assets/screenshots/config-perfil-alterar-email.png)
+*Box "Alterar e-mail de acesso" dentro de Ações de Conta*
+
+É com esse e-mail que você entra no RIT360 Financeiro — diferente do e-mail de contato, do e-mail para reembolso ou de qualquer outro dado do perfil.
+
+1. Em **Ações de Conta**, no bloco **Alterar e-mail de acesso**, digite o **novo e-mail** e **confirme** repetindo no segundo campo.
+2. Clique em **Enviar link de confirmação**.
+3. Abra a caixa de entrada do **novo endereço** e clique no link recebido. **Só depois desse clique** o e-mail de login realmente muda — até lá, você continua entrando com o e-mail atual normalmente.
+4. O **e-mail antigo** recebe um aviso informando que a troca foi solicitada, como camada extra de segurança caso você não tenha sido quem pediu.
+
+Enquanto a confirmação está pendente, é possível **cancelar o pedido** e manter o e-mail atual — não é preciso esperar o link expirar.
+
+> 📖 **Conceito · Por que confirmar no novo e-mail, não no atual**
+>
+> Se a confirmação fosse no e-mail atual, alguém com acesso à sua sessão (mas não à sua caixa de entrada) poderia trocar seu e-mail de login sem você perceber. Exigir o clique no **novo** endereço garante que só quem realmente tem acesso a essa caixa de entrada consegue efetivar a troca.
+
+> ✓ **Funciona com login pelo Google**
+>
+> Se você entra no RIT360 Financeiro pela sua conta Google, o fluxo é o mesmo — sem pedir senha atual (você não tem uma senha cadastrada no sistema nesse caso). Depois de confirmar, o login passa a ser feito pelo novo e-mail.
 
 ### Como excluir a conta
 

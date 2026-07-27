@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.15.0] — 2026-07-27
+
+### Adicionado
+
+- **Troca de e-mail de login.** Agora dá para alterar o e-mail usado para entrar no sistema:
+  - **Pelo seu perfil:** informe o novo e-mail e confirme pelo link enviado a esse endereço — o acesso só passa a ser o novo depois da confirmação. Enquanto isso, dá para cancelar, e o e-mail antigo recebe um aviso. (Funciona também para quem entra com o Google.)
+  - **Pelo administrador:** um administrador da organização pode corrigir o e-mail de acesso de um membro — útil para resgatar quem não recebeu o e-mail por causa de um endereço digitado errado — pela ação "Alterar e-mail de acesso" na lista de usuários.
+
 ## [1.14.3] — 2026-07-26
 
 ### Adicionado
