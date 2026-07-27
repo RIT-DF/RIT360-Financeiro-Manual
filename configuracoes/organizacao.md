@@ -18,8 +18,13 @@ A página **Organização** centraliza os dados da sua OSC e as **integrações*
 
 ## Identidade da OSC
 
+[![Identidade da OSC — Nome, CNPJ, Inscrição Estadual e Municipal](/assets/screenshots/config-organizacao-identidade.png)](/assets/screenshots/config-organizacao-identidade.png)
+*Identidade da OSC — Inscrição Estadual e Inscrição Municipal ficam ao lado do CNPJ*
+
 - **Nome** — como a OSC se identifica oficialmente
 - **CNPJ** — formatado automaticamente conforme você digita. Aceita tanto o CNPJ numérico tradicional quanto o novo **CNPJ alfanumérico** (que passa a valer a partir de julho/2026)
+- **Inscrição Estadual** — campo opcional, de preenchimento livre. Se a OSC não tem inscrição estadual, digite **"ISENTO"**
+- **Inscrição Municipal** — campo opcional, de preenchimento livre
 - **E-mail institucional**
 - **Telefone** — com **seletor de país** (Brasil já selecionado por padrão) e a mesma máscara única usada em todo o sistema; ao abrir o cadastro salvo, o país é reconhecido automaticamente pelo número
 - **Site** — endereço completo (`https://...`)

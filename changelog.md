@@ -11,6 +11,18 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.15.3] — 2026-07-27
+
+### Adicionado
+
+- **Resumo mais completo ao final da importação de lançamentos por CSV.** O aviso que chega quando a importação termina agora traz um resumo com o número de lançamentos criados, ignorados ou com erro, e comprovantes anexados. Quando algum comprovante não pôde ser baixado, o aviso também lista quais lançamentos ficaram sem o comprovante (com título, data e o motivo), para facilitar encontrá-los e anexar manualmente — até 15 itens listados, com um contador do restante quando houver mais.
+
+## [1.15.2] — 2026-07-27
+
+### Adicionado
+
+- **Inscrição estadual e municipal nos dados da organização.** Em Configurações → Organização, agora dá para informar a Inscrição Estadual e a Inscrição Municipal da OSC. Os dois campos são opcionais e aceitam qualquer texto (inclusive "ISENTO"), já que o formato varia conforme o estado e o município.
+
 ## [1.15.0] — 2026-07-27
 
 ### Adicionado
