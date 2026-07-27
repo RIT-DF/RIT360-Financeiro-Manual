@@ -224,6 +224,13 @@ Tanto o relatório parcial quanto o final são montados **em segundo plano**: ao
 [![Página de acompanhamento do relatório do projeto](/assets/screenshots/projeto-relatorio-acompanhamento.png)](/assets/screenshots/projeto-relatorio-acompanhamento.png)
 *O relatório do projeto é gerado em segundo plano e baixado automaticamente pela página de acompanhamento.*
 
+**O PDF de encerramento continua disponível mesmo depois que o projeto é encerrado.** Quando o projeto já está **Concluído** (ou Cancelado) e o encerramento foi finalizado, o botão **Baixar PDF do encerramento** permanece à mão em dois lugares: na própria aba **Encerramento** (abaixo do relatório) e na aba **Relatório**, ao lado do "Gerar relatório parcial". Assim você recupera o relatório final para a prestação de contas a qualquer momento, sem precisar reabrir o projeto.
+
+[![Botão Baixar PDF do encerramento num projeto concluído](/assets/screenshots/projeto-encerrado-baixar-pdf.png)](/assets/screenshots/projeto-encerrado-baixar-pdf.png)
+*Num projeto já concluído, a aba Encerramento mantém o botão "Baixar PDF do encerramento" ao final do relatório.*
+
+O botão de PDF de encerramento aparece para quem **coordena** o projeto (coordenação, presidência/administração ou tesouraria). Quem tem permissão de exportar dados — como a **comissão fiscal** — não gera o relatório final, mas consegue **baixar** um que já tenha sido gerado.
+
 > 💡 **Por que isso importa**
 >
 > A maioria das OSCs nunca **fecha** um projeto de verdade — o evento acaba, todo mundo vai embora cansado, e o aprendizado se perde. O encerramento estruturado obriga a parar 20 minutos e responder "deu certo? por quê? o que faríamos diferente?". As **lições aprendidas** viram patrimônio da OSC: o próximo coordenador de evento começa lendo o que o anterior aprendeu, em vez de repetir os mesmos tropeços. E o PDF resolve, de uma vez, a prestação de contas para o financiador.
