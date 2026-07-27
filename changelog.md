@@ -11,6 +11,12 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.17.3] — 2026-07-27
+
+### Corrigido
+
+- **Importação de usuários em lote agora grava corretamente CPF e RG.** Ao importar uma lista de usuários (CSV ou XLSX), o CPF e o RG informados na planilha deixavam de ser salvos no cadastro, sem aviso de erro. Agora são gravados normalmente e, no caso raro de uma linha específica não conseguir salvar esses dados, o resumo da importação avisa qual usuário precisa ter o CPF/RG conferido manualmente.
+
 ## [1.17.2] — 2026-07-27
 
 ### Adicionado
