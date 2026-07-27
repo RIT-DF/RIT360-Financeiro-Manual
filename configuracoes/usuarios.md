@@ -30,7 +30,7 @@ Clique em **+ Adicionar usuário**. Informe o **e-mail** e o **papel** desejado.
 >
 > Um membro recém-cadastrado, que ainda não concluiu o primeiro acesso (não definiu a senha), **já pode ser escolhido** como **gestor de centro de custo**, **coordenador ou integrante de projeto** e **aprovador** (de reembolso, pedido de pagamento, orçamento e projeto) — sem esperar ele entrar no sistema pela primeira vez. Nessas listas o nome aparece com a marca discreta **"· acesso pendente"**. A permissão para *agir* (aprovar, coordenar, operar) continua valendo **só depois** que a pessoa ativa o acesso.
 
-## Importar usuários em lote (planilha CSV)
+## Importar usuários em lote (planilha CSV ou Excel)
 
 [![Importar usuários — tela de upload](/assets/screenshots/manual-config-usuarios-importar.png)](/assets/screenshots/manual-config-usuarios-importar.png)
 *Importar usuários — instruções, download do template e área de upload*
@@ -40,7 +40,7 @@ Para OSCs que estão migrando de outro sistema ou que precisam cadastrar muitos 
 1. Clique em **Importar usuários** → abre uma tela dedicada.
 2. **Baixe o template** CSV. O arquivo já vem com o cabeçalho correto e algumas linhas de exemplo.
 3. Preencha sua planilha. Campos **obrigatórios**: nome completo, e-mail e papel. **Opcionais**: telefone, data de nascimento, CPF, RG.
-4. Faça **upload** do arquivo. O RIT360 Financeiro mostra uma **pré-visualização** com cada linha classificada por status:
+4. Faça **upload** do arquivo — em **CSV ou Excel (.xlsx)**, como preferir; o RIT360 Financeiro identifica o formato automaticamente pela extensão, sem nenhuma escolha extra na tela. O modelo para download continua sendo em CSV, mas você pode preencher e subir em Excel sem converter nada. O RIT360 Financeiro mostra uma **pré-visualização** com cada linha classificada por status:
    - **Novo** — vai receber e-mail para definir a senha de acesso
    - **Já cadastrado** — usuário existente em outra OSC; cria vínculo direto sem novo acesso
    - **Vínculo ativo na OSC** — usuário que já é membro; perfil pode ser atualizado (campos vazios apenas)
@@ -48,6 +48,10 @@ Para OSCs que estão migrando de outro sistema ou que precisam cadastrar muitos 
 
    [![Importar usuários — pré-visualização com linhas classificadas](/assets/screenshots/manual-config-usuarios-importar-preview.png)](/assets/screenshots/manual-config-usuarios-importar-preview.png)
    *Pré-visualização — cada linha classificada por status (novo, já cadastrado, vínculo ativo, com erro)*
+
+> ⚠️ **Atenção · No Excel, formate CPF, RG e telefone como TEXTO antes de digitar**
+>
+> Se a coluna estiver no formato **Número** (o padrão do Excel para colunas novas), digitar um CPF como `012.345.678-90` ou um telefone com DDD `0121...` faz o Excel **apagar o zero à esquerda** — e não tem como o RIT360 Financeiro recuperar um dígito que já não está mais na planilha. Antes de preencher essas colunas, selecione-as e formate como **Texto** (botão direito → Formatar células → Texto, ou pela caixa de formato na barra superior). Datas de nascimento não têm esse problema — o Excel guarda a data corretamente e o RIT360 Financeiro interpreta certo na importação.
 
 5. Clique em **Importar**. A importação **começa a rodar em segundo plano** e a tela é liberada na hora — você não precisa esperar com o navegador aberto. Aparece a mensagem **"Importação iniciada — avisaremos quando concluir"** e você pode seguir usando o app normalmente.
 

@@ -220,11 +220,19 @@ A barra lateral direita também controla a repetição do lançamento:
 
 Você pode anexar arquivos (comprovantes, notas fiscais, contratos) ao lançamento. Anexo é **opcional** — lançamento sem comprovante continua válido — mas é fortemente recomendado para qualquer movimentação que tenha origem em compra, serviço contratado ou pagamento de terceiro. PDFs e imagens ganham pré-visualização inline na página de detalhe.
 
-**Em mobile**, a seção **DOCUMENTOS** exibe dois botões: **Tirar foto** (abre a câmera traseira do celular direto, com preview **Refazer** ou **Confirmar** antes de subir) e **Anexar arquivo** (aceita imagens, PDF, XML de NFe e ZIP). O RIT360 Financeiro reduz a foto automaticamente antes do upload — fica leve mesmo em conexão móvel ruim, sem perder a legibilidade do cupom para auditoria humana ou para extração automática futura via IA.
+**Em mobile**, a seção **DOCUMENTOS** exibe dois botões: **Tirar foto** (abre a câmera traseira do celular direto, com preview **Refazer** ou **Confirmar** antes de subir) e **Anexar arquivo**. O RIT360 Financeiro reduz a foto automaticamente antes do upload — fica leve mesmo em conexão móvel ruim, sem perder a legibilidade do cupom para auditoria humana ou para extração automática futura via IA.
 
 **Em desktop**, a seção mostra uma área para arrastar arquivos ou clicar para selecionar — o botão "Tirar foto" não aparece nesse contexto (webcam de laptop não serve para fotografar comprovante apoiado na mesa).
 
-**Anexou um arquivo ZIP?** O RIT360 Financeiro **descompacta o pacote automaticamente** e anexa cada documento de dentro como um anexo individual do lançamento — o ZIP some da lista, dando lugar aos arquivos. Assim, cada comprovante que estava no pacote ganha pré-visualização e **entra na prestação de contas** (um ZIP, por ser um pacote fechado, não poderia ser exibido no relatório). A expansão roda em segundo plano, em segundos, e vale também quando o comprovante chega por **link** na importação por CSV. Arquivos que não dá para exibir num PDF (planilhas, documentos de texto) ficam anexados, mas não aparecem no corpo do relatório.
+> 📖 **Conceito · Quais arquivos você pode anexar como comprovante**
+>
+> Além de **imagens** e **PDF**, o RIT360 Financeiro aceita **XML de NFe**, **ZIP** e agora também **documentos de escritório**: Word (`.docx`), Excel (`.xlsx`), PowerPoint (`.pptx`) e os formatos equivalentes do OpenDocument (`.odt`, `.ods`, `.odp`) — úteis para anexar, por exemplo, uma planilha de prestação de contas de um fornecedor ou um recibo em Word. Vale tanto para o anexo manual quanto para o comprovante que chega por **link** na importação de lançamentos (ver "Importar lançamentos" abaixo). Por segurança, **arquivos executáveis continuam bloqueados** e não podem ser anexados.
+
+**Anexou um arquivo ZIP?** O RIT360 Financeiro **descompacta o pacote automaticamente** e anexa cada documento de dentro como um anexo individual do lançamento — o ZIP some da lista, dando lugar aos arquivos. Assim, cada comprovante que estava no pacote ganha pré-visualização (quando é imagem ou PDF) e **entra na prestação de contas**. A expansão roda em segundo plano, em segundos, e vale também quando o comprovante chega por **link** na importação por CSV.
+
+> 💡 **Documentos de escritório na prestação de contas**
+>
+> PDFs e imagens aparecem embutidos no corpo da prestação de contas — dá para ver o comprovante sem sair do documento. Já Word, Excel, PowerPoint, OpenDocument e ZIP não têm como ser exibidos embutidos num PDF; nesses casos, a prestação de contas mostra uma linha **"📎 nome-do-arquivo — disponível no lançamento"**, avisando que o comprovante está anexado e pode ser aberto no detalhe do lançamento dentro do sistema (ver a seção **Prestação de contas** abaixo).
 
 **Em Novo Lançamento nos modos Recorrente e Parcelado**, a seção de anexo é ocultada na criação da série — não há um lançamento único ao qual associar o documento. Uma nota explicativa orienta a anexar individualmente em cada lançamento depois que a série for criada. Em **Editar Lançamento**, a seção funciona normalmente, pois você sempre edita um movimento individual.
 
@@ -366,7 +374,7 @@ A **prestação de contas** é um documento em PDF, no padrão visual do RIT360 
 - **Posição de caixa por conta** — saldo inicial, créditos, débitos e saldo final de cada conta, com o total geral que reconcilia.
 - **Demonstrativo analítico** — lançamento a lançamento, **separado em Receitas, Despesas e Transferências** e agrupado por categoria, com os valores sinalizados e coloridos (entradas em verde com `+`, saídas em vermelho com `−`), no mesmo padrão do extrato. As transferências aparecem com a conta de origem e a de destino.
 - **Extrato por conta** — a movimentação cronológica de cada conta, com saldo corrente.
-- **Comprovantes** — as imagens e PDFs anexados aos lançamentos, **mesclados ao final** do documento e organizados em três grupos (**Despesas, Receitas e Transferências**), na ordem dos lançamentos; os lançamentos sem comprovante ficam listados à parte.
+- **Comprovantes** — as imagens e PDFs anexados aos lançamentos, **mesclados ao final** do documento e organizados em três grupos (**Despesas, Receitas e Transferências**), na ordem dos lançamentos. Quando o comprovante é um **documento de escritório** (Word, Excel, PowerPoint, OpenDocument) ou outro arquivo que não dá para exibir embutido, o PDF mostra em seu lugar uma observação **"📎 nome-do-arquivo — disponível no lançamento"** — o comprovante está anexado e continua acessível, só não aparece embutido no relatório. Os lançamentos sem nenhum comprovante ficam listados à parte.
 - **Documentos complementares** (opcional) — outros documentos que você anexar na hora de gerar (extrato bancário, parecer da comissão fiscal, notas explicativas), incluídos **no fim do PDF**, cada um precedido de uma folha com título e descrição.
 - **Termo de encerramento** — com os nomes do **Presidente** e do **Tesoureiro** e um bloco de **autenticação eletrônica** (data/hora de geração e um código de verificação único do documento).
 

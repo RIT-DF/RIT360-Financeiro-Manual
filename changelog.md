@@ -11,6 +11,22 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.17.2] — 2026-07-27
+
+### Adicionado
+
+- **Importação de usuários em lote também aceita planilha XLSX.** Em Configurações → Usuários → Importar, além do CSV já existente, agora dá para enviar uma planilha Excel (.xlsx) com a lista de usuários. O sistema lê a primeira aba, usando a primeira linha como cabeçalho — a pré-visualização e a conferência dos dados funcionam do mesmo jeito para os dois formatos. O modelo em CSV continua disponível para quem preferir.
+
+## [1.17.1] — 2026-07-27
+
+### Adicionado
+
+- **Anexar documentos de escritório como comprovante.** Além de imagem, PDF, XML e ZIP, agora dá para anexar arquivos do Word, Excel, PowerPoint e dos formatos equivalentes do LibreOffice/OpenOffice (.docx, .xlsx, .pptx, .odt, .ods, .odp) como comprovante de um lançamento — tanto ao anexar manualmente quanto quando o comprovante é baixado automaticamente a partir de um link. Arquivos executáveis continuam bloqueados.
+
+### Melhorado
+
+- **PDF da prestação de contas mostra que o comprovante existe, mesmo quando não pode ser exibido na página.** Comprovantes em formatos que não dá para mostrar como imagem dentro do PDF (como os documentos de escritório citados acima) passam a aparecer com uma nota indicando que o arquivo está disponível no lançamento, em vez da mensagem "Comprovante indisponível" — que agora fica reservada apenas para os casos em que o comprovante realmente não pôde ser recuperado.
+
 ## [1.17.0] — 2026-07-27
 
 ### Adicionado
