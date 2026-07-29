@@ -11,6 +11,24 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.18.2] — 2026-07-29
+
+### Corrigido
+
+- **Usuário importado em lote ou adicionado manualmente agora recebe as permissões do papel escolhido.** Membros criados por importação de planilha ou pelo botão "Adicionar usuário" podiam ativar a conta sem nenhuma permissão, mesmo com um papel importante marcado (ex.: tesoureiro, administrador) — a pessoa entrava no sistema e não conseguia fazer quase nada. Corrigido: os dois fluxos agora concedem as permissões do papel corretamente desde a criação. Contas já criadas com esse problema foram regularizadas automaticamente.
+
+## [1.18.1] — 2026-07-29
+
+### Modificado
+
+- **Ajuste interno na gravação de papéis de usuário**, sem mudança perceptível na tela — preparação para a correção acima.
+
+## [1.18.0] — 2026-07-29
+
+### Corrigido
+
+- **Cargo personalizado agora vale em todo o sistema.** Quando o presidente da OSC criava um cargo personalizado (Configurações → Cargos e Permissões) e o atribuía a alguém, a lista de membros continuava mostrando "Voluntário" e a pessoa só recebia as permissões nas telas de Movimentações — em reembolsos, pedidos de pagamento, configurações, relatórios e demais áreas, o cargo personalizado não tinha efeito algum. Agora um cargo personalizado concede as permissões marcadas em **todo** o sistema, e a lista de membros passa a mostrar o nome real do cargo (e permite filtrar por ele). O editor de cargos ganhou também um grupo de permissões de **Projetos**.
+
 ## [1.17.3] — 2026-07-27
 
 ### Corrigido
