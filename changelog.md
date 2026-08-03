@@ -11,6 +11,19 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.19.1] — 2026-08-03
+
+### Corrigido
+
+- **Status "Atrasado" agora se atualiza sozinho, todo dia.** Um lançamento pendente que vencia sem que ninguém marcasse como pago continuava aparecendo como "Pendente" até a próxima vez que alguém mexesse nele — mesmo já estando vencido há dias. Agora uma rotina diária confere os lançamentos pendentes vencidos e atualiza o status para **Atrasado** automaticamente, sem precisar de nenhuma ação manual. Vale para receitas e despesas.
+
+## [1.19.0] — 2026-08-02
+
+### Adicionado
+
+- **Código da movimentação nas listas de Pagamentos e Reembolsos.** Cada solicitação de pagamento ou reembolso passa a mostrar, abaixo da descrição, o código curto do lançamento financeiro gerado por ela (o mesmo formato já usado em Movimentações) — facilita localizar o lançamento correspondente sem precisar abrir o detalhe. Fica em branco enquanto a solicitação ainda não tem lançamento vinculado (rascunho, aguardando aprovação, rejeitada ou cancelada).
+- **Filtro de período nas listas de Pagamentos e Reembolsos.** As duas telas ganharam o mesmo filtro de período de Movimentações (mês atual, mês anterior, trimestre, semestre, ano, personalizado). Por padrão, mostram o **mês atual**. O filtro se aplica apenas às abas de histórico (aprovado e pago) — as abas que ainda precisam da sua atenção (aguardando aprovação, rascunho, rejeitado) continuam mostrando **tudo**, sem filtro de data, para nunca esconder algo que precisa ser resolvido. Sua última escolha de período fica lembrada para a próxima vez que você abrir cada tela.
+
 ## [1.18.2] — 2026-07-29
 
 ### Corrigido

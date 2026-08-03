@@ -54,9 +54,11 @@ A lista mostra todos os reembolsos da organização. Cada papel vê um recorte d
 
 Cada aba mostra a contagem entre parênteses (ex: "Aguardando aprovação (3)") — útil para ver rapidamente o que está pendente.
 
-**Colunas (desktop):** Data da despesa, Descrição, Valor, Status, Solicitante, Ações.
+**Colunas (desktop):** Data da despesa, Descrição, Valor, Status, Solicitante, Ações. Quando o reembolso já tem um lançamento vinculado (aprovado ou pago), o código curto desse lançamento aparece abaixo da descrição — útil para localizá-lo rapidamente em Movimentações.
 
 No **celular**, a lista vira **cards verticais** otimizados para toque, com toda a informação empilhada — descrição em destaque, valor à direita, data da despesa, solicitante, badge de status e botões de aprovar/reprovar quando aplicável. Sem precisar rolar lateralmente para ver o status ou as ações. Mesmo padrão usado em Movimentações e Pedidos de Pagamento.
+
+Nas abas **Aprovado** e **Pago** há um filtro de período (mês atual, mês anterior, trimestre, ano etc.), igual ao de Movimentações, sempre aberto no **mês atual** por padrão. As abas **Aguardando aprovação**, **Rascunho** e **Rejeitado** não usam esse filtro — mostram sempre tudo, para nada que precise da sua atenção ficar escondido fora do período selecionado.
 
 ### Cards de resumo no topo
 

@@ -35,6 +35,8 @@ Antes de entrar nos botões, vale firmar três conceitos que você vai ver em to
 | 🟣 **Estornado** | Pagamento desfeito por inversão | Cliente devolveu uma doação; saída espelha a entrada original. |
 | ⬛ **Cancelado** | Lançamento foi anulado manualmente | Lançou por engano ou o evento foi cancelado antes do pagamento. |
 
+> O status **Atrasado** é atualizado automaticamente todo dia — você não precisa abrir o lançamento nem fazer nada para ele mudar de "Pendente" para "Atrasado" assim que o vencimento passa.
+
 ## Lista de movimentações
 
 [![Lista de movimentações](/assets/screenshots/manual-02-movimentacoes-lista.png)](/assets/screenshots/manual-02-movimentacoes-lista.png)
