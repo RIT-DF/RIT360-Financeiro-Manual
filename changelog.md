@@ -11,6 +11,12 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.19.2] — 2026-08-03
+
+### Corrigido
+
+- **Caixas de confirmação e de digitação agora seguem o visual do sistema.** Em quatro pontos do app (clonar um cargo, informar o motivo ao rejeitar uma solicitação ou uma revisão de orçamento, e remover um anexo de tarefa) essas caixas apareciam com o visual padrão do navegador em vez do padrão do RIT360 Financeiro. Agora todas usam o mesmo modal do restante do sistema — sem mudança no que cada uma faz, só na aparência.
+
 ## [1.19.1] — 2026-08-03
 
 ### Corrigido
