@@ -26,17 +26,17 @@ Toda OSC, uma hora ou outra, se depara com aquela pergunta incômoda: **"por que
 
 ## Como abrir
 
-Na tela de **Movimentações**, os cards de **Saldos por conta** ficam no topo. Cada card de conta tem um ícone de **lupa** 🔎 no canto superior direito. Clique na lupa da conta que você quer conferir.
+Na tela de **Movimentações**, o cartão **Contas** fica no topo, com uma linha por conta. Ao fim da linha de cada conta há um ícone de **lupa** 🔎. Clique na lupa da conta que você quer conferir.
 
-[![Ícone de lupa no card de saldo de cada conta](/assets/screenshots/caca-diferencas-01-lupa.png)](/assets/screenshots/caca-diferencas-01-lupa.png)
+[![Ícone de lupa na linha de cada conta](/assets/screenshots/caca-diferencas-01-lupa.png)](/assets/screenshots/caca-diferencas-01-lupa.png)
 
 > 📝 **Nota**
 >
-> A lupa aparece em **cada conta** (contas correntes, poupança, caixa e também **cartões de crédito** — útil para conferir a fatura, especialmente com compras internacionais, onde a cotação da moeda gera pequenas diferenças). Só o card **Líquido** (o consolidado de todas as contas) não tem lupa, porque o Caça-diferenças trabalha **uma conta por vez**.
+> A lupa aparece em **cada conta** (contas correntes, poupança, caixa e também **cartões de crédito** — útil para conferir a fatura, especialmente com compras internacionais, onde a cotação da moeda gera pequenas diferenças). Só o **Líquido** (o consolidado de todas as contas, no rodapé do cartão) não tem lupa, porque o Caça-diferenças trabalha **uma conta por vez**.
 
 ## Passo a passo
 
-1. Clique na **lupa** 🔎 do card da conta.
+1. Clique na **lupa** 🔎 na linha da conta.
 2. No painel que abre, informe o **Saldo do banco** — o valor final que aparece no extrato ou no app do seu banco — e a **Data de referência** (por padrão, hoje).
 
    [![Painel do Caça-diferenças com o saldo do app e a data de referência](/assets/screenshots/caca-diferencas-02-painel.png)](/assets/screenshots/caca-diferencas-02-painel.png)

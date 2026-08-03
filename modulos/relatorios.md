@@ -148,13 +148,17 @@ Horizontes com histórico insuficiente ficam **desabilitados** no seletor com to
 
 Filtros disponíveis na barra do cabeçalho:
 
-- **Período** — presets (mês corrente, mês anterior, trimestre, semestre, ano em curso, ano anterior) + intervalo customizado. Default: último mês fechado.
+- **Período** — presets (mês corrente, mês anterior, trimestre, semestre, **Ano até a data atual**, Ano atual, ano anterior) + intervalo customizado. Default: último mês fechado.
 - **Conta** (multi-select)
 - **Categoria** (multi-select)
 - **Tipo** (receita / despesa)
 - **Centro de custo** (multi-select)
 
 Aplicam-se a todas as abas. Trocar de aba preserva filtros e período. URL reflete o estado completo.
+
+> 📖 **Conceito · "Ano até a data atual" × "Ano atual"**
+>
+> **Ano até a data atual** vai de 1º de janeiro **até hoje** — é o recorte para responder *"como o exercício está indo?"*, seja para avaliar desempenho ou levar um número à diretoria. **Ano atual** cobre o **ano de calendário inteiro**, até 31 de dezembro, incluindo meses que ainda nem chegaram — útil quando você quer enxergar também o que já está programado até o fim do ano. Os dois atalhos existem igualmente em [Movimentações](/modulos/movimentacoes/).
 
 > 📖 **Conceito · Por que status não aparece como filtro**
 >
