@@ -76,6 +76,24 @@ Sim. A planilha de importação tem a coluna `centro_de_custo` (opcional). Se o 
 
 Sim. O RIT360 Financeiro **descompacta o ZIP automaticamente** e anexa cada arquivo de dentro como um anexo individual do lançamento — o pacote dá lugar aos arquivos, que passam a aparecer na pré-visualização e a entrar na prestação de contas. Vale também quando o comprovante chega por **link** na importação por CSV. Arquivos que não dá para exibir num PDF (planilhas, textos) ficam anexados, mas não aparecem no corpo do relatório.
 
+### Por que o valor em Movimentações é diferente do que aparece no Relatório?
+
+Porque as duas telas recortam o período por datas diferentes — e isso é intencional. **Movimentações** filtra pela **data de vencimento**; **Relatórios** apura pela **data de pagamento**.
+
+Exemplo: uma conta que **vence em 30 de junho** e é **paga em 2 de julho** aparece em **junho** em Movimentações e conta em **julho** nos Relatórios. Nenhum dos dois está errado — eles respondem a perguntas diferentes. Movimentações mostra *o que está no período que você está operando* (o que vence, o que precisa da sua ação). Relatórios mostra *o dinheiro que de fato circulou*, que é o critério da prestação de contas em regime de caixa. A própria tela de Movimentações traz um aviso sobre isso logo abaixo do resumo.
+
+### O que significa "Previsto" no resumo de Movimentações?
+
+**Previsto** é o que **ainda vai acontecer**: lançamentos com status **Pendente** ou **Atrasado**, que não foram pagos nem recebidos. **Realizado** é o que já **mexeu na conta** de verdade. Estornados e cancelados não entram em nenhuma das duas colunas.
+
+Antes esses valores vinham somados num número só, o que dava a impressão de dinheiro em caixa que ainda não entrou. Separados, a leitura fica honesta: **decida gasto pela coluna Realizado**; use a coluna **Previsto** para se preparar — cobrar quem deve, adiar o que dá para adiar, buscar caixa antes de precisar. O **Resultado** aparece só no Realizado, de propósito: resultado previsto seria especulação.
+
+### Por que uma conta aparece em vermelho?
+
+Porque a cor sinaliza **o que exige atenção** — por isso nem tudo é colorido. Uma conta de ativo (corrente, poupança, caixa) fica **vermelha** quando o saldo está **negativo**, ou seja, a conta estourou ou entrou no cheque especial. Saldos positivos ficam neutros.
+
+No **cartão de crédito** a lógica é a mesma vista pelo avesso: o valor **"a pagar"** é dívida, e aparece em vermelho; quando o cartão está com **"crédito"** (saldo a seu favor, por exemplo depois de um estorno da operadora), fica neutro. O mesmo critério vale no Painel e nos Relatórios.
+
 ### Se eu sair da tela enquanto preencho, perco o que já digitei?
 
 Não. Ao preencher um **novo lançamento**, **reembolso** ou **pedido de pagamento**, o que você digita é salvo automaticamente no seu dispositivo. Se você sair da tela — por exemplo, para escolher um arquivo para anexar — ou o navegador recarregar a página, ao voltar os campos continuam preenchidos e aparece um aviso de **"rascunho recuperado"**. O rascunho é apagado assim que você envia o formulário (ou clica em descartar), e some ao sair da sua conta. Observação: **arquivos ainda não enviados** não são guardados — só os campos digitados.
@@ -84,7 +102,7 @@ Não. Ao preencher um **novo lançamento**, **reembolso** ou **pedido de pagamen
 
 ### O saldo do sistema não bate com o do meu banco. Como descubro por quê?
 
-Use o **Caça-diferenças**. Na tela de **Movimentações**, cada card de saldo por conta tem um ícone de **lupa** 🔎. Clique nele, informe o **saldo final do extrato do banco** e a **data**, e o RIT360 Financeiro calcula a diferença e lista **hipóteses ranqueadas** do que pode tê-la causado — um lançamento duplicado, um lançamento que explica exatamente a diferença, algo lançado na conta errada, uma combinação de dois, ou um lançamento que ainda falta registrar. Veja o passo a passo em [Caça-diferenças](/modulos/caca-diferencas/).
+Use o **Caça-diferenças**. Na tela de **Movimentações**, no cartão **Contas**, cada conta tem um ícone de **lupa** 🔎 ao fim da linha. Clique nele, informe o **saldo final do extrato do banco** e a **data**, e o RIT360 Financeiro calcula a diferença e lista **hipóteses ranqueadas** do que pode tê-la causado — um lançamento duplicado, um lançamento que explica exatamente a diferença, algo lançado na conta errada, uma combinação de dois, ou um lançamento que ainda falta registrar. Veja o passo a passo em [Caça-diferenças](/modulos/caca-diferencas/).
 
 ### Qual a diferença entre o Caça-diferenças e "Conciliar extrato"?
 

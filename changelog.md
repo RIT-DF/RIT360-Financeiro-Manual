@@ -11,6 +11,28 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.21.0] a [1.21.2] — 2026-08-03
+
+### Modificado
+
+- **A tela de Movimentações abre mostrando os lançamentos.** Antes era preciso rolar quase uma tela inteira de resumo antes de ver a primeira linha da tabela. O bloco de resumo foi reorganizado em dois cartões lado a lado — **Contas** à esquerda, **Resumo do período** à direita — e a primeira linha da tabela passou a aparecer bem mais acima.
+  - As contas agora aparecem em **um cartão só, uma linha por conta**, com ativos e passivos separados por um subtítulo discreto. A **lupa do Caça-diferenças continua em cada conta**, como antes.
+  - Quando a organização tem muitas contas, a lista **rola por dentro do cartão** em vez de empurrar a tabela para baixo — o resumo mantém a mesma altura tendo a OSC 4 ou 20 contas. O total consolidado (**Líquido**) fica fixo no rodapé do cartão, sempre visível.
+  - A busca por texto e os filtros passaram a dividir a mesma linha em telas amplas. Em celular, continuam empilhados.
+
+- **Os números do período agora separam o que já aconteceu do que ainda vai acontecer.** Este é o ajuste mais importante da entrega, e **muda o número que você via**: até aqui, "Receitas" e "Despesas" somavam num único valor os lançamentos já pagos **junto com** os pendentes e atrasados, sem avisar. Numa organização real, isso exibia R$ 59.900,00 como "Receitas" quando o que havia efetivamente entrado era R$ 28.750,00.
+  - Agora o cartão mostra uma pequena tabela com duas colunas: **Realizado** (lançamentos já pagos) e **Previsto** (pendentes e atrasados). O **Resultado** aparece apenas no realizado — resultado previsto seria especulação.
+  - Lançamentos estornados e cancelados continuam fora dos dois números, como já eram.
+  - **Por que os números desta tela podem não bater com os Relatórios:** o filtro de período de Movimentações recorta os lançamentos pela **data de vencimento** (é o que a tabela abaixo mostra), enquanto os Relatórios apuram pela **data de pagamento**. Um lançamento que vence em 30 de junho e é pago em 2 de julho aparece em junho aqui e conta em julho lá. Isso é proposital, e o cartão agora traz um aviso permanente informando o critério — o número do cartão sempre corresponde exatamente às linhas listadas logo abaixo dele.
+
+### Adicionado
+
+- **Novo recorte de período: "Ano até a data atual".** Cobre de 1º de janeiro até **hoje**, diferente de "Ano atual", que vai até 31 de dezembro e mistura lançamentos futuros no mesmo número. Disponível em **Movimentações** e em **Relatórios** (nos Relatórios, a comparação com o período anterior usa a janela de mesma duração imediatamente anterior). O período padrão das telas continua sendo **Mês atual**.
+
+### Corrigido
+
+- **Conta com saldo negativo agora fica em vermelho.** Uma conta comum (banco, caixa) que ficasse com saldo negativo aparecia com a mesma cor de uma conta positiva — só contas de passivo em dívida eram destacadas. Agora qualquer saldo negativo é sinalizado em vermelho, em **Movimentações, Painel e Relatórios**, para que a mesma conta não tenha cores diferentes em telas diferentes. Saldos positivos seguem sem cor (só o que exige atenção se destaca), e passivo com saldo a favor ("crédito") continua neutro, porque não é dívida.
+
 ## [1.20.0] a [1.20.8] — 2026-08-03
 
 ### Adicionado

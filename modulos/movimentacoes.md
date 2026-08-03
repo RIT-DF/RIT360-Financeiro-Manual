@@ -37,10 +37,61 @@ Antes de entrar nos botões, vale firmar três conceitos que você vai ver em to
 
 > O status **Atrasado** é atualizado automaticamente todo dia — você não precisa abrir o lançamento nem fazer nada para ele mudar de "Pendente" para "Atrasado" assim que o vencimento passa.
 
+## O resumo do topo: onde você está e para onde vai
+
+Antes da lista, a tela mostra um bloco de resumo com **dois cartões lado a lado**: **Contas**, à esquerda, e **Resumo do período**, à direita. Eles são compactos de propósito — o protagonista da tela são os lançamentos, e o resumo existe para você se situar em poucos segundos antes de mergulhar neles.
+
+[![Resumo de contas e do período](/assets/screenshots/mov-resumo-contas-periodo.png)](/assets/screenshots/mov-resumo-contas-periodo.png)
+*À esquerda, onde o dinheiro está agora; à direita, o que aconteceu (e o que ainda vai acontecer) no período*
+
+### Cartão "Contas" — onde o dinheiro está agora
+
+Cada conta da OSC ocupa **uma linha**: nome e tipo à esquerda, saldo à direita. As contas aparecem separadas por subtítulo entre **Ativos** (o que a organização tem — conta corrente, poupança, caixa) e **Passivos** (o que a organização deve — tipicamente o cartão de crédito). Se sua OSC tem muitas contas, a lista **rola por dentro do próprio cartão**, sem esticar a tela e sem empurrar os lançamentos para baixo.
+
+No rodapé, sempre visível, fica o **Líquido** — a posição consolidada da organização, ou seja, os ativos menos os passivos. É o número que responde "quanto a OSC realmente tem, já descontado o que deve".
+
+Ao fim de cada linha há uma **lupa** 🔎, que abre o **[Caça-diferenças](/modulos/caca-diferencas/)** daquela conta: você informa o saldo que aparece no app do banco e o sistema aponta onde está a diferença.
+
+> 💡 **Por que isso importa**
+>
+> Somar mentalmente "tenho R$ 7.000 no Sicredi e R$ 86.000 no MercadoPago, mas devo R$ 6.500 no cartão" é exatamente o tipo de conta que se erra com pressa — e errar para mais é o que faz uma organização autorizar um gasto que não cabe. O **Líquido** já entrega essa conta pronta, e sempre à vista.
+
+### Cartão "Resumo do período" — realizado e previsto, separados
+
+O segundo cartão é uma pequena tabela com **Receitas**, **Despesas** e **Resultado**, em **duas colunas**: **Realizado** e **Previsto**.
+
+| Coluna | O que entra ali |
+|---|---|
+| **Realizado** | O que já foi **efetivamente pago ou recebido** — o dinheiro mexeu na conta. |
+| **Previsto** | O que está **pendente ou atrasado** — ainda vai acontecer (ou deveria ter acontecido e não aconteceu). |
+
+O **Resultado** aparece **só na coluna Realizado**, e isso é proposital: resultado previsto seria especulação sobre dinheiro que ainda não existe. Lançamentos **estornados** e **cancelados** ficam fora das duas colunas — não representam dinheiro que circulou.
+
+> 📖 **Conceito · Por que separar realizado de previsto**
+>
+> Até pouco tempo, o resumo somava os dois num único número chamado "Receitas". O problema é sutil e caro: um valor de R$ 20.000 em "Receitas" podia ser R$ 3.000 que caíram na conta mais R$ 17.000 de um repasse que ainda nem foi liberado. Quem olha rápido lê "temos vinte mil".
+>
+> **Planejar gasto em cima de receita que ainda não entrou é uma das formas mais comuns de uma organização pequena se enrolar.** O convênio atrasa dois meses, a doação prometida não se confirma, a venda do bazar rende menos que o previsto — e as despesas, essas, já foram assumidas. Separando as colunas, a leitura fica honesta: *isto eu tenho; aquilo eu espero*. Decisão de gasto se toma pela coluna **Realizado**; a coluna **Previsto** serve para você **se preparar** — cobrar quem deve, adiar o que dá para adiar, buscar caixa antes de precisar dele.
+
+> ⚠️ **Atenção · Esta tela recorta por vencimento; os Relatórios apuram por pagamento**
+>
+> O período de **Movimentações** filtra os lançamentos pela **data de vencimento**. Os **[Relatórios](/modulos/relatorios/)** apuram pela **data de pagamento**. Um exemplo concreto: uma conta que **vence em 30 de junho** e é **paga em 2 de julho** aparece em **junho** aqui, e conta em **julho** lá.
+>
+> **Isso não é erro** — a própria tela avisa disso numa nota abaixo do resumo. São perguntas diferentes: Movimentações responde *"o que está no período que estou operando?"* (o que vence, o que precisa da minha ação agora); Relatórios responde *"quanto dinheiro de fato circulou?"* (o que importa para prestação de contas em regime de caixa). Se você comparar os dois números esperando que batam, vai desconfiar do sistema à toa. Compare cada um com a pergunta que ele responde.
+
+### Cores: vermelho é pedido de atenção
+
+O resumo usa cor com parcimônia — **o que fica colorido é o que exige atenção**, e o resto permanece neutro, para que o vermelho realmente salte aos olhos quando aparecer.
+
+- Uma conta de **ativo com saldo negativo** (conta estourada, cheque especial) aparece em **vermelho**. Saldos positivos ficam neutros.
+- No **cartão de crédito**, o valor **"a pagar"** é dívida e aparece em **vermelho**; quando o cartão está com **"crédito"** (saldo a seu favor, por exemplo após um estorno da operadora), fica neutro.
+
+O mesmo critério vale no **Painel** e nos **Relatórios** — a leitura é a mesma em todo o sistema.
+
 ## Lista de movimentações
 
 [![Lista de movimentações](/assets/screenshots/manual-02-movimentacoes-lista.png)](/assets/screenshots/manual-02-movimentacoes-lista.png)
-*Lista de movimentações em desktop — tabela com todas as colunas*
+*A tela de Movimentações: resumo compacto no topo, busca e filtros na mesma linha, e os lançamentos ocupando o espaço principal*
 
 A lista mostra todas as movimentações com as colunas **Vencimento**, **Pagamento**, **Lançamento** (descrição e contraparte), **Conta**, **Categoria**, **Status** e **Valor**.
 
@@ -57,11 +108,20 @@ Ao abrir a tela, ela já vem filtrada pelo **mês corrente** — o que você est
 
 O período segue sendo o recorte principal:
 
-- **Período** — atalhos contábeis prontos (Mês atual, Mês anterior, Trimestre atual, Trimestre anterior, Semestre atual, Ano atual até hoje, Ano anterior) + opção **Personalizado** para definir intervalo livre + **Todos** para ver tudo
+- **Período** — atalhos contábeis prontos (Mês atual, Mês anterior, Trimestre atual, Trimestre anterior, Semestre atual, **Ano até a data atual**, Ano atual, Ano anterior) + opção **Personalizado** para definir intervalo livre + **Todos** para ver tudo
 
 > 💡 **Por que isso importa**
 >
 > Atalhos contábeis (trimestre, semestre, ano) parecem detalhe, mas eles existem porque **prestação de contas e análise gerencial seguem esses recortes**, não os meses corridos. Quando a diretoria pergunta "como foi o primeiro trimestre?", você seleciona "Trimestre anterior" e o relatório está pronto — sem precisar configurar datas no calendário toda vez.
+
+> 📖 **Conceito · "Ano até a data atual" × "Ano atual"**
+>
+> São dois recortes parecidos e frequentemente confundidos, disponíveis tanto em **Movimentações** quanto em **[Relatórios](/modulos/relatorios/)**:
+>
+> - **Ano até a data atual** — de **1º de janeiro até hoje**. Só o que já aconteceu ou já venceu.
+> - **Ano atual** — o **ano de calendário inteiro**, de 1º de janeiro a 31 de dezembro, incluindo meses que ainda nem chegaram.
+>
+> **Quando usar cada um:** escolha **"Ano até a data atual"** quando a pergunta for *"como o exercício está indo até agora?"* — é o recorte para avaliar desempenho, comparar com o ano passado no mesmo ponto ou levar um número à reunião de diretoria. Escolha **"Ano atual"** quando quiser enxergar também **o que já está programado até o fim do ano** — as parcelas que faltam, o aluguel dos próximos meses, a recorrência que continua rodando. O primeiro conta a história até aqui; o segundo mostra o ano inteiro, incluindo o que ainda está por vir.
 
 ### Filtros combináveis por marcadores (chips)
 
@@ -76,13 +136,15 @@ No lugar das antigas abas por tipo, a lista agora tem **filtros por marcadores (
 
 Em cada um desses filtros você escolhe **vários valores** de uma vez e ainda decide se quer **incluir** apenas os selecionados ou **excluir** ("mostrar tudo, exceto…"). Some-se a isso uma **busca livre** por texto, que procura na descrição, no beneficiário, na conta, na categoria, no valor e na data.
 
+A **busca e os filtros ficam na mesma linha**, logo acima da lista — ocupam uma faixa só da tela, sobrando mais espaço vertical para os lançamentos.
+
 [![Filtros combináveis em Movimentações](/assets/screenshots/mov-filtros-chips.png)](/assets/screenshots/mov-filtros-chips.png)
 *Filtre por tipo, conta, categoria, status, projeto e centro de custo — combinando vários ao mesmo tempo.*
 > 💡 **Por que isso importa**
 >
 > Filtro combinável responde perguntas que aba única não alcança: "todas as despesas de material do projeto Feira, exceto as da conta Caixa". Antes você via um tipo de cada vez; agora cruza tipo, categoria, projeto e centro de custo numa consulta só — a conferência e a análise gerencial ficam muito mais rápidas.
 
-Quando há filtros ativos, uma linha "Filtrado por: …" aparece abaixo dos totais. O botão **Limpar filtros** remove todos de uma vez. Na barra inferior aparecem os **totais do recorte filtrado**: receitas, despesas e saldo (receitas menos despesas).
+Quando há filtros ativos, uma linha "Filtrado por: …" indica o que está sendo aplicado, e o botão **Limpar filtros** remove todos de uma vez. Os totais do **Resumo do período** acompanham o recorte filtrado — o que você vê resumido é sempre o que está na lista.
 
 > 📱 **No celular**
 >
@@ -90,9 +152,7 @@ Quando há filtros ativos, uma linha "Filtrado por: …" aparece abaixo dos tota
 
 ### Estornados e cancelados ocultos por padrão
 
-Para facilitar a conferência contra o extrato, a lista passa a **esconder automaticamente** os lançamentos **estornados** (o par inteiro — original e contrário) e os **cancelados** — eles não representam dinheiro que entrou ou saiu de fato. Um botão **"Mostrar estornados e cancelados"** traz esses lançamentos de volta quando você precisar vê-los, e a contagem indica quantos estão ocultos no momento.
-
-Na barra inferior aparecem os **totais do período filtrado**: receitas, despesas e saldo (receitas menos despesas).
+Para facilitar a conferência contra o extrato, a lista passa a **esconder automaticamente** os lançamentos **estornados** (o par inteiro — original e contrário) e os **cancelados** — eles não representam dinheiro que entrou ou saiu de fato. Um botão **"Mostrar estornados e cancelados"** traz esses lançamentos de volta quando você precisar vê-los, e a contagem indica quantos estão ocultos no momento. Pelo mesmo motivo, eles também não entram nas colunas **Realizado** e **Previsto** do resumo.
 
 ### Identificadores visuais no título
 
@@ -434,6 +494,9 @@ Para anexar, na seção **Documentos complementares** do diálogo: escolha o arq
 - **Recorrente** — lançamento que se repete automaticamente em intervalo fixo.
 - **Parcelado** — valor único dividido em parcelas com datas distintas.
 - **Regime de caixa** — modelo contábil em que o que vale é a data de entrada/saída do dinheiro, não a data do contrato.
+- **Realizado** — o que já foi efetivamente pago ou recebido; o dinheiro mexeu na conta.
+- **Previsto** — o que está pendente ou atrasado; ainda vai acontecer.
+- **Líquido** — a posição consolidada da OSC: tudo o que ela tem (ativos) menos tudo o que ela deve (passivos).
 
 ## Por onde seguir
 
