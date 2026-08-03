@@ -174,6 +174,26 @@ Contas podem ser **desativadas** por um administrador (em Configurações → Co
 
 Em **Configurações → Categorias**, clique em **Aplicar template** e escolha um modelo próximo ao perfil da sua OSC (ex: "Padrão Grupo Escoteiro 2026"). O template traz categorias típicas pré-configuradas. Depois você ajusta o que não bater com sua realidade — renomeia, exclui, adiciona.
 
+## Página pública (transparência)
+
+### Publicar a página expõe dados das pessoas?
+
+Não. A [Página Pública](/configuracoes/pagina-publica/) trabalha apenas com **totais somados por período e por categoria**. O sistema **nunca publica** — mesmo que a OSC queira — lançamento individual, nome de pessoa física (solicitante, beneficiário, fornecedor pessoa física, membro da equipe), comprovantes e anexos, o relatório de prestação de contas, dados bancários, **saldo das contas**, CPF, RG, e-mail ou telefone de pessoas, nem as telas internas de gestão. Isso é decisão de produto: a OSC escolhe *quanto* mostrar (quais blocos, resumido ou detalhado), não precisa avaliar risco item a item.
+
+O único cuidado que fica com você: **os nomes das categorias aparecem na página**. Antes de ligar o bloco "De onde vem, para onde vai", revise a lista em Configurações → Categorias e renomeie qualquer categoria com nome de pessoa ou referência a caso individual.
+
+### Por que a página não mostra o mês atual?
+
+Porque o recorte para sempre no **último mês encerrado**. O mês em curso é um mês de rascunho — tem lançamento pela metade, comprovante que ainda não chegou, erro de digitação não corrigido. Publicar isso obrigaria a explicar depois por que o número mudou, e número que muda parece número maquiado para quem está de fora. **Número público é número conferido.** E é automático: ninguém na OSC precisa lembrar de "fechar o mês na página".
+
+### Posso colocar a página no site da minha organização?
+
+Sim. Em **Configurações → Página pública → Colocar no site da organização**, clique em **Copiar código** e cole o trecho numa página do seu site — no WordPress, dentro de um bloco de **HTML personalizado**. O conteúdo aparece embutido, com a altura se ajustando sozinha e acompanhando a largura da coluna do site. A grande vantagem é que **ele se atualiza sozinho**: ninguém precisa copiar número à mão todo mês.
+
+### Como tiro a página do ar se precisar corrigir algo?
+
+Desligue a chave **Publicar / Despublicar página pública**, no topo de Configurações → Página pública. O efeito é **imediato** e **nenhuma configuração é perdida** — blocos, período e missão continuam salvos, e religar devolve tudo como estava. Enquanto despublicada, você ainda consegue conferir tudo pela **Prévia**, que mostra exatamente o que o público veria.
+
 ## Integração com WooCommerce
 
 ### Posso conectar minha loja online ao RIT360 Financeiro?

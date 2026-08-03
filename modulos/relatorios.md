@@ -19,6 +19,10 @@ Antes de entrar nos botões, vale firmar três conceitos que aparecem em todas a
 >
 > Toda análise dos Relatórios olha o **dinheiro que de fato entrou ou saiu** — não o que estava contratado ou previsto. Receita só conta quando a doação **caiu na conta**; despesa só conta quando o pagamento **saiu da conta**. Por isso a aba de Visão Geral mostra "Resultado do período" usando apenas movimentações com status **Pago**. Esse é o padrão usado por OSC para prestação de contas e bate com a forma como tesoureiros amadores enxergam o dinheiro: "quanto tem na conta hoje?".
 
+> 📖 **Conceito · O mesmo critério vale na página pública**
+>
+> A [Página Pública](/configuracoes/pagina-publica/) de transparência da OSC usa **exatamente este critério**: só entram lançamentos efetivamente pagos ou recebidos no período, pela data de pagamento; estornos não contam; transferências entre contas da própria organização não são receita nem despesa. É por isso que os valores da página pública podem **não bater com o que você vê em [Movimentações](/modulos/movimentacoes/)**, que lista também pendentes e atrasados — não é inconsistência, são perguntas diferentes. A página pública ainda para sempre no **último mês encerrado**, para nunca publicar número de mês em rascunho.
+
 > 📖 **Conceito · Período anterior equivalente**
 >
 > O toggle **Comparar com período anterior** no cabeçalho compara o período carregado com o **mesmo tamanho de janela imediatamente anterior**. Se você está olhando Abril/2026 completo, a comparação é com Março/2026 completo. Se você selecionou um intervalo personalizado de 12 dias, a comparação é com os 12 dias anteriores ao início. Quando o período é um **mês em andamento** (ex: Maio até hoje), a comparação é com o mesmo número de dias do mês anterior — não com o mês anterior inteiro. Isso evita que uma comparação "honesta" mostre o mês em curso "menor" só porque ainda não terminou.

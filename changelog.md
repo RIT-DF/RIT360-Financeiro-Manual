@@ -11,6 +11,27 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.20.0] a [1.20.8] — 2026-08-03
+
+### Adicionado
+
+- **Página pública de transparência da OSC.** A organização agora pode publicar um endereço aberto, sem login, para mostrar à sociedade, a financiadores e a editais o que arrecadou e no que aplicou. A configuração fica em **Configurações → Página pública** e só aparece para quem já administra as configurações da OSC.
+  - **Nasce fechada.** Nenhuma organização tem página pública até ligar, e **todos os blocos de conteúdo começam desligados**. Publicar sem ligar nada mostra apenas o cabeçalho com o nome da OSC.
+  - **Quatro blocos, você escolhe quais.** *Quem somos* (nome, logo, missão e, se quiser, CNPJ, cidade, site e contato), *Panorama do período* (receitas, despesas e resultado), *De onde vem / para onde vai* (receitas por origem e despesas por categoria) e *Projetos* (nome, objetivo, situação e, se quiser, período e valores). Cada bloco ligado tem um único ajuste: **Resumido** ou **Detalhado**.
+  - **Endereço próprio, com QR code.** Você define o final do endereço, copia o link com um clique e baixa um QR code para mural, relatório impresso e redes. Também dá para **pré-visualizar** a página exatamente como o público vai vê-la, antes de publicar, e **despublicar** a qualquer momento com um clique — sem perder as escolhas de blocos.
+  - **Aparecer no Google é opcional** e vem desligado.
+  - **A página nunca mostra o mês em andamento.** O visitante escolhe entre recortes fixos: exercício corrente até o último mês fechado, últimos 12 meses fechados ou um exercício anterior inteiro. Não há intervalo personalizado — proposital, para que ninguém consiga estreitar o recorte até deduzir um lançamento específico.
+  - **O que a página nunca mostra, em nenhuma combinação:** lançamento individual, nome de pessoa, comprovantes e anexos, o relatório de prestação de contas, dados bancários, **saldo das contas**, CPF, RG, e-mail pessoal ou telefone, e nenhuma das telas internas de gestão (atenção, previsão, orçamento, conciliação, aprovações). Isso é garantido pelo sistema — não existe opção para ligar.
+  - **Dá para embutir a página no site da OSC** (inclusive em site feito em WordPress), e ela foi feita para ler bem no celular, já que o link costuma circular por WhatsApp.
+  - Toda mudança na configuração da página (publicar, despublicar, trocar o endereço, ligar/desligar bloco) fica registrada na auditoria, com quem fez e quando.
+
+### Corrigido
+
+- **Estornos deixaram de distorcer os números dos Relatórios.** Quando um lançamento era estornado, o sistema descartava o lançamento original mas **contava a devolução como se fosse uma nova receita** — então estornar uma despesa de R$ 420,00 inflava as receitas do período em R$ 420,00, e categorias de despesa chegavam a aparecer no gráfico de receitas. Agora o estorno é **neutro na apuração do período**: as duas pontas (o lançamento estornado e a devolução) ficam de fora dos totais de receitas, despesas e resultado.
+  - **Atenção — os números podem mudar em relação ao que você via antes.** Se a sua organização já registrou estornos, os totais de receitas (e, dependendo do caso, de despesas) de períodos passados podem aparecer **menores** do que apareciam. Os valores anteriores é que estavam errados; os de agora refletem o que de fato entrou e saiu.
+  - **O saldo das contas segue outra regra, de propósito.** No saldo e na conciliação, as duas pontas **continuam contando**, cada uma na sua data de pagamento — porque o dinheiro realmente saiu da conta e voltou depois. É assim que o saldo do sistema continua acompanhando o extrato do banco, inclusive no intervalo entre a saída e a devolução.
+  - A correção vale para toda a plataforma: Relatórios (visão geral, composição por categoria, extrato, previsão, alertas), painéis de projeto, orçamento anual e a nova página pública.
+
 ## [1.19.2] — 2026-08-03
 
 ### Corrigido

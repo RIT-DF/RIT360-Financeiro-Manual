@@ -89,6 +89,10 @@ Para começar rapidamente, clique em **Aplicar template**. O RIT360 Financeiro t
 >
 > Você nunca acerta a lista perfeita de categorias na primeira tentativa. Comece com um template próximo ao perfil da sua OSC, opere por 1-2 meses, e ajuste o que **não bater** com sua realidade: renomeie categorias confusas, una categorias que viraram redundantes, crie categoria nova quando 5+ lançamentos foram para "Outros". Lista enxuta vence lista exaustiva — categoria que aparece 2× no ano não vale ter como categoria separada.
 
+> ⚠️ **Atenção · Nome de categoria pode virar informação pública**
+>
+> Se a sua OSC usa a [Página Pública](/configuracoes/pagina-publica/) de transparência, os **nomes das categorias aparecem lá** — no bloco "De onde vem, para onde vai". Uma categoria chamada *"Acordo trabalhista — Fulano"* ou *"Auxílio jurídico caso X"* vira texto público junto com o valor. Antes de publicar, leia a lista inteira com olhos de quem é de fora e prefira nomes **descritivos e impessoais** ("Despesas jurídicas", "Auxílio a beneficiários"). Categorização inconsistente também fica visível — vale conferir na prévia.
+
 > ⚠️ **Atenção · Cuidado ao renomear categoria em uso**
 >
 > Renomear uma categoria atinge **retroativamente** todos os lançamentos que já a usavam — eles passam a aparecer com o novo nome em relatórios e listagens. Geralmente isso é o que você quer (ajustou o nome para algo mais claro), mas pense duas vezes antes de renomear uma categoria que já foi referenciada em prestação de contas externa.

@@ -16,3 +16,4 @@ Configurações disponíveis para administradores e tesoureiros da OSC.
 | [Contas Bancárias](/configuracoes/contas/) | Contas financeiras e saldos consolidados |
 | [Categorias](/configuracoes/categorias/) | Categorias de receita, despesa e centros de custo |
 | [Fluxo de Aprovações](/configuracoes/aprovacoes/) | Quórum e aprovadores elegíveis para reembolsos, pedidos, projetos e orçamento |
+| [Página Pública](/configuracoes/pagina-publica/) | Página aberta de transparência da OSC — o que publicar, para quem e com que profundidade |
