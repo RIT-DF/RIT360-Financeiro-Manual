@@ -11,6 +11,20 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.21.3] a [1.21.4] — 2026-08-04
+
+### Corrigido
+
+- **Entrar com o Google no primeiro acesso agora funciona.** Quem era adicionado por um administrador recebia o e-mail de convite, clicava no link, chegava na tela de primeiro acesso e escolhia **entrar com o Google** — e era devolvido à tela de login, sem nenhuma mensagem explicando o que tinha acontecido. Na prática, só dava para concluir o primeiro acesso **criando uma senha antes**; depois disso o Google passava a funcionar normalmente.
+  - Agora o primeiro acesso **é retomado sozinho** quando você volta do Google: o convite é concluído e você entra direto no aplicativo, sem precisar criar senha antes.
+  - A retomada só acontece se a conta do Google usada for **a mesma para quem o convite foi enviado**. Se você abrir o link de convite de outra pessoa no seu navegador, nada é aproveitado — o convite é descartado e você segue na sua própria conta.
+  - A tela de primeiro acesso também ganhou saídas visíveis: **continuar para o aplicativo** e **sair desta conta**, para quem chegar ali sem querer.
+
+- **Ao adicionar um usuário, a mensagem de erro agora diz o que realmente aconteceu.** Tentar cadastrar um e-mail que já é membro da organização devolvia "Não foi possível adicionar o usuário agora. Tente novamente em instantes." — texto que sugeria uma instabilidade passageira e convidava a tentar de novo, quando o motivo era permanente e tentar de novo nunca resolveria. Agora aparece **"Este e-mail já é membro da organização."**, e o mesmo vale para os avisos de permissão insuficiente e de organização não encontrada.
+  - A mesma correção alcança outras telas que dependiam dessas mensagens: **membros** (visão de superadministrador), **aprovar** e **recusar** solicitação de vínculo, o menu de ações de um membro, a criação de conta sem organização e o assistente de cadastro.
+
+---
+
 ## [1.21.0] a [1.21.2] — 2026-08-03
 
 ### Modificado
