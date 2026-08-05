@@ -11,6 +11,66 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.23.3] — 2026-08-05
+
+### Corrigido
+
+- **Valores em reais nos avisos do Painel voltaram ao formato brasileiro.** As mensagens das regras de pontos de atenção e os textos de calibração automática às vezes mostravam um número como "R$ 2,500.00" (formato americano) em vez de "R$ 2.500,00". Corrigido — todo valor em reais nesses textos agora usa sempre ponto de milhar e vírgula decimal.
+
+---
+
+## [1.23.2] — 2026-08-05
+
+### Corrigido
+
+- **Período personalizado em Relatórios não excluía mais o último dia por engano.** Um link de relatório com data de início e fim escolhidas manualmente podia mostrar um dia a menos em cada ponta do período — efeito mais visível ao abrir um link compartilhado, um favorito salvo, ou o **"Ver todos"** dos avisos do Painel, que às vezes deixava de fora o dia de hoje. Corrigido para sempre considerar o dia completo, do início ao fim.
+
+---
+
+## [1.23.1] — 2026-08-04
+
+### Corrigido
+
+- **O selo de atenção alta no topo do Painel agora conta certo.** O selo que aparece quando existe algum aviso de severidade alta contava só os avisos exibidos no bloco (no máximo 4); um dia com mais avisos que isso podia deixar o selo silencioso mesmo havendo algo importante fora da lista visível. Agora ele considera todos os avisos do período, mostrados ou não.
+
+---
+
+## [1.23.0] — 2026-08-04
+
+### Modificado
+
+- **O Painel foi reorganizado para contar a história do mês em ordem, de cima para baixo.** Nenhuma informação foi adicionada ou removida — a mudança é só de organização e apresentação.
+  - No **cabeçalho**, um selo chama atenção quando há algum aviso importante em aberto, com um link direto para o bloco de avisos mais abaixo.
+  - Logo abaixo, as **contas** aparecem em modo compacto (uma linha por conta, com o total líquido sempre visível no rodapé, e rolagem interna quando há muitas contas) ao lado de um cartão único de **"Este mês"**, com o resultado do período em destaque.
+  - Em seguida, um **gráfico de fluxo de caixa dos últimos 6 meses**, mostrando a evolução de receitas e despesas mês a mês.
+  - Depois, três colunas resumindo **Pedidos de pagamento**, **Reembolsos** e **Projetos**.
+  - Por fim, os **pontos de atenção**, fechando a tela.
+
+---
+
+## [1.22.1] — 2026-08-04
+
+### Corrigido
+
+- **A janela de "últimos 30 dias" dos avisos do Painel podia mudar de um dia para o outro sem motivo aparente**, principalmente à noite — corrigido para sempre usar o dia do calendário local.
+- **Os links de aviso de categoria e de fornecedor voltaram a levar direto para os lançamentos correspondentes** em Movimentações, já filtrados — vinham caindo num link genérico para a lista inteira.
+- O link **"Ver todos"** do bloco de avisos passou a abrir sempre o mesmo recorte de 30 dias mostrado no Painel.
+- O rodapé do bloco de avisos agora avisa, para quem pode ajustar, que os avisos são configuráveis em Configurações.
+
+---
+
+## [1.22.0] — 2026-08-04
+
+### Adicionado
+
+- **O Painel ganhou um bloco de avisos**, reunindo em um só lugar os alertas mais relevantes da organização nos últimos 30 dias — visível para quem tem permissão de ver relatórios.
+  - As regras de pontos de atenção que já existiam na aba **Atenção** de Relatórios passaram a aparecer também aqui, sempre olhando para os últimos 30 dias (a aba Atenção continua respeitando o período que você escolher lá).
+  - **Nova regra: Déficit projetado.** Avisa quando a organização corre o risco de ficar com saldo negativo dentro dos próximos meses (padrão: 6 meses, ajustável entre 3, 6 e 12 em Configurações). Há dois níveis: um aviso mais grave quando **lançamentos já agendados** por si só levariam o saldo a negativo, e um aviso mais brando quando isso só acontece ao somar uma **estimativa** baseada no histórico recente — a mensagem sempre deixa claro qual dos dois é o caso.
+  - O bloco mostra até 4 avisos de cada vez, com um link **"Ver todos"** para a lista completa.
+  - Quem administra a configuração financeira da organização pode desligar cada aviso individualmente, em Configurações — o ajuste vale para toda a organização, não só para quem o desliga.
+
+---
+
 ## [1.21.3] a [1.21.4] — 2026-08-04
 
 ### Corrigido

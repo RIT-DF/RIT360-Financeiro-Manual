@@ -91,6 +91,10 @@ O RIT360 Financeiro monitora **cinco regras determinísticas** sobre os seus lan
 
 Cada anomalia tem **severidade** (leve / moderada / alta) com cor semântica e **link de ação contextual** ("Abrir lançamento", "Ver categoria", "Ver fornecedor", "Ver detalhe das receitas"). Ordenação: do mais severo para o menos severo. Um badge no nome da aba mostra a contagem total.
 
+> ℹ️ **Observação · Uma sexta regra existe, mas mora no Painel**
+>
+> Desde a introdução dos [Pontos de Atenção no Painel](/modulos/painel/#bloco-4-pontos-de-atencao), existe uma sexta regra — **Déficit projetado no fluxo de caixa** — configurada nesta mesma tela (ver abaixo), mas que **não aparece nesta aba**. Ela é exclusiva do Painel, porque olha para o futuro (meses ainda não fechados), enquanto esta aba analisa o período que você escolheu. Para vê-la em ação, olhe o Painel; para o detalhe mês a mês, use a [aba Previsão](#previsao-forecast).
+
 > 📖 **Conceito · O que define severidade**
 >
 > Severidade não é categoria abstrata — é matemática. **Leve** = o evento ultrapassa o limite em até 25%. **Moderada** = 25% a 50% acima do limite. **Alta** = mais de 50% acima. Exemplo: se a regra de "despesa concentrada" está em 20% e um lançamento representa 28% do total do mês, severidade é **leve** (28/20 − 1 = 40% acima → moderada, na verdade). Quanto mais "fora do padrão", mais visível na lista.
@@ -194,15 +198,19 @@ Todos os exports trazem **cabeçalho identificador** padrão: nome da OSC, escop
 ## Configuração das regras de atenção
 
 [![Configuração de regras](/assets/screenshots/manual-config-relatorios-regras.png)](/assets/screenshots/manual-config-relatorios-regras.png)
-*Configurações → Relatórios — cinco cards editáveis, um por regra*
+*Configurações → Relatórios → Regras de pontos de atenção — cards editáveis, um por regra*
 
-Acessível em **Configurações → Relatórios** (só Presidente). Cinco cards, um por regra, cada um com:
+Acessível em **Configurações → Relatórios → Regras de pontos de atenção** (só Presidente). Um card por regra — as cinco regras da aba Atenção **e** a regra de **Déficit projetado no fluxo de caixa**, que aparece só no Painel (ver [Pontos de atenção no Painel](/modulos/painel/#bloco-4-pontos-de-atencao)). Cada card tem:
 
 - **Toggle on/off** — ligar ou desligar a regra
 - **Limite (threshold)** em campo numérico editável com unidade clara (%, ×, R$ ou meses)
 - **Link "Restaurar padrão"** — volta ao valor default daquela regra
 
 No rodapé: **Salvar alterações** (só habilita se houver mudança) e **Restaurar todas as regras ao padrão** (com confirmação modal).
+
+> 📖 **Card · Déficit projetado no fluxo de caixa**
+>
+> Vem **ligado por padrão**. O limite, aqui, é a **antecedência**: com quantos meses de folga o RIT360 Financeiro deve avisar sobre um déficit projetado — **3, 6 ou 12 meses** (padrão: 6). Quanto maior a antecedência, mais cedo o aviso aparece, mas também mais sujeito a mudar conforme novos lançamentos entram no sistema.
 
 ### Calibrar pelo histórico
 
@@ -239,7 +247,8 @@ Três opções na hora de revisar:
 - **Regime de caixa** — modelo em que o que vale é a data em que o dinheiro entrou/saiu da conta, não a data do contrato ou da fatura.
 - **Período anterior equivalente** — janela imediatamente anterior, com a mesma duração do período carregado.
 - **Comparativo** — toggle que adiciona variação versus período anterior em cada bloco.
-- **Anomalia** — evento detectado por uma das 5 regras determinísticas; ranqueado por severidade.
+- **Anomalia** — evento detectado por uma das 5 regras determinísticas da aba Atenção; ranqueado por severidade.
+- **Déficit projetado no fluxo de caixa** — regra exclusiva do Painel que avisa quando o caixa tende a ficar negativo em um mês futuro, considerando agendados e, quando necessário, a média histórica.
 - **Severidade** — leve / moderada / alta, derivada do quanto o evento ultrapassa o limite da regra.
 - **Calibração** — análise estatística que sugere limites de regras personalizados ao padrão da sua OSC.
 - **Forecast (projeção)** — estimativa do comportamento financeiro futuro, combinando agendados (já cadastrados) com estimados (média histórica).

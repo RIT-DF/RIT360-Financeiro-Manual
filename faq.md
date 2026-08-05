@@ -98,6 +98,20 @@ No **cartão de crédito** a lógica é a mesma vista pelo avesso: o valor **"a 
 
 Não. Ao preencher um **novo lançamento**, **reembolso** ou **pedido de pagamento**, o que você digita é salvo automaticamente no seu dispositivo. Se você sair da tela — por exemplo, para escolher um arquivo para anexar — ou o navegador recarregar a página, ao voltar os campos continuam preenchidos e aparece um aviso de **"rascunho recuperado"**. O rascunho é apagado assim que você envia o formulário (ou clica em descartar), e some ao sair da sua conta. Observação: **arquivos ainda não enviados** não são guardados — só os campos digitados.
 
+## Painel e pontos de atenção
+
+### Um aviso que eu via no Painel sumiu. O que aconteceu?
+
+Pode ser uma entre três coisas: (1) o problema foi resolvido — o lançamento que gerou o aviso mudou de status ou foi corrigido; (2) o aviso saiu da **janela de 30 dias** que o Painel considera (ele é sobre o que aconteceu recentemente, não sobre o histórico inteiro); ou (3) alguém com acesso a Configurações **desligou aquele tipo de regra** para a organização. Para conferir o histórico completo sem o recorte de 30 dias, use [Relatórios → aba Atenção](/modulos/relatorios/#atencao) com o período que quiser.
+
+### Por que o Painel mostra avisos diferentes dos Relatórios?
+
+Porque as duas telas recortam o tempo de forma diferente, de propósito. O **Painel** olha sempre os **últimos 30 dias** — é o "o que aconteceu recentemente". Os **Relatórios** (aba Atenção) olham o **período que você escolher** no filtro do cabeçalho — pode ser o mês fechado, o trimestre, o ano. Um aviso pode aparecer só em um dos dois: algo de 45 dias atrás some do Painel mas continua em Relatórios se o período escolhido incluir aquela data. Além disso, o Painel tem uma regra própria — **Déficit projetado no fluxo de caixa** — que não existe na aba Atenção dos Relatórios, porque olha para meses futuros, não para o período analisado.
+
+### Quem pode desligar um aviso, e para quem vale?
+
+Só quem tem permissão de administrar as configurações financeiras da OSC (tipicamente o Presidente) vê a opção de desligar um tipo de aviso, direto no próprio card do aviso no Painel ou em **Configurações → Relatórios → Regras de pontos de atenção**. O desligamento **vale para toda a organização** — não é uma preferência pessoal de quem clicou, é uma regra da OSC. O texto do aviso deixa isso explícito antes de confirmar, exatamente para evitar que alguém desligue "só para mim" sem perceber o alcance.
+
 ## Caça-diferenças (conciliação pelo saldo)
 
 ### O saldo do sistema não bate com o do meu banco. Como descubro por quê?
