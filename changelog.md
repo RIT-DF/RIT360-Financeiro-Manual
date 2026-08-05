@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.24.1] — 2026-08-05
+
+### Corrigido
+
+- **O atalho para "Novidades" levava a uma página que não existia.** O número da versão no rodapé, o item "Novidades" no menu do usuário e o item equivalente no "Mais" do celular abriam um endereço errado, mostrando uma página de erro em vez das novidades da versão. Corrigido — todos agora abrem a página correta.
+
+---
+
 ## [1.24.0] — 2026-08-05
 
 ### Adicionado
