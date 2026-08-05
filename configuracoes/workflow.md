@@ -29,6 +29,10 @@ Define quantos votos positivos são necessários para aprovar:
 >
 > Com quórum 2, depois do primeiro voto positivo, o reembolso ou pedido entra em "Aguardando aprovação parcial" — os outros aprovadores elegíveis recebem notificação de que falta um voto. Quando o segundo voto positivo chega, o status muda para Aprovado. **Se um aprova e outro rejeita, prevalece a rejeição** (princípio conservador: na dúvida, não autoriza).
 
+> ⚠️ **Atenção · O quórum vale só para aprovar, não para reprovar**
+>
+> "1 voto" ou "2 votos" é o número de aprovações necessárias para **liberar** o pagamento. Para **reprovar, basta 1 pessoa**, mesmo com quórum 2 e mesmo que já houvesse uma aprovação registrada — qualquer aprovador elegível pode encerrar o pedido sozinho. É decisão de produto: soltar dinheiro exige acordo de mais gente, mas barrar não precisa de unanimidade. Detalhe completo em [Reembolsos → Rejeitado](/modulos/reembolsos/#rejeitado).
+
 ## Papéis elegíveis para aprovar
 
 Lista de papéis que podem votar em aprovações. Default: **Presidente** e **Tesoureiro**.

@@ -98,7 +98,11 @@ Pedidos recorrentes mostram aqui uma seção **Ocorrências** com a lista de cad
 [![Pedido rejeitado](/assets/screenshots/manual-08b-pedido-rejeitado.png)](/assets/screenshots/manual-08b-pedido-rejeitado.png)
 *Detalhe de pedido rejeitado*
 
-O motivo da rejeição aparece em destaque no topo. O solicitante pode editar os campos e reenviar para nova rodada de aprovação.
+O motivo da rejeição aparece em destaque no topo, e também fica registrado na timeline do **histórico de aprovações**, com o nome de quem reprovou e a data. O solicitante pode editar os campos e reenviar para nova rodada de aprovação.
+
+> 📖 **Conceito · Uma única reprovação encerra o pedido — mesmo que a organização exija duas aprovações**
+>
+> A regra de "quantas aprovações são necessárias" (o quórum) vale **só para aprovar**. Para **reprovar, basta uma pessoa** — mesmo que já houvesse uma aprovação registrada. O reenvio, além disso, **exige uma alteração real** (trocar o comprovante já conta) e **reinicia as aprovações já dadas**. O detalhe completo, válido igualmente para pedidos de pagamento e reembolsos, está em [Reembolsos → Rejeitado](/modulos/reembolsos/#rejeitado).
 
 ### Aprovado, aguardando pagamento
 

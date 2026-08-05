@@ -100,12 +100,28 @@ Clique em qualquer linha para abrir o detalhe completo. A página tem todas as i
 >
 > A timeline de aprovações é mais que registro contábil. É **proteção institucional**: meses depois, se alguém questionar "quem aprovou esse reembolso de R$ 800 do diretor?", a resposta está lá — quem votou, em qual data, com qual comentário. Em OSC com mudança rotativa de diretoria (eleição anual, troca de tesoureiro), esse registro é a diferença entre passagem de bastão tranquila e arenas de acusação.
 
-### Rejeitado
+### Rejeitado {#rejeitado}
 
 [![Reembolso rejeitado](/assets/screenshots/manual-06b-reembolso-rejeitado.png)](/assets/screenshots/manual-06b-reembolso-rejeitado.png)
 *Detalhe de reembolso rejeitado*
 
-O motivo da rejeição aparece em destaque no topo da página. O solicitante (e somente o solicitante) vê o botão **Editar e reenviar** — clicando, os campos passam a ser editáveis na própria página, sem precisar criar um reembolso novo. Corrige o que foi apontado (valor errado, comprovante ausente, categoria trocada), reenvia, e o fluxo recomeça.
+O motivo da rejeição aparece em destaque no topo da página, e também fica registrado na timeline do **histórico de aprovações**, com o nome de quem reprovou e a data. O solicitante (e somente o solicitante) vê o botão **Editar e reenviar** — clicando, os campos passam a ser editáveis na própria página, sem precisar criar um reembolso novo. Corrige o que foi apontado (valor errado, comprovante ausente, categoria trocada), reenvia, e o fluxo recomeça.
+
+> 📖 **Conceito · Uma única reprovação encerra o pedido — mesmo que a organização exija duas aprovações**
+>
+> A regra de "quantas aprovações são necessárias" (o quórum, configurado em [Fluxo de Aprovações](/configuracoes/aprovacoes/)) vale **só para aprovar**. Para **reprovar, basta uma pessoa**. Assim que qualquer aprovador elegível reprova — o motivo é obrigatório — o reembolso passa a **Rejeitado** na hora, e os demais aprovadores não podem mais votar naquele pedido. Isso vale mesmo quando já havia uma aprovação registrada: uma aprovação seguida de uma reprovação resulta em reembolso reprovado.
+>
+> Isso é uma **decisão de produto**, não uma limitação: liberar dinheiro da OSC exige o acordo de mais de uma pessoa, mas **qualquer aprovador pode barrar sozinho** — é o papel de quem fiscaliza. Um "sim" precisa de consenso entre os aprovadores; um "não" não precisa.
+>
+> Válido tanto para **Reembolsos** quanto para **Pedidos de Pagamento** — os dois fluxos seguem a mesma regra.
+
+> ⚠️ **Atenção · Reenviar exige mudar algo de verdade**
+>
+> Reenviar sem alterar nada é recusado, com a mensagem **"Nenhuma alteração detectada. Corrija a solicitação antes de reenviar."** — assim o mesmo pedido não volta para a fila de aprovação repetidamente sem que nada tenha sido corrigido. Conta como alteração: valor, descrição, data da despesa, categoria, projeto, centro de custo, dados de pagamento, observações — **e também incluir ou remover um comprovante**. Na prática, esse costuma ser o único ajuste necessário: quando o motivo da rejeição foi "faltou a nota fiscal", basta anexar o comprovante e reenviar — já é alteração suficiente.
+
+> ⚠️ **Atenção · O reenvio reinicia as aprovações**
+>
+> Ao reenviar, o histórico de votos deste pedido **recomeça do zero** — mesmo quem já tinha aprovado antes da rejeição precisa aprovar de novo. Não é óbvio à primeira vista, mas segue a mesma lógica: cada rodada de aprovação avalia a versão atual do pedido, e a versão mudou.
 
 > ⚠️ **Atenção · Rejeição não é punição**
 >

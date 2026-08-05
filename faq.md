@@ -140,9 +140,21 @@ Sim. No campo de saldo do banco, use o sinal de **"−"** para informar um valor
 
 ## Reembolsos e Pedidos de Pagamento
 
-### Meu reembolso foi rejeitado. Posso reenviar?
+### Meu pedido foi reprovado. E agora?
 
-Sim. Abra o detalhe do reembolso rejeitado, clique em **Editar e reenviar**, corrija o que foi apontado pelo aprovador (motivo da rejeição aparece em destaque) e envie de novo. Não é preciso criar um reembolso novo — o mesmo volta para o fluxo de aprovação.
+Não é o fim: abra o detalhe do reembolso ou pedido de pagamento rejeitado (o motivo aparece em destaque no topo, com quem reprovou e quando) e clique em **Editar e reenviar** — só o solicitante vê esse botão. Os campos passam a ser editáveis na própria página; corrija o que foi apontado (comprovante ilegível, valor errado, categoria trocada) e envie de novo. Não é preciso criar uma solicitação nova, e o fluxo de aprovação recomeça a partir do reenvio. Veja o detalhe completo em [Reembolsos → Rejeitado](/modulos/reembolsos/#rejeitado).
+
+### Por que uma única reprovação encerra meu pedido, se a OSC exige duas aprovações?
+
+Porque a regra de quantas aprovações são necessárias (o quórum) vale **só para aprovar**. Para **reprovar, basta uma pessoa** — mesmo que já houvesse uma aprovação registrada antes. É decisão de produto: soltar dinheiro da OSC exige o acordo de mais de uma pessoa, mas qualquer aprovador elegível pode barrar sozinho, porque é esse o papel de quem fiscaliza. Assim que alguém reprova, o pedido vira **Rejeitado** e os demais aprovadores não podem mais votar naquele pedido.
+
+### Por que não consigo reenviar meu pedido rejeitado?
+
+Porque reenviar **exige corrigir algo de verdade**. Se você clicar em reenviar sem alterar nenhum campo, o RIT360 Financeiro recusa com a mensagem "Nenhuma alteração detectada. Corrija a solicitação antes de reenviar." — isso evita que o mesmo pedido volte para a fila de aprovação sem que nada tenha sido corrigido. Contam como alteração: valor, descrição, data da despesa, categoria, projeto, centro de custo, dados de pagamento, observações, e também **incluir ou remover um comprovante**. Se o motivo da rejeição foi "faltou a nota fiscal", basta anexar o comprovante — já é alteração suficiente para reenviar.
+
+### Eu já tinha aprovado esse pedido antes. Por que preciso aprovar de novo?
+
+Porque o reenvio **reinicia a contagem de aprovações**. Quando alguém reprova e o solicitante corrige e reenvia, o histórico de votos daquele pedido recomeça do zero — mesmo quem já tinha aprovado a versão anterior precisa votar de novo na versão corrigida. Não é intuitivo, mas a lógica é consistente: cada rodada de aprovação avalia a versão atual do pedido, e o pedido mudou.
 
 ### O que acontece quando um reembolso é aprovado?
 
