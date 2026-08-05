@@ -109,11 +109,21 @@ A barra de navegação no topo é o seu mapa:
 - **Seletor de organização** — alterna entre OSCs em que você é membro
 - **Botão Superadmin** — só visível para administradores de plataforma RIT
 - **⚙️ Engrenagem** — atalho para **Configurações da organização**, **só visível para admin e tesoureiro**
-- **Avatar do usuário** — menu com **Meu perfil**, **Rever tutorial** (reabre o [tour de boas-vindas](#tour-de-boas-vindas)) e **Sair**
+- **Avatar do usuário** — menu com **Meu perfil**, **Novidades**, **Rever tutorial** (reabre o [tour de boas-vindas](#tour-de-boas-vindas)) e **Sair**
 
 > 📖 **Conceito · Perfil x Configurações**
 >
 > Há uma distinção importante: **Perfil é seu** (dados pessoais, foto, dados para reembolso, preferências de notificação) — acessado pelo menu do avatar, na rota `/perfil`, disponível a qualquer usuário. **Configurações é da organização** (usuários, contas bancárias, categorias, fluxo de aprovações, integrações) — acessado pelo ícone de engrenagem, restrito a admin e tesoureiro. Não há confusão entre os dois.
+
+## Como saber quando há novidades
+
+O RIT360 Financeiro avisa quando o sistema ganhou algo novo, sem atrapalhar o seu trabalho.
+
+- **Onde encontrar as novidades, sempre:** o número da versão, no rodapé de qualquer tela, é um link que leva direto para a página de **Novidades**. O mesmo destino também está no menu do avatar (item **Novidades**) e, no celular, no menu **Mais**.
+- **Um sinal discreto quando há algo novo:** se o sistema foi atualizado desde a última vez que você olhou as Novidades, aparece um pontinho discreto junto do menu do avatar e do número da versão. Ele não interrompe nada — some assim que você abre a página de Novidades, e só volta a aparecer quando sair uma versão mais nova.
+- **Um aviso maior, só quando vale a pena:** quando uma atualização muda de fato a forma de usar o sistema — uma tela reorganizada, um módulo novo, algo que passa a exigir ativação — aparece uma única janela, com um resumo curto e um link para a página de Novidades. Ela aparece uma vez e não volta a incomodar. Atualizações comuns e correções de bug não abrem essa janela, só o pontinho discreto.
+- Quem está **entrando pela primeira vez** não vê nada disso acumulado — não existe novidade "atrasada" para quem acabou de chegar.
+- O aviso funciona **do mesmo jeito para todo mundo**, independentemente do seu papel na organização.
 
 ## Seu roteiro recomendado nos primeiros 30 minutos
 
@@ -140,5 +150,5 @@ Um usuário pode acumular mais de um papel na mesma OSC (ver [Múltiplos papéis
 
 - **Botão Feedback** dentro do RIT360 Financeiro — envia mensagem direto para a equipe RIT
 - **Este manual em `docs.financeiro.rit360.org.br`** — sempre tem a versão mais recente
-- **Novidades** ([novidades](/changelog/)) — para saber o que foi adicionado em cada versão
+- **Novidades** ([novidades](/changelog/)) — para saber o que foi adicionado em cada versão; sempre acessível pelo número da versão no rodapé ou pelo menu do avatar
 - **E-mail dpo@rit.org.br** — para questões de privacidade ou LGPD

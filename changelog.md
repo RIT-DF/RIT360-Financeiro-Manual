@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.24.0] — 2026-08-05
+
+### Adicionado
+
+- **Novidades da versão.** O número da versão no rodapé agora leva direto para esta página de Novidades, e ela também aparece no menu do usuário (e no "Mais", no celular). Quando existir uma versão publicada que você ainda não viu, um pequeno sinal discreto indica isso — sem interromper o que você está fazendo. De vez em quando, uma novidade mais importante (que muda algo na sua rotina) aparece também num aviso único, que some depois de você ler.
+
+---
+
 ## [1.23.3] — 2026-08-05
 
 ### Corrigido

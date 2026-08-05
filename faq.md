@@ -50,6 +50,14 @@ Voluntários não têm acesso a Movimentações (lançamentos detalhados da OSC)
 
 Quando você é o único aprovador elegível para o seu próprio reembolso ou pedido (caso comum em OSC pequena onde o presidente é o único aprovador e também é o solicitante), o RIT360 Financeiro **permite a auto-aprovação** para não travar o fluxo, mas marca explicitamente no audit log. Conforme a OSC ganha mais aprovadores cadastrados, auto-aprovações naturalmente diminuem.
 
+### Apareceu um ponto ao lado do meu nome (ou perto do número da versão). O que é isso?
+
+É o aviso discreto de que o sistema foi atualizado desde a última vez que você olhou as [Novidades](/changelog/). Não interrompe nada: basta abrir a página de Novidades — pelo número da versão no rodapé ou pelo menu do avatar (no celular, menu **Mais**) — e o ponto some. Ele só volta a aparecer quando sair uma versão mais nova.
+
+### Vi um aviso de novidades e fechei sem ler. Como recupero?
+
+Sem problema. A página de **Novidades** fica sempre acessível, a qualquer momento: pelo número da versão no rodapé de qualquer tela, ou pelo menu do avatar (no celular, menu **Mais**). Ela reúne o histórico completo, não só o que apareceu na janela de aviso.
+
 ## Movimentações
 
 ### O sistema registrou minha despesa com data errada. Posso corrigir?
