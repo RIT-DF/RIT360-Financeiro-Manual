@@ -37,6 +37,8 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ## [1.23.0] — 2026-08-04
 
+<!-- destaque: O Painel foi reorganizado: contas e resumo do mês no topo, gráfico de fluxo de caixa dos últimos 6 meses, pendências em três colunas e os pontos de atenção fechando a tela. -->
+
 ### Modificado
 
 - **O Painel foi reorganizado para contar a história do mês em ordem, de cima para baixo.** Nenhuma informação foi adicionada ou removida — a mudança é só de organização e apresentação.
