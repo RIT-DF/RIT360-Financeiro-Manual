@@ -11,6 +11,30 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.24.4] — 2026-08-05
+
+### Corrigido
+
+- **Não era possível anexar ou remover comprovante num reembolso ou pedido de pagamento rejeitado.** Ao tentar incluir um documento novo (a correção mais comum depois de uma reprovação — "faltou a nota fiscal") ou remover um existente durante o reenvio, a alteração não era salva, e o sistema ainda avisava "nenhuma alteração detectada", mesmo a pessoa tendo acabado de mexer no anexo. Corrigido — anexar ou remover comprovante agora funciona nos dois tipos de pedido, e já conta como alteração suficiente para reenviar. Se a gravação do anexo falhar por qualquer outro motivo, a pessoa agora vê um aviso claro em vez de a falha passar despercebida.
+
+---
+
+## [1.24.3] — 2026-08-05
+
+### Corrigido
+
+- **Reembolso reprovado podia ser reenviado sem nenhuma correção.** Bastava reabrir "Editar e reenviar" e enviar de novo, sem mudar nada, para o pedido voltar a aguardar aprovação — o que fazia os aprovadores votarem de novo à toa. Corrigido: agora o reenvio só é aceito se algo realmente mudou (incluindo troca de comprovante); sem alteração, aparece a mensagem "Nenhuma alteração detectada. Corrija a solicitação antes de reenviar." e o pedido continua rejeitado. Pedido de pagamento passou a ter a mesma verificação, que nunca tinha existido nele.
+
+---
+
+## [1.24.2] — 2026-08-05
+
+### Corrigido
+
+- **Reembolso rejeitado não podia ser corrigido e reenviado.** A tela oferecia "Editar e reenviar", o formulário abria e aceitava alterações, mas ao enviar aparecia apenas "Falha ao reenviar.", e o pedido ficava travado nesse estado sem saída pela interface. Corrigido — reembolso rejeitado agora pode ser editado e reenviado normalmente, igual ao que já acontecia com pedido de pagamento. Mensagens de falha no reenvio também ficaram mais específicas, em vez do aviso genérico anterior.
+
+---
+
 ## [1.24.1] — 2026-08-05
 
 ### Corrigido
