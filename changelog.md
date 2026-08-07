@@ -11,6 +11,22 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.24.6] — 2026-08-07
+
+### Corrigido
+
+- **Ajuste fino na correção anterior: desativar temporariamente uma pessoa não apaga mais suas atribuições.** A correção da versão anterior também removia a gestão de centro de custo e a designação de aprovador quando alguém era desativado — uma ação pensada para ser reversível ("Desativar" tem "Reativar" ao lado). Corrigido: agora essas atribuições só são removidas quando o vínculo da pessoa com a organização é encerrado de forma definitiva (saída, reprovação de acesso), nunca numa desativação temporária. Nenhuma organização tinha sido afetada por esse comportamento até aqui.
+
+---
+
+## [1.24.5] — 2026-08-07
+
+### Corrigido
+
+- **Centro de custo travava quando o gestor saía da organização e era recadastrado.** Ao encerrar o vínculo de um gestor de centro de custo e cadastrar a pessoa novamente com outro e-mail, o centro de custo ficava com um gestor "fantasma": a lista mostrava apenas "Usuário" no lugar do nome, o formulário de edição indicava "1 selecionado" sem mostrar quem era nem permitir desmarcar, e salvar sempre resultava em "Erro ao salvar" — sem saída pela interface. Corrigido: essas atribuições fantasmas foram limpas nas organizações afetadas, e a plataforma agora remove automaticamente a gestão de centro de custo (e a designação de aprovador nomeado) sempre que o vínculo de alguém com a organização é encerrado em definitivo, evitando que o problema volte a acontecer. A mesma situação foi corrigida também para aprovadores nomeados individualmente nas configurações de aprovação.
+
+---
+
 ## [1.24.4] — 2026-08-05
 
 ### Corrigido
