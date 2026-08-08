@@ -237,6 +237,14 @@ Contas podem ser **desativadas** por um administrador (em Configurações → Co
 
 Em **Configurações → Categorias**, clique em **Aplicar template** e escolha um modelo próximo ao perfil da sua OSC (ex: "Padrão Grupo Escoteiro 2026"). O template traz categorias típicas pré-configuradas. Depois você ajusta o que não bater com sua realidade — renomeia, exclui, adiciona.
 
+### Cadastrei várias pessoas e metade nunca entrou. Como descubro quem são?
+
+Em **Configurações → Usuários**, quem ainda não concluiu o primeiro acesso aparece com o tempo de espera ("Aguardando há N dias"). Passados **14 dias** — quando os lembretes automáticos do sistema já se esgotaram — a pessoa ganha o selo **"Sem resposta"**, e um **resumo no topo da tela** mostra a contagem e filtra a lista só para essas pessoas com um clique. A partir daí você decide: reenviar o acesso, corrigir um e-mail digitado errado ou cancelar o acesso pendente. Ver [Configurações → Usuários](/configuracoes/usuarios/).
+
+### Preciso desativar (ou reenviar o acesso de) 30 pessoas. Tenho que fazer uma por uma?
+
+Não. Em **Configurações → Usuários** você marca várias pessoas na lista — ou usa **"Selecionar os N filtrados"** — e aplica a ação em lote. Como a seleção pode misturar situações diferentes, cada botão avisa a quantas pessoas a ação realmente se aplica, e ao final você vê o resultado **pessoa a pessoa**. Detalhe importante: se você interromper no meio, **quem já foi processado continua processado**. Ver [Configurações → Usuários](/configuracoes/usuarios/).
+
 ## Página pública (transparência)
 
 ### Publicar a página expõe dados das pessoas?

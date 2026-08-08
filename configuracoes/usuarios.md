@@ -105,6 +105,83 @@ Em cada importação com erros, você pode **baixar a planilha completa das linh
 >
 > O fluxo é igual ao convite individual: para cada e-mail novo, o RIT360 Financeiro envia link de setup por e-mail. O usuário define a própria senha ao clicar no link. Admin nunca digita nem vê a senha de outro membro.
 
+## Acompanhar quem ainda não entrou
+
+Cadastrar alguém é só metade do caminho: a pessoa só passa a existir de fato no sistema quando conclui o primeiro acesso e define a própria senha. Enquanto isso não acontece, o vínculo dela fica como **"Aguardando setup"** — e a lista te mostra **há quanto tempo**.
+
+[![Lista de usuários com o tempo de espera e o selo "Sem resposta"](/assets/screenshots/manual-config-usuarios-aguardando.png)](/assets/screenshots/manual-config-usuarios-aguardando.png)
+*Na coluna de atividade, quem ainda não entrou aparece como "Aguardando há N dias"; passados 14 dias, ganha o selo "Sem resposta" e a linha fica destacada*
+
+- Na coluna de **última atividade**, quem ainda não concluiu o acesso aparece como **"Aguardando desde hoje"**, **"Aguardando há 1 dia"** ou **"Aguardando há N dias"** — em vez do antigo "Nunca acessou", que não dizia nada sobre o tempo.
+- Passados **14 dias**, a pessoa ganha o selo vermelho **"Sem resposta"** e a linha (ou o cartão, no celular) fica **destacada** na lista.
+
+### O resumo no topo da tela
+
+Quando existe pelo menos uma pessoa nessa situação, aparece um **resumo no topo da página** com a contagem — por exemplo: *"7 pessoas sem responder ao convite há mais de 14 dias. Os lembretes automáticos já se esgotaram."* — e o botão **Ver quem está sem resposta**, que **filtra a lista** só para essas pessoas.
+
+[![Resumo no topo com a contagem de quem não respondeu](/assets/screenshots/manual-config-usuarios-resumo-sem-resposta.png)](/assets/screenshots/manual-config-usuarios-resumo-sem-resposta.png)
+*Resumo no topo — contagem clicável que filtra a lista para quem não respondeu*
+
+Com o filtro ligado, aparece a marca **"Filtro: sem resposta"** e o botão **Remover filtro** para voltar à lista completa.
+
+> 📖 **Conceito · Por que a régua é de 14 dias**
+>
+> O RIT360 Financeiro **cobra sozinho** quem foi cadastrado e não entrou: manda lembretes automáticos **2, 7 e 14 dias** depois do cadastro (o terceiro já avisa que é o último). Enquanto o sistema ainda está tentando, a pendência é **só informação** — não faz sentido te chamar para agir sobre algo que já está sendo resolvido. Passados os 14 dias, **o automático acabou**: dali em diante, ou o administrador age (reenvia, corrige o e-mail, cancela o acesso), ou aquela pessoa simplesmente nunca vai entrar. É por isso que o destaque e o resumo só aparecem depois desse prazo. Ver [Primeiros passos](/primeiros-passos/) e o [FAQ](/faq/) para o lado de quem recebe os lembretes.
+
+> ⚠️ **Atenção · O que conta é o acesso a *esta* organização**
+>
+> Uma pessoa pode já usar o RIT360 Financeiro **em outra OSC** e mesmo assim aparecer aqui como aguardando — porque ela ainda não concluiu o acesso **na sua**. A régua olha a situação do vínculo com a sua organização, não a última vez que a pessoa entrou no sistema em algum lugar. Se olhasse o último acesso global, quem já é usuário em outra OSC nunca apareceria como pendente, e a pendência passaria batida.
+
+## Agir sobre várias pessoas de uma vez
+
+Quando a pendência é de 1 pessoa, o menu de ações da linha resolve. Quando são 30, você precisa de lote — e é para isso que serve a **seleção múltipla**.
+
+1. **Marque as pessoas** na caixinha à esquerda de cada linha (ou de cada cartão, no celular). Para pegar todo mundo que está na tela, use **"Selecionar os N filtrados"**, logo acima da lista — o número é exatamente quantas pessoas o filtro atual mostra.
+2. Aparece uma **barra de ações no rodapé** com a contagem ("12 pessoas selecionadas") e os botões de ação.
+3. Escolha a ação, **confira o resumo** e confirme.
+
+[![Barra de ações em lote com seleção ativa](/assets/screenshots/manual-config-usuarios-lote-barra.png)](/assets/screenshots/manual-config-usuarios-lote-barra.png)
+*Barra de ações em lote — a contagem de selecionados e, em cada botão, a quantas pessoas aquela ação se aplica*
+
+### Ações disponíveis e a quem cada uma se aplica
+
+| Ação | Vale para quem está… |
+|---|---|
+| **Reenviar e-mail de acesso** | aguardando o primeiro acesso |
+| **Cancelar acesso pendente** | aguardando o primeiro acesso |
+| **Desativar** | ativo |
+| **Reativar** | inativo |
+| **Remover da organização** | ativo ou inativo |
+
+Como a seleção pode misturar situações, **cada botão mostra a quantas pessoas aquela ação realmente se aplica** — por exemplo, *"Reenviar e-mail de acesso (12 de 30)"*. Ação que não alcança ninguém da seleção fica desabilitada.
+
+Na confirmação, o sistema repete a conta (*"12 de 30 selecionados serão afetados"*) e **lista nominalmente quem será ignorado, com o motivo** de cada um. Para **Remover da organização**, é obrigatório escrever um **motivo**, que vale para todas as pessoas do lote e fica registrado.
+
+### Enquanto executa: progresso e interrupção
+
+A ação é aplicada **uma pessoa de cada vez**, com uma barra de **progresso** ("8 de 12 processados") e o botão **Interromper**.
+
+> ⚠️ **Atenção · Interromper não desfaz**
+>
+> A operação em lote **não é "tudo ou nada"**. Se você interromper no meio, **quem já foi processado continua processado** — os 8 primeiros seguem desativados, removidos ou reenviados, conforme a ação. Interromper só impede que o sistema continue dali para frente. Se interrompeu por engano, confira o resultado antes de refazer.
+
+### O resultado, pessoa a pessoa
+
+Ao terminar, a tela mostra o placar (**Concluído**, **Recusado por regra**, **Falhou**, **Não aplicado**) e a **lista nome a nome** com o que aconteceu em cada caso:
+
+- **Concluído** — deu certo.
+- **Recusado por regra** — o sistema barrou por uma regra de proteção. O caso clássico: **não é possível remover ou desativar o último administrador ativo** da organização.
+- **Falhou** — algo deu errado naquela pessoa (o motivo aparece ao lado). As demais seguiram normalmente.
+- **Não aplicado** — a pessoa estava na seleção mas fora da situação exigida, ou caiu no freio de reenvio (abaixo).
+
+> 💡 **A seleção some quando você troca o filtro ou a busca**
+>
+> De propósito. Se a seleção sobrevivesse à troca de filtro, você poderia confirmar uma ação sobre pessoas que **não estão mais na sua frente** — o jeito mais fácil de desativar quem não devia. Selecione, aja, e só então mude o filtro.
+
+> 💡 **Reenvio em lote tem um freio curto**
+>
+> Se você acabou de reenviar o acesso para alguém, um novo clique **poucos minutos depois** aparece como **"Enviado agora há pouco"** em vez de disparar outro e-mail. É proteção contra o clique repetido por ansiedade — e não consome as tentativas da própria pessoa pelo "Esqueci a senha", que continuam liberadas.
+
 ## Ações por membro
 
 Cada linha tem menu de ações que muda conforme o status:
@@ -119,6 +196,9 @@ Cada linha tem menu de ações que muda conforme o status:
 - **Reativar acesso** — restaura entrada de quem estava desativado
 - **Cancelar acesso pendente** — remove o acesso de quem ainda não concluiu o primeiro login
 - **Reenviar e-mail de acesso** — re-dispara o e-mail de acesso (útil quando o destinatário não recebeu ou o link expirou)
+- **Remover da organização** — encerra o vínculo da pessoa com a OSC (exige motivo). O histórico do que ela fez é preservado; ver "Desativar ≠ excluir" abaixo
+
+As mesmas ações estão disponíveis **em lote**, para várias pessoas de uma vez — ver a seção "Agir sobre várias pessoas de uma vez", acima.
 
 ## Alterar e-mail de acesso de outra pessoa
 
@@ -159,3 +239,4 @@ A lista mostra a foto de cada membro (configurada por cada um no Meu Perfil). Ca
 - **Configurações → Fluxo de Aprovações** — para definir quais papéis aprovam e quem é aprovador individual.
 - **Configurações → Organização** — para controlar o acesso público de vínculo.
 - **[Meu Perfil](/configuracoes/perfil/)** — troca de e-mail self-service, com confirmação por link; use quando a própria pessoa tem acesso ao e-mail atual.
+- **[Primeiros passos](/primeiros-passos/)** e **[FAQ](/faq/)** — como é o primeiro acesso do outro lado, os lembretes automáticos e o caminho do "Esqueci a senha" que a própria pessoa pode usar sem depender de você.

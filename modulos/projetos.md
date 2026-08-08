@@ -127,7 +127,7 @@ Projetos mudam durante a execução — troca a coordenação, a data escorrega,
 O Planejamento reúne cinco blocos:
 
 - **Escopo** — três campos em linguagem direta: **Objetivos** (o que o projeto quer alcançar), **Critérios de sucesso** (como saberemos que deu certo) e **O que NÃO faz parte** (para evitar mal-entendidos). Cada campo traz um exemplo.
-- **Equipe** — quem participa e em que papel. Você adiciona membros, muda papéis e remove. O sistema garante que o projeto sempre tenha **pelo menos um coordenador**. Quem deixou a organização continua listado, marcado como **ex-membro** (ver logo abaixo).
+- **Equipe** — quem participa e em que papel. Você adiciona membros, muda papéis e remove. O sistema garante que o projeto sempre tenha **pelo menos um coordenador**. Quem deixou a organização continua listado, marcado como **ex-membro**; quem apenas está com o acesso desativado aparece como **"Desativado"** (ver logo abaixo).
 - **Marcos** — as entregas/etapas com data prevista. Você pode marcar como atingido, reagendar e usar o **modelo de marcos** sugerido pelo tipo do projeto. Marcos pendentes que passam da data viram "perdidos" e alimentam a saúde do projeto.
 - **Riscos** — o que pode dar errado, com **Probabilidade** (Baixa/Média/Alta) e **Impacto** (Alto/Médio/Baixo). Quando os dois estão definidos, o risco mostra um selo de **severidade** (Probabilidade × Impacto), de Baixa a Alta — para você priorizar. Você pode marcar um risco como **materializado** ou **mitigado**.
 - **Partes interessadas (stakeholders)** — pessoas e organizações externas relevantes (financiador, parceiro, poder público) e o canal de contato.
@@ -143,6 +143,12 @@ Quando alguém deixa a organização, **ela não desaparece dos projetos de que 
 Essa participação passa a ser **só registro**: não dá mais para mudar o papel dela nem removê-la da equipe pela tela. E a pessoa **não aparece mais como opção** para novas atribuições — não é oferecida ao **adicionar gente à equipe**, ao escolher o **responsável por uma tarefa** nem na lista de **menções (`@`) do mural**.
 
 O histórico, porém, continua consultável: quem saiu **permanece no filtro de responsáveis** das tarefas, para você conseguir ver o que aquela pessoa tocou enquanto esteve no projeto.
+
+### E quem só está com o acesso desativado?
+
+É uma situação diferente, e a equipe agora **mostra a diferença**: quem continua vinculado à OSC mas está com o **acesso desativado** aparece com o selo **"Desativado"** ao lado do papel no projeto — não com o selo de ex-membro. Enquanto estiver assim, o papel dessa pessoa no projeto **não é editável pela tela**.
+
+A distinção importa na hora de entender por que alguém sumiu do projeto no dia a dia: **desativado** é reversível (basta reativar o acesso em Configurações → Usuários e a pessoa volta a atuar); **ex-membro** é definitivo — a pessoa saiu da organização e a participação virou só registro.
 
 > 💡 **Por que isso importa · Participação é registro histórico**
 >
@@ -273,6 +279,7 @@ Cada encerramento alimenta um **acervo de Lições Aprendidas** da OSC, acessív
 - **Ciclo de vida** — a sequência de status do projeto (Em planejamento → Aguardando aprovação → Em execução → Aguardando encerramento → Concluído; além de Pausado e Cancelado).
 - **Coordenador do projeto** — papel no projeto que conduz o planejamento, as tarefas e as solicitações financeiras.
 - **Ex-membro da organização** — pessoa que saiu da OSC e permanece na equipe do projeto apenas como registro histórico: não recebe novas atribuições e não pode ser editada nem removida da equipe.
+- **Desativado** — pessoa que continua vinculada à OSC, mas com o acesso suspenso. Aparece na equipe com esse selo; volta a atuar assim que o acesso é reativado.
 - **Saúde** — semáforo (Saudável/Atenção/Crítico) que resume Prazo, Orçamento e Riscos.
 - **Marco** — entrega ou etapa com data prevista.
 - **Severidade do risco** — Probabilidade × Impacto, para priorizar riscos.

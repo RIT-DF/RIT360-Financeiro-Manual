@@ -11,6 +11,31 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.26.2] a [1.26.4] — 2026-08-08
+
+### Corrigido
+
+- **Manutenção interna dos arquivos sem uso e das rotinas automáticas.** A rotina que remove arquivos que ficaram no armazenamento sem nenhum registro associado voltou a funcionar de fato — e passou a reconhecer corretamente os documentos que devem ser preservados, como o relatório de encerramento de projeto. As rotinas automáticas também deixaram de relatar sucesso quando não conseguem concluir o trabalho: agora informam claramente o que falhou. Sem efeito visível no uso do dia a dia.
+
+---
+
+## [1.26.1] — 2026-08-08
+
+### Corrigido
+
+- **Quem já usa o sistema em outra organização voltou a aparecer como acesso pendente onde ainda não entrou.** Na tela de Usuários, quem tinha acesso concluído em uma organização deixava de ser mostrado como pendente em outra organização onde o primeiro acesso ainda não havia sido concluído — o administrador dessa segunda organização não via a pendência, mesmo com a pessoa recebendo normalmente os lembretes por e-mail. Corrigido: a pendência agora é sempre a da organização que está sendo vista.
+
+---
+
+## [1.26.0] — 2026-08-08
+
+### Adicionado
+
+- **A tela de Usuários mostra quem está aguardando o primeiro acesso e há quanto tempo.** Cada pessoa que ainda não criou a senha aparece com o tempo de espera ("aguardando há N dias"). Passados 14 dias — quando os lembretes automáticos já se esgotaram e só o administrador pode resolver —, a pessoa ganha um destaque de "sem resposta". No topo da tela, um resumo clicável leva direto para a lista de quem está nessa situação.
+- **Ações em lote na tela de Usuários.** É possível selecionar várias pessoas (ou todas as que estão no filtro atual) e aplicar de uma vez: reenviar o acesso, cancelar um acesso pendente, desativar, reativar ou remover da organização. Cada ação só vale para quem está na situação compatível — antes de confirmar, o sistema informa quantas pessoas serão afetadas e quantas serão ignoradas, e por quê. Durante a execução aparece o andamento ("12 de 52"), com a opção de interromper, e ao final um resumo pessoa a pessoa separando o que deu certo, o que foi recusado por regra e o que falhou. Reenviar o acesso em lote não consome o limite de "Esqueci a senha" da própria pessoa.
+
+---
+
 ## [1.25.5] — 2026-08-07
 
 ### Modificado

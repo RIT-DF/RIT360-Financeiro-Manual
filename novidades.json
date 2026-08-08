@@ -1,6 +1,22 @@
 {
   "versoes": [
     {
+      "versao": "1.26.4",
+      "data": "2026-08-08",
+      "destaque": false,
+      "versao_inicial": "1.26.2"
+    },
+    {
+      "versao": "1.26.1",
+      "data": "2026-08-08",
+      "destaque": false
+    },
+    {
+      "versao": "1.26.0",
+      "data": "2026-08-08",
+      "destaque": false
+    },
+    {
       "versao": "1.25.5",
       "data": "2026-08-07",
       "destaque": false
