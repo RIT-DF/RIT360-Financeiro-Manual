@@ -11,6 +11,15 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.26.5] — 2026-08-08
+
+### Corrigido
+
+- **O tempo de espera de quem foi readicionado à organização passou a contar do momento certo.** Quando alguém é removido e depois readicionado, o sistema reaproveita o registro anterior para preservar o histórico — mas a tela de Usuários e os lembretes automáticos ainda contavam o tempo de espera a partir da entrada original, e não do momento em que a nova pendência começou. Na tela, a pessoa readicionada hoje podia aparecer como "aguardando há vários dias" e até receber o destaque de "sem resposta" logo de cara, acusando-a de ignorar lembretes que nunca haviam sido enviados. Nos lembretes, o efeito era mais sério: um registro antigo readicionado hoje era lido como pendência anterior à criação da régua e ficava **fora de toda a série de lembretes** — a pessoa não receberia nenhum. Agora a contagem começa quando a pendência começa, nos dois lugares.
+- **Quem está apenas desativado voltou a poder ser gerenciado na equipe do projeto.** A identificação de membro desativado na equipe de projeto tinha vindo no mesmo formato de quem já saiu da organização, o que também removia o seletor de papel e o botão de remover. Só que desativar é reversível: agora o membro desativado aparece identificado como tal **e** mantém os controles de gerenciamento. Quem saiu da organização continua apenas identificado, sem controles.
+
+---
+
 ## [1.26.2] a [1.26.4] — 2026-08-08
 
 ### Corrigido
