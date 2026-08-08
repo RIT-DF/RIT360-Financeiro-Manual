@@ -12,17 +12,26 @@ Respostas para dúvidas comuns. Se a sua pergunta não está aqui, use o botão 
 
 Quando o administrador da sua organização adiciona você, **sua conta já é criada** — não existe uma etapa de "aceitar convite". Você recebe um e-mail para **definir sua senha** (o link vale por 7 dias) e, a partir daí, entra normalmente. Se preferir, pode entrar direto com **Continuar com Google**, desde que use o mesmo e-mail com que foi cadastrado.
 
-Se o e-mail não chegou, confira a caixa de spam/lixo eletrônico primeiro — ele sai de um domínio institucional e às vezes cai lá. O administrador pode reenviá-lo em **Configurações → Usuários → ações da sua linha → Reenviar e-mail**.
+Se o e-mail não chegou, confira a caixa de spam/lixo eletrônico primeiro — ele sai de um domínio institucional e às vezes cai lá.
 
-### Esqueci minha senha. Como redefino?
+Você não depende de ninguém para se desbloquear: na tela de login, clique em **Esqueci a senha** e informe o e-mail com que foi cadastrado. Como você ainda não concluiu o primeiro acesso, o sistema envia um **novo link de primeiro acesso** (não um link de redefinição de senha). Se preferir, o administrador também pode reenviá-lo em **Configurações → Usuários → ações da sua linha → Reenviar e-mail**.
 
-Na tela de login, clique em **Esqueci a senha**, informe o e-mail da sua conta e clique em **Enviar link de redefinição**.
+Outra saída, se você tem conta Google no mesmo e-mail: clique em **Continuar com Google** na tela de login. O acesso à organização é concluído na hora, sem precisar do link.
+
+### Esqueci minha senha (ou nunca cheguei a criar uma). Como faço?
+
+Na tela de login, clique em **Esqueci a senha**, informe o e-mail da sua conta e clique em **Enviar link para entrar**.
 
 [![Tela de recuperação de senha](/assets/screenshots/manual-recuperar-senha.png)](/assets/screenshots/manual-recuperar-senha.png)
 
-Você receberá um e-mail com um link para definir uma nova senha. O link **vale por 1 hora e só pode ser usado uma vez**. Ao definir a nova senha, você volta para a tela de login e entra com ela.
+Essa opção resolve os **dois** casos, e o sistema identifica sozinho qual é o seu:
 
-Por segurança, a confirmação na tela é sempre a mesma, exista ou não uma conta para aquele e-mail (não revelamos quais e-mails têm cadastro). Se não receber, confira a caixa de spam. Se você cadastrou via Google no primeiro acesso, use **Continuar com Google** em vez de senha — contas só-Google não têm senha para redefinir.
+- **Você já usa o sistema e esqueceu a senha** → chega um link para definir uma nova senha. Ele **vale por 1 hora e só pode ser usado uma vez**. Ao definir a nova senha, você volta para a tela de login e entra com ela.
+- **Você foi cadastrado por um administrador e nunca criou senha** → chega um **novo link de primeiro acesso** (vale por 7 dias), para concluir o cadastro.
+
+Por segurança, a confirmação na tela é sempre a mesma, exista ou não uma conta para aquele e-mail (não revelamos quais e-mails têm cadastro). Por isso o e-mail que chega pode ser de um tipo ou de outro — basta seguir o que ele pede. Se não receber, confira a caixa de spam; há um limite de **3 pedidos por hora** para o mesmo e-mail, então evite clicar várias vezes seguidas.
+
+Se você cadastrou via Google no primeiro acesso, use **Continuar com Google** em vez de senha — contas só-Google não têm senha para redefinir.
 
 ### Posso usar o mesmo e-mail em mais de uma organização?
 

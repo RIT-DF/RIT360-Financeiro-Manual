@@ -36,7 +36,15 @@ A entrada no RIT360 Financeiro é **controlada pela organização**, não por ca
 4. Leia e aceite a **Política de Privacidade** e os **Termos de Uso** (ambos disponíveis em `docs.financeiro.rit360.org.br`).
 5. Clique em **Concluir**.
 
-Após o primeiro acesso, você cai direto no **Painel** da sua organização.
+Após o primeiro acesso, você cai direto no **Painel** da sua organização, já com a OSC selecionada no topo da tela.
+
+> 💡 **Atalho · entrar direto com o Google**
+>
+> Se você tem conta Google **no mesmo e-mail com que foi cadastrado**, não precisa do link: basta clicar em **Continuar com Google** na tela de login. Seu acesso à organização é concluído na hora — o e-mail foi indicado pelo administrador e o Google comprova que ele é seu. O aceite da Política de Privacidade e dos Termos de Uso continua sendo pedido normalmente.
+
+> 🔑 **Perdeu ou não recebeu o e-mail de acesso?**
+>
+> Você não precisa pedir a ninguém. Na tela de login, clique em **Esqueci a senha** e informe o e-mail com que foi cadastrado: o sistema reconhece que o seu primeiro acesso ainda não foi concluído e envia um **novo link de primeiro acesso**. E, se você entrar no sistema antes de concluir esse passo, aparece uma tela explicando a situação, com um botão para receber o link novamente.
 
 ## Criar conta por conta própria
 
@@ -54,9 +62,9 @@ Além desse caminho, é possível iniciar uma conta por conta própria pelo link
 
 Na tela de login você pode:
 
-- **Continuar com Google** — se cadastrou via Google no primeiro acesso (mais rápido, sem digitar senha)
+- **Continuar com Google** — mais rápido, sem digitar senha; serve tanto para quem já usa o sistema quanto para concluir o primeiro acesso, desde que seja o mesmo e-mail com que você foi cadastrado
 - **E-mail e senha** — credenciais definidas no primeiro acesso
-- **Esqueci a senha** — se esqueceu, clique aqui e siga as instruções por e-mail
+- **Esqueci a senha** — porta única para recuperar o acesso: informe o e-mail e você recebe o link certo para o seu caso — de **redefinição de senha**, se já usa o sistema, ou de **primeiro acesso**, se ainda não chegou a criar uma senha
 
 Acesse em: [financeiro.rit360.org.br](https://financeiro.rit360.org.br){:target="_blank" rel="noopener noreferrer"}
 

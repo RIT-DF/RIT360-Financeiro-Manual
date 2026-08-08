@@ -11,6 +11,60 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.25.2] — 2026-08-07
+
+### Modificado
+
+- **Correção no acionamento das rotinas automáticas.** Ajuste interno na forma como o sistema dispara as rotinas que geram os avisos de orçamento e a limpeza de arquivos sem uso. Sem efeito visível no uso do dia a dia.
+
+---
+
+## [1.25.1] — 2026-08-07
+
+### Modificado
+
+- **Ajuste no primeiro disparo dos lembretes de acesso pendente.** Refinamento de alcance do aviso para quem já estava com o acesso pendente antes de a funcionalidade existir. Sem efeito visível no uso do dia a dia.
+
+---
+
+## [1.25.0] — 2026-08-07
+
+### Adicionado
+
+- **Lembrete automático de acesso pendente.** Quem é cadastrado por um administrador e ainda não criou a senha passa a receber lembretes automáticos por e-mail, sempre com um link novo e válido: 2, 7 e 14 dias depois do cadastro. São três no total — o último avisa que é o último e lembra que a pessoa sempre pode pedir um novo acesso sozinha, pela opção "Esqueci a senha" na tela de login. Ninguém recebe mais de um lembrete por dia, mesmo participando de várias organizações, e quem já concluiu o acesso deixa de receber.
+
+---
+
+## [1.24.9] a [1.24.10] — 2026-08-07
+
+### Corrigido
+
+- **Ajustes finais no novo caminho de entrada.** Quem entrava pelo Google usando um link de acesso já aberto antes podia ver "Link inválido" mesmo estando com o acesso concluído — e, na segunda tentativa, entrava normalmente. Corrigido: quando o acesso já está concluído, o link antigo simplesmente deixa de atrapalhar e a pessoa segue direto para o sistema. Também corrigido o destino logo depois de concluir o acesso: em alguns casos a tela abria antes de a organização aparecer na barra do topo (mostrando "Sem OSC"), exigindo recarregar a página. Agora a organização já aparece de primeira, e o aceite da Política de Privacidade e dos Termos de Uso continua sendo pedido normalmente em todos os caminhos de entrada.
+
+---
+
+## [1.24.8] — 2026-08-07
+
+### Corrigido
+
+- **O aviso por e-mail de um novo feedback vinha com a mensagem cortada.** Mensagens mais longas eram interrompidas por reticências, sem indicação de que havia mais texto — quem lia o aviso podia responder sem conhecer o pedido inteiro. Corrigido: o e-mail agora traz a mensagem completa. A mensagem sempre esteve inteira na tela de feedbacks; o corte acontecia só no aviso por e-mail.
+
+---
+
+## [1.24.7] — 2026-08-07
+
+### Modificado
+
+- **"Esqueci a senha" passou a resolver também quem nunca criou uma senha.** Antes, quem tinha sido cadastrado por um administrador e perdeu (ou nunca recebeu) o e-mail de acesso não tinha como se desbloquear sozinho: precisava pedir a alguém da organização para reenviar o convite. Agora a mesma opção **Esqueci a senha**, na tela de login, resolve os dois casos — o sistema identifica a situação e envia o link certo: de redefinição de senha, para quem já tem acesso concluído, ou de primeiro acesso, para quem ainda não concluiu. Por segurança, a mensagem na tela é sempre a mesma, exista ou não uma conta para aquele e-mail.
+- **Entrar com o Google conclui o primeiro acesso na hora.** Quem foi cadastrado por um administrador e escolhe **Continuar com Google** com o mesmo e-mail já entra na organização, sem precisar do link do e-mail. O aceite da Política de Privacidade e dos Termos de Uso continua sendo pedido normalmente.
+- **A tela de login orienta quem ainda não criou senha.** Ao errar a senha, além do aviso comum, aparece a orientação de usar "Esqueci a senha" para receber o link de primeiro acesso — junto de um atalho para essa opção.
+
+### Corrigido
+
+- **Ninguém mais é levado para "criar uma organização" por engano.** Quem foi cadastrado por um administrador, entrou no sistema e ainda não concluiu o primeiro acesso via a tela de criação de organização, como se não pertencesse a nenhuma OSC — situação sem saída e confusa. Agora essa pessoa vê uma tela explicando o que falta, com um botão para receber um novo link de primeiro acesso no próprio e-mail. Vale também para quem já estava preso nessa situação.
+
+---
+
 ## [1.24.6] — 2026-08-07
 
 ### Corrigido
