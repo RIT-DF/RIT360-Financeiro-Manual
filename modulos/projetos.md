@@ -127,7 +127,7 @@ Projetos mudam durante a execução — troca a coordenação, a data escorrega,
 O Planejamento reúne cinco blocos:
 
 - **Escopo** — três campos em linguagem direta: **Objetivos** (o que o projeto quer alcançar), **Critérios de sucesso** (como saberemos que deu certo) e **O que NÃO faz parte** (para evitar mal-entendidos). Cada campo traz um exemplo.
-- **Equipe** — quem participa e em que papel. Você adiciona membros, muda papéis e remove. O sistema garante que o projeto sempre tenha **pelo menos um coordenador**.
+- **Equipe** — quem participa e em que papel. Você adiciona membros, muda papéis e remove. O sistema garante que o projeto sempre tenha **pelo menos um coordenador**. Quem deixou a organização continua listado, marcado como **ex-membro** (ver logo abaixo).
 - **Marcos** — as entregas/etapas com data prevista. Você pode marcar como atingido, reagendar e usar o **modelo de marcos** sugerido pelo tipo do projeto. Marcos pendentes que passam da data viram "perdidos" e alimentam a saúde do projeto.
 - **Riscos** — o que pode dar errado, com **Probabilidade** (Baixa/Média/Alta) e **Impacto** (Alto/Médio/Baixo). Quando os dois estão definidos, o risco mostra um selo de **severidade** (Probabilidade × Impacto), de Baixa a Alta — para você priorizar. Você pode marcar um risco como **materializado** ou **mitigado**.
 - **Partes interessadas (stakeholders)** — pessoas e organizações externas relevantes (financiador, parceiro, poder público) e o canal de contato.
@@ -135,6 +135,18 @@ O Planejamento reúne cinco blocos:
 > ✓ **Dica · Risco bom é risco escrito antes**
 >
 > O valor do bloco de riscos não está em prever o futuro — está em **combinar antecipadamente o que faremos se acontecer**. Um risco "Atraso na entrega do fornecedor — Probabilidade Média, Impacto Alto, mitigação: confirmar prazo por escrito e ter fornecedor reserva" vale mais do que dez reuniões de pânico depois que o fornecedor sumiu. Escreva os 3 ou 4 riscos óbvios logo no planejamento.
+
+### Quem saiu da organização continua na equipe
+
+Quando alguém deixa a organização, **ela não desaparece dos projetos de que participou**. O nome continua na equipe, com o papel que tinha no projeto, acompanhado do selo **"Ex-membro da organização"** — e o mesmo aviso aparece ao lado do nome na lista de **coordenadores**, no Resumo.
+
+Essa participação passa a ser **só registro**: não dá mais para mudar o papel dela nem removê-la da equipe pela tela. E a pessoa **não aparece mais como opção** para novas atribuições — não é oferecida ao **adicionar gente à equipe**, ao escolher o **responsável por uma tarefa** nem na lista de **menções (`@`) do mural**.
+
+O histórico, porém, continua consultável: quem saiu **permanece no filtro de responsáveis** das tarefas, para você conseguir ver o que aquela pessoa tocou enquanto esteve no projeto.
+
+> 💡 **Por que isso importa · Participação é registro histórico**
+>
+> Duas coisas diferentes se confundem quando alguém sai: o **acesso** (que deve cessar na hora — quem não é mais da OSC não deve poder entrar, coordenar nem receber tarefa) e o **registro** de que aquela pessoa trabalhou no projeto (que a OSC precisa guardar). Apagar o nome da equipe resolveria o primeiro problema criando um pior: tarefas e decisões órfãs, e uma prestação de contas que não consegue dizer quem fez o quê. Por isso o RIT360 Financeiro **corta o acesso e preserva o registro** — o selo "Ex-membro" é exatamente essa distinção aparecendo na tela.
 
 ## A aba Execução
 
@@ -260,6 +272,7 @@ Cada encerramento alimenta um **acervo de Lições Aprendidas** da OSC, acessív
 - **Tipo do projeto** — categoria que adapta a experiência (Evento ganha calculadora de taxa e participantes; cada tipo tem marcos-modelo).
 - **Ciclo de vida** — a sequência de status do projeto (Em planejamento → Aguardando aprovação → Em execução → Aguardando encerramento → Concluído; além de Pausado e Cancelado).
 - **Coordenador do projeto** — papel no projeto que conduz o planejamento, as tarefas e as solicitações financeiras.
+- **Ex-membro da organização** — pessoa que saiu da OSC e permanece na equipe do projeto apenas como registro histórico: não recebe novas atribuições e não pode ser editada nem removida da equipe.
 - **Saúde** — semáforo (Saudável/Atenção/Crítico) que resume Prazo, Orçamento e Riscos.
 - **Marco** — entrega ou etapa com data prevista.
 - **Severidade do risco** — Probabilidade × Impacto, para priorizar riscos.

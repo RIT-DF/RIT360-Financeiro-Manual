@@ -18,6 +18,8 @@ Você não depende de ninguém para se desbloquear: na tela de login, clique em 
 
 Outra saída, se você tem conta Google no mesmo e-mail: clique em **Continuar com Google** na tela de login. O acesso à organização é concluído na hora, sem precisar do link.
 
+Se mesmo assim você deixar para depois, o sistema **lembra sozinho**: chegam lembretes automáticos **2, 7 e 14 dias** após o cadastro (três no total, sendo o último anunciado como tal), cada um com um **link novo** — use sempre o mais recente.
+
 ### Esqueci minha senha (ou nunca cheguei a criar uma). Como faço?
 
 Na tela de login, clique em **Esqueci a senha**, informe o e-mail da sua conta e clique em **Enviar link para entrar**.

@@ -11,6 +11,30 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.25.5] — 2026-08-07
+
+### Modificado
+
+- **Quem sai da organização continua aparecendo na equipe dos projetos de que participou.** A participação em um projeto é registro histórico: quando a pessoa deixa a organização, ela permanece listada na equipe, agora identificada como **ex-membro**, com o nome dela no lugar do rótulo genérico "Usuário". Ex-membros não podem receber novas atribuições, mas o histórico de quem trabalhou no projeto não se perde — vale inclusive para quem saiu antes desta versão.
+
+---
+
+## [1.25.4] — 2026-08-07
+
+### Modificado
+
+- **Ajuste interno de segurança nas mudanças de situação de usuário.** Reforço na proteção que garante que a situação de um usuário na organização só possa ser alterada pelo caminho oficial do sistema. Sem efeito visível no uso do dia a dia.
+
+---
+
+## [1.25.3] — 2026-08-07
+
+### Corrigido
+
+- **Os avisos automáticos de orçamento voltaram a ser enviados.** A rotina que acompanha o consumo do orçamento anual e avisa por e-mail quando uma linha se aproxima ou ultrapassa o limite não estava chegando ao destinatário. Corrigido e comprovado ponta a ponta: o aviso é disparado, o e-mail chega e não se repete no mesmo mês para a mesma linha.
+
+---
+
 ## [1.25.2] — 2026-08-07
 
 ### Modificado

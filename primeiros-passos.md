@@ -44,7 +44,11 @@ Após o primeiro acesso, você cai direto no **Painel** da sua organização, j�
 
 > 🔑 **Perdeu ou não recebeu o e-mail de acesso?**
 >
-> Você não precisa pedir a ninguém. Na tela de login, clique em **Esqueci a senha** e informe o e-mail com que foi cadastrado: o sistema reconhece que o seu primeiro acesso ainda não foi concluído e envia um **novo link de primeiro acesso**. E, se você entrar no sistema antes de concluir esse passo, aparece uma tela explicando a situação, com um botão para receber o link novamente.
+> Você não precisa pedir a ninguém. Na tela de login, clique em **Esqueci a senha** e informe o e-mail com que foi cadastrado: o sistema reconhece que o seu primeiro acesso ainda não foi concluído e envia um **novo link de primeiro acesso**. E, se você entrar no sistema antes de concluir esse passo, aparece uma tela explicando a situação, com o botão para receber o link novamente.
+
+> ✉️ **O sistema também lembra você sozinho**
+>
+> Se você foi cadastrado e não concluiu o primeiro acesso, o RIT360 Financeiro envia **lembretes automáticos** — **2, 7 e 14 dias** depois do cadastro, três no total. Cada lembrete traz um **link novo e válido**, então basta usar o mais recente; o terceiro avisa que é o **último**. Depois disso ninguém fica te cobrando — mas o caminho do "Esqueci a senha" continua disponível a qualquer momento, e o administrador pode reenviar o e-mail quando você pedir.
 
 ## Criar conta por conta própria
 
