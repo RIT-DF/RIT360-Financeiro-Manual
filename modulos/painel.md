@@ -55,15 +55,17 @@ Uma linha por conta financeira da OSC (corrente, poupança, cartão, caixa inter
 
 Três cards rápidos com:
 
-- **Receitas** do mês — total de receitas com **vencimento** no mês atual (pagas ou ainda pendentes; lançamentos estornados não entram)
-- **Despesas** do mês — total de despesas com **vencimento** no mês atual (mesma regra)
+- **Receitas** do mês — total de receitas do mês atual, já recebidas ou ainda em aberto
+- **Despesas** do mês — total de despesas do mês atual, mesma regra
 - **Saldo do mês** — diferença entre as duas
 
 Útil para responder de relance: "como foi o mês até agora?"
 
 > ℹ️ **Observação**
 >
-> Este resumo considera o **mês inteiro** (do dia 1º ao último dia), pelo **vencimento** do lançamento — diferente das **contas** no bloco ao lado, que refletem só o que já foi efetivamente pago. Por isso os dois blocos podem mostrar números diferentes: um é a previsão do mês, o outro é o dinheiro em caixa.
+> Este resumo considera o **mês inteiro** (do dia 1º ao último dia) e usa o **mesmo critério de data das demais telas**: o que já foi **pago ou recebido** entra pelo mês do **pagamento**; o que ainda está **em aberto** entra pelo mês do **vencimento**. Ou seja, ele mistura de propósito o que já aconteceu com o que ainda vai acontecer no mês — mas cada lançamento é contado no mês certo. Por isso este bloco e as **contas** ao lado podem mostrar números diferentes: as contas refletem só o dinheiro que já entrou ou saiu; o resumo do mês inclui também o que ainda está previsto.
+>
+> Ficam **fora** da conta os lançamentos **cancelados** e o **par de estorno**: quando um lançamento é estornado, o sistema cria um lançamento contrário para anulá-lo — os dois somam zero e nenhum dos dois entra no resumo. São valores que não representam dinheiro que entrou ou saiu de fato.
 
 ## Bloco 2 · Fluxo de caixa
 

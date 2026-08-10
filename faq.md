@@ -95,11 +95,13 @@ Sim. A planilha de importação tem a coluna `centro_de_custo` (opcional). Se o 
 
 Sim. O RIT360 Financeiro **descompacta o ZIP automaticamente** e anexa cada arquivo de dentro como um anexo individual do lançamento — o pacote dá lugar aos arquivos, que passam a aparecer na pré-visualização e a entrar na prestação de contas. Vale também quando o comprovante chega por **link** na importação por CSV. Arquivos que não dá para exibir num PDF (planilhas, textos) ficam anexados, mas não aparecem no corpo do relatório.
 
-### Por que o valor em Movimentações é diferente do que aparece no Relatório?
+### Em que mês cada lançamento entra, em Movimentações e nos Relatórios?
 
-Porque as duas telas recortam o período por datas diferentes — e isso é intencional. **Movimentações** filtra pela **data de vencimento**; **Relatórios** apura pela **data de pagamento**.
+Pela **data em que o dinheiro se moveu**. As duas telas usam o mesmo critério: o que já foi **pago ou recebido** entra pelo mês do **pagamento**; o que ainda está **em aberto** (pendente ou atrasado) entra pelo mês do **vencimento**. Por isso o **Realizado** de Movimentações e os totais dos Relatórios **batem** para o mesmo período. (Os Relatórios continuam olhando só o dinheiro que circulou; o que está em aberto aparece em Movimentações, na coluna Previsto.)
 
-Exemplo: uma conta que **vence em 30 de junho** e é **paga em 2 de julho** aparece em **junho** em Movimentações e conta em **julho** nos Relatórios. Nenhum dos dois está errado — eles respondem a perguntas diferentes. Movimentações mostra *o que está no período que você está operando* (o que vence, o que precisa da sua ação). Relatórios mostra *o dinheiro que de fato circulou*, que é o critério da prestação de contas em regime de caixa. A própria tela de Movimentações traz um aviso sobre isso logo abaixo do resumo.
+Exemplo: uma conta que **vence em 30 de junho** e é **paga em 2 de julho** aparece em **julho**, nas duas telas — foi em julho que o dinheiro saiu. Enquanto estivesse em aberto, apareceria em junho, pelo vencimento.
+
+Consequência prática: uma conta paga **com atraso** aparece no mês do pagamento, não no mês em que venceu — então um mês já conferido pode mudar depois, se alguma conta dele for quitada em atraso. É proposital: o RIT360 Financeiro trabalha em **regime de caixa**, e somar a junho um dinheiro que só saiu em julho distorceria o "Realizado" dos dois meses. A própria tela de Movimentações traz um aviso sobre o critério logo abaixo do resumo.
 
 ### O que significa "Previsto" no resumo de Movimentações?
 

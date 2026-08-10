@@ -73,11 +73,13 @@ O **Resultado** aparece **só na coluna Realizado**, e isso é proposital: resul
 >
 > **Planejar gasto em cima de receita que ainda não entrou é uma das formas mais comuns de uma organização pequena se enrolar.** O convênio atrasa dois meses, a doação prometida não se confirma, a venda do bazar rende menos que o previsto — e as despesas, essas, já foram assumidas. Separando as colunas, a leitura fica honesta: *isto eu tenho; aquilo eu espero*. Decisão de gasto se toma pela coluna **Realizado**; a coluna **Previsto** serve para você **se preparar** — cobrar quem deve, adiar o que dá para adiar, buscar caixa antes de precisar dele.
 
-> ⚠️ **Atenção · Esta tela recorta por vencimento; os Relatórios apuram por pagamento**
+> ⚠️ **Atenção · O período segue a data em que o dinheiro se moveu**
 >
-> O período de **Movimentações** filtra os lançamentos pela **data de vencimento**. Os **[Relatórios](/modulos/relatorios/)** apuram pela **data de pagamento**. Um exemplo concreto: uma conta que **vence em 30 de junho** e é **paga em 2 de julho** aparece em **junho** aqui, e conta em **julho** lá.
+> O período de **Movimentações** recorta os lançamentos pela **data em que o dinheiro se moveu**: o que já foi **pago ou recebido** entra pelo mês do **pagamento**; o que ainda está **em aberto** (pendente ou atrasado) entra pelo mês do **vencimento**. É o mesmo critério dos **[Relatórios](/modulos/relatorios/)**, que consideram o que foi pago pela data do pagamento — por isso o **Realizado** das duas telas agora **bate** para o mesmo período. (Os Relatórios continuam olhando só o dinheiro que circulou; o que está em aberto aparece aqui, na coluna Previsto.)
 >
-> **Isso não é erro** — a própria tela avisa disso numa nota abaixo do resumo. São perguntas diferentes: Movimentações responde *"o que está no período que estou operando?"* (o que vence, o que precisa da minha ação agora); Relatórios responde *"quanto dinheiro de fato circulou?"* (o que importa para prestação de contas em regime de caixa). Se você comparar os dois números esperando que batam, vai desconfiar do sistema à toa. Compare cada um com a pergunta que ele responde.
+> Um exemplo concreto: uma conta que **vence em 30 de junho** e é **paga em 2 de julho** aparece em **julho**, tanto aqui quanto nos Relatórios — porque foi em julho que o dinheiro saiu. Enquanto ela estivesse em aberto, apareceria em junho, pelo vencimento.
+>
+> **O que isso significa na prática:** uma conta paga com atraso aparece no mês do pagamento, não no mês em que venceu. Então um mês que você já conferiu pode mudar depois, se alguma conta dele for paga com atraso. É proposital: o RIT360 Financeiro trabalha em **regime de caixa**, e atribuir a junho um dinheiro que só saiu em julho distorceria o "Realizado" dos dois meses.
 
 ### Cores: vermelho é pedido de atenção
 

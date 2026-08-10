@@ -11,6 +11,24 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.27.1] — 2026-08-10
+
+### Corrigido
+
+- **O resumo do mês no Painel deixou de somar valores que não representam dinheiro que entrou ou saiu.** Lançamentos **cancelados** e o **par de estorno** (quando um lançamento é estornado, o sistema cria um lançamento contrário para anulá-lo — os dois somam zero) estavam sendo contados e inflavam o total: um resumo de mês podia exibir receita e despesa que não existiram. Agora esses valores ficam de fora.
+- **O resumo do mês passou a usar o mesmo critério de data das demais telas.** Um lançamento **já pago** entra pelo mês do **pagamento**; um lançamento **ainda em aberto** entra pelo mês do **vencimento**. O bloco continua mostrando o mês inteiro — o que já aconteceu e o que ainda vai acontecer —, mas cada lançamento é atribuído ao mês certo.
+
+---
+
+## [1.27.0] — 2026-08-10
+
+### Modificado
+
+- **O período da tela de Movimentações passou a seguir a data em que o dinheiro se moveu.** Antes, o recorte usava sempre a data de vencimento. Agora, um lançamento **já pago** entra pelo mês do **pagamento**; um lançamento **ainda em aberto** continua entrando pelo mês do **vencimento**. O motivo é que o sistema trabalha em regime de caixa: uma conta com vencimento em julho, paga em agosto, aparecia em julho — e era somada ao bloco "Realizado" de julho, atribuindo àquele mês um dinheiro que só saiu em agosto. Agora ela aparece em agosto, no mês em que o pagamento aconteceu. **O que você precisa saber:** um mês já conferido pode mudar se uma conta dele for paga com atraso — ela sai do mês de vencimento e passa para o mês do pagamento. Em compensação, os totais de Movimentações e os de Relatórios passam a bater para o mesmo período, o que antes não acontecia.
+- **As exportações em PDF e Excel passaram a informar, no cabeçalho, qual critério de período foi usado.**
+
+---
+
 ## [1.26.8] — 2026-08-10
 
 ### Corrigido
