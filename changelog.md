@@ -11,6 +11,33 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.26.8] — 2026-08-10
+
+### Corrigido
+
+- **Os cartões de resumo de Pedidos de pagamento e de Reembolsos voltaram a bater com a lista.** Os números do topo da tela contavam de um jeito e a lista mostrava de outro — dava para ver "1 aprovado aguardando pagamento" e, ao clicar, abrir uma lista vazia. Agora cada recorte usa a data do próprio evento que ele representa: o que foi **solicitado no período** conta pela data da solicitação, o que foi **pago no período** conta pela data do pagamento, e as filas de pendências mostram o total pendente, sem corte por período — com esse aviso no próprio cartão. O número do cartão é sempre igual à quantidade de itens da lista que ele abre.
+
+---
+
+## [1.26.7] — 2026-08-10
+
+### Corrigido
+
+- **Cancelar o último lançamento de um pedido de pagamento não deixa mais a solicitação presa.** Antes, o pedido continuava em "aprovado, aguardando pagamento", esperando um pagamento que não podia mais acontecer. Agora, quando o pedido (ou o reembolso) fica sem nenhum lançamento ativo, ele é encerrado junto — e nunca é encerrado se alguma parcela já tiver sido paga.
+- **A confirmação avisa antes de encerrar a solicitação inteira.** Ao cancelar o último lançamento ativo de um pedido ou de um reembolso, a tela informa que a solicitação será encerrada junto e que a ação não tem volta.
+- **Pedido sem lançamento ativo não oferece mais o botão de confirmar pagamento.** A ação não teria como funcionar; se a confirmação for tentada mesmo assim, a recusa vem com o motivo em texto legível.
+
+---
+
+## [1.26.6] — 2026-08-10
+
+### Corrigido
+
+- **Voltou a ser possível cancelar lançamento de pedido de pagamento ou de reembolso que ainda não tem conta financeira definida.** Nesses casos a conta só é escolhida na hora de pagar, mas a tentativa de cancelar falhava e a tela dizia apenas que o lançamento havia sido "ignorado". Agora o cancelamento funciona normalmente; a exigência de informar a conta continua valendo para lançamento já pago.
+- **As telas de lançamentos passaram a distinguir três resultados diferentes numa ação em lote: concluído, recusado por regra e falhou.** Antes, qualquer falha — sessão expirada, erro do sistema — era contada como "ignorado", que é a palavra usada para "não era elegível", e ficava impossível saber o que tinha acontecido. Agora o motivo real chega à tela.
+
+---
+
 ## [1.26.5] — 2026-08-08
 
 ### Corrigido
