@@ -159,7 +159,25 @@ Não é o fim: abra o detalhe do reembolso ou pedido de pagamento rejeitado (o m
 
 ### Por que uma única reprovação encerra meu pedido, se a OSC exige duas aprovações?
 
-Porque a regra de quantas aprovações são necessárias (o quórum) vale **só para aprovar**. Para **reprovar, basta uma pessoa** — mesmo que já houvesse uma aprovação registrada antes. É decisão de produto: soltar dinheiro da OSC exige o acordo de mais de uma pessoa, mas qualquer aprovador elegível pode barrar sozinho, porque é esse o papel de quem fiscaliza. Assim que alguém reprova, o pedido vira **Rejeitado** e os demais aprovadores não podem mais votar naquele pedido.
+Porque aprovar e reprovar têm contas separadas, e a de reprovação **vem configurada como 1**. O quórum diz quantas aprovações **liberam** o pagamento; um ajuste próprio, em [Fluxo de Aprovações](/configuracoes/aprovacoes/), diz quantas reprovações **barram**. No padrão — uma —, assim que alguém reprova o pedido vira **Rejeitado** e os demais aprovadores não podem mais votar. É a escolha conservadora: soltar dinheiro da OSC exige acordo de mais de uma pessoa, mas qualquer aprovador elegível pode barrar sozinho, porque é esse o papel de quem fiscaliza.
+
+Se a sua organização preferir, ela pode **exigir mais de uma reprovação** (até o número de pessoas aptas a aprovar). Nesse caso o pedido continua **Aguardando aprovação** até o número ser alcançado, a tela mostra quantas reprovações já existem e quantas faltam, e você só é avisado quando houver decisão definitiva.
+
+### Onde encontro uma prestação de contas que já foi gerada?
+
+Em **Relatórios**, clique na pílula **Prestações de contas**, ao final da fileira de filtros: ali está a lista de todos os documentos já gerados pela organização, com período, data e hora da geração, quem gerou e o intervalo coberto. Você pode **baixar** o PDF, **gerar de novo** ou **apagar o arquivo**. Antes, o único acesso era o link enviado por e-mail na hora da geração — agora o documento fica na plataforma. As três ações exigem a mesma permissão de exportar dados que já é necessária para ver a lista. Detalhes em [Relatórios → Prestações de contas](/modulos/relatorios/#prestacoes-de-contas).
+
+### "Gerar de novo" me devolve o mesmo PDF de antes?
+
+Não. O documento é montado com **os dados de hoje** — não é uma cópia do que foi entregue na época. Se algum lançamento daquele período foi editado, estornado ou cancelado desde então, o resultado vai ser diferente do original. O arquivo que já existe também **não é substituído**: cada geração cria um **registro novo** na lista, por isso é normal ver várias prestações do mesmo mês.
+
+### Apagar o arquivo apaga a prestação de contas?
+
+Não. Sai **apenas o PDF**. A linha continua na lista de [Prestações de contas](/modulos/relatorios/#prestacoes-de-contas), marcada com a data em que o arquivo foi removido e por quem, e com a opção de gerar de novo. Antes de apagar, a confirmação mostra exatamente qual documento você escolheu (período, data e hora da geração, autor) — vale conferir, porque é comum haver várias prestações do mesmo mês.
+
+### Por quanto tempo os PDFs de prestação de contas ficam guardados?
+
+**Para sempre, por padrão — nada é descartado.** Se a sua organização tiver política de retenção, o Presidente pode definir um prazo em **Configurações → Relatórios**: 1, 2, 3, 5 ou 10 anos, contados do fim do período coberto pelo documento. Com prazo configurado, o sistema **avisa por e-mail 30 dias antes** de qualquer descarte, listando o que vai sair e permitindo baixar antes; se o prazo mudar, o aviso perde a validade e a contagem recomeça. O registro da prestação nunca é apagado.
 
 ### Por que não consigo reenviar meu pedido rejeitado?
 

@@ -21,7 +21,7 @@ O módulo de **Reembolsos** é onde voluntários, dirigentes e colaboradores **p
 
 > 📖 **Conceito · Quórum e papéis aprovadores**
 >
-> A OSC configura em **Configurações → Fluxo de Aprovações** quantos votos são necessários para aprovar um reembolso (1 ou 2) e quais papéis podem votar (Presidente, Diretor de Finanças, etc.) — opcionalmente também pessoas específicas além do papel. Com quórum **1**, o primeiro aprovador elegível que vota define a decisão. Com quórum **2**, são necessários dois votos positivos; se um aprova e outro rejeita, prevalece a rejeição. Solicitantes não votam nos próprios reembolsos (o RIT360 Financeiro bloqueia automaticamente quando há outros elegíveis).
+> A OSC configura em **Configurações → Fluxo de Aprovações** quantos votos são necessários para aprovar um reembolso (1 ou 2) e quais papéis podem votar (Presidente, Diretor de Finanças, etc.) — opcionalmente também pessoas específicas além do papel. Com quórum **1**, o primeiro aprovador elegível que vota define a decisão. Com quórum **2**, são necessários dois votos positivos. A organização configura também **quantas reprovações barram** o reembolso (padrão: **1**) — com o padrão, se um aprova e outro rejeita, prevalece a rejeição; ver [Rejeitado](#rejeitado). Solicitantes não votam nos próprios reembolsos (o RIT360 Financeiro bloqueia automaticamente quando há outros elegíveis).
 
 > 📖 **Conceito · Auto-aprovação**
 >
@@ -107,11 +107,13 @@ Clique em qualquer linha para abrir o detalhe completo. A página tem todas as i
 
 O motivo da rejeição aparece em destaque no topo da página, e também fica registrado na timeline do **histórico de aprovações**, com o nome de quem reprovou e a data. O solicitante (e somente o solicitante) vê o botão **Editar e reenviar** — clicando, os campos passam a ser editáveis na própria página, sem precisar criar um reembolso novo. Corrige o que foi apontado (valor errado, comprovante ausente, categoria trocada), reenvia, e o fluxo recomeça.
 
-> 📖 **Conceito · Uma única reprovação encerra o pedido — mesmo que a organização exija duas aprovações**
+> 📖 **Conceito · Quantas reprovações barram o reembolso**
 >
-> A regra de "quantas aprovações são necessárias" (o quórum, configurado em [Fluxo de Aprovações](/configuracoes/aprovacoes/)) vale **só para aprovar**. Para **reprovar, basta uma pessoa**. Assim que qualquer aprovador elegível reprova — o motivo é obrigatório — o reembolso passa a **Rejeitado** na hora, e os demais aprovadores não podem mais votar naquele pedido. Isso vale mesmo quando já havia uma aprovação registrada: uma aprovação seguida de uma reprovação resulta em reembolso reprovado.
+> Aprovar e reprovar têm **contas separadas**, ambas configuradas em [Fluxo de Aprovações](/configuracoes/aprovacoes/). O quórum diz quantas aprovações **liberam**; o ajuste de **reprovações necessárias** diz quantas **barram**. Este último vem configurado como **1** — ou seja, no padrão, **uma única reprovação encerra o reembolso na hora**, mesmo que já houvesse uma aprovação registrada, e os demais aprovadores não votam mais. É o comportamento de sempre.
 >
-> Isso é uma **decisão de produto**, não uma limitação: liberar dinheiro da OSC exige o acordo de mais de uma pessoa, mas **qualquer aprovador pode barrar sozinho** — é o papel de quem fiscaliza. Um "sim" precisa de consenso entre os aprovadores; um "não" não precisa.
+> A organização pode **exigir mais de uma reprovação** (até o número de pessoas aptas a aprovar). Nesse caso, enquanto o número exigido não é alcançado, o reembolso **continua Aguardando aprovação** e os demais aprovadores seguem podendo votar; a tela mostra **quantas reprovações já existem e quantas faltam**. O **solicitante só é avisado no desfecho definitivo** — reprovação isolada não gera aviso para ele. Se em algum momento não restarem pessoas suficientes sem voto para reunir as aprovações necessárias, o reembolso é **encerrado como reprovado** em vez de ficar parado. Havendo mais de uma reprovação, o motivo mostrado ao solicitante **reúne os motivos de todos os votos contrários**.
+>
+> O motivo é sempre **obrigatório** ao reprovar, e **o voto é definitivo** — a tela avisa isso antes de confirmar, tanto para aprovar quanto para reprovar. Mudou de ideia? O caminho é o solicitante corrigir e reenviar.
 >
 > Válido tanto para **Reembolsos** quanto para **Pedidos de Pagamento** — os dois fluxos seguem a mesma regra.
 
@@ -204,7 +206,7 @@ Cada usuário escolhe em **Meu Perfil → Notificações** quais eventos de reem
 - **Reembolso submetido** — aprovadores elegíveis são avisados
 - **Aprovação parcial** — em quórum 2, depois do primeiro voto positivo, demais aprovadores elegíveis são lembrados
 - **Aprovado** — solicitante e tesoureiro são avisados
-- **Rejeitado** — solicitante é avisado com o motivo
+- **Rejeitado** — solicitante é avisado com o motivo, **no desfecho definitivo**: quando a organização exige mais de uma reprovação, o aviso só sai depois que o número exigido é alcançado, reunindo os motivos de todos os votos contrários
 - **Pago** — solicitante é avisado
 
 Padrão é tudo ligado; cada um silencia o que não quer receber.
@@ -213,6 +215,7 @@ Padrão é tudo ligado; cada um silencia o que não quer receber.
 
 - **Reembolso** — solicitação para receber de volta dinheiro gasto do próprio bolso em nome da OSC.
 - **Quórum** — número mínimo de aprovações necessárias para o reembolso ser aprovado (configurável: 1 ou 2).
+- **Reprovações necessárias** — número de votos contrários necessários para barrar o reembolso (configurável: de 1 até o total de pessoas aptas a aprovar; padrão 1).
 - **Aprovador elegível** — usuário que pode votar em determinado reembolso pelo papel que ocupa ou por estar individualmente listado na configuração.
 - **Auto-aprovação** — situação em que o solicitante é também o único aprovador elegível; permitida mas explicitamente marcada no audit log.
 - **PIX/TED** — métodos de pagamento aceitos para crédito do reembolso aprovado.
@@ -223,5 +226,5 @@ Padrão é tudo ligado; cada um silencia o que não quer receber.
 - **Pedidos de Pagamento** — para autorizar despesas que **ainda vão ser pagas** pela OSC (em vez de já ter pagado do bolso).
 - **Movimentações** — para o tesoureiro confirmar o pagamento do reembolso aprovado e fechar o ciclo.
 - **Meu Perfil → Dados para Reembolso** — para pré-preencher PIX/TED em futuras solicitações.
-- **Configurações → Fluxo de Aprovações** — para a OSC ajustar quórum e papéis aprovadores.
+- **Configurações → Fluxo de Aprovações** — para a OSC ajustar quórum, reprovações necessárias e papéis aprovadores.
 - **Meu Perfil → Notificações** — para escolher quais eventos receber e em quais canais.

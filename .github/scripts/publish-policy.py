@@ -7,12 +7,14 @@ chama a Edge Function, que é idempotente por (type, version): se a versão já
 foi publicada, a EF responde 200 "already_published" e nada muda.
 
 Sem dependências externas — só biblioteca padrão. Pensado para rodar no
-GitHub Actions do repositório bussola-docs (onde o manual é publicado).
+GitHub Actions do repositório RIT-DF/rit360-financeiro-manual (onde o manual
+é publicado).
 
 Variáveis de ambiente:
   POLICY_PUBLISH_TOKEN  (obrigatória) token estático aceito pela EF
   FUNCTIONS_BASE        base das Edge Functions (default: projeto de produção)
-  SITE_BASE             base pública do manual (default: https://docs.bf.rit.org.br)
+  SITE_BASE             base pública do manual
+                        (default: https://docs.financeiro.rit360.org.br)
 """
 
 import json

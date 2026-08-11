@@ -1,11 +1,13 @@
 ---
-title: "Termos de Uso"
-nav_order: 2
-parent: "Termos e Privacidade"
-permalink: /termos/
+layout: section
+title: "Termos de Uso — versão 1.2 (arquivada)"
+nav_exclude: true
+permalink: /termos/1.2/
 version: "1.2"
 change_summary: "Deixamos de prometer um prazo fixo de aviso prévio para alterações destes Termos. O compromisso de comunicar continua: você é avisado por e-mail ou por aviso na plataforma, e a versão vigente fica sempre publicada nesta página com a data em que passou a valer. O prazo de 30 dias para alteração de valores de assinatura permanece inalterado."
 requires_reconsent: true
+archived: true
+sitemap: false
 ---
 
 # Termos de Uso — RIT360 Financeiro

@@ -93,6 +93,7 @@ A prestação de contas é o produto visível do tesoureiro. Boa prestação de 
 
 - Gere o relatório do período para reuniões mensais/trimestrais.
 - Exporte em PDF ou Excel para distribuir à diretoria, ao conselho fiscal e aos financiadores.
+- Recupere prestações antigas em **Relatórios → [Prestações de contas](/modulos/relatorios/#prestacoes-de-contas)** — todo documento gerado fica listado ali, sem depender do e-mail.
 
 > 🧭 **Como o RIT360 Financeiro ajuda · Exportação pronta para distribuir**
 >

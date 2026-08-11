@@ -1,11 +1,13 @@
 ---
-title: "Privacidade"
-nav_order: 1
-parent: "Termos e Privacidade"
-permalink: /privacidade/
+layout: section
+title: "Privacidade — versão 1.3 (arquivada)"
+nav_exclude: true
+permalink: /privacidade/1.3/
 version: "1.3"
 change_summary: "Passamos a descrever a página pública de transparência, que a organização pode ligar por conta própria. Incluímos as pessoas cujos dados a organização cadastra sem que elas usem a plataforma — fornecedores, participantes de projeto e doadores vindos de loja virtual integrada. Detalhamos melhor quais dados guardamos de você, quais ficam cifrados e o que pode haver dentro dos arquivos anexados."
 requires_reconsent: true
+archived: true
+sitemap: false
 ---
 
 # Política de Privacidade — RIT360 Financeiro

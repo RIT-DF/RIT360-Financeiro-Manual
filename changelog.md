@@ -11,6 +11,38 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.29.0] — 2026-08-10
+
+### Adicionado
+
+- **Nada muda para quem não configurar: por padrão, uma reprovação continua barrando o pedido, exatamente como antes.** As novidades abaixo só entram em ação se a organização decidir exigir mais de uma reprovação.
+- **A organização passa a escolher quantas reprovações são necessárias para barrar um pedido de pagamento ou reembolso.** Antes, uma única reprovação encerrava a solicitação na hora, mesmo havendo outras pessoas aptas a votar. Agora, na configuração do fluxo de aprovação, dá para exigir mais de uma — até o número de pessoas aptas a aprovar na própria organização. O padrão continua sendo uma.
+- **Enquanto o número exigido não é alcançado, a solicitação continua aguardando aprovação** e as demais pessoas seguem podendo votar. As telas do pedido e do reembolso mostram quantas reprovações já existem e quantas faltam. O solicitante só é avisado quando houver decisão definitiva — não recebe aviso de reprovação enquanto a solicitação ainda está viva.
+- **O voto é definitivo** e a tela avisa isso antes de confirmar, tanto para aprovar quanto para reprovar.
+- **Se o pedido chegar a um ponto em que não há mais como reunir as aprovações necessárias** — porque não restam pessoas suficientes sem voto —, ele é encerrado como reprovado, em vez de ficar parado para sempre. O caminho de corrigir e reenviar continua o mesmo.
+- **Quando houver mais de uma reprovação, o motivo apresentado ao solicitante reúne os motivos de todos os votos contrários.**
+
+---
+
+## [1.28.0] — 2026-08-10
+
+### Adicionado
+
+- **Nada muda até a sua organização escolher um prazo: por padrão, nenhum documento é descartado.** As novidades abaixo só entram em ação depois que alguém definir, nas Configurações, por quanto tempo a organização quer guardar os documentos de prestação de contas.
+- **Prazo de guarda para os documentos de prestação de contas.** Em Configurações → Relatórios, a organização passa a poder definir por quanto tempo guarda os PDFs de prestação de contas: sem descarte (padrão), 1, 2, 3, 5 ou 10 anos. Antes de salvar, a tela mostra quantos documentos já estariam vencidos por aquele prazo e quantos vencem nos próximos 30 dias.
+- **Uma nova página com o histórico de prestações de contas, em Relatórios.** Antes, o único acesso a esses documentos era o link enviado por e-mail. Agora a organização vê a lista completa — com período, data de geração e situação — e pode baixar. Documento cujo arquivo foi descartado aparece identificado como tal, com a data do descarte, e oferece gerar de novo, com o aviso de que o novo documento reflete os dados atuais e não é uma cópia do que foi entregue na época.
+- **Aviso por e-mail antes de qualquer descarte.** Quando um prazo estiver configurado, o sistema avisa com 30 dias de antecedência, listando o que será descartado e permitindo baixar antes. Se o prazo for alterado, o aviso anterior perde a validade e a contagem recomeça — nenhum documento é descartado antes do que foi comunicado. O registro da prestação nunca é apagado: ele permanece na lista, indicando que o arquivo foi descartado.
+
+---
+
+## [1.27.2] — 2026-08-10
+
+### Corrigido
+
+- **Endurecimento das proteções de segurança do aplicativo.** Sem efeito visível no uso do dia a dia.
+
+---
+
 ## [1.27.1] — 2026-08-10
 
 ### Corrigido

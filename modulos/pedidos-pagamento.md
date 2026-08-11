@@ -31,7 +31,7 @@ O módulo de **Pedidos de Pagamento** é onde alguém da OSC **pede autorizaçã
 
 > 📖 **Conceito · Quórum e fluxo de aprovação**
 >
-> A OSC configura em **Configurações → Fluxo de Aprovações** quantos votos são necessários (1 ou 2) e quais papéis podem aprovar. O solicitante nunca aprova o próprio pedido quando há outros aprovadores elegíveis — o RIT360 Financeiro bloqueia automaticamente. Quando o solicitante é o único aprovador (caso de OSCs muito pequenas), a auto-aprovação é permitida mas explicitamente registrada no audit log como `self_approved`.
+> A OSC configura em **Configurações → Fluxo de Aprovações** quantos votos são necessários (1 ou 2), **quantas reprovações barram o pedido** (padrão: 1) e quais papéis podem aprovar. O solicitante nunca aprova o próprio pedido quando há outros aprovadores elegíveis — o RIT360 Financeiro bloqueia automaticamente. Quando o solicitante é o único aprovador (caso de OSCs muito pequenas), a auto-aprovação é permitida mas explicitamente registrada no audit log como `self_approved`.
 
 > 📖 **Conceito · Status do pedido**
 >
@@ -100,9 +100,9 @@ Pedidos recorrentes mostram aqui uma seção **Ocorrências** com a lista de cad
 
 O motivo da rejeição aparece em destaque no topo, e também fica registrado na timeline do **histórico de aprovações**, com o nome de quem reprovou e a data. O solicitante pode editar os campos e reenviar para nova rodada de aprovação.
 
-> 📖 **Conceito · Uma única reprovação encerra o pedido — mesmo que a organização exija duas aprovações**
+> 📖 **Conceito · Quantas reprovações barram o pedido**
 >
-> A regra de "quantas aprovações são necessárias" (o quórum) vale **só para aprovar**. Para **reprovar, basta uma pessoa** — mesmo que já houvesse uma aprovação registrada. O reenvio, além disso, **exige uma alteração real** (trocar o comprovante já conta) e **reinicia as aprovações já dadas**. O detalhe completo, válido igualmente para pedidos de pagamento e reembolsos, está em [Reembolsos → Rejeitado](/modulos/reembolsos/#rejeitado).
+> Aprovar e reprovar têm **contas separadas**, ambas em [Fluxo de Aprovações](/configuracoes/aprovacoes/): o quórum diz quantas aprovações **liberam**, e o ajuste de **reprovações necessárias** diz quantas **barram**. O padrão de reprovações é **1** — uma pessoa encerra o pedido na hora, mesmo que já houvesse uma aprovação registrada. Se a organização exigir **mais de uma**, o pedido **continua Aguardando aprovação** até o número ser alcançado, a tela mostra quantas faltam, e o solicitante só é avisado no desfecho definitivo. **O voto é definitivo** nos dois sentidos, e a tela avisa antes de confirmar. O reenvio, além disso, **exige uma alteração real** (trocar o comprovante já conta) e **reinicia as aprovações já dadas**. O detalhe completo, válido igualmente para pedidos de pagamento e reembolsos, está em [Reembolsos → Rejeitado](/modulos/reembolsos/#rejeitado).
 
 ### Aprovado, aguardando pagamento
 
@@ -191,7 +191,7 @@ Cada usuário escolhe em **Meu Perfil → Notificações** quais eventos receber
 - **Pedido submetido** — aprovadores elegíveis são avisados
 - **Aprovação parcial** — em quórum 2, após primeiro voto, demais aprovadores são lembrados
 - **Aprovado** — solicitante e tesoureiro são avisados
-- **Rejeitado** — solicitante é avisado com o motivo
+- **Rejeitado** — solicitante é avisado com o motivo, **no desfecho definitivo**: quando a organização exige mais de uma reprovação, o aviso só sai depois que o número exigido é alcançado, reunindo os motivos de todos os votos contrários
 - **Pago** — solicitante é avisado
 
 ## Glossário rápido
@@ -202,10 +202,11 @@ Cada usuário escolhe em **Meu Perfil → Notificações** quais eventos receber
 - **Ocorrência** — uma das execuções programadas de um pedido recorrente.
 - **Parcela** — uma das partes de um pedido parcelado.
 - **Cancelar série** — encerrar pedido recorrente/parcelado em um dos 3 escopos (apenas uma / esta e futuras / série inteira).
+- **Reprovações necessárias** — número de votos contrários necessários para barrar o pedido (configurável: de 1 até o total de pessoas aptas a aprovar; padrão 1).
 
 ## Por onde seguir
 
 - **Reembolsos** — para despesas que **já foram pagas** do bolso e querem ressarcimento.
 - **Movimentações** — para o tesoureiro confirmar o pagamento do pedido aprovado.
-- **Configurações → Fluxo de Aprovações** — para a OSC ajustar quórum e papéis aprovadores.
+- **Configurações → Fluxo de Aprovações** — para a OSC ajustar quórum, reprovações necessárias e papéis aprovadores.
 - **Meu Perfil → Notificações** — para configurar canais e eventos das notificações de pedido.

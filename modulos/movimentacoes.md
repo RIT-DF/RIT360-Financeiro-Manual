@@ -424,7 +424,7 @@ Se você baixa o **extrato do banco em formato OFX** (a maioria dos bancos ofere
 
 > 🔎 **Não tem o arquivo OFX?** Se você só tem o **saldo final** que aparece na tela do banco, use o **[Caça-diferenças](/modulos/caca-diferencas/)**: informe o saldo e ele aponta na hora onde está a diferença, com correção em um clique. É a conferência rápida "pelo número", complementar a esta conciliação por extrato.
 
-## Prestação de contas
+## Prestação de contas {#prestacao-de-contas}
 
 [![Diálogo de prestação de contas](/assets/screenshots/manual-mov-prestacao-contas.png)](/assets/screenshots/manual-mov-prestacao-contas.png)
 *Em Exportar → Prestação de contas: escolha o período e, opcionalmente, anexe documentos complementares*
@@ -459,6 +459,10 @@ Para anexar, na seção **Documentos complementares** do diálogo: escolha o arq
    - **Mês** — um mês específico já **fechado** (o mês corrente, ainda em andamento, não fica disponível);
    - **Ano (acumulado)** — de janeiro até o último mês fechado daquele ano (ou o ano inteiro, se for um ano anterior).
 3. Clique em **Gerar PDF**. A geração roda **em segundo plano**: você pode continuar trabalhando, e **o link do PDF chega no seu e-mail** assim que ficar pronto (a montagem com gráficos e comprovantes pode levar de alguns segundos a poucos minutos). Se algo falhar, você é avisado por e-mail e por notificação no app.
+
+### Onde encontrar os documentos já gerados
+
+Você **não depende do e-mail** para chegar a uma prestação de contas: todo documento gerado fica listado na página **[Prestações de contas](/modulos/relatorios/#prestacoes-de-contas)**, dentro de **Relatórios** — acessível pela pílula de mesmo nome, ao final da fileira de filtros. Lá você vê período, data e hora da geração, quem gerou e o intervalo coberto, e pode **baixar**, **gerar de novo** ou **apagar o arquivo**. A organização também pode definir, em **Configurações → Relatórios**, um **prazo de guarda** para esses PDFs — que por padrão é "sem descarte".
 
 > 💡 **Por que isso importa · Transparência e governança não são burocracia**
 >

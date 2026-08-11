@@ -27,11 +27,37 @@ Define quantos votos positivos são necessários para aprovar:
 
 > 📖 **Conceito · Quórum 2 e aprovação parcial**
 >
-> Com quórum 2, depois do primeiro voto positivo, o reembolso ou pedido entra em "Aguardando aprovação parcial" — os outros aprovadores elegíveis recebem notificação de que falta um voto. Quando o segundo voto positivo chega, o status muda para Aprovado. **Se um aprova e outro rejeita, prevalece a rejeição** (princípio conservador: na dúvida, não autoriza).
+> Com quórum 2, depois do primeiro voto positivo, o reembolso ou pedido entra em "Aguardando aprovação parcial" — os outros aprovadores elegíveis recebem notificação de que falta um voto. Quando o segundo voto positivo chega, o status muda para Aprovado. Com o padrão de **1 reprovação para barrar** (ver a seção seguinte), **se um aprova e outro rejeita, prevalece a rejeição** — princípio conservador: na dúvida, não autoriza.
 
-> ⚠️ **Atenção · O quórum vale só para aprovar, não para reprovar**
+> ℹ️ **Aprovar e reprovar são contas separadas**
 >
-> "1 voto" ou "2 votos" é o número de aprovações necessárias para **liberar** o pagamento. Para **reprovar, basta 1 pessoa**, mesmo com quórum 2 e mesmo que já houvesse uma aprovação registrada — qualquer aprovador elegível pode encerrar o pedido sozinho. É decisão de produto: soltar dinheiro exige acordo de mais gente, mas barrar não precisa de unanimidade. Detalhe completo em [Reembolsos → Rejeitado](/modulos/reembolsos/#rejeitado).
+> "1 voto" ou "2 votos" é o número de aprovações necessárias para **liberar** o pagamento. Quantas **reprovações** são necessárias para **barrar** é um ajuste próprio, logo abaixo — e vem configurado como **1**, o comportamento de sempre.
+
+## Reprovações necessárias para barrar
+
+Define quantas reprovações são necessárias para **encerrar** um pedido de pagamento ou reembolso como reprovado. Você escolhe de **1** até o **número de pessoas aptas a aprovar** na sua organização.
+
+**O padrão é 1** — uma única reprovação barra a solicitação na hora, exatamente como sempre funcionou. Se você não mexer aqui, nada muda.
+
+Quando a organização exige **mais de uma**:
+
+- Enquanto o número exigido **não é alcançado**, a solicitação **continua aguardando aprovação** e as demais pessoas aptas seguem podendo votar — a reprovação isolada não encerra nada.
+- As telas do pedido e do reembolso mostram **quantas reprovações já existem e quantas faltam**, do mesmo jeito que já mostram o progresso das aprovações.
+- O **solicitante só é avisado no desfecho definitivo**: enquanto a solicitação está viva, ele não recebe aviso de reprovação.
+- Se a solicitação chegar a um ponto em que **não há mais como reunir as aprovações necessárias** — porque não restam pessoas suficientes sem voto —, ela é **encerrada como reprovada**, em vez de ficar parada para sempre.
+- Quando houver mais de uma reprovação, o **motivo apresentado ao solicitante reúne os motivos de todos os votos contrários**.
+
+> ⚠️ **Atenção · O voto é definitivo**
+>
+> Aprovar ou reprovar **não pode ser desfeito** — e a tela avisa isso antes de você confirmar, nos dois casos. Se mudar de ideia depois, o caminho é o de sempre: o solicitante corrige e reenvia, e uma nova rodada de votos começa do zero.
+
+> 📖 **Conceito · Por que dar peso à reprovação**
+>
+> O comportamento de origem — uma reprovação barra tudo — parte de um princípio conservador: liberar dinheiro exige acordo, barrar não precisa de unanimidade. Ele funciona bem na maioria das OSCs, e por isso continua sendo o padrão. Mas em organizações com muitos aprovadores, ou com conselho grande e opiniões divergentes, ele dá a **uma só pessoa** o poder de encerrar sozinha uma solicitação que o restante da diretoria aprovaria. Exigir duas ou três reprovações é a forma de dizer: "para barrar também é preciso acordo". Escolha conforme a sua governança — não existe resposta certa universal.
+
+> ✓ **Dica · Suba junto com o quórum, não isoladamente**
+>
+> Se a sua OSC exige 1 aprovação, mantenha 1 reprovação: exigir 2 reprovações com quórum 1 cria um desequilíbrio estranho (aprovar é mais fácil que barrar). Faz mais sentido subir os dois lados quando a organização cresce — quórum 2 e 2 reprovações, por exemplo.
 
 ## Papéis elegíveis para aprovar
 

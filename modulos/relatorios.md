@@ -195,6 +195,76 @@ Todos os exports trazem **cabeçalho identificador** padrão: nome da OSC, escop
 >
 > A primeira versão da exportação traz **tabelas e blocos textuais** — sem reprodução de gráficos visuais. Para enxergar a curva de saldo ou o gráfico de categorias, use a interface do RIT360 Financeiro. Gráficos no PDF entram em versão futura.
 
+## Prestações de contas geradas {#prestacoes-de-contas}
+
+Toda vez que alguém gera uma [prestação de contas](/modulos/movimentacoes/#prestacao-de-contas), o documento fica **guardado na organização** — e a página **Prestações de contas** é onde você encontra todos eles.
+
+[![Pílula Prestações de contas](/assets/screenshots/manual-relatorios-pilula-prestacoes.png)](/assets/screenshots/manual-relatorios-pilula-prestacoes.png)
+*A pílula **Prestações de contas**, ao final da fileira de filtros do cabeçalho de Relatórios*
+
+Para abrir, clique na pílula **Prestações de contas**, ao final da fileira de filtros no cabeçalho de Relatórios.
+
+[![Página Prestações de contas](/assets/screenshots/manual-prestacoes-lista.png)](/assets/screenshots/manual-prestacoes-lista.png)
+*A lista de documentos já gerados, do mais recente para o mais antigo, com as três ações à direita de cada linha*
+
+Cada linha traz o **período do documento** (o mês, ou o acumulado do ano), a **data e a hora em que foi gerado**, **quem gerou** e o **intervalo de datas coberto**. Como é comum a organização gerar o mesmo mês mais de uma vez, esses quatro dados juntos são o que distingue um documento do outro.
+
+> 💡 **Por que isso importa · O documento deixou de depender do e-mail**
+>
+> Até esta versão, o único caminho para chegar a uma prestação de contas já gerada era **o link enviado por e-mail** na hora da geração. Quem gerou trocou de e-mail, apagou a mensagem sem querer ou simplesmente não estava na organização na época? O documento existia, mas ninguém alcançava. Agora ele está **na plataforma, à vista de toda a diretoria** — e a prestação de contas do ano passado continua a um clique quando o conselho, o financiador ou a auditoria pedirem.
+
+### As três ações de cada documento
+
+- **Baixar** — abre o PDF, quando o arquivo existe.
+- **Gerar de novo** — sempre disponível, inclusive para documentos cujo arquivo já foi apagado.
+- **Apagar o arquivo** — remove só o PDF, preservando o registro na lista.
+
+> ⚠️ **Atenção · "Gerar de novo" não é uma segunda via**
+>
+> O novo documento é montado com **os dados de hoje**, não com uma fotografia do que foi entregue na época. Se algum lançamento daquele período foi editado, estornado ou cancelado desde então, **o resultado vai ser diferente do original** — e essa diferença é legítima, porque os números da organização mudaram. Use "Gerar de novo" para recuperar um arquivo apagado ou para refletir uma correção posterior; não conte com ele para reproduzir literalmente o PDF que foi assinado e entregue.
+>
+> O arquivo que já existe **não é substituído**: cada geração nasce como um **registro novo** na lista. Por isso é normal encontrar várias prestações do mesmo mês, uma abaixo da outra — e é por isso que a data e a hora da geração importam tanto.
+
+> 📖 **Conceito · Apagar o arquivo não apaga a prestação**
+>
+> Ao apagar, sai **só o PDF**. A linha continua na lista, agora marcada com a **data em que o arquivo foi removido** e **quem removeu**, e com a opção de **gerar de novo** disponível. A organização nunca perde o rastro de que aquela prestação foi feita, por quem e quando — o que sai é o peso do arquivo, não a memória do ato. É o mesmo princípio que vale em todo o RIT360 Financeiro: **corta-se o dado, preserva-se o registro**.
+
+> ✓ **Dica · Confira o documento na confirmação antes de apagar**
+>
+> Antes de remover, a confirmação mostra **exatamente qual documento você escolheu** — período, data e hora da geração e autor. Leia essa linha com atenção: quando há cinco prestações de "Junho/2026" empilhadas, é a data e hora da geração que diferencia a que você quer apagar da que a diretoria usou na assembleia.
+
+### Quem acessa
+
+A lista está disponível para quem tem **permissão de exportar dados** da organização — na prática, os mesmos papéis que já acessam Relatórios e geram a prestação de contas: **Presidente**, **Tesoureiro** e **Comissão Fiscal**. **As três ações exigem essa mesma permissão**: quem enxerga a lista pode baixar, gerar de novo e apagar o arquivo; quem não a tem não vê a página nem a pílula.
+
+## Guarda dos documentos de prestação de contas
+
+[![Guarda dos documentos de prestação de contas](/assets/screenshots/manual-prestacoes-guarda-config.png)](/assets/screenshots/manual-prestacoes-guarda-config.png)
+*Configurações → Relatórios — o bloco de guarda fica acima das regras de pontos de atenção*
+
+**Por padrão, nada é descartado: os PDFs ficam guardados para sempre.** Se a sua organização não fizer nada, é assim que continua funcionando — este ajuste só entra em ação quando alguém escolhe um prazo.
+
+Em **Configurações → Relatórios**, no bloco **Guarda dos documentos de prestação de contas**, a organização define por quantos anos os PDFs são mantidos:
+
+- **Sem descarte (guardar para sempre)** — o padrão
+- **1 ano**, **2 anos**, **3 anos**, **5 anos** ou **10 anos**
+
+A contagem começa no **fim do período coberto** pelo documento, não na data em que ele foi gerado. Uma prestação de Março/2026 com prazo de 5 anos vence em março de 2031, mesmo que tenha sido gerada de novo em 2027.
+
+Ao escolher um prazo, **antes de salvar** a tela informa quantos documentos **já estariam vencidos** por aquela regra e quantos **vencem nos próximos 30 dias** — você vê o efeito da decisão antes de tomá-la.
+
+> 📖 **Conceito · Ninguém é pego de surpresa**
+>
+> Com um prazo configurado, o RIT360 Financeiro **avisa por e-mail 30 dias antes** de qualquer descarte, listando os documentos que vão sair e permitindo baixá-los enquanto dá tempo. Se o prazo for **alterado**, o aviso anterior perde a validade e **a contagem recomeça** — nenhum documento é descartado antes do que foi comunicado.
+
+> ⚠️ **Atenção · O registro nunca é apagado**
+>
+> Assim como no apagamento manual, o descarte automático remove **apenas o arquivo**. A prestação continua listada em [Prestações de contas](#prestacoes-de-contas), identificada como descartada e com a opção de **gerar de novo** — lembrando que o novo documento reflete os dados atuais, não o original.
+
+> ✓ **Dica · Só configure prazo se houver política que peça isso**
+>
+> Prazo de guarda existe para organizações com política de retenção definida (por estatuto, por exigência de financiador ou por decisão de conselho). Se a sua não tem uma, **deixe em "sem descarte"** — PDF ocupa pouco espaço, e prestação de contas é justamente o tipo de documento que se lamenta ter perdido. Quando houver política, configure o prazo mais **longo** que ela permitir.
+
 ## Configuração das regras de atenção
 
 [![Configuração de regras](/assets/screenshots/manual-config-relatorios-regras.png)](/assets/screenshots/manual-config-relatorios-regras.png)
@@ -256,9 +326,12 @@ Três opções na hora de revisar:
 - **Estimado** — projeção por média móvel de 6 meses, usada para categorias sem agendado no mês.
 - **Horizonte** — quantos meses adiante o forecast projeta (3, 6 ou 12).
 - **Mês em curso** — mês corrente projetado como primeiro mês do forecast, com badge indicando que é projeção parcial.
+- **Prestação de contas (documento)** — o PDF contábil completo de um período, gerado em Movimentações e listado na página Prestações de contas.
+- **Prazo de guarda** — por quantos anos os PDFs de prestação de contas são mantidos, contados do fim do período coberto. Padrão: sem descarte.
+- **Descarte** — remoção apenas do arquivo PDF; o registro da prestação permanece na lista, com data e autor da remoção.
 
 ## Por onde seguir
 
-- **Movimentações** — onde estão os lançamentos que alimentam todas as análises.
+- **Movimentações** — onde estão os lançamentos que alimentam todas as análises, e onde a [prestação de contas](/modulos/movimentacoes/#prestacao-de-contas) é gerada.
 - **Configurações → Categorias** — relatório bom depende de categorização consistente.
-- **Configurações → Relatórios** (Presidente) — ajustar limites de pontos de atenção, calibrar pelo histórico.
+- **Configurações → Relatórios** (Presidente) — ajustar limites de pontos de atenção, calibrar pelo histórico e definir o prazo de guarda dos documentos de prestação de contas.
