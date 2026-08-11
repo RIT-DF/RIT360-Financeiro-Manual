@@ -11,6 +11,19 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.35.0] — 2026-08-11
+
+### Segurança
+
+- **Os dados bancários de quem recebe um pagamento passam a ser guardados protegidos.** CPF do titular, chave Pix, banco, agência e conta ficam cifrados — quem consultar a base de dados por fora do aplicativo não encontra mais esses números.
+- **Quem tem permissão para pagar continua vendo tudo, como sempre viu**, na mesma tela e no mesmo lugar: no lançamento, no pedido de pagamento e no reembolso.
+- **Quem não tem permissão para pagar passa a ver apenas os últimos dígitos**, o suficiente para conferir de qual conta se trata, sem expor o número inteiro.
+- **Nada se perde e nada precisa ser reconfigurado.** Os dados existentes foram convertidos, as telas continuam iguais e nenhuma configuração precisa ser revista.
+- **Quem só edita um registro não destrói o que não pode ver.** Alterar a descrição ou o valor de um lançamento sem mexer nos dados bancários preserva os dados originais intactos, mesmo para quem os vê mascarados.
+- **A exportação de dados da organização segue a mesma regra:** leva os dados bancários completos só para quem teria direito de vê-los na tela.
+
+---
+
 ## [1.34.0] — 2026-08-11
 
 ### Adicionado

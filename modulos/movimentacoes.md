@@ -174,7 +174,7 @@ Clique no cabeçalho de qualquer coluna para ordenar. Um segundo clique inverte 
 Cada linha tem ícones de ação que mudam conforme o status:
 
 - ✏️ **Editar** — disponível para movimentações pendentes ou atrasadas
-- 💲 **Marcar como pago** — disponível para pendentes e atrasadas (atalho rápido sem entrar no detalhe)
+- 💲 **Marcar como pago** — disponível para pendentes e atrasadas (atalho rápido sem entrar no detalhe), **para quem tem permissão de pagar**
 - ✕ **Cancelar** — disponível para pendentes e atrasadas
 - ↩ **Estornar** — disponível para pagas
 - 🗑 **Excluir** — disponível apenas para canceladas (estornos são preservados e **não** podem ser excluídos)
@@ -183,9 +183,13 @@ Cada linha tem ícones de ação que mudam conforme o status:
 >
 > **Cancelar** marca o lançamento como anulado mas mantém o histórico — útil quando algo registrado não vai mais acontecer (evento desmarcado, fornecedor desistiu) e você quer rastreabilidade. **Excluir** apaga o lançamento de vez. O RIT360 Financeiro só permite excluir lançamentos já **cancelados**, justamente para evitar perda acidental; **estornos são preservados** (não podem ser excluídos) para manter a prestação de contas íntegra. Para auditoria limpa, prefira sempre **cancelar** a excluir.
 
+> 📖 **Conceito · Registrar não é o mesmo que pagar**
+>
+> **Marcar como pago** exige a permissão de **pagar**, que é separada da de criar e editar. Quem registra lançamentos mas não tem essa permissão simplesmente **não vê** a ação de marcar como pago — nem na linha, nem no detalhe, nem na seleção em lote, nem na conciliação de extrato. Isso permite que uma pessoa organize as contas a pagar e outra confirme a saída do dinheiro. Quem ajusta isso é o Presidente, em [Cargos e permissões](/configuracoes/cargos/#permissao-pagar); por padrão, quem já podia pagar continua podendo.
+
 ### Seleção em lote
 
-Marque o checkbox no início das linhas para selecionar várias movimentações. A barra de ações em lote aparece no rodapé com as opções **Marcar como pago** e **Excluir**.
+Marque o checkbox no início das linhas para selecionar várias movimentações. A barra de ações em lote aparece no rodapé com as opções **Marcar como pago** (para quem tem permissão de pagar) e **Excluir**.
 
 ### Exportação
 
@@ -214,7 +218,7 @@ Clique em qualquer linha da lista para abrir o detalhe completo, organizado em d
 - Tipo e status (chips coloridos no topo)
 - Título e valor em destaque
 - Dados do lançamento: vencimento, pagamento, conta, categoria, beneficiário/fornecedor, forma de pagamento, projeto, centro de custo
-- **Dados de pagamento** — quando o lançamento tem chave PIX ou dados bancários do destinatário, um card mostra esses dados para efetivar o pagamento sem abrir a solicitação de origem. Vale tanto para lançamentos vindos de **reembolso/pedido de pagamento** quanto para **despesas lançadas à mão** (ver "Forma de pagamento" no formulário). Aparece apenas para quem tem permissão de ver esses dados (tesoureiro, aprovadores e administradores)
+- **Dados de pagamento** — quando o lançamento tem chave PIX ou dados bancários do destinatário, um card mostra esses dados para efetivar o pagamento sem abrir a solicitação de origem. Vale tanto para lançamentos vindos de **reembolso/pedido de pagamento** quanto para **despesas lançadas à mão** (ver "Forma de pagamento" no formulário). **Quem tem permissão de pagar vê os dados por inteiro; os demais veem apenas os últimos dígitos** — o nome de quem recebe fica visível para todos. Passado o prazo de descarte definido pela OSC, o card informa que os dados foram removidos por já terem cumprido sua finalidade. Detalhes em [Contas Bancárias → Dados bancários de quem recebe](/configuracoes/contas/#dados-bancarios-de-quem-recebe)
 - Distribuição entre categorias (se o valor foi dividido)
 - Observações
 - Documentos: comprovantes e notas fiscais anexados, com pré-visualização inline para imagens e PDFs
@@ -418,6 +422,8 @@ Se você baixa o **extrato do banco em formato OFX** (a maioria dos bancos ofere
 3. Ao **confirmar**, os lançamentos conciliados/aceitos são marcados como **pagos** com a data do extrato e ficam vinculados à conciliação; os "novos" que você escolher viram lançamentos.
 
 **Reimportar o mesmo extrato não duplica nada** — cada transação é reconhecida pelo identificador único do banco.
+
+**Quem pode confirmar:** subir e conferir o extrato é uma coisa; **confirmar** — que marca lançamentos como pagos — exige a **permissão de pagar**, a mesma de marcar como pago em Movimentações. Ver [Cargos e permissões](/configuracoes/cargos/#permissao-pagar).
 
 > 💡 **Por que isso importa**
 > Conciliar pelo extrato substitui a conferência manual lançamento a lançamento, reduz erro e dá confiança de que o que está registrado no RIT360 Financeiro bate com o banco.

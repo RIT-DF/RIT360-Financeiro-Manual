@@ -79,6 +79,14 @@ Depende do status. Se o lançamento está **Pendente** ou **Atrasado**, clique e
 
 **Cancelar** mantém o lançamento no histórico com status "Cancelado" — útil para rastreabilidade ("essa despesa estava prevista mas não aconteceu"). **Excluir** apaga o lançamento de vez. O RIT360 Financeiro só permite excluir movimentações que já foram canceladas ou estornadas, justamente para evitar perda acidental. Para auditoria limpa, prefira sempre **cancelar** a excluir.
 
+### Sumiu o botão "Marcar como pago". Por quê?
+
+Porque **pagar virou uma permissão separada** de criar e editar. Se o seu cargo não tem a permissão de pagar, você continua registrando e editando lançamentos, mas não confirma pagamentos — o botão não aparece na linha, no detalhe, na seleção em lote nem na conciliação de extrato. Quem administra a OSC pode ligar essa permissão no seu cargo em [Configurações → Cargos e permissões](/configuracoes/cargos/#permissao-pagar). Se ninguém mexeu nos cargos, nada mudou: quem já podia pagar continua podendo.
+
+### Estou vendo só os últimos dígitos do CPF / da chave Pix. Está com defeito?
+
+Não. **Os dados bancários de quem recebe só aparecem por inteiro para quem tem permissão de pagar** — os demais veem apenas os dígitos finais, o suficiente para conferir de qual conta se trata. O nome de quem recebe continua visível para todo mundo. E fique tranquilo: **editar o lançamento sem mexer no bloco de pagamento não apaga nada** — os dados originais continuam lá. Ver [Dados bancários de quem recebe](/configuracoes/contas/#dados-bancarios-de-quem-recebe).
+
 ### Posso exportar os lançamentos?
 
 Sim. Na lista de **Movimentações**, clique em **Exportar** e escolha PDF (formatado) ou Excel (planilha). A exportação inclui os filtros ativos no momento da exportação. O Excel baixa na hora; o **PDF** é montado em segundo plano — o download começa sozinho quando fica pronto e o link também chega no seu e-mail, então você pode fechar a aba.
@@ -199,6 +207,10 @@ Sim. O formulário aceita múltiplos arquivos. Anexe nota fiscal, recibo, foto d
 
 Em **Meu Perfil → Dados para Reembolso**. Configure uma vez; o formulário de nova solicitação preenche automaticamente em todas as próximas vezes.
 
+### Abri um reembolso (ou pedido) antigo e os dados bancários sumiram. Perdi alguma coisa?
+
+Não. Depois que o pagamento é concluído, os dados bancários de quem recebeu ficam guardados apenas pelo prazo que a sua OSC definiu (padrão: **90 dias**) e então são **apagados automaticamente** — a tela explica isso quando você abre o registro. **Continuam ali** valor, descrição, datas, categoria, centro de custo, projeto, anexos, situação e o **nome de quem recebeu**: a prestação de contas fica completa. Se precisar pagar de novo para a mesma pessoa, peça os dados outra vez. Registros **ainda não pagos nunca são tocados**. Ver [Dados bancários de quem recebe](/configuracoes/contas/#dados-bancarios-de-quem-recebe).
+
 ### Qual a diferença entre Reembolso e Pedido de Pagamento?
 
 **Reembolso** é para despesa que **já aconteceu**: você pagou do bolso e quer receber de volta. **Pedido de Pagamento** é para despesa que **ainda vai acontecer**: a OSC vai pagar (boleto, fornecedor, contrato) e a aprovação autoriza a saída de dinheiro.
@@ -252,6 +264,14 @@ Estorno não tem "desfazer estorno" automático no RIT360 Financeiro. Para rever
 ### Minha conta bancária sumiu da lista. O que aconteceu?
 
 Contas podem ser **desativadas** por um administrador (em Configurações → Contas Bancárias). Contas desativadas não aparecem em filtros e formulários, mas as movimentações históricas associadas a elas são preservadas. Verifique com o admin.
+
+### Por quanto tempo ficam guardados os dados bancários de quem a OSC paga? Dá para mudar?
+
+Dá. Em **Configurações → Contas Bancárias**, no cartão **Descarte de dados bancários**, a organização escolhe entre **30, 90, 180 ou 365 dias** contados a partir da conclusão do pagamento — o padrão é **90**. Antes de salvar, a tela mostra **quantos registros já estariam vencidos** com o prazo escolhido. **Não existe a opção de guardar para sempre**: esses dados servem para fazer a transferência e, cumprida a finalidade, não precisam continuar guardados — ainda mais porque quem recebe muitas vezes nem tem conta no sistema para pedir a remoção. Ver [Dados bancários de quem recebe](/configuracoes/contas/#dados-bancarios-de-quem-recebe).
+
+### Quero que quem lança as despesas não possa dar baixa nos pagamentos. É possível?
+
+Sim. Em **Configurações → Cargos e permissões**, abra o cargo e **desligue "Pagar (marcar como pago)"** em Movimentações. A pessoa continua registrando e editando lançamentos normalmente, mas não confirma pagamentos — nem pelo lançamento, nem pela parcela de pedido de pagamento, nem pela conciliação de extrato. É a mesma lógica de segregação de funções que já protege a Comissão Fiscal. Ver [Cargos e permissões](/configuracoes/cargos/#permissao-pagar).
 
 ### Como começo do zero com as categorias? Não sei o que cadastrar.
 

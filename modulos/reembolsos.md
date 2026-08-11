@@ -144,6 +144,14 @@ Painel de Ações mostra: **"Aprovado — aguardando confirmação de pagamento 
 
 Quando o tesoureiro marca a movimentação financeira correspondente como paga, o reembolso aqui muda automaticamente para **Pago** (💙). O solicitante recebe notificação pelos canais que configurou no perfil. Ciclo encerrado.
 
+Marcar como pago exige a permissão de **pagar**, separada da de criar e editar lançamentos — ver [Cargos e permissões](/configuracoes/cargos/#permissao-pagar).
+
+> ⚠️ **Atenção · Seus dados bancários são apagados depois do pagamento**
+>
+> Depois que o reembolso é pago, a chave Pix / dados bancários que você informou ficam guardados apenas pelo prazo que a sua OSC definiu (30, 90, 180 ou 365 dias — padrão 90). Passado esse prazo, **CPF do titular, chave Pix, banco, agência e conta são apagados automaticamente**; o reembolso continua no histórico com valor, descrição, datas, comprovantes, aprovações e o seu nome. Por isso, um reembolso antigo pode aparecer sem os dados de pagamento — **não é erro**. Enquanto o reembolso **não** foi pago, os dados são preservados, para que a OSC consiga transferir. Ver [Contas Bancárias → Dados bancários de quem recebe](/configuracoes/contas/#dados-bancarios-de-quem-recebe).
+>
+> Se você pedir a **exclusão da sua conta**, os dados bancários dos seus reembolsos **já pagos** são apagados junto; os ainda não pagos seguem o prazo normal.
+
 ## Nova solicitação de reembolso
 
 [![Nova solicitação de reembolso](/assets/screenshots/manual-06d-novo-reembolso.png)](/assets/screenshots/manual-06d-novo-reembolso.png)

@@ -34,6 +34,10 @@ O instrumento mais poderoso do presidente é a **delegação bem feita**. Dar a 
 >
 > [![Papéis e permissões](/assets/screenshots/manual-09b-config-usuarios.png)](/assets/screenshots/manual-09b-config-usuarios.png)
 
+> 🧭 **Como o RIT360 Financeiro ajuda · Separar quem registra de quem paga**
+>
+> Se na sua OSC uma pessoa organiza as contas a pagar e **outra** é quem tem a senha do banco, dá para refletir isso no sistema: em [Cargos e permissões](/configuracoes/cargos/#permissao-pagar), desligue a permissão **Pagar (marcar como pago)** no cargo de quem só registra. Ela continua lançando e editando normalmente, mas não dá baixa em pagamentos — e passa a ver os dados bancários dos favorecidos apenas parcialmente. Se você não mexer em nada, tudo segue como sempre foi.
+
 ## 3. Ver o todo de relance
 
 A tranquilidade do presidente vem de uma coisa simples: **conseguir abrir o sistema e, em segundos, saber como a OSC está**. Não é preciso mergulhar nos detalhes — é preciso ter o panorama e saber onde olhar mais de perto quando algo pede atenção.

@@ -115,6 +115,14 @@ Painel de Ações mostra: **"Aprovado — aguardando confirmação de pagamento 
 >
 > No momento da aprovação, o RIT360 Financeiro cria automaticamente a **movimentação financeira pendente** (ou várias, no caso de parcelado e recorrente) com origem `purchase_order` (pedido de pagamento). O tesoureiro entra em Movimentações, escolhe a conta de saída e marca como paga. Cada ocorrência de uma série recorrente gera um movimento individual no momento programado, pago separadamente. O lançamento em Movimentações tem o link **"Ver pedido de pagamento →"** que volta ao detalhe original para conferência.
 
+> 📖 **Conceito · Confirmar o pagamento exige permissão própria**
+>
+> Marcar uma **parcela do pedido como paga** — assim como marcar um lançamento como pago — depende da permissão de **pagar**, separada da de criar e editar lançamentos. Quem não a tem acompanha o pedido normalmente, mas não dá baixa no pagamento. Ver [Cargos e permissões](/configuracoes/cargos/#permissao-pagar).
+
+> ⚠️ **Atenção · Os dados bancários do destinatário têm prazo**
+>
+> No detalhe do pedido, **quem tem permissão de pagar vê os dados bancários por inteiro**; os demais veem apenas os últimos dígitos (o nome do destinatário fica visível para todos). E, passado o prazo que a OSC definiu, **esses dados são apagados automaticamente** depois que o pagamento é concluído — o pedido continua no histórico com valor, descrição, datas, anexos e o nome de quem recebeu. Ver [Contas Bancárias → Dados bancários de quem recebe](/configuracoes/contas/#dados-bancarios-de-quem-recebe).
+
 ### Cancelar série (recorrente / parcelado)
 
 Para séries (recorrentes ou parceladas), o detalhe permite **cancelar com 3 escopos diferentes**, escolhidos no momento do cancelamento:

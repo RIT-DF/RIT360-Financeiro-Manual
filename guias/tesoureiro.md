@@ -108,6 +108,10 @@ O maior risco para um tesoureiro honesto é ser **o único que enxerga** o finan
 - Garanta que a diretoria e o conselho fiscal tenham acesso de leitura ao financeiro.
 - Trate a transparência como o que **protege a sua reputação**, não como fiscalização incômoda.
 
+> 🧭 **Como o RIT360 Financeiro ajuda · Cuidado com os dados de quem recebe**
+>
+> Os dados bancários dos favorecidos (CPF do titular, chave Pix, banco, agência, conta) ficam visíveis por inteiro **só para quem tem permissão de pagar** — os demais veem apenas os dígitos finais. E, passado o prazo que a OSC definir (padrão 90 dias após a conclusão do pagamento), eles são **apagados automaticamente**, preservando valor, datas, anexos e o nome de quem recebeu. Você não precisa fazer nada; só saiba que um registro antigo sem chave Pix **não é erro**. O prazo fica em [Configurações → Contas Bancárias](/configuracoes/contas/#dados-bancarios-de-quem-recebe).
+
 ## Checklist do bom tesoureiro
 
 - [ ] Toda movimentação lançada na hora, com comprovante.

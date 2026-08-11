@@ -97,8 +97,60 @@ Cada conta na lista mostra o **saldo atual**, calculado em tempo real a partir d
 >
 > No final de cada mês, abra o extrato do banco e o saldo da conta correspondente aqui no RIT360 Financeiro. Eles devem bater **centavos por centavos**. Diferenças apontam para lançamento esquecido, valor digitado errado, ou taxa que não foi registrada. Corrigir mensalmente é fácil; descobrir 6 meses depois é pesadelo.
 
+## Dados bancários de quem recebe {#dados-bancarios-de-quem-recebe}
+
+Além das contas da própria OSC, o sistema guarda os **dados bancários de quem recebe** um pagamento — o CPF do titular, a chave Pix, o banco, a agência e a conta que você informa num lançamento de despesa, num pedido de pagamento ou num reembolso. Esses dados têm regras próprias, definidas aqui nesta página.
+
+### Quem vê os dados completos
+
+- **Quem tem permissão de pagar** vê CPF, chave Pix, banco, agência e conta **por inteiro**, como sempre viu — no lançamento, no pedido de pagamento e no reembolso.
+- **Quem não tem** vê apenas os **últimos dígitos** (por exemplo, `•••.•••.123-45`) — o suficiente para conferir de qual conta se trata, sem expor o número inteiro.
+- O **nome de quem recebe continua visível para todos**.
+- Quem **preenche** os dados ao criar um lançamento, pedido ou reembolso continua digitando normalmente — a regra vale para consultar, não para informar.
+- A **exportação dos dados da organização** segue a mesma regra: quem não pode pagar recebe os dados mascarados.
+
+A permissão de pagar é ajustada em [Cargos e permissões](/configuracoes/cargos/#permissao-pagar).
+
+> ✓ **Dica · Ver mascarado não apaga nada**
+>
+> Se você editar um lançamento (mudar a descrição, o valor, a categoria) **sem mexer no bloco de dados de pagamento**, os dados originais ficam intactos — mesmo que você os esteja vendo mascarados. Não existe risco de "salvar por cima" com as bolinhas.
+
+### Descarte automático depois do pagamento
+
+Passado um prazo contado a partir da **conclusão do pagamento**, o sistema **apaga sozinho** os dados bancários do favorecido.
+
+- **O que é apagado:** CPF do titular, chave Pix, banco, agência, conta e dígito.
+- **O que permanece:** valor, descrição, datas, categoria, centro de custo, projeto, anexos, situação e **o nome de quem recebeu**. O histórico contábil e a prestação de contas **não se perdem**.
+- **Pagamentos ainda não concluídos nunca são tocados**, por mais antigos que sejam — esses dados ainda vão ser usados para transferir.
+
+### Escolher o prazo
+
+O prazo é definido pela organização, aqui em **Configurações → Contas Bancárias**:
+
+1. Localize o cartão **Descarte dos dados bancários de quem recebe** na página.
+2. Em **Prazo após a conclusão do pagamento**, escolha **30, 90, 180 ou 365 dias**. O padrão é **90 dias** — quem não mexer em nada se comporta como 90.
+3. Logo abaixo, a tela mostra **quantos registros já estariam vencidos** com o prazo escolhido, separados por lançamentos, reembolsos e pedidos de pagamento — assim você sabe o efeito imediato da escolha antes de confirmar.
+4. Clique em **Salvar prazo**.
+
+O descarte é **definitivo e acontece sem aviso**: são dados que já cumpriram a finalidade para a qual foram coletados.
+
+**Não existe a opção de guardar para sempre**: passado o prazo escolhido, o descarte acontece.
+
+> 💡 **Por que isso importa**
+>
+> Esses dados existem para uma finalidade única: fazer a transferência. Cumprida a finalidade, não há motivo para continuar guardando o CPF e a conta de um fornecedor ou de um voluntário — sobretudo porque quem recebe muitas vezes **não tem conta no sistema** para pedir a remoção por conta própria. Guardar só o tempo necessário é o comportamento correto e reduz o que a sua OSC teria a proteger num incidente.
+
+> ⚠️ **Atenção · Registro sem dados bancários não é erro**
+>
+> Ao abrir um lançamento, pedido ou reembolso antigo, você pode encontrar o cartão **Dados de pagamento** sem os dados, com o aviso de que *"os dados bancários foram removidos depois que o pagamento foi concluído, por já terem cumprido sua finalidade"*. Isso é o descarte automático funcionando — **não é falha do sistema nem dado perdido**. Se precisar pagar de novo para a mesma pessoa, peça os dados novamente e registre no novo lançamento.
+
+### Quando alguém pede a exclusão dos próprios dados
+
+Quem pede a exclusão da própria conta passa a ter apagados também os dados bancários que informou em **reembolsos já pagos**. Os reembolsos continuam no histórico da organização, com valor, descrição, datas, comprovantes e aprovações. **Reembolsos ainda não pagos mantêm os dados**, para que a OSC consiga concluir a transferência — e são apagados depois, pelo prazo normal de descarte.
+
 ## Por onde seguir
 
 - **Movimentações** — onde as contas aparecem como destino/origem dos lançamentos.
 - **Painel** — onde os saldos consolidados das contas ativas aparecem.
+- **[Cargos e permissões](/configuracoes/cargos/#permissao-pagar)** — onde se define quem pode pagar (e, por consequência, quem vê os dados bancários completos).
 - **Configurações → Organização → Integrações → WooCommerce** — onde você define qual conta recebe receitas da loja online.

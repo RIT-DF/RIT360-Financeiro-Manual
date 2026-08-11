@@ -34,10 +34,29 @@ A página **Cargos e permissões** vai além dos 7 cargos padrão da plataforma:
 
 As permissões são organizadas por área, com as operações que importam separadas:
 
-- **Movimentações** — Ver · Criar / editar · Excluir / estornar · Importar lançamentos
+- **Movimentações** — Ver · Criar / editar · **Pagar (marcar como pago)** · Excluir / estornar · Importar lançamentos
 - **Reembolsos e pedidos de pagamento** — Ver · Aprovar · Pagar
 - **Relatórios e auditoria** — Ver relatórios · Ver trilha de auditoria · Exportar dados (LGPD)
 - **Configurações** — Config. financeira (contas e categorias) · Config. da OSC · Gerir membros e cargos
+
+### Pagar é uma permissão separada de criar e editar
+{: #permissao-pagar }
+
+**Registrar uma despesa** e **confirmar que o dinheiro saiu** são duas coisas diferentes — e agora são duas permissões diferentes. A permissão **Pagar (marcar como pago)**, em Movimentações, é o que autoriza:
+
+- marcar um lançamento como **pago** (pela lista ou pelo detalhe, inclusive em lote);
+- marcar uma **parcela de pedido de pagamento** como paga;
+- **confirmar pagamentos pela conciliação de extrato bancário** — confirmar ali é uma forma de registrar que o dinheiro saiu, então pede a mesma permissão.
+
+Ela também é o que define **quem enxerga os dados bancários completos** de quem recebe — veja [Contas Bancárias → Dados bancários de quem recebe](/configuracoes/contas/#dados-bancarios-de-quem-recebe).
+
+> ✓ **Nada muda se você não mexer em nada**
+>
+> Todo cargo que já podia pagar continua podendo. A separação só existe para quem **quiser** usá-la: nesse caso, entre no cargo e **desligue "Pagar"** em Movimentações. A pessoa continua registrando e editando lançamentos normalmente — só não confirma pagamentos.
+
+> 💡 **Por que isso importa · Quem registra não precisa ser quem libera**
+>
+> Em muitas OSCs, uma pessoa organiza as contas a pagar (digita, anexa nota, classifica) e **outra** tem a senha do banco e efetivamente transfere. Antes, dar acesso para registrar dava de quebra o poder de dar baixa em pagamentos. Com a permissão separada, você monta um cargo de "apoio administrativo" que lança tudo, sem que ele possa declarar pago algo que ninguém pagou. É a mesma lógica de segregação de funções que protege a Comissão Fiscal, aplicada ao caixa.
 
 ## Editar um cargo
 

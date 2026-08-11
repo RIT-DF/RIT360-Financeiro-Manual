@@ -32,6 +32,7 @@ Visão rápida do que cada papel pode fazer. **✓** = pode operar · **👁** =
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | Ver o financeiro (movimentações, relatórios) | ✓ | ✓ | 👁 | 👁 | 👁 | — |
 | Lançar / editar / estornar movimentação | ✓ | ✓ | — | — | — | — |
+| Confirmar pagamento (marcar como pago) | ✓ | ✓ | — | — | — | — |
 | Cadastrar contas bancárias e categorias | ✓ | ✓ | — | — | — | — |
 | Configurar a OSC (dados, usuários, papéis, fluxo de aprovação) | ✓ | — | — | — | — | — |
 | Aprovar reembolsos / pedidos | conforme o fluxo | conforme o fluxo | — | — | conforme o fluxo | conforme o fluxo |
@@ -43,6 +44,8 @@ Visão rápida do que cada papel pode fazer. **✓** = pode operar · **👁** =
 | Aprovar o orçamento (`budget.approve`) | conforme o fluxo | conforme o fluxo | — | — | conforme o fluxo | — |
 
 > "Conforme o fluxo" = depende do que a OSC configurou em Fluxo de Aprovações (padrão: Presidente e Tesoureiro). Diretor e Comissão Fiscal **nunca** são aprovadores.
+
+> 💡 **Confirmar pagamento** aparece como linha própria porque é uma **permissão separada** de lançar/editar: dá para montar um cargo que registra despesas mas não dá baixa em pagamentos. Nos papéis padrão, quem lança também paga — a separação só acontece se a OSC quiser, em [Cargos e permissões](/configuracoes/cargos/#permissao-pagar). Essa mesma permissão define quem vê os **dados bancários completos** de quem recebe.
 
 > 💡 O **Gestor de Centro de Custo** não aparece nesse quadro porque o acesso dele não é da OSC inteira, e sim **recortado ao(s) centro(s) de custo sob sua responsabilidade** — ver a seção "Gestor de Centro de Custo", abaixo.
 
