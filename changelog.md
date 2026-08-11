@@ -11,6 +11,35 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.32.0] — 2026-08-11
+
+### Adicionado
+
+- **Contato de proteção de dados da organização.** Nas configurações da organização passa a existir um campo opcional para informar um e-mail — e, se quiser, o nome da pessoa responsável — para assuntos de dados pessoais. Serve para quem teve dados cadastrados pela organização (fornecedores, prestadores, participantes de projeto, beneficiários) pedir acesso, correção ou exclusão; essas pessoas normalmente não têm conta no sistema.
+- **Quando preenchido, esse contato aparece na página pública de transparência da organização.** Por isso, prefira um e-mail institucional — a tela avisa antes de salvar. Se não preencher, nada muda e nada aparece.
+- **Não é o mesmo campo que o e-mail institucional da organização.**
+
+---
+
+## [1.31.0] — 2026-08-10
+
+### Adicionado
+
+- **A organização pode exigir mais de duas aprovações.** O número de aprovações necessárias para um pedido de pagamento ou reembolso aceitava apenas 1 ou 2. Agora vai de 1 até a quantidade de pessoas aptas a aprovar na própria organização — a mesma régua já usada para as reprovações. Quem não mexer na configuração não tem nenhuma mudança.
+
+---
+
+## [1.30.0] — 2026-08-10
+
+### Adicionado
+
+- **Prestações de contas com mais opções.** Cada documento da lista passa a ter três ações: baixar, gerar de novo e apagar o arquivo.
+- **Gerar de novo ficou sempre disponível.** O documento é montado com os dados de hoje, e o arquivo que já existe não é substituído.
+- **Apagar remove só o arquivo.** O registro de que aquela prestação foi gerada, quando e por quem continua na lista, e o documento pode ser gerado outra vez. Antes de apagar, a confirmação mostra exatamente qual documento foi escolhido — período, data e hora da geração e quem gerou —, útil quando há várias prestações do mesmo mês.
+- **A lista também passou a mostrar a hora da geração e o intervalo de datas coberto por cada documento.**
+
+---
+
 ## [1.29.0] — 2026-08-10
 
 ### Adicionado

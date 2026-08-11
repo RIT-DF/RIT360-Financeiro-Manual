@@ -84,6 +84,34 @@ Configure URL da loja, Consumer Key e Consumer Secret (com instruções passo a 
 
 Armazenamento de documentos da OSC no Google Drive da organização. Anexos de movimentações, reembolsos e pedidos serão sincronizados automaticamente.
 
+## Contato de proteção de dados
+
+O bloco **Contato de proteção de dados** informa **para onde escrever quem quer tratar de dados pessoais que a sua organização cadastrou** — um fornecedor, um prestador de serviço, um participante de projeto, um beneficiário, um doador. Em geral são pessoas que **não têm conta** no RIT360 Financeiro e que precisam de um endereço para pedir acesso, correção ou exclusão dos próprios dados.
+
+[![Contato de proteção de dados](/assets/screenshots/manual-contato-protecao-de-dados.png)](/assets/screenshots/manual-contato-protecao-de-dados.png)
+*Configurações → Organização — o bloco Contato de proteção de dados, com o aviso de que o dado fica visível na página pública*
+
+São dois campos:
+
+- **E-mail de contato** — o endereço para onde essas solicitações devem ir.
+- **Pessoa responsável** — opcional; o nome (ou o cargo) de quem responde por esses pedidos na organização.
+
+**Preencher é opcional.** Se você deixar em branco, **nada muda e nada aparece em lugar nenhum** — nem na página pública, nem para os usuários. O bloco existe para a OSC que quer oferecer esse canal, não como uma exigência do sistema.
+
+> ⚠️ **Atenção · Preenchido, o contato fica visível para qualquer pessoa**
+>
+> Quando você preenche esses campos e a **[página pública de transparência](/configuracoes/pagina-publica/)** da sua organização está no ar, o contato **aparece nela** — e a página é aberta, sem login. Por isso: use um **e-mail institucional da OSC** (por exemplo, `contato@suaosc.org.br` ou um endereço criado para esse fim), e evite o e-mail pessoal de um voluntário. A própria tela avisa isso antes de salvar. Se a página pública não está publicada, o contato não aparece — mas vale preencher já pensando em quando ela for ao ar.
+
+> 📖 **Conceito · Não é o mesmo que o e-mail institucional**
+>
+> São campos diferentes, com finalidades diferentes, e um **não vira o outro automaticamente**. O **e-mail institucional** (lá em cima, na identidade da OSC) é o contato geral da organização, usado em documentos e relatórios. O **e-mail de proteção de dados** é o canal específico para pedidos sobre dados pessoais. Nada impede que sejam o mesmo endereço — mas isso é uma escolha sua, feita preenchendo os dois campos.
+
+> 💡 **Por que isso existe**
+>
+> Quando alguém quer tratar de dados pessoais, o caminho depende de **quem decide sobre aquele dado**. Dado que a **sua organização** cadastrou — o cadastro de um fornecedor, os dados de um participante de projeto, um anexo — se resolve **com a organização**, porque é ela quem pode corrigir, incluir ou remover. Já dado de **conta e acesso** — e-mail de login, senha, registros de acesso — é com a **RIT**. Este campo é o que dá endereço à primeira dessas duas portas: sem ele, quem procura a sua OSC não sabe para onde escrever. O roteamento completo está na Política de Privacidade, em **[Com quem falar sobre seus dados](/privacidade/#10-com-quem-falar-sobre-seus-dados)**.
+
+Quem edita esse bloco é quem já administra a organização — **não há permissão nova** nem papel novo envolvido.
+
 ## Exportar dados da organização (LGPD)
 
 No fim da página, a seção **Exportação de dados da organização (LGPD)** permite ao admin **baixar todos os dados da OSC** em um único pacote — útil para guardar um backup, levar para outro sistema ou atender a uma solicitação de transparência.
@@ -116,3 +144,4 @@ Ainda no fim da página, a **Zona de perigo · Encerrar organização** inicia o
 - **Configurações → Usuários** — para gerenciar membros da OSC.
 - **Configurações → Contas Bancárias** — para cadastrar as contas que aparecem em Movimentações.
 - **Movimentações → Importar Lançamentos** — onde a integração WooCommerce aparece como fonte ao lado do CSV.
+- **[Configurações → Página pública](/configuracoes/pagina-publica/)** — onde o contato de proteção de dados aparece para o visitante, se estiver preenchido.

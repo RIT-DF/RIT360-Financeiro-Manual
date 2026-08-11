@@ -281,6 +281,10 @@ Porque o recorte para sempre no **último mês encerrado**. O mês em curso é u
 
 Sim. Em **Configurações → Página pública → Colocar no site da organização**, clique em **Copiar código** e cole o trecho numa página do seu site — no WordPress, dentro de um bloco de **HTML personalizado**. O conteúdo aparece embutido, com a altura se ajustando sozinha e acompanhando a largura da coluna do site. A grande vantagem é que **ele se atualiza sozinho**: ninguém precisa copiar número à mão todo mês.
 
+### A página mostra algum e-mail de contato da minha organização?
+
+Só se você quiser. Em **Configurações → Organização** existe um bloco **opcional** chamado **[Contato de proteção de dados](/configuracoes/organizacao/#contato-de-proteção-de-dados)**, com um e-mail e, se você quiser, o nome da pessoa responsável. **Em branco, nada aparece.** Preenchido, o contato passa a aparecer na página pública quando ela está publicada — por isso a recomendação é usar um **e-mail institucional da OSC**, e não o e-mail pessoal de um voluntário. A tela avisa isso antes de salvar.
+
 ### Como tiro a página do ar se precisar corrigir algo?
 
 Desligue a chave **Publicar / Despublicar página pública**, no topo de Configurações → Página pública. O efeito é **imediato** e **nenhuma configuração é perdida** — blocos, período e missão continuam salvos, e religar devolve tudo como estava. Enquanto despublicada, você ainda consegue conferir tudo pela **Prévia**, que mostra exatamente o que o público veria.
@@ -337,6 +341,10 @@ Nas [Novidades](/changelog/) deste manual. Toda nova versão lançada é registr
 ### Quero entender melhor um conceito que aparece no RIT360 Financeiro (fluxo de caixa, regime de caixa, estorno...). Onde leio?
 
 Cada módulo deste manual tem uma seção **Conceitos essenciais** que cobre os termos relevantes em linguagem simples. Movimentações cobre regime de caixa e estorno; Reembolsos cobre quórum e auto-aprovação; Pedidos cobre recorrente vs parcelado.
+
+### Um fornecedor (ou participante de projeto) quer ver, corrigir ou apagar os dados dele. Quem responde?
+
+Depende de **quem decide sobre aquele dado**. Se foi a **sua organização** que cadastrou — cadastro de fornecedor, dados de um participante, um anexo —, quem responde é a **organização**, porque é ela quem pode corrigir, incluir ou remover. Se o assunto é **conta e acesso** — e-mail de login, senha, registros de acesso —, quem responde é a **RIT** (`dpo@rit.org.br`). Para que essas pessoas saibam onde procurar a sua OSC, preencha o **[contato de proteção de dados](/configuracoes/organizacao/#contato-de-proteção-de-dados)** em Configurações → Organização — ele aparece na página pública de transparência. O roteamento completo está na Política de Privacidade, em [Com quem falar sobre seus dados](/privacidade/#10-com-quem-falar-sobre-seus-dados).
 
 ### Posso usar o RIT360 Financeiro se não sou de OSC?
 

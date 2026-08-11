@@ -35,6 +35,8 @@ Comece pela identidade da OSC: nome, CNPJ, endereço, redes sociais e logo. É o
 
 [![Configuração da organização](/assets/screenshots/manual-09c-config-organizacao.png)](/assets/screenshots/manual-09c-config-organizacao.png)
 
+Nessa mesma página existe um bloco **opcional** que vale considerar já no começo: o **[contato de proteção de dados](/configuracoes/organizacao/#contato-de-proteção-de-dados)** — o e-mail para onde escreve quem teve dados cadastrados pela OSC (fornecedor, participante de projeto, beneficiário, doador) e quer acesso, correção ou exclusão. Deixar em branco não muda nada; se preencher, use um **e-mail institucional**, porque o contato aparece na página pública de transparência quando ela está no ar.
+
 ## 2. Cadastre as contas bancárias
 
 Cadastre cada conta da OSC (corrente, poupança, dinheiro em caixa, cartão) com o **saldo inicial correto** na data em que você começa a usar o RIT360 Financeiro. O saldo de cada conta passa a ser calculado a partir daí.

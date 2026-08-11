@@ -73,6 +73,16 @@ A seção **O que aparece na página** traz os quatro blocos que a OSC pode most
 >
 > A diferença entre Resumido e Detalhado não é estética: no modo **Resumido, o detalhe nem sai do servidor**. Não é uma informação que está lá escondida atrás de um clique ou de um "ver mais" — ela simplesmente não é enviada para o navegador do visitante. Quem escolhe mostrar menos, mostra menos de verdade. Isso importa para a OSC que quer publicar o panorama sem abrir a lista inteira de categorias, por exemplo.
 
+## Contato de proteção de dados (se estiver preenchido)
+
+Além dos quatro blocos, a página pode exibir o **contato de proteção de dados** da organização — o endereço para quem teve dados cadastrados pela OSC (fornecedor, prestador, participante de projeto, beneficiário, doador) pedir acesso, correção ou exclusão.
+
+Ele **não tem interruptor próprio aqui**: aparece quando o campo está preenchido em **[Configurações → Organização](/configuracoes/organizacao/#contato-de-proteção-de-dados)** e a página está publicada. Se o campo estiver em branco, **nada aparece** — e a página segue exatamente como antes.
+
+> ⚠️ **Atenção · É um dado público, como todo o resto da página**
+>
+> Como a página é aberta a qualquer pessoa, o e-mail e o nome do responsável preenchidos lá ficam **visíveis para todo mundo**. Prefira um **e-mail institucional da OSC**, não o e-mail pessoal de um voluntário. O aviso também aparece na própria tela de configuração, antes de salvar.
+
 ## Período mostrado
 
 O campo **Período mostrado por padrão** define o recorte que o visitante vê ao abrir a página. Ele pode trocar depois, escolhendo entre **opções fixas**: exercício corrente, últimos 12 meses e os exercícios anteriores.
@@ -142,6 +152,10 @@ Esta é, talvez, a parte mais importante desta página do manual. **Existe uma l
 - **Dados bancários e saldo das contas.**
 - **CPF, RG, e-mail e telefone** de pessoas.
 - **As telas internas de gestão** — aprovações, reembolsos, pedidos de pagamento, movimentações, orçamento.
+
+> ℹ️ **A única exceção é o contato de proteção de dados — e ela é escolha da OSC**
+>
+> Se a organização preencher o **contato de proteção de dados** em Configurações → Organização, o e-mail e o nome do responsável informados **aparecem na página**. É a única informação de contato que sai daqui, ela **só existe se alguém digitar** e serve justamente para dar endereço a quem precisa falar com a OSC sobre os próprios dados. É por isso que a recomendação é usar um **e-mail institucional**, e não o de uma pessoa.
 
 > 💡 **Por que isso é proteção, e não limitação**
 >
