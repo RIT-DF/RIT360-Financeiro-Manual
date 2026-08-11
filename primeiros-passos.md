@@ -163,4 +163,4 @@ Um usuário pode acumular mais de um papel na mesma OSC (ver [Múltiplos papéis
 - **Botão Feedback** dentro do RIT360 Financeiro — envia mensagem direto para a equipe RIT
 - **Este manual em `docs.financeiro.rit360.org.br`** — sempre tem a versão mais recente
 - **Novidades** ([novidades](/changelog/)) — para saber o que foi adicionado em cada versão; sempre acessível pelo número da versão no rodapé ou pelo menu do avatar
-- **E-mail dpo@rit.org.br** — para questões de privacidade ou LGPD
+- **Privacidade** — dado que a sua organização cadastrou (cadastro de membro, fornecedores, participantes, anexos) se resolve com ela; dado da sua conta e do acesso (e-mail de login, senha, registros de acesso) é com a RIT, pelo e-mail **dpo@rit.org.br**, que também encaminha o que for da organização. Ver [Com quem falar sobre seus dados](/privacidade/#10-com-quem-falar-sobre-seus-dados)

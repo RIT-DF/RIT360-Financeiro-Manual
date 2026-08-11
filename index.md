@@ -128,4 +128,4 @@ permalink: /
 
 <div class="section-title">Suporte e contato</div>
 
-<p>Dúvidas, sugestões ou problemas? Use o botão <strong>💬 Feedback</strong> dentro do RIT360 Financeiro — vai direto para a equipe da RIT, com a versão do app e o seu contexto. Para questões de privacidade ou LGPD, escreva para <a href="mailto:dpo@rit.org.br">dpo@rit.org.br</a>.</p>
+<p>Dúvidas, sugestões ou problemas? Use o botão <strong>💬 Feedback</strong> dentro do RIT360 Financeiro — vai direto para a equipe da RIT, com a versão do app e o seu contexto. Em questões de privacidade, depende do dado: se foi a sua organização que cadastrou (seu cadastro de membro, fornecedores, participantes, anexos), fale com ela; se é da sua conta e do acesso (e-mail de login, senha, registros de acesso), escreva para <a href="mailto:dpo@rit.org.br">dpo@rit.org.br</a> — que também encaminha o que for da organização. Detalhes em <a href="/privacidade/#10-com-quem-falar-sobre-seus-dados">Com quem falar sobre seus dados</a>.</p>

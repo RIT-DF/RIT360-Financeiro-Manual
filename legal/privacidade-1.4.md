@@ -1,11 +1,12 @@
 ---
-title: "Privacidade"
-nav_order: 1
-parent: "Termos e Privacidade"
-permalink: /privacidade/
+title: "Privacidade — versão 1.4 (arquivada)"
+nav_exclude: true
+permalink: /privacidade/1.4/
 version: "1.4"
 change_summary: "Passamos a dizer com todas as letras quem responde por cada dado. Nos dados que a organização cadastra — membros, fornecedores, prestadores, participantes de projeto, dados bancários, anexos e lançamentos —, quem decide é a organização, e a RIT atua como operadora, tratando por conta dela. Nos dados da sua conta e da plataforma — login, aceite dos documentos, segurança —, quem decide é a RIT. Incluímos uma tabela de quem é o quê para cada tipo de dado e reescrevemos a seção de contato para indicar com quem falar em cada caso, informando que hoje a plataforma ainda não guarda um contato de proteção de dados de cada organização."
 requires_reconsent: true
+archived: true
+sitemap: false
 ---
 
 # Política de Privacidade — RIT360 Financeiro

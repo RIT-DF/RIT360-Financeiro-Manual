@@ -1,11 +1,12 @@
 ---
-title: "Termos de Uso"
-nav_order: 2
-parent: "Termos e Privacidade"
-permalink: /termos/
+title: "Termos de Uso — versão 1.3 (arquivada)"
+nav_exclude: true
+permalink: /termos/1.3/
 version: "1.3"
 change_summary: "Passamos a dizer nestes Termos quem responde por cada dado. Nos dados que a organização cadastra e gerencia na plataforma, quem decide é ela, e a RIT trata esses dados por conta dela, como operadora. Nos dados de conta e de funcionamento da plataforma — login e autenticação, registro do aceite, segurança e auditoria —, quem decide é a RIT. O detalhamento de cada tipo de dado continua na Política de Privacidade, que é parte integrante destes Termos. Também corrigimos a parte de planos e preços: os Termos não citam mais um valor de assinatura, porque não há valor definido. A organização sem vínculo formal com a RIT passa a ser orientada a entrar em contato pelo formulário em rit360.org.br/interesse para acertar as condições de uso; se houver contrapartida financeira acordada, continuam valendo o pagamento antecipado e a suspensão do acesso por inadimplência acima de 30 dias."
 requires_reconsent: true
+archived: true
+sitemap: false
 ---
 
 # Termos de Uso — RIT360 Financeiro
