@@ -1,5 +1,4 @@
 ---
-layout: section
 title: "Termos de Uso — versão 1.2 (arquivada)"
 nav_exclude: true
 permalink: /termos/1.2/

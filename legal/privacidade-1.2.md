@@ -1,5 +1,4 @@
 ---
-layout: section
 title: "Privacidade — versão 1.2 (arquivada)"
 nav_exclude: true
 permalink: /privacidade/1.2/
