@@ -11,6 +11,17 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.32.1] — 2026-08-11
+
+### Segurança
+
+- **Os dados bancários de quem recebe um pagamento saíram do histórico de alterações.** CPF, chave Pix, banco, agência e conta do favorecido não são mais guardados no histórico de lançamentos, pedidos de pagamento e reembolsos. Esses dados servem para fazer a transferência — não precisam ficar registrados a cada alteração.
+- **O histórico continua completo no que importa para conferência:** ele segue mostrando que os dados de pagamento foram alterados, por quem e quando, e o nome do favorecido continua visível.
+- **Os registros antigos também foram limpos**, sem que nenhuma linha do histórico se perdesse.
+- **Nada muda nas telas.** Os dados bancários continuam aparecendo normalmente no lançamento, no pedido de pagamento e no reembolso.
+
+---
+
 ## [1.32.0] — 2026-08-11
 
 ### Adicionado
