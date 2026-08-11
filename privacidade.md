@@ -10,9 +10,7 @@ requires_reconsent: true
 
 # Política de Privacidade — RIT360 Financeiro
 
-<!-- Data de vigência: ajustar se a publicação ocorrer em outro dia. -->
-<!-- NÃO PUBLICAR: a 1.4 aguarda a decisão do DPO na issue #117 (base legal e avaliação de impacto), para fechar tudo numa versão só, com um único reaceite. -->
-**Vigência:** 10 de agosto de 2026
+**Vigência:** 11 de agosto de 2026
 **Versão:** 1.4
 
 ---

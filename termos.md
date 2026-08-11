@@ -10,9 +10,7 @@ requires_reconsent: true
 
 # Termos de Uso — RIT360 Financeiro
 
-<!-- Data de vigência: ajustar se a publicação ocorrer em outro dia. -->
-<!-- NÃO PUBLICAR: a 1.3 aguarda a decisão do DPO na issue #117 — Política 1.4 e Termos 1.3 saem no mesmo movimento, com um único reaceite. -->
-**Vigência:** 10 de agosto de 2026
+**Vigência:** 11 de agosto de 2026
 **Versão:** 1.3
 
 ---
