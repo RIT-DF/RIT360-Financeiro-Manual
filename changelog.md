@@ -11,6 +11,44 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.34.0] — 2026-08-11
+
+### Adicionado
+
+- **Agora existe uma permissão própria para pagar, separada da de criar e editar lançamentos.** Ela vale para marcar um lançamento como pago e para marcar uma parcela de pedido de pagamento como paga.
+- **Nada muda para quem não mexer nos cargos.** Todo cargo que já podia pagar continua podendo, sem precisar reconfigurar nada.
+- **Quem quiser separar quem registra despesas de quem libera dinheiro já pode.** Basta ir em Cargos e permissões e tirar a permissão de pagar do cargo desejado — a pessoa continua registrando e editando lançamentos normalmente, mas não confirma pagamentos.
+- **A regra também vale para a conciliação do extrato bancário.** Confirmar um pagamento por ali é uma forma de registrar que o dinheiro saiu, então exige a mesma permissão.
+
+---
+
+## [1.33.1] — 2026-08-11
+
+### Segurança
+
+- **Quem pede a exclusão dos próprios dados passa a ter apagados também os dados bancários informados em reembolsos já pagos:** CPF do titular, chave Pix, banco, agência e conta.
+- **Os reembolsos continuam no histórico da organização**, com valor, descrição, datas, comprovantes e aprovações — nada da prestação de contas se perde.
+- **Reembolsos ainda não pagos mantêm os dados bancários**, para que a organização consiga concluir a transferência. Esses dados são apagados depois, pelo prazo normal de descarte.
+
+---
+
+## [1.33.0] — 2026-08-11
+
+### Adicionado
+
+- **Os dados bancários de quem recebe um pagamento passam a ser apagados automaticamente depois de um prazo**, contado a partir da conclusão do pagamento. Vale para lançamentos, pedidos de pagamento e reembolsos.
+- **Cada organização escolhe o prazo** em Configurações › Contas Bancárias, entre 30, 90, 180 e 365 dias. O padrão é 90 dias — quem não mexer em nada se comporta como 90 dias.
+- **Antes de salvar, a tela mostra quantos registros já estariam vencidos** com o prazo escolhido.
+- **O que é apagado:** CPF do titular, chave Pix, banco, agência, conta e dígito. **O que permanece:** valor, descrição, datas, categoria, centro de custo, projeto, anexos, situação e o nome de quem recebeu. O histórico contábil e a prestação de contas não se perdem.
+- **Ao abrir um registro cujos dados já foram apagados, a tela explica o que aconteceu** — os dados bancários foram removidos por já terem cumprido sua finalidade. Não é erro.
+
+### Observações de uso
+
+- **Pagamentos ainda não concluídos nunca são tocados**, por mais antigos que sejam — esses dados ainda vão ser usados.
+- **Por que a mudança:** esses dados existem para fazer a transferência e, cumprida essa finalidade, não precisam continuar guardados — sobretudo porque quem recebe muitas vezes não tem conta no sistema para pedir a remoção por conta própria.
+
+---
+
 ## [1.32.1] — 2026-08-11
 
 ### Segurança
