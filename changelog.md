@@ -11,6 +11,24 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.36.1] — 2026-08-14
+
+### Corrigido
+
+- **Correção interna no registro de uso da API de integração.** Antes, uma tentativa de acesso recusada por credencial (chave revogada, segredo errado ou chamada sem credencial) não deixava nenhum registro — só o uso legítimo era registrado. Agora toda tentativa fica registrada, e quando a credencial é reconhecida o registro indica qual foi. Nada muda para quem usa a API: os mesmos códigos e as mesmas respostas de sempre.
+
+---
+
+## [1.36.0] — 2026-08-14
+
+### Adicionado
+
+- **A organização agora pode liberar, para um sistema parceiro, a leitura do próprio resumo financeiro** — sem dar acesso à plataforma e sem criar usuário para ninguém de fora.
+- **A credencial de acesso é gerada e revogada pela própria OSC**, em [Configurações → Integrações](/configuracoes/integracoes/). Não depende do suporte da RIT.
+- **Nenhum dado individual é exposto:** o sistema parceiro só recebe totais — receitas, despesas, resultado e composição por categoria ou projeto. Lançamento, contraparte, dados bancários e comprovantes continuam fora do alcance dessa integração, como já acontece na Página Pública.
+
+---
+
 ## [1.35.0] — 2026-08-11
 
 ### Segurança

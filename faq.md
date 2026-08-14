@@ -366,6 +366,10 @@ Cada módulo deste manual tem uma seção **Conceitos essenciais** que cobre os 
 
 Depende de **quem decide sobre aquele dado**. Se foi a **sua organização** que cadastrou — cadastro de fornecedor, dados de um participante, um anexo —, quem responde é a **organização**, porque é ela quem pode corrigir, incluir ou remover. Se o assunto é **conta e acesso** — e-mail de login, senha, registros de acesso —, quem responde é a **RIT** (`dpo@rit.org.br`). Para que essas pessoas saibam onde procurar a sua OSC, preencha o **[contato de proteção de dados](/configuracoes/organizacao/#contato-de-proteção-de-dados)** em Configurações → Organização — ele aparece na página pública de transparência. O roteamento completo está na Política de Privacidade, em [Com quem falar sobre seus dados](/privacidade/#10-com-quem-falar-sobre-seus-dados).
 
+### Posso integrar o RIT360 Financeiro com outro sistema?
+
+Sim. Em [Configurações → Integrações](/configuracoes/integracoes/), gere uma credencial e libere para um sistema parceiro (site institucional, painel do conselho, ferramenta interna) consultar o **resumo financeiro** da sua OSC por API — só totais, sem dado individual e sem dar acesso à plataforma. É diferente da [Página Pública](/configuracoes/pagina-publica/): ali é leitura humana e aberta a qualquer visitante; aqui é um canal técnico, autenticado, para outro sistema.
+
 ### Posso usar o RIT360 Financeiro se não sou de OSC?
 
 O RIT360 Financeiro é desenhado para OSCs (Organizações da Sociedade Civil) — terceiro setor. O fluxo de aprovação, os papéis e a linguagem refletem esse contexto. Outros tipos de organização (empresa, autônomo) podem usar tecnicamente, mas vão encontrar funcionalidades que não fazem sentido no contexto deles.
