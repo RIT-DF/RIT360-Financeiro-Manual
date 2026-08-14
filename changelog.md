@@ -11,6 +11,15 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.36.2] — 2026-08-14
+
+### Corrigido
+
+- **O financeiro do projeto agora atualiza na hora ao vincular, trocar ou remover o projeto de um lançamento, pela tela de Movimentações.** Antes, era preciso recarregar a página ou esperar cerca de um minuto para o valor aparecer, o que dava a impressão de que a vinculação não tinha funcionado.
+- **Vale também para o campo de projeto no detalhe de reembolsos e de pedidos de pagamento.**
+
+---
+
 ## [1.36.1] — 2026-08-14
 
 ### Corrigido
