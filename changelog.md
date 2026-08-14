@@ -11,6 +11,26 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.38.0] — 2026-08-14
+
+### Adicionado
+
+- **Agora dá para adicionar várias pessoas de uma vez à equipe de um projeto.** Selecione todas de uma vez e escolha um único papel para o grupo — para atribuir papéis diferentes, faça a operação em duas vezes.
+- **Se alguma pessoa não puder entrar, as demais entram normalmente.** O sistema mostra, pessoa por pessoa, quem entrou na equipe e por que alguma eventualmente não entrou.
+
+---
+
+## [1.37.0] — 2026-08-14
+
+### Adicionado
+
+- **Cada projeto agora declara como é financiado.** Ao criar ou editar um projeto, escolha entre "custeado pelo caixa geral da organização" e "tem recursos próprios".
+- **Projetos com recursos próprios mostram as receitas no financeiro do projeto**; os custeados pelo caixa geral mostram só as despesas.
+- **Se aparecer uma receita vinculada a um projeto declarado sem recursos próprios, o sistema mostra os valores normalmente e avisa para revisar a configuração** — o dado real tem prioridade sobre a declaração.
+- **Os projetos que já existiam foram classificados automaticamente**, de acordo com o que já tinham. Nada muda de aparência para quem não mexer em nada.
+
+---
+
 ## [1.36.2] — 2026-08-14
 
 ### Corrigido

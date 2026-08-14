@@ -25,7 +25,7 @@ Quem responde a essas perguntas *no fim do projeto* já chegou tarde. Quem respo
 
 > 📖 **Conceito · Projeto × caixa geral da OSC**
 >
-> O financeiro do projeto **não é uma caixinha separada do banco**. O dinheiro continua sendo o da OSC, nas mesmas contas. O que o projeto faz é **rotular** as movimentações: "esta despesa de R$ 300 em material foi do Acampamento". Assim você vê o recorte do projeto sem deixar de ver o todo. Por padrão, um projeto é **custeado pelo caixa geral da OSC** — as despesas dele saem do caixa comum, e o projeto te diz quanto já consumiu do que foi previsto.
+> O financeiro do projeto **não é uma caixinha separada do banco**. O dinheiro continua sendo o da OSC, nas mesmas contas. O que o projeto faz é **rotular** as movimentações: "esta despesa de R$ 300 em material foi do Acampamento". Assim você vê o recorte do projeto sem deixar de ver o todo. Cada projeto **declara como é financiado** — veja "Financiamento do projeto" logo abaixo.
 
 ## O modelo de gestão de projetos do RIT360 Financeiro
 
@@ -81,6 +81,17 @@ A cada projeto o RIT360 Financeiro atribui um **indicador de saúde** — um sem
 >
 > Dentro de um projeto, cada pessoa tem um **papel no projeto**, que é diferente do papel dela na OSC. Quem conduz é o **Coordenador do projeto** — pode editar escopo, equipe, marcos e riscos, gerenciar tarefas e solicitar despesas. Demais integrantes **contribuem** (assumem tarefas, comentam, anexam evidências) mas não mudam o planejamento. Um voluntário comum da OSC pode ser coordenador de um projeto específico; um tesoureiro pode ser só integrante de outro. O acesso ao projeto respeita esse papel.
 
+> 📖 **Conceito · Financiamento do projeto**
+>
+> Ao **criar** um projeto (no passo "financeiro" do assistente) ou ao **editar** um já existente, você escolhe como ele é financiado: **custeado pelo caixa geral da organização** ou **tem recursos próprios**. A escolha muda o que aparece na aba Financeiro do projeto:
+>
+> - **Custeado pelo caixa geral** — o projeto mostra só as **despesas**. É o caso mais comum: o dinheiro sai do caixa comum da OSC, e o projeto acompanha quanto já consumiu do que foi previsto.
+> - **Tem recursos próprios** — o projeto mostra **receitas e despesas**, porque ele recebe dinheiro específico (um edital, uma doação carimbada, uma taxa de inscrição) além de gastar.
+>
+> **Se a realidade não bater com a declaração**, o sistema prioriza o dado real: uma receita vinculada a um projeto declarado como "custeado pelo caixa geral" continua aparecendo normalmente na aba Financeiro, e um aviso pede para revisar a configuração — provavelmente esse projeto deveria estar marcado como "tem recursos próprios". Nada é escondido nem bloqueado; é só um alerta.
+>
+> **Projetos que já existiam antes dessa configuração** foram classificados automaticamente pelo que já tinham (quem já recebia receita virou "recursos próprios"; os demais, "custeado pelo caixa geral") — por isso nenhum projeto antigo mudou de aparência.
+
 ## A lista de projetos
 
 [![Lista de projetos em desktop](/assets/screenshots/manual-projetos-01-lista.png)](/assets/screenshots/manual-projetos-01-lista.png)
@@ -90,7 +101,7 @@ A tela **Projetos** lista as iniciativas da OSC. No **computador** (telas a part
 
 No topo você tem **busca por nome** e filtros por **Status**, **Tipo** e **Saúde** — úteis para, por exemplo, ver só os projetos em execução que estão em atenção.
 
-O botão **Novo projeto** abre um **assistente de 4 passos** (tipo e identidade · período · financeiro · coordenador), com textos de ajuda em cada etapa. Para um Evento, o assistente pede o número estimado de participantes; o texto se adapta ao tipo escolhido.
+O botão **Novo projeto** abre um **assistente de 4 passos** (tipo e identidade · período · financeiro · coordenador), com textos de ajuda em cada etapa. No passo **financeiro** você escolhe também o **financiamento do projeto** — custeado pelo caixa geral ou com recursos próprios (ver "Financiamento do projeto" acima). Para um Evento, o assistente pede o número estimado de participantes; o texto se adapta ao tipo escolhido.
 
 ## A aba Resumo
 
@@ -106,7 +117,7 @@ No topo do detalhe ficam as **ações de ciclo de vida** disponíveis para o sta
 [![Editar a identidade do projeto](/assets/screenshots/manual-projetos-editar.png)](/assets/screenshots/manual-projetos-editar.png)
 *Edição da identidade: nome, descrição, tipo, datas e categorias permitidas*
 
-Projetos mudam durante a execução — troca a coordenação, a data escorrega, o escopo se ajusta. Por isso os dados de identidade **podem ser editados depois de criados**, pelo botão **Editar** no cartão **Identidade** da aba Resumo. Dá para ajustar **nome, descrição, tipo, datas de início e fim e as categorias permitidas** (e, em projetos do tipo Evento, o número de participantes esperados).
+Projetos mudam durante a execução — troca a coordenação, a data escorrega, o escopo se ajusta. Por isso os dados de identidade **podem ser editados depois de criados**, pelo botão **Editar** no cartão **Identidade** da aba Resumo. Dá para ajustar **nome, descrição, tipo, datas de início e fim, as categorias permitidas e o financiamento do projeto** (e, em projetos do tipo Evento, o número de participantes esperados).
 
 **Mudanças que exigem reaprovação.** A regra depende do estado do projeto:
 
@@ -127,7 +138,7 @@ Projetos mudam durante a execução — troca a coordenação, a data escorrega,
 O Planejamento reúne cinco blocos:
 
 - **Escopo** — três campos em linguagem direta: **Objetivos** (o que o projeto quer alcançar), **Critérios de sucesso** (como saberemos que deu certo) e **O que NÃO faz parte** (para evitar mal-entendidos). Cada campo traz um exemplo.
-- **Equipe** — quem participa e em que papel. Você adiciona membros, muda papéis e remove. O sistema garante que o projeto sempre tenha **pelo menos um coordenador**. Quem deixou a organização continua listado, marcado como **ex-membro**; quem apenas está com o acesso desativado aparece como **"Desativado"** (ver logo abaixo).
+- **Equipe** — quem participa e em que papel. Você adiciona membros, muda papéis e remove. O sistema garante que o projeto sempre tenha **pelo menos um coordenador**. Quem deixou a organização continua listado, marcado como **ex-membro**; quem apenas está com o acesso desativado aparece como **"Desativado"** (ver logo abaixo). Dá para **adicionar várias pessoas de uma vez**, todas com o mesmo papel — ver "Adicionar várias pessoas à equipe" logo abaixo.
 - **Marcos** — as entregas/etapas com data prevista. Você pode marcar como atingido, reagendar e usar o **modelo de marcos** sugerido pelo tipo do projeto. Marcos pendentes que passam da data viram "perdidos" e alimentam a saúde do projeto.
 - **Riscos** — o que pode dar errado, com **Probabilidade** (Baixa/Média/Alta) e **Impacto** (Alto/Médio/Baixo). Quando os dois estão definidos, o risco mostra um selo de **severidade** (Probabilidade × Impacto), de Baixa a Alta — para você priorizar. Você pode marcar um risco como **materializado** ou **mitigado**.
 - **Partes interessadas (stakeholders)** — pessoas e organizações externas relevantes (financiador, parceiro, poder público) e o canal de contato.
@@ -135,6 +146,12 @@ O Planejamento reúne cinco blocos:
 > ✓ **Dica · Risco bom é risco escrito antes**
 >
 > O valor do bloco de riscos não está em prever o futuro — está em **combinar antecipadamente o que faremos se acontecer**. Um risco "Atraso na entrega do fornecedor — Probabilidade Média, Impacto Alto, mitigação: confirmar prazo por escrito e ter fornecedor reserva" vale mais do que dez reuniões de pânico depois que o fornecedor sumiu. Escreva os 3 ou 4 riscos óbvios logo no planejamento.
+
+### Adicionar várias pessoas à equipe
+
+Ao adicionar gente ao projeto, você pode **selecionar várias pessoas de uma vez** e atribuir a todas o **mesmo papel**. Se quiser papéis diferentes para pessoas diferentes, faça a operação em duas vezes — uma leva para cada papel.
+
+Se alguma das pessoas selecionadas não puder entrar (por exemplo, já está na equipe ou não pertence mais à organização), **as demais entram normalmente**: a operação não é cancelada por causa de uma pessoa. O sistema mostra, **pessoa por pessoa**, quem entrou na equipe e, para quem não entrou, o motivo.
 
 ### Quem saiu da organização continua na equipe
 
@@ -183,7 +200,7 @@ O Financeiro mostra o dinheiro do projeto sem tirar nada do caixa geral da OSC:
 - **Registrar despesa do projeto** — abre um **reembolso** ou um **pedido de pagamento** já vinculado a este projeto. A solicitação segue o **fluxo normal de aprovação** da OSC.
 - **Vincular lançamentos existentes** — atribui a este projeto movimentações que já foram lançadas e ainda não tinham projeto.
 - **Aguardando aprovação** — lista os pedidos e reembolsos do projeto que **ainda não foram aprovados** (com o selo "Aguardando Aprovação" ou "Rascunho"). Clique para abrir o pedido. **Esses pendentes não entram nos totais** — servem só para você saber o que já foi solicitado e **não pedir o mesmo pagamento duas vezes**. Quando aprovados, saem daqui e passam a contar como movimentação vinculada.
-- **Receitas e Despesas / Orçamento previsto / Previsto × Realizado** — o orçamento do projeto (total e, opcionalmente, por categoria) confrontado com o que já foi gasto, com saldo e percentual de consumo.
+- **Receitas e Despesas / Orçamento previsto / Previsto × Realizado** — o orçamento do projeto (total e, opcionalmente, por categoria) confrontado com o que já foi gasto, com saldo e percentual de consumo. O que aparece aqui depende do **financiamento do projeto** (ver "Financiamento do projeto" em Conceitos essenciais): um projeto **custeado pelo caixa geral** mostra só despesas; um projeto **com recursos próprios** mostra receitas e despesas. Se aparecer receita vinculada a um projeto marcado como "custeado pelo caixa geral", ela é exibida do mesmo jeito, com um aviso para revisar a configuração — o lançamento real vale mais que a declaração.
 - **Lançamentos vinculados** — as movimentações já atribuídas ao projeto, com filtros. Cada linha mostra o **valor** e acompanha a **situação do lançamento conforme ele evolui**: aparece quando é vinculado (previsto), muda para **pago** quando o pagamento é registrado e para **estornado** se for revertido — sempre na mesma linha, sem duplicar. Assim toda a equipe do projeto enxerga, em um só lugar, o que já foi previsto, o que foi efetivamente pago e o que foi estornado, com os valores visíveis a todos os membros.
 
 > ✓ **Dica · Todo mundo vê o dinheiro do projeto**
@@ -277,6 +294,7 @@ Cada encerramento alimenta um **acervo de Lições Aprendidas** da OSC, acessív
 - **Projeto** — iniciativa da OSC com objetivo, prazo, orçamento e equipe (evento, obra, campanha, edital, serviço).
 - **Tipo do projeto** — categoria que adapta a experiência (Evento ganha calculadora de taxa e participantes; cada tipo tem marcos-modelo).
 - **Ciclo de vida** — a sequência de status do projeto (Em planejamento → Aguardando aprovação → Em execução → Aguardando encerramento → Concluído; além de Pausado e Cancelado).
+- **Financiamento do projeto** — declaração de como o projeto é sustentado: "custeado pelo caixa geral" (só despesas no Financeiro) ou "tem recursos próprios" (receitas e despesas). Editável na criação e depois.
 - **Coordenador do projeto** — papel no projeto que conduz o planejamento, as tarefas e as solicitações financeiras.
 - **Ex-membro da organização** — pessoa que saiu da OSC e permanece na equipe do projeto apenas como registro histórico: não recebe novas atribuições e não pode ser editada nem removida da equipe.
 - **Desativado** — pessoa que continua vinculada à OSC, mas com o acesso suspenso. Aparece na equipe com esse selo; volta a atuar assim que o acesso é reativado.
