@@ -63,10 +63,12 @@ Ela pode ser usada para gerar cliente automaticamente (ex.: `openapi-generator`,
 ### Endpoint
 
 ```
-GET https://<host-das-funcoes>/functions/v1/integration_finance_summary
+GET https://jswyzxutdkrbrleotklo.supabase.co/functions/v1/integration_finance_summary
 ```
 
 Existe apenas este endpoint.
+
+> ⚠️ **O endereço das funções não é o mesmo do aplicativo.** O RIT360 Financeiro é um serviço único (não há instalação por cliente), então o endereço acima vale para todas as organizações — mas ele aponta para o servidor de funções, não para `financeiro.rit360.org.br`. Chamar o endereço do aplicativo devolve **HTTP 200 com a página HTML do sistema**, não os dados: parece que funcionou e não funcionou. Use exatamente o endereço acima.
 
 ### Autenticação
 
@@ -88,7 +90,7 @@ Não há parâmetro de organização: ela é determinada sempre pela credencial 
 
 ```
 curl -H "Authorization: Bearer rit_3b95e9fe_..." \
-  "https://<host>/functions/v1/integration_finance_summary?from=2026-07-01&to=2026-07-31"
+  "https://jswyzxutdkrbrleotklo.supabase.co/functions/v1/integration_finance_summary?from=2026-07-01&to=2026-07-31"
 ```
 
 ### Exemplo de resposta

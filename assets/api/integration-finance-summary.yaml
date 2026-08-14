@@ -15,11 +15,10 @@ info:
         apenas o hash. Perdeu, revogue e gere outra.
       - Revogação vale a partir da chamada seguinte e é definitiva.
 servers:
-  - url: https://{projectRef}.supabase.co/functions/v1
-    variables:
-      projectRef:
-        default: rit360
-        description: Host das funções de servidor do ambiente.
+  - url: https://jswyzxutdkrbrleotklo.supabase.co/functions/v1
+    description: |
+      Servidor de funções do RIT360 Financeiro. Endereço único para todas as
+      organizações, pois a plataforma é um serviço compartilhado.
 security:
   - integrationToken: []
 paths:
