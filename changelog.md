@@ -11,6 +11,29 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.40.1] — 2026-08-15
+
+### Corrigido
+
+- **Quem importa uma planilha agora recebe um aviso quando a importação termina, falha ou termina com linhas recusadas.** Antes, quem saía da tela de importação não ficava sabendo do resultado.
+
+### Segurança
+
+- **O processamento das importações em segundo plano passou a exigir credencial interna do sistema**, reforçando o controle de acesso a essa rotina.
+
+---
+
+## [1.40.0] — 2026-08-15
+
+### Adicionado
+
+- **A importação de lançamentos por planilha agora roda em segundo plano.** Antes, planilhas grandes (acima de cerca de 300 linhas) podiam travar no meio da importação: parte dos lançamentos já tinha entrado, e reimportar o mesmo arquivo duplicava tudo o que já havia sido importado. Agora a tela responde na hora, o usuário pode sair, e a importação continua sendo processada aos poucos.
+- **Reenviar o mesmo arquivo de uma importação interrompida continua de onde parou, sem duplicar o que já entrou.**
+- **Nova aba "Histórico" na tela de importação**, mostrando o andamento (quantas linhas de quantas já foram processadas), o resultado final e um relatório para baixar com as linhas recusadas.
+- **Limite de 5.000 linhas por arquivo**, com aviso claro pedindo para dividir a planilha em partes menores quando esse limite é ultrapassado.
+
+---
+
 ## [1.39.1] — 2026-08-14
 
 ### Corrigido
