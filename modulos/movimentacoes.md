@@ -434,7 +434,52 @@ Em vez de digitar lançamento por lançamento, você pode importar de duas fonte
 
 O **template baixável** já vem com todas essas colunas e linhas de exemplo — inclusive uma transferência, uma com projeto vinculado e uma com centro de custo. Baixe, apague os exemplos e preencha com os seus lançamentos.
 
-Parcelas e recorrências não entram por CSV — crie pelo formulário. **Comprovantes, sim:** a planilha tem uma coluna `comprovante` onde você informa o **link** do arquivo (vários links na mesma célula, separados por vírgula, barra vertical ou espaço). Cada linha é criada pela fila e, na sequência, os comprovantes são **baixados** e anexados — também em segundo plano; qualquer link que não baixar fica registrado na **observação** do lançamento. Use o **link direto** do arquivo; links de compartilhamento de nuvem que abrem uma página (em vez de baixar o arquivo) não funcionam.
+Parcelas e recorrências não entram por CSV — crie pelo formulário. **Comprovantes, sim:** a planilha tem uma coluna `comprovante` onde você informa o comprovante de cada lançamento — por **link** (endereço da internet) ou, agora, pelo **nome do arquivo** dentro de um ZIP que você envia junto (ver "Comprovantes em lote", abaixo). Vários comprovantes na mesma célula, links e nomes de arquivo podem ser combinados livremente. Cada linha é criada pela fila e, na sequência, os comprovantes são **baixados/extraídos** e anexados — também em segundo plano; qualquer comprovante que não for encontrado fica registrado na **observação** do lançamento. Ao usar link, use o **link direto** do arquivo; links de compartilhamento de nuvem que abrem uma página (em vez de baixar o arquivo) não funcionam.
+
+### Comprovantes em lote, por ZIP
+
+> 💡 **Por que isso importa**
+>
+> Antes, a coluna `comprovante` só aceitava links da internet. Quem tinha os comprovantes salvos no próprio computador — que é o caso mais comum — precisava importar a planilha primeiro e depois anexar cada comprovante um a um, lançamento por lançamento. Agora dá para levar a planilha e os arquivos juntos, numa importação só.
+
+Na tela de **Importar Lançamentos**, aba **CSV**, há um segundo campo, opcional: **Comprovantes em lote**. Envie um arquivo **`.zip`** com os comprovantes, junto com a planilha. Na coluna `comprovante`, em vez do link, escreva o **nome do arquivo** que está dentro do ZIP — com a extensão (`recibo-aluguel.pdf`, não só `recibo-aluguel`). Pastas dentro do ZIP são ignoradas: só o nome do arquivo importa, não o caminho.
+
+> 📖 **Conceito · Como o RIT360 Financeiro casa o nome com o arquivo**
+>
+> - **Maiúsculas e minúsculas não importam** — `Recibo.PDF` encontra `recibo.pdf`.
+> - **Acento importa** — `Anuidade.pdf` **não** encontra `Anuídade.pdf`. Escreva o nome exatamente como está no arquivo.
+> - **Espaço importa, e é permitido** — nome de arquivo pode ter espaço, e ele faz parte do nome (`nota fiscal 042.pdf` é um nome válido).
+> - A **extensão faz parte do nome** — `recibo.pdf` e `recibo.jpg` são comprovantes diferentes.
+
+> ⚠️ **Atenção · O sistema nunca chuta um comprovante parecido**
+>
+> Se o nome escrito na planilha não bater **exatamente** com um arquivo do ZIP, o RIT360 Financeiro **não anexa nada** — nunca escolhe o arquivo mais parecido. O lançamento é criado normalmente, só que sem o comprovante, e o nome que não foi encontrado fica registrado na observação do lançamento e no resumo da importação. É proposital: anexar o comprovante errado a um lançamento financeiro é pior do que não anexar nenhum — um comprovante trocado pode levar dias para ser percebido, e quando é, já foi usado numa prestação de contas.
+>
+> Dois arquivos com o **mesmo nome** dentro do ZIP também não têm escolha automática: viram aviso, sem anexar nenhum dos dois.
+
+**Vários comprovantes na mesma célula:** separe por vírgula (`,`), ponto-e-vírgula (`;`) ou barra vertical (`|`). **Espaço não separa** — assim um nome de arquivo com espaço não é cortado ao meio. Até 10 comprovantes por linha.
+
+*Exemplo — dois arquivos na mesma célula:*
+
+```
+recibo-042.pdf,nota fiscal 042.pdf
+```
+
+*Exemplo — misturando link e nome de arquivo na mesma célula:*
+
+```
+https://drive.exemplo.org/comprovante-luz.pdf,recibo-agua-marco.pdf
+```
+
+> ⚠️ **Atenção · Comprovante não encontrado? O caminho é reenviar a mesma planilha com o ZIP corrigido**
+>
+> Quando um comprovante não é achado, o lançamento **não fica pendente nem é recusado** — ele é criado sem o anexo, e o nome que faltou aparece no resumo da importação e na observação do lançamento. Para corrigir: renomeie o arquivo dentro do ZIP (ou ajuste o nome na planilha) para que os dois batam, monte o ZIP de novo e **reenvie a mesma planilha, com o ZIP novo**. O RIT360 Financeiro reconhece os lançamentos que já existem (mesma regra de reenvio da importação por CSV, ver caixa acima) e anexa **só o que estava faltando** — nenhum lançamento é duplicado.
+
+> ✓ **Dica · Nomeie os comprovantes antes de montar o ZIP**
+>
+> Como o casamento é exato, vale alguns minutos organizando os nomes antes de zipar: use um padrão simples e sem acento (`recibo-042.pdf`, `nf-marco-luz.pdf`) e confira que a coluna `comprovante` da planilha usa **exatamente** esses nomes. É mais rápido corrigir o nome de um arquivo agora do que reenviar a importação depois.
+
+**Limites:** o ZIP pode ter até **25 MB**; ZIP dentro do ZIP não é aberto (o sistema avisa, e os arquivos daquele ZIP interno não são considerados); arquivo do ZIP que nenhuma linha da planilha citou aparece no resumo como **não utilizado**. O ZIP enviado é apagado depois de processado — ele não fica guardado no sistema, só os comprovantes que foram efetivamente anexados aos lançamentos.
 
 > ⚠️ **Atenção · Deu erro no meio da importação? Reenvie o mesmo arquivo**
 >

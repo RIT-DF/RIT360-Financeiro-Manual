@@ -11,6 +11,32 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.41.1] — 2026-08-15
+
+### Corrigido
+
+- **A tela de conferência agora avisa quando o arquivo já foi importado antes.** Esse aviso aparecia ao escolher o arquivo e sumia na etapa seguinte, onde o botão prometia importar lançamentos mesmo quando nenhum seria criado. Agora o aviso acompanha até a confirmação, e o botão diz o que realmente vai acontecer.
+- **Corrigido o texto que dizia que acentos não importam ao procurar o comprovante no ZIP.** Acento faz parte do nome do arquivo e precisa ser igual ao que está escrito na planilha; o texto agora explica a regra corretamente.
+- Ajuste de redação no aviso de comprovantes que ficaram sem arquivo.
+
+---
+
+## [1.41.0] — 2026-08-15
+
+### Adicionado
+
+- **Agora dá para enviar os comprovantes junto com a planilha, num arquivo ZIP.** Antes, a coluna `comprovante` só aceitava endereços da internet — quem tinha os comprovantes no próprio computador precisava anexar um por um, depois de importar. Agora basta escrever o nome do arquivo na planilha e enviar um ZIP com os comprovantes.
+- **A mesma coluna aceita os dois formatos.** Valor que começa com `http` continua sendo tratado como link; qualquer outro valor é procurado como nome de arquivo dentro do ZIP. Dá para misturar os dois na mesma linha.
+- **Comprovante que não for encontrado não trava a importação:** o lançamento é criado normalmente e o sistema informa, **pelo nome**, quais arquivos não foram localizados — além de listar os arquivos do ZIP que nenhuma linha citou.
+- **Corrigir é simples:** ajuste o nome do arquivo, refaça o ZIP e envie de novo a mesma planilha com o ZIP novo. O sistema anexa apenas o que faltava e não cria nenhum lançamento repetido.
+- **A confirmação da importação passou a dizer em qual organização os lançamentos vão entrar**, para evitar importar na organização errada por engano.
+
+### Corrigido
+
+- **Nome de arquivo com espaço deixou de ser dividido em pedaços.** A separação de vários comprovantes na mesma linha usava o espaço como separador, o que quebrava nomes como `Nota Fiscal (NF).pdf`. Agora os separadores são vírgula, ponto-e-vírgula e barra vertical.
+
+---
+
 ## [1.40.1] — 2026-08-15
 
 ### Corrigido
