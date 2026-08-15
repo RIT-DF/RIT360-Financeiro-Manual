@@ -11,6 +11,28 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.38.2] — 2026-08-14
+
+### Adicionado
+
+- **Agora dá para excluir uma solicitação salva como rascunho** — vale para pedido de pagamento e para reembolso, e é o próprio solicitante quem pode excluir.
+- **A confirmação mostra o nome da solicitação, o valor e quantos anexos serão apagados junto**, e avisa que os dados bancários guardados também serão removidos.
+- **A exclusão é definitiva:** apaga a solicitação, os anexos, os arquivos e os dados bancários guardados. Não é possível desfazer.
+
+---
+
+## [1.38.1] — 2026-08-14
+
+### Corrigido
+
+- **Corrigida a edição de despesas por transferência com CPF do titular preenchido.** Desde que os dados bancários passaram a ficar protegidos, a tela de edição não reconhecia esse valor protegido e o recusava como se tivesse sido digitado errado, mostrando "CPF do titular inválido" mesmo para quem só queria mudar o título ou outro dado sem mexer no CPF. Agora a edição salva normalmente, e o dado protegido continua guardado como estava.
+- **Os campos protegidos (chave Pix, banco, agência, conta, CPF do titular) aparecem bloqueados na edição, com indicação de que estão protegidos**, e um botão para substituir o valor por um novo — com opção de desfazer antes de salvar.
+- **Esvaziar um dado protegido agora pede confirmação explícita**, porque a remoção é definitiva.
+- **Ao editar um lançamento recorrente aplicando a mudança a toda a série, os dados de pagamento deixaram de ser propagados** — cada lançamento mantém os seus, já que o favorecido pode ser diferente em cada um.
+- **Ao editar um lançamento recorrente para toda a série, os dados bancários deixaram de ser copiados para os demais lançamentos** — cada um mantém os seus próprios dados de pagamento.
+
+---
+
 ## [1.38.0] — 2026-08-14
 
 ### Adicionado
