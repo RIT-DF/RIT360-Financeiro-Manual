@@ -106,6 +106,10 @@ Pedidos recorrentes mostram aqui uma seção **Ocorrências** com a lista de cad
 
 O motivo da rejeição aparece em destaque no topo, e também fica registrado na timeline do **histórico de aprovações**, com o nome de quem reprovou e a data. O solicitante pode editar os campos e reenviar para nova rodada de aprovação.
 
+> ⚠️ **Atenção · Dados de pagamento do destinatário já salvos aparecem protegidos**
+>
+> Se a chave PIX ou os dados bancários do destinatário já estavam preenchidos, o campo aparece **bloqueado** na edição: mostra só uma parte do valor, a etiqueta **Protegido**, e um botão **Substituir** — salvar sem tocar nele não muda o que está guardado. Esvaziar um campo protegido pede confirmação, porque a remoção é definitiva. Detalhe completo, válido igualmente para reembolsos e para a edição de um lançamento em Movimentações, em [Movimentações → Editar um lançamento → Dados bancários protegidos](/modulos/movimentacoes/#dados-bancários-protegidos).
+
 > 📖 **Conceito · Quantas reprovações barram o pedido**
 >
 > Aprovar e reprovar têm **contas separadas**, ambas em [Fluxo de Aprovações](/configuracoes/aprovacoes/): o quórum diz quantas aprovações **liberam**, e o ajuste de **reprovações necessárias** diz quantas **barram**. O padrão de reprovações é **1** — uma pessoa encerra o pedido na hora, mesmo que já houvesse uma aprovação registrada. Se a organização exigir **mais de uma**, o pedido **continua Aguardando aprovação** até o número ser alcançado, a tela mostra quantas faltam, e o solicitante só é avisado no desfecho definitivo. **O voto é definitivo** nos dois sentidos, e a tela avisa antes de confirmar. O reenvio, além disso, **exige uma alteração real** (trocar o comprovante já conta) e **reinicia as aprovações já dadas**. O detalhe completo, válido igualmente para pedidos de pagamento e reembolsos, está em [Reembolsos → Rejeitado](/modulos/reembolsos/#rejeitado).

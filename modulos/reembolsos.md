@@ -150,6 +150,10 @@ Painel de Ações mostra: **"Aprovado — aguardando confirmação de pagamento 
 >
 > No momento em que o reembolso é aprovado, o RIT360 Financeiro cria automaticamente uma **movimentação financeira pendente** em Movimentações com origem `reimbursement` (origem reembolso), valor e categoria corretos, ainda sem conta financeira definida. Cabe ao tesoureiro entrar em Movimentações, clicar nessa linha, escolher a conta de onde o dinheiro vai sair e marcar como paga. O ciclo só fecha quando essa confirmação acontece. Na lista de Movimentações, o lançamento traz um link **"Ver pedido de reembolso →"** que volta direto ao detalhe original — útil para conferir comprovante antes de pagar.
 
+> 📖 **Conceito · Corrigir o centro de custo depois do envio**
+>
+> Se o reembolso já foi enviado — inclusive aprovado ou pago — e o centro de custo ficou errado, quem faz a gestão financeira da OSC corrige direto no detalhe do reembolso, ao lado do campo **Centro de custo**, botão **Corrigir**. A tela mostra antes o que será alterado (a solicitação e quantos lançamentos gerados por ela) e pede um motivo, que fica na trilha de auditoria. A correção alcança os lançamentos já criados, inclusive os pagos. O mesmo mecanismo vale para pedidos de pagamento — ver [Pedidos de Pagamento → Corrigir o centro de custo depois do envio](/modulos/pedidos-pagamento/#corrigir-o-centro-de-custo-depois-do-envio).
+
 ### Pago
 
 Quando o tesoureiro marca a movimentação financeira correspondente como paga, o reembolso aqui muda automaticamente para **Pago** (💙). O solicitante recebe notificação pelos canais que configurou no perfil. Ciclo encerrado.
