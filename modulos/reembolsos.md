@@ -83,6 +83,12 @@ Nas linhas com status "Aguardando aprovação", aprovadores elegíveis veem os b
 
 Clique em qualquer linha para abrir o detalhe completo. A página tem todas as informações necessárias para tomar uma decisão de aprovação consciente — sem precisar perguntar nada para ninguém.
 
+### Rascunho
+
+Abra um reembolso salvo como rascunho para ver os botões **Editar rascunho** e **Excluir rascunho**, lado a lado.
+
+Ao clicar em **Excluir rascunho**, a confirmação mostra qual solicitação será apagada, o valor, quantos anexos vão junto, e avisa que os dados bancários guardados nela também serão removidos. **A exclusão é definitiva** — não tem como recuperar um rascunho depois de excluído. Vale igualmente para pedidos de pagamento (ver [Pedidos de Pagamento → Rascunho](/modulos/pedidos-pagamento/#rascunho)).
+
 ### Aguardando aprovação
 
 [![Reembolso aguardando aprovação](/assets/screenshots/manual-06-reembolso-aguardando.png)](/assets/screenshots/manual-06-reembolso-aguardando.png)
@@ -106,6 +112,10 @@ Clique em qualquer linha para abrir o detalhe completo. A página tem todas as i
 *Detalhe de reembolso rejeitado*
 
 O motivo da rejeição aparece em destaque no topo da página, e também fica registrado na timeline do **histórico de aprovações**, com o nome de quem reprovou e a data. O solicitante (e somente o solicitante) vê o botão **Editar e reenviar** — clicando, os campos passam a ser editáveis na própria página, sem precisar criar um reembolso novo. Corrige o que foi apontado (valor errado, comprovante ausente, categoria trocada), reenvia, e o fluxo recomeça.
+
+> ⚠️ **Atenção · Chave PIX/dados bancários já salvos aparecem protegidos**
+>
+> Se a chave PIX ou os dados bancários já estavam preenchidos, o campo aparece **bloqueado** na edição: mostra só uma parte do valor, a etiqueta **Protegido**, e um botão **Substituir** — salvar sem tocar nele não muda o que está guardado. Esvaziar um campo protegido pede confirmação, porque a remoção é definitiva. O mesmo vale para pedidos de pagamento e para a edição de um lançamento em Movimentações — ver [Movimentações → Editar um lançamento → Dados bancários protegidos](/modulos/movimentacoes/#dados-bancários-protegidos).
 
 > 📖 **Conceito · Quantas reprovações barram o reembolso**
 >

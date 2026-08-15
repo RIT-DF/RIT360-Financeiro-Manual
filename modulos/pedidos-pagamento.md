@@ -78,6 +78,12 @@ Pedidos únicos aparecem sem badge adicional.
 
 ## Detalhe do pedido
 
+### Rascunho
+
+Abra um pedido salvo como rascunho para ver os botões **Editar rascunho** e **Excluir rascunho**, lado a lado.
+
+Ao clicar em **Excluir rascunho**, a confirmação mostra qual solicitação será apagada, o valor, quantos anexos vão junto, e avisa que os dados bancários guardados nela também serão removidos. **A exclusão é definitiva** — não tem como recuperar um rascunho depois de excluído. Use quando o pedido não faz mais sentido (por exemplo, a compra foi cancelada antes mesmo de pedir aprovação); se ainda faz sentido, prefira **Editar rascunho** e enviar quando estiver pronto.
+
 ### Aguardando aprovação
 
 [![Pedido aguardando aprovação](/assets/screenshots/manual-08-pedido-aguardando.png)](/assets/screenshots/manual-08-pedido-aguardando.png)
@@ -122,6 +128,15 @@ Painel de Ações mostra: **"Aprovado — aguardando confirmação de pagamento 
 > ⚠️ **Atenção · Os dados bancários do destinatário têm prazo**
 >
 > No detalhe do pedido, **quem tem permissão de pagar vê os dados bancários por inteiro**; os demais veem apenas os últimos dígitos (o nome do destinatário fica visível para todos). E, passado o prazo que a OSC definiu, **esses dados são apagados automaticamente** depois que o pagamento é concluído — o pedido continua no histórico com valor, descrição, datas, anexos e o nome de quem recebeu. Ver [Contas Bancárias → Dados bancários de quem recebe](/configuracoes/contas/#dados-bancarios-de-quem-recebe).
+
+### Corrigir o centro de custo depois do envio
+
+Se o pedido já foi enviado — inclusive **aprovado** ou até **pago** — e o centro de custo ficou errado, quem faz a gestão financeira da OSC pode corrigir sem precisar reabrir ou cancelar nada. No detalhe do pedido, ao lado do campo **Centro de custo**, clique em **Corrigir**.
+
+[![Corrigir centro de custo de um pedido já enviado](/assets/screenshots/ped-corrigir-centro-custo.png)](/assets/screenshots/ped-corrigir-centro-custo.png)
+*Corrigir centro de custo: escolha o novo, informe o motivo, e a tela mostra antes o que vai mudar*
+
+Escolha o **novo centro de custo** e escreva o **motivo da correção** (obrigatório) — ele fica guardado na trilha de auditoria, junto com o valor anterior e o novo. Antes de confirmar, a tela mostra o que será alterado: a própria solicitação e quantos lançamentos financeiros gerados por ela também vão mudar. A correção alcança os lançamentos já criados a partir deste pedido, **inclusive os que já foram pagos**.
 
 ### Cancelar série (recorrente / parcelado)
 

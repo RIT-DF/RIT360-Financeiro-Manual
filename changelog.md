@@ -11,6 +11,29 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.39.1] — 2026-08-14
+
+### Corrigido
+
+- **Corrigido o texto exibido nos campos protegidos de dados bancários, na tela de edição.** Antes, aparecia uma frase dizendo que o usuário não tinha permissão para ver aquele dado — mesmo para quem tinha permissão. Agora o texto explica que o dado está guardado com segurança, aparece parcialmente na tela, e só é alterado se um valor novo for digitado no campo.
+
+---
+
+## [1.39.0] — 2026-08-14
+
+### Corrigido
+
+- **O centro de custo informado num pedido de pagamento agora chega até o lançamento financeiro gerado quando o pedido é aprovado.** Antes, esse gasto aparecia como "sem centro de custo" nos relatórios e no orçamento, mesmo quando o centro de custo tinha sido informado corretamente no pedido.
+- **13 pagamentos de uma organização, que haviam perdido o centro de custo por esse motivo, foram corrigidos retroativamente.** Os relatórios de julho e agosto dessa organização já refletem a classificação correta.
+
+### Adicionado
+
+- **Quem faz a gestão financeira agora pode corrigir o centro de custo de um pedido de pagamento ou reembolso depois de enviado**, informando o motivo da correção, que fica registrado.
+- **A correção atualiza também os lançamentos financeiros já criados a partir daquele pedido**, inclusive os que já foram pagos.
+- **A correção do centro de custo nunca aprova nem reprova a solicitação sozinha.** Quando ela muda quem está apto a aprovar aquele pedido, os votos de aprovação que só valiam pelo centro de custo antigo deixam de contar, e essas pessoas são avisadas para decidir de novo.
+
+---
+
 ## [1.38.2] — 2026-08-14
 
 ### Adicionado

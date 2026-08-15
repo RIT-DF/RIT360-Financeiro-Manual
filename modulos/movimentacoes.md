@@ -173,7 +173,7 @@ Clique no cabeçalho de qualquer coluna para ordenar. Um segundo clique inverte 
 
 Cada linha tem ícones de ação que mudam conforme o status:
 
-- ✏️ **Editar** — disponível para movimentações pendentes ou atrasadas
+- ✏️ **Editar** — disponível para movimentações pendentes ou atrasadas (ver **Editar um lançamento**, abaixo)
 - 💲 **Marcar como pago** — disponível para pendentes e atrasadas (atalho rápido sem entrar no detalhe), **para quem tem permissão de pagar**
 - ✕ **Cancelar** — disponível para pendentes e atrasadas
 - ↩ **Estornar** — disponível para pagas
@@ -311,6 +311,35 @@ Você pode anexar arquivos (comprovantes, notas fiscais, contratos) ao lançamen
 > ✓ **Dica · Tesoureiro em campo, câmera direto no app**
 >
 > Tesoureiro voluntário em viagem com o grupo, pagou combustível no posto: abre o RIT360 Financeiro instalado no celular, **Novo Lançamento → Tirar foto**, fotografa o cupom fiscal, confirma. Quatro toques contra os oito tradicionais de tirar foto pelo app de câmera, salvar na galeria, abrir o RIT360 Financeiro, navegar, selecionar.
+
+## Editar um lançamento
+
+Lançamentos **pendentes** ou **atrasados** podem ser editados por completo. Clique no ícone ✏️ **Editar** na linha da lista, ou no botão **Editar** no detalhe do lançamento. (Para corrigir um lançamento que já está **pago**, veja **Corrigir os dados de um lançamento pago**, mais abaixo — é uma janela mais restrita, que não mexe no valor nem no status.)
+
+> 📖 **Conceito · Editar um lançamento de série recorrente**
+>
+> Ao editar um lançamento que faz parte de uma série recorrente, o RIT360 Financeiro pergunta primeiro o alcance da mudança: **Apenas este lançamento**, **Este e os próximos** ou **Toda a série**. Escolha com atenção — o alcance vale para tudo que você mudar em seguida (data, valor, categoria etc.), exceto os dados bancários, que têm regra própria (ver abaixo).
+
+[![Escolha do alcance ao editar um lançamento recorrente](/assets/screenshots/mov-editar-serie-escopo.png)](/assets/screenshots/mov-editar-serie-escopo.png)
+*Editar um lançamento de série recorrente: escolha entre alterar só este, este e os futuros, ou toda a série*
+
+O formulário de edição tem os mesmos campos do lançamento novo (descrição, datas, conta, categoria, projeto, centro de custo, forma de pagamento, anexos — ver **Registrar novo lançamento**, acima).
+
+### Dados bancários protegidos
+
+Quando o lançamento já tem chave PIX ou dados bancários do destinatário guardados, esses campos aparecem **bloqueados** na tela de edição: mostram só uma parte do valor (por exemplo, `e2···@example.com`), a etiqueta **Protegido**, e um botão **Substituir** no lugar do campo aberto para digitar.
+
+[![Campo de chave PIX protegido na edição de um lançamento](/assets/screenshots/mov-editar-dado-protegido.png)](/assets/screenshots/mov-editar-dado-protegido.png)
+*Chave PIX protegida: valor parcial, etiqueta "Protegido" e botão "Substituir"*
+
+- **Salvar sem tocar no campo protegido não altera o que está guardado.** Você pode ajustar qualquer outro dado do lançamento — data, conta, categoria, valor — sem risco de mexer sem querer nos dados bancários.
+- **Clique em Substituir** para digitar um valor novo; o dado só é trocado de fato quando você salvar. Um botão **Desfazer** aparece para voltar ao estado protegido, caso mude de ideia antes de salvar.
+- **Esvaziar um campo protegido pede confirmação**, porque a remoção é definitiva — não tem como recuperar o dado depois de apagado.
+- **Em lançamento de série recorrente, os dados de pagamento nunca são propagados**, mesmo quando você escolhe editar "Este e os próximos" ou "Toda a série": cada lançamento da série guarda os seus próprios dados bancários, e uma edição em lote não mexe neles — cada um continua como estava.
+
+> 💡 **Por que isso importa**
+>
+> Chave PIX e dados bancários são informação sensível: depois que a pessoa (voluntário, fornecedor) confirmou o dado certo, ele não deve mudar sozinho só porque alguém salvou o lançamento para corrigir a categoria ou a data. O campo protegido evita erro de transferência por edição acidental, e o aviso ao esvaziar evita perder o dado à toa.
 
 ## Estornar um lançamento
 
