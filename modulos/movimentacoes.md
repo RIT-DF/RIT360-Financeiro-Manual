@@ -389,11 +389,19 @@ Para corrigir:
 
 Em vez de digitar lançamento por lançamento, você pode importar de duas fontes:
 
-**Acesso:** botão **Importar Lançamentos** no topo da lista de movimentações.
+**Acesso:** botão **Importar Lançamentos** no topo da lista de movimentações — a tela tem três abas: **CSV**, **WooCommerce** e **Histórico**.
+
+> 📖 **Conceito · A importação roda em segundo plano**
+>
+> Depois de confirmar, você não precisa ficar com a tela aberta esperando. O RIT360 Financeiro recebe as linhas, responde em segundos confirmando que elas **entraram na fila**, e processa tudo por trás — você pode navegar para outra tela ou fechar o navegador. Uma planilha de **800 linhas leva cerca de 9 minutos** para ser processada por completo; acompanhe o andamento pela aba **[Histórico](#aba-historico)** e receba um aviso quando terminar. Antes, a tela ficava travada até o fim e uma planilha grande podia **falhar no meio** por demora — hoje isso não acontece mais.
 
 ### Importação por CSV
 
-Útil para migrar histórico de planilhas (a base mais comum quando uma OSC começa a usar o RIT360 Financeiro). Faça download do template, preencha as linhas com seus lançamentos antigos, faça upload. O RIT360 Financeiro mostra um **preview** com erros por linha antes de criar nada; você confirma e os lançamentos são criados em lote.
+Útil para migrar histórico de planilhas (a base mais comum quando uma OSC começa a usar o RIT360 Financeiro). Faça download do template, preencha as linhas com seus lançamentos antigos, faça upload. O RIT360 Financeiro mostra um **preview** com erros por linha antes de enviar qualquer coisa para a fila; você confirma e as linhas entram na fila de processamento (ver caixa acima).
+
+> ⚠️ **Atenção · Limite de 5.000 linhas por arquivo**
+>
+> Planilhas com mais de 5.000 linhas são recusadas já no upload — divida o arquivo em partes menores e importe uma de cada vez. Mesmo dentro do limite, uma planilha perto do teto pode levar **cerca de uma hora** para terminar de processar; isso é esperado, não é travamento. Deixe rodando e volte para conferir pelo Histórico.
 
 **Formato:** separador ponto-e-vírgula (`;`); valor em reais com vírgula decimal (`1500,00`); data `DD/MM/AAAA`.
 
@@ -426,13 +434,37 @@ Em vez de digitar lançamento por lançamento, você pode importar de duas fonte
 
 O **template baixável** já vem com todas essas colunas e linhas de exemplo — inclusive uma transferência, uma com projeto vinculado e uma com centro de custo. Baixe, apague os exemplos e preencha com os seus lançamentos.
 
-Parcelas e recorrências não entram por CSV — crie pelo formulário. **Comprovantes, sim:** a planilha tem uma coluna `comprovante` onde você informa o **link** do arquivo (vários links na mesma célula, separados por vírgula, barra vertical ou espaço). Ao importar, os lançamentos são criados na hora e os comprovantes são **baixados em segundo plano** e anexados — você recebe um aviso ao concluir, e qualquer link que não baixar fica registrado na **observação** do lançamento. O aviso de conclusão traz um **resumo** (quantos lançamentos foram criados, quantos ficaram de fora por erro, quantos comprovantes foram anexados e quantos não puderam ser baixados) e, quando há falha, a **lista dos lançamentos com comprovante não baixado** (título, data e motivo) — facilitando anexar manualmente depois. Use o **link direto** do arquivo; links de compartilhamento de nuvem que abrem uma página (em vez de baixar o arquivo) não funcionam.
+Parcelas e recorrências não entram por CSV — crie pelo formulário. **Comprovantes, sim:** a planilha tem uma coluna `comprovante` onde você informa o **link** do arquivo (vários links na mesma célula, separados por vírgula, barra vertical ou espaço). Cada linha é criada pela fila e, na sequência, os comprovantes são **baixados** e anexados — também em segundo plano; qualquer link que não baixar fica registrado na **observação** do lançamento. Use o **link direto** do arquivo; links de compartilhamento de nuvem que abrem uma página (em vez de baixar o arquivo) não funcionam.
+
+> ⚠️ **Atenção · Deu erro no meio da importação? Reenvie o mesmo arquivo**
+>
+> Se a importação for **interrompida** — queda de conexão, fechamento acidental do navegador, falha do lado do servidor — a solução é simples: **envie o mesmo arquivo de novo**. O RIT360 Financeiro reconhece o que já foi processado e **continua de onde parou**, sem criar lançamentos duplicados. Ao escolher um arquivo que já foi importado antes, a tela **avisa** antes de você confirmar, para você saber exatamente o que está prestes a acontecer.
+>
+> Esta é a mudança mais importante desta versão: **antes**, reimportar depois de um erro duplicava os lançamentos que já tinham entrado, e a única forma segura de corrigir era caçar e apagar as duplicatas na mão. **Hoje não existe mais esse risco** — reenviar é sempre seguro.
+
+Quando a importação termina — com sucesso, com linhas recusadas, ou com falha — quem importou recebe uma **notificação**. Não é preciso ficar de olho na tela esperando. Ela traz um **resumo** (quantos lançamentos foram criados, quantos ficaram de fora por erro, quantos comprovantes foram anexados e quantos não puderam ser baixados) e, quando há falha em comprovante, a **lista dos lançamentos com comprovante não baixado** (título, data e motivo) — facilitando anexar manualmente depois.
 
 ### Importação do WooCommerce
 
-Se sua OSC tem loja online em WooCommerce (venda de produtos, doações online, ingressos), pode conectar a loja ao RIT360 Financeiro em **Configurações → Organização → WooCommerce**. Uma vez configurada, pedidos pagos viram receitas automaticamente — diariamente via sincronização programada ou sob demanda pelo botão **Importar agora** desta tela. A sincronização roda **em segundo plano**: a tela responde na hora, você acompanha o andamento pelo histórico e recebe um aviso ao concluir; importações grandes se completam sozinhas, em um único disparo.
+Se sua OSC tem loja online em WooCommerce (venda de produtos, doações online, ingressos), pode conectar a loja ao RIT360 Financeiro em **Configurações → Organização → WooCommerce**. Uma vez configurada, pedidos pagos viram receitas automaticamente — diariamente via sincronização programada ou sob demanda pelo botão **Importar agora** desta tela. A sincronização roda **em segundo plano**: a tela responde na hora, você acompanha o andamento pela aba **Histórico** e recebe uma notificação ao concluir; importações grandes se completam sozinhas, em um único disparo.
 
 Mais detalhes na seção de configurações.
+
+### Aba Histórico {#aba-historico}
+
+A terceira aba da tela de importação lista **todas as importações já feitas** na sua OSC — de CSV e de WooCommerce juntas — com:
+
+- o **arquivo** (ou a origem, no caso do WooCommerce);
+- a **situação** (na fila, processando, concluída, concluída com linhas recusadas, ou falhou);
+- o **andamento** — quantas linhas já foram processadas do total (ex.: *"340 de 800"*), enquanto a importação está rodando;
+- o **resultado** final, quando termina;
+- um botão para **baixar o relatório das linhas recusadas**, quando houve alguma.
+
+Enquanto há importação em andamento, a aba **se atualiza sozinha**; há também um botão para **atualizar manualmente** a qualquer momento.
+
+> ✓ **Dica · Uma importação interrompida aparece aqui como pista, não como mistério**
+>
+> Se você fechou a tela sem querer ou a conexão caiu no meio de uma planilha grande, volte à aba Histórico: ela mostra em que ponto a importação parou. A partir daí, o caminho é sempre o mesmo — reenviar o mesmo arquivo (ver caixa acima).
 
 ## Conciliação bancária (extrato OFX)
 
