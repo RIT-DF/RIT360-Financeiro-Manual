@@ -11,6 +11,31 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.44.0] — 2026-08-16
+
+### Modificado
+
+- **Ajuste interno na API externa de integração.** Quatro tipos de falha de infraestrutura (fora do controle de quem consome a API) passaram a ficar registrados no relato de uso, com uma marca própria que os distingue de credencial recusada e de parâmetro inválido. Sem efeito visível no uso do dia a dia.
+
+---
+
+## [1.43.1] — 2026-08-15
+
+### Modificado
+
+- **Ajuste interno de auditoria nos lembretes de acesso.** Toda execução da rotina de lembretes — inclusive quando ela para por tempo, por limite de rodadas ou por falha ao ler a fila — passou a deixar registro. Sem efeito visível no uso do dia a dia.
+
+---
+
+## [1.43.0] — 2026-08-15
+
+### Corrigido
+
+- **Quem ainda não criou senha agora recebe o lembrete de acesso no mesmo dia, mesmo quando muita gente é cadastrada de uma vez.** Antes, ao cadastrar um número grande de pessoas, o envio dos lembretes podia ser interrompido no meio: parte das pessoas recebia, parte ficava só para o dia seguinte, sem nenhum aviso de que isso tinha acontecido. Agora a rotina envia em levas, dentro do tempo disponível, e retoma sozinha até avisar todo mundo que está pendente.
+- **Se o disparo diário dos lembretes falhar, uma segunda tentativa entra em ação dentro de uma janela de horário**, para reduzir o risco de um dia inteiro passar sem ninguém ser avisado.
+
+---
+
 ## [1.42.0] — 2026-08-15
 
 ### Corrigido
