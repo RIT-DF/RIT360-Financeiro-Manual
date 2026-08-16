@@ -11,6 +11,20 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.42.0] — 2026-08-15
+
+### Corrigido
+
+- **Na revisão de uma importação de lançamentos, o aviso de "nenhum ZIP foi enviado" não aparece mais quando um ZIP de comprovantes está anexado na tela.** O aviso contradizia o que o usuário acabara de fazer; agora ele só aparece quando realmente não há ZIP escolhido, com um texto mais claro.
+- **Os comprovantes de um reembolso ou pedido de pagamento agora aparecem também no lançamento financeiro gerado.** Antes, esses lançamentos não mostravam o indicador de anexo na lista de Movimentações, mesmo tendo documentos — e a prestação de contas chegava a imprimir "Comprovante indisponível". Agora o indicador aparece e o comprovante entra na prestação de contas.
+- **18 lançamentos já existentes, que tinham perdido o indicador de anexo pelo mesmo motivo, foram corrigidos.**
+
+### Melhorado
+
+- **Anexar ou remover um documento pela tela do lançamento agora atualiza a lista de Movimentações na hora**, sem precisar recarregar a página.
+
+---
+
 ## [1.41.1] — 2026-08-15
 
 ### Corrigido

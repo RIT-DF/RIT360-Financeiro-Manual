@@ -165,6 +165,8 @@ Ao lado do título de cada movimentação, badges contam mais sobre a origem e a
 - **Estornado** — aparece tanto no lançamento original quanto no contrário gerado pelo estorno
 - **WooCommerce** (roxo) — pedido importado automaticamente da sua loja online; clique no badge abre o pedido no admin do WooCommerce em nova aba
 
+Na coluna **Valor**, um ícone de clipe 📎 ao lado do número avisa que o lançamento **tem documento anexado** — sem precisar abrir o detalhe para saber. Vale para qualquer origem: anexo feito à mão, comprovante trazido de uma importação, ou o comprovante de um reembolso/pedido de pagamento aprovado (ver **Anexos e comprovantes**, abaixo).
+
 ### Ordenação
 
 Clique no cabeçalho de qualquer coluna para ordenar. Um segundo clique inverte a ordem; um terceiro remove a ordenação.
@@ -221,10 +223,14 @@ Clique em qualquer linha da lista para abrir o detalhe completo, organizado em d
 - **Dados de pagamento** — quando o lançamento tem chave PIX ou dados bancários do destinatário, um card mostra esses dados para efetivar o pagamento sem abrir a solicitação de origem. Vale tanto para lançamentos vindos de **reembolso/pedido de pagamento** quanto para **despesas lançadas à mão** (ver "Forma de pagamento" no formulário). **Quem tem permissão de pagar vê os dados por inteiro; os demais veem apenas os últimos dígitos** — o nome de quem recebe fica visível para todos. Passado o prazo de descarte definido pela OSC, o card informa que os dados foram removidos por já terem cumprido sua finalidade. Detalhes em [Contas Bancárias → Dados bancários de quem recebe](/configuracoes/contas/#dados-bancarios-de-quem-recebe)
 - Distribuição entre categorias (se o valor foi dividido)
 - Observações
-- Documentos: comprovantes e notas fiscais anexados, com pré-visualização inline para imagens e PDFs
+- Documentos: comprovantes e notas fiscais anexados, com pré-visualização inline para imagens e PDFs. Isso inclui os comprovantes que já estavam anexados ao **reembolso ou pedido de pagamento** que deu origem ao lançamento — eles aparecem aqui automaticamente desde a aprovação, sem precisar reanexar nada
 - Quando o lançamento veio de outro módulo, links cruzados aparecem aqui:
   - **Ver pedido de pagamento** — para movimentações geradas a partir de uma solicitação de pagamento aprovada
   - **Ver pedido de reembolso** — para movimentações que pagaram um reembolso
+
+> 💡 **O comprovante do reembolso/pedido acompanha o lançamento**
+>
+> Antes, aprovar um reembolso ou pedido de pagamento criava o lançamento em Movimentações **sem** o comprovante, mesmo que ele tivesse sido anexado lá na solicitação original — a página do lançamento mostrava "Comprovante indisponível", e era preciso clicar em **Ver pedido de reembolso/pagamento** para conferir o documento na tela de origem. Hoje o comprovante **vai junto**: assim que o reembolso ou pedido é aprovado, o(s) documento(s) anexados à solicitação aparecem também aqui, na aba Documentos do lançamento — prontos para a prestação de contas, sem precisar visitar a solicitação original. Lançamentos antigos, criados antes dessa correção, também foram ajustados retroativamente.
 
 **Coluna de auditoria (à direita no desktop, abaixo no mobile):**
 
@@ -303,6 +309,8 @@ Você pode anexar arquivos (comprovantes, notas fiscais, contratos) ao lançamen
 > PDFs e imagens aparecem embutidos no corpo da prestação de contas — dá para ver o comprovante sem sair do documento. Já Word, Excel, PowerPoint, OpenDocument e ZIP não têm como ser exibidos embutidos num PDF; nesses casos, a prestação de contas mostra uma linha **"📎 nome-do-arquivo — disponível no lançamento"**, avisando que o comprovante está anexado e pode ser aberto no detalhe do lançamento dentro do sistema (ver a seção **Prestação de contas** abaixo).
 
 **Em Novo Lançamento nos modos Recorrente e Parcelado**, a seção de anexo é ocultada na criação da série — não há um lançamento único ao qual associar o documento. Uma nota explicativa orienta a anexar individualmente em cada lançamento depois que a série for criada. Em **Editar Lançamento**, a seção funciona normalmente, pois você sempre edita um movimento individual.
+
+Anexar ou remover um documento pela tela do lançamento atualiza a lista de Movimentações **na hora** — o ícone de clipe (ver **Identificadores visuais no título**, acima) aparece ou some sem precisar recarregar a página.
 
 > ✓ **Dica · Anexe sempre, anexe na hora**
 >

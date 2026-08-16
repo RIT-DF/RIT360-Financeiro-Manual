@@ -148,7 +148,7 @@ Painel de Ações mostra: **"Aprovado — aguardando confirmação de pagamento 
 
 > 📖 **Conceito · Aprovado vira movimentação pendente automaticamente**
 >
-> No momento em que o reembolso é aprovado, o RIT360 Financeiro cria automaticamente uma **movimentação financeira pendente** em Movimentações com origem `reimbursement` (origem reembolso), valor e categoria corretos, ainda sem conta financeira definida. Cabe ao tesoureiro entrar em Movimentações, clicar nessa linha, escolher a conta de onde o dinheiro vai sair e marcar como paga. O ciclo só fecha quando essa confirmação acontece. Na lista de Movimentações, o lançamento traz um link **"Ver pedido de reembolso →"** que volta direto ao detalhe original — útil para conferir comprovante antes de pagar.
+> No momento em que o reembolso é aprovado, o RIT360 Financeiro cria automaticamente uma **movimentação financeira pendente** em Movimentações com origem `reimbursement` (origem reembolso), valor e categoria corretos, ainda sem conta financeira definida. Cabe ao tesoureiro entrar em Movimentações, clicar nessa linha, escolher a conta de onde o dinheiro vai sair e marcar como paga. O ciclo só fecha quando essa confirmação acontece. Os comprovantes anexados ao reembolso **vão junto com o lançamento** — o tesoureiro confere o documento direto ali, na aba Documentos, sem precisar abrir a solicitação original. O lançamento também traz um link **"Ver pedido de reembolso →"**, útil quando o que falta conferir é o histórico de aprovações ou outro dado da solicitação, não o comprovante.
 
 > 📖 **Conceito · Corrigir o centro de custo depois do envio**
 >

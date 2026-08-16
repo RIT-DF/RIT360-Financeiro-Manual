@@ -123,7 +123,7 @@ Painel de Ações mostra: **"Aprovado — aguardando confirmação de pagamento 
 
 > 📖 **Conceito · Aprovado vira movimentação automaticamente**
 >
-> No momento da aprovação, o RIT360 Financeiro cria automaticamente a **movimentação financeira pendente** (ou várias, no caso de parcelado e recorrente) com origem `purchase_order` (pedido de pagamento). O tesoureiro entra em Movimentações, escolhe a conta de saída e marca como paga. Cada ocorrência de uma série recorrente gera um movimento individual no momento programado, pago separadamente. O lançamento em Movimentações tem o link **"Ver pedido de pagamento →"** que volta ao detalhe original para conferência.
+> No momento da aprovação, o RIT360 Financeiro cria automaticamente a **movimentação financeira pendente** (ou várias, no caso de parcelado e recorrente) com origem `purchase_order` (pedido de pagamento). O tesoureiro entra em Movimentações, escolhe a conta de saída e marca como paga. Cada ocorrência de uma série recorrente gera um movimento individual no momento programado, pago separadamente. Os comprovantes anexados ao pedido **vão junto com o lançamento** — aparecem direto na aba Documentos, sem precisar abrir o pedido original para conferir. O lançamento em Movimentações também tem o link **"Ver pedido de pagamento →"**, útil para consultar o histórico de aprovações ou outros dados da solicitação.
 
 > 📖 **Conceito · Confirmar o pagamento exige permissão própria**
 >
