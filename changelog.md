@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.44.1] — 2026-08-17
+
+### Adicionado
+
+- **Lançamentos de transferência agora aparecem identificados na lista de Movimentações.** Antes, só dava para saber que um lançamento era uma transferência entre contas abrindo os detalhes dele. Agora um selo "Transferência" aparece ao lado do título — na tabela do computador, nos cartões do celular e também no bloco de movimentações vinculadas da tela de Projetos. Receitas e despesas continuam exibidas como antes.
+
+---
+
 ## [1.44.0] — 2026-08-16
 
 ### Modificado
