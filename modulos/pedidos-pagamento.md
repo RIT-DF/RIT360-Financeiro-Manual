@@ -109,6 +109,9 @@ Ao clicar em **Excluir rascunho**, a confirmação mostra qual solicitação ser
 [![Pedido aguardando aprovação](/assets/screenshots/manual-08-pedido-aguardando.png)](/assets/screenshots/manual-08-pedido-aguardando.png)
 *Detalhe de pedido aguardando aprovação*
 
+[![Pedido de valor estimado aguardando aprovação, com o selo Valor estimado](/assets/screenshots/pedido-aprovacao-valor-estimado.png)](/assets/screenshots/pedido-aprovacao-valor-estimado.png)
+*Pedido de valor estimado: o selo "Valor estimado" aparece junto ao valor, para quem vai aprovar decidir com essa informação em mãos*
+
 - **Valor, Destinatário, Solicitante e Data da despesa** no topo
 - **Tipo do pedido** (único / recorrente / parcelado) com configuração da série/parcelas, quando aplicável
 - **Dados do pedido**: descrição, categoria, projeto, centro de custo
@@ -168,6 +171,9 @@ O valor **autorizado** na aprovação fica guardado separado do valor **efetivam
 
 **Exemplo:** a diretoria autoriza R$ 1.000 para reformar o telhado da sede, com base num orçamento estimado. O fornecedor fecha o serviço por R$ 1.500 — R$ 500 a mais, **50% acima** do autorizado. Se o limiar da OSC for o padrão de 10%, essa diferença passa longe do limite e o pagamento fica retido até alguém autorizar.
 
+[![Pedido aprovado com o card Valor acima do autorizado](/assets/screenshots/pedido-valor-acima-do-autorizado.png)](/assets/screenshots/pedido-valor-acima-do-autorizado.png)
+*"Autorizado R$ 1.000,00 · lançado R$ 1.500,00 — R$ 500,00 acima (50,0%)": o pedido continua aprovado, só o pagamento fica retido, e quem aprova decide entre autorizar a diferença, pedir outro aprovador ou recusar*
+
 - **Dentro do limiar configurado pela OSC** (ver [Configurações → Fluxo de Aprovações → Limiar de reaprovação](/configuracoes/aprovacoes/#limiar-de-reaprovacao)): o lançamento é gravado normalmente, a diferença passa a aparecer no pedido, e **nada trava**.
 - **Acima do limiar: o pagamento fica retido.** O pedido continua **aprovado** — o que trava é só o pagamento daquele lançamento.
   - Quem tem permissão de **aprovar** vê três botões: **Autorizar a diferença**, **Pedir autorização a outro aprovador** e **Recusar a diferença**.
@@ -211,6 +217,9 @@ Ocorrências já pagas não podem ser canceladas (preservação de auditoria) �
 Clique em **+ Nova solicitação** para abrir o formulário.
 
 ### Condição do valor
+
+[![Condição do valor no formulário de novo pedido](/assets/screenshots/pedido-condicao-do-valor.png)](/assets/screenshots/pedido-condicao-do-valor.png)
+*Condição do valor: "Valor fechado" vem pré-selecionada; "Valor estimado" pede para anexar os orçamentos*
 
 O primeiro campo do formulário pede para você escolher:
 
