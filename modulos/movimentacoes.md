@@ -163,6 +163,7 @@ Ao lado do título de cada movimentação, badges contam mais sobre a origem e a
 - **Recorrente** — lançamento gerado por uma série recorrente (ex: aluguel mensal)
 - **Parcela X de N** — uma parcela de um lançamento parcelado (ex: 3/6 de uma compra parcelada)
 - **Estornado** — aparece tanto no lançamento original quanto no contrário gerado pelo estorno
+- **Transferência**, com um ponto colorido ao lado — identifica de relance um movimento entre contas da própria OSC, sem precisar abrir o lançamento para saber. O ponto existe para não confundir o selo com o status **Pendente**, que aparece na mesma linha e também usa uma cor de destaque. Aparece igual na tabela do computador, nos cartões do celular e no bloco de lançamentos vinculados da tela de Projetos
 - **WooCommerce** (roxo) — pedido importado automaticamente da sua loja online; clique no badge abre o pedido no admin do WooCommerce em nova aba
 
 Na coluna **Valor**, um ícone de clipe 📎 ao lado do número avisa que o lançamento **tem documento anexado** — sem precisar abrir o detalhe para saber. Vale para qualquer origem: anexo feito à mão, comprovante trazido de uma importação, ou o comprovante de um reembolso/pedido de pagamento aprovado (ver **Anexos e comprovantes**, abaixo).
@@ -220,7 +221,8 @@ Clique em qualquer linha da lista para abrir o detalhe completo, organizado em d
 - Tipo e status (chips coloridos no topo)
 - Título e valor em destaque
 - Dados do lançamento: vencimento, pagamento, conta, categoria, beneficiário/fornecedor, forma de pagamento, projeto, centro de custo
-- **Dados de pagamento** — quando o lançamento tem chave PIX ou dados bancários do destinatário, um card mostra esses dados para efetivar o pagamento sem abrir a solicitação de origem. Vale tanto para lançamentos vindos de **reembolso/pedido de pagamento** quanto para **despesas lançadas à mão** (ver "Forma de pagamento" no formulário). **Quem tem permissão de pagar vê os dados por inteiro; os demais veem apenas os últimos dígitos** — o nome de quem recebe fica visível para todos. Passado o prazo de descarte definido pela OSC, o card informa que os dados foram removidos por já terem cumprido sua finalidade. Detalhes em [Contas Bancárias → Dados bancários de quem recebe](/configuracoes/contas/#dados-bancarios-de-quem-recebe)
+- **Dados de pagamento** — quando o lançamento tem chave PIX ou dados bancários do destinatário, um card mostra esses dados para efetivar o pagamento sem abrir a solicitação de origem. Vale tanto para lançamentos vindos de **reembolso/pedido de pagamento** quanto para **despesas lançadas à mão** (ver "Forma de pagamento" no formulário). **Quem tem permissão de pagar vê os dados por inteiro; os demais veem apenas os últimos dígitos** — o nome do titular da chave PIX fica visível para todos, quando essa informação existe. Passado o prazo de descarte definido pela OSC, o card informa que os dados foram removidos por já terem cumprido sua finalidade. Detalhes em [Contas Bancárias → Dados bancários de quem recebe](/configuracoes/contas/#dados-bancarios-de-quem-recebe)
+- **Quem solicitou** — quando o lançamento veio de um reembolso ou de um pedido de pagamento, o nome de quem fez a solicitação aparece junto com os dados do lançamento. Antes só apareciam os dados bancários, sem dizer de quem eram. Repare na diferença entre os dois fluxos: num **reembolso**, quem solicitou é a própria pessoa que vai receber o dinheiro de volta; num **pedido de pagamento**, quem solicitou só está pedindo autorização para pagar — quem recebe é um **terceiro** que ele indicou (um fornecedor, um prestador de serviço), não ele mesmo
 - Distribuição entre categorias (se o valor foi dividido)
 - Observações
 - Documentos: comprovantes e notas fiscais anexados, com pré-visualização inline para imagens e PDFs. Isso inclui os comprovantes que já estavam anexados ao **reembolso ou pedido de pagamento** que deu origem ao lançamento — eles aparecem aqui automaticamente desde a aprovação, sem precisar reanexar nada
@@ -558,13 +560,29 @@ A **prestação de contas** é um documento em PDF, no padrão visual do RIT360 
 - **Posição de caixa por conta** — saldo inicial, créditos, débitos e saldo final de cada conta, com o total geral que reconcilia.
 - **Demonstrativo analítico** — lançamento a lançamento, **separado em Receitas, Despesas e Transferências** e agrupado por categoria, com os valores sinalizados e coloridos (entradas em verde com `+`, saídas em vermelho com `−`), no mesmo padrão do extrato. As transferências aparecem com a conta de origem e a de destino.
 - **Extrato por conta** — a movimentação cronológica de cada conta, com saldo corrente.
+- **Notas Explicativas** (opcional) — o texto livre que quem gerou o relatório escreveu sobre aquele período, numa seção própria do PDF. Ver **Nota explicativa**, logo abaixo.
 - **Comprovantes** — as imagens e PDFs anexados aos lançamentos, **mesclados ao final** do documento e organizados em três grupos (**Despesas, Receitas e Transferências**), na ordem dos lançamentos. Quando o comprovante é um **documento de escritório** (Word, Excel, PowerPoint, OpenDocument) ou outro arquivo que não dá para exibir embutido, o PDF mostra em seu lugar uma observação **"📎 nome-do-arquivo — disponível no lançamento"** — o comprovante está anexado e continua acessível, só não aparece embutido no relatório. Os lançamentos sem nenhum comprovante ficam listados à parte.
 - **Documentos complementares** (opcional) — outros documentos que você anexar na hora de gerar (extrato bancário, parecer da comissão fiscal, notas explicativas), incluídos **no fim do PDF**, cada um precedido de uma folha com título e descrição.
 - **Termo de encerramento** — com os nomes do **Presidente** e do **Tesoureiro** e um bloco de **autenticação eletrônica** (data/hora de geração e um código de verificação único do documento).
 
+### Nota explicativa (opcional) {#nota-explicativa}
+
+[![Campo Anotações do relatório, no diálogo de prestação de contas](/assets/screenshots/mov-prestacao-anotacoes.png)](/assets/screenshots/mov-prestacao-anotacoes.png)
+*O campo "Anotações do relatório", no diálogo de prestação de contas — o texto some aqui, aparece no PDF como "Notas Explicativas"*
+
+Ao gerar a prestação de contas, o campo **Anotações do relatório** deixa você escrever, em texto livre, o contexto que os números sozinhos não contam — por que a receita do mês ficou baixa, o que motivou uma despesa fora do padrão, uma decisão de diretoria que embasou um gasto. Não precisa anexar arquivo nenhum: é só escrever e gerar o PDF. O texto entra no documento numa seção própria, chamada **"Notas Explicativas"**, com as quebras de linha preservadas.
+
+> 💡 **Por que isso importa**
+>
+> Um relatório com números batendo não conta a história inteira. Quem lê a prestação de contas meses ou anos depois — um novo conselheiro, um financiador, a assembleia — não estava na reunião em que aquela despesa foi decidida. A nota explicativa é o lugar de registrar esse contexto junto com o número, sem depender de e-mail avulso ou de alguém lembrar a explicação de cabeça.
+
+A anotação fica **guardada por período**: ao gerar de novo a prestação de contas do mesmo mês (ou do mesmo acumulado do ano), o texto que você escreveu da última vez **já vem preenchido**, pronto para editar. Você também pode clicar em **Salvar anotação** para guardar o texto sem gerar o PDF na hora — útil para deixar a nota pronta e emitir o relatório depois.
+
+**Quem escreve:** por padrão, **Presidente** e **Tesoureiro** — a mesma permissão que já existia antes desta versão. A organização pode conceder essa permissão (**"Redigir nota explicativa do relatório"**) a outros cargos, inclusive cargos que ela mesma criou, em [Cargos e permissões](/configuracoes/cargos/#permissao-nota-explicativa). A **Comissão Fiscal** continua **emitindo o relatório e lendo a nota, mas não redigindo** — escrever a nota é ato de quem presta contas, não de quem fiscaliza.
+
 ### Documentos complementares (opcional)
 
-Além dos comprovantes dos lançamentos, você pode **anexar outros documentos** ao relatório no momento de gerar — por exemplo, o **extrato bancário** do período, o **parecer da comissão fiscal** ou **notas explicativas**. O objetivo é entregar a prestação de contas **completa em um único PDF**, sem precisar mandar anexos soltos por e-mail depois.
+Os **documentos complementares** já existiam antes desta versão e continuam funcionando exatamente como sempre: além dos comprovantes dos lançamentos, você pode **anexar outros documentos** ao relatório no momento de gerar — por exemplo, o **extrato bancário** do período, o **parecer da comissão fiscal** ou **notas explicativas**. O objetivo é entregar a prestação de contas **completa em um único PDF**, sem precisar mandar anexos soltos por e-mail depois.
 
 Os documentos ficam **vinculados àquele período**: se você gerar o mesmo período de novo, eles **reaparecem já anexados**, prontos para complementar ou remover. No PDF, entram **no fim, depois dos comprovantes**, cada um precedido de uma folha com o título e a descrição que você informou.
 
@@ -578,7 +596,12 @@ Para anexar, na seção **Documentos complementares** do diálogo: escolha o arq
 2. Escolha o período:
    - **Mês** — um mês específico já **fechado** (o mês corrente, ainda em andamento, não fica disponível);
    - **Ano (acumulado)** — de janeiro até o último mês fechado daquele ano (ou o ano inteiro, se for um ano anterior).
-3. Clique em **Gerar PDF**. A geração roda **em segundo plano**: você pode continuar trabalhando, e **o link do PDF chega no seu e-mail** assim que ficar pronto (a montagem com gráficos e comprovantes pode levar de alguns segundos a poucos minutos). Se algo falhar, você é avisado por e-mail e por notificação no app.
+3. Se quiser, escreva a [nota explicativa](#nota-explicativa) e anexe [documentos complementares](#documentos-complementares-opcional).
+4. Clique em **Gerar PDF**. A geração roda **em segundo plano**: você pode continuar trabalhando, e **o link do PDF chega no seu e-mail** assim que ficar pronto (a montagem com gráficos e comprovantes pode levar de alguns segundos a poucos minutos). Se algo falhar, você é avisado por e-mail e por notificação no app.
+
+> 💡 **Também dá para emitir pela tela de Relatórios**
+>
+> Além deste caminho, você pode gerar uma prestação de contas de um período novo direto em **Relatórios → [Prestações de contas](/modulos/relatorios/#prestacoes-de-contas)**, clicando em **Emitir prestação de contas** — mesmo diálogo, mesmos campos. Os dois caminhos levam ao mesmo lugar; use o que estiver mais à mão no momento.
 
 ### Onde encontrar os documentos já gerados
 

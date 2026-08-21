@@ -35,8 +35,8 @@ A página **Cargos e permissões** vai além dos 7 cargos padrão da plataforma:
 As permissões são organizadas por área, com as operações que importam separadas:
 
 - **Movimentações** — Ver · Criar / editar · **Pagar (marcar como pago)** · Excluir / estornar · Importar lançamentos
-- **Reembolsos e pedidos de pagamento** — Ver · Aprovar · Pagar
-- **Relatórios e auditoria** — Ver relatórios · Ver trilha de auditoria · Exportar dados (LGPD)
+- **Reembolsos e pedidos de pagamento** — Ver · **Solicitar pedido de pagamento** · Aprovar · Pagar
+- **Relatórios e auditoria** — Ver relatórios · **Redigir nota explicativa do relatório** · Ver trilha de auditoria · Exportar dados (LGPD)
 - **Configurações** — Config. financeira (contas e categorias) · Config. da OSC · Gerir membros e cargos
 
 ### Pagar é uma permissão separada de criar e editar
@@ -58,6 +58,43 @@ Ela também é o que define **quem enxerga os dados bancários completos** de qu
 >
 > Em muitas OSCs, uma pessoa organiza as contas a pagar (digita, anexa nota, classifica) e **outra** tem a senha do banco e efetivamente transfere. Antes, dar acesso para registrar dava de quebra o poder de dar baixa em pagamentos. Com a permissão separada, você monta um cargo de "apoio administrativo" que lança tudo, sem que ele possa declarar pago algo que ninguém pagou. É a mesma lógica de segregação de funções que protege a Comissão Fiscal, aplicada ao caixa.
 
+### Quem pode solicitar pedido de pagamento também é por cargo
+{: #permissao-solicitar-pedido }
+
+[![Permissão "Solicitar pedido de pagamento" no editor de cargos](/assets/screenshots/config-cargos-solicitar-nota.png)](/assets/screenshots/config-cargos-solicitar-nota.png)
+*As permissões "Solicitar pedido de pagamento" e "Redigir nota explicativa do relatório", no cargo Coord. de projeto*
+
+Antes, só dois cargos podiam **criar** pedidos de pagamento, e a lista não alcançava cargos que a organização criasse. Agora, quem pode solicitar é definido pela permissão **Solicitar pedido de pagamento**, na área "Reembolsos e pedidos de pagamento" — e pode ser concedida a **qualquer cargo**, inclusive um que a sua OSC tenha criado do zero.
+
+- **Presidente** e **Tesoureiro** sempre podem solicitar, em qualquer organização — a permissão vem como essencial para os dois.
+- A **Comissão Fiscal** nunca pode — conflita com a independência de quem fiscaliza (ver "Comissão Fiscal: independência protegida", mais abaixo nesta página).
+- Para qualquer outro cargo, padrão ou personalizado, é um interruptor: o Presidente liga quando quiser que aquele cargo também solicite pagamentos.
+
+> 💡 **Por que isso importa**
+>
+> Antes desta versão, um Coordenador de Projeto ou um cargo próprio da sua OSC (um "Gerente de Núcleo", por exemplo) só conseguia pedir pagamento se a plataforma já tivesse previsto esse caminho. Agora a decisão é sua: se faz sentido para a governança da sua organização que aquele cargo compre e peça reembolso do fornecedor, basta ligar o interruptor — sem esperar por uma versão nova do sistema.
+
+> ✓ **Nada muda se você não mexer em nada**
+>
+> Quem já podia solicitar pedido de pagamento continua podendo — a migração preservou as permissões existentes. Isso vale inclusive para quem chegava a essa permissão pelo caminho antigo, configurado em [Fluxo de Aprovações](/configuracoes/aprovacoes/).
+
+> ⚠️ **Atenção · Os dois caminhos por centro de custo/projeto continuam existindo à parte**
+>
+> Esta permissão libera o cargo para solicitar pedidos **sem restrição de área**. Gestor de centro de custo e coordenador de projeto continuam tendo, além dela, um caminho **próprio e mais restrito**: um ajuste em [Fluxo de Aprovações → Quem pode solicitar pedidos de pagamento](/configuracoes/aprovacoes/#quem-pode-solicitar-pedidos-de-pagamento) que permite solicitar, mas **só** para o centro de custo ou o projeto sob a responsabilidade da pessoa. Os dois mecanismos coexistem: um é a permissão geral do cargo, o outro é o recorte por área.
+
+### Redigir a nota explicativa da prestação de contas também é por cargo
+{: #permissao-nota-explicativa }
+
+A permissão **Redigir nota explicativa do relatório**, na área "Relatórios e auditoria", define quem pode escrever a [nota explicativa](/modulos/movimentacoes/#nota-explicativa) da prestação de contas — o texto livre que aparece no PDF, na seção "Notas Explicativas".
+
+- **Presidente** e **Tesoureiro** sempre podem redigir a nota, em qualquer organização.
+- A **Comissão Fiscal** não redige — ela **emite o relatório e lê a nota**, mas escrever é ato de quem presta contas, não de quem fiscaliza.
+- Para qualquer outro cargo, é um interruptor que o Presidente liga quando quiser.
+
+> ✓ **Nada muda se você não mexer em nada**
+>
+> Quem já escrevia a nota explicativa continua escrevendo. A permissão só existe para quem **quiser** abrir esse acesso a outro cargo — por exemplo, um Diretor Financeiro que redige o texto mas não é Presidente nem Tesoureiro.
+
 ## Editar um cargo
 
 Clique no cargo na lista à esquerda; as permissões aparecem à direita.
@@ -75,7 +112,7 @@ Clique no cargo na lista à esquerda; as permissões aparecem à direita.
 
 ## Comissão Fiscal: independência protegida
 
-A **Comissão Fiscal** existe para fiscalizar as finanças com independência. Por isso, as permissões que **conflitam com a fiscalização** — operar, aprovar ou pagar finanças e gerir configuração — ficam **bloqueadas** no cargo Comissão Fiscal, **mesmo para o Presidente**. Acréscimos inofensivos (como exportar dados) são permitidos, com aviso.
+A **Comissão Fiscal** existe para fiscalizar as finanças com independência. Por isso, as permissões que **conflitam com a fiscalização** — operar, aprovar ou pagar finanças, solicitar pedido de pagamento, redigir a nota explicativa da prestação de contas e gerir configuração — ficam **bloqueadas** no cargo Comissão Fiscal, **mesmo para o Presidente**. Acréscimos inofensivos (como exportar dados, ver relatórios ou ler a nota explicativa) são permitidos, com aviso.
 
 A mesma regra vale na atribuição: se você tentar dar a uma pessoa da Comissão Fiscal um cargo que tem permissões conflitantes, o sistema **barra com explicação**.
 

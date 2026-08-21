@@ -165,11 +165,27 @@ Sim. No campo de saldo do banco, use o sinal de **"−"** para informar um valor
 
 Não é o fim: abra o detalhe do reembolso ou pedido de pagamento rejeitado (o motivo aparece em destaque no topo, com quem reprovou e quando) e clique em **Editar e reenviar** — só o solicitante vê esse botão. Os campos passam a ser editáveis na própria página; corrija o que foi apontado (comprovante ilegível, valor errado, categoria trocada) e envie de novo. Não é preciso criar uma solicitação nova, e o fluxo de aprovação recomeça a partir do reenvio. Veja o detalhe completo em [Reembolsos → Rejeitado](/modulos/reembolsos/#rejeitado).
 
+### Enviei um reembolso (ou pedido) por engano, ou mudei de ideia. Como desisto?
+
+Enquanto a solicitação está **Aguardando aprovação**, você mesmo pode retirá-la: abra o detalhe e clique em **Retirar solicitação**, no painel de Ações. Ela passa para **Cancelado**, qualquer aprovação que já tinha sido dada é descartada, e quem ainda não tinha votado é avisado de que ela saiu da fila. Antes desta versão, a única forma de encerrar uma solicitação já enviada era pedir para alguém reprovar — o que ficava registrado como reprovação, não como desistência. **Só você retira a sua própria solicitação**; nem administrador nem tesoureiro retiram a de outra pessoa. Detalhes em [Reembolsos → Retirar uma solicitação enviada](/modulos/reembolsos/#retirar-solicitacao).
+
+### Por que uma solicitação retirada posso reenviar sem mudar nada, e uma reprovada não?
+
+Porque são situações diferentes. Uma solicitação **reprovada** tem algo que um aprovador apontou como problema — por isso reenviar exige corrigir de verdade algo (valor, comprovante, categoria...), e reenviar sem alterar nada é recusado. Uma solicitação **retirada** por você não tinha nada de errado: você só mudou de ideia sobre o momento, ou decidiu reorganizar antes de mandar de novo. Por isso ela pode voltar para a fila de aprovação exatamente como estava, sem exigir alteração nenhuma.
+
 ### Por que uma única reprovação encerra meu pedido, se a OSC exige duas aprovações?
 
 Porque aprovar e reprovar têm contas separadas, e a de reprovação **vem configurada como 1**. O quórum diz quantas aprovações **liberam** o pagamento; um ajuste próprio, em [Fluxo de Aprovações](/configuracoes/aprovacoes/), diz quantas reprovações **barram**. No padrão — uma —, assim que alguém reprova o pedido vira **Rejeitado** e os demais aprovadores não podem mais votar. É a escolha conservadora: soltar dinheiro da OSC exige acordo de mais de uma pessoa, mas qualquer aprovador elegível pode barrar sozinho, porque é esse o papel de quem fiscaliza.
 
 Se a sua organização preferir, ela pode **exigir mais de uma reprovação** (até o número de pessoas aptas a aprovar). Nesse caso o pedido continua **Aguardando aprovação** até o número ser alcançado, a tela mostra quantas reprovações já existem e quantas faltam, e você só é avisado quando houver decisão definitiva.
+
+### Por que não dá para reprovar vários reembolsos ou pedidos de uma vez, se dá para aprovar?
+
+Porque **cada reprovação exige um motivo próprio**. Aprovar em lote faz sentido porque um "sim" vale igual para todos os itens marcados; um "não" não — cada reprovação precisa dizer especificamente o que está errado naquela solicitação (comprovante ilegível, valor incorreto, categoria trocada), para que quem pediu saiba o que corrigir. Um motivo genérico aplicado a vários de uma vez não ajudaria ninguém. Por isso a seleção em lote em [Reembolsos](/modulos/reembolsos/#selecao-em-lote) e Pedidos de Pagamento só tem o botão **Aprovar selecionados** — reprovar continua sendo um de cada vez.
+
+### Quem pode escrever a nota explicativa da prestação de contas?
+
+Por padrão, **Presidente** e **Tesoureiro** — a mesma permissão de sempre. A organização pode conceder essa permissão a outros cargos, inclusive cargos que ela mesma criou, em [Cargos e permissões](/configuracoes/cargos/#permissao-nota-explicativa). A **Comissão Fiscal** não escreve a nota: ela **emite o relatório e lê o que foi escrito**, mas redigir é ato de quem presta contas, não de quem fiscaliza. Detalhes em [Movimentações → Nota explicativa](/modulos/movimentacoes/#nota-explicativa).
 
 ### Onde encontro uma prestação de contas que já foi gerada?
 

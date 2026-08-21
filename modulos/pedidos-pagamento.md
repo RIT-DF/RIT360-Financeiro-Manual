@@ -44,6 +44,7 @@ O módulo de **Pedidos de Pagamento** é onde alguém da OSC **pede autorizaçã
 | 🟢 **Aprovado** | Aprovado; movimentação financeira pendente criada automaticamente |
 | 🔴 **Rejeitado** | Reprovado com motivo registrado — pode ser editado e reenviado |
 | 💙 **Pago** | Tesoureiro confirmou o pagamento na movimentação correspondente |
+| ⬛ **Cancelado** | Retirado pelo próprio solicitante antes de ser aprovado — pode ser enviado de novo, mesmo sem alterar nada |
 
 ## Lista de pedidos de pagamento
 
@@ -51,6 +52,8 @@ O módulo de **Pedidos de Pagamento** é onde alguém da OSC **pede autorizaçã
 *Lista de pedidos de pagamento em desktop*
 
 A lista exibe todos os pedidos com colunas Descrição, Destinatário, Valor, Data da despesa, Solicitante e Status. Quando o pedido já tem um lançamento vinculado (aprovado ou pago), o código curto desse lançamento aparece abaixo da descrição — útil para localizá-lo rapidamente em Movimentações.
+
+> 💡 **A lista carrega por página.** Em organizações com muitos pedidos, a tela não traz o histórico inteiro de uma vez — ela carrega aos poucos, conforme você navega. Os **filtros continuam valendo sobre o conjunto inteiro**, não só sobre a página aberta.
 
 Nas abas **Aprovado** e **Pago** há um filtro de período (mês atual, mês anterior, trimestre, ano etc.), igual ao de Movimentações, sempre aberto no **mês atual** por padrão. As abas **Aguardando aprovação**, **Rascunho** e **Rejeitado** não usam esse filtro — mostram sempre tudo, para nada que precise da sua atenção ficar escondido fora do período selecionado.
 
@@ -76,6 +79,10 @@ Ao lado da descrição, badges discretos indicam o tipo do pedido:
 
 Pedidos únicos aparecem sem badge adicional.
 
+### Aprovar vários de uma vez
+
+Marque o checkbox das linhas que você já examinou e decidiu aprovar para ver, no rodapé, quantas solicitações e qual o valor total antes de confirmar — o resultado sai item por item. Funciona exatamente como em Reembolsos; **reprovar continua sendo um de cada vez**, porque cada reprovação exige um motivo próprio. Detalhe completo em [Reembolsos → Aprovar vários de uma vez](/modulos/reembolsos/#selecao-em-lote).
+
 ## Detalhe do pedido
 
 ### Rascunho
@@ -95,9 +102,13 @@ Ao clicar em **Excluir rascunho**, a confirmação mostra qual solicitação ser
 - **Dados de pagamento do destinatário** (PIX, TED ou Boleto) — visíveis apenas para aprovadores e tesoureiro
 - **Documentos**: orçamento, nota fiscal, contrato ou outros anexos
 - **Histórico de aprovações**: timeline de todos os votos, com o **progresso do quórum** (ex.: "1 de 2 aprovações · falta 1") enquanto o pedido aguarda aprovação
-- **Ações**: ✓ Aprovar / ✕ Reprovar (somente para aprovadores; nunca para o próprio solicitante)
+- **Ações**: ✓ Aprovar / ✕ Reprovar (somente para aprovadores; nunca para o próprio solicitante) · **Retirar solicitação** (somente para quem enviou — ver abaixo)
 
 Pedidos recorrentes mostram aqui uma seção **Ocorrências** com a lista de cada ocorrência prevista, seu status individual e ações específicas (marcar como pago, cancelar essa ocorrência, ver movimento gerado).
+
+### Retirar uma solicitação enviada
+
+Enquanto o pedido está **Aguardando aprovação**, quem o enviou pode clicar em **Retirar solicitação** para encerrá-lo sem depender de ninguém reprovar. O pedido passa para **Cancelado**, qualquer aprovação já dada é descartada, e quem ainda não tinha votado é avisado de que ele saiu da fila. **Só quem solicitou retira** — nem administrador nem tesoureiro retiram pedido de outra pessoa. Diferente de um pedido **rejeitado**, um pedido **retirado** pode ser reenviado sem precisar alterar nada, porque não havia nada de errado nele. Detalhe completo, com o porquê e as armadilhas, em [Reembolsos → Retirar uma solicitação enviada](/modulos/reembolsos/#retirar-solicitacao) — o mecanismo é idêntico para os dois módulos.
 
 ### Rejeitado
 
@@ -220,6 +231,7 @@ Cada usuário escolhe em **Meu Perfil → Notificações** quais eventos receber
 - **Aprovado** — solicitante e tesoureiro são avisados
 - **Rejeitado** — solicitante é avisado com o motivo, **no desfecho definitivo**: quando a organização exige mais de uma reprovação, o aviso só sai depois que o número exigido é alcançado, reunindo os motivos de todos os votos contrários
 - **Pago** — solicitante é avisado
+- **Retirado** — quem ainda não tinha votado na solicitação é avisado de que ela saiu da fila de aprovação
 
 ## Glossário rápido
 
@@ -228,7 +240,8 @@ Cada usuário escolhe em **Meu Perfil → Notificações** quais eventos receber
 - **Tipo do pedido** — único, recorrente ou parcelado.
 - **Ocorrência** — uma das execuções programadas de um pedido recorrente.
 - **Parcela** — uma das partes de um pedido parcelado.
-- **Cancelar série** — encerrar pedido recorrente/parcelado em um dos 3 escopos (apenas uma / esta e futuras / série inteira).
+- **Cancelar série** — encerrar pedido recorrente/parcelado em um dos 3 escopos (apenas uma / esta e futuras / série inteira). Não confundir com o status **Cancelado**, abaixo — são mecanismos diferentes.
+- **Cancelado** — status de uma solicitação retirada pelo próprio solicitante antes da aprovação; diferente de rejeitado, pode ser reenviada sem precisar alterar nada.
 - **Reprovações necessárias** — número de votos contrários necessários para barrar o pedido (configurável: de 1 até o total de pessoas aptas a aprovar; padrão 1).
 
 ## Por onde seguir

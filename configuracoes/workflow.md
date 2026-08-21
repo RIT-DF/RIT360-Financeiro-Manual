@@ -91,12 +91,19 @@ Quando ligado, o gestor **soma-se** aos aprovadores já definidos (papéis + pes
 
 ## Quem pode solicitar pedidos de pagamento
 
-Define quem pode **criar** pedidos de pagamento. Por padrão, a lista de papéis é **Presidente** e **Tesoureiro** — que solicitam pedidos de qualquer centro de custo ou projeto, sem restrição.
+[![Bloco "Quem pode solicitar pagamentos", com o link para o editor de cargos](/assets/screenshots/config-aprovacoes-quem-solicita.png)](/assets/screenshots/config-aprovacoes-quem-solicita.png)
+*O bloco não lista mais papéis: aponta para a permissão no editor de cargos, e mantém os dois ajustes por escopo*
 
-Abaixo da lista de papéis, dois ajustes **por escopo** (cada um começa desligado, exceto onde indicado):
+Quem pode **criar** pedidos de pagamento não é mais definido aqui: é a permissão **Solicitar pedido de pagamento**, no editor de [Cargos e permissões](/configuracoes/cargos/#permissao-solicitar-pedido). **Presidente** e **Tesoureiro** sempre podem, em qualquer organização; a **Comissão Fiscal** nunca pode; qualquer outro cargo — inclusive um que a sua OSC tenha criado — o Presidente libera lá, cargo por cargo.
+
+Nesta página continuam os dois ajustes **por escopo**, que valem **além** da permissão do cargo e servem para um caso diferente: dar a alguém a possibilidade de solicitar, mas **só** para a área que essa pessoa gerencia — mesmo que o cargo dela não tenha a permissão geral.
 
 - **Gestor de centro de custo solicita do próprio centro de custo** — quando ligado, o gestor pode criar pedidos **apenas** do centro de custo que gerencia.
-- **Coordenador de projeto solicita do próprio projeto** — quando ligado, o coordenador pode criar pedidos **apenas** dos projetos que coordena. Em OSCs que **já** permitiam o coordenador solicitar (ele estava na lista de papéis), o ajuste vem **ligado** — a permissão é preservada, agora restrita ao projeto dele.
+- **Coordenador de projeto solicita do próprio projeto** — quando ligado, o coordenador pode criar pedidos **apenas** dos projetos que coordena.
+
+> ✓ **Nada muda se você não mexer em nada**
+>
+> Quem já podia solicitar pedido de pagamento — pelo papel ou por um destes dois ajustes — continua podendo. A migração para a permissão por cargo preservou o que já estava configurado; nenhuma organização ficou sem ninguém autorizado a solicitar.
 
 Voluntários não podem criar pedidos de pagamento (só reembolsos), por princípio: pedido de pagamento implica usar dinheiro da OSC, e voluntário sem papel específico não tem mandato para isso.
 

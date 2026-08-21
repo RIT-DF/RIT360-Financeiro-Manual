@@ -29,7 +29,7 @@ O módulo de **Reembolsos** é onde voluntários, dirigentes e colaboradores **p
 
 > 📖 **Conceito · Status do reembolso**
 >
-> O ciclo de vida normal é **Rascunho → Aguardando aprovação → Aprovado → Pago**. **Rejeitado** é desvio do caminho aprovado — mas o solicitante pode editar e reenviar quantas vezes precisar.
+> O ciclo de vida normal é **Rascunho → Aguardando aprovação → Aprovado → Pago**. **Rejeitado** é desvio do caminho aprovado — mas o solicitante pode editar e reenviar quantas vezes precisar. **Cancelado** é o desvio que o próprio solicitante escolhe — ver [Retirar uma solicitação enviada](#retirar-solicitacao), abaixo.
 
 | Status | Significado |
 |---|---|
@@ -38,6 +38,7 @@ O módulo de **Reembolsos** é onde voluntários, dirigentes e colaboradores **p
 | 🟢 **Aprovado** | Aprovado, aguardando confirmação de pagamento pelo tesoureiro |
 | 🔴 **Rejeitado** | Reprovado com motivo registrado — pode ser editado e reenviado |
 | 💙 **Pago** | Pagamento confirmado; movimentação financeira correspondente está em Movimentações |
+| ⬛ **Cancelado** | Retirado pelo próprio solicitante antes de ser aprovado — pode ser enviado de novo, mesmo sem alterar nada |
 
 ## Lista de reembolsos
 
@@ -53,6 +54,8 @@ A lista mostra todos os reembolsos da organização. Cada papel vê um recorte d
 - **Voluntários e solicitantes não-aprovadores** veem **apenas os próprios**
 
 Cada aba mostra a contagem entre parênteses (ex: "Aguardando aprovação (3)") — útil para ver rapidamente o que está pendente.
+
+> 💡 **A lista carrega por página.** Em organizações com muitos reembolsos, a tela não traz o histórico inteiro de uma vez — ela carrega aos poucos, conforme você navega. Os **filtros continuam valendo sobre o conjunto inteiro**, não só sobre a página aberta: filtrar por período ou por status busca em todos os reembolsos da organização, não só nos que já apareceram na tela.
 
 **Colunas (desktop):** Data da despesa, Descrição, Valor, Status, Solicitante, Ações. Quando o reembolso já tem um lançamento vinculado (aprovado ou pago), o código curto desse lançamento aparece abaixo da descrição — útil para localizá-lo rapidamente em Movimentações.
 
@@ -79,6 +82,23 @@ Nas linhas com status "Aguardando aprovação", aprovadores elegíveis veem os b
 >
 > Se você é aprovador, faça da aba "Aguardando aprovação" sua rotina diária de 5 minutos. Reembolso aprovado rápido é diferencial de OSC bem gerida — voluntário não fica de pires na mão esperando duas semanas para receber R$ 60 de combustível.
 
+### Aprovar vários de uma vez {#selecao-em-lote}
+
+Quando há muitos reembolsos aguardando aprovação — depois de um evento grande, por exemplo —, aprovar um a um consome a manhã inteira. Marque o checkbox de cada linha que você já conferiu e decidiu aprovar; uma barra de ações aparece no rodapé da lista:
+
+[![Barra de ações em lote, com dois reembolsos selecionados](/assets/screenshots/reemb-selecao-lote.png)](/assets/screenshots/reemb-selecao-lote.png)
+*"2 itens selecionados nesta página · Total R$ 106,78" e o botão "Aprovar selecionados"*
+
+Antes de confirmar, a barra já mostra **quantas solicitações** e **o valor total** que você está prestes a aprovar de uma vez — a última chance de conferir antes do clique. Depois de confirmar, o resultado vem **item por item**: quem foi aprovado normalmente e quem, por algum motivo (por exemplo, alguém votou primeiro noutra aba), não pôde ser.
+
+> ⚠️ **Atenção · Reprovar continua sendo um de cada vez**
+>
+> Só a **aprovação** tem seleção em lote. Reprovar exige entrar em cada reembolso, porque **cada reprovação pede um motivo próprio** — motivo genérico aplicado a vários de uma vez não ajuda ninguém a corrigir o que foi apontado. Reserve o lote para o que você já examinou e decidiu aprovar; o que tem ressalva, resolva um a um.
+
+> ⚠️ **Atenção · A seleção vale só para a página aberta**
+>
+> Marcar itens não atravessa página, aba nem período: trocar qualquer um desses **limpa a seleção**. Selecione, aprove, e só então mude de página ou de filtro.
+
 ## Detalhe do reembolso
 
 Clique em qualquer linha para abrir o detalhe completo. A página tem todas as informações necessárias para tomar uma decisão de aprovação consciente — sem precisar perguntar nada para ninguém.
@@ -100,11 +120,36 @@ Ao clicar em **Excluir rascunho**, a confirmação mostra qual solicitação ser
 - **Dados de pagamento**: método (PIX ou TED) e chave/conta — **visíveis apenas para aprovadores e tesoureiro** (voluntário não-aprovador vê só os próprios)
 - **Comprovantes**: nota fiscal, recibo ou foto da despesa anexados pelo solicitante, com pré-visualização inline para imagens e PDFs (não precisa baixar)
 - **Histórico de aprovações**: timeline de todos os votos com nome, papel e data, além do **progresso do quórum** (ex.: "1 de 2 aprovações · falta 1") enquanto o reembolso aguarda aprovação
-- **Ações**: ✓ Aprovar / ✕ Rejeitar (somente para aprovadores; nunca para o próprio solicitante)
+- **Ações**: ✓ Aprovar / ✕ Rejeitar (somente para aprovadores; nunca para o próprio solicitante) · **Retirar solicitação** (somente para quem enviou — ver abaixo)
 
 > 💡 **Por que isso importa**
 >
 > A timeline de aprovações é mais que registro contábil. É **proteção institucional**: meses depois, se alguém questionar "quem aprovou esse reembolso de R$ 800 do diretor?", a resposta está lá — quem votou, em qual data, com qual comentário. Em OSC com mudança rotativa de diretoria (eleição anual, troca de tesoureiro), esse registro é a diferença entre passagem de bastão tranquila e arenas de acusação.
+
+### Retirar uma solicitação enviada {#retirar-solicitacao}
+
+[![Painel de Ações com o botão Retirar solicitação](/assets/screenshots/reemb-retirar-solicitacao.png)](/assets/screenshots/reemb-retirar-solicitacao.png)
+*O botão "Retirar solicitação" aparece junto com "Aprovar" para quem enviou o reembolso*
+
+Antes desta versão, quem enviava um reembolso e mudava de ideia **não tinha saída**: excluir só funcionava em rascunho, e depois de enviado, a única forma de encerrar era pedir para alguém reprovar — o que ficava registrado como **reprovação**, não como desistência, e exigia envolver um aprovador para algo que era só seu de decidir.
+
+Agora, enquanto o reembolso está **Aguardando aprovação**, quem o enviou vê o botão **Retirar solicitação** no painel de Ações. Ao retirar:
+
+- o reembolso passa para **Cancelado**;
+- qualquer aprovação que já tinha sido dada é **descartada** — não fica pendurada, como se nunca tivesse existido;
+- quem estava na fila de aprovação (e ainda não tinha votado) é **avisado** de que a solicitação saiu da fila.
+
+> 💡 **Por que isso importa**
+>
+> Nem toda desistência é reprovação. Pedir a alguém que reprove um reembolso que você mesmo já não quer mais é constrangedor para as duas partes, e distorce a estatística de reprovações da OSC — a auditoria vê um reembolso "reprovado" que na verdade nunca teve nada de errado, só deixou de fazer sentido. Retirar é o botão certo para "mudei de ideia"; reprovar é para "isto aqui não pode passar assim".
+
+> ✓ **Dica · Retirado pode ser reenviado sem alterar nada**
+>
+> Diferente de um reembolso **rejeitado** — que exige corrigir algo de verdade antes de reenviar (ver [Rejeitado](#rejeitado)) —, um reembolso **retirado** por você pode ser reenviado **do jeito que estava**, porque não havia nada de errado nele: você só mudou de ideia sobre o momento, ou percebeu que ainda faltava um comprovante e quer organizar antes de reenviar por conta própria. A trava de "nenhuma alteração detectada" existe para impedir reenvio automático depois de uma **reprovação**, não depois de uma retirada.
+
+> ⚠️ **Atenção · Só você retira a sua solicitação**
+>
+> Nem o Presidente, nem o Tesoureiro, nem quem tem a permissão de aprovar consegue retirar um reembolso de outra pessoa. Retirar é decisão de quem pediu — se alguém mais precisa encerrar a solicitação de outra pessoa, o caminho continua sendo a reprovação, com o motivo registrado.
 
 ### Rejeitado {#rejeitado}
 
@@ -230,6 +275,7 @@ Cada usuário escolhe em **Meu Perfil → Notificações** quais eventos de reem
 - **Aprovado** — solicitante e tesoureiro são avisados
 - **Rejeitado** — solicitante é avisado com o motivo, **no desfecho definitivo**: quando a organização exige mais de uma reprovação, o aviso só sai depois que o número exigido é alcançado, reunindo os motivos de todos os votos contrários
 - **Pago** — solicitante é avisado
+- **Retirado** — quem ainda não tinha votado na solicitação é avisado de que ela saiu da fila de aprovação
 
 Padrão é tudo ligado; cada um silencia o que não quer receber.
 
@@ -242,6 +288,7 @@ Padrão é tudo ligado; cada um silencia o que não quer receber.
 - **Auto-aprovação** — situação em que o solicitante é também o único aprovador elegível; permitida mas explicitamente marcada no audit log.
 - **PIX/TED** — métodos de pagamento aceitos para crédito do reembolso aprovado.
 - **Movimentação correspondente** — lançamento financeiro pendente criado automaticamente na aprovação, vinculado ao reembolso pelo campo origem.
+- **Cancelado** — status de uma solicitação retirada pelo próprio solicitante antes da aprovação; diferente de rejeitado, pode ser reenviada sem precisar alterar nada.
 
 ## Por onde seguir
 

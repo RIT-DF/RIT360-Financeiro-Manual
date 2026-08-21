@@ -207,6 +207,11 @@ Para abrir, clique na pílula **Prestações de contas**, ao final da fileira de
 [![Página Prestações de contas](/assets/screenshots/manual-prestacoes-lista.png)](/assets/screenshots/manual-prestacoes-lista.png)
 *A lista de documentos já gerados, do mais recente para o mais antigo, com as três ações à direita de cada linha*
 
+[![Página Prestações de contas, com o botão Emitir prestação de contas e a seleção em lote](/assets/screenshots/rel-prestacoes-lista.png)](/assets/screenshots/rel-prestacoes-lista.png)
+*O botão "Emitir prestação de contas", no canto superior direito, e o checkbox "Selecionar os desta página", logo abaixo do título*
+
+Você também pode **emitir uma prestação de contas nova direto daqui**, sem passar por Movimentações: clique em **Emitir prestação de contas**, no canto superior direito da página, e escolha o período — é o mesmo diálogo descrito em [Movimentações → Prestação de contas](/modulos/movimentacoes/#prestacao-de-contas), com os mesmos campos (período, nota explicativa, documentos complementares). **O caminho antigo, pelo menu Exportar de Movimentações, continua funcionando** — os dois levam ao mesmo lugar; use o que já estiver na tela.
+
 Cada linha traz o **período do documento** (o mês, ou o acumulado do ano), a **data e a hora em que foi gerado**, **quem gerou** e o **intervalo de datas coberto**. Como é comum a organização gerar o mesmo mês mais de uma vez, esses quatro dados juntos são o que distingue um documento do outro.
 
 > 💡 **Por que isso importa · O documento deixou de depender do e-mail**
@@ -232,6 +237,20 @@ Cada linha traz o **período do documento** (o mês, ou o acumulado do ano), a *
 > ✓ **Dica · Confira o documento na confirmação antes de apagar**
 >
 > Antes de remover, a confirmação mostra **exatamente qual documento você escolheu** — período, data e hora da geração e autor. Leia essa linha com atenção: quando há cinco prestações de "Junho/2026" empilhadas, é a data e hora da geração que diferencia a que você quer apagar da que a diretoria usou na assembleia.
+
+### Apagar vários arquivos de uma vez {#selecao-em-lote}
+
+Quando a lista acumula muitos documentos — meses de prestações geradas de novo, por exemplo —, apagar um a um é trabalho repetitivo. Marque o checkbox de cada linha que quiser (ou **Selecionar os desta página**, no topo, para marcar todas de uma vez) e uma barra de ações aparece no rodapé:
+
+[![Barra de ações em lote, com dois documentos selecionados](/assets/screenshots/rel-prestacoes-selecao-lote.png)](/assets/screenshots/rel-prestacoes-selecao-lote.png)
+*"2 itens selecionados nesta página" e o botão "Apagar arquivos"*
+
+- **Apagar arquivos** — remove o PDF de todos os documentos marcados, de uma vez. Vale a mesma regra do apagamento individual: só o **arquivo** sai; o **registro** de cada prestação continua na lista, disponível para gerar de novo.
+- **Limpar seleção** — desmarca tudo sem apagar nada.
+
+> ⚠️ **Atenção · A seleção vale só para a página aberta**
+>
+> "Selecionar os desta página" marca só o que está visível na tela naquele momento — não a lista inteira da organização. Trocar de página ou de filtro **limpa a seleção**; é preciso selecionar de novo do outro lado.
 
 ### Quem acessa
 
