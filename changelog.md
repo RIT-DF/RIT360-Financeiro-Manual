@@ -11,6 +11,13 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.51.2] — 2026-08-21
+
+### Corrigido
+
+- **No primeiro acesso ("Concluir cadastro"), quando o cadastro é recusado, a tela agora mostra o motivo real** — por exemplo, senha recusada aparece no próprio campo de senha, com a explicação de qual regra falhou; link expirado leva à tela de reenvio; link já usado avisa para fazer login. Antes, qualquer recusa aparecia só como "Erro inesperado. Tente novamente em instantes.".
+- **Falha no login com Google deixa de resultar em tela silenciosa.** Antes, um erro na volta do Google não aparecia em lugar nenhum; agora a mensagem de erro é exibida.
+
 ## [1.51.1] — 2026-08-21
 
 ### Modificado

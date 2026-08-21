@@ -38,13 +38,22 @@ A entrada no RIT360 Financeiro é **controlada pela organização**, não por ca
 
 Após o primeiro acesso, você cai direto no **Painel** da sua organização, já com a OSC selecionada no topo da tela.
 
+> ⚠️ **Se a senha for recusada**
+>
+> A tela mostra o motivo **direto no campo de senha** — você não precisa adivinhar o que faltou. O caso mais comum não é "senha fraca": é uma senha **longa, com letras, números e símbolos**, mas que já apareceu em vazamentos de dados conhecidos de outros serviços. Nesse caso o sistema recusa mesmo ela cumprindo todos os requisitos visíveis. **Escolha uma senha que você não usa em nenhum outro site ou aplicativo** — é a forma mais simples de evitar essa recusa, e o motivo pelo qual reaproveitar senha é sempre desaconselhável.
+
 > 💡 **Atalho · entrar direto com o Google**
 >
 > Se você tem conta Google **no mesmo e-mail com que foi cadastrado**, não precisa do link: basta clicar em **Continuar com Google** na tela de login. Seu acesso à organização é concluído na hora — o e-mail foi indicado pelo administrador e o Google comprova que ele é seu. O aceite da Política de Privacidade e dos Termos de Uso continua sendo pedido normalmente.
 
-> 🔑 **Perdeu ou não recebeu o e-mail de acesso?**
+> 🔑 **O link deu erro?**
 >
-> Você não precisa pedir a ninguém. Na tela de login, clique em **Esqueci a senha** e informe o e-mail com que foi cadastrado: o sistema reconhece que o seu primeiro acesso ainda não foi concluído e envia um **novo link de primeiro acesso**. E, se você entrar no sistema antes de concluir esse passo, aparece uma tela explicando a situação, com o botão para receber o link novamente.
+> Depende do que aconteceu com ele:
+>
+> - **Expirou** (passou de 7 dias) — a tela avisa e já oferece um botão para receber um **link novo** na hora, sem precisar sair dali.
+> - **Já foi usado** — a tela informa que sua conta **já está configurada** e leva direto para o login. Normalmente é sinal de que você já concluiu esse passo antes (às vezes num outro dispositivo ou aba).
+>
+> Nos dois casos, você também pode resolver sozinho pelo **Esqueci a senha** na tela de login: informe o e-mail com que foi cadastrado, e o sistema identifica a situação e envia o link certo — de primeiro acesso ou de redefinição, conforme o seu caso.
 
 > ✉️ **O sistema também lembra você sozinho**
 >
@@ -71,6 +80,10 @@ Na tela de login você pode:
 - **Esqueci a senha** — porta única para recuperar o acesso: informe o e-mail e você recebe o link certo para o seu caso — de **redefinição de senha**, se já usa o sistema, ou de **primeiro acesso**, se ainda não chegou a criar uma senha
 
 Acesse em: [financeiro.rit360.org.br](https://financeiro.rit360.org.br){:target="_blank" rel="noopener noreferrer"}
+
+> ℹ️ **Se o login com Google não completar**
+>
+> Aparece uma mensagem explicando o que houve (por exemplo, login cancelado ou sessão expirada no meio do processo) — a tela não fica muda te devolvendo ao login sem dizer nada. Tente de novo; se continuar falhando, entre com **e-mail e senha**, ou use **Esqueci a senha** se ainda não tiver uma definida.
 
 > ⚠️ **Atenção · Senha forte, sempre**
 >

@@ -35,6 +35,18 @@ Por segurança, a confirmação na tela é sempre a mesma, exista ou não uma co
 
 Se você cadastrou via Google no primeiro acesso, use **Continuar com Google** em vez de senha — contas só-Google não têm senha para redefinir.
 
+### Não consigo concluir meu cadastro. A senha é sempre recusada.
+
+A tela agora mostra o motivo direto embaixo do campo de senha, mas o caso mais comum confunde: você digita uma senha longa, com letras, números e símbolos — e mesmo assim ela é recusada. Isso não é bug nem exagero do sistema: essa senha provavelmente **já apareceu em vazamentos de dados conhecidos** de outros serviços, e por segurança o RIT360 Financeiro não aceita senhas nessa situação, por mais "fortes" que pareçam.
+
+A saída é simples: escolha uma senha que você **não usa em nenhum outro site ou aplicativo**. Se preferir não decorar uma nova, considere um gerenciador de senhas.
+
+Se em vez disso a tela mostrar que o **link expirou** ou que ele **já foi usado**, veja a pergunta anterior — nenhum dos dois casos exige ajuda de terceiros.
+
+### Cliquei em "Continuar com Google" e voltei para a tela de login, sem entender por quê.
+
+Quando o login com Google não completa (por exemplo, você cancelou no meio ou a sessão do Google expirou), a tela mostra uma mensagem curta explicando o motivo — ela não te devolve mais ao login em silêncio. Se aparecer essa mensagem, tente de novo; se persistir, entre com **e-mail e senha**, ou use **Esqueci a senha** se ainda não tiver uma senha definida.
+
 ### Posso usar o mesmo e-mail em mais de uma organização?
 
 Sim. Sua conta no RIT360 Financeiro é única, atrelada ao seu e-mail, mas você pode ser membro de várias OSCs simultaneamente. Use o **seletor de organização** no topo da tela para alternar entre elas — toda a interface reage à organização ativa.
