@@ -11,6 +11,20 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.50.0] — 2026-08-21
+
+### Adicionado
+
+- **Importar categorias e centros de custo por planilha, em Configurações, ao lado de "Aplicar template".** A tela mostra uma prévia antes de gravar: o que será criado, o que será atualizado e o que não pode entrar, com o motivo. A planilha pode vir fora de ordem — o sistema monta os grupos sozinho. Há modelos para baixar, um para categorias e outro para centros de custo.
+- **Dá para criar uma categoria sem sair da conciliação de extrato bancário.** Ao decidir lançar uma transação, é possível criar a categoria ali mesmo, e ela já fica escolhida na linha.
+
+### Modificado
+
+- **Na importação de lançamentos, quando a planilha traz uma categoria que não existe, agora há uma terceira saída além de criar e de mapear: deixar essas linhas de fora.** Elas podem ser trazidas depois, reenviando a mesma planilha com a categoria já cadastrada — sem repetir o que já entrou.
+- **Criar categoria ou centro de custo durante a importação de lançamentos passou a exigir também a permissão de configuração financeira**, a mesma já exigida para criá-los pela tela de Configurações. Quem não tem essa permissão continua importando normalmente e resolve as pendências escolhendo um cadastro existente ou deixando as linhas de fora.
+
+---
+
 ## [1.49.1] — 2026-08-21
 
 ### Modificado

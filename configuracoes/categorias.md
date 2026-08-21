@@ -97,6 +97,50 @@ Para começar rapidamente, clique em **Aplicar template**. O RIT360 Financeiro t
 >
 > Renomear uma categoria atinge **retroativamente** todos os lançamentos que já a usavam — eles passam a aparecer com o novo nome em relatórios e listagens. Geralmente isso é o que você quer (ajustou o nome para algo mais claro), mas pense duas vezes antes de renomear uma categoria que já foi referenciada em prestação de contas externa.
 
+## Importar categorias e centros de custo por planilha
+
+> 💡 **Por que isso importa**
+>
+> Quando você está migrando de outro sistema ou já tem a estrutura contábil inteira numa planilha, cadastrar categoria por categoria na mão é lento e é fácil errar um nome ou esquecer uma sub-categoria. A importação por planilha resolve isso de uma vez: você sobe o arquivo, o RIT360 Financeiro monta a estrutura sozinho e mostra exatamente o que vai mudar **antes** de gravar qualquer coisa.
+
+**Acesso:** botão **Importar por planilha**, ao lado de **Aplicar template**, no topo da página. Exige a permissão **Config. financeira** — ver [Cargos e permissões](/configuracoes/cargos/#permissao-config-financeira).
+
+Categorias e centros de custo têm **modelos separados** (`categorias.csv` e `centros-custo.csv`), em abas distintas da mesma tela — baixe o modelo, preencha e envie de volta.
+
+### Como funciona
+
+1. Clique em **Importar por planilha** e escolha a aba (**Categorias** ou **Centros de custo**).
+2. Baixe o modelo e preencha com a sua estrutura.
+3. Envie o arquivo. Nada é gravado ainda — a tela mostra uma **prévia**.
+4. Confira linha por linha e decida se aplica as atualizações (veja a armadilha abaixo).
+5. Confirme.
+
+[![Prévia da importação de categorias](/assets/screenshots/importar-estrutura-previa.png)](/assets/screenshots/importar-estrutura-previa.png)
+*Prévia da importação: contadores no topo, a caixa "Aplicar as atualizações" e o desfecho linha a linha*
+
+> 📖 **Conceito · A ordem das linhas não importa**
+>
+> Você não precisa colocar o grupo antes das categorias dele na planilha. O RIT360 Financeiro lê o arquivo inteiro e monta a hierarquia sozinho, na ordem que fizer sentido — pode escrever as linhas na ordem que for mais prática para você preencher.
+
+**Categorias têm no máximo dois níveis**: um grupo, e categorias dentro dele. Deixe a coluna `grupo` em branco para criar um grupo principal. **Centro de custo não tem grupo nem tipo** — é uma lista simples, com nome e descrição; uma planilha de centro de custo com coluna de grupo é recusada por inteiro.
+
+No exemplo da prévia acima, a organização importou 34 linhas: **27 categorias novas**, **2 atualizações** (nomes que já existiam, com algo mudando), **1 que já estava exatamente igual** e **4 recusadas**. Duas recusas ensinam bem o que a validação verifica:
+
+- **"Doações"** já existia como sub-categoria de outro grupo, e a planilha tentava usá-la como grupo — a mensagem foi **"Categorias têm no máximo dois níveis"**, e as três categorias-filhas dela na planilha foram recusadas em cascata, com **"O grupo Doações foi recusado — veja a linha do grupo"**.
+- **"Aluguel"** mudou de grupo — de "Sede e instalações" para "Administrativa" — e apareceu como **atualização**, mostrando o antes e o depois, porque a caixa "Aplicar as atualizações" estava marcada.
+
+> ⚠️ **Atenção · A caixa "Aplicar as atualizações" vem marcada**
+>
+> Se a sua planilha renomear uma categoria existente ou mudar o grupo dela, isso **muda relatórios e prestação de contas já emitidos** com aquela categoria. Se você quer só acrescentar o que é novo, sem tocar no que já está em uso, **desmarque a caixa** antes de confirmar — as criações entram do mesmo jeito, só as atualizações ficam de fora.
+
+> ✓ **Dica · Nome que já existe não vira duplicata**
+>
+> A importação **casa por nome**, ignorando maiúsculas/minúsculas e espaços extras. Um nome já cadastrado aparece como "já está igual" (nada muda) ou "atualizar" (mostrando o que mudaria) — nunca cria uma segunda categoria com o mesmo nome. Por isso **reenviar a mesma planilha não duplica nada**: rode de novo sempre que precisar corrigir algo e reimportar.
+
+> ✓ **Dica · Cadastro inativo é reconhecido, mas reativar é sua decisão**
+>
+> Se a planilha cita uma categoria ou centro de custo que existe mas está **inativo**, a prévia mostra a opção de reativar — vindo **desmarcada**. Você decide, linha a linha, se quer trazer aquele cadastro de volta.
+
 ## Hierarquia de categorias
 
 O RIT360 Financeiro suporta **categorias-mãe com sub-categorias** — útil para agrupar afins sem perder granularidade. Exemplo:

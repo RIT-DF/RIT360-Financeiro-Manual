@@ -39,6 +39,18 @@ As permissões são organizadas por área, com as operações que importam separ
 - **Relatórios e auditoria** — Ver relatórios · **Redigir nota explicativa do relatório** · Ver trilha de auditoria · Exportar dados (LGPD)
 - **Configurações** — Config. financeira (contas e categorias) · Config. da OSC · Gerir membros e cargos
 
+### Config. financeira também controla criar categoria e centro de custo "no meio do caminho"
+{: #permissao-config-financeira }
+
+A permissão **Config. financeira** é a mesma que libera [Categorias e Centros de Custo](/configuracoes/categorias/) na tela de Configurações — inclusive a [importação por planilha](/configuracoes/categorias/#importar-categorias-e-centros-de-custo-por-planilha). Ela também é exigida nos dois atalhos que criam categoria ou centro de custo **sem passar por lá**:
+
+- criar categoria ou centro de custo **durante a [importação de lançamentos](/modulos/movimentacoes/#importar-lançamentos)**, ao resolver uma pendência de nome desconhecido;
+- criar categoria **durante a [conciliação de extrato](/modulos/movimentacoes/#conciliacao-bancaria-ofx)**, ao lançar uma transação nova do banco.
+
+> ✓ **Quem não tem a permissão continua importando e conciliando normalmente**
+>
+> Faltando essa permissão, a pessoa não vê o botão de criar categoria/centro de custo nesses dois atalhos (aparece desabilitado, com o motivo). Ela resolve escolhendo um cadastro **já existente**, ou — no caso da importação — deixando aquelas linhas de fora para reimportar depois de a categoria ser cadastrada por quem tem a permissão.
+
 ### Pagar é uma permissão separada de criar e editar
 {: #permissao-pagar }
 

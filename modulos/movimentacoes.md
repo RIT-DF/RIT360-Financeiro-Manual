@@ -435,8 +435,12 @@ Em vez de digitar lançamento por lançamento, você pode importar de duas fonte
 
 - **Transferência** entre contas da OSC é **uma linha** (`tipo=transferencia`, `conta` + `conta_destino`, sem categoria) — preserva o saldo total.
 - **Projeto** não encontrado (fechado/inexistente) → o lançamento entra **sem o vínculo**, com aviso; nunca bloqueia.
-- **Conta ou categoria que ainda não existe** na OSC vira uma **pendência resolvida na própria tela de resumo**: criar a categoria que falta, mapear para uma existente, ou deixar as linhas daquela conta de fora para reimportar depois. O casamento de nomes ignora acentos, maiúsculas/minúsculas e espaços.
+- **Conta ou categoria que ainda não existe** na OSC vira uma **pendência resolvida na própria tela de resumo**, com três opções: **criar** o cadastro que falta (categoria ou conta), **mapear** para um existente, ou **deixar de fora** as linhas correspondentes — nesse último caso, cadastre depois e reimporte a mesma planilha: só as linhas que ficaram de fora entram, sem repetir o que já foi importado. O casamento de nomes ignora acentos, maiúsculas/minúsculas e espaços.
 - **Centro de custo que ainda não existe** também vira **pendência na tela de resumo**, com três opções por nome: **criar** o centro de custo, **mapear** para um existente, ou **importar aquelas linhas sem** centro de custo. Centro de custo em branco (ou coluna ausente) → o lançamento entra sem centro de custo, sem aviso.
+
+> ✓ **Sem permissão para criar categoria/centro de custo? Você continua importando**
+>
+> Criar categoria ou centro de custo direto nessa tela exige a permissão **Config. financeira**, a mesma de [Categorias e Centros de Custo](/configuracoes/categorias/) — ver [Cargos e permissões](/configuracoes/cargos/#permissao-config-financeira). Quem não tem essa permissão não perde a importação: resolve a pendência **mapeando** para um cadastro existente, ou **deixando as linhas de fora** para reimportar depois que alguém com a permissão cadastrar o que falta.
 
 > 💡 **Migrando de uma planilha ou de outro sistema?**
 >
@@ -521,7 +525,7 @@ Enquanto há importação em andamento, a aba **se atualiza sozinha**; há tamb�
 >
 > Se você fechou a tela sem querer ou a conexão caiu no meio de uma planilha grande, volte à aba Histórico: ela mostra em que ponto a importação parou. A partir daí, o caminho é sempre o mesmo — reenviar o mesmo arquivo (ver caixa acima).
 
-## Conciliação bancária (extrato OFX)
+## Conciliação bancária (extrato OFX) {#conciliacao-bancaria-ofx}
 
 Se você baixa o **extrato do banco em formato OFX** (a maioria dos bancos oferece), pode conciliá-lo com seus lançamentos no RIT360 Financeiro — em vez de marcar conta por conta como paga.
 
@@ -533,13 +537,15 @@ Se você baixa o **extrato do banco em formato OFX** (a maioria dos bancos ofere
 2. O RIT360 Financeiro lê cada transação do extrato e **procura o lançamento correspondente** (por valor e proximidade de data), organizando tudo em quatro grupos:
    - **Conciliados** — alta confiança no casamento; já vêm pré-marcados.
    - **Em revisão** — casamento provável, mas com alguns dias de diferença; você confirma ou recusa.
-   - **Novos** — transações sem lançamento correspondente; você pode **criar** o lançamento (escolhendo a categoria) ou ignorar.
+   - **Novos** — transações sem lançamento correspondente; você pode **criar** o lançamento (escolhendo a categoria) ou ignorar. Se a categoria certa ainda não existe, não precisa sair da conciliação para cadastrar: clique em **criar categoria** ali mesmo, e ela já entra escolhida na linha (exige a permissão **Config. financeira** — ver abaixo).
    - **Já conciliados** — transações que você já processou antes (apenas informativo).
 3. Ao **confirmar**, os lançamentos conciliados/aceitos são marcados como **pagos** com a data do extrato e ficam vinculados à conciliação; os "novos" que você escolher viram lançamentos.
 
 **Reimportar o mesmo extrato não duplica nada** — cada transação é reconhecida pelo identificador único do banco.
 
 **Quem pode confirmar:** subir e conferir o extrato é uma coisa; **confirmar** — que marca lançamentos como pagos — exige a **permissão de pagar**, a mesma de marcar como pago em Movimentações. Ver [Cargos e permissões](/configuracoes/cargos/#permissao-pagar).
+
+**Quem pode criar categoria durante a conciliação:** é a permissão **Config. financeira**, a mesma de [Categorias e Centros de Custo](/configuracoes/categorias/) — ver [Cargos e permissões](/configuracoes/cargos/#permissao-config-financeira). Sem ela, o botão de criar categoria aparece desabilitado; escolha uma categoria já cadastrada.
 
 > 💡 **Por que isso importa**
 > Conciliar pelo extrato substitui a conferência manual lançamento a lançamento, reduz erro e dá confiança de que o que está registrado no RIT360 Financeiro bate com o banco.

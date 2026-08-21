@@ -131,8 +131,10 @@ Em **Movimentações → Importar Lançamentos → CSV**, suba o arquivo. O RIT3
 
 Se a planilha cita uma **conta** ou **categoria** que ainda não existe na OSC, você não precisa cancelar, ir cadastrar e recomeçar. A tela de resumo abre um painel de **Pendências a resolver**:
 
-- **Categoria desconhecida** → você pode **criar a categoria** ali mesmo (o RIT360 Financeiro sugere o tipo) ou **mapear** para uma categoria existente.
+- **Categoria desconhecida** → você pode **criar a categoria** ali mesmo (o RIT360 Financeiro sugere o tipo), **mapear** para uma categoria existente, ou **deixar de fora** as linhas daquela categoria (cadastre-a com calma — pela [importação por planilha](/configuracoes/categorias/#importar-categorias-e-centros-de-custo-por-planilha) ou pela tela — e reimporte a mesma planilha depois: só as linhas que ficaram de fora entram, o resto não duplica).
 - **Conta desconhecida** → **mapear** para uma conta existente, ou **deixar de fora** as linhas daquela conta (você cadastra a conta com o saldo de abertura correto depois e reimporta só essas linhas — sem criar conta meia-boca no meio da importação).
+
+Criar categoria (ou conta) direto nessa tela exige a permissão **Config. financeira** — ver [Cargos e permissões](/configuracoes/cargos/#permissao-config-financeira). Sem ela, você resolve mapeando ou deixando as linhas de fora.
 - O casamento de nomes ignora **acentos, maiúsculas/minúsculas e espaços extras** — "doações", "Doações" e "DOAÇÕES " são a mesma categoria.
 
 Só depois de resolver as pendências o botão de confirmar libera. Aí sim os lançamentos são criados em lote.
@@ -197,7 +199,7 @@ Se a conta já tem lançamentos, o saldo de abertura fica protegido — a Presid
 Cada lançamento pode ser editado, cancelado ou estornado individualmente pela lista de Movimentações. Não há "desfazer a importação inteira" — por isso o preview e o lote pequeno existem: para errar antes de criar.
 
 **Minha planilha tem conta/categoria que não cadastrei. Trava a importação?**
-Não. A tela de resumo resolve na hora: criar a categoria que falta, mapear para uma existente, ou deixar as linhas daquela conta de fora para reimportar depois. Veja [Quando um nome não existe ainda](#4-importe-o-histórico-csv).
+Não. A tela de resumo resolve na hora: criar o que falta (se você tiver a permissão), mapear para um cadastro existente, ou deixar aquelas linhas de fora para reimportar depois. Veja [Quando um nome não existe ainda](#4-importe-o-histórico-csv).
 
 **Transferências entre contas, como importo?**
 Uma linha por transferência, `tipo=transferencia`, com `conta` (origem) e `conta_destino` (destino) — sem categoria. Veja a tabela de colunas.

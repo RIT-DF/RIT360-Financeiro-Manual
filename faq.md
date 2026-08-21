@@ -293,6 +293,10 @@ Sim. Em **Configurações → Cargos e permissões**, abra o cargo e **desligue 
 
 Em **Configurações → Categorias**, clique em **Aplicar template** e escolha um modelo próximo ao perfil da sua OSC (ex: "Padrão Grupo Escoteiro 2026"). O template traz categorias típicas pré-configuradas. Depois você ajusta o que não bater com sua realidade — renomeia, exclui, adiciona.
 
+### Tenho a lista inteira de categorias e centros de custo pronta. Preciso cadastrar um por um?
+
+Não, se estiver numa planilha. Em **Configurações → Categorias**, clique em **Importar por planilha** (ao lado de "Aplicar template"), baixe o modelo, preencha e envie — a ordem das linhas não importa, o sistema monta a hierarquia sozinho. Antes de gravar, você vê uma **prévia** com o que vai ser criado, atualizado ou recusado (e por quê), e escolhe se quer aplicar as atualizações a categorias já existentes ou só acrescentar o que é novo. Ver [Configurações → Categorias → Importar por planilha](/configuracoes/categorias/#importar-categorias-e-centros-de-custo-por-planilha).
+
 ### Cadastrei várias pessoas e metade nunca entrou. Como descubro quem são?
 
 Em **Configurações → Usuários**, quem ainda não concluiu o primeiro acesso aparece com o tempo de espera ("Aguardando há N dias"). Passados **14 dias** — quando os lembretes automáticos do sistema já se esgotaram — a pessoa ganha o selo **"Sem resposta"**, e um **resumo no topo da tela** mostra a contagem e filtra a lista só para essas pessoas com um clique. A partir daí você decide: reenviar o acesso, corrigir um e-mail digitado errado ou cancelar o acesso pendente. Ver [Configurações → Usuários](/configuracoes/usuarios/).
