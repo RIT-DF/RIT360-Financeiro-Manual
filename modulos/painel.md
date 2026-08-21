@@ -20,7 +20,7 @@ De cima para baixo, o Painel tem cinco blocos:
 
 1. **Contas** e **Este mês** — uma linha por conta com o saldo, e o líquido no rodapé; ao lado, o resumo de receitas, despesas e resultado do mês.
 2. **Fluxo de caixa** — gráfico com os últimos 6 meses, comparando receitas e despesas.
-3. **Pendências** — três colunas lado a lado: **Pedidos de pagamento**, **Reembolsos** e **Projetos**, cada uma com o que está pendente para o seu papel.
+3. **Pendências** — três colunas lado a lado: **Pedidos de Compra e Pagamento**, **Reembolsos** e **Projetos**, cada uma com o que está pendente para o seu papel.
 4. **Pontos de atenção** — avisos sobre o que saiu do padrão recentemente (ver seção própria abaixo).
 
 Quando existe algum aviso **grave** em aberto, um selo no topo da tela mostra quantos são. Clicar nesse selo leva direto ao bloco de Pontos de atenção, no fim da página — sem precisar rolar procurando.
@@ -73,9 +73,9 @@ Logo abaixo do primeiro bloco, um gráfico mostra os **últimos 6 meses** de mov
 
 ## Bloco 3 · Pendências
 
-Três colunas lado a lado — **Pedidos de Pagamento**, **Reembolsos** e **Projetos** — cada uma em um card com suas pendências como linhas clicáveis. O que aparece depende do seu papel — você só vê pendências relacionadas ao que pode resolver. Clicar em uma linha leva direto à lista já filtrada pelo status correspondente.
+Três colunas lado a lado — **Pedidos de Compra e Pagamento**, **Reembolsos** e **Projetos** — cada uma em um card com suas pendências como linhas clicáveis. O que aparece depende do seu papel — você só vê pendências relacionadas ao que pode resolver. Clicar em uma linha leva direto à lista já filtrada pelo status correspondente.
 
-### Pedidos de Pagamento
+### Pedidos de Compra e Pagamento
 
 - **Solicitado por mim** — seus próprios pedidos pendentes (todos os papéis veem os próprios)
 - **Aguardando aprovação** — somente para aprovadores elegíveis

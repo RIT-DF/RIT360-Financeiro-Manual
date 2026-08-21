@@ -78,7 +78,7 @@ A ativação é **por dispositivo**, com um interruptor mestre **"Ativar push ne
 Tabela que cruza **eventos × 2 canais** (E-mail e Push) e permite controle fino sobre quais notificações receber e por onde. Os eventos estão agrupados por área:
 
 - **Reembolsos** (5): submetido, aprovação parcial, aprovado, rejeitado, pago.
-- **Pedidos de Pagamento** (5): submetido, aprovação parcial, aprovado, rejeitado, pago.
+- **Pedidos de Compra e Pagamento** (5): submetido, aprovação parcial, aprovado, rejeitado, pago.
 - **Feedback** (2): novo feedback enviado, feedback resolvido.
 - **Projetos**: comentários no mural, hora de publicar status, marcos atingidos ou perdidos, riscos materializados, tarefas atribuídas ou vencendo, resumo diário, e as aprovações de abertura/alteração e seus resultados.
 

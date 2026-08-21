@@ -151,7 +151,7 @@ Esta é, talvez, a parte mais importante desta página do manual. **Existe uma l
 - **O relatório de prestação de contas** gerado dentro do sistema.
 - **Dados bancários e saldo das contas.**
 - **CPF, RG, e-mail e telefone** de pessoas.
-- **As telas internas de gestão** — aprovações, reembolsos, pedidos de pagamento, movimentações, orçamento.
+- **As telas internas de gestão** — aprovações, reembolsos, pedidos de compra e pagamento, movimentações, orçamento.
 
 > ℹ️ **A única exceção é o contato de proteção de dados — e ela é escolha da OSC**
 >

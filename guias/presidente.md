@@ -64,7 +64,7 @@ O presidente não precisa ser o gargalo de tudo. O fluxo de aprovação existe p
 
 > 🧭 **Como o RIT360 Financeiro ajuda · Fluxo de aprovação configurável**
 >
-> A OSC define quem aprova cada coisa (abertura e encerramento de projetos, reembolsos, pedidos de pagamento). Você concentra a sua atenção no que é estratégico e delega o operacional — com o registro de quem aprovou o quê.
+> A OSC define quem aprova cada coisa (abertura e encerramento de projetos, reembolsos, pedidos de compra e pagamento). Você concentra a sua atenção no que é estratégico e delega o operacional — com o registro de quem aprovou o quê.
 >
 > [![Fluxo de aprovações](/assets/screenshots/manual-09f-config-workflow.png)](/assets/screenshots/manual-09f-config-workflow.png)
 

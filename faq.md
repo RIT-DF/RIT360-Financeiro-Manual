@@ -125,7 +125,7 @@ No **cartão de crédito** a lógica é a mesma vista pelo avesso: o valor **"a 
 
 ### Se eu sair da tela enquanto preencho, perco o que já digitei?
 
-Não. Ao preencher um **novo lançamento**, **reembolso** ou **pedido de pagamento**, o que você digita é salvo automaticamente no seu dispositivo. Se você sair da tela — por exemplo, para escolher um arquivo para anexar — ou o navegador recarregar a página, ao voltar os campos continuam preenchidos e aparece um aviso de **"rascunho recuperado"**. O rascunho é apagado assim que você envia o formulário (ou clica em descartar), e some ao sair da sua conta. Observação: **arquivos ainda não enviados** não são guardados — só os campos digitados.
+Não. Ao preencher um **novo lançamento**, **reembolso** ou **pedido de compra e pagamento**, o que você digita é salvo automaticamente no seu dispositivo. Se você sair da tela — por exemplo, para escolher um arquivo para anexar — ou o navegador recarregar a página, ao voltar os campos continuam preenchidos e aparece um aviso de **"rascunho recuperado"**. O rascunho é apagado assim que você envia o formulário (ou clica em descartar), e some ao sair da sua conta. Observação: **arquivos ainda não enviados** não são guardados — só os campos digitados.
 
 ## Painel e pontos de atenção
 
@@ -159,11 +159,11 @@ A exclusão é **permanente** — por isso o botão só aparece para quem tem pe
 
 Sim. No campo de saldo do banco, use o sinal de **"−"** para informar um valor negativo (ex.: `−1.500,00`). O cálculo da diferença considera o sinal corretamente. Vale também para conciliar a **fatura de um cartão de crédito**.
 
-## Reembolsos e Pedidos de Pagamento
+## Reembolsos e Pedidos de Compra e Pagamento
 
 ### Meu pedido foi reprovado. E agora?
 
-Não é o fim: abra o detalhe do reembolso ou pedido de pagamento rejeitado (o motivo aparece em destaque no topo, com quem reprovou e quando) e clique em **Editar e reenviar** — só o solicitante vê esse botão. Os campos passam a ser editáveis na própria página; corrija o que foi apontado (comprovante ilegível, valor errado, categoria trocada) e envie de novo. Não é preciso criar uma solicitação nova, e o fluxo de aprovação recomeça a partir do reenvio. Veja o detalhe completo em [Reembolsos → Rejeitado](/modulos/reembolsos/#rejeitado).
+Não é o fim: abra o detalhe do reembolso ou pedido de compra e pagamento rejeitado (o motivo aparece em destaque no topo, com quem reprovou e quando) e clique em **Editar e reenviar** — só o solicitante vê esse botão. Os campos passam a ser editáveis na própria página; corrija o que foi apontado (comprovante ilegível, valor errado, categoria trocada) e envie de novo. Não é preciso criar uma solicitação nova, e o fluxo de aprovação recomeça a partir do reenvio. Veja o detalhe completo em [Reembolsos → Rejeitado](/modulos/reembolsos/#rejeitado).
 
 ### Enviei um reembolso (ou pedido) por engano, ou mudei de ideia. Como desisto?
 
@@ -181,7 +181,7 @@ Se a sua organização preferir, ela pode **exigir mais de uma reprovação** (a
 
 ### Por que não dá para reprovar vários reembolsos ou pedidos de uma vez, se dá para aprovar?
 
-Porque **cada reprovação exige um motivo próprio**. Aprovar em lote faz sentido porque um "sim" vale igual para todos os itens marcados; um "não" não — cada reprovação precisa dizer especificamente o que está errado naquela solicitação (comprovante ilegível, valor incorreto, categoria trocada), para que quem pediu saiba o que corrigir. Um motivo genérico aplicado a vários de uma vez não ajudaria ninguém. Por isso a seleção em lote em [Reembolsos](/modulos/reembolsos/#selecao-em-lote) e Pedidos de Pagamento só tem o botão **Aprovar selecionados** — reprovar continua sendo um de cada vez.
+Porque **cada reprovação exige um motivo próprio**. Aprovar em lote faz sentido porque um "sim" vale igual para todos os itens marcados; um "não" não — cada reprovação precisa dizer especificamente o que está errado naquela solicitação (comprovante ilegível, valor incorreto, categoria trocada), para que quem pediu saiba o que corrigir. Um motivo genérico aplicado a vários de uma vez não ajudaria ninguém. Por isso a seleção em lote em [Reembolsos](/modulos/reembolsos/#selecao-em-lote) e Pedidos de Compra e Pagamento só tem o botão **Aprovar selecionados** — reprovar continua sendo um de cada vez.
 
 ### Quem pode escrever a nota explicativa da prestação de contas?
 
@@ -227,13 +227,21 @@ Em **Meu Perfil → Dados para Reembolso**. Configure uma vez; o formulário de 
 
 Não. Depois que o pagamento é concluído, os dados bancários de quem recebeu ficam guardados apenas pelo prazo que a sua OSC definiu (padrão: **90 dias**) e então são **apagados automaticamente** — a tela explica isso quando você abre o registro. **Continuam ali** valor, descrição, datas, categoria, centro de custo, projeto, anexos, situação e o **nome de quem recebeu**: a prestação de contas fica completa. Se precisar pagar de novo para a mesma pessoa, peça os dados outra vez. Registros **ainda não pagos nunca são tocados**. Ver [Dados bancários de quem recebe](/configuracoes/contas/#dados-bancarios-de-quem-recebe).
 
-### Qual a diferença entre Reembolso e Pedido de Pagamento?
+### Qual a diferença entre Reembolso e Pedido de Compra e Pagamento?
 
-**Reembolso** é para despesa que **já aconteceu**: você pagou do bolso e quer receber de volta. **Pedido de Pagamento** é para despesa que **ainda vai acontecer**: a OSC vai pagar (boleto, fornecedor, contrato) e a aprovação autoriza a saída de dinheiro.
+**Reembolso** é para despesa que **já aconteceu**: você pagou do bolso e quer receber de volta. **Pedido de Compra e Pagamento** é para despesa que **ainda vai acontecer**: a OSC vai pagar (boleto, fornecedor, contrato) e a aprovação autoriza a saída de dinheiro.
 
-### Posso criar um Pedido de Pagamento recorrente para o aluguel?
+### Posso criar um Pedido de Compra e Pagamento recorrente para o aluguel?
 
-Sim. Ao criar um pedido, escolha tipo **Recorrente** e configure a frequência (mensal) e a duração (data final, quantidade de ocorrências ou indefinida até cancelar). A aprovação cria a série inteira; cada ocorrência é paga separadamente pelo tesoureiro. Veja a [seção de Pedidos de Pagamento](/modulos/pedidos-pagamento/) para detalhes.
+Sim. Ao criar um pedido, escolha tipo **Recorrente** e configure a frequência (mensal) e a duração (data final, quantidade de ocorrências ou indefinida até cancelar). A aprovação cria a série inteira; cada ocorrência é paga separadamente pelo tesoureiro. Veja a [seção de Pedidos de Compra e Pagamento](/modulos/pedidos-pagamento/) para detalhes.
+
+### Ainda não sei o preço final da compra. Posso pedir aprovação mesmo assim?
+
+Sim — escolha **"Valor estimado — a confirmar na compra"** ao criar o pedido, e anexe os orçamentos que embasam a estimativa. A aprovação libera com base nesse valor; depois, quando o preço fecha com o fornecedor, alguém com permissão de pagar registra o valor efetivo editando o lançamento. Se a diferença passar do limiar definido pela sua OSC (padrão 10%), o pagamento fica retido até um aprovador autorizar. Ver [Pedidos de Compra e Pagamento → Quando o valor pago diverge do autorizado](/modulos/pedidos-pagamento/#valor-diverge-do-autorizado).
+
+### Registrei o valor final da compra e o pagamento sumiu do fluxo normal. O que aconteceu?
+
+Provavelmente o valor final passou do valor autorizado além do limiar de reaprovação da sua OSC — o pedido continua **aprovado**, só o pagamento ficou retido até alguém autorizar a diferença. Abra o pedido: se você aprova, verá os botões **Autorizar a diferença**, **Pedir autorização a outro aprovador** e **Recusar a diferença**; se só paga, verá **Pedir autorização do valor excedente**. Ver [Pedidos de Compra e Pagamento → Quando o valor pago diverge do autorizado](/modulos/pedidos-pagamento/#valor-diverge-do-autorizado).
 
 ## Projetos
 
@@ -247,7 +255,7 @@ Presidente, Tesoureiro e Coordenador podem criar diretamente. O **Voluntário** 
 
 ### Como vinculo uma despesa (ou receita) a um projeto?
 
-No formulário de lançamento, use o campo **Projeto** (opcional). O dinheiro continua sendo da OSC, nas mesmas contas — o projeto apenas **rotula** a movimentação, para você ver o recorte dele sem perder o todo. O mesmo vale para reembolsos e pedidos de pagamento.
+No formulário de lançamento, use o campo **Projeto** (opcional). O dinheiro continua sendo da OSC, nas mesmas contas — o projeto apenas **rotula** a movimentação, para você ver o recorte dele sem perder o todo. O mesmo vale para reembolsos e pedidos de compra e pagamento.
 
 ### O que é a "saúde" do projeto (o semáforo)?
 
@@ -287,7 +295,7 @@ Dá. Em **Configurações → Contas Bancárias**, no cartão **Descarte de dado
 
 ### Quero que quem lança as despesas não possa dar baixa nos pagamentos. É possível?
 
-Sim. Em **Configurações → Cargos e permissões**, abra o cargo e **desligue "Pagar (marcar como pago)"** em Movimentações. A pessoa continua registrando e editando lançamentos normalmente, mas não confirma pagamentos — nem pelo lançamento, nem pela parcela de pedido de pagamento, nem pela conciliação de extrato. É a mesma lógica de segregação de funções que já protege a Comissão Fiscal. Ver [Cargos e permissões](/configuracoes/cargos/#permissao-pagar).
+Sim. Em **Configurações → Cargos e permissões**, abra o cargo e **desligue "Pagar (marcar como pago)"** em Movimentações. A pessoa continua registrando e editando lançamentos normalmente, mas não confirma pagamentos — nem pelo lançamento, nem pela parcela de pedido de compra e pagamento, nem pela conciliação de extrato. É a mesma lógica de segregação de funções que já protege a Comissão Fiscal. Ver [Cargos e permissões](/configuracoes/cargos/#permissao-pagar).
 
 ### Como começo do zero com as categorias? Não sei o que cadastrar.
 

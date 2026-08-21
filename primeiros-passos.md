@@ -110,7 +110,7 @@ A barra de navegação no topo é o seu mapa:
 |---|---|
 | **Painel** | Visão consolidada de saldos e pendências |
 | **Movimentações** | Receitas, despesas e transferências |
-| **Pagamentos e Reembolsos** | Pedidos de pagamento e reembolsos, em abas |
+| **Pagamentos e Reembolsos** | Pedidos de compra e pagamento e reembolsos, em abas |
 | **Projetos** | Planejamento, execução e prestação de contas de projetos |
 | **Orçamento** | Orçamento anual por centro de custo e categoria — previsto × realizado |
 | **Relatórios** | Relatórios gerenciais — Visão Geral, Receitas, Despesas, Atenção e Previsão |

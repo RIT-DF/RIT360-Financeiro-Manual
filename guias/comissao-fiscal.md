@@ -13,7 +13,7 @@ A Comissão Fiscal (ou Conselho Fiscal) é o **órgão estatutário de fiscaliza
 
 ## 1. O que se espera de você
 
-- **Acompanhar** as movimentações, reembolsos e pedidos de pagamento da OSC.
+- **Acompanhar** as movimentações, reembolsos e pedidos de compra e pagamento da OSC.
 - **Verificar** se há comprovação, se os valores fazem sentido e se os fluxos foram seguidos.
 - **Conferir** a prestação de contas apresentada pela tesouraria.
 - **Emitir parecer** — a opinião do conselho sobre a regularidade das contas, nos prazos do estatuto.

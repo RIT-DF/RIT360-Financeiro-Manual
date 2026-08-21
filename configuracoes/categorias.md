@@ -155,5 +155,5 @@ O modo automático de integração com WooCommerce (em Configurações → Organ
 ## Por onde seguir
 
 - **Movimentações** — onde as categorias aparecem nos formulários de novo lançamento e nos filtros da lista.
-- **Reembolsos** e **Pedidos de Pagamento** — onde as categorias de despesa são usadas para classificar as solicitações.
+- **Reembolsos** e **Pedidos de Compra e Pagamento** — onde as categorias de despesa são usadas para classificar as solicitações.
 - **Configurações → Organização → Integrações** — onde a categoria-mãe do WooCommerce é configurada.

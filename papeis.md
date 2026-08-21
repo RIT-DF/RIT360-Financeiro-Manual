@@ -18,9 +18,9 @@ O RIT360 Financeiro tem **sete papéis** que um usuário pode ocupar dentro de u
 | **Tesoureiro** | ✓ Sim | Lançar movimentações, aprovar reembolsos e pedidos, confirmar pagamentos, configurar contas bancárias e categorias |
 | **Diretor** | — | Membro da diretoria com **visão ampla de supervisão**: vê movimentações, relatórios e projetos para acompanhar, mas **não opera** (não lança, não aprova). Pode solicitar reembolso próprio |
 | **Gestor de Centro de Custo** | — | Cuida das movimentações **do(s) centro(s) de custo sob sua responsabilidade**: pode **criar e editar** lançamentos daquele CC e vê movimentações e relatórios recortados a ele. Não exclui/estorna, não importa, não aprova, não configura |
-| **Coordenador de Projeto** | — | Solicitar reembolsos e pedidos de pagamento, ver movimentações |
+| **Coordenador de Projeto** | — | Solicitar reembolsos e pedidos de compra e pagamento, ver movimentações |
 | **Voluntário** | — | Solicitar reembolsos (apenas os próprios), ver o painel |
-| **Comissão Fiscal** | — | Lê tudo (movimentações, reembolsos, pedidos de pagamento, auditoria) **sem operar, aprovar ou solicitar pedidos de pagamento**. Pode solicitar reembolso próprio |
+| **Comissão Fiscal** | — | Lê tudo (movimentações, reembolsos, pedidos de compra e pagamento, auditoria) **sem operar, aprovar ou solicitar pedidos de compra e pagamento**. Pode solicitar reembolso próprio |
 
 > 💡 O papel **Diretor** era chamado "Dirigente" em versões anteriores — é o mesmo papel, só o nome na tela mudou (versão 0.23.0).
 
@@ -36,7 +36,7 @@ Visão rápida do que cada papel pode fazer. **✓** = pode operar · **👁** =
 | Cadastrar contas bancárias e categorias | ✓ | ✓ | — | — | — | — |
 | Configurar a OSC (dados, usuários, papéis, fluxo de aprovação) | ✓ | — | — | — | — | — |
 | Aprovar reembolsos / pedidos | conforme o fluxo | conforme o fluxo | — | — | conforme o fluxo | conforme o fluxo |
-| Solicitar pedido de pagamento | ✓ | ✓ | — | — | ✓ | — |
+| Solicitar pedido de compra e pagamento | ✓ | ✓ | — | — | ✓ | — |
 | Solicitar o **próprio** reembolso | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | Coordenar um projeto (do qual é coordenador) | ✓ | ✓ | — | — | ✓ | — |
 | Ver o orçamento anual (previsto × realizado) | ✓ | ✓ | 👁 | 👁 | 👁 | — |
@@ -63,7 +63,7 @@ O **Gestor de Centro de Custo** é para quem responde pelo dia a dia financeiro 
 
 - Excluir ou estornar lançamentos
 - Importar lançamentos (CSV, extrato bancário, WooCommerce)
-- Aprovar reembolsos ou pedidos de pagamento
+- Aprovar reembolsos ou pedidos de compra e pagamento
 - Gerir configurações da OSC (dados, usuários, papéis, contas, categorias, fluxo de aprovações)
 
 > 📖 **Conceito · Dois requisitos para o acesso valer**
@@ -76,10 +76,10 @@ O **rótulo** desse cargo pode ser renomeado pela OSC (por exemplo, "Responsáve
 
 ## Regras importantes
 
-- **Voluntários** não podem solicitar pedidos de pagamento (só reembolsos). Pedido de pagamento envolve dispor de dinheiro da OSC; reembolso é só ressarcimento.
+- **Voluntários** não podem solicitar pedidos de compra e pagamento (só reembolsos). Pedido de compra e pagamento envolve dispor de dinheiro da OSC; reembolso é só ressarcimento.
 - **Voluntários** não veem dados de pagamento (PIX/TED/conta) de outros membros nos reembolsos. Só veem os próprios dados.
 - **Diretor** é um papel de **supervisão, somente leitura**: enxerga movimentações, relatórios, projetos e a trilha de auditoria para acompanhar a OSC, mas **não opera** — não lança, não aprova, não configura. Pode solicitar o próprio reembolso, como qualquer membro. **Não acessa Configurações da OSC.**
-- **Comissão Fiscal** tem leitura ampla de todos os dados financeiros mas não realiza nenhuma operação, não participa de fluxos de aprovação e não solicita pedidos de pagamento. Pode solicitar reembolso próprio (mesma regra dos demais membros). **Não acessa Configurações da OSC** — o papel é de fiscalização, separado da gestão.
+- **Comissão Fiscal** tem leitura ampla de todos os dados financeiros mas não realiza nenhuma operação, não participa de fluxos de aprovação e não solicita pedidos de compra e pagamento. Pode solicitar reembolso próprio (mesma regra dos demais membros). **Não acessa Configurações da OSC** — o papel é de fiscalização, separado da gestão.
 - **Configurações da Organização** se divide por papel: **Presidente** acessa tudo (dados da OSC, usuários, papéis, contas bancárias, categorias, fluxo de aprovações, relatórios); **Tesoureiro** acessa apenas **Contas Bancárias e Categorias** (o cadastro financeiro). O Fluxo de Aprovações, por ser configuração de governança, é **só do Presidente**. O ícone de engrenagem aparece para Presidente e Tesoureiro; ao clicar, cada um vai para a primeira seção que pode acessar.
 - **Aprovadores não aprovam a si mesmos** — o RIT360 Financeiro bloqueia automaticamente quando há outros aprovadores elegíveis no fluxo.
 

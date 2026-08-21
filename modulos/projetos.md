@@ -199,7 +199,7 @@ A distinção importa na hora de entender por que alguém sumiu do projeto no di
 
 O Financeiro mostra o dinheiro do projeto sem tirar nada do caixa geral da OSC:
 
-- **Registrar despesa do projeto** — abre um **reembolso** ou um **pedido de pagamento** já vinculado a este projeto. A solicitação segue o **fluxo normal de aprovação** da OSC.
+- **Registrar despesa do projeto** — abre um **reembolso** ou um **pedido de compra e pagamento** já vinculado a este projeto. A solicitação segue o **fluxo normal de aprovação** da OSC.
 - **Vincular lançamentos existentes** — atribui a este projeto movimentações que já foram lançadas e ainda não tinham projeto.
 - **Aguardando aprovação** — lista os pedidos e reembolsos do projeto que **ainda não foram aprovados** (com o selo "Aguardando Aprovação" ou "Rascunho"). Clique para abrir o pedido. **Esses pendentes não entram nos totais** — servem só para você saber o que já foi solicitado e **não pedir o mesmo pagamento duas vezes**. Quando aprovados, saem daqui e passam a contar como movimentação vinculada.
 - **Receitas e Despesas / Orçamento previsto / Previsto × Realizado** — o orçamento do projeto (total e, opcionalmente, por categoria) confrontado com o que já foi gasto, com saldo e percentual de consumo. O que aparece aqui depende do **financiamento do projeto** (ver "Financiamento do projeto" em Conceitos essenciais): um projeto **custeado pelo caixa geral** mostra só despesas; um projeto **com receita própria** mostra receitas e despesas. Se aparecer receita vinculada a um projeto marcado como "custeado pelo caixa geral", ela é exibida do mesmo jeito, com um aviso para revisar a configuração — o lançamento real vale mais que a declaração.
@@ -311,7 +311,7 @@ Cada encerramento alimenta um **acervo de Lições Aprendidas** da OSC, acessív
 ## Por onde seguir
 
 - **Movimentações** — onde os lançamentos vivem; o financeiro do projeto se apoia neles.
-- **Reembolsos** e **Pedidos de Pagamento** — os fluxos que o botão "Registrar despesa do projeto" aciona.
+- **Reembolsos** e **Pedidos de Compra e Pagamento** — os fluxos que o botão "Registrar despesa do projeto" aciona.
 - **Relatórios** — agora com filtro por projeto.
 - **Painel** — onde a saúde de todos os projetos aparece de relance.
 - **Papéis e Permissões** — para entender o papel de Coordenador de Projeto na OSC.

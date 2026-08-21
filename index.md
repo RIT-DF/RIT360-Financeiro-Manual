@@ -57,7 +57,7 @@ permalink: /
   </a>
   <a class="module-card" href="/modulos/pedidos-pagamento/">
     <div class="module-card-icon">📋</div>
-    <div class="module-card-title">Pedidos de Pagamento</div>
+    <div class="module-card-title">Pedidos de Compra e Pagamento</div>
     <div class="module-card-desc">Autorizar pagamentos a fornecedores antes da despesa acontecer</div>
   </a>
   <a class="module-card" href="/modulos/projetos/">

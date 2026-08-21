@@ -28,7 +28,7 @@ Clique em **+ Adicionar usuário**. Informe o **e-mail** e o **papel** desejado.
 
 > 📖 **Conceito · Já dá para designar quem ainda não ativou o acesso**
 >
-> Um membro recém-cadastrado, que ainda não concluiu o primeiro acesso (não definiu a senha), **já pode ser escolhido** como **gestor de centro de custo**, **coordenador ou integrante de projeto** e **aprovador** (de reembolso, pedido de pagamento, orçamento e projeto) — sem esperar ele entrar no sistema pela primeira vez. Nessas listas o nome aparece com a marca discreta **"· acesso pendente"**. A permissão para *agir* (aprovar, coordenar, operar) continua valendo **só depois** que a pessoa ativa o acesso.
+> Um membro recém-cadastrado, que ainda não concluiu o primeiro acesso (não definiu a senha), **já pode ser escolhido** como **gestor de centro de custo**, **coordenador ou integrante de projeto** e **aprovador** (de reembolso, pedido de compra e pagamento, orçamento e projeto) — sem esperar ele entrar no sistema pela primeira vez. Nessas listas o nome aparece com a marca discreta **"· acesso pendente"**. A permissão para *agir* (aprovar, coordenar, operar) continua valendo **só depois** que a pessoa ativa o acesso.
 
 ## Importar usuários em lote (planilha CSV ou Excel)
 

@@ -7,7 +7,7 @@ permalink: /configuracoes/aprovacoes/
 
 > Disponível para **Presidente (admin)** e **Tesoureiro**.
 
-A página **Fluxo de Aprovações** define **quem pode aprovar** reembolsos e pedidos de pagamento da OSC, e **quantos votos são necessários** para aprovar. Acessada por **Configurações → Fluxo de Aprovações** (a URL é `/configuracoes/aprovacoes`).
+A página **Fluxo de Aprovações** define **quem pode aprovar** reembolsos e pedidos de compra e pagamento da OSC, e **quantos votos são necessários** para aprovar. Acessada por **Configurações → Fluxo de Aprovações** (a URL é `/configuracoes/aprovacoes`).
 
 [![Configurações — Fluxo de Aprovações](/assets/screenshots/config-workflow.png)](/assets/screenshots/config-workflow.png)
 *Configurações — Fluxo de aprovações*
@@ -16,7 +16,7 @@ A página **Fluxo de Aprovações** define **quem pode aprovar** reembolsos e pe
 >
 > Em OSC sem regra clara de aprovação, ou ninguém aprova nada (e despesas acontecem por inércia, sem controle) ou todo mundo aprova tudo (e a aprovação vira carimbo automático, sem real avaliação). **O fluxo bem configurado** define exatamente quem tem mandato para autorizar saída de dinheiro, quantos precisam concordar, e como o sistema lida com casos atípicos (auto-aprovação, situações onde o solicitante é também aprovador). Isso protege a OSC de gastos não autorizados e protege os aprovadores de questionamento futuro.
 
-A página tem **três abas**: **Pagamentos e Reembolsos** (reembolsos e pedidos de pagamento, com regras próprias mas a mesma lógica), **Projetos** (aprovação de abertura e encerramento de projetos) e **Orçamento** (aprovação e revisão do orçamento anual). As seções abaixo descrevem a aba de Pagamentos e Reembolsos; as abas de Projetos e Orçamento são descritas no fim.
+A página tem **três abas**: **Pagamentos e Reembolsos** (reembolsos e pedidos de compra e pagamento, com regras próprias mas a mesma lógica), **Projetos** (aprovação de abertura e encerramento de projetos) e **Orçamento** (aprovação e revisão do orçamento anual). As seções abaixo descrevem a aba de Pagamentos e Reembolsos; as abas de Projetos e Orçamento são descritas no fim.
 
 ## Aprovações necessárias (quórum)
 
@@ -35,7 +35,7 @@ Define quantos votos positivos são necessários para aprovar:
 
 ## Reprovações necessárias para barrar
 
-Define quantas reprovações são necessárias para **encerrar** um pedido de pagamento ou reembolso como reprovado. Você escolhe de **1** até o **número de pessoas aptas a aprovar** na sua organização.
+Define quantas reprovações são necessárias para **encerrar** um pedido de compra e pagamento ou reembolso como reprovado. Você escolhe de **1** até o **número de pessoas aptas a aprovar** na sua organização.
 
 **O padrão é 1** — uma única reprovação barra a solicitação na hora, exatamente como sempre funcionou. Se você não mexer aqui, nada muda.
 
@@ -89,12 +89,31 @@ Quando ligado, o gestor **soma-se** aos aprovadores já definidos (papéis + pes
 >
 > Em OSCs onde só a diretoria eleita autoriza saída de dinheiro (por exemplo, "quaisquer 2 diretores"), mantenha **desligado** — o gestor de CC coordena a área, mas não tem mandato de aprovação. Ligue quando o estatuto (ou a prática combinada) de fato delega ao responsável do centro de custo a autorização das despesas da sua área.
 
-## Quem pode solicitar pedidos de pagamento
+## Limiar de reaprovação (%)
+{: #limiar-de-reaprovacao }
+
+Quando o valor **efetivamente lançado** de um pedido de compra e pagamento passa do valor **autorizado** na aprovação, este limiar decide se o pagamento segue liberado ou fica **retido** até alguém autorizar a diferença.
+
+- **Dentro do limiar** (igual ou abaixo): o lançamento é gravado normalmente, e a diferença passa a aparecer no pedido — sem travar nada.
+- **Acima do limiar**: o pagamento fica retido. Quem aprova vê os botões **Autorizar a diferença**, **Pedir autorização a outro aprovador** e **Recusar a diferença**; quem só paga (sem ser aprovador) vê **Pedir autorização do valor excedente**.
+- **Padrão: 10%.** Organização que nunca ajustou usa esse valor.
+- Em pedido **parcelado**, a comparação é sobre a **soma das parcelas**, não parcela a parcela.
+
+> 💡 **Por que isso importa**
+>
+> O valor estimado existe para a OSC negociar com informação, não para travar o processo — mas negociar sem limite nenhum tira o sentido da aprovação original. O limiar é o meio-termo: pequenas variações de preço (frete, arredondamento, reajuste de última hora) passam direto; uma diferença grande volta para quem autorizou decidir se topa. Detalhe completo do mecanismo, com exemplo em reais, em [Pedidos de Compra e Pagamento → Quando o valor pago diverge do autorizado](/modulos/pedidos-pagamento/#valor-diverge-do-autorizado).
+
+> ✓ **Dica · Ajuste conforme o tipo de compra da sua OSC**
+>
+> OSC que compra principalmente com orçamento fechado (boleto, contrato) raramente aciona o limiar — pode manter o padrão. Já quem negocia bastante com fornecedor (obra, evento, material de campanha) sente mais variação; considerar um limiar maior, como 15% ou 20%, evita reaprovação para diferenças pequenas e previsíveis.
+
+## Quem pode solicitar pedidos de compra e pagamento
+{: #quem-pode-solicitar-pedidos-de-pagamento }
 
 [![Bloco "Quem pode solicitar pagamentos", com o link para o editor de cargos](/assets/screenshots/config-aprovacoes-quem-solicita.png)](/assets/screenshots/config-aprovacoes-quem-solicita.png)
 *O bloco não lista mais papéis: aponta para a permissão no editor de cargos, e mantém os dois ajustes por escopo*
 
-Quem pode **criar** pedidos de pagamento não é mais definido aqui: é a permissão **Solicitar pedido de pagamento**, no editor de [Cargos e permissões](/configuracoes/cargos/#permissao-solicitar-pedido). **Presidente** e **Tesoureiro** sempre podem, em qualquer organização; a **Comissão Fiscal** nunca pode; qualquer outro cargo — inclusive um que a sua OSC tenha criado — o Presidente libera lá, cargo por cargo.
+Quem pode **criar** pedidos de compra e pagamento não é mais definido aqui: é a permissão **Solicitar pedido de compra e pagamento**, no editor de [Cargos e permissões](/configuracoes/cargos/#permissao-solicitar-pedido). **Presidente** e **Tesoureiro** sempre podem, em qualquer organização; a **Comissão Fiscal** nunca pode; qualquer outro cargo — inclusive um que a sua OSC tenha criado — o Presidente libera lá, cargo por cargo.
 
 Nesta página continuam os dois ajustes **por escopo**, que valem **além** da permissão do cargo e servem para um caso diferente: dar a alguém a possibilidade de solicitar, mas **só** para a área que essa pessoa gerencia — mesmo que o cargo dela não tenha a permissão geral.
 
@@ -103,13 +122,13 @@ Nesta página continuam os dois ajustes **por escopo**, que valem **além** da p
 
 > ✓ **Nada muda se você não mexer em nada**
 >
-> Quem já podia solicitar pedido de pagamento — pelo papel ou por um destes dois ajustes — continua podendo. A migração para a permissão por cargo preservou o que já estava configurado; nenhuma organização ficou sem ninguém autorizado a solicitar.
+> Quem já podia solicitar pedido de compra e pagamento — pelo papel ou por um destes dois ajustes — continua podendo. A migração para a permissão por cargo preservou o que já estava configurado; nenhuma organização ficou sem ninguém autorizado a solicitar.
 
-Voluntários não podem criar pedidos de pagamento (só reembolsos), por princípio: pedido de pagamento implica usar dinheiro da OSC, e voluntário sem papel específico não tem mandato para isso.
+Voluntários não podem criar pedidos de compra e pagamento (só reembolsos), por princípio: pedido de compra e pagamento implica usar dinheiro da OSC, e voluntário sem papel específico não tem mandato para isso.
 
 > 📖 **Conceito · Solicitar por escopo, não em aberto**
 >
-> Presidente e Tesoureiro respondem pela OSC inteira, então solicitam sem restrição. Já o gestor de centro de custo e o coordenador de projeto respondem por **uma parte** — faz sentido que solicitem despesas **da sua parte**, não de qualquer área. Ao restringir cada um ao seu domínio, o pedido nasce já no lugar certo, e ninguém autoriza gasto fora do que administra. (Isso vale só para **pedidos de pagamento**; reembolso continua aberto a qualquer membro.)
+> Presidente e Tesoureiro respondem pela OSC inteira, então solicitam sem restrição. Já o gestor de centro de custo e o coordenador de projeto respondem por **uma parte** — faz sentido que solicitem despesas **da sua parte**, não de qualquer área. Ao restringir cada um ao seu domínio, o pedido nasce já no lugar certo, e ninguém autoriza gasto fora do que administra. (Isso vale só para **pedidos de compra e pagamento**; reembolso continua aberto a qualquer membro.)
 
 > 📖 **Conceito · Solicitante nunca aprova o próprio pedido**
 >
@@ -164,7 +183,7 @@ A aba **Orçamento** define as regras de governança do [orçamento anual](/modu
 ## Por onde seguir
 
 - **Configurações → Usuários** — onde os papéis são atribuídos aos membros.
-- **Reembolsos** e **Pedidos de Pagamento** — onde o fluxo configurado aqui é aplicado.
+- **Reembolsos** e **Pedidos de Compra e Pagamento** — onde o fluxo configurado aqui é aplicado.
 - **Projetos** — onde a aprovação de abertura e encerramento configurada na aba Projetos é aplicada.
 - **[Orçamento](/modulos/orcamento/)** — onde a aprovação, o limiar de revisão e os alertas configurados na aba Orçamento são aplicados.
 - **Papéis e Permissões** — para visão geral de quem pode fazer o quê.

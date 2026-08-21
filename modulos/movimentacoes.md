@@ -5,7 +5,7 @@ parent: "Módulos"
 permalink: /modulos/movimentacoes/
 ---
 
-O módulo de **Movimentações** é onde sua OSC registra cada entrada e saída de dinheiro — doação recebida, conta de luz paga, repasse entre contas, reembolso de combustível do voluntário. É o coração do sistema porque todos os outros módulos (Reembolsos, Pedidos de Pagamento, Relatórios, Conciliação) acabam alimentando ou se apoiando nessa lista.
+O módulo de **Movimentações** é onde sua OSC registra cada entrada e saída de dinheiro — doação recebida, conta de luz paga, repasse entre contas, reembolso de combustível do voluntário. É o coração do sistema porque todos os outros módulos (Reembolsos, Pedidos de Compra e Pagamento, Relatórios, Conciliação) acabam alimentando ou se apoiando nessa lista.
 
 > 💡 **Por que isso importa**
 >
@@ -166,7 +166,7 @@ Ao lado do título de cada movimentação, badges contam mais sobre a origem e a
 - **Transferência**, com um ponto colorido ao lado — identifica de relance um movimento entre contas da própria OSC, sem precisar abrir o lançamento para saber. O ponto existe para não confundir o selo com o status **Pendente**, que aparece na mesma linha e também usa uma cor de destaque. Aparece igual na tabela do computador, nos cartões do celular e no bloco de lançamentos vinculados da tela de Projetos
 - **WooCommerce** (roxo) — pedido importado automaticamente da sua loja online; clique no badge abre o pedido no admin do WooCommerce em nova aba
 
-Na coluna **Valor**, um ícone de clipe 📎 ao lado do número avisa que o lançamento **tem documento anexado** — sem precisar abrir o detalhe para saber. Vale para qualquer origem: anexo feito à mão, comprovante trazido de uma importação, ou o comprovante de um reembolso/pedido de pagamento aprovado (ver **Anexos e comprovantes**, abaixo).
+Na coluna **Valor**, um ícone de clipe 📎 ao lado do número avisa que o lançamento **tem documento anexado** — sem precisar abrir o detalhe para saber. Vale para qualquer origem: anexo feito à mão, comprovante trazido de uma importação, ou o comprovante de um reembolso/pedido de compra e pagamento aprovado (ver **Anexos e comprovantes**, abaixo).
 
 ### Ordenação
 
@@ -221,18 +221,18 @@ Clique em qualquer linha da lista para abrir o detalhe completo, organizado em d
 - Tipo e status (chips coloridos no topo)
 - Título e valor em destaque
 - Dados do lançamento: vencimento, pagamento, conta, categoria, beneficiário/fornecedor, forma de pagamento, projeto, centro de custo
-- **Dados de pagamento** — quando o lançamento tem chave PIX ou dados bancários do destinatário, um card mostra esses dados para efetivar o pagamento sem abrir a solicitação de origem. Vale tanto para lançamentos vindos de **reembolso/pedido de pagamento** quanto para **despesas lançadas à mão** (ver "Forma de pagamento" no formulário). **Quem tem permissão de pagar vê os dados por inteiro; os demais veem apenas os últimos dígitos** — o nome do titular da chave PIX fica visível para todos, quando essa informação existe. Passado o prazo de descarte definido pela OSC, o card informa que os dados foram removidos por já terem cumprido sua finalidade. Detalhes em [Contas Bancárias → Dados bancários de quem recebe](/configuracoes/contas/#dados-bancarios-de-quem-recebe)
-- **Quem solicitou** — quando o lançamento veio de um reembolso ou de um pedido de pagamento, o nome de quem fez a solicitação aparece junto com os dados do lançamento. Antes só apareciam os dados bancários, sem dizer de quem eram. Repare na diferença entre os dois fluxos: num **reembolso**, quem solicitou é a própria pessoa que vai receber o dinheiro de volta; num **pedido de pagamento**, quem solicitou só está pedindo autorização para pagar — quem recebe é um **terceiro** que ele indicou (um fornecedor, um prestador de serviço), não ele mesmo
+- **Dados de pagamento** — quando o lançamento tem chave PIX ou dados bancários do destinatário, um card mostra esses dados para efetivar o pagamento sem abrir a solicitação de origem. Vale tanto para lançamentos vindos de **reembolso/pedido de compra e pagamento** quanto para **despesas lançadas à mão** (ver "Forma de pagamento" no formulário). **Quem tem permissão de pagar vê os dados por inteiro; os demais veem apenas os últimos dígitos** — o nome do titular da chave PIX fica visível para todos, quando essa informação existe. Passado o prazo de descarte definido pela OSC, o card informa que os dados foram removidos por já terem cumprido sua finalidade. Detalhes em [Contas Bancárias → Dados bancários de quem recebe](/configuracoes/contas/#dados-bancarios-de-quem-recebe)
+- **Quem solicitou** — quando o lançamento veio de um reembolso ou de um pedido de compra e pagamento, o nome de quem fez a solicitação aparece junto com os dados do lançamento. Antes só apareciam os dados bancários, sem dizer de quem eram. Repare na diferença entre os dois fluxos: num **reembolso**, quem solicitou é a própria pessoa que vai receber o dinheiro de volta; num **pedido de compra e pagamento**, quem solicitou só está pedindo autorização para pagar — quem recebe é um **terceiro** que ele indicou (um fornecedor, um prestador de serviço), não ele mesmo
 - Distribuição entre categorias (se o valor foi dividido)
 - Observações
-- Documentos: comprovantes e notas fiscais anexados, com pré-visualização inline para imagens e PDFs. Isso inclui os comprovantes que já estavam anexados ao **reembolso ou pedido de pagamento** que deu origem ao lançamento — eles aparecem aqui automaticamente desde a aprovação, sem precisar reanexar nada
+- Documentos: comprovantes e notas fiscais anexados, com pré-visualização inline para imagens e PDFs. Isso inclui os comprovantes que já estavam anexados ao **reembolso ou pedido de compra e pagamento** que deu origem ao lançamento — eles aparecem aqui automaticamente desde a aprovação, sem precisar reanexar nada
 - Quando o lançamento veio de outro módulo, links cruzados aparecem aqui:
-  - **Ver pedido de pagamento** — para movimentações geradas a partir de uma solicitação de pagamento aprovada
+  - **Ver pedido de compra e pagamento** — para movimentações geradas a partir de uma solicitação de pagamento aprovada
   - **Ver pedido de reembolso** — para movimentações que pagaram um reembolso
 
 > 💡 **O comprovante do reembolso/pedido acompanha o lançamento**
 >
-> Antes, aprovar um reembolso ou pedido de pagamento criava o lançamento em Movimentações **sem** o comprovante, mesmo que ele tivesse sido anexado lá na solicitação original — a página do lançamento mostrava "Comprovante indisponível", e era preciso clicar em **Ver pedido de reembolso/pagamento** para conferir o documento na tela de origem. Hoje o comprovante **vai junto**: assim que o reembolso ou pedido é aprovado, o(s) documento(s) anexados à solicitação aparecem também aqui, na aba Documentos do lançamento — prontos para a prestação de contas, sem precisar visitar a solicitação original. Lançamentos antigos, criados antes dessa correção, também foram ajustados retroativamente.
+> Antes, aprovar um reembolso ou pedido de compra e pagamento criava o lançamento em Movimentações **sem** o comprovante, mesmo que ele tivesse sido anexado lá na solicitação original — a página do lançamento mostrava "Comprovante indisponível", e era preciso clicar em **Ver pedido de reembolso/pagamento** para conferir o documento na tela de origem. Hoje o comprovante **vai junto**: assim que o reembolso ou pedido é aprovado, o(s) documento(s) anexados à solicitação aparecem também aqui, na aba Documentos do lançamento — prontos para a prestação de contas, sem precisar visitar a solicitação original. Lançamentos antigos, criados antes dessa correção, também foram ajustados retroativamente.
 
 **Coluna de auditoria (à direita no desktop, abaixo no mobile):**
 
@@ -334,6 +334,10 @@ Lançamentos **pendentes** ou **atrasados** podem ser editados por completo. Cli
 *Editar um lançamento de série recorrente: escolha entre alterar só este, este e os futuros, ou toda a série*
 
 O formulário de edição tem os mesmos campos do lançamento novo (descrição, datas, conta, categoria, projeto, centro de custo, forma de pagamento, anexos — ver **Registrar novo lançamento**, acima).
+
+> ⚠️ **Atenção · Alterar o valor de um lançamento vindo de pedido exige a permissão Pagar**
+>
+> Quem não tem a permissão **Pagar (marcar como pago)** não altera o valor de um lançamento gerado por um pedido de compra e pagamento — só acompanha. É o caminho pelo qual se registra o **valor efetivo** de um pedido de **valor estimado**, depois que o preço é negociado com o fornecedor. Se o novo valor passar do que foi autorizado além do limiar configurado pela OSC, o pagamento fica retido até um aprovador liberar a diferença. Ver [Pedidos de Compra e Pagamento → Quando o valor pago diverge do autorizado](/modulos/pedidos-pagamento/#valor-diverge-do-autorizado) e [Cargos e permissões → Pagar](/configuracoes/cargos/#permissao-pagar).
 
 ### Dados bancários protegidos
 
@@ -656,6 +660,6 @@ Você **não depende do e-mail** para chegar a uma prestação de contas: todo d
 ## Por onde seguir
 
 - **Reembolsos** — para registrar despesas pagas com dinheiro próprio por voluntários ou diretores.
-- **Pedidos de Pagamento** — para pedir aprovação antes de uma despesa ser paga.
+- **Pedidos de Compra e Pagamento** — para pedir aprovação antes de uma despesa ser paga.
 - **Relatórios** — para visualizar fluxo de caixa, comparativos por categoria, evolução do saldo.
 - **Configurações → Categorias** — para deixar suas categorias enxutas e consistentes.

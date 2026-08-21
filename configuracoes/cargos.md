@@ -35,7 +35,7 @@ A página **Cargos e permissões** vai além dos 7 cargos padrão da plataforma:
 As permissões são organizadas por área, com as operações que importam separadas:
 
 - **Movimentações** — Ver · Criar / editar · **Pagar (marcar como pago)** · Excluir / estornar · Importar lançamentos
-- **Reembolsos e pedidos de pagamento** — Ver · **Solicitar pedido de pagamento** · Aprovar · Pagar
+- **Reembolsos e pedidos de compra e pagamento** — Ver · **Solicitar pedido de compra e pagamento** · Aprovar · Pagar
 - **Relatórios e auditoria** — Ver relatórios · **Redigir nota explicativa do relatório** · Ver trilha de auditoria · Exportar dados (LGPD)
 - **Configurações** — Config. financeira (contas e categorias) · Config. da OSC · Gerir membros e cargos
 
@@ -57,8 +57,9 @@ A permissão **Config. financeira** é a mesma que libera [Categorias e Centros 
 **Registrar uma despesa** e **confirmar que o dinheiro saiu** são duas coisas diferentes — e agora são duas permissões diferentes. A permissão **Pagar (marcar como pago)**, em Movimentações, é o que autoriza:
 
 - marcar um lançamento como **pago** (pela lista ou pelo detalhe, inclusive em lote);
-- marcar uma **parcela de pedido de pagamento** como paga;
-- **confirmar pagamentos pela conciliação de extrato bancário** — confirmar ali é uma forma de registrar que o dinheiro saiu, então pede a mesma permissão.
+- marcar uma **parcela de pedido de compra e pagamento** como paga;
+- **confirmar pagamentos pela conciliação de extrato bancário** — confirmar ali é uma forma de registrar que o dinheiro saiu, então pede a mesma permissão;
+- **alterar o valor de um lançamento vindo de pedido de compra e pagamento** — quem não tem a permissão de pagar acompanha o pedido, mas não altera o valor do lançamento gerado por ele (relevante sobretudo em pedido de **valor estimado**, quando o preço final é negociado depois da aprovação — ver [Pedidos de Compra e Pagamento → Quando o valor pago diverge do autorizado](/modulos/pedidos-pagamento/#valor-diverge-do-autorizado)).
 
 Ela também é o que define **quem enxerga os dados bancários completos** de quem recebe — veja [Contas Bancárias → Dados bancários de quem recebe](/configuracoes/contas/#dados-bancarios-de-quem-recebe).
 
@@ -70,13 +71,13 @@ Ela também é o que define **quem enxerga os dados bancários completos** de qu
 >
 > Em muitas OSCs, uma pessoa organiza as contas a pagar (digita, anexa nota, classifica) e **outra** tem a senha do banco e efetivamente transfere. Antes, dar acesso para registrar dava de quebra o poder de dar baixa em pagamentos. Com a permissão separada, você monta um cargo de "apoio administrativo" que lança tudo, sem que ele possa declarar pago algo que ninguém pagou. É a mesma lógica de segregação de funções que protege a Comissão Fiscal, aplicada ao caixa.
 
-### Quem pode solicitar pedido de pagamento também é por cargo
+### Quem pode solicitar pedido de compra e pagamento também é por cargo
 {: #permissao-solicitar-pedido }
 
-[![Permissão "Solicitar pedido de pagamento" no editor de cargos](/assets/screenshots/config-cargos-solicitar-nota.png)](/assets/screenshots/config-cargos-solicitar-nota.png)
-*As permissões "Solicitar pedido de pagamento" e "Redigir nota explicativa do relatório", no cargo Coord. de projeto*
+[![Permissão "Solicitar pedido de compra e pagamento" no editor de cargos](/assets/screenshots/config-cargos-solicitar-nota.png)](/assets/screenshots/config-cargos-solicitar-nota.png)
+*As permissões "Solicitar pedido de compra e pagamento" e "Redigir nota explicativa do relatório", no cargo Coord. de projeto*
 
-Antes, só dois cargos podiam **criar** pedidos de pagamento, e a lista não alcançava cargos que a organização criasse. Agora, quem pode solicitar é definido pela permissão **Solicitar pedido de pagamento**, na área "Reembolsos e pedidos de pagamento" — e pode ser concedida a **qualquer cargo**, inclusive um que a sua OSC tenha criado do zero.
+Antes, só dois cargos podiam **criar** pedidos de compra e pagamento, e a lista não alcançava cargos que a organização criasse. Agora, quem pode solicitar é definido pela permissão **Solicitar pedido de compra e pagamento**, na área "Reembolsos e pedidos de compra e pagamento" — e pode ser concedida a **qualquer cargo**, inclusive um que a sua OSC tenha criado do zero.
 
 - **Presidente** e **Tesoureiro** sempre podem solicitar, em qualquer organização — a permissão vem como essencial para os dois.
 - A **Comissão Fiscal** nunca pode — conflita com a independência de quem fiscaliza (ver "Comissão Fiscal: independência protegida", mais abaixo nesta página).
@@ -88,11 +89,11 @@ Antes, só dois cargos podiam **criar** pedidos de pagamento, e a lista não alc
 
 > ✓ **Nada muda se você não mexer em nada**
 >
-> Quem já podia solicitar pedido de pagamento continua podendo — a migração preservou as permissões existentes. Isso vale inclusive para quem chegava a essa permissão pelo caminho antigo, configurado em [Fluxo de Aprovações](/configuracoes/aprovacoes/).
+> Quem já podia solicitar pedido de compra e pagamento continua podendo — a migração preservou as permissões existentes. Isso vale inclusive para quem chegava a essa permissão pelo caminho antigo, configurado em [Fluxo de Aprovações](/configuracoes/aprovacoes/).
 
 > ⚠️ **Atenção · Os dois caminhos por centro de custo/projeto continuam existindo à parte**
 >
-> Esta permissão libera o cargo para solicitar pedidos **sem restrição de área**. Gestor de centro de custo e coordenador de projeto continuam tendo, além dela, um caminho **próprio e mais restrito**: um ajuste em [Fluxo de Aprovações → Quem pode solicitar pedidos de pagamento](/configuracoes/aprovacoes/#quem-pode-solicitar-pedidos-de-pagamento) que permite solicitar, mas **só** para o centro de custo ou o projeto sob a responsabilidade da pessoa. Os dois mecanismos coexistem: um é a permissão geral do cargo, o outro é o recorte por área.
+> Esta permissão libera o cargo para solicitar pedidos **sem restrição de área**. Gestor de centro de custo e coordenador de projeto continuam tendo, além dela, um caminho **próprio e mais restrito**: um ajuste em [Fluxo de Aprovações → Quem pode solicitar pedidos de compra e pagamento](/configuracoes/aprovacoes/#quem-pode-solicitar-pedidos-de-pagamento) que permite solicitar, mas **só** para o centro de custo ou o projeto sob a responsabilidade da pessoa. Os dois mecanismos coexistem: um é a permissão geral do cargo, o outro é o recorte por área.
 
 ### Redigir a nota explicativa da prestação de contas também é por cargo
 {: #permissao-nota-explicativa }
@@ -124,7 +125,7 @@ Clique no cargo na lista à esquerda; as permissões aparecem à direita.
 
 ## Comissão Fiscal: independência protegida
 
-A **Comissão Fiscal** existe para fiscalizar as finanças com independência. Por isso, as permissões que **conflitam com a fiscalização** — operar, aprovar ou pagar finanças, solicitar pedido de pagamento, redigir a nota explicativa da prestação de contas e gerir configuração — ficam **bloqueadas** no cargo Comissão Fiscal, **mesmo para o Presidente**. Acréscimos inofensivos (como exportar dados, ver relatórios ou ler a nota explicativa) são permitidos, com aviso.
+A **Comissão Fiscal** existe para fiscalizar as finanças com independência. Por isso, as permissões que **conflitam com a fiscalização** — operar, aprovar ou pagar finanças, solicitar pedido de compra e pagamento, redigir a nota explicativa da prestação de contas e gerir configuração — ficam **bloqueadas** no cargo Comissão Fiscal, **mesmo para o Presidente**. Acréscimos inofensivos (como exportar dados, ver relatórios ou ler a nota explicativa) são permitidos, com aviso.
 
 A mesma regra vale na atribuição: se você tentar dar a uma pessoa da Comissão Fiscal um cargo que tem permissões conflitantes, o sistema **barra com explicação**.
 

@@ -99,11 +99,11 @@ Cada conta na lista mostra o **saldo atual**, calculado em tempo real a partir d
 
 ## Dados bancários de quem recebe {#dados-bancarios-de-quem-recebe}
 
-Além das contas da própria OSC, o sistema guarda os **dados bancários de quem recebe** um pagamento — o CPF do titular, a chave Pix, o banco, a agência e a conta que você informa num lançamento de despesa, num pedido de pagamento ou num reembolso. Esses dados têm regras próprias, definidas aqui nesta página.
+Além das contas da própria OSC, o sistema guarda os **dados bancários de quem recebe** um pagamento — o CPF do titular, a chave Pix, o banco, a agência e a conta que você informa num lançamento de despesa, num pedido de compra e pagamento ou num reembolso. Esses dados têm regras próprias, definidas aqui nesta página.
 
 ### Quem vê os dados completos
 
-- **Quem tem permissão de pagar** vê CPF, chave Pix, banco, agência e conta **por inteiro**, como sempre viu — no lançamento, no pedido de pagamento e no reembolso.
+- **Quem tem permissão de pagar** vê CPF, chave Pix, banco, agência e conta **por inteiro**, como sempre viu — no lançamento, no pedido de compra e pagamento e no reembolso.
 - **Quem não tem** vê apenas os **últimos dígitos** (por exemplo, `•••.•••.123-45`) — o suficiente para conferir de qual conta se trata, sem expor o número inteiro.
 - O **nome de quem recebe continua visível para todos**.
 - Quem **preenche** os dados ao criar um lançamento, pedido ou reembolso continua digitando normalmente — a regra vale para consultar, não para informar.
@@ -129,7 +129,7 @@ O prazo é definido pela organização, aqui em **Configurações → Contas Ban
 
 1. Localize o cartão **Descarte dos dados bancários de quem recebe** na página.
 2. Em **Prazo após a conclusão do pagamento**, escolha **30, 90, 180 ou 365 dias**. O padrão é **90 dias** — quem não mexer em nada se comporta como 90.
-3. Logo abaixo, a tela mostra **quantos registros já estariam vencidos** com o prazo escolhido, separados por lançamentos, reembolsos e pedidos de pagamento — assim você sabe o efeito imediato da escolha antes de confirmar.
+3. Logo abaixo, a tela mostra **quantos registros já estariam vencidos** com o prazo escolhido, separados por lançamentos, reembolsos e pedidos de compra e pagamento — assim você sabe o efeito imediato da escolha antes de confirmar.
 4. Clique em **Salvar prazo**.
 
 O descarte é **definitivo e acontece sem aviso**: são dados que já cumpriram a finalidade para a qual foram coletados.

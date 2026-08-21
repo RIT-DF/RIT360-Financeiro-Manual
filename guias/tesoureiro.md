@@ -52,7 +52,7 @@ Relatório bom nasce de **cadastro organizado**. Duas bases sustentam tudo:
 
 ## 4. Aprovar com critério — o dinheiro saindo é o momento mais sensível
 
-Reembolsos e pedidos de pagamento são a hora em que o dinheiro **sai**. É onde o zelo conta mais.
+Reembolsos e pedidos de compra e pagamento são a hora em que o dinheiro **sai**. É onde o zelo conta mais.
 
 - Confira o que está sendo pedido: valor, comprovante, se faz sentido para a OSC.
 - Siga o fluxo de aprovação configurado — ele existe para proteger você e a OSC.

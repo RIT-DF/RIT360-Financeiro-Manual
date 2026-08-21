@@ -15,9 +15,9 @@ O módulo de **Reembolsos** é onde voluntários, dirigentes e colaboradores **p
 
 ## Conceitos essenciais
 
-> 📖 **Conceito · Reembolso ≠ Pedido de Pagamento**
+> 📖 **Conceito · Reembolso ≠ Pedido de Compra e Pagamento**
 >
-> **Reembolso** é para despesa que **já aconteceu**: alguém gastou do bolso e quer receber de volta. **Pedido de Pagamento** é para despesa que **vai acontecer**: a OSC vai pagar uma conta de luz, um fornecedor, um boleto. Os dois fluxos têm aprovação, mas a lógica é diferente: no reembolso o dinheiro entrou no caixa de quem pagou, ele só quer ser ressarcido; no pedido o dinheiro ainda está na OSC, e a aprovação autoriza a saída. Use **Reembolso** quando a nota fiscal está em nome de uma pessoa física e o pagamento já aconteceu. Use **Pedido de Pagamento** quando o pagamento ainda vai ser feito (geralmente em nome da OSC).
+> **Reembolso** é para despesa que **já aconteceu**: alguém gastou do bolso e quer receber de volta. **Pedido de Compra e Pagamento** é para despesa que **vai acontecer**: a OSC vai pagar uma conta de luz, um fornecedor, um boleto. Os dois fluxos têm aprovação, mas a lógica é diferente: no reembolso o dinheiro entrou no caixa de quem pagou, ele só quer ser ressarcido; no pedido o dinheiro ainda está na OSC, e a aprovação autoriza a saída. Use **Reembolso** quando a nota fiscal está em nome de uma pessoa física e o pagamento já aconteceu. Use **Pedido de Compra e Pagamento** quando o pagamento ainda vai ser feito (geralmente em nome da OSC).
 
 > 📖 **Conceito · Quórum e papéis aprovadores**
 >
@@ -59,7 +59,7 @@ Cada aba mostra a contagem entre parênteses (ex: "Aguardando aprovação (3)") 
 
 **Colunas (desktop):** Data da despesa, Descrição, Valor, Status, Solicitante, Ações. Quando o reembolso já tem um lançamento vinculado (aprovado ou pago), o código curto desse lançamento aparece abaixo da descrição — útil para localizá-lo rapidamente em Movimentações.
 
-No **celular**, a lista vira **cards verticais** otimizados para toque, com toda a informação empilhada — descrição em destaque, valor à direita, data da despesa, solicitante, badge de status e botões de aprovar/reprovar quando aplicável. Sem precisar rolar lateralmente para ver o status ou as ações. Mesmo padrão usado em Movimentações e Pedidos de Pagamento.
+No **celular**, a lista vira **cards verticais** otimizados para toque, com toda a informação empilhada — descrição em destaque, valor à direita, data da despesa, solicitante, badge de status e botões de aprovar/reprovar quando aplicável. Sem precisar rolar lateralmente para ver o status ou as ações. Mesmo padrão usado em Movimentações e Pedidos de Compra e Pagamento.
 
 Nas abas **Aprovado** e **Pago** há um filtro de período (mês atual, mês anterior, trimestre, ano etc.), igual ao de Movimentações, sempre aberto no **mês atual** por padrão. As abas **Aguardando aprovação**, **Rascunho** e **Rejeitado** não usam esse filtro — mostram sempre tudo, para nada que precise da sua atenção ficar escondido fora do período selecionado.
 
@@ -107,7 +107,7 @@ Clique em qualquer linha para abrir o detalhe completo. A página tem todas as i
 
 Abra um reembolso salvo como rascunho para ver os botões **Editar rascunho** e **Excluir rascunho**, lado a lado.
 
-Ao clicar em **Excluir rascunho**, a confirmação mostra qual solicitação será apagada, o valor, quantos anexos vão junto, e avisa que os dados bancários guardados nela também serão removidos. **A exclusão é definitiva** — não tem como recuperar um rascunho depois de excluído. Vale igualmente para pedidos de pagamento (ver [Pedidos de Pagamento → Rascunho](/modulos/pedidos-pagamento/#rascunho)).
+Ao clicar em **Excluir rascunho**, a confirmação mostra qual solicitação será apagada, o valor, quantos anexos vão junto, e avisa que os dados bancários guardados nela também serão removidos. **A exclusão é definitiva** — não tem como recuperar um rascunho depois de excluído. Vale igualmente para pedidos de compra e pagamento (ver [Pedidos de Compra e Pagamento → Rascunho](/modulos/pedidos-pagamento/#rascunho)).
 
 ### Aguardando aprovação
 
@@ -160,7 +160,7 @@ O motivo da rejeição aparece em destaque no topo da página, e também fica re
 
 > ⚠️ **Atenção · Chave PIX/dados bancários já salvos aparecem protegidos**
 >
-> Se a chave PIX ou os dados bancários já estavam preenchidos, o campo aparece **bloqueado** na edição: mostra só uma parte do valor, a etiqueta **Protegido**, e um botão **Substituir** — salvar sem tocar nele não muda o que está guardado. Esvaziar um campo protegido pede confirmação, porque a remoção é definitiva. O mesmo vale para pedidos de pagamento e para a edição de um lançamento em Movimentações — ver [Movimentações → Editar um lançamento → Dados bancários protegidos](/modulos/movimentacoes/#dados-bancários-protegidos).
+> Se a chave PIX ou os dados bancários já estavam preenchidos, o campo aparece **bloqueado** na edição: mostra só uma parte do valor, a etiqueta **Protegido**, e um botão **Substituir** — salvar sem tocar nele não muda o que está guardado. Esvaziar um campo protegido pede confirmação, porque a remoção é definitiva. O mesmo vale para pedidos de compra e pagamento e para a edição de um lançamento em Movimentações — ver [Movimentações → Editar um lançamento → Dados bancários protegidos](/modulos/movimentacoes/#dados-bancários-protegidos).
 
 > 📖 **Conceito · Quantas reprovações barram o reembolso**
 >
@@ -170,7 +170,7 @@ O motivo da rejeição aparece em destaque no topo da página, e também fica re
 >
 > O motivo é sempre **obrigatório** ao reprovar, e **o voto é definitivo** — a tela avisa isso antes de confirmar, tanto para aprovar quanto para reprovar. Mudou de ideia? O caminho é o solicitante corrigir e reenviar.
 >
-> Válido tanto para **Reembolsos** quanto para **Pedidos de Pagamento** — os dois fluxos seguem a mesma regra.
+> Válido tanto para **Reembolsos** quanto para **Pedidos de Compra e Pagamento** — os dois fluxos seguem a mesma regra.
 
 > ⚠️ **Atenção · Reenviar exige mudar algo de verdade**
 >
@@ -197,7 +197,7 @@ Painel de Ações mostra: **"Aprovado — aguardando confirmação de pagamento 
 
 > 📖 **Conceito · Corrigir o centro de custo depois do envio**
 >
-> Se o reembolso já foi enviado — inclusive aprovado ou pago — e o centro de custo ficou errado, quem faz a gestão financeira da OSC corrige direto no detalhe do reembolso, ao lado do campo **Centro de custo**, botão **Corrigir**. A tela mostra antes o que será alterado (a solicitação e quantos lançamentos gerados por ela) e pede um motivo, que fica na trilha de auditoria. A correção alcança os lançamentos já criados, inclusive os pagos. O mesmo mecanismo vale para pedidos de pagamento — ver [Pedidos de Pagamento → Corrigir o centro de custo depois do envio](/modulos/pedidos-pagamento/#corrigir-o-centro-de-custo-depois-do-envio).
+> Se o reembolso já foi enviado — inclusive aprovado ou pago — e o centro de custo ficou errado, quem faz a gestão financeira da OSC corrige direto no detalhe do reembolso, ao lado do campo **Centro de custo**, botão **Corrigir**. A tela mostra antes o que será alterado (a solicitação e quantos lançamentos gerados por ela) e pede um motivo, que fica na trilha de auditoria. A correção alcança os lançamentos já criados, inclusive os pagos. O mesmo mecanismo vale para pedidos de compra e pagamento — ver [Pedidos de Compra e Pagamento → Corrigir o centro de custo depois do envio](/modulos/pedidos-pagamento/#corrigir-o-centro-de-custo-depois-do-envio).
 
 ### Pago
 
@@ -260,7 +260,7 @@ Clique em **+ Nova solicitação** para abrir o formulário.
 
 > ⚠️ **Atenção · Não reembolse despesa de terceiro**
 >
-> O reembolso é para a pessoa que **pagou de verdade**. Se você levou um voluntário ao posto e ele pagou, o reembolso é dele, não seu. Reembolsar despesa de terceiro vira "doação disfarçada" — confunde a contabilidade, viola dever fiduciário, prejudica auditoria. Quando você não puder reembolsar a pessoa certa diretamente (ela não tem conta bancária, etc.), use um **Pedido de Pagamento** em nome dela como prestador, com seu CPF.
+> O reembolso é para a pessoa que **pagou de verdade**. Se você levou um voluntário ao posto e ele pagou, o reembolso é dele, não seu. Reembolsar despesa de terceiro vira "doação disfarçada" — confunde a contabilidade, viola dever fiduciário, prejudica auditoria. Quando você não puder reembolsar a pessoa certa diretamente (ela não tem conta bancária, etc.), use um **Pedido de Compra e Pagamento** em nome dela como prestador, com seu CPF.
 
 > ✓ **Dica · Aprovador, leia os comprovantes**
 >
@@ -292,7 +292,7 @@ Padrão é tudo ligado; cada um silencia o que não quer receber.
 
 ## Por onde seguir
 
-- **Pedidos de Pagamento** — para autorizar despesas que **ainda vão ser pagas** pela OSC (em vez de já ter pagado do bolso).
+- **Pedidos de Compra e Pagamento** — para autorizar despesas que **ainda vão ser pagas** pela OSC (em vez de já ter pagado do bolso).
 - **Movimentações** — para o tesoureiro confirmar o pagamento do reembolso aprovado e fechar o ciclo.
 - **Meu Perfil → Dados para Reembolso** — para pré-preencher PIX/TED em futuras solicitações.
 - **Configurações → Fluxo de Aprovações** — para a OSC ajustar quórum, reprovações necessárias e papéis aprovadores.

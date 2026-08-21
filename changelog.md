@@ -11,6 +11,26 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.51.1] — 2026-08-21
+
+### Modificado
+
+- **O aviso de aprovação pendente agora informa quando o valor do pedido é uma estimativa** e será confirmado na compra.
+
+## [1.51.0] — 2026-08-21
+
+### Adicionado
+
+- **O módulo passou a se chamar "Pedidos de compra e pagamento"** (antes "Pedidos de pagamento"), porque agora ele serve aos dois casos.
+- **Ao criar um pedido, escolhe-se entre "Valor fechado — é o que vai ser pago" e "Valor estimado — a confirmar na compra".** O valor estimado serve para quando a compra ainda vai ser negociada: anexam-se os orçamentos e pede-se a autorização com base na estimativa. Quem aprova vê que o valor é estimado.
+- **O valor que foi autorizado passa a ser guardado separadamente do valor efetivamente pago**, e o pedido mostra os dois lado a lado quando diferem.
+- **Cada organização define, em Configurações → Fluxo de Aprovações, o limiar de reaprovação (%):** quanto o valor efetivo pode passar do autorizado sem precisar de nova autorização. Padrão de 10%.
+- **Quando o valor passa desse limite, o pagamento fica retido.** Quem tem permissão de aprovar pode **autorizar a diferença** ali mesmo, informando o motivo, ou pedir que outro aprovador decida. Quem pode pagar mas não aprova tem um botão para **pedir autorização do valor excedente**. Em pedidos parcelados, o limite vale sobre o total.
+
+### Modificado
+
+- **Alterar o valor de um lançamento vindo de pedido passou a exigir a permissão de pagar.**
+
 ## [1.50.0] — 2026-08-21
 
 ### Adicionado

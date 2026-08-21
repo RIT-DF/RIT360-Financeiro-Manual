@@ -119,7 +119,7 @@ A aba **Previsão** projeta como a OSC tende a se comportar nos próximos meses.
 > 📖 **Conceito · Como o RIT360 Financeiro monta a projeção (modelo híbrido)**
 >
 > Para cada mês futuro e cada categoria, o RIT360 Financeiro soma duas fontes:
-> - **Agendados** — lançamentos pendentes com data futura, ocorrências futuras de séries recorrentes ativas (ex: aluguel mensal), parcelas futuras de pedidos de pagamento aprovados. Tudo isso já está cadastrado no sistema.
+> - **Agendados** — lançamentos pendentes com data futura, ocorrências futuras de séries recorrentes ativas (ex: aluguel mensal), parcelas futuras de pedidos de compra e pagamento aprovados. Tudo isso já está cadastrado no sistema.
 > - **Estimados** — quando uma categoria não tem agendado no mês mas tem padrão histórico (≥ 3 meses), usa a média dos últimos 6 meses. Categorias com menos de 3 meses de histórico não são projetadas.
 >
 > Cada célula traz **badge de origem** indicando se o valor é agendado ou estimado — você não confunde "o que está realmente combinado" com "o que costuma acontecer".

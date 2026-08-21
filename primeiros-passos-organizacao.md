@@ -63,7 +63,7 @@ As categorias classificam receitas e despesas — são a base de todo relatório
 
 ## 4. Defina o fluxo de aprovações
 
-Diga quem autoriza a saída de dinheiro: o **quórum** (1 ou 2 votos) e **quais papéis ou pessoas** aprovam reembolsos e pedidos de pagamento. O padrão é Presidente e Tesoureiro.
+Diga quem autoriza a saída de dinheiro: o **quórum** (1 ou 2 votos) e **quais papéis ou pessoas** aprovam reembolsos e pedidos de compra e pagamento. O padrão é Presidente e Tesoureiro.
 
 → **Configurações → Fluxo de Aprovações**. Detalhes em [Fluxo de Aprovações](/configuracoes/aprovacoes/).
 

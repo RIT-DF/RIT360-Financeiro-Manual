@@ -15,7 +15,7 @@ O RIT360 Financeiro é organizado em módulos, cada um responsável por uma áre
 | [Movimentações](/modulos/movimentacoes/) | Receitas, despesas e transferências — o coração do sistema |
 | [Caça-diferenças](/modulos/caca-diferencas/) | Conferir o saldo de uma conta contra o banco e caçar a diferença |
 | [Reembolsos](/modulos/reembolsos/) | Solicitar e aprovar reembolsos de despesas pagas do próprio bolso |
-| [Pedidos de Pagamento](/modulos/pedidos-pagamento/) | Autorizar pagamentos a fornecedores antes da despesa acontecer |
+| [Pedidos de Compra e Pagamento](/modulos/pedidos-pagamento/) | Autorizar uma compra ainda a negociar, ou um pagamento já fechado, antes da despesa acontecer |
 | [Projetos](/modulos/projetos/) | Planejar, executar, acompanhar a saúde e encerrar iniciativas da OSC |
 | [Relatórios](/modulos/relatorios/) | Análises financeiras consolidadas — Visão Geral, Receitas, Despesas, Atenção e Previsão |
 | [Orçamento](/modulos/orcamento/) | Orçamento anual por centro de custo e categoria — previsto × realizado ao longo do ano |
