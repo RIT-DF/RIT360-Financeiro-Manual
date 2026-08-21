@@ -11,6 +11,47 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.49.0] — 2026-08-21
+
+### Adicionado
+
+- **Quem enviou um reembolso ou um pedido de pagamento e ainda está aguardando aprovação agora pode retirar a solicitação.** Antes não havia essa saída: só era possível excluir enquanto estava em rascunho, e depois de enviada a única forma de encerrar era pedir a alguém que reprovasse — o que ficava registrado como reprovação, e não como desistência. Ao retirar: a solicitação fica como cancelada, as aprovações já dadas são descartadas, e quem estava na fila de aprovação é avisado. A solicitação retirada pode ser enviada de novo, inclusive sem alterar nada. Só o próprio solicitante pode retirar — nem administrador nem tesoureiro retiram solicitação de outra pessoa.
+
+---
+
+## [1.48.0] — 2026-08-20
+
+### Adicionado
+
+- **Ao abrir um lançamento que veio de um reembolso ou de um pedido de pagamento, agora aparece quem solicitou.** Antes só apareciam os dados bancários, sem nome. O bloco de dados de pagamento por PIX também passou a mostrar o titular, quando essa informação existe.
+
+---
+
+## [1.47.0] — 2026-08-20
+
+### Adicionado
+
+- **Prestações de contas, Pedidos de pagamento e Reembolsos ganharam seleção de vários itens ao mesmo tempo.** Em Prestações de contas dá para excluir vários registros de uma vez; em Pedidos de pagamento e Reembolsos dá para aprovar vários de uma vez. Antes de confirmar uma aprovação em lote, o sistema informa quantas solicitações e qual o valor total. O resultado é apresentado item por item — quem foi aprovado, quem foi recusado e por quê. Reprovar continua sendo feito um de cada vez, porque cada reprovação exige um motivo próprio.
+
+### Modificado
+
+- **As telas de Prestações de contas, Pedidos de pagamento e Reembolsos passaram a carregar os registros por página, em vez de trazer todo o histórico da organização de uma vez.** A diferença aparece em organizações com muitos registros. Os filtros continuam funcionando sobre o conjunto inteiro, não só sobre a página aberta.
+
+---
+
+## [1.46.1] — 2026-08-20
+
+### Modificado
+
+- **Importar extrato bancário (OFX) passa a exigir a mesma permissão já exigida para importar planilha.** As duas formas de importar lançamentos agora seguem a mesma regra definida pela organização.
+- **O selo "Transferência" ganhou um ponto colorido**, para não se confundir com o status "Pendente" na mesma linha.
+
+### Corrigido
+
+- **Planilhas e documentos de escritório anexados a um lançamento deixavam de aparecer como "comprovante indisponível" no PDF da prestação de contas, por causa do tamanho do arquivo.** Esses arquivos nunca puderam ser exibidos dentro do PDF, e agora o relatório informa corretamente que o arquivo está disponível no lançamento. O aviso de indisponível fica reservado para quando o arquivo realmente não pôde ser lido.
+
+---
+
 ## [1.46.0] — 2026-08-20
 
 ### Modificado
