@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.49.1] — 2026-08-21
+
+### Modificado
+
+- **Ao criar ou editar um projeto, a opção de financiamento passou a dizer de onde vem o dinheiro.** Agora é "Tem receita própria (captada para este projeto)" — a outra opção segue "Custeado pelo caixa geral da organização". Nada muda nos projetos já cadastrados.
+
+---
+
 ## [1.49.0] — 2026-08-21
 
 ### Adicionado

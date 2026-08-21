@@ -83,14 +83,16 @@ A cada projeto o RIT360 Financeiro atribui um **indicador de saúde** — um sem
 
 > 📖 **Conceito · Financiamento do projeto**
 >
-> Ao **criar** um projeto (no passo "financeiro" do assistente) ou ao **editar** um já existente, você escolhe como ele é financiado: **custeado pelo caixa geral da organização** ou **tem recursos próprios**. A escolha muda o que aparece na aba Financeiro do projeto:
+> Ao **criar** um projeto (no passo "financeiro" do assistente) ou ao **editar** um já existente, você escolhe como ele é financiado: **custeado pelo caixa geral da organização** ou **tem receita própria (captada para este projeto)**. A escolha muda o que aparece na aba Financeiro do projeto:
 >
 > - **Custeado pelo caixa geral** — o projeto mostra só as **despesas**. É o caso mais comum: o dinheiro sai do caixa comum da OSC, e o projeto acompanha quanto já consumiu do que foi previsto.
-> - **Tem recursos próprios** — o projeto mostra **receitas e despesas**, porque ele recebe dinheiro específico (um edital, uma doação carimbada, uma taxa de inscrição) além de gastar.
+> - **Tem receita própria (captada para este projeto)** — o projeto mostra **receitas e despesas**, porque ele recebe dinheiro captado especificamente para ele (um edital, uma doação carimbada, uma taxa de inscrição), separado do caixa comum.
 >
-> **Se a realidade não bater com a declaração**, o sistema prioriza o dado real: uma receita vinculada a um projeto declarado como "custeado pelo caixa geral" continua aparecendo normalmente na aba Financeiro, e um aviso pede para revisar a configuração — provavelmente esse projeto deveria estar marcado como "tem recursos próprios". Nada é escondido nem bloqueado; é só um alerta.
+> ⚠️ **Não confunda as duas opções.** "Tem receita própria" **não** significa "pago com o dinheiro da organização" — é o contrário: significa que **este projeto específico** tem uma fonte de receita sua, distinta do caixa geral. Um projeto "custeado pelo caixa geral" é o que **não** tem receita própria e depende inteiramente do dinheiro comum da OSC.
 >
-> **Projetos que já existiam antes dessa configuração** foram classificados automaticamente pelo que já tinham (quem já recebia receita virou "recursos próprios"; os demais, "custeado pelo caixa geral") — por isso nenhum projeto antigo mudou de aparência.
+> **Se a realidade não bater com a declaração**, o sistema prioriza o dado real: uma receita vinculada a um projeto declarado como "custeado pelo caixa geral" continua aparecendo normalmente na aba Financeiro, e um aviso pede para revisar a configuração — provavelmente esse projeto deveria estar marcado como "tem receita própria". Nada é escondido nem bloqueado; é só um alerta.
+>
+> **Projetos que já existiam antes dessa configuração** foram classificados automaticamente pelo que já tinham (quem já recebia receita virou "tem receita própria"; os demais, "custeado pelo caixa geral") — por isso nenhum projeto antigo mudou de aparência.
 
 ## A lista de projetos
 
@@ -101,7 +103,7 @@ A tela **Projetos** lista as iniciativas da OSC. No **computador** (telas a part
 
 No topo você tem **busca por nome** e filtros por **Status**, **Tipo** e **Saúde** — úteis para, por exemplo, ver só os projetos em execução que estão em atenção.
 
-O botão **Novo projeto** abre um **assistente de 4 passos** (tipo e identidade · período · financeiro · coordenador), com textos de ajuda em cada etapa. No passo **financeiro** você escolhe também o **financiamento do projeto** — custeado pelo caixa geral ou com recursos próprios (ver "Financiamento do projeto" acima). Para um Evento, o assistente pede o número estimado de participantes; o texto se adapta ao tipo escolhido.
+O botão **Novo projeto** abre um **assistente de 4 passos** (tipo e identidade · período · financeiro · coordenador), com textos de ajuda em cada etapa. No passo **financeiro** você escolhe também o **financiamento do projeto** — custeado pelo caixa geral ou com receita própria (ver "Financiamento do projeto" acima). Para um Evento, o assistente pede o número estimado de participantes; o texto se adapta ao tipo escolhido.
 
 ## A aba Resumo
 
@@ -200,7 +202,7 @@ O Financeiro mostra o dinheiro do projeto sem tirar nada do caixa geral da OSC:
 - **Registrar despesa do projeto** — abre um **reembolso** ou um **pedido de pagamento** já vinculado a este projeto. A solicitação segue o **fluxo normal de aprovação** da OSC.
 - **Vincular lançamentos existentes** — atribui a este projeto movimentações que já foram lançadas e ainda não tinham projeto.
 - **Aguardando aprovação** — lista os pedidos e reembolsos do projeto que **ainda não foram aprovados** (com o selo "Aguardando Aprovação" ou "Rascunho"). Clique para abrir o pedido. **Esses pendentes não entram nos totais** — servem só para você saber o que já foi solicitado e **não pedir o mesmo pagamento duas vezes**. Quando aprovados, saem daqui e passam a contar como movimentação vinculada.
-- **Receitas e Despesas / Orçamento previsto / Previsto × Realizado** — o orçamento do projeto (total e, opcionalmente, por categoria) confrontado com o que já foi gasto, com saldo e percentual de consumo. O que aparece aqui depende do **financiamento do projeto** (ver "Financiamento do projeto" em Conceitos essenciais): um projeto **custeado pelo caixa geral** mostra só despesas; um projeto **com recursos próprios** mostra receitas e despesas. Se aparecer receita vinculada a um projeto marcado como "custeado pelo caixa geral", ela é exibida do mesmo jeito, com um aviso para revisar a configuração — o lançamento real vale mais que a declaração.
+- **Receitas e Despesas / Orçamento previsto / Previsto × Realizado** — o orçamento do projeto (total e, opcionalmente, por categoria) confrontado com o que já foi gasto, com saldo e percentual de consumo. O que aparece aqui depende do **financiamento do projeto** (ver "Financiamento do projeto" em Conceitos essenciais): um projeto **custeado pelo caixa geral** mostra só despesas; um projeto **com receita própria** mostra receitas e despesas. Se aparecer receita vinculada a um projeto marcado como "custeado pelo caixa geral", ela é exibida do mesmo jeito, com um aviso para revisar a configuração — o lançamento real vale mais que a declaração.
 - **Lançamentos vinculados** — as movimentações já atribuídas ao projeto, com filtros. Cada linha mostra o **valor** e acompanha a **situação do lançamento conforme ele evolui**: aparece quando é vinculado (previsto), muda para **pago** quando o pagamento é registrado e para **estornado** se for revertido — sempre na mesma linha, sem duplicar. Assim toda a equipe do projeto enxerga, em um só lugar, o que já foi previsto, o que foi efetivamente pago e o que foi estornado, com os valores visíveis a todos os membros.
 
 > ✓ **Dica · Todo mundo vê o dinheiro do projeto**
@@ -294,7 +296,7 @@ Cada encerramento alimenta um **acervo de Lições Aprendidas** da OSC, acessív
 - **Projeto** — iniciativa da OSC com objetivo, prazo, orçamento e equipe (evento, obra, campanha, edital, serviço).
 - **Tipo do projeto** — categoria que adapta a experiência (Evento ganha calculadora de taxa e participantes; cada tipo tem marcos-modelo).
 - **Ciclo de vida** — a sequência de status do projeto (Em planejamento → Aguardando aprovação → Em execução → Aguardando encerramento → Concluído; além de Pausado e Cancelado).
-- **Financiamento do projeto** — declaração de como o projeto é sustentado: "custeado pelo caixa geral" (só despesas no Financeiro) ou "tem recursos próprios" (receitas e despesas). Editável na criação e depois.
+- **Financiamento do projeto** — declaração de como o projeto é sustentado: "custeado pelo caixa geral" (só despesas no Financeiro) ou "tem receita própria" — captada para aquele projeto específico, não o dinheiro geral da OSC (receitas e despesas). Editável na criação e depois.
 - **Coordenador do projeto** — papel no projeto que conduz o planejamento, as tarefas e as solicitações financeiras.
 - **Ex-membro da organização** — pessoa que saiu da OSC e permanece na equipe do projeto apenas como registro histórico: não recebe novas atribuições e não pode ser editada nem removida da equipe.
 - **Desativado** — pessoa que continua vinculada à OSC, mas com o acesso suspenso. Aparece na equipe com esse selo; volta a atuar assim que o acesso é reativado.
