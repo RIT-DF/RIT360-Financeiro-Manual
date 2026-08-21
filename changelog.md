@@ -11,6 +11,16 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.52.0] — 2026-08-21
+
+### Adicionado
+
+- **O tipo de projeto ganhou a opção "Programa"** — uma linha de atendimento ou serviço que se repete, com metas e público, diferente de evento, obra e campanha. Programas contam agora com marcos e riscos sugeridos próprios, como os demais tipos.
+
+### Modificado
+
+- **O formulário de criação de projeto perdeu um passo.** A etapa "Coordenador e equipe" só mostrava o nome de quem estava criando e avisava que dava para convidar gente depois — não havia nenhuma escolha a fazer ali. A gestão de equipe continua funcionando normalmente no detalhe do projeto, depois de criado.
+
 ## [1.51.2] — 2026-08-21
 
 ### Corrigido

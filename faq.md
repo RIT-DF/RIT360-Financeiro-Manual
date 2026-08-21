@@ -259,7 +259,7 @@ Provavelmente o valor final passou do valor autorizado além do limiar de reapro
 
 ### Como crio um projeto?
 
-Em **Projetos → Novo projeto**. Um assistente de 4 passos (tipo e identidade, período, financeiro essencial, coordenador e equipe) conduz a criação, com textos de ajuda em cada etapa. O projeto nasce como rascunho "Em planejamento"; quando estiver pronto, você solicita a aprovação de abertura.
+Em **Projetos → Novo projeto**. Um assistente de 3 passos (tipo e identidade, período, financeiro essencial) conduz a criação, com textos de ajuda em cada etapa; no último passo você vê o aviso de que ficará registrado como coordenador. O projeto nasce como rascunho "Em planejamento"; quando estiver pronto, você solicita a aprovação de abertura. Convidar outras pessoas para a equipe é feito depois, já dentro do projeto.
 
 ### Quem pode criar projetos?
 
@@ -280,6 +280,10 @@ Em **Projetos → Lições aprendidas** — um acervo da OSC com as lições e b
 ### Como encerro um projeto?
 
 Na aba **Encerramento** do projeto, um assistente de avaliação conduz por perguntas (objetivos, critérios, engajamento, pontos altos, lições...). O RIT360 Financeiro monta o **relatório de encerramento** consolidado, exportável em PDF para a prestação de contas. Cada campo traz orientação e um exemplo de preenchimento.
+
+### Meu programa não tem data para acabar. Que data eu coloco?
+
+Todo projeto no RIT360 Financeiro precisa de uma data de início e de fim — inclusive o tipo **Programa**, pensado justamente para atividade contínua (um atendimento, uma cesta básica mensal, uma linha de serviço). Isso não significa que o programa "acaba": coloque uma **data de término distante**, compatível com o horizonte real dele (por exemplo, o fim do exercício seguinte). É essa data que baliza o orçamento e a prestação de contas do período. Quando ela chegar e o programa continuar, **edite as datas** do projeto (aba Resumo → Editar) e siga — o histórico e as tarefas não se perdem.
 
 ### Qual a diferença entre meu papel na OSC e meu papel no projeto?
 

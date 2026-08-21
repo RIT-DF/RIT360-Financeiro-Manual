@@ -75,7 +75,11 @@ A cada projeto o RIT360 Financeiro atribui um **indicador de saúde** — um sem
 
 > 📖 **Conceito · Tipo do projeto**
 >
-> Ao criar, você escolhe o **tipo** (Projeto, Evento, Obra, Produto/Serviço, Voluntário…). O tipo adapta a experiência: um **Evento** ganha campo de número de participantes e a **calculadora de taxa de inscrição**; cada tipo já vem com uma sugestão de **marcos-modelo** adequada (uma Obra sugere "Início da execução / Conclusão da obra / Vistoria"; um Evento sugere "Divulgação / Evento realizado / Prestação de contas"). Você usa as sugestões que quiser e adiciona as suas.
+> Ao criar, você escolhe o **tipo**: Evento, Obra, Campanha, Produto/Serviço, Programa, ou "Começar do zero" (sem modelo, você monta tudo). O tipo adapta a experiência: um **Evento** ganha campo de número de participantes e a **calculadora de taxa de inscrição**; cada tipo (exceto "Começar do zero") já vem com uma sugestão de **marcos-modelo** e de **riscos típicos** — uma Obra sugere marcos como "Início da execução / Conclusão da obra / Vistoria"; um Evento sugere "Divulgação / Evento realizado / Prestação de contas"; um **Programa** sugere "Plano do programa aprovado / Início do atendimento / Primeira avaliação de metas / Relatório do período", com riscos como demanda acima da capacidade de atendimento, interrupção do financiamento e rotatividade de equipe. Você usa as sugestões que quiser e adiciona as suas.
+>
+> **Programa** é o tipo certo para uma linha de atendimento ou serviço **que se repete**, com metas e público definido — um programa de passagens para pacientes, uma cesta básica mensal, um atendimento continuado. Ele se distingue dos demais pela natureza do trabalho: um **Evento** tem data marcada e acaba nela; uma **Obra** entrega algo físico e acaba quando a entrega é feita; uma **Campanha** é um esforço pontual de arrecadação ou mobilização; já um **Programa** é uma atividade contínua, sem um único marco de "pronto" — o que ele tem, como todo projeto, é um **período** (início e fim) dentro do qual ele roda.
+>
+> ⚠️ **Não existe projeto sem data de término — nem para um Programa de longa duração.** Todo projeto no RIT360 Financeiro tem início e fim, porque é o período que baliza o orçamento, as metas e a prestação de contas do exercício. Se o seu programa é para durar anos, isso não é problema: coloque uma **data de término distante**, compatível com o horizonte real do programa (por exemplo, o fim do exercício seguinte, ou a data prevista de revisão do plano). Quando o período terminar e o programa continuar, você **edita as datas** (ver "Editar o projeto após a criação" abaixo) e segue — não precisa recriar o projeto nem perder o histórico.
 
 > 📖 **Conceito · Papel no projeto**
 >
@@ -103,7 +107,7 @@ A tela **Projetos** lista as iniciativas da OSC. No **computador** (telas a part
 
 No topo você tem **busca por nome** e filtros por **Status**, **Tipo** e **Saúde** — úteis para, por exemplo, ver só os projetos em execução que estão em atenção.
 
-O botão **Novo projeto** abre um **assistente de 4 passos** (tipo e identidade · período · financeiro · coordenador), com textos de ajuda em cada etapa. No passo **financeiro** você escolhe também o **financiamento do projeto** — custeado pelo caixa geral ou com receita própria (ver "Financiamento do projeto" acima). Para um Evento, o assistente pede o número estimado de participantes; o texto se adapta ao tipo escolhido.
+O botão **Novo projeto** abre um **assistente de 3 passos** (tipo e identidade · período · financeiro essencial), com textos de ajuda em cada etapa. No passo **financeiro essencial** você escolhe também o **financiamento do projeto** — custeado pelo caixa geral ou com receita própria (ver "Financiamento do projeto" acima) — e vê o aviso de que ficará registrado como coordenador do projeto. Para um Evento, o assistente pede o número estimado de participantes; o texto se adapta ao tipo escolhido. Convidar outras pessoas para a equipe é feito depois, já com o projeto criado (ver "Equipe" na aba Planejamento).
 
 ## A aba Resumo
 
@@ -294,7 +298,8 @@ Cada encerramento alimenta um **acervo de Lições Aprendidas** da OSC, acessív
 ## Glossário rápido
 
 - **Projeto** — iniciativa da OSC com objetivo, prazo, orçamento e equipe (evento, obra, campanha, edital, serviço).
-- **Tipo do projeto** — categoria que adapta a experiência (Evento ganha calculadora de taxa e participantes; cada tipo tem marcos-modelo).
+- **Tipo do projeto** — categoria que adapta a experiência: Evento, Obra, Campanha, Produto/Serviço, Programa ou "Começar do zero". Evento ganha calculadora de taxa e participantes; cada tipo (exceto "Começar do zero") tem marcos-modelo e riscos típicos sugeridos.
+- **Programa** — tipo de projeto para uma linha de atendimento ou serviço que se repete, com metas e público definido; ao contrário de Evento (data marcada) ou Obra (entrega física), não tem um único marco de conclusão — tem um período, que pode ser longo.
 - **Ciclo de vida** — a sequência de status do projeto (Em planejamento → Aguardando aprovação → Em execução → Aguardando encerramento → Concluído; além de Pausado e Cancelado).
 - **Financiamento do projeto** — declaração de como o projeto é sustentado: "custeado pelo caixa geral" (só despesas no Financeiro) ou "tem receita própria" — captada para aquele projeto específico, não o dinheiro geral da OSC (receitas e despesas). Editável na criação e depois.
 - **Coordenador do projeto** — papel no projeto que conduz o planejamento, as tarefas e as solicitações financeiras.
