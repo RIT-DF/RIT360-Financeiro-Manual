@@ -11,6 +11,24 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.57.0] — 2026-08-21
+
+### Modificado
+
+- **A regra que limita de quais contas uma despesa de projeto pode sair passa a valer também no servidor, lançamento a lançamento.** Ao baixar vários lançamentos de uma vez, os que não podem sair da conta escolhida agora voltam **recusados com o motivo**, em vez de serem pagos — e essa recusa aparece separada da retenção por estouro de rubrica. Ao selecionar lançamentos de projetos diferentes para baixa em lote, a tela avisa que a conferência será feita um a um.
+
+## [1.56.1] — 2026-08-21
+
+### Corrigido
+
+- **Reforço no isolamento entre organizações:** documentos financeiros ficam ainda mais presos à organização a que pertencem, e informações de controle interno passam a ser visíveis apenas para a administração da plataforma. Nada muda no uso do dia a dia.
+
+## [1.56.0] — 2026-08-21
+
+### Modificado
+
+- **O sistema não pergunta mais como o projeto é financiado.** O financeiro do projeto passa a mostrar sempre as receitas: havendo receita lançada, os valores; não havendo, zero. Uma informação a menos para preencher no cadastro, e nada some da tela de quem já tinha receita no projeto.
+
 ## [1.55.0] — 2026-08-21
 
 ### Adicionado

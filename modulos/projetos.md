@@ -243,6 +243,7 @@ O controle por fonte é um **interruptor por projeto**, desligado por padrão. P
 Uma vez ligado, **cada despesa do projeto só pode sair de uma conta que tenha rubrica prevista para a categoria daquela despesa**. Você pode desligar a qualquer momento — o projeto volta a se comportar como antes, sem a trava. **Transferências não são afetadas** pelo controle por fonte, porque não têm categoria.
 
 ### O que muda na hora de pagar
+{: #o-que-muda-na-hora-de-pagar }
 
 Com o controle ligado, o campo **Conta** passa a mostrar só as contas elegíveis — as que têm rubrica prevista para a categoria escolhida — em todos os pontos onde se paga uma despesa do projeto: **novo lançamento**, **edição de lançamento**, **baixa (marcar como pago)** e **pagamento de pedido de compra e pagamento**. Se a despesa está dividida entre várias categorias (rateio), a conta só entra na lista se tiver rubrica prevista para **todas** elas — a despesa inteira sai de uma conta só.
 
@@ -253,6 +254,10 @@ Se **nenhuma** conta tiver rubrica prevista para a categoria escolhida, a tela e
 > ✓ **Dica · Corrija o orçamento do projeto, não a categoria da despesa**
 >
 > Quando a conta que você esperava não aparece, o instinto é trocar a categoria da despesa até algo aparecer — não faça isso. Volte ao orçamento do projeto e verifique se a rubrica existe de fato: categoria errada na despesa é uma prestação de contas errada mais tarde, mesmo que o pagamento saia sem problema hoje.
+
+> 📖 **Conceito · A regra vale também no servidor, lançamento a lançamento**
+>
+> O campo Conta mostrar só as opções elegíveis é a primeira barreira, mas não a única. O RIT360 Financeiro confere a mesma regra **no servidor**, um lançamento de cada vez, inclusive em caminhos que não passam por esse campo — como a baixa em lote de várias movimentações de uma vez (ver [Movimentações → Baixa em lote com lançamentos de projetos diferentes](/modulos/movimentacoes/#baixa-em-lote-projetos-diferentes)). Se algum lançamento chegar à baixa apontando para uma conta sem rubrica prevista, ele volta **recusado por regra** — não há autorização possível, só corrigir a conta ou o orçamento. É diferente de um lançamento **retido por estouro**, que tem conta certa mas valor acima do previsto — ver a seção a seguir.
 
 ### Execução por fonte
 
@@ -265,6 +270,8 @@ Se uma despesa foi paga numa combinação de conta e categoria **sem** rubrica p
 
 ### Pagamento acima do previsto: retenção, não recusa
 {: #pagamento-acima-do-previsto-retencao-nao-recusa }
+
+Esta seção cobre o caso em que a **conta está certa** (tem rubrica prevista para a categoria) mas o **valor** passa do previsto. É diferente do caso em que a conta **não tem** rubrica nenhuma para a categoria — aí o resultado é **recusado por regra**, não retido, e não há decisão de autorizar: é preciso trocar a conta ou ajustar o orçamento (ver acima, "A regra vale também no servidor").
 
 Quando o valor de uma despesa **ultrapassa** o previsto da rubrica (previsto + já aplicado + este pagamento passa do teto), o RIT360 Financeiro **não recusa o pagamento — ele fica retido**, aguardando uma decisão. O pedido ou o lançamento continua existindo normalmente; só o pagamento não se completa até alguém decidir.
 
@@ -392,13 +399,14 @@ Cada encerramento alimenta um **acervo de Lições Aprendidas** da OSC, acessív
 - **Rubrica** — linha do orçamento do projeto que, com o controle por fonte ligado, amarra conta + categoria + valor (ou "sem teto"). Sem o controle ligado, a linha é só categoria + valor.
 - **Controle por fonte de recurso** — interruptor por projeto, desligado por padrão, que restringe cada despesa a sair de uma conta com rubrica prevista para a categoria.
 - **Conta de recurso restrito** — conta que não soma no saldo disponível da organização (convênio, emenda, fundo carimbado). Estourar rubrica nela nunca tem autorização interna.
-- **Retenção de pagamento** — quando o valor ultrapassa o previsto de uma rubrica, o pagamento não se completa até alguém decidir; o lançamento nunca aparece como pago enquanto retido.
+- **Retenção de pagamento** — quando a conta é elegível mas o valor ultrapassa o previsto de uma rubrica, o pagamento não se completa até alguém decidir; o lançamento nunca aparece como pago enquanto retido.
+- **Recusa por regra** — quando a conta escolhida **não tem** rubrica prevista para a categoria da despesa; diferente da retenção, não há decisão de autorizar — é preciso trocar a conta ou ajustar o orçamento.
 - **Remanejamento** — mudança autorizada e documentada de quanto uma rubrica pode receber, registrada com o documento (evidência do projeto) que a embasa.
 
 ## Por onde seguir
 
-- **Movimentações** — onde os lançamentos vivem; o financeiro do projeto se apoia neles. Ver [Conta elegível por rubrica](/modulos/movimentacoes/#conta-elegivel-por-rubrica).
-- **Reembolsos** e **Pedidos de Compra e Pagamento** — os fluxos que o botão "Registrar despesa do projeto" aciona. Ver [Pagamento retido por orçamento do projeto](/modulos/pedidos-pagamento/#retencao-por-orcamento-do-projeto).
+- **Movimentações** — onde os lançamentos vivem; o financeiro do projeto se apoia neles. Ver [Conta elegível por rubrica](/modulos/movimentacoes/#conta-elegivel-por-rubrica) e [Baixa em lote com lançamentos de projetos diferentes](/modulos/movimentacoes/#baixa-em-lote-projetos-diferentes).
+- **Reembolsos** e **Pedidos de Compra e Pagamento** — os fluxos que o botão "Registrar despesa do projeto" aciona. Ver [Pagamento retido ou recusado por orçamento do projeto](/modulos/pedidos-pagamento/#retencao-por-orcamento-do-projeto).
 - **Relatórios** — agora com filtro por projeto.
 - **Painel** — onde a saúde de todos os projetos aparece de relance.
 - **Papéis e Permissões** — para entender o papel de Coordenador de Projeto na OSC.

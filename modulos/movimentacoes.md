@@ -190,13 +190,35 @@ Cada linha tem ícones de ação que mudam conforme o status:
 >
 > **Marcar como pago** exige a permissão de **pagar**, que é separada da de criar e editar. Quem registra lançamentos mas não tem essa permissão simplesmente **não vê** a ação de marcar como pago — nem na linha, nem no detalhe, nem na seleção em lote, nem na conciliação de extrato. Isso permite que uma pessoa organize as contas a pagar e outra confirme a saída do dinheiro. Quem ajusta isso é o Presidente, em [Cargos e permissões](/configuracoes/cargos/#permissao-pagar); por padrão, quem já podia pagar continua podendo.
 
-> ⚠️ **Atenção · Um lançamento de projeto pode ficar retido ao marcar como pago**
+> ⚠️ **Atenção · Um lançamento de projeto pode ficar retido — ou ser recusado — ao marcar como pago**
 >
-> Num projeto com controle por fonte ligado, marcar como pago um valor que passa da rubrica prevista **não paga** — o pagamento fica retido, esperando decisão (autorização, em conta comum; correção ou remanejamento, em conta de recurso restrito). O lançamento mostra o selo de retenção em vez de virar "Pago". Ver [Projetos → Pagamento acima do previsto: retenção, não recusa](/modulos/projetos/#pagamento-acima-do-previsto-retencao-nao-recusa).
+> Num projeto com controle por fonte ligado, marcar como pago passa por uma checagem: se a conta não tem rubrica prevista para a categoria, o pagamento é **recusado por regra** (troque a conta ou ajuste o orçamento); se a conta é elegível mas o valor passa do previsto, o pagamento fica **retido**, esperando decisão (autorização, em conta comum; correção ou remanejamento, em conta de recurso restrito). Em nenhum dos dois casos o lançamento vira "Pago" sozinho. Ver [Projetos → A regra vale também no servidor](/modulos/projetos/#o-que-muda-na-hora-de-pagar) e [Pagamento acima do previsto: retenção, não recusa](/modulos/projetos/#pagamento-acima-do-previsto-retencao-nao-recusa).
 
 ### Seleção em lote
 
 Marque o checkbox no início das linhas para selecionar várias movimentações. A barra de ações em lote aparece no rodapé com as opções **Marcar como pago** (para quem tem permissão de pagar) e **Excluir**.
+
+#### Baixa em lote com lançamentos de projetos diferentes
+{: #baixa-em-lote-projetos-diferentes }
+
+> 💡 **Por que isso importa**
+>
+> Baixar em lote economiza tempo quando há muitas contas a pagar de uma vez — mas isso não pode custar confiança. Por isso o RIT360 Financeiro confere **cada lançamento selecionado, um a um**, antes de efetivar o pagamento, mesmo quando a seleção mistura lançamentos de **projetos diferentes**. Não existe mais a orientação de separar a baixa por projeto antes de confirmar: selecione o que precisar, e a conferência é feita internamente, lançamento a lançamento.
+
+Ao concluir a baixa, o resultado distingue quatro situações:
+
+- **Pagos** — passaram na checagem e foram efetivados normalmente.
+- **Recusados por regra** — a conta do lançamento **não tem rubrica prevista** para a categoria daquele projeto. Não há o que autorizar: é preciso escolher outra conta ou ajustar o orçamento do projeto, e tentar de novo.
+- **Retidos por estouro de rubrica** — a conta é elegível, mas o valor passa do previsto da rubrica. Aqui existe decisão a tomar: autorizar a diferença (conta comum) ou corrigir/remanejar (conta de recurso restrito). Ver [Pedidos de Compra e Pagamento → Recusado por regra × retido por estouro](/modulos/pedidos-pagamento/#recusado-por-regra-x-retido-por-estouro).
+- **Falhas** — problema técnico ao processar aquele lançamento específico; tente novamente.
+
+Um lançamento recusado ou retido **não trava os demais** — o resto da seleção que não tem nenhum desses problemas é pago normalmente.
+
+**Exemplo:** você seleciona 12 lançamentos para baixar de uma vez — 8 do projeto "Reforma da Sede" (sem controle por fonte) e 4 do projeto "Emenda 04/2024" (com controle por fonte ligado). Ao confirmar: os 8 da Reforma e 2 da Emenda são pagos normalmente; 1 lançamento da Emenda volta **recusado por regra** (a conta escolhida não tinha rubrica prevista para "Combustível"); e 1 volta **retido por estouro** (a rubrica de "Material" já estava no limite). Você resolve os dois separadamente — o restante já está pago.
+
+> ✓ **Dica · Recusado não é retido**
+>
+> Se um lançamento voltou **recusado**, insistir na mesma conta não resolve — ela nunca vai aceitar aquela categoria enquanto o orçamento não tiver rubrica prevista para ela. Se voltou **retido**, existe uma decisão a tomar (autorizar, corrigir ou remanejar). Procurar um botão de autorizar para um recusado é procurar algo que não existe.
 
 ### Exportação
 

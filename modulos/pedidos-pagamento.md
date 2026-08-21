@@ -190,17 +190,29 @@ O valor **autorizado** na aprovação fica guardado separado do valor **efetivam
 >
 > O valor estimado dá agilidade para autorizar uma compra antes do preço fechado — mas sem limite, a aprovação original perderia o sentido: qualquer coisa poderia ser aprovada por um valor e paga por outro bem maior, sem ninguém revisar. O limiar é o equilíbrio: pequena variação (frete, arredondamento) passa direto; diferença grande volta para quem autorizou decidir se topa.
 
-### Pagamento retido por orçamento do projeto
+### Pagamento retido ou recusado por orçamento do projeto
 {: #retencao-por-orcamento-do-projeto }
 
-Quando o pedido está vinculado a um **projeto com controle por fonte de recurso ligado** (ver [Projetos → Orçamento por fonte de recurso](/modulos/projetos/#orcamento-por-fonte-de-recurso)), o pagamento passa por uma segunda checagem, independente da checagem de valor autorizado acima: o valor não pode passar do **previsto da rubrica** (a conta + categoria daquela despesa, dentro do projeto). Estourando, o **pagamento fica retido** — o pedido continua aprovado.
+Quando o pedido está vinculado a um **projeto com controle por fonte de recurso ligado** (ver [Projetos → Orçamento por fonte de recurso](/modulos/projetos/#orcamento-por-fonte-de-recurso)), o pagamento passa por uma segunda checagem, independente da checagem de valor autorizado acima — e essa checagem hoje vale **também no servidor**, lançamento a lançamento: mesmo um caminho que não passa pela tela de pagamento (baixa em lote, edição, importação) é conferido do mesmo jeito antes de efetivar o pagamento.
 
-O cartão de retenção que aparece no pedido explica o motivo e mostra o previsto, o já aplicado, este pagamento e a diferença. O que fazer a seguir depende do tipo da conta:
+Essa checagem pode dar dois resultados diferentes, e a diferença importa porque cada um pede uma ação distinta:
+
+#### Recusado por regra × retido por estouro
+{: #recusado-por-regra-x-retido-por-estouro }
+
+- **Recusado por regra** — a conta escolhida **não tem rubrica prevista** para a categoria daquela despesa dentro do projeto. Não existe "quanto falta autorizar" aqui: **não há o que autorizar**, porque a conta nunca poderia pagar essa categoria. O caminho é **escolher outra conta** (uma que tenha rubrica prevista) ou **ajustar o orçamento do projeto**, incluindo a rubrica que falta.
+- **Retido por estouro de rubrica** — a conta **tem** rubrica prevista para a categoria, mas o valor deste pagamento passa do que foi previsto. Aqui existe caminho de decisão: **autorizar a diferença** (conta comum) ou **corrigir a despesa / registrar um remanejamento** (conta de recurso restrito). Detalhe completo do conceito, com exemplo, em [Projetos → Pagamento acima do previsto: retenção, não recusa](/modulos/projetos/#pagamento-acima-do-previsto-retencao-nao-recusa).
+
+O cartão que aparece no pedido diz qual dos dois é o caso. No de retenção por estouro, ele mostra o previsto, o já aplicado, este pagamento e a diferença, e o que fazer depende do tipo da conta:
 
 - **Conta comum** — quem tem alçada de aprovação vê o botão **Autorizar a diferença**.
 - **Conta de recurso restrito** (convênio, emenda, fundo carimbado) — não há autorização interna. É preciso corrigir a despesa ou registrar um remanejamento no projeto, com o documento que o autoriza.
 
-Os dois cartões de retenção — o de valor acima do autorizado (acima) e o de rubrica do projeto — são **independentes**: um pedido pode ter os dois pendentes ao mesmo tempo, cada um com a sua decisão própria. Detalhe completo do conceito, com exemplo, em [Projetos → Pagamento acima do previsto: retenção, não recusa](/modulos/projetos/#pagamento-acima-do-previsto-retencao-nao-recusa).
+> ✓ **Dica · Recusado não é retido**
+>
+> Se o pedido voltou **recusado**, insistir na mesma conta não resolve — ela nunca vai aceitar aquela categoria enquanto o orçamento não tiver rubrica prevista para ela. Procurar um botão de autorizar aqui é procurar algo que não existe: o botão só aparece no caso de **retenção por estouro**.
+
+Os cartões de valor acima do autorizado (seção anterior) e de rubrica do projeto (recusa ou retenção) são **independentes**: um pedido pode ter mais de um pendente ao mesmo tempo, cada um com a sua decisão própria.
 
 ### Corrigir o centro de custo depois do envio
 
