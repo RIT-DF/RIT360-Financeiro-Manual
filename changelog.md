@@ -11,6 +11,41 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.55.0] — 2026-08-21
+
+### Adicionado
+
+- **Pagar acima do previsto na rubrica do projeto passa a reter o pagamento, em vez de simplesmente recusá-lo.** Em conta comum, quem tem alçada de aprovação na organização pode autorizar a diferença, com um motivo — o mesmo fluxo já usado para excedente de pedido de compra. **Em conta de recurso restrito (convênio, emenda, fundo carimbado), não há autorização interna**: o caminho é corrigir a despesa ou registrar o remanejamento com a autorização de quem repassou o recurso. Nenhum limiar percentual de tolerância vale para conta restrita. Um pagamento retido nunca aparece como pago.
+
+## [1.54.2] — 2026-08-21
+
+### Modificado
+
+- **A trava de fonte de recurso passou a valer também ao dar baixa em um lançamento e ao pagar um pedido de compra**, inclusive quando fazem parte de uma série recorrente. Antes, ela só era aplicada na criação e na edição do lançamento.
+
+## [1.54.1] — 2026-08-21
+
+### Corrigido
+
+- **Reforçada a segurança da consulta de saldos por conta**, garantindo que cada pessoa só veja informação das organizações a que tem acesso.
+
+## [1.54.0] — 2026-08-21
+
+### Adicionado
+
+- **O orçamento do projeto ganhou a conta bancária como dimensão.** Cada rubrica passa a ser "conta + categoria + valor", e a mesma categoria pode ter linhas em contas diferentes — por exemplo, material de construção pago em parte pela emenda e em parte pelo caixa da organização, cada parte com seu próprio teto.
+- **Valor em branco na rubrica passa a significar "permitido, sem teto"** — diferente de zero (nada pode ser gasto) e de rubrica inexistente (categoria fora do orçamento).
+- **Novo interruptor no projeto: "controlar gastos por fonte de recurso"**, desligado por padrão. Projeto que não liga continua funcionando exatamente como antes, sem tela nova nem trava. O interruptor não liga enquanto houver rubrica sem conta definida.
+- **Com o controle ligado, a tela de pagamento só oferece as contas com rubrica prevista para aquela categoria** — e, quando nenhuma cobre, explica o motivo em vez de mostrar uma lista vazia.
+- **Nova visão de execução por fonte**, por conta e por rubrica: quanto foi previsto, quanto já foi aplicado e quanto resta, sinalizando gasto sem rubrica prevista.
+- **Remanejamento entre rubricas do projeto**, que só se registra apontando para um documento anexado ao projeto (aditivo, ofício ou anuência do órgão).
+
+## [1.53.1] — 2026-08-21
+
+### Corrigido
+
+- **Lançamentos e pagamentos passaram a recusar conta bancária de outra organização**, e conta bancária inativa deixou de poder ser escolhida ao criar um pagamento novo.
+
 ## [1.53.0] — 2026-08-21
 
 ### Adicionado

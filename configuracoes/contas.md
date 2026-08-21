@@ -48,6 +48,7 @@ Clique em **+ Nova conta**. Preencha:
 - **Saldo inicial** — quanto tem na conta no momento do cadastro
 - **Data de abertura** — quando a conta começou a ser usada pela OSC (não a data de criação no RIT360 Financeiro)
 - **Conta padrão da organização** (opcional) — ver a seção **Conta padrão**, abaixo
+- **Compõe o saldo disponível da organização** — ligado por padrão; ver a seção **Compõe o saldo disponível da organização**, abaixo
 - **Dados bancários** (opcional, recolhível) — banco, agência e demais dados, quando aplicável
 - **Personalização** (opcional, recolhível) — uma **cor** e um **ícone** para a conta; ver a seção **Personalização**, abaixo
 
@@ -67,6 +68,24 @@ Clique em **+ Nova conta**. Preencha:
 > ⚠️ **Atenção · Conta com movimentações não pode ser excluída**
 >
 > O RIT360 Financeiro **não permite excluir conta que tem movimentações registradas** — só desativar. Motivo: excluir destruiria a história contábil dessas movimentações ("essa receita foi para qual conta?"). Para "encerrar" uma conta na prática, **desative**. As movimentações ficam intactas no histórico, e a conta desativada não aparece nos formulários de novo lançamento.
+
+## Compõe o saldo disponível da organização
+
+No cadastro da conta, o interruptor **Compõe o saldo disponível da organização** decide se ela entra no total consolidado exibido como saldo disponível — no Painel e em qualquer outro lugar que mostre esse total. Vem **ligado por padrão**.
+
+- **Desligado**, a conta **sai apenas desse total**. Quando alguma conta está fora, o total avisa quanto ficou de fora e em quantas contas.
+- **Nada mais muda.** O saldo individual da própria conta, os lançamentos, as transferências, a conciliação, os relatórios analíticos, as exportações e a prestação de contas continuam considerando a conta normalmente — é uma marcação de **exibição de disponibilidade**, não de escopo do dado.
+- A conta continua **ativa e visível** em todas as listas, formulários e filtros.
+
+> 📖 **Conceito · Recurso carimbado não é dinheiro disponível**
+>
+> Uma conta que guarda recurso carimbado — um convênio, uma emenda parlamentar, um fundo de uso restrito — tem saldo, mas esse saldo **não pode ser gasto livremente** pela organização; ele só pode ir para o que o convênio autoriza. Somá-lo ao saldo disponível faz o Painel afirmar uma folga que não existe, e isso é justamente o tipo de erro que leva a comprometer dinheiro que já tem destino certo. Desligar o interruptor nessas contas mantém o saldo disponível fiel ao que a OSC pode, de fato, usar.
+
+**Exemplo:** a OSC administra a "Emenda 04/2024" (R$ 120.000, todo destinado à reforma da sede) e o "Caixa Geral" (R$ 18.000, de uso livre). Com a emenda marcada como fora do saldo disponível, o Painel mostra **R$ 18.000 disponíveis** — e um aviso indicando que R$ 120.000 em 1 conta ficaram de fora do total. Sem o interruptor desligado, o Painel mostraria R$ 138.000 disponíveis, dando a impressão de uma folga que não existe.
+
+> ✓ **Dica · É o mesmo conceito da "conta de recurso restrito" em Projetos**
+>
+> No [Orçamento por fonte de recurso](/modulos/projetos/#orcamento-por-fonte-de-recurso), uma "conta de recurso restrito" é justamente uma conta com este interruptor desligado — por isso ela não soma no saldo disponível da organização, e por isso estourar uma rubrica nela nunca tem autorização interna (só remanejamento documentado). É a mesma marcação vista pelos dois lados: aqui, no cadastro da conta; lá, no controle do orçamento do projeto.
 
 ## Conta padrão
 

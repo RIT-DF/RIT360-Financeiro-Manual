@@ -25,7 +25,7 @@ Quem responde a essas perguntas *no fim do projeto* já chegou tarde. Quem respo
 
 > 📖 **Conceito · Projeto × caixa geral da OSC**
 >
-> O financeiro do projeto **não é uma caixinha separada do banco**. O dinheiro continua sendo o da OSC, nas mesmas contas. O que o projeto faz é **rotular** as movimentações: "esta despesa de R$ 300 em material foi do Acampamento". Assim você vê o recorte do projeto sem deixar de ver o todo. Cada projeto **declara como é financiado** — veja "Financiamento do projeto" logo abaixo.
+> O financeiro do projeto **não é uma caixinha separada do banco**. O dinheiro continua sendo o da OSC, nas mesmas contas. O que o projeto faz é **rotular** as movimentações: "esta despesa de R$ 300 em material foi do Acampamento". Assim você vê o recorte do projeto sem deixar de ver o todo.
 
 ## O modelo de gestão de projetos do RIT360 Financeiro
 
@@ -85,19 +85,6 @@ A cada projeto o RIT360 Financeiro atribui um **indicador de saúde** — um sem
 >
 > Dentro de um projeto, cada pessoa tem um **papel no projeto**, que é diferente do papel dela na OSC. Quem conduz é o **Coordenador do projeto** — pode editar escopo, equipe, marcos e riscos, gerenciar tarefas e solicitar despesas. Demais integrantes **contribuem** (assumem tarefas, comentam, anexam evidências) mas não mudam o planejamento. Um voluntário comum da OSC pode ser coordenador de um projeto específico; um tesoureiro pode ser só integrante de outro. O acesso ao projeto respeita esse papel.
 
-> 📖 **Conceito · Financiamento do projeto**
->
-> Ao **criar** um projeto (no passo "financeiro" do assistente) ou ao **editar** um já existente, você escolhe como ele é financiado: **custeado pelo caixa geral da organização** ou **tem receita própria (captada para este projeto)**. A escolha muda o que aparece na aba Financeiro do projeto:
->
-> - **Custeado pelo caixa geral** — o projeto mostra só as **despesas**. É o caso mais comum: o dinheiro sai do caixa comum da OSC, e o projeto acompanha quanto já consumiu do que foi previsto.
-> - **Tem receita própria (captada para este projeto)** — o projeto mostra **receitas e despesas**, porque ele recebe dinheiro captado especificamente para ele (um edital, uma doação carimbada, uma taxa de inscrição), separado do caixa comum.
->
-> ⚠️ **Não confunda as duas opções.** "Tem receita própria" **não** significa "pago com o dinheiro da organização" — é o contrário: significa que **este projeto específico** tem uma fonte de receita sua, distinta do caixa geral. Um projeto "custeado pelo caixa geral" é o que **não** tem receita própria e depende inteiramente do dinheiro comum da OSC.
->
-> **Se a realidade não bater com a declaração**, o sistema prioriza o dado real: uma receita vinculada a um projeto declarado como "custeado pelo caixa geral" continua aparecendo normalmente na aba Financeiro, e um aviso pede para revisar a configuração — provavelmente esse projeto deveria estar marcado como "tem receita própria". Nada é escondido nem bloqueado; é só um alerta.
->
-> **Projetos que já existiam antes dessa configuração** foram classificados automaticamente pelo que já tinham (quem já recebia receita virou "tem receita própria"; os demais, "custeado pelo caixa geral") — por isso nenhum projeto antigo mudou de aparência.
-
 ## A lista de projetos
 
 [![Lista de projetos em desktop](/assets/screenshots/manual-projetos-01-lista.png)](/assets/screenshots/manual-projetos-01-lista.png)
@@ -107,7 +94,7 @@ A tela **Projetos** lista as iniciativas da OSC. No **computador** (telas a part
 
 No topo você tem **busca por nome** e filtros por **Status**, **Tipo** e **Saúde** — úteis para, por exemplo, ver só os projetos em execução que estão em atenção.
 
-O botão **Novo projeto** abre um **assistente de 3 passos** (tipo e identidade · período · financeiro essencial), com textos de ajuda em cada etapa. No passo **financeiro essencial** você escolhe também o **financiamento do projeto** — custeado pelo caixa geral ou com receita própria (ver "Financiamento do projeto" acima) — e vê o aviso de que ficará registrado como coordenador do projeto. Para um Evento, o assistente pede o número estimado de participantes; o texto se adapta ao tipo escolhido. Convidar outras pessoas para a equipe é feito depois, já com o projeto criado (ver "Equipe" na aba Planejamento).
+O botão **Novo projeto** abre um **assistente de 3 passos** (tipo e identidade · período · financeiro essencial), com textos de ajuda em cada etapa e o aviso de que você ficará registrado como coordenador do projeto. Para um Evento, o assistente pede o número estimado de participantes; o texto se adapta ao tipo escolhido. Convidar outras pessoas para a equipe é feito depois, já com o projeto criado (ver "Equipe" na aba Planejamento).
 
 ## A aba Resumo
 
@@ -123,7 +110,7 @@ No topo do detalhe ficam as **ações de ciclo de vida** disponíveis para o sta
 [![Editar a identidade do projeto](/assets/screenshots/manual-projetos-editar.png)](/assets/screenshots/manual-projetos-editar.png)
 *Edição da identidade: nome, descrição, tipo, datas e categorias permitidas*
 
-Projetos mudam durante a execução — troca a coordenação, a data escorrega, o escopo se ajusta. Por isso os dados de identidade **podem ser editados depois de criados**, pelo botão **Editar** no cartão **Identidade** da aba Resumo. Dá para ajustar **nome, descrição, tipo, datas de início e fim, as categorias permitidas e o financiamento do projeto** (e, em projetos do tipo Evento, o número de participantes esperados).
+Projetos mudam durante a execução — troca a coordenação, a data escorrega, o escopo se ajusta. Por isso os dados de identidade **podem ser editados depois de criados**, pelo botão **Editar** no cartão **Identidade** da aba Resumo. Dá para ajustar **nome, descrição, tipo, datas de início e fim e as categorias permitidas** (e, em projetos do tipo Evento, o número de participantes esperados).
 
 **Mudanças que exigem reaprovação.** A regra depende do estado do projeto:
 
@@ -206,7 +193,7 @@ O Financeiro mostra o dinheiro do projeto sem tirar nada do caixa geral da OSC:
 - **Registrar despesa do projeto** — abre um **reembolso** ou um **pedido de compra e pagamento** já vinculado a este projeto. A solicitação segue o **fluxo normal de aprovação** da OSC.
 - **Vincular lançamentos existentes** — atribui a este projeto movimentações que já foram lançadas e ainda não tinham projeto.
 - **Aguardando aprovação** — lista os pedidos e reembolsos do projeto que **ainda não foram aprovados** (com o selo "Aguardando Aprovação" ou "Rascunho"). Clique para abrir o pedido. **Esses pendentes não entram nos totais** — servem só para você saber o que já foi solicitado e **não pedir o mesmo pagamento duas vezes**. Quando aprovados, saem daqui e passam a contar como movimentação vinculada.
-- **Receitas e Despesas / Orçamento previsto / Previsto × Realizado** — o orçamento do projeto (total e, opcionalmente, por categoria) confrontado com o que já foi gasto, com saldo e percentual de consumo. O que aparece aqui depende do **financiamento do projeto** (ver "Financiamento do projeto" em Conceitos essenciais): um projeto **custeado pelo caixa geral** mostra só despesas; um projeto **com receita própria** mostra receitas e despesas. Se aparecer receita vinculada a um projeto marcado como "custeado pelo caixa geral", ela é exibida do mesmo jeito, com um aviso para revisar a configuração — o lançamento real vale mais que a declaração.
+- **Receitas e Despesas / Orçamento previsto / Previsto × Realizado** — o orçamento do projeto (total e, opcionalmente, por categoria) confrontado com o que já foi gasto, com saldo e percentual de consumo. O bloco de **Receitas** mostra sempre os valores realizados e previstos de receita vinculada ao projeto; se o projeto ainda não tem nenhuma receita lançada, aparece zerado, com a frase "Nenhuma receita vinculada a este projeto ainda.".
 - **Lançamentos vinculados** — as movimentações já atribuídas ao projeto, com filtros. Cada linha mostra o **valor** e acompanha a **situação do lançamento conforme ele evolui**: aparece quando é vinculado (previsto), muda para **pago** quando o pagamento é registrado e para **estornado** se for revertido — sempre na mesma linha, sem duplicar. Assim toda a equipe do projeto enxerga, em um só lugar, o que já foi previsto, o que foi efetivamente pago e o que foi estornado, com os valores visíveis a todos os membros.
 
 > ✓ **Dica · Todo mundo vê o dinheiro do projeto**
@@ -225,6 +212,97 @@ Para um **Evento**, a aba Financeiro tem a sub-aba **Calcular taxa**, que ajuda 
 > A lógica é simples e justa: os **pagantes** cobrem o custo fixo do evento **mais** o custo de cabeça de quem é atendido mas não paga a própria inscrição (isentos e, conforme a regra, voluntários). Por isso, ao aumentar o número de isentos, a taxa por pagante sobe — o custo deles foi redistribuído. A **regra de pagamento dos voluntários** (rateado, taxa cheia, com desconto, ou a OSC paga) muda como o voluntário entra nessa conta; a descrição da regra escolhida aparece logo abaixo do seletor. Com "custo por participante" igual a zero, a taxa volta a ser o simples rateio do custo entre os pagantes.
 
 Você pode **salvar** simulações no histórico, **adotar uma como taxa oficial** do evento ou **marcar o evento como gratuito**.
+
+## Orçamento por fonte de recurso
+{: #orcamento-por-fonte-de-recurso }
+
+> 💡 **Por que isso importa**
+>
+> Quando o dinheiro do projeto vem de um **convênio, uma emenda parlamentar ou um termo de fomento**, o orçamento não é só "quanto posso gastar" — é **de qual conta** posso gastar **em quê**. Um edital de cultura financia material de cenografia, não combustível; a emenda paga reforma, não salário. Prestar contas a um órgão público significa provar, categoria por categoria, que o dinheiro daquela fonte foi para onde o plano de trabalho disse que ia. O RIT360 Financeiro deixa essa amarração explícita: cada rubrica do orçamento passa a dizer não só a categoria e o valor, mas também **de qual conta** aquele gasto deve sair — e o sistema passa a impedir, na hora do pagamento, que a despesa saia de uma conta errada.
+>
+> Se a sua OSC só lida com caixa geral — sem recurso carimbado a um financiador específico — **nada disto se aplica a você**. É um recurso **opcional**, pensado para quem administra convênio.
+
+> 📖 **Conceito · Rubrica = conta + categoria + valor**
+>
+> Até aqui, cada linha do orçamento do projeto era só **categoria + valor previsto** (ver "A aba Financeiro", acima). Com o controle por fonte, cada linha — chamada de **rubrica** — ganha uma terceira informação: **de qual conta** aquele valor deve sair. Isso significa que a **mesma categoria** pode aparecer em **mais de uma rubrica**, uma para cada conta: "Material de construção" pago 70% pela emenda e 30% pelo caixa geral da OSC são **duas rubricas diferentes**, cada uma com a sua conta e o seu teto. Uma rubrica sem valor definido significa **"permitido nesta conta, sem teto"** — diferente de uma rubrica de R$ 0 (que significa "não gaste nada disto aqui") e diferente de não existir rubrica nenhuma para aquele par conta+categoria (que significa "esta conta não paga esta categoria").
+
+[![Rubricas por conta e categoria no orçamento do projeto](/assets/screenshots/manual-projetos-fonte-01-rubricas.png)](/assets/screenshots/manual-projetos-fonte-01-rubricas.png)
+*Aba Financeiro do projeto — rubricas por conta e categoria, com "sem teto" para a rubrica que só limita o quê, não o quanto*
+
+### Ligar o controle por fonte
+
+O controle por fonte é um **interruptor por projeto**, desligado por padrão. Para ligar:
+
+1. Detalhe o orçamento do projeto **por rubrica** (conta + categoria + valor, ou "sem teto"), na aba **Financeiro** do projeto.
+2. Ligue o interruptor **Controlar gastos por fonte de recurso**.
+
+> ⚠️ **Atenção · Só liga quando toda rubrica tem conta**
+>
+> O sistema **recusa ligar** o controle enquanto existir alguma rubrica do orçamento sem conta definida — a tela mostra quantas faltam completar. É de propósito: ligar o controle com rubrica "solta" deixaria uma categoria sem regra nenhuma, e o objetivo é justamente o oposto — todo gasto sabendo exatamente de onde sai. Complete a conta de cada linha antes de tentar ligar.
+
+Uma vez ligado, **cada despesa do projeto só pode sair de uma conta que tenha rubrica prevista para a categoria daquela despesa**. Você pode desligar a qualquer momento — o projeto volta a se comportar como antes, sem a trava. **Transferências não são afetadas** pelo controle por fonte, porque não têm categoria.
+
+### O que muda na hora de pagar
+
+Com o controle ligado, o campo **Conta** passa a mostrar só as contas elegíveis — as que têm rubrica prevista para a categoria escolhida — em todos os pontos onde se paga uma despesa do projeto: **novo lançamento**, **edição de lançamento**, **baixa (marcar como pago)** e **pagamento de pedido de compra e pagamento**. Se a despesa está dividida entre várias categorias (rateio), a conta só entra na lista se tiver rubrica prevista para **todas** elas — a despesa inteira sai de uma conta só.
+
+**Exemplo:** o projeto "Reforma da Sede" tem duas rubricas para a categoria "Material de construção" — uma na conta "Emenda 04/2024" (R$ 40.000 previstos) e outra na conta "Caixa Geral" (R$ 10.000 previstos). Ao lançar uma despesa de material, o campo Conta mostra só essas duas — nenhuma outra conta da OSC aparece, porque nenhuma outra tem rubrica prevista para essa categoria neste projeto.
+
+Se **nenhuma** conta tiver rubrica prevista para a categoria escolhida, a tela explica o motivo em vez de mostrar uma lista vazia sem contexto — e aponta o caminho: ajustar o orçamento do projeto (incluir a rubrica) ou trocar a categoria da despesa.
+
+> ✓ **Dica · Corrija o orçamento do projeto, não a categoria da despesa**
+>
+> Quando a conta que você esperava não aparece, o instinto é trocar a categoria da despesa até algo aparecer — não faça isso. Volte ao orçamento do projeto e verifique se a rubrica existe de fato: categoria errada na despesa é uma prestação de contas errada mais tarde, mesmo que o pagamento saia sem problema hoje.
+
+### Execução por fonte
+
+A aba Financeiro do projeto (com o controle ligado) mostra uma seção **Execução por fonte de recurso**: para cada conta e cada rubrica, o **previsto**, o **aplicado** (só despesas pagas) e o **restante** — mais o total por conta, útil para levar direto à prestação de contas de um financiador específico ("da Emenda 04/2024, R$ 100.000 previstos, R$ 62.000 aplicados, R$ 38.000 a aplicar").
+
+[![Execução por fonte de recurso](/assets/screenshots/manual-projetos-fonte-02-execucao.png)](/assets/screenshots/manual-projetos-fonte-02-execucao.png)
+*Execução por fonte — previsto, aplicado e restante, agrupados por conta*
+
+Se uma despesa foi paga numa combinação de conta e categoria **sem** rubrica prevista — o que só acontece se o controle foi ligado depois, ou se a rubrica foi removida depois do pagamento —, ela aparece sinalizada como **"gasto sem rubrica prevista"**, para você não perder o rastro dela na prestação de contas.
+
+### Pagamento acima do previsto: retenção, não recusa
+{: #pagamento-acima-do-previsto-retencao-nao-recusa }
+
+Quando o valor de uma despesa **ultrapassa** o previsto da rubrica (previsto + já aplicado + este pagamento passa do teto), o RIT360 Financeiro **não recusa o pagamento — ele fica retido**, aguardando uma decisão. O pedido ou o lançamento continua existindo normalmente; só o pagamento não se completa até alguém decidir.
+
+> 📖 **Conceito · Sem margem de tolerância**
+>
+> Diferente do excedente de **pedido de compra** (que tem um limiar de tolerância configurável — ver [Pedidos de Compra e Pagamento → Quando o valor pago diverge do autorizado](/modulos/pedidos-pagamento/#valor-diverge-do-autorizado)), aqui **qualquer valor acima do teto da rubrica** retém o pagamento, mesmo um centavo. A rubrica por fonte é o compromisso com o financiador — não há "quase dentro".
+
+O que acontece a seguir depende do **tipo da conta**:
+
+- **Conta comum** (soma no saldo disponível da organização): estourar a rubrica é decisão **interna**. Quem tem alçada de aprovação na organização vê o cartão de retenção e pode **autorizar a diferença**, informando o motivo — o mesmo mecanismo já usado para excedente de pedido de compra.
+- **Conta de recurso restrito** (convênio, emenda, fundo carimbado — não soma no saldo disponível): **não existe autorização interna**. Remanejar a rubrica de um convênio não é uma decisão que a OSC toma sozinha; depende de aditivo ou de anuência de quem repassou o recurso. O cartão de retenção não oferece o botão de autorizar — os caminhos são **corrigir a despesa** (categoria ou valor errados) ou **registrar o remanejamento** (ver abaixo), com o documento que o autoriza anexado ao projeto.
+
+[![Cartão de retenção de pagamento por estouro de rubrica](/assets/screenshots/manual-projetos-fonte-03-retencao.png)](/assets/screenshots/manual-projetos-fonte-03-retencao.png)
+*Pagamento retido — em conta comum, o aprovador autoriza a diferença; em conta de recurso restrito, o caminho é corrigir ou remanejar*
+
+> ⚠️ **Atenção · Pagamento retido nunca aparece como pago**
+>
+> Enquanto a retenção não é resolvida, o lançamento **não** muda de status — continua pendente ou atrasado, nunca "pago". Isso é de propósito: um pagamento retido que aparecesse como pago enganaria quem olha o saldo da conta e quem confere a prestação de contas. A lista de movimentações e o financeiro do projeto mostram o selo de retenção até a decisão ser tomada.
+
+**Exemplo:** a rubrica "Transporte" na conta "Emenda 04/2024" tem R$ 5.000 previstos, dos quais R$ 4.800 já foram aplicados. Chega uma nova despesa de R$ 400 — R$ 200 acima do que resta. Se a conta fosse comum, um aprovador poderia autorizar os R$ 200 de diferença. Como é conta de recurso restrito, o pagamento fica retido até a OSC corrigir a despesa (por exemplo, dividir entre duas contas, se a rubrica de outra fonte tiver espaço) ou registrar um remanejamento aprovado pelo financiador.
+
+### Registrar um remanejamento
+
+Um **remanejamento** é a forma de mudar, com base documentada, quanto uma rubrica pode receber — de uma conta e categoria de origem (opcional) para uma conta e categoria de destino. Ele exige:
+
+- um **documento que autoriza** a mudança, escolhido entre as **evidências já anexadas ao projeto** (o ofício, o aditivo, o e-mail de anuência do financiador — anexe-o primeiro na aba de evidências do projeto);
+- a **conta e a categoria de destino** (obrigatórias) e, se for mover de uma rubrica existente, a **conta e a categoria de origem** (opcionais — deixe em branco para registrar um aporte novo, sem "roubar" de outra rubrica);
+- o **valor remanejado**.
+
+Todo remanejamento registrado fica listado na aba Financeiro do projeto, com o valor, o de-para de conta e categoria, e o documento que o embasa — histórico útil tanto para a própria OSC quanto para uma eventual auditoria do financiador.
+
+> ⚠️ **Atenção · Sem evidência anexada, não há remanejamento**
+>
+> Se o projeto ainda não tem nenhuma evidência cadastrada, o formulário de remanejamento avisa e não deixa prosseguir. Anexe primeiro o documento (na aba de evidências do projeto) e volte — o remanejamento sem lastro documental perde o sentido: numa conta de recurso restrito, é exatamente esse documento que prova, depois, que a mudança foi autorizada por quem tinha autoridade para autorizar.
+
+> ✓ **Dica · Registrar remanejamento não paga a despesa retida sozinho**
+>
+> Depois de registrar o remanejamento, volte ao lançamento retido e complete o pagamento — o remanejamento amplia a rubrica, mas o pagamento em si precisa de uma ação separada para ser efetivado.
 
 ## A aba Relatório
 
@@ -301,7 +379,6 @@ Cada encerramento alimenta um **acervo de Lições Aprendidas** da OSC, acessív
 - **Tipo do projeto** — categoria que adapta a experiência: Evento, Obra, Campanha, Produto/Serviço, Programa ou "Começar do zero". Evento ganha calculadora de taxa e participantes; cada tipo (exceto "Começar do zero") tem marcos-modelo e riscos típicos sugeridos.
 - **Programa** — tipo de projeto para uma linha de atendimento ou serviço que se repete, com metas e público definido; ao contrário de Evento (data marcada) ou Obra (entrega física), não tem um único marco de conclusão — tem um período, que pode ser longo.
 - **Ciclo de vida** — a sequência de status do projeto (Em planejamento → Aguardando aprovação → Em execução → Aguardando encerramento → Concluído; além de Pausado e Cancelado).
-- **Financiamento do projeto** — declaração de como o projeto é sustentado: "custeado pelo caixa geral" (só despesas no Financeiro) ou "tem receita própria" — captada para aquele projeto específico, não o dinheiro geral da OSC (receitas e despesas). Editável na criação e depois.
 - **Coordenador do projeto** — papel no projeto que conduz o planejamento, as tarefas e as solicitações financeiras.
 - **Ex-membro da organização** — pessoa que saiu da OSC e permanece na equipe do projeto apenas como registro histórico: não recebe novas atribuições e não pode ser editada nem removida da equipe.
 - **Desativado** — pessoa que continua vinculada à OSC, mas com o acesso suspenso. Aparece na equipe com esse selo; volta a atuar assim que o acesso é reativado.
@@ -312,11 +389,16 @@ Cada encerramento alimenta um **acervo de Lições Aprendidas** da OSC, acessív
 - **Evidência** — anexo que comprova algo feito no projeto.
 - **Taxa de inscrição** — valor cobrado dos pagantes de um evento, calculado pela calculadora de taxa.
 - **Relatório de encerramento** — documento consolidado gerado ao finalizar o projeto, exportável em PDF.
+- **Rubrica** — linha do orçamento do projeto que, com o controle por fonte ligado, amarra conta + categoria + valor (ou "sem teto"). Sem o controle ligado, a linha é só categoria + valor.
+- **Controle por fonte de recurso** — interruptor por projeto, desligado por padrão, que restringe cada despesa a sair de uma conta com rubrica prevista para a categoria.
+- **Conta de recurso restrito** — conta que não soma no saldo disponível da organização (convênio, emenda, fundo carimbado). Estourar rubrica nela nunca tem autorização interna.
+- **Retenção de pagamento** — quando o valor ultrapassa o previsto de uma rubrica, o pagamento não se completa até alguém decidir; o lançamento nunca aparece como pago enquanto retido.
+- **Remanejamento** — mudança autorizada e documentada de quanto uma rubrica pode receber, registrada com o documento (evidência do projeto) que a embasa.
 
 ## Por onde seguir
 
-- **Movimentações** — onde os lançamentos vivem; o financeiro do projeto se apoia neles.
-- **Reembolsos** e **Pedidos de Compra e Pagamento** — os fluxos que o botão "Registrar despesa do projeto" aciona.
+- **Movimentações** — onde os lançamentos vivem; o financeiro do projeto se apoia neles. Ver [Conta elegível por rubrica](/modulos/movimentacoes/#conta-elegivel-por-rubrica).
+- **Reembolsos** e **Pedidos de Compra e Pagamento** — os fluxos que o botão "Registrar despesa do projeto" aciona. Ver [Pagamento retido por orçamento do projeto](/modulos/pedidos-pagamento/#retencao-por-orcamento-do-projeto).
 - **Relatórios** — agora com filtro por projeto.
 - **Painel** — onde a saúde de todos os projetos aparece de relance.
 - **Papéis e Permissões** — para entender o papel de Coordenador de Projeto na OSC.

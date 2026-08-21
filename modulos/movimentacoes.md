@@ -190,6 +190,10 @@ Cada linha tem ícones de ação que mudam conforme o status:
 >
 > **Marcar como pago** exige a permissão de **pagar**, que é separada da de criar e editar. Quem registra lançamentos mas não tem essa permissão simplesmente **não vê** a ação de marcar como pago — nem na linha, nem no detalhe, nem na seleção em lote, nem na conciliação de extrato. Isso permite que uma pessoa organize as contas a pagar e outra confirme a saída do dinheiro. Quem ajusta isso é o Presidente, em [Cargos e permissões](/configuracoes/cargos/#permissao-pagar); por padrão, quem já podia pagar continua podendo.
 
+> ⚠️ **Atenção · Um lançamento de projeto pode ficar retido ao marcar como pago**
+>
+> Num projeto com controle por fonte ligado, marcar como pago um valor que passa da rubrica prevista **não paga** — o pagamento fica retido, esperando decisão (autorização, em conta comum; correção ou remanejamento, em conta de recurso restrito). O lançamento mostra o selo de retenção em vez de virar "Pago". Ver [Projetos → Pagamento acima do previsto: retenção, não recusa](/modulos/projetos/#pagamento-acima-do-previsto-retencao-nao-recusa).
+
 ### Seleção em lote
 
 Marque o checkbox no início das linhas para selecionar várias movimentações. A barra de ações em lote aparece no rodapé com as opções **Marcar como pago** (para quem tem permissão de pagar) e **Excluir**.
@@ -257,6 +261,13 @@ Clique em **+ Novo lançamento** no topo da lista. O formulário abre em **pági
 - **Valor total**
 - **Conta** — qual conta financeira movimenta. Já vem **pré-selecionada com a [conta padrão](/configuracoes/contas/#conta-padrão)** da OSC; troque se for outra
 - **Categoria** — não pedida para Transferências (porque transferência é só mudança de lugar)
+
+#### Conta elegível por rubrica
+{: #conta-elegivel-por-rubrica }
+
+> 📖 **Conceito**
+>
+> Se você escolher um **Projeto** que tenha o **controle por fonte de recurso** ligado (ver [Projetos → Orçamento por fonte de recurso](/modulos/projetos/#orcamento-por-fonte-de-recurso)), o campo **Conta** passa a mostrar só as contas com **rubrica prevista** para a categoria escolhida — as demais somem da lista. É assim que o sistema garante que uma despesa de um convênio, por exemplo, não saia sem querer do caixa geral. Isso vale para **novo lançamento**, **edição**, **baixa (marcar como pago)** e **pagamento de pedido de compra e pagamento**. Se nenhuma conta tiver rubrica prevista, a tela explica o motivo em vez de mostrar a lista vazia. Projetos sem o controle ligado (a maioria) não têm essa restrição — todas as contas ativas aparecem normalmente.
 
 **Campos opcionais:**
 
@@ -655,6 +666,8 @@ Você **não depende do e-mail** para chegar a uma prestação de contas: todo d
 - **Regime de caixa** — modelo contábil em que o que vale é a data de entrada/saída do dinheiro, não a data do contrato.
 - **Realizado** — o que já foi efetivamente pago ou recebido; o dinheiro mexeu na conta.
 - **Previsto** — o que está pendente ou atrasado; ainda vai acontecer.
+- **Rubrica** — no orçamento de um projeto com controle por fonte, a linha que amarra conta + categoria + valor previsto. Ver [Projetos → Orçamento por fonte de recurso](/modulos/projetos/#orcamento-por-fonte-de-recurso).
+- **Pagamento retido** — pagamento que não se completa porque passa da rubrica prevista de um projeto; o lançamento não vira "Pago" até alguém decidir.
 - **Líquido** — a posição consolidada da OSC: tudo o que ela tem (ativos) menos tudo o que ela deve (passivos).
 
 ## Por onde seguir

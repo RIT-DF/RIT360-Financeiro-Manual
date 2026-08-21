@@ -289,6 +289,18 @@ Todo projeto no RIT360 Financeiro precisa de uma data de início e de fim — in
 
 São independentes. Seu **papel na OSC** (Presidente, Tesoureiro, Voluntário...) define o acesso geral. Seu **papel no projeto** (Coordenador, integrante, observador) define o que você faz **dentro daquele projeto** — um voluntário pode ser coordenador de um projeto específico, e um tesoureiro pode ser só integrante de outro.
 
+### Por que não consigo ligar o controle por fonte no meu projeto?
+
+O interruptor só liga quando **toda rubrica do orçamento tem uma conta definida** — a tela mostra quantas ainda faltam completar (ou pede para detalhar o orçamento por rubrica, se ele ainda estiver vazio). É de propósito: ligar o controle com alguma categoria "solta", sem conta associada, deixaria uma brecha exatamente onde o recurso mais precisa de rastreio. Complete a conta de cada linha do orçamento do projeto e tente de novo. Ver [Projetos → Orçamento por fonte de recurso](/modulos/projetos/#orcamento-por-fonte-de-recurso).
+
+### Meu pagamento ficou retido por causa do orçamento do projeto. E agora?
+
+Depende do tipo da conta. Se é uma **conta comum** da organização, quem tem alçada de aprovação vê o botão **Autorizar a diferença** no cartão de retenção, com um motivo obrigatório — e o pagamento se completa depois disso. Se é uma **conta de recurso restrito** (convênio, emenda, fundo carimbado), não existe autorização interna: **corrija a despesa** (categoria ou valor errados) ou **registre um remanejamento** no projeto, anexando o documento que autoriza a mudança (ofício, aditivo, anuência do financiador). Enquanto a retenção não é resolvida, o lançamento não vira "Pago". Ver [Projetos → Pagamento acima do previsto: retenção, não recusa](/modulos/projetos/#pagamento-acima-do-previsto-retencao-nao-recusa).
+
+### Preciso usar o controle por fonte na minha OSC?
+
+Não. É um recurso **opcional**, pensado para quem administra recurso carimbado a um financiador específico (convênio, emenda, termo de fomento) e precisa provar, na prestação de contas, que cada gasto saiu da fonte certa. Se a sua OSC trabalha só com o caixa geral, o orçamento do projeto continua funcionando exatamente como antes — por categoria e valor, sem conta associada, sem nenhuma trava na hora de pagar.
+
 ## Estornos
 
 ### Quando devo estornar e quando cancelar?

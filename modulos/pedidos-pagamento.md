@@ -190,6 +190,18 @@ O valor **autorizado** na aprovação fica guardado separado do valor **efetivam
 >
 > O valor estimado dá agilidade para autorizar uma compra antes do preço fechado — mas sem limite, a aprovação original perderia o sentido: qualquer coisa poderia ser aprovada por um valor e paga por outro bem maior, sem ninguém revisar. O limiar é o equilíbrio: pequena variação (frete, arredondamento) passa direto; diferença grande volta para quem autorizou decidir se topa.
 
+### Pagamento retido por orçamento do projeto
+{: #retencao-por-orcamento-do-projeto }
+
+Quando o pedido está vinculado a um **projeto com controle por fonte de recurso ligado** (ver [Projetos → Orçamento por fonte de recurso](/modulos/projetos/#orcamento-por-fonte-de-recurso)), o pagamento passa por uma segunda checagem, independente da checagem de valor autorizado acima: o valor não pode passar do **previsto da rubrica** (a conta + categoria daquela despesa, dentro do projeto). Estourando, o **pagamento fica retido** — o pedido continua aprovado.
+
+O cartão de retenção que aparece no pedido explica o motivo e mostra o previsto, o já aplicado, este pagamento e a diferença. O que fazer a seguir depende do tipo da conta:
+
+- **Conta comum** — quem tem alçada de aprovação vê o botão **Autorizar a diferença**.
+- **Conta de recurso restrito** (convênio, emenda, fundo carimbado) — não há autorização interna. É preciso corrigir a despesa ou registrar um remanejamento no projeto, com o documento que o autoriza.
+
+Os dois cartões de retenção — o de valor acima do autorizado (acima) e o de rubrica do projeto — são **independentes**: um pedido pode ter os dois pendentes ao mesmo tempo, cada um com a sua decisão própria. Detalhe completo do conceito, com exemplo, em [Projetos → Pagamento acima do previsto: retenção, não recusa](/modulos/projetos/#pagamento-acima-do-previsto-retencao-nao-recusa).
+
 ### Corrigir o centro de custo depois do envio
 
 Se o pedido já foi enviado — inclusive **aprovado** ou até **pago** — e o centro de custo ficou errado, quem faz a gestão financeira da OSC pode corrigir sem precisar reabrir ou cancelar nada. No detalhe do pedido, ao lado do campo **Centro de custo**, clique em **Corrigir**.
