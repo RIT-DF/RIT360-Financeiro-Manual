@@ -11,6 +11,12 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.53.0] — 2026-08-21
+
+### Adicionado
+
+- **Contas de recurso carimbado (convênio, emenda, fundo restrito) agora podem ficar de fora do saldo disponível da organização.** A opção fica no cadastro da conta e vem ligada por padrão. Quando alguma conta é desmarcada, o total consolidado avisa quanto ficou de fora — e o saldo da conta, os lançamentos, a conciliação e os relatórios continuam iguais.
+
 ## [1.52.0] — 2026-08-21
 
 ### Adicionado
