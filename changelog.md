@@ -11,6 +11,35 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.46.0] — 2026-08-20
+
+### Modificado
+
+- **Cada organização passa a escolher, por cargo, quem pode solicitar pedido de pagamento.** Antes a escolha era limitada a dois cargos e não alcançava cargos criados pela própria organização. Agora a permissão é concedida no editor de cargos e vale para qualquer cargo — inclusive Diretor, Coordenador ou cargos próprios da organização. Presidente e Tesoureiro continuam podendo solicitar em todas as organizações. A Comissão Fiscal não solicita.
+
+### Corrigido
+
+- **Organizações que ainda não tinham essa configuração deixavam de ter qualquer pessoa autorizada a solicitar pedido de pagamento.** Isso foi corrigido.
+
+---
+
+## [1.45.1] — 2026-08-20
+
+### Modificado
+
+- **Quem pode escrever a nota explicativa da prestação de contas passou a ser definido por cargo.** Antes estava fixo em Presidente e Tesoureiro; agora a organização concede essa permissão no editor de cargos, inclusive a cargos que ela mesma criou. Quem já escrevia continua escrevendo. A Comissão Fiscal segue emitindo o relatório e lendo a nota, sem redigir.
+
+---
+
+## [1.45.0] — 2026-08-20
+
+### Adicionado
+
+- **A prestação de contas ganhou uma nota explicativa.** Quem emite o relatório passa a poder escrever um texto livre de observações sobre aquele período, sem precisar anexar arquivo nenhum. O texto é recuperado e pode ser editado ao gerar o relatório do mesmo período de novo, e aparece no PDF numa seção própria, chamada "Notas Explicativas".
+- **Agora também dá para emitir a prestação de contas pela tela de Relatórios**, escolhendo um período novo. Antes só era possível pelo menu Exportar da tela de Movimentações — esse caminho continua funcionando. Os documentos complementares, que já existiam, seguem iguais.
+
+---
+
 ## [1.44.1] — 2026-08-17
 
 ### Adicionado
