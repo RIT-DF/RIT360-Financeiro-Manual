@@ -553,6 +553,40 @@ Se sua OSC tem loja online em WooCommerce (venda de produtos, doações online, 
 
 Mais detalhes na seção de configurações.
 
+> 📖 **Conceito · O valor do pedido é rateado entre as categorias dos produtos**
+>
+> Um pedido com produtos de categorias financeiras diferentes não lança tudo numa categoria só. O RIT360 Financeiro divide o valor entre as categorias dos produtos comprados, e rateia frete e desconto proporcionalmente entre elas — a mesma divisão por categorias que você já pode fazer à mão ao [editar um lançamento](#editar-um-lançamento). Antes, o pedido inteiro caía na categoria de um único produto do pedido; a divisão de hoje reflete melhor o que de fato foi vendido.
+
+#### Reprocessar categorias de lançamentos já importados
+{: #reprocessar-categorias-woocommerce }
+
+[![Reprocessamento de categorias do WooCommerce — resultado do ensaio a seco antes de aplicar](/assets/screenshots/manual-importar-woocommerce-reprocessar-ensaio.png)](/assets/screenshots/manual-importar-woocommerce-reprocessar-ensaio.png)
+*Importar Lançamentos → aba WooCommerce — bloco de reprocessamento, com o ensaio a seco mostrando o antes → depois*
+
+Mudou o [mapeamento de categorias do WooCommerce](/configuracoes/organizacao/#mapeamento-manual-de-categorias-tem-ordem) ou reorganizou as categorias da própria loja? Os pedidos **já importados** não se atualizam sozinhos — ficam com a categoria que valia no momento em que entraram. O bloco **Reprocessar categorias**, na aba **WooCommerce**, recalcula a divisão por categorias desses lançamentos, num período que você escolhe, sem precisar apagar e reimportar nada.
+
+**Exige a permissão *Criar / editar*, em Movimentações** (a mesma de [Cargos e permissões](/configuracoes/cargos/)) — quem só visualiza movimentações não vê a opção habilitada.
+
+O fluxo tem duas etapas, e a segunda só aparece depois da primeira:
+
+1. **Ensaio a seco** — escolha o período (ex.: 01/06/2026 a 30/06/2026) e simule. O RIT360 Financeiro mostra, **sem gravar nada**, quantos lançamentos mudariam de categoria e o antes → depois de cada um.
+2. **Aplicar** — só depois de conferir o resultado do ensaio, um botão separado grava a reclassificação de fato. Sem esse segundo passo, nada é alterado.
+
+> ⚠️ **Atenção · O reprocessamento usa a categoria de HOJE dos produtos na loja — não a de quando a compra foi feita**
+>
+> Se a sua OSC reorganizou as categorias da loja depois de vender aqueles produtos — moveu "Camisetas" para dentro de "Merchandising", por exemplo —, o reprocessamento aplica essa organização **atual** a compras antigas. O lançamento pode migrar para uma categoria financeira diferente da que fazia sentido na época da venda.
+>
+> Isso pesa mais ainda num **período que já virou prestação de contas entregue**: reprocessar um mês já fechado e já relatado ao financiador pode mudar o total de uma categoria financeira depois da entrega. Antes de reprocessar um período assim, pondere se vale a pena — e, se valer, avise quem for comparar com o relatório já entregue.
+
+> ✓ **Dica · Use o ensaio a seco para decidir, não só para conferir**
+>
+> Simulação com poucos lançamentos mudando, todos para onde você esperava? Aplique tranquilo. Lançamento migrando para uma categoria que não faz sentido? É sinal de produto que trocou de categoria na loja por engano, ou de [mapeamento mal ordenado](/configuracoes/organizacao/#mapeamento-manual-de-categorias-tem-ordem) — corrija primeiro e simule de novo antes de aplicar.
+
+**Quando dá errado:**
+
+- **Bloco ou botão aparece desabilitado** — confira com quem administra a organização se o seu cargo tem a permissão *Criar / editar* em Movimentações.
+- **Ensaio não mostra nenhum lançamento mudando** — ou o período não tem lançamentos vindos do WooCommerce, ou a categoria já está correta para todos eles. Não é erro.
+
 ### Aba Histórico {#aba-historico}
 
 A terceira aba da tela de importação lista **todas as importações já feitas** na sua OSC — de CSV e de WooCommerce juntas — com:

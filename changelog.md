@@ -11,6 +11,45 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.59.3] — 2026-08-21
+
+### Modificado
+
+- **O campo de competência agora avisa, onde é preenchido e onde é exibido, que serve apenas como informação** — o período dos relatórios continua sendo definido pela data de pagamento.
+- **Na integração com o WooCommerce (configuração manual), o botão que busca as categorias da loja passou para antes da tabela de mapeamento**, com orientação de que a busca vem primeiro e o mapeamento depois.
+
+## [1.59.2] — 2026-08-21
+
+### Corrigido
+
+- **A importação de categorias financeiras e centros de custo não corta mais texto entre aspas que contém ponto e vírgula.** Um valor como "CNPJ filial; consolida no balanço" antes entrava pela metade, em silêncio. Linhas com mais colunas que o cabeçalho agora aparecem na prévia como recusadas, com o motivo, em vez de perderem texto sem aviso.
+
+## [1.59.1] — 2026-08-21
+
+### Corrigido
+
+- **O campo `realized` da API externa de resumo financeiro passou a trazer somente o que foi efetivamente pago**, coincidindo com o realizado da prestação de contas do mesmo período. Antes incluía lançamentos previstos (pendentes e atrasados), contrariando o próprio nome. O valor devolvido pode ficar menor que antes. A especificação em `openapi/` foi atualizada (versão 1.1.0 da spec).
+
+## [1.59.0] — 2026-08-21
+
+### Modificado
+
+- **O saldo das contas passou a considerar os estornos do mesmo jeito que o extrato bancário**: quando o dinheiro sai e depois volta, as duas movimentações aparecem, cada uma na sua data. Contas com estorno podem exibir saldo diferente do anterior.
+- **Transferências entre contas da própria organização deixaram de ser contadas como valor realizado** — continuam afetando o saldo das contas.
+
+## [1.58.0] — 2026-08-21
+
+### Corrigido
+
+- **A importação de pedidos da loja passa a dividir o valor entre as categorias financeiras de cada produto do pedido, em vez de jogar o total inteiro na categoria do primeiro produto.** Frete, desconto e taxas são rateados proporcionalmente entre as categorias, e a soma sempre fecha com o total do pedido. Quando o pedido tem produtos de mais de uma categoria, o lançamento agora nasce dividido — do mesmo jeito que já é possível dividir um lançamento à mão.
+- **A ordem em que a loja devolve as categorias de um produto deixou de decidir qual categoria vale.** No mapeamento manual, quem decide é a ordem das linhas na tela de configuração (que ganhou setas para subir e descer); no automático, o desempate passou a ser alfabético.
+
+### Adicionado
+
+- **Nova opção para reprocessar lançamentos já importados da loja**, na tela de importação de Movimentações. Antes de aplicar, mostra o que mudaria em cada lançamento, sem gravar nada — só depois de conferir é que se confirma. Exige permissão de gerenciar lançamentos.
+
+> ⚠️ O reprocessamento reclassifica pelas categorias que os produtos têm **hoje** na loja, que podem não ser as mesmas da época da compra. Se o período já entrou em prestação de contas, reprocesse com essa ressalva em mente.
+
 ## [1.57.0] — 2026-08-21
 
 ### Modificado

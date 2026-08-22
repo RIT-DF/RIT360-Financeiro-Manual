@@ -80,6 +80,30 @@ Sincroniza pedidos pagos da sua loja online (WooCommerce) como receitas no RIT36
 
 Configure URL da loja, Consumer Key e Consumer Secret (com instruções passo a passo de como gerar no admin do WooCommerce), frequência da sincronização, modo de mapeamento de categorias (automático com categoria-mãe ou manual explícito), conta financeira destino, data de corte para backfill.
 
+#### Mapeamento manual de categorias tem ordem
+{: #mapeamento-manual-de-categorias-tem-ordem }
+
+[![Mapeamento manual do WooCommerce, com setas de subir e descer em cada linha](/assets/screenshots/config-organizacao-woocommerce-mapeamento.png)](/assets/screenshots/config-organizacao-woocommerce-mapeamento.png)
+*Configurações → Organização → WooCommerce — mapeamento manual de categorias, com as setas de reordenar em cada linha*
+
+No **modo manual**, a tela de mapeamento lista uma linha por categoria da loja, cada uma apontando para uma categoria financeira do RIT360 Financeiro. Cada linha tem setas para **subir** e **descer** — e a ordem não é só visual: ela decide o desempate quando um produto da loja está em **mais de uma** categoria mapeada ao mesmo tempo.
+
+> 📖 **Conceito · Por que precisa de desempate**
+>
+> Um produto do WooCommerce pode estar em mais de uma categoria da loja ao mesmo tempo (ex.: "Camisetas" e "Promoção de aniversário"). Se as duas estiverem mapeadas para categorias financeiras diferentes, o RIT360 Financeiro precisa escolher uma só para lançar o valor daquele item — não existe rateio dentro do mesmo produto, só entre produtos diferentes do mesmo pedido (veja o rateio por produto no [manual de Movimentações](/modulos/movimentacoes/#importar-lançamentos)). A ordem da lista de mapeamento é esse critério de desempate: **vale a primeira linha que casar com alguma categoria do produto.**
+
+*Exemplo:* a "Camiseta Institucional" está nas categorias de loja "Camisetas" e "Promoção de aniversário". Se "Promoção de aniversário → Doações" estiver **acima** de "Camisetas → Venda de produtos" na lista, todo pedido dessa camiseta lança em **Doações** — enquanto o produto continuar marcado nas duas categorias na loja.
+
+> ✓ **Dica · Deixe o mapeamento mais específico no topo**
+>
+> Categoria de promoção, campanha ou evento — algo que um produto ganha temporariamente — costuma ser mais específica que a categoria "de prateleira" (Camisetas, Acessórios). Deixá-la no topo garante que ela vença o desempate enquanto durar.
+
+> ⚠️ **Atenção · Reordenar afeta só as próximas sincronizações**
+>
+> Mudar a ordem do mapeamento não reprocessa nada sozinho — vale para os pedidos que **ainda vão** ser importados. Para aplicar a nova ordem a lançamentos que já entraram no RIT360 Financeiro, use o [reprocessamento de categorias](/modulos/movimentacoes/#reprocessar-categorias-woocommerce), na tela de importação.
+
+No **modo automático** (categoria-mãe) não existe essa tela de mapeamento manual — e por isso não há ordem para configurar. O desempate, quando acontece, segue um critério fixo do sistema, não editável. Quem precisa decidir explicitamente qual categoria vence usa o **modo manual**.
+
 ### Google Drive *(em implantação)*
 
 Armazenamento de documentos da OSC no Google Drive da organização. Anexos de movimentações, reembolsos e pedidos serão sincronizados automaticamente.
