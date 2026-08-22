@@ -1,6 +1,29 @@
 {
   "versoes": [
     {
+      "versao": "1.62.0",
+      "data": "2026-08-22",
+      "destaque": true,
+      "resumo": "Agora existe uma única forma de corrigir um lançamento já pago — incluindo, quando necessário, a conta bancária."
+    },
+    {
+      "versao": "1.61.0",
+      "data": "2026-08-22",
+      "destaque": true,
+      "resumo": "A prestação de contas ganhou um texto de abertura padronizado e um código de verificação que qualquer pessoa pode conferir sem login."
+    },
+    {
+      "versao": "1.60.1",
+      "data": "2026-08-22",
+      "destaque": false
+    },
+    {
+      "versao": "1.60.0",
+      "data": "2026-08-22",
+      "destaque": true,
+      "resumo": "Agora dá para ver quais lançamentos já foram conferidos com o extrato, conciliar manualmente e corrigir a categoria de um pagamento já registrado."
+    },
+    {
       "versao": "1.59.3",
       "data": "2026-08-21",
       "destaque": false

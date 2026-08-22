@@ -22,7 +22,7 @@ Toda OSC, uma hora ou outra, se depara com aquela pergunta incômoda: **"por que
 
 > 📖 **Conceito · Conciliação pelo saldo vs. pelo extrato**
 >
-> O RIT360 Financeiro oferece **dois jeitos** de conferir uma conta contra o banco. O **[Conciliar extrato](/modulos/movimentacoes/)** parte de um **arquivo OFX** (baixado do internet banking) e casa cada linha do extrato com os lançamentos do sistema — é o mais completo. O **Caça-diferenças** parte só do **saldo final** que você lê na tela do banco, **sem precisar de arquivo nenhum** — é a conferência rápida "pelo número". Use um ou outro conforme o que você tem em mãos; os dois levam ao mesmo lugar: sua conta batendo com o banco.
+> O RIT360 Financeiro oferece mais de um jeito de conferir uma conta contra o banco. O **[Conciliar extrato](/modulos/movimentacoes/#conciliacao-bancaria-ofx)** parte de um **arquivo OFX** (baixado do internet banking) e casa cada linha do extrato com os lançamentos do sistema — é o mais completo, e marca cada lançamento individualmente na coluna **Conferido**. Quem confere o extrato na tela do banco, sem baixar arquivo, pode marcar o mesmo lançamento como conferido pela **[conciliação manual](/modulos/movimentacoes/#conciliacao-manual)**. Já o **Caça-diferenças** parte só do **saldo final** que você lê na tela do banco, **sem precisar de arquivo nenhum** — é a conferência rápida "pelo número", pela conta inteira, não lançamento a lançamento. Use o que couber ao que você tem em mãos; todos levam ao mesmo lugar: sua conta batendo com o banco.
 
 ## Como abrir
 

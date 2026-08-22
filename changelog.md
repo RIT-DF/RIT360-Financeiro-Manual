@@ -11,6 +11,47 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.62.0] — 2026-08-22
+
+<!-- destaque: Agora existe uma única forma de corrigir um lançamento já pago — incluindo, quando necessário, a conta bancária. -->
+
+### Adicionado
+
+- **Correção de lançamento pago em um só lugar**: o botão "Corrigir dados" passa a cobrir também a conta bancária, além de data de pagamento, categoria, centro de custo, projeto, descrição e favorecido — sempre com justificativa obrigatória e registro em auditoria. Valor não é corrigível (estorne e lance de novo); transferência continua fora. Trocar a conta desfaz a conferência com o extrato daquele lançamento, que volta a poder ser conciliado.
+
+### Modificado
+
+- A coluna "Extrato" da lista de movimentações passou a se chamar **"Conferido"**.
+
+## [1.61.0] — 2026-08-22
+
+<!-- destaque: A prestação de contas ganhou um texto de abertura padronizado e um código de verificação que qualquer pessoa pode conferir sem login. -->
+
+### Adicionado
+
+- **Texto institucional de abertura**: a organização cadastra, nas configurações, um texto padronizado de apresentação (quem é a organização, moeda, base de elaboração) que passa a abrir as notas explicativas da prestação de contas em toda emissão, sem precisar redigitar. Pode ser ajustado na hora da emissão sem alterar o texto guardado nas configurações.
+- **Verificação de autenticidade**: a prestação de contas passa a levar um código digitável e um QR Code. Quem recebe o documento confere, numa página pública sem login, a organização, o período, a data de emissão e a situação do documento — sem valores e sem baixar o PDF.
+
+## [1.60.1] — 2026-08-22
+
+### Corrigido
+
+- Correção técnica interna, sem efeito no uso do sistema.
+
+## [1.60.0] — 2026-08-22
+
+<!-- destaque: Agora dá para ver quais lançamentos já foram conferidos com o extrato, conciliar manualmente e corrigir a categoria de um pagamento já registrado. -->
+
+### Adicionado
+
+- **Conciliação bancária visível**: coluna "Extrato" na lista de movimentações, com selo para o lançamento já conferido com o extrato. O detalhe do lançamento mostra se foi conciliado, quando e como (importação de extrato ou marcação manual, com quem marcou). Filtro por conciliado / não conciliado, e a informação também nas exportações em PDF e Excel.
+- **Conciliação manual, individual e em lote**: quem tem a permissão "Criar / editar" pode marcar lançamentos que movimentaram dinheiro como conciliados, um a um ou vários de uma vez pela lista. Desfazer só é possível para marcação manual — a que veio da importação de extrato não é desfeita por aqui.
+- **Correção de lançamento já pago**: quem tem a permissão "Criar / editar" agora pode corrigir data de pagamento, categoria, centro de custo, projeto, descrição e favorecido de um pagamento já registrado, com justificativa obrigatória e registro em auditoria. Valor e conta bancária continuam não editáveis — para esses casos, o caminho é estornar e relançar. Antes de confirmar, a tela avisa se o lançamento está no período de uma prestação de contas já emitida e se já foi conferido com o extrato.
+
+### Corrigido
+
+- O cabeçalho da coluna Valor, na lista de movimentações, estava alinhado à esquerda enquanto os números ficavam à direita. Corrigido no componente de cabeçalho compartilhado.
+
 ## [1.59.3] — 2026-08-21
 
 ### Modificado

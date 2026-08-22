@@ -95,7 +95,7 @@ O mesmo critério vale no **Painel** e nos **Relatórios** — a leitura é a me
 [![Lista de movimentações](/assets/screenshots/manual-02-movimentacoes-lista.png)](/assets/screenshots/manual-02-movimentacoes-lista.png)
 *A tela de Movimentações: resumo compacto no topo, busca e filtros na mesma linha, e os lançamentos ocupando o espaço principal*
 
-A lista mostra todas as movimentações com as colunas **Vencimento**, **Pagamento**, **Lançamento** (descrição e contraparte), **Conta**, **Categoria**, **Status** e **Valor**.
+A lista mostra todas as movimentações com as colunas **Vencimento**, **Pagamento**, **Lançamento** (descrição e contraparte), **Conta**, **Categoria**, **Status**, **Valor** e **Conferido** — esta última mostra se o lançamento já foi conferido com o banco (ver **Coluna Conferido**, logo abaixo).
 
 No **celular** ou em telas estreitas (abaixo de 1024 px de largura), a tabela vira uma **lista de cards** com a mesma informação organizada verticalmente — descrição em destaque, valor colorido, data, contraparte, conta, categoria, status e menu de ações:
 
@@ -135,6 +135,7 @@ No lugar das antigas abas por tipo, a lista agora tem **filtros por marcadores (
 - **Status**
 - **Projeto**
 - **Centro de custo**
+- **Conciliado** (conciliado / não conciliado) — ver **Coluna Conferido**, abaixo
 
 Em cada um desses filtros você escolhe **vários valores** de uma vez e ainda decide se quer **incluir** apenas os selecionados ou **excluir** ("mostrar tudo, exceto…"). Some-se a isso uma **busca livre** por texto, que procura na descrição, no beneficiário, na conta, na categoria, no valor e na data.
 
@@ -168,6 +169,26 @@ Ao lado do título de cada movimentação, badges contam mais sobre a origem e a
 
 Na coluna **Valor**, um ícone de clipe 📎 ao lado do número avisa que o lançamento **tem documento anexado** — sem precisar abrir o detalhe para saber. Vale para qualquer origem: anexo feito à mão, comprovante trazido de uma importação, ou o comprovante de um reembolso/pedido de compra e pagamento aprovado (ver **Anexos e comprovantes**, abaixo).
 
+### Coluna Conferido — se o lançamento já foi conferido com o banco
+{: #coluna-conferido }
+
+Entre **Valor** e **Ações**, a coluna **Conferido** mostra um selo ✓ para todo lançamento já conferido com o extrato bancário — seja porque veio de uma **[conciliação por OFX](#conciliacao-bancaria-ofx)**, seja porque alguém marcou **[manualmente](#conciliacao-manual)**. Linha não conciliada fica vazia ali; não é erro, é o normal para quem ainda não conferiu aquele lançamento.
+
+[![Coluna Conferido na lista de movimentações](/assets/screenshots/mov-coluna-extrato.png)](/assets/screenshots/mov-coluna-extrato.png)
+*A coluna Conferido, entre Valor e Ações: selo para o lançamento já conferido com o banco*
+
+> 📖 **Conceito · Conciliado e pago são coisas diferentes**
+>
+> **Pago** é o que o RIT360 Financeiro afirma — alguém marcou o lançamento como pago, com ou sem conferir o extrato. **Conciliado** é o que o **banco confirma** — aquele valor de fato apareceu no extrato bancário, batendo com o lançamento. Um lançamento pode estar pago há semanas e ainda não conciliado (ninguém cruzou com o extrato ainda); é raro, mas também é possível ele nunca ficar conciliado, se sua OSC não confere pelo extrato. A coluna Conferido existe para separar as duas perguntas: "o sistema diz que saiu?" (Status) e "o banco confirma que saiu?" (Conferido).
+
+> 💡 **Por que isso importa**
+>
+> Sem essa coluna, a única forma de saber se um lançamento realmente bateu com o banco era abrir o detalhe um a um. Agora a conferência é visual: percorra a lista do mês e veja de relance quais linhas ainda não têm o selo — são as que faltam checar contra o extrato antes de fechar o mês com confiança.
+
+Abrindo o **detalhe** de um lançamento conciliado, um bloco mostra **quando** ele foi conferido e **como** — se veio da importação de um extrato OFX, ou de marcação manual (e, nesse caso, quem marcou).
+
+O filtro por **Conciliado / Não conciliado** (ver **Filtros combináveis por marcadores**, acima) deixa isolar de uma vez só o que ainda falta conferir, e a informação sai também nas exportações em **PDF** e **Excel** — ver **Exportação**, abaixo.
+
 ### Ordenação
 
 Clique no cabeçalho de qualquer coluna para ordenar. Um segundo clique inverte a ordem; um terceiro remove a ordenação.
@@ -180,6 +201,7 @@ Cada linha tem ícones de ação que mudam conforme o status:
 - 💲 **Marcar como pago** — disponível para pendentes e atrasadas (atalho rápido sem entrar no detalhe), **para quem tem permissão de pagar**
 - ✕ **Cancelar** — disponível para pendentes e atrasadas
 - ↩ **Estornar** — disponível para pagas
+- ✓ **Marcar/desmarcar como conciliado** — disponível para pagas, **para quem tem permissão de Criar / editar** (ver **[Conciliação manual](#conciliacao-manual)**, abaixo)
 - 🗑 **Excluir** — disponível apenas para canceladas (estornos são preservados e **não** podem ser excluídos)
 
 > ⚠️ **Atenção · Cancelar não é a mesma coisa que excluir**
@@ -196,7 +218,7 @@ Cada linha tem ícones de ação que mudam conforme o status:
 
 ### Seleção em lote
 
-Marque o checkbox no início das linhas para selecionar várias movimentações. A barra de ações em lote aparece no rodapé com as opções **Marcar como pago** (para quem tem permissão de pagar) e **Excluir**.
+Marque o checkbox no início das linhas para selecionar várias movimentações. A barra de ações em lote aparece no rodapé com as opções **Marcar como pago** (para quem tem permissão de pagar), **Marcar como conciliado** (para quem tem a permissão Criar / editar — ver **[Conciliação manual](#conciliacao-manual)**, abaixo) e **Excluir**.
 
 #### Baixa em lote com lançamentos de projetos diferentes
 {: #baixa-em-lote-projetos-diferentes }
@@ -235,7 +257,7 @@ As exportações são **fiéis ao que está na tela**: refletem exatamente os fi
 - **Excel** — planilha para análises customizadas
 - **Prestação de contas** — o documento contábil completo do período, em regime de caixa, com os comprovantes anexados (ver a seção **Prestação de contas** abaixo)
 
-Ao escolher **PDF** ou **Excel**, antes de gerar o arquivo o RIT360 Financeiro abre um **seletor de colunas**: marque ou desmarque o que deve aparecer no relatório. Vêm marcadas por padrão oito colunas — Vencimento, Pagamento, Pagador/Beneficiário, Lançamento, Conta, Categoria, Status e Valor — e você pode acrescentar **Tipo**, **Forma de pagamento**, **Observações** e **Nº de anexos**. A seleção é **lembrada para a próxima exportação**, separada por organização (cada OSC mantém o formato que prefere). É preciso deixar pelo menos uma coluna marcada.
+Ao escolher **PDF** ou **Excel**, antes de gerar o arquivo o RIT360 Financeiro abre um **seletor de colunas**: marque ou desmarque o que deve aparecer no relatório. Vêm marcadas por padrão oito colunas — Vencimento, Pagamento, Pagador/Beneficiário, Lançamento, Conta, Categoria, Status e Valor — e você pode acrescentar **Tipo**, **Forma de pagamento**, **Observações**, **Nº de anexos** e **Extrato** (se o lançamento está conciliado com o banco). A seleção é **lembrada para a próxima exportação**, separada por organização (cada OSC mantém o formato que prefere). É preciso deixar pelo menos uma coluna marcada.
 
 O **Excel** baixa na hora. Já o **PDF** é montado **em segundo plano**: ao clicar em gerar, abre uma página de acompanhamento que mostra "Gerando…" e, assim que o documento fica pronto, **o download começa sozinho**. Você não precisa esperar parado — pode fechar a aba e continuar trabalhando, porque **o link do PDF também chega no seu e-mail**. É o mesmo comportamento da prestação de contas.
 
@@ -257,6 +279,7 @@ Clique em qualquer linha da lista para abrir o detalhe completo, organizado em d
 - **Dados de pagamento** — quando o lançamento tem chave PIX ou dados bancários do destinatário, um card mostra esses dados para efetivar o pagamento sem abrir a solicitação de origem. Vale tanto para lançamentos vindos de **reembolso/pedido de compra e pagamento** quanto para **despesas lançadas à mão** (ver "Forma de pagamento" no formulário). **Quem tem permissão de pagar vê os dados por inteiro; os demais veem apenas os últimos dígitos** — o nome do titular da chave PIX fica visível para todos, quando essa informação existe. Passado o prazo de descarte definido pela OSC, o card informa que os dados foram removidos por já terem cumprido sua finalidade. Detalhes em [Contas Bancárias → Dados bancários de quem recebe](/configuracoes/contas/#dados-bancarios-de-quem-recebe)
 - **Quem solicitou** — quando o lançamento veio de um reembolso ou de um pedido de compra e pagamento, o nome de quem fez a solicitação aparece junto com os dados do lançamento. Antes só apareciam os dados bancários, sem dizer de quem eram. Repare na diferença entre os dois fluxos: num **reembolso**, quem solicitou é a própria pessoa que vai receber o dinheiro de volta; num **pedido de compra e pagamento**, quem solicitou só está pedindo autorização para pagar — quem recebe é um **terceiro** que ele indicou (um fornecedor, um prestador de serviço), não ele mesmo
 - Distribuição entre categorias (se o valor foi dividido)
+- **Conciliação** — se o lançamento já foi conferido com o extrato bancário, quando isso aconteceu, e como: pela importação de um extrato OFX, ou por marcação manual (com o nome de quem marcou). Sem essa conferência, o bloco mostra que o lançamento ainda não foi conciliado — não é um erro, é o estado normal até alguém cruzar com o banco. Ver **[Coluna Conferido](#coluna-conferido)** e **[Conciliação manual](#conciliacao-manual)**
 - Observações
 - Documentos: comprovantes e notas fiscais anexados, com pré-visualização inline para imagens e PDFs. Isso inclui os comprovantes que já estavam anexados ao **reembolso ou pedido de compra e pagamento** que deu origem ao lançamento — eles aparecem aqui automaticamente desde a aprovação, sem precisar reanexar nada
 - Quando o lançamento veio de outro módulo, links cruzados aparecem aqui:
@@ -414,27 +437,44 @@ Para estornar: vá no detalhe do lançamento → botão **Estornar** → informe
 
 ## Corrigir os dados de um lançamento pago
 
-Às vezes o que ficou registrado num lançamento pago sai diferente do que aconteceu — você pagou num dia e lançou no outro, marcou a conta errada, ou a despesa entrou na categoria/centro de custo errado. Antes era preciso estornar e refazer; agora dá para **corrigir direto**, sem desfazer o lançamento, pela mesma janela **Editar dados de pagamento**.
+Às vezes o que ficou registrado num lançamento pago sai diferente do que aconteceu — você pagou por uma conta e lançou por outra, pagou num dia e lançou no outro, a despesa entrou na categoria/centro de custo errado, ou o projeto/descrição/favorecido precisam de ajuste. Existe uma **porta única** para esse tipo de correção, direto no detalhe do lançamento: o botão **Corrigir dados**.
 
-[![Editar dados de pagamento de um lançamento pago](/assets/screenshots/mov-editar-cc-categoria-01.png)](/assets/screenshots/mov-editar-cc-categoria-01.png)
-*Editar dados de pagamento — ajuste data, conta, categoria e/ou centro de custo e informe o motivo*
+[![Corrigir dados de um lançamento pago](/assets/screenshots/mov-editar-cc-categoria-01.png)](/assets/screenshots/mov-editar-cc-categoria-01.png)
+*Corrigir dados — ajuste data de pagamento, conta bancária, categoria, centro de custo, projeto, descrição e/ou favorecido, e informe o motivo*
 
-**Quem pode:** **Presidente** e **Tesoureiro** (o mesmo perfil que marca lançamentos como pagos e faz estornos).
+**Quem pode:** exige a permissão **Criar / editar**, em Movimentações. Ver [Cargos e permissões](/configuracoes/cargos/).
 
 Para corrigir:
 
-1. Abra o **detalhe** do lançamento (ele precisa estar com status **Pago**) e clique em **Editar dados de pagamento** — ou use **Editar** na linha da tabela de Movimentações.
-2. Ajuste o que precisar: **data de pagamento**, **conta financeira**, **categoria** e/ou **centro de custo**.
+1. Abra o **detalhe** do lançamento (ele precisa estar com status **Pago**) e clique em **Corrigir dados**.
+2. Ajuste o que precisar: **data de pagamento**, **conta bancária**, **categoria**, **centro de custo**, **projeto**, **descrição** e/ou **favorecido**.
 3. Escreva um **motivo** (obrigatório) — ele fica guardado na **trilha de auditoria** do lançamento.
-4. Salve. Se você trocou a conta, os **saldos das contas envolvidas são recalculados** automaticamente.
+4. Confirme. Se o lançamento estiver no período de uma **[prestação de contas](#prestacao-de-contas)** já emitida, ou já **[conciliado](#coluna-conferido)**, a tela avisa antes de você confirmar — leia o aviso e decida com essa informação em mãos (ver caixas abaixo).
 
-> ⚠️ **Atenção · O que esta janela NÃO muda**
+> ⚠️ **Atenção · Valor NÃO é editável aqui**
 >
-> Por aqui você corrige **data, conta, categoria e centro de custo**. Para corrigir o **valor**, o caminho continua sendo o **Estorno**. A correção **não altera o valor nem o status** do lançamento — ele continua pago, pelo mesmo valor. Transferências não usam essas correções.
+> Esta janela corrige **classificação e registro** — não corrige o **fato** de quanto saiu. **Valor** fica de fora de propósito: valor errado não é erro de classificação nem de registro, é outro fato, e o caminho é **estornar e lançar de novo**. Transferências, do mesmo modo, não usam esta janela.
 
-> 📖 **Conceito · Reclassificar não é remexer o dinheiro**
+> ⚠️ **Atenção · Mudar a data de pagamento muda o mês do relatório**
 >
-> Mudar a **categoria** ou o **centro de custo** de um lançamento pago muda só a **classificação gerencial** (para qual área e sob qual categoria a despesa/receita conta) — os saldos das contas não mudam. Por isso pode ser feito depois de pago sem estorno. Como qualquer correção sobre lançamento pago, o **motivo** fica guardado na trilha de auditoria — quem prestar contas depois vê o que foi reclassificado e por quê.
+> É permitido corrigir a data de pagamento, mas isso **desloca o lançamento para outro mês** nos Relatórios e na Prestação de contas — o RIT360 Financeiro opera em regime de caixa, e é a data de pagamento que define em qual mês o valor conta. Se você mudar a data de um lançamento cujo mês **já foi fechado e relatado**, o total daquele mês muda depois da entrega. Faça essa correção sabendo disso, e avise quem já recebeu o relatório do período afetado, se for o caso.
+
+> ⚠️ **Atenção · Trocar a conta bancária desfaz a conferência com o extrato**
+>
+> Quando a correção **muda a conta**, duas coisas acontecem juntas, e a tela avisa antes de você confirmar:
+>
+> 1. o valor sai do saldo da conta antiga e passa para a nova, na data do pagamento;
+> 2. **a conferência com o extrato é desfeita** — e, se ela tinha vindo de uma **[conciliação por OFX](#conciliacao-bancaria-ofx)**, aquela linha do extrato **volta a ficar em aberto** para ser conciliada de novo.
+>
+> O motivo é simples: a **[coluna Conferido](#coluna-conferido)** representa a conferência contra o extrato de **uma conta específica**. Trocada a conta, aquela conferência não significa mais nada — por isso ela é desfeita, não preservada por engano. Se o lançamento já estava **[conciliado](#coluna-conferido)**, planeje reconciliá-lo na conta nova depois da correção.
+
+> 📖 **Conceito · Reclassificar não é remexer o dinheiro — mas trocar a conta é**
+>
+> Mudar a **categoria**, o **centro de custo**, o **projeto**, a **descrição** ou o **favorecido** de um lançamento pago muda só a **classificação gerencial** — os saldos das contas não mudam. Já mudar a **conta bancária** move o valor de fato entre os saldos das duas contas envolvidas, na data do pagamento — é o que corrige um erro de digitação (marcou a conta errada na hora de pagar) sem o custo de estornar e relançar. Como qualquer correção sobre lançamento pago, o **motivo** fica guardado na trilha de auditoria — quem prestar contas depois vê o que foi corrigido e por quê.
+
+> 💡 **Se você chegou aqui por um link antigo**
+>
+> Um link ou atalho salvo de antes desta versão pode tentar abrir o formulário de edição comum para um lançamento já **pago**. Isso não é mais possível: você é redirecionado ao **detalhe** do lançamento, com um aviso explicando por quê — a porta para corrigir um lançamento pago é sempre o **Corrigir dados**, no detalhe.
 
 ## Importar lançamentos
 
@@ -630,6 +670,35 @@ Se você baixa o **extrato do banco em formato OFX** (a maioria dos bancos ofere
 
 > 🔎 **Não tem o arquivo OFX?** Se você só tem o **saldo final** que aparece na tela do banco, use o **[Caça-diferenças](/modulos/caca-diferencas/)**: informe o saldo e ele aponta na hora onde está a diferença, com correção em um clique. É a conferência rápida "pelo número", complementar a esta conciliação por extrato.
 
+## Conciliação manual
+{: #conciliacao-manual }
+
+Nem toda OSC baixa o extrato em OFX — muitas conferem o extrato **na tela do banco**, olhando linha por linha. Para essas organizações, o RIT360 Financeiro permite marcar um lançamento como conciliado **na mão**, sem passar pela importação de arquivo.
+
+> 💡 **Por que isso importa**
+>
+> Antes, quem conferia o extrato visualmente não tinha onde registrar isso — o sistema não sabia diferenciar quem já bateu o lançamento com o banco de quem só marcou como pago. Com a marcação manual, a coluna **Conferido** (ver acima) passa a refletir a realidade de qualquer OSC, com ou sem arquivo OFX.
+
+**Como marcar:**
+
+- **Individualmente** — no detalhe do lançamento, ou pela ação correspondente na linha da lista.
+- **Em lote** — selecione vários lançamentos na lista (mesma seleção usada para pagar/excluir, ver **Seleção em lote**, acima) e marque todos de uma vez como conciliados.
+
+> ⚠️ **Atenção · Só lançamento pago é conciliável**
+>
+> Marcar como conciliado só faz sentido para um lançamento que **já movimentou dinheiro** — ou seja, está **Pago**. Um lançamento **previsto** (Pendente ou Atrasado) não aparece no extrato do banco porque o dinheiro ainda não saiu ou entrou; não há o que conferir ainda. A ação de conciliar não fica disponível para esses lançamentos.
+
+**Quem pode:** exige a permissão **Criar / editar**, em Movimentações — a mesma de registrar e editar lançamentos. Ver [Cargos e permissões](/configuracoes/cargos/).
+
+### Desfazer conciliação manual
+{: #desfazer-conciliacao-manual }
+
+Marcou por engano? Dá para **desfazer** — mas só quando a marcação foi **manual**. Um lançamento conciliado pela **importação de extrato OFX** não se desfaz por aqui: ele reflete um casamento real com uma transação do banco, e desfazê-lo abriria espaço para a mesma transação ser conciliada duas vezes de formas diferentes.
+
+> ⚠️ **Atenção · Desfazer não muda o pagamento, só a conferência**
+>
+> Desfazer a conciliação manual tira o selo da coluna Conferido e o registro de "conferido", mas **não** desfaz o pagamento nem muda o status do lançamento — ele continua **Pago**. Se o que você precisa é reverter o próprio pagamento, o caminho é o **[Estorno](#estornar-um-lançamento)**, não desfazer a conciliação.
+
 ## Prestação de contas {#prestacao-de-contas}
 
 [![Diálogo de prestação de contas](/assets/screenshots/manual-mov-prestacao-contas.png)](/assets/screenshots/manual-mov-prestacao-contas.png)
@@ -729,6 +798,7 @@ Você **não depende do e-mail** para chegar a uma prestação de contas: todo d
 - **Regime de caixa** — modelo contábil em que o que vale é a data de entrada/saída do dinheiro, não a data do contrato.
 - **Realizado** — o que já foi efetivamente pago ou recebido; o dinheiro mexeu na conta.
 - **Previsto** — o que está pendente ou atrasado; ainda vai acontecer.
+- **Conciliado** — conferido com o extrato bancário, por importação de OFX ou por marcação manual. Diferente de **Pago**: pago é o que o sistema afirma; conciliado é o que o banco confirma.
 - **Rubrica** — no orçamento de um projeto com controle por fonte, a linha que amarra conta + categoria + valor previsto. Ver [Projetos → Orçamento por fonte de recurso](/modulos/projetos/#orcamento-por-fonte-de-recurso).
 - **Pagamento retido** — pagamento que não se completa porque passa da rubrica prevista de um projeto; o lançamento não vira "Pago" até alguém decidir.
 - **Líquido** — a posição consolidada da OSC: tudo o que ela tem (ativos) menos tudo o que ela deve (passivos).

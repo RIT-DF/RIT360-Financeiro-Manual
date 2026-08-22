@@ -85,7 +85,7 @@ Sem problema. A página de **Novidades** fica sempre acessível, a qualquer mome
 
 ### O sistema registrou minha despesa com data errada. Posso corrigir?
 
-Depende do status. Se o lançamento está **Pendente** ou **Atrasado**, clique em **Editar** no detalhe da movimentação e ajuste o que precisar. Se já está **Pago**, os responsáveis financeiros podem corrigir a **data de pagamento** e a **conta** em **detalhe do lançamento → Editar dados de pagamento** (é pedido um motivo, que fica no histórico). Para corrigir o **valor** de um lançamento já pago, o caminho continua sendo **Estornar** e criar um novo lançamento correto.
+Depende do status. Se o lançamento está **Pendente** ou **Atrasado**, clique em **Editar** no detalhe da movimentação e ajuste o que precisar. Se já está **Pago**, quem tem a permissão **Criar / editar** pode corrigir **data de pagamento, conta bancária, categoria, centro de custo, projeto, descrição e favorecido** em **detalhe do lançamento → Corrigir dados** (é pedido um motivo, que fica no histórico). Se a correção mudar a **conta**, a conferência com o extrato daquele lançamento é desfeita — a tela avisa antes de confirmar. **Só o valor não é editável ali** — valor errado não é erro de classificação, é outro fato, e o caminho continua sendo **Estornar** e criar um novo lançamento correto. Ver [Movimentações → Corrigir os dados de um lançamento pago](/modulos/movimentacoes/#corrigir-os-dados-de-um-lançamento-pago).
 
 ### Qual a diferença entre Cancelar e Excluir uma movimentação?
 
