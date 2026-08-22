@@ -185,15 +185,26 @@ Botão **Exportar** no cabeçalho. Três opções:
 - **Exportar relatório completo (PDF)** — todas as cinco abas em sequência, com sumário no topo
 - **Exportar dados (Excel)** — planilha com uma worksheet por seção
 
-Todos os exports trazem **cabeçalho identificador** padrão: nome da OSC, escopo, período, lista de filtros aplicados, estado do comparativo (ligado/desligado) e data/hora de geração. Aba Receitas/Despesas exporta **todas** as categorias (não só o top 10). Aba Atenção exporta a lista completa de anomalias com mensagem, severidade textual e regra. Aba Previsão exporta a tabela mês a mês com coluna "Origem" textual.
+O **Excel** baixa na hora, como sempre. Já o **PDF** — nas duas variantes — é montado **em segundo plano**: ao clicar em exportar, abre uma página de acompanhamento com "Gerando…" e, assim que o documento fica pronto, **o download começa sozinho**. Você não precisa esperar parado — pode fechar a aba e continuar trabalhando, porque **o link do PDF também chega no seu e-mail**. É o mesmo comportamento já usado na exportação de Movimentações e na prestação de contas.
+
+[![Página de acompanhamento do PDF de Relatórios](/assets/screenshots/manual-relatorios-pdf-acompanhamento.png)](/assets/screenshots/manual-relatorios-pdf-acompanhamento.png)
+*A página de acompanhamento: quando o PDF fica pronto, o download começa sozinho (e o link também chega por e-mail).*
+
+> ⚠️ **Atenção · Quem quer o número agora usa Excel; quem quer o documento para apresentar usa PDF**
+>
+> A espera do PDF é curta (segundos, raramente mais que isso), mas existe — porque agora ele é **montado como documento de apresentação**, não só exportado. Precisa de um número na hora, para conferir algo rápido? Peça o **Excel**, que continua imediato. Precisa de um documento pronto para enviar à diretoria, ao conselho ou a um financiador? Peça o **PDF** e deixe a aba de acompanhamento (ou o e-mail) avisar quando estiver pronto.
+
+Todos os PDFs trazem, agora, uma **capa** com o logo e a identidade visual da organização, seguida de um bloco de destaque com **receitas, despesas e o resultado do período** — rotulado como **Superávit** ou **Déficit**, em vez de uma linha solta de texto — e **numeração de páginas**. O relatório completo também ganhou **gráficos de verdade**: a evolução do saldo e a composição por categorias de receitas e despesas saem impressas como gráfico, não só como tabela de números.
+
+> 📖 **Novo · A série diária de saldo virou anexo**
+>
+> Num relatório de um mês inteiro, a tabela dia a dia do saldo ocupava uma página só de números quase repetidos, enquanto o gráfico de evolução mostra a mesma informação de relance. Por isso essa tabela **saiu do corpo do PDF e passou para um anexo no final do documento** — quem só quer entender a tendência lê o gráfico; quem precisa conferir dia a dia encontra a tabela no anexo, sem que ela atrapalhe a leitura do relatório.
+
+Fora a capa, os gráficos e essa reorganização, **o conteúdo é o mesmo de sempre**: cabeçalho identificador (nome da OSC, escopo, período, filtros aplicados, estado do comparativo e data/hora de geração), Receitas/Despesas com **todas** as categorias (não só o top 10), Atenção com a lista completa de anomalias (mensagem, severidade textual e regra) e Previsão com a tabela mês a mês e a coluna "Origem". **Os números e os cálculos não mudaram** — só a forma como o documento se apresenta.
 
 > 📖 **Novo · Seção "Execução por Centro de Custo" na prestação de contas**
 >
 > Quando a OSC usa o módulo de [Orçamento](/modulos/orcamento/), a prestação de contas ganha uma seção **"Execução por Centro de Custo"**: para cada área da OSC, ela mostra o **previsto**, o **realizado** e o quanto do previsto já foi consumido no ano. É a forma de mostrar a financiadores e à diretoria não só quanto foi gasto, mas quanto foi gasto **em relação ao que se planejou** — o mesmo previsto × realizado do orçamento, agora dentro do relatório oficial.
-
-> 📖 **Sobre gráficos no PDF**
->
-> A primeira versão da exportação traz **tabelas e blocos textuais** — sem reprodução de gráficos visuais. Para enxergar a curva de saldo ou o gráfico de categorias, use a interface do RIT360 Financeiro. Gráficos no PDF entram em versão futura.
 
 ## Prestações de contas geradas {#prestacoes-de-contas}
 

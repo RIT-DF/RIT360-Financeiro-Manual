@@ -11,6 +11,35 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.64.1] — 2026-08-22
+
+### Corrigido
+
+- **Logo da organização no relatório**: a capa do relatório financeiro caía no desenho com as iniciais mesmo quando a organização tinha logo cadastrado. A prestação de contas nunca teve esse problema.
+
+## [1.64.0] — 2026-08-22
+
+<!-- destaque: Os PDFs do módulo Relatórios agora têm o mesmo visual caprichado da prestação de contas — com gráficos e numeração de páginas. -->
+
+### Adicionado
+
+- **PDF dos relatórios gerado no servidor**: os PDFs de Visão Geral, Receitas, Despesas, Atenção e Previsão passam a usar o mesmo motor da prestação de contas — capa com identidade da organização, tabelas e tipografia consistentes. Como o documento agora é preparado no servidor, a exportação em PDF virou um pedido assíncrono: você é avisado quando o arquivo fica pronto. A exportação em Excel continua imediata, como sempre.
+- **Gráficos no PDF**: os mesmos gráficos que aparecem na tela agora saem também no documento exportado.
+- **Numeração de páginas** ("Página X de Y") nos dois documentos — relatórios e prestação de contas.
+- **Leitura mais clara**: receitas, despesas e resultado ganharam destaque próprio em vez de uma linha corrida de texto; a série diária de saldo virou anexo no fim do documento (com o gráfico permanecendo no corpo); as quebras de página passaram a respeitar o conteúdo, em vez de forçar página nova a cada seção.
+
+## [1.63.0] — 2026-08-22
+
+<!-- destaque: Tarefas de projeto, evidências de projeto e feedbacks do superadmin ganharam seleção múltipla e ação em lote. -->
+
+### Adicionado
+
+- **Tarefas de projeto**: seleção múltipla com concluir, reabrir, abandonar e remover em lote. Abandonar em lote pede um único motivo, aplicado a toda a seleção.
+- **Evidências de projeto**: seleção múltipla com remoção em lote.
+- **Superadmin · Feedbacks**: seleção múltipla com marcar como concluído e descartar em lote.
+
+Nas três telas, um item que não pode receber a ação aparece **recusado com o motivo**, nunca simplesmente omitido, e o resultado fica num painel que separa concluídos, recusados por regra e falhos.
+
 ## [1.62.0] — 2026-08-22
 
 <!-- destaque: Agora existe uma única forma de corrigir um lançamento já pago — incluindo, quando necessário, a conta bancária. -->

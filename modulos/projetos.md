@@ -173,11 +173,40 @@ A distinção importa na hora de entender por que alguém sumiu do projeto no di
 
 **Tarefas.** Liste o que precisa ser feito, com responsável, prazo e vínculo a um marco. Você alterna entre **Lista** e **Kanban** (quadro com as colunas A fazer · Em andamento · Concluída · Abandonada). Cada cartão tem **botões de ação diretos** — iniciar, concluir, reabrir, abandonar, editar, remover (editar e remover apenas para a coordenação). Uma tarefa pode ir de **qualquer status para qualquer outro** (inclusive voltar de Concluída para Em andamento); só ao **abandonar** o sistema pede uma justificativa.
 
+### Concluir, reabrir, abandonar ou remover várias tarefas de uma vez {#tarefas-selecao-em-lote}
+
+Na visualização em **Lista**, marque o checkbox de cada tarefa que quiser (ou selecione todas de uma vez) para agir sobre várias ao mesmo tempo, em vez de repetir o mesmo clique tarefa por tarefa — útil depois de fechar uma etapa inteira do projeto, quando várias tarefas terminam juntas.
+
+[![Lista de tarefas com seleção múltipla e a barra de ações em lote](/assets/screenshots/manual-projetos-tarefas-selecao-lote.png)](/assets/screenshots/manual-projetos-tarefas-selecao-lote.png)
+*Tarefas selecionadas e a barra de ações em lote no rodapé — Concluir, Reabrir, Abandonar e Remover*
+
+Uma barra de ações aparece no rodapé com **Concluir**, **Reabrir**, **Abandonar** e **Remover** (as duas últimas, só para a coordenação — mesma regra da ação individual). Ao **abandonar** em lote, o sistema pede **um único motivo**, que vale para todas as tarefas marcadas — não um por tarefa.
+
+Depois de confirmar, um painel de resultado fica na tela mostrando, separadamente, o que foi **concluído**, o que foi **recusado por regra** e o que **falhou**:
+
+[![Painel de resultado da ação em lote sobre tarefas](/assets/screenshots/manual-projetos-tarefas-lote-resultado.png)](/assets/screenshots/manual-projetos-tarefas-lote-resultado.png)
+*Resultado da ação em lote — itens concluídos, recusados e com falha, cada um com o motivo*
+
+> 📖 **Conceito · "Recusado" não é erro — é o sistema aplicando a regra**
+>
+> Uma tarefa **já concluída** não pode ser "concluída" de novo; uma **já abandonada** não pode ser reaberta pela mesma ação que reabre uma em andamento. Quando isso acontece dentro de um lote, aquela tarefa não é ignorada em silêncio: ela aparece no painel como **recusada, com o motivo** — por exemplo, "já estava concluída". O restante do lote que não tinha esse problema é processado normalmente. Esse mesmo painel — concluído, recusado por regra, falhou — é o modelo usado em toda ação em lote do RIT360 Financeiro; você vai encontrá-lo de novo em [Evidências](#evidencias-selecao-em-lote), abaixo.
+>
+> **O painel permanece na tela** depois da ação — não é um aviso rápido que some sozinho. Se o lote for grande, releia com calma antes de fechar.
+
 **Comunicação (Mural).** A linha do tempo do projeto. Reúne, no mesmo lugar, os **eventos do sistema** (mudou de status, entrou alguém na equipe, tarefa concluída) e os **comentários** da equipe. Você escreve um comentário, **menciona** alguém com `@` (a pessoa é notificada) e filtra por **Todos / Eventos do sistema / Comentários / Status updates**. O autor ou a coordenação pode remover um comentário — ele fica marcado como "removido", sem apagar o histórico.
 
 **Status update.** Um recado periódico da coordenação sobre o andamento (o que avançou, o que está pendente, próximos passos). Se o projeto fica muitos dias sem um update, o RIT360 Financeiro lembra a coordenação.
 
-**Evidências.** Anexos que comprovam o que foi feito — fotos do evento, documentos, vídeos. Cada projeto tem um espaço próprio de armazenamento.
+**Evidências.** Anexos que comprovam o que foi feito — fotos do evento, documentos, vídeos. Cada projeto tem um espaço próprio de armazenamento. Quem enviou um anexo pode removê-lo dentro de uma **janela de 24 horas** após o envio; passado esse prazo, só a **coordenação** do projeto remove.
+
+### Remover várias evidências de uma vez {#evidencias-selecao-em-lote}
+
+Marque o checkbox de cada evidência que quiser remover (ou selecione todas de uma vez) e confirme pela barra de ações no rodapé — útil quando sobra um lote de fotos ou documentos enviados por engano ou já substituídos.
+
+[![Lista de evidências com seleção múltipla e a barra de remover em lote](/assets/screenshots/manual-projetos-evidencias-selecao-lote.png)](/assets/screenshots/manual-projetos-evidencias-selecao-lote.png)
+*Evidências selecionadas e o botão "Remover selecionadas" no rodapé*
+
+Vale a mesma regra de sempre: **coordenação remove qualquer evidência; quem enviou, só dentro das 24 horas**. Uma evidência fora dessa janela, marcada por quem não é coordenador, não trava o lote inteiro — ela aparece **recusada, com o motivo**, no mesmo painel de resultado descrito em [Tarefas, acima](#tarefas-selecao-em-lote).
 
 > ✓ **Dica · O mural é a memória do projeto**
 >

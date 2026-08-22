@@ -1,6 +1,23 @@
 {
   "versoes": [
     {
+      "versao": "1.64.1",
+      "data": "2026-08-22",
+      "destaque": false
+    },
+    {
+      "versao": "1.64.0",
+      "data": "2026-08-22",
+      "destaque": true,
+      "resumo": "Os PDFs do módulo Relatórios agora têm o mesmo visual caprichado da prestação de contas — com gráficos e numeração de páginas."
+    },
+    {
+      "versao": "1.63.0",
+      "data": "2026-08-22",
+      "destaque": true,
+      "resumo": "Tarefas de projeto, evidências de projeto e feedbacks do superadmin ganharam seleção múltipla e ação em lote."
+    },
+    {
       "versao": "1.62.0",
       "data": "2026-08-22",
       "destaque": true,
