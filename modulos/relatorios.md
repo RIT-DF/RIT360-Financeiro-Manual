@@ -196,6 +196,10 @@ O **Excel** baixa na hora, como sempre. Já o **PDF** — nas duas variantes —
 
 Todos os PDFs trazem, agora, uma **capa** com o logo e a identidade visual da organização, seguida de um bloco de destaque com **receitas, despesas e o resultado do período** — rotulado como **Superávit** ou **Déficit**, em vez de uma linha solta de texto — e **numeração de páginas**. O relatório completo também ganhou **gráficos de verdade**: a evolução do saldo e a composição por categorias de receitas e despesas saem impressas como gráfico, não só como tabela de números.
 
+> 💡 **Dica · No gráfico de evolução do saldo, repare na base do eixo**
+>
+> Nos gráficos de composição por categoria, o eixo começa em zero, que é a referência certa para comparar valores. Já no gráfico **Evolução do saldo**, o eixo vertical **não começa em zero** — ele se ajusta à faixa de valores do período, e o próprio documento avisa isso logo abaixo do gráfico. É proposital: se o saldo da OSC variou, por exemplo, entre R$ 149 mil e R$ 155 mil, um eixo começando em zero faria essa variação de R$ 6 mil parecer uma linha reta, escondendo o movimento. Ajustando a base à faixa dos valores, a variação real fica visível — mas isso também significa que **a inclinação da linha não deve ser lida como se o eixo partisse de zero**: confira sempre os valores nas extremidades antes de concluir que o saldo subiu ou caiu muito.
+
 > 📖 **Novo · A série diária de saldo virou anexo**
 >
 > Num relatório de um mês inteiro, a tabela dia a dia do saldo ocupava uma página só de números quase repetidos, enquanto o gráfico de evolução mostra a mesma informação de relance. Por isso essa tabela **saiu do corpo do PDF e passou para um anexo no final do documento** — quem só quer entender a tendência lê o gráfico; quem precisa conferir dia a dia encontra a tabela no anexo, sem que ela atrapalhe a leitura do relatório.

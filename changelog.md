@@ -11,6 +11,12 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.64.2] — 2026-08-22
+
+### Corrigido
+
+- **Gráfico "Evolução do saldo" em branco em relatório de um único mês**: com o período reduzido a um mês, o gráfico de evolução do saldo saía sem nenhuma linha, mesmo com os dados presentes no anexo do documento. Períodos curtos agora mantêm o detalhe diário e ganham marcadores nos pontos. A escala do eixo vertical também passou a acompanhar a faixa de valores da evolução do saldo (em vez de sempre partir de zero), o que deixa a variação visível quando o saldo se move pouco em relação ao seu valor total — o documento avisa quando isso acontece. Os demais gráficos do relatório continuam com a escala partindo de zero.
+
 ## [1.64.1] — 2026-08-22
 
 ### Corrigido
