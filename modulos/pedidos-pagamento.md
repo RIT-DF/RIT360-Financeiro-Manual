@@ -208,6 +208,21 @@ O cartão que aparece no pedido diz qual dos dois é o caso. No de retenção po
 - **Conta comum** — quem tem alçada de aprovação vê o botão **Autorizar a diferença**.
 - **Conta de recurso restrito** (convênio, emenda, fundo carimbado) — não há autorização interna. É preciso corrigir a despesa ou registrar um remanejamento no projeto, com o documento que o autoriza.
 
+<div markdown="1" style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin: 1.5rem 0;">
+<div markdown="1" style="flex: 1 1 320px; min-width: 280px;">
+
+[![Cartão de retenção numa conta comum, com o botão Autorizar a diferença](/assets/screenshots/manual-projetos-fonte-04-retencao-comum.png)](/assets/screenshots/manual-projetos-fonte-04-retencao-comum.png)
+*Conta comum — o cartão mostra o botão **Autorizar a diferença**.*
+
+</div>
+<div markdown="1" style="flex: 1 1 320px; min-width: 280px;">
+
+[![Mesmo cartão de retenção numa conta de recurso restrito, sem o botão de autorizar](/assets/screenshots/manual-projetos-fonte-03-retencao.png)](/assets/screenshots/manual-projetos-fonte-03-retencao.png)
+*Conta de recurso restrito — mesmo cartão, sem o botão; só **Encerrar retenção** e o caminho de remanejamento.*
+
+</div>
+</div>
+
 > ✓ **Dica · Recusado não é retido**
 >
 > Se o pedido voltou **recusado**, insistir na mesma conta não resolve — ela nunca vai aceitar aquela categoria enquanto o orçamento não tiver rubrica prevista para ela. Procurar um botão de autorizar aqui é procurar algo que não existe: o botão só aparece no caso de **retenção por estouro**.

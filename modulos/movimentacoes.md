@@ -212,6 +212,9 @@ Ao concluir a baixa, o resultado distingue quatro situações:
 - **Retidos por estouro de rubrica** — a conta é elegível, mas o valor passa do previsto da rubrica. Aqui existe decisão a tomar: autorizar a diferença (conta comum) ou corrigir/remanejar (conta de recurso restrito). Ver [Pedidos de Compra e Pagamento → Recusado por regra × retido por estouro](/modulos/pedidos-pagamento/#recusado-por-regra-x-retido-por-estouro).
 - **Falhas** — problema técnico ao processar aquele lançamento específico; tente novamente.
 
+[![Lista de movimentações depois de uma baixa em lote com lançamentos de projetos diferentes](/assets/screenshots/manual-movimentacoes-lote-desfechos.png)](/assets/screenshots/manual-movimentacoes-lote-desfechos.png)
+*Depois da baixa: lançamentos pagos aparecem como "Pago" (com a opção de estornar); os que ficaram retidos continuam "Pendente" — na lista, hoje, um lançamento retido por estouro e um recusado por regra têm a mesma aparência.*
+
 Um lançamento recusado ou retido **não trava os demais** — o resto da seleção que não tem nenhum desses problemas é pago normalmente.
 
 **Exemplo:** você seleciona 12 lançamentos para baixar de uma vez — 8 do projeto "Reforma da Sede" (sem controle por fonte) e 4 do projeto "Emenda 04/2024" (com controle por fonte ligado). Ao confirmar: os 8 da Reforma e 2 da Emenda são pagos normalmente; 1 lançamento da Emenda volta **recusado por regra** (a conta escolhida não tinha rubrica prevista para "Combustível"); e 1 volta **retido por estouro** (a rubrica de "Material" já estava no limite). Você resolve os dois separadamente — o restante já está pago.
@@ -219,6 +222,10 @@ Um lançamento recusado ou retido **não trava os demais** — o resto da seleç
 > ✓ **Dica · Recusado não é retido**
 >
 > Se um lançamento voltou **recusado**, insistir na mesma conta não resolve — ela nunca vai aceitar aquela categoria enquanto o orçamento não tiver rubrica prevista para ela. Se voltou **retido**, existe uma decisão a tomar (autorizar, corrigir ou remanejar). Procurar um botão de autorizar para um recusado é procurar algo que não existe.
+
+> ⚠️ **Atenção · Lançamento recusado por falta de rubrica fica "Pendente", sem aviso na tela**
+>
+> Hoje a lista não sinaliza visualmente quando um lançamento voltou **recusado por regra** dentro de uma baixa em lote — ele simplesmente continua com o status **Pendente**, com a mesma aparência de um lançamento retido ou de um que nem passou pela baixa ainda. Já está registrado como melhoria a fazer. Enquanto isso: **se depois de uma baixa em lote algum lançamento continuar pendente, verifique se a conta escolhida tem rubrica prevista para a categoria dele** — é a causa mais provável quando o lançamento pertence a um projeto com controle por fonte ligado.
 
 ### Exportação
 

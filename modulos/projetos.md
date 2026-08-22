@@ -227,7 +227,7 @@ Você pode **salvar** simulações no histórico, **adotar uma como taxa oficial
 > Até aqui, cada linha do orçamento do projeto era só **categoria + valor previsto** (ver "A aba Financeiro", acima). Com o controle por fonte, cada linha — chamada de **rubrica** — ganha uma terceira informação: **de qual conta** aquele valor deve sair. Isso significa que a **mesma categoria** pode aparecer em **mais de uma rubrica**, uma para cada conta: "Material de construção" pago 70% pela emenda e 30% pelo caixa geral da OSC são **duas rubricas diferentes**, cada uma com a sua conta e o seu teto. Uma rubrica sem valor definido significa **"permitido nesta conta, sem teto"** — diferente de uma rubrica de R$ 0 (que significa "não gaste nada disto aqui") e diferente de não existir rubrica nenhuma para aquele par conta+categoria (que significa "esta conta não paga esta categoria").
 
 [![Rubricas por conta e categoria no orçamento do projeto](/assets/screenshots/manual-projetos-fonte-01-rubricas.png)](/assets/screenshots/manual-projetos-fonte-01-rubricas.png)
-*Aba Financeiro do projeto — rubricas por conta e categoria, com "sem teto" para a rubrica que só limita o quê, não o quanto*
+*Aba Financeiro do projeto — a mesma categoria com rubrica em duas contas: R$ 80.000 pela emenda e R$ 40.000 pelo caixa da organização*
 
 ### Ligar o controle por fonte
 
@@ -284,8 +284,22 @@ O que acontece a seguir depende do **tipo da conta**:
 - **Conta comum** (soma no saldo disponível da organização): estourar a rubrica é decisão **interna**. Quem tem alçada de aprovação na organização vê o cartão de retenção e pode **autorizar a diferença**, informando o motivo — o mesmo mecanismo já usado para excedente de pedido de compra.
 - **Conta de recurso restrito** (convênio, emenda, fundo carimbado — não soma no saldo disponível): **não existe autorização interna**. Remanejar a rubrica de um convênio não é uma decisão que a OSC toma sozinha; depende de aditivo ou de anuência de quem repassou o recurso. O cartão de retenção não oferece o botão de autorizar — os caminhos são **corrigir a despesa** (categoria ou valor errados) ou **registrar o remanejamento** (ver abaixo), com o documento que o autoriza anexado ao projeto.
 
-[![Cartão de retenção de pagamento por estouro de rubrica](/assets/screenshots/manual-projetos-fonte-03-retencao.png)](/assets/screenshots/manual-projetos-fonte-03-retencao.png)
-*Pagamento retido — em conta comum, o aprovador autoriza a diferença; em conta de recurso restrito, o caminho é corrigir ou remanejar*
+Compare os dois cartões lado a lado — a diferença entre eles é o ponto mais importante desta seção, e ela é só um botão: ele existe quando a conta permite decisão interna, e some quando não permite.
+
+<div markdown="1" style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin: 1.5rem 0;">
+<div markdown="1" style="flex: 1 1 320px; min-width: 280px;">
+
+[![Cartão "Pagamento retido — acima da rubrica prevista" numa conta comum, com o botão Autorizar a diferença](/assets/screenshots/manual-projetos-fonte-04-retencao-comum.png)](/assets/screenshots/manual-projetos-fonte-04-retencao-comum.png)
+*Conta comum — Previsto R$ 40.000, Diferença R$ 5.000, e os botões **Autorizar a diferença** e **Encerrar retenção**.*
+
+</div>
+<div markdown="1" style="flex: 1 1 320px; min-width: 280px;">
+
+[![Mesmo cartão de retenção numa conta de recurso restrito, sem o botão de autorizar](/assets/screenshots/manual-projetos-fonte-03-retencao.png)](/assets/screenshots/manual-projetos-fonte-03-retencao.png)
+*Conta de recurso restrito — mesmo cartão, **sem** o botão de autorizar: só **Encerrar retenção** e o link para abrir o financeiro do projeto e registrar o remanejamento.*
+
+</div>
+</div>
 
 > ⚠️ **Atenção · Pagamento retido nunca aparece como pago**
 >
