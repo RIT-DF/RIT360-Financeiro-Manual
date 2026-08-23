@@ -20,8 +20,6 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ## [1.64.3] — 2026-08-23
 
-<!-- destaque: A correção de categoria em lançamento pago voltou a funcionar. -->
-
 ### Corrigido
 
 - **Correção de lançamento pago não gravava a categoria**: desde o lançamento da funcionalidade (v1.62.0), mudar a categoria pela tela "Corrigir dados" não salvava — o formulário fechava sem aviso de erro, mas nada mudava, e o seletor de categoria abria em branco. Um lançamento dividido entre várias categorias deixa de oferecer essa opção no formulário (a categoria dele é ajustada na divisão em si); os demais campos — data de pagamento, conta bancária, centro de custo, projeto, descrição e favorecido — continuam corrigíveis normalmente. Uma falha inesperada agora mostra o motivo, em vez de uma mensagem genérica.
@@ -62,8 +60,6 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 Nas três telas, um item que não pode receber a ação aparece **recusado com o motivo**, nunca simplesmente omitido, e o resultado fica num painel que separa concluídos, recusados por regra e falhos.
 
 ## [1.62.0] — 2026-08-22
-
-<!-- destaque: Agora existe uma única forma de corrigir um lançamento já pago — incluindo, quando necessário, a conta bancária. -->
 
 ### Adicionado
 

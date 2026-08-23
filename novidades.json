@@ -8,8 +8,7 @@
     {
       "versao": "1.64.3",
       "data": "2026-08-23",
-      "destaque": true,
-      "resumo": "A correção de categoria em lançamento pago voltou a funcionar."
+      "destaque": false
     },
     {
       "versao": "1.64.2",
@@ -36,8 +35,7 @@
     {
       "versao": "1.62.0",
       "data": "2026-08-22",
-      "destaque": true,
-      "resumo": "Agora existe uma única forma de corrigir um lançamento já pago — incluindo, quando necessário, a conta bancária."
+      "destaque": false
     },
     {
       "versao": "1.61.0",
