@@ -11,6 +11,26 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.65.1] — 2026-08-23
+
+### Corrigido
+
+- **Projeto arquivado deixa de gerar cobrança automática**: as rotinas diárias de tarefa atrasada, marco vencido e lembrete de atualização de status passam a ignorar projetos arquivados. Desarquivar volta a incluí-los. Falhas de leitura nessas rotinas passaram a ser registradas e reportadas como erro, em vez de passarem por uma varredura vazia.
+
+## [1.65.0] — 2026-08-23
+
+<!-- destaque: Projetos agora podem ser arquivados: eles saem da lista e dos formulários do dia a dia, sem perder nada do histórico. -->
+
+### Adicionado
+
+- **Arquivar e desarquivar projeto**: qualquer projeto pode ser arquivado e desarquivado. Arquivar não muda a situação do projeto (concluído, em execução etc.) — é uma marcação à parte, e desarquivar devolve tudo como estava. Arquivar um projeto ainda ativo mostra um aviso antes da confirmação.
+- **Lista de projetos com filtro de arquivados**: a lista passa a esconder os projetos arquivados por padrão, com um contador dizendo quantos estão escondidos e um atalho para vê-los.
+- **Botão de arquivar e ação em lote**: cada projeto da lista ganha um botão de arquivar, e a lista ganha seleção múltipla com ação de arquivar em lote — a confirmação diz quantos projetos serão afetados e o resultado separa concluídos, recusados e falhos.
+- **Projeto arquivado some dos formulários do dia a dia**: deixa de ser oferecido ao lançar despesa, pedir pagamento, pedir reembolso ou importar lançamentos por planilha; deixa de contar no menu e nos cartões do Painel; e não aparece na página pública de transparência.
+- **Projeto arquivado continua no que já aconteceu**: fechamento orçamentário do exercício, relatórios e filtros de histórico continuam considerando o projeto normalmente — o passado não muda porque alguém arquivou.
+- **Identificação congelada**: o nome e os dados de identificação de um projeto arquivado ficam congelados; para editar, é preciso desarquivar antes.
+- **Importação de lançamentos com aviso mais claro**: quando o projeto citado na planilha está arquivado ou encerrado, o aviso agora diz exatamente qual dos dois é (antes aparecia como projeto não encontrado).
+
 ## [1.64.5] — 2026-08-23
 
 ### Corrigido
