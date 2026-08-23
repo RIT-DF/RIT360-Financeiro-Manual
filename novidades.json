@@ -1,6 +1,12 @@
 {
   "versoes": [
     {
+      "versao": "1.66.0",
+      "data": "2026-08-23",
+      "destaque": true,
+      "resumo": "Agora dá para escolher quais projetos aparecem na página pública de transparência — antes, apareciam todos."
+    },
+    {
       "versao": "1.65.1",
       "data": "2026-08-23",
       "destaque": false

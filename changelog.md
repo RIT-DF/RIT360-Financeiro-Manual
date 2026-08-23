@@ -11,6 +11,19 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.66.0] — 2026-08-23
+
+<!-- destaque: Agora dá para escolher quais projetos aparecem na página pública de transparência — antes, apareciam todos. -->
+
+### Adicionado
+
+- **Escolha de projetos na página pública**: em Configurações → Transparência, o bloco Projetos passa a mostrar quantos projetos aparecem na página pública, com um botão para escolher quais.
+- **Tela de escolha**: busca por nome, filtro por situação, botão em cada projeto e ação em lote com seleção múltipla — pensada para organizações com dezenas de projetos.
+- **Padrão continua sendo mostrar tudo**: todos os projetos continuam aparecendo por padrão — a organização esconde o que não quer publicar. Projeto novo nasce aparecendo.
+- **Projeto em planejamento ou aguardando aprovação**: também pode ser escolhido antes da hora — ele ainda não aparece na página por causa da situação em que está, e a escolha passa a valer quando entrar em execução.
+- **Projeto cancelado ou arquivado**: não vai à página pública de jeito nenhum, e por isso não entra na tela de escolha. Desarquivar devolve o projeto à página exatamente como estava.
+- **Seção some quando tudo está escondido**: se a organização esconder todos os projetos, a seção simplesmente não aparece na página pública, em vez de sair vazia — e a tela de configuração avisa que o bloco está ligado e não vai sair nada (#145).
+
 ## [1.65.1] — 2026-08-23
 
 ### Corrigido
