@@ -11,6 +11,12 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.64.5] — 2026-08-23
+
+### Corrigido
+
+- **Descrição cortada ao importar lançamentos e usuários por planilha**: as importações de lançamentos e de usuários passam a ler planilhas do mesmo jeito que a importação de categorias. Textos entre aspas contendo ponto e vírgula (por exemplo, "Pagamento fornecedor; NF 1234") chegavam cortados pela metade, sem nenhum aviso — agora chegam inteiros. Linhas com colunas a mais que o cabeçalho passam a ser recusadas com explicação, e caem na lista de linhas recusadas disponível para download. Arquivos terminados em ponto e vírgula continuam importando normalmente (#195).
+
 ## [1.64.4] — 2026-08-23
 
 ### Corrigido
