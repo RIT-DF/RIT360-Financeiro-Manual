@@ -11,6 +11,13 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.64.4] — 2026-08-23
+
+### Corrigido
+
+- **Confirmação de ação em lote mencionando itens que não existiam**: ao remover ou abandonar tarefas em lote (tela de projeto) e ao concluir ou descartar feedbacks em lote (superadmin), a confirmação chegava a dizer "as demais 0 da seleção não serão tocadas" quando não havia nenhum item fora do escopo da ação. A frase só aparece agora quando há de fato algum item não afetado.
+- **Rodapé do texto institucional na prestação de contas**: quando a organização não tinha texto institucional cadastrado, o rodapé do campo dizia "Usando o texto cadastrado na organização" — contradizendo a própria dica do campo. Ele agora reflete o estado real: sem texto cadastrado, usando o texto cadastrado, ou texto alterado só para esta emissão (#202).
+
 ## [1.64.3] — 2026-08-23
 
 <!-- destaque: A correção de categoria em lançamento pago voltou a funcionar. -->
