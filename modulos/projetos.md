@@ -96,6 +96,71 @@ No topo você tem **busca por nome** e filtros por **Status**, **Tipo** e **Saú
 
 O botão **Novo projeto** abre um **assistente de 3 passos** (tipo e identidade · período · financeiro essencial), com textos de ajuda em cada etapa e o aviso de que você ficará registrado como coordenador do projeto. Para um Evento, o assistente pede o número estimado de participantes; o texto se adapta ao tipo escolhido. Convidar outras pessoas para a equipe é feito depois, já com o projeto criado (ver "Equipe" na aba Planejamento).
 
+## Arquivar e desarquivar um projeto
+{: #arquivar-projeto }
+
+[![Lista de projetos com o contador de arquivados e o atalho para vê-los](/assets/screenshots/manual-projetos-11-arquivados-contador.png)](/assets/screenshots/manual-projetos-11-arquivados-contador.png)
+*A lista de projetos esconde os arquivados por padrão — um contador diz quantos estão escondidos, com atalho para vê-los*
+
+> 💡 **Por que isso importa**
+>
+> Toda OSC acumula projetos concluídos ou cancelados há anos, e eles não deixam de existir — continuam valendo para o fechamento do exercício, para relatórios e para o histórico. O problema é a **lista do dia a dia**: depois de alguns anos, ela vira uma rolagem enorme de coisa que já acabou, e achar o projeto que está rodando agora fica mais difícil a cada mês. **Arquivar** resolve isso sem apagar nada — tira o projeto do caminho de quem trabalha hoje, sem tirá-lo da história da organização.
+
+> 📖 **Conceito · Arquivar não é um status do projeto**
+>
+> Arquivado **não entra** no ciclo de vida (Em planejamento → Em execução → Concluído, etc. — ver acima). É uma marcação **à parte**, que existe **por cima** de qualquer status. Um projeto Concluído pode estar arquivado ou não; um projeto ainda Em execução também pode ser arquivado, se a OSC decidir tirá-lo da vista por algum motivo. Desarquivar devolve o projeto **exatamente como estava** — o status que ele tinha antes de ser arquivado não muda em nada.
+
+### Como arquivar
+
+Cada projeto da lista tem um botão de **Arquivar** (individual). Se o projeto ainda está **ativo** — em planejamento, aguardando aprovação, em execução, aguardando encerramento ou pausado —, a confirmação avisa disso antes de deixar seguir, porque arquivar um projeto em andamento tira as pessoas dele do radar.
+
+> ⚠️ **Atenção · Arquivar um projeto ativo não pausa nem cancela o trabalho**
+>
+> O projeto continua no status em que estava — só some das telas que listam "o que está acontecendo agora". Se a intenção é **parar** o projeto temporariamente, use **Pausar** no ciclo de vida (ver acima), não Arquivar. Se a intenção é **encerrar sem concluir**, use **Cancelar**. Arquivar é sobre visibilidade; Pausar e Cancelar são sobre o andamento do próprio projeto.
+
+### Arquivar vários de uma vez
+
+[![Seleção múltipla na lista de projetos com a barra de ações em lote](/assets/screenshots/manual-projetos-12-arquivar-lote.png)](/assets/screenshots/manual-projetos-12-arquivar-lote.png)
+*Projetos selecionados e a barra de ações em lote — Arquivar, com a contagem de quantos serão afetados*
+
+Marque o checkbox de cada projeto (ou selecione todos de uma vez) para arquivar vários juntos — útil ao início de um exercício novo, para tirar de circulação de uma só vez os projetos concluídos no ano anterior. A confirmação diz **quantos projetos** serão afetados antes de você seguir.
+
+[![Painel de resultado da ação em lote sobre projetos](/assets/screenshots/manual-projetos-13-arquivar-lote-resultado.png)](/assets/screenshots/manual-projetos-13-arquivar-lote-resultado.png)
+*Resultado da ação em lote — projetos arquivados, recusados por regra e com falha, cada um com o motivo*
+
+Depois de confirmar, um painel de resultado mostra, separadamente, o que foi **concluído**, o que foi **recusado por regra** e o que **falhou** — o mesmo modelo usado nas ações em lote de [Tarefas e Evidências](#tarefas-selecao-em-lote), acima. O painel fica na tela; releia antes de fechar se o lote for grande.
+
+### O que muda ao arquivar
+
+- **Deixa de ser oferecido** ao lançar uma despesa, pedir pagamento, pedir reembolso ou importar lançamentos por planilha — o projeto não aparece mais nas listas de "vincular a um projeto".
+- **Sai do menu e dos cartões do Painel**, que mostram só o que está em andamento.
+- **Sai da [página pública de transparência](/configuracoes/pagina-publica/)**, se a OSC publica projetos — mesmo que o projeto estivesse marcado para aparecer lá (ver [Escolher quais projetos aparecem na página pública](/configuracoes/pagina-publica/#escolher-projetos), abaixo).
+- **Para de gerar lembretes automáticos** — tarefa atrasada, marco vencido, cobrança de status update. Ninguém recebe mais aviso sobre um projeto que já não está em foco.
+
+### O que não muda
+
+- **O fechamento orçamentário do exercício** continua contando o projeto normalmente.
+- **Relatórios e filtros de histórico** continuam enxergando o projeto — arquivar não apaga nem esconde dado financeiro já lançado.
+
+> ✓ **Dica · O passado não muda porque alguém arquivou**
+>
+> Arquivar é uma decisão sobre **o que aparece hoje**, nunca sobre **o que aconteceu**. Se você está prestando contas de um exercício encerrado, pode arquivar os projetos daquele ano sem medo: o relatório de prestação de contas, o fechamento orçamentário e o histórico de movimentações continuam íntegros e completos.
+
+### Editar um projeto arquivado
+
+[![Aviso ao tentar editar um projeto arquivado](/assets/screenshots/manual-projetos-14-arquivado-editar-bloqueado.png)](/assets/screenshots/manual-projetos-14-arquivado-editar-bloqueado.png)
+*Tentativa de editar um projeto arquivado — a tela explica que é preciso desarquivar primeiro*
+
+O **nome e os dados de identificação** de um projeto arquivado ficam **congelados**. Se você tentar editar, a tela avisa que é preciso **desarquivar** primeiro.
+
+> ⚠️ **Atenção · Congelado é de propósito, não é bug**
+>
+> A trava existe para que um projeto arquivado — inclusive um já Concluído, já prestado — não mude de nome ou de dado de identificação **em silêncio**, sem que a decisão de reabri-lo seja explícita. Precisa corrigir algo? Desarquive, edite, e arquive de novo se quiser.
+
+### Quem pode arquivar e desarquivar
+
+Arquivar e desarquivar são ações de quem **administra os projetos da organização** (Presidente, Tesoureiro) — e também do **coordenador daquele projeto específico** (ver "Papel no projeto", acima): mesmo sem administrar os demais projetos da OSC, quem coordena um projeto pode arquivá-lo e desarquivá-lo. O que abre esse acesso é o **vínculo de coordenador naquele projeto**, não o papel da pessoa na organização — ver o quadro em [Papéis e Permissões](/papeis/#quadro-de-permissoes-por-papel).
+
 ## A aba Resumo
 
 [![Aba Resumo do projeto](/assets/screenshots/manual-projetos-02-resumo.png)](/assets/screenshots/manual-projetos-02-resumo.png)
@@ -426,6 +491,7 @@ Cada encerramento alimenta um **acervo de Lições Aprendidas** da OSC, acessív
 ## Glossário rápido
 
 - **Projeto** — iniciativa da OSC com objetivo, prazo, orçamento e equipe (evento, obra, campanha, edital, serviço).
+- **Arquivado** — marcação à parte do ciclo de vida: tira o projeto das listas ativas, do menu, do Painel, da página pública e dos lembretes automáticos, sem apagar nada. Continua valendo para orçamento, relatórios e histórico. Desarquivar devolve tudo como estava; enquanto arquivado, nome e dados de identificação não podem ser editados.
 - **Tipo do projeto** — categoria que adapta a experiência: Evento, Obra, Campanha, Produto/Serviço, Programa ou "Começar do zero". Evento ganha calculadora de taxa e participantes; cada tipo (exceto "Começar do zero") tem marcos-modelo e riscos típicos sugeridos.
 - **Programa** — tipo de projeto para uma linha de atendimento ou serviço que se repete, com metas e público definido; ao contrário de Evento (data marcada) ou Obra (entrega física), não tem um único marco de conclusão — tem um período, que pode ser longo.
 - **Ciclo de vida** — a sequência de status do projeto (Em planejamento → Aguardando aprovação → Em execução → Aguardando encerramento → Concluído; além de Pausado e Cancelado).

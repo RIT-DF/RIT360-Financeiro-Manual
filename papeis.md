@@ -25,6 +25,7 @@ O RIT360 Financeiro tem **sete papéis** que um usuário pode ocupar dentro de u
 > 💡 O papel **Diretor** era chamado "Dirigente" em versões anteriores — é o mesmo papel, só o nome na tela mudou (versão 0.23.0).
 
 ## Quadro de permissões por papel
+{: #quadro-de-permissoes-por-papel }
 
 Visão rápida do que cada papel pode fazer. **✓** = pode operar · **👁** = só leitura · **—** = sem acesso. A coluna Presidente vale também para o Superadmin da plataforma.
 
@@ -39,11 +40,16 @@ Visão rápida do que cada papel pode fazer. **✓** = pode operar · **👁** =
 | Solicitar pedido de compra e pagamento | ✓ | ✓ | — | — | ✓ | — |
 | Solicitar o **próprio** reembolso | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | Coordenar um projeto (do qual é coordenador) | ✓ | ✓ | — | — | ✓ | — |
+| Arquivar / desarquivar projeto | ✓ | ✓ | — | — | ✓¹ | — |
 | Ver o orçamento anual (previsto × realizado) | ✓ | ✓ | 👁 | 👁 | 👁 | — |
 | Elaborar / gerenciar o orçamento | ✓ | ✓ | — | — | — | — |
 | Aprovar o orçamento (`budget.approve`) | conforme o fluxo | conforme o fluxo | — | — | conforme o fluxo | — |
 
 > "Conforme o fluxo" = depende do que a OSC configurou em Fluxo de Aprovações (padrão: Presidente e Tesoureiro). Diretor e Comissão Fiscal **nunca** são aprovadores.
+>
+> ¹ O Coordenador de Projeto só arquiva/desarquiva **o(s) projeto(s) que coordena** — não qualquer projeto da OSC. E o que habilita isso não é o papel na organização: qualquer pessoa registrada como coordenadora de um projeto pode arquivá-lo, mesmo que o papel dela na OSC seja outro (ex: um voluntário coordenando um evento). Ver [Projetos → Quem pode arquivar e desarquivar](/modulos/projetos/#arquivar-projeto).
+
+> ⚠️ Este quadro reflete a **configuração padrão** dos papéis. Permissões são configuráveis por organização, em [Configurações → Cargos e permissões](/configuracoes/cargos/) — uma OSC que tenha ajustado os cargos pode ter um quadro diferente deste.
 
 > 💡 **Confirmar pagamento** aparece como linha própria porque é uma **permissão separada** de lançar/editar: dá para montar um cargo que registra despesas mas não dá baixa em pagamentos. Nos papéis padrão, quem lança também paga — a separação só acontece se a OSC quiser, em [Cargos e permissões](/configuracoes/cargos/#permissao-pagar). Essa mesma permissão define quem vê os **dados bancários completos** de quem recebe.
 

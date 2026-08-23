@@ -67,11 +67,52 @@ A seção **O que aparece na página** traz os quatro blocos que a OSC pode most
 | **Quem somos** | A missão da organização | CNPJ, cidade, site e e-mail de contato |
 | **Panorama do período** | Receitas, despesas e resultado do período | Comparação com o período anterior equivalente |
 | **De onde vem, para onde vai** | Composição das receitas e das despesas por categoria | A lista completa de categorias (no Resumido, só as 5 maiores, com o restante agrupado em "Outras") |
-| **Projetos** | Nome, objetivo e situação de cada projeto | Período do projeto e orçado × executado |
+| **Projetos** | Nome, objetivo e situação de cada projeto **entre os escolhidos para aparecer** (ver abaixo) | Período do projeto e orçado × executado |
 
 > 📖 **Conceito · Resumido não é só um jeito mais bonito de mostrar**
 >
 > A diferença entre Resumido e Detalhado não é estética: no modo **Resumido, o detalhe nem sai do servidor**. Não é uma informação que está lá escondida atrás de um clique ou de um "ver mais" — ela simplesmente não é enviada para o navegador do visitante. Quem escolhe mostrar menos, mostra menos de verdade. Isso importa para a OSC que quer publicar o panorama sem abrir a lista inteira de categorias, por exemplo.
+
+## Escolher quais projetos aparecem na página pública
+{: #escolher-projetos }
+
+Com o bloco **Projetos** ligado, o cartão dele na tela de configuração passa a mostrar **quantos projetos aparecem** na página pública, com um botão **Escolher projetos**.
+
+[![Bloco Projetos com o contador e o botão Escolher projetos](/assets/screenshots/config-pagina-publica-bloco-projetos-contador.png)](/assets/screenshots/config-pagina-publica-bloco-projetos-contador.png)
+*O cartão do bloco Projetos mostra quantos projetos estão visíveis, com o botão para escolher*
+
+Esse botão abre uma tela própria, com **busca por nome**, **filtro por situação** e um botão de mostrar/esconder em cada projeto — pensada para a OSC que tem dezenas de projetos e não quer rolar uma lista longa procurando o que precisa ligar ou desligar.
+
+[![Tela de escolha de projetos com busca, filtro e seleção em lote](/assets/screenshots/config-pagina-publica-escolher-projetos.png)](/assets/screenshots/config-pagina-publica-escolher-projetos.png)
+*Escolha de projetos — busca, filtro por situação, botão por linha e ação em lote no rodapé*
+
+Há também **seleção múltipla com ação em lote** (mostrar/esconder vários de uma vez), do mesmo jeito que as demais listas do RIT360 Financeiro — marque os projetos e use a barra de ações no rodapé.
+
+> 💡 **Por que isso importa**
+>
+> Uma OSC que roda dez ou vinte projetos por ano não quer decidir, um a um, sempre que cadastra um projeto novo, se ele deve ou não aparecer publicamente — quer decidir **em bloco**, de tempos em tempos, e ajustar exceções pontuais quando precisar. A tela de escolha existe para isso: revisão rápida do conjunto inteiro, não clique repetido projeto por projeto.
+
+> ⚠️ **Atenção · Todos aparecem por padrão**
+>
+> **Este é o ponto que mais gera surpresa.** Com o bloco Projetos ligado, **todo projeto novo nasce aparecendo** na página pública — a OSC precisa **esconder** o que não quer publicar, não o contrário. Se a sua organização tem um projeto sensível (uma negociação em andamento, uma iniciativa que ainda não quer anunciar), **não presuma que ele está protegido só porque você não mexeu em nada**: entre na tela de escolha e esconda-o você mesmo.
+
+### Projeto em planejamento ou aguardando aprovação
+
+Dá para **escolher antecipadamente** um projeto que ainda está em planejamento ou aguardando aprovação inicial — ele não aparece na página pública **ainda**, porque a situação em que está não permite, mas a escolha fica **guardada** e passa a valer automaticamente assim que o projeto entrar em execução. Você não precisa lembrar de voltar aqui depois de aprovar o projeto.
+
+### Projeto cancelado e projeto arquivado nunca aparecem
+
+Projeto **cancelado** e projeto **[arquivado](/modulos/projetos/#arquivar-projeto)** não vão à página pública **de jeito nenhum** — e por isso **não entram** na tela de escolha: não há o que decidir sobre um projeto que a regra já tira de circulação.
+
+> ✓ **Dica · Arquivar já tira da página pública, sem precisar esconder à mão**
+>
+> Se um projeto concluído há tempos está publicado e você não quer mais vê-lo na página, **não é preciso** abrir a tela de escolha e desligá-lo — [arquivá-lo](/modulos/projetos/#arquivar-projeto) já o remove da página pública, junto com o resto do que arquivar faz (sai do menu, do Painel, dos lembretes). Uma ação resolve as duas coisas.
+
+Desarquivar devolve o projeto à página pública **exatamente como estava** — a escolha de mostrar ou esconder que ele tinha antes de ser arquivado continua guardada, sem precisar refazer.
+
+### Se a OSC esconder todos
+
+Escondeu todos os projetos (ou não tem nenhum elegível no momento)? A seção **Projetos** **não aparece** na página pública, em vez de aparecer vazia. A tela de configuração avisa isso: o bloco está ligado, mas nenhum projeto será exibido enquanto essa for a escolha.
 
 ## Contato de proteção de dados (se estiver preenchido)
 

@@ -11,6 +11,13 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.66.1] — 2026-08-23
+
+### Corrigido
+
+- **Seis funções internas com referência a coluna ou tipo inexistente**: passaram a falhar sempre que usadas. Entre elas, a lista de lançamentos sem projeto vinculado — que nunca chegou a funcionar — e a verificação de campos faltantes no encerramento de projeto.
+- **Nova varredura interna**: passamos a checar as funções internas do banco em busca desse tipo de defeito antes de publicar uma mudança, para não deixar mais nenhuma quebrada em silêncio.
+
 ## [1.66.0] — 2026-08-23
 
 <!-- destaque: Agora dá para escolher quais projetos aparecem na página pública de transparência — antes, apareciam todos. -->

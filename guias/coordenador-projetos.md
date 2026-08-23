@@ -114,6 +114,10 @@ A maioria das OSCs nunca **fecha** um projeto: o evento acaba, todos vão embora
 >
 > [![Assistente de encerramento](/assets/screenshots/manual-projetos-07-encerramento-wizard.png)](/assets/screenshots/manual-projetos-07-encerramento-wizard.png)
 
+> ✓ **Dica · Depois de encerrar, considere arquivar**
+>
+> Um projeto Concluído continua na lista do dia a dia até alguém [arquivá-lo](/modulos/projetos/#arquivar-projeto) — nada obriga a fazer isso na hora, mas é um bom hábito de fim de exercício. Arquivar tira o projeto do menu e do Painel sem apagar nada (orçamento, relatórios e histórico continuam intactos), e, se a OSC publica projetos na [página pública](/configuracoes/pagina-publica/#escolher-projetos), já o remove de lá também — sem precisar escondê-lo à mão numa segunda tela.
+
 ## Checklist do bom coordenador
 
 - [ ] Objetivo, critérios de sucesso e fora-de-escopo escritos antes de executar.
