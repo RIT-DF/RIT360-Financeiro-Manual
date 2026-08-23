@@ -476,6 +476,12 @@ Para corrigir:
 >
 > Um link ou atalho salvo de antes desta versão pode tentar abrir o formulário de edição comum para um lançamento já **pago**. Isso não é mais possível: você é redirecionado ao **detalhe** do lançamento, com um aviso explicando por quê — a porta para corrigir um lançamento pago é sempre o **Corrigir dados**, no detalhe.
 
+> 📖 **Conceito · Lançamento dividido entre categorias não mostra o campo Categoria aqui**
+>
+> Um lançamento pode estar [dividido entre várias categorias](#registrar-novo-lançamento) — é o caso, por exemplo, dos pedidos importados da loja virtual com produtos de categorias diferentes, e de qualquer lançamento que você mesmo tenha dividido na hora de registrar. Nesse caso, o **Corrigir dados** não oferece o campo **Categoria**: "corrigir a categoria" deixa de ter um significado único quando o valor está repartido em várias linhas — não dá para saber qual delas deveria mudar, nem o que aconteceria com o valor de cada uma. O ajuste, então, é feito **na própria divisão**, onde cada categoria tem seu valor. Os demais campos — **data de pagamento**, **conta bancária**, **centro de custo**, **projeto**, **descrição** e **favorecido** — continuam corrigíveis normalmente, do mesmo jeito.
+>
+> Se a correção não puder ser salva, a tela informa o motivo, em vez de uma mensagem genérica.
+
 ## Importar lançamentos
 
 [![Importar Lançamentos com 2 fontes](/assets/screenshots/manual-04b-importar-lancamentos.png)](/assets/screenshots/manual-04b-importar-lancamentos.png)

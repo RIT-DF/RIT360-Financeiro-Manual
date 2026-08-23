@@ -1,6 +1,12 @@
 {
   "versoes": [
     {
+      "versao": "1.64.3",
+      "data": "2026-08-23",
+      "destaque": true,
+      "resumo": "A correção de categoria em lançamento pago voltou a funcionar."
+    },
+    {
       "versao": "1.64.2",
       "data": "2026-08-22",
       "destaque": false
