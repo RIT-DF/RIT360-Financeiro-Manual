@@ -11,6 +11,58 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.67.4] — 2026-08-24
+
+### Corrigido
+
+- **Documento anexado sem rótulo fixo**: a linha do documento passa a mostrar só tamanho e data, sem um rótulo de tipo escolhido pelo sistema — o documento pode ser boleto, nota fiscal, contrato ou planilha, e qualquer rótulo automático estaria errado em parte dos casos.
+- **Confirmação de remoção mais clara**: agora diz o efeito real de remover cada documento. Documento vindo de uma solicitação (pedido de pagamento ou reembolso) é desvinculado do lançamento e continua disponível na solicitação de origem; documento anexado diretamente ao lançamento é apagado por completo. Botão e texto mudam conforme o caso.
+- **Erro no console para quem não é superadministrador**: corrigido um erro 403 que aparecia no console do navegador para usuários sem esse papel, sem afetar o uso da tela.
+
+## [1.67.3] — 2026-08-24
+
+### Corrigido
+
+- **Botão de remover documento**: um documento vindo de uma solicitação havia perdido, por engano, o botão de remoção. Corrigido.
+
+## [1.67.2] — 2026-08-24
+
+### Corrigido
+
+- **Documento duplicado no lançamento**: documentos vindos de reembolso apareciam duas vezes no detalhe do lançamento. Cada documento passa a aparecer uma única vez.
+
+## [1.67.1] — 2026-08-24
+
+### Corrigido
+
+- **Importação de planilha de lançamentos travada na fila**: uma regressão da versão anterior fazia a importação confirmar o início do processamento e nunca concluir. Corrigida.
+- **Quatro funções internas com erro de tipo**: corrigidas.
+
+## [1.67.0] — 2026-08-24
+
+### Modificado
+
+- **Aprovar, recusar e outras ações deixam de esperar o aviso**: em cerca de vinte pontos do sistema — aprovar e recusar pagamento/reembolso, publicar política, encerrar organização, concluir cadastro, comentar em projeto, entre outros — a ação deixa de esperar o envio do e-mail ou da notificação para responder. Os mesmos avisos continuam saindo, logo em seguida.
+- **Falha no envio de aviso passa a ficar registrada**: quando um e-mail ou notificação não sai, isso passa a ficar registrado para conferência, em vez de simplesmente não acontecer sem ninguém perceber. Corrigidos também cinco casos em que o aviso podia se perder por completo, sem nenhum registro.
+
+
+
+### Corrigido
+
+- **Aviso de exclusão de conta**: o e-mail do pedido de exclusão de conta agora é enviado de forma confiável; se o envio falhar, a falha fica registrada para conferência.
+
+## [1.66.3] — 2026-08-24
+
+### Corrigido
+
+- **Aprovação de pagamento e reembolso mais rápida**: aprovar um pedido de pagamento ou um reembolso agora responde assim que a decisão é gravada, sem esperar o envio dos avisos por e-mail e push. Os mesmos avisos continuam saindo, logo em seguida; se algum não sair, fica registrado para conferência posterior.
+
+## [1.66.2] — 2026-08-24
+
+### Corrigido
+
+- **Centro de custo do pedido de pagamento**: o centro de custo informado no pedido de pagamento agora acompanha o lançamento gerado na aprovação, inclusive em pedidos parcelados e recorrentes. Com isso, esses gastos deixam de aparecer como "sem centro de custo" em relatórios e orçamento, e o gestor de centro de custo volta a ser reconhecido como aprovador quando a organização usa essa opção.
+
 ## [1.66.1] — 2026-08-23
 
 ### Corrigido
