@@ -11,6 +11,12 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.70.0] — 2026-08-29
+
+### Adicionado
+
+- **Diagnóstico dos testes de integração no painel da plataforma**: quando um teste de integração falha, agora aparece o motivo real da falha em vez de uma mensagem genérica. Cada teste executado fica registrado, e o painel de e-mail passou a mostrar quantas vezes o envio precisou usar o provedor reserva e quando foi a última vez.
+
 ## [1.69.2] — 2026-08-29
 
 ### Corrigido
