@@ -1,6 +1,11 @@
 {
   "versoes": [
     {
+      "versao": "1.69.2",
+      "data": "2026-08-29",
+      "destaque": false
+    },
+    {
       "versao": "1.69.1",
       "data": "2026-08-29",
       "destaque": false

@@ -11,6 +11,12 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.69.2] — 2026-08-29
+
+### Corrigido
+
+- **Preferências de notificação no celular**: a tela de canais de aviso, em Meu perfil, passou a se adaptar a telas estreitas. Cada tipo de aviso aparece como um bloco próprio, com os canais (E-mail, Push e Telegram) identificados pelo nome ao lado de cada botão — não é mais preciso girar o aparelho para alcançar a última coluna. No computador nada muda.
+
 ## [1.69.1] — 2026-08-29
 
 ### Corrigido
