@@ -11,6 +11,35 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.72.1] — 2026-08-29
+
+### Corrigido
+
+- **Aprovação e reprovação de pedido de compra e de pagamento**: voltaram a funcionar. A leitura dos votos da solicitação estava consultando os nomes de outra tabela e falhava em toda solicitação.
+
+## [1.72.0] — 2026-08-29
+
+### Corrigido
+
+- **Aprovação por cargo agora enxerga a fila**: quem recebe a permissão de aprovar através do cargo passa a ver a fila de aprovações, é contado no Painel e consegue abrir as solicitações. Antes, essa pessoa conseguia aprovar sem nunca ver a fila.
+
+### Adicionado
+
+- **Aviso quando ninguém pode aprovar**: a tela de configuração do fluxo de aprovação passou a avisar quando a configuração escolhida deixa nenhuma pessoa apta a aprovar.
+
+## [1.71.0] — 2026-08-29
+
+<!-- destaque: A fila de aprovações agora aparece assim que você abre Pagamentos e Reembolsos. -->
+
+### Corrigido
+
+- **A fila de aprovação não some mais sem explicação**: antes, quando o sistema não conseguia conferir se você podia aprovar, a tela simplesmente não mostrava a fila nem o botão de aprovar — parecia que não havia nada a aprovar. Agora ele avisa que não conseguiu conferir e oferece tentar de novo.
+- **Cards do Painel abrem a lista certa**: os cards do Painel passaram a abrir exatamente a mesma lista que contaram — o card de pedidos de pagamento levava para a lista errada.
+
+### Modificado
+
+- **Fila de aprovação já na abertura**: ao abrir Pagamentos e Reembolsos, quem tem solicitações esperando a própria aprovação já cai na fila, em vez de cair na lista geral.
+
 ## [1.70.0] — 2026-08-29
 
 ### Adicionado
