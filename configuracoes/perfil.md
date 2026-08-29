@@ -43,11 +43,11 @@ Se você nunca pede reembolso, pode deixar em branco — só preencha quando for
 
 ## Notificações
 
-Três grupos de configuração:
+Quatro grupos de configuração:
 
 ### Canais de notificação
 
-O RIT360 Financeiro tem dois canais de notificação: **E-mail** e **Push**. E-mail é o canal default — sempre disponível, sem configuração adicional. Push é ativado por dispositivo (veja abaixo).
+O RIT360 Financeiro tem três canais de notificação: **E-mail**, **Push** e **Telegram**. E-mail é o canal default — sempre disponível, sem configuração adicional. Push é ativado por dispositivo (veja abaixo). Telegram é vinculado uma vez à sua conta e passa a valer em qualquer dispositivo onde você tenha o Telegram instalado.
 
 ### Push (avisos no celular ou no navegador)
 
@@ -73,9 +73,41 @@ A ativação é **por dispositivo**, com um interruptor mestre **"Ativar push ne
 >
 > O endpoint do seu dispositivo é armazenado da mesma forma que outros dados de contato. Você pode desativar a qualquer momento no master switch ou pedir exclusão completa pelo fluxo LGPD em **Ações de Conta**.
 
+### Telegram (avisos direto no seu Telegram)
+
+A partir da versão **v1.69.0**, **Telegram** é o terceiro canal de notificações, ao lado do E-mail e do Push. É pensado para quem já usa Telegram no dia a dia e não quer depender de abrir o e-mail ou o navegador para saber que um reembolso foi aprovado ou que um pedido está esperando seu voto.
+
+<!-- CAPTURA PENDENTE: cartão "Telegram" em Meu Perfil → Notificações, estado NÃO vinculado (botão para gerar o link de vínculo). Rota /perfil, viewport desktop e mobile. Sessão de teste (OSC Alpha) caiu para a tela de login no momento desta redação — captura fica para quando o Bruno confirmar sessão autenticada. -->
+
+**Como vincular:**
+
+1. Em **Meu Perfil**, encontre o cartão **Telegram**, dentro de Notificações.
+2. Clique para vincular. O RIT360 Financeiro gera um **link com um código de uso único, válido por 15 minutos**.
+3. O link abre a conversa com o bot **@rit360financeiro_bot** no Telegram.
+4. Toque em **Iniciar** (o botão pode aparecer como **Start**, dependendo do idioma do seu Telegram). O vínculo se completa sozinho, sem mais nenhum passo.
+5. A partir daí, os avisos que você já recebia por e-mail passam a valer também no Telegram — e você ajusta evento a evento, em cada canal, na **matriz de preferências** logo abaixo.
+
+Pode **desvincular** quando quiser, pelo mesmo cartão. Desvincular **apaga o contato guardado** — para voltar a receber no Telegram depois, é preciso vincular de novo, com um link novo.
+
+> ⚠️ **Atenção · O código expira em 15 minutos**
+>
+> Se você demorar para tocar em Iniciar, o bot avisa que o código venceu — não é erro, e a tela de perfil permite gerar quantos links precisar. Cada link vale **uma vez só**: depois de usado (ou vencido), gere outro.
+
+> ⚠️ **Atenção · O bot não responde perguntas**
+>
+> O **@rit360financeiro_bot** só entrega avisos — ele não é um canal de suporte e não interpreta mensagens que você mandar para ele. Dúvida ou problema se resolve dentro do próprio RIT360 Financeiro, não pelo Telegram.
+
+> 📖 **Conceito · Vincular não liga tudo automaticamente para sempre**
+>
+> Vincular o Telegram não significa que toda notificação passa a chegar por lá. Você escolhe o que recebe em cada canal, evento por evento, na matriz de preferências — o Telegram entra com a mesma seleção que você já tinha no e-mail, e dali em diante os três canais são independentes.
+
+> 🔒 **Privacidade**
+>
+> Seu identificador do Telegram é armazenado da mesma forma que outros dados de contato. Desvincular remove esse contato guardado; para exclusão completa dos seus dados, use o fluxo LGPD em **Ações de Conta**.
+
 ### Matriz granular de preferências
 
-Tabela que cruza **eventos × 2 canais** (E-mail e Push) e permite controle fino sobre quais notificações receber e por onde. Os eventos estão agrupados por área:
+Tabela que cruza **eventos × 3 canais** (E-mail, Push e Telegram) e permite controle fino sobre quais notificações receber e por onde. Os eventos estão agrupados por área:
 
 - **Reembolsos** (5): submetido, aprovação parcial, aprovado, rejeitado, pago.
 - **Pedidos de Compra e Pagamento** (5): submetido, aprovação parcial, aprovado, rejeitado, pago.

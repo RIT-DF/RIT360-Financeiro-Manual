@@ -1,6 +1,22 @@
 {
   "versoes": [
     {
+      "versao": "1.69.1",
+      "data": "2026-08-29",
+      "destaque": false
+    },
+    {
+      "versao": "1.69.0",
+      "data": "2026-08-29",
+      "destaque": true,
+      "resumo": "Agora dá para receber os avisos do sistema pelo Telegram — vincule sua conta em Meu perfil."
+    },
+    {
+      "versao": "1.68.0",
+      "data": "2026-08-24",
+      "destaque": false
+    },
+    {
       "versao": "1.67.4",
       "data": "2026-08-24",
       "destaque": false

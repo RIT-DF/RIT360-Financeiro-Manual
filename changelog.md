@@ -11,6 +11,26 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.69.1] — 2026-08-29
+
+### Corrigido
+
+- **Vínculo do Telegram**: corrigido um defeito que impedia qualquer pessoa de conectar a conta — gerar o link, concluir o vínculo e desvincular voltaram a funcionar.
+
+## [1.69.0] — 2026-08-29
+
+<!-- destaque: Agora dá para receber os avisos do sistema pelo Telegram — vincule sua conta em Meu perfil. -->
+
+### Adicionado
+
+- **Canal de avisos pelo Telegram**: passou a existir um terceiro canal de avisos, ao lado de e-mail e push. A pessoa vincula a conta em Meu perfil, por um link que abre a conversa com o bot, e escolhe evento a evento o que quer receber em cada canal. Ao vincular, os avisos que ela já recebe por e-mail passam a valer também no Telegram. Dá para desvincular a qualquer momento.
+
+## [1.68.0] — 2026-08-24
+
+### Modificado
+
+- **Aprovação de pedido de pagamento e reembolso mais rápida**: a tela responde em cerca de metade do tempo que levava antes. Nada mudou em quem pode aprovar, no quórum exigido ou nos avisos enviados.
+
 ## [1.67.4] — 2026-08-24
 
 ### Corrigido

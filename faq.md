@@ -398,6 +398,12 @@ Em **Meu Perfil → Notificações**, toque no interruptor **"Ativar push neste 
 
 A ativação é **por dispositivo**: pode ativar no celular pessoal e deixar desativado no celular do trabalho, sem afetar a configuração da sua conta.
 
+### Como vinculo meu Telegram para receber avisos?
+
+Em **Meu Perfil → Notificações**, no cartão **Telegram**, clique para vincular. O RIT360 Financeiro gera um link com um **código de uso único, válido por 15 minutos**, que abre a conversa com o bot **@rit360financeiro_bot**. Toque em **Iniciar** (ou **Start**) — o vínculo se completa sozinho. Se o código expirar antes de você tocar em Iniciar, gere outro link; não há limite de tentativas.
+
+**O bot não responde perguntas** — ele só entrega os avisos que você configurou na matriz de preferências. Dúvida ou problema continuam sendo resolvidos dentro do próprio RIT360 Financeiro.
+
 ## Guias por papel
 
 ### Existe um guia de como atuar no meu papel na OSC?
