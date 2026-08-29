@@ -25,6 +25,8 @@ Define quantos votos positivos são necessários para aprovar:
 - **1 voto** — um aprovador elegível decide. Mais ágil; típico de OSC menor ou despesas de menor valor.
 - **2 votos** — duas pessoas precisam aprovar. Mais controle; típico de OSC maior ou quando há regra estatutária de aprovação dupla.
 
+Ao lado do campo, um aviso mostra **quantas pessoas hoje estão aptas a aprovar** com a configuração atual da página inteira — soma das três formas descritas em [Papéis elegíveis para aprovar](#papeis-elegiveis-para-aprovar), logo abaixo (ex.: "Hoje, 2 pessoa(s) podem aprovar nesta organização"). Se a combinação de papéis, pessoas nomeadas e cargos com a permissão "Aprovar" chegar a **zero**, a página avisa que a organização ficaria sem ninguém apto a votar — em vez de deixar a OSC descobrir isso só quando o primeiro pedido travar sem conseguir sair de "Aguardando aprovação".
+
 > 📖 **Conceito · Quórum 2 e aprovação parcial**
 >
 > Com quórum 2, depois do primeiro voto positivo, o reembolso ou pedido entra em "Aguardando aprovação parcial" — os outros aprovadores elegíveis recebem notificação de que falta um voto. Quando o segundo voto positivo chega, o status muda para Aprovado. Com o padrão de **1 reprovação para barrar** (ver a seção seguinte), **se um aprova e outro rejeita, prevalece a rejeição** — princípio conservador: na dúvida, não autoriza.
@@ -60,10 +62,24 @@ Quando a organização exige **mais de uma**:
 > Se a sua OSC exige 1 aprovação, mantenha 1 reprovação: exigir 2 reprovações com quórum 1 cria um desequilíbrio estranho (aprovar é mais fácil que barrar). Faz mais sentido subir os dois lados quando a organização cresce — quórum 2 e 2 reprovações, por exemplo.
 
 ## Papéis elegíveis para aprovar
+{: #papeis-elegiveis-para-aprovar }
 
 Lista de papéis que podem votar em aprovações. Default: **Presidente** e **Tesoureiro**.
 
 A OSC pode optar por incluir outros papéis (Coordenador de Projeto, por exemplo) ou restringir (apenas Presidente). Depende da governança estatutária e da maturidade operacional.
+
+[![Papéis elegíveis para aprovar, com Presidente e Tesoureiro marcados](/assets/screenshots/config-aprovacoes-papeis-elegiveis.png)](/assets/screenshots/config-aprovacoes-papeis-elegiveis.png)
+*Papéis elegíveis para aprovar — o padrão marca Presidente e Tesoureiro*
+
+> 📖 **Conceito · Três formas de virar aprovador**
+>
+> Uma pessoa vota em reembolsos e pedidos de compra e pagamento quando se encaixa em **qualquer uma** das três:
+>
+> 1. **Papel elegível**, marcado nesta lista.
+> 2. **Pessoa nomeada**, adicionada individualmente logo abaixo, independente do papel dela.
+> 3. **Cargo com a permissão "Aprovar" ligada**, no editor de [Cargos e permissões](/configuracoes/cargos/#permissao-aprovar) — vale mesmo que o cargo não apareça marcado nesta lista.
+>
+> As três valem igual: quem se enquadra em qualquer uma vê a fila de "Aguardando aprovação", os botões de aprovar/reprovar, e é contado no Painel como aprovador. Presidente e Tesoureiro sempre aprovam pelas duas primeiras formas (papel elegível por padrão) **e** pela terceira (a permissão "Aprovar" vem essencial nos dois cargos) — na prática, redundante para eles, mas é a mesma regra que abre a porta para a sua OSC dar esse poder a um cargo próprio sem precisar nomear cada pessoa aqui.
 
 ## Pessoas específicas como aprovadores
 

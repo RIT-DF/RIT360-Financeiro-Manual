@@ -11,6 +11,18 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.73.1] — 2026-08-29
+
+### Corrigido
+
+- **Ida automática para a fila de aprovação, na primeira carga da página**: ao abrir Pagamentos e Reembolsos, a tela decidia para onde levar antes de saber quantas solicitações esperavam por aprovação — a ida automática para a fila simplesmente não acontecia na primeira vez que a página carregava.
+
+## [1.73.0] — 2026-08-29
+
+### Modificado
+
+- **Aterrissagem direta na fila de aprovação**: quem tem solicitações esperando a própria aprovação, ao abrir Pagamentos e Reembolsos pelo menu, cai direto na fila certa — inclusive quando elas estão em Reembolsos. Cada aba passou a mostrar quantas solicitações aguardam a aprovação da pessoa.
+
 ## [1.72.1] — 2026-08-29
 
 ### Corrigido

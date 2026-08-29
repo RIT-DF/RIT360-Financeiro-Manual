@@ -35,7 +35,7 @@ A página **Cargos e permissões** vai além dos 7 cargos padrão da plataforma:
 As permissões são organizadas por área, com as operações que importam separadas:
 
 - **Movimentações** — Ver · Criar / editar · **Pagar (marcar como pago)** · Excluir / estornar · Importar lançamentos
-- **Reembolsos e pedidos de compra e pagamento** — Ver · **Solicitar pedido de compra e pagamento** · Aprovar · Pagar
+- **Reembolsos e pedidos de compra e pagamento** — Ver · **Solicitar pedido de compra e pagamento** · **Aprovar** · Pagar
 - **Relatórios e auditoria** — Ver relatórios · **Redigir nota explicativa do relatório** · Ver trilha de auditoria · Exportar dados (LGPD)
 - **Configurações** — Config. financeira (contas e categorias) · Config. da OSC · Gerir membros e cargos
 
@@ -94,6 +94,26 @@ Antes, só dois cargos podiam **criar** pedidos de compra e pagamento, e a lista
 > ⚠️ **Atenção · Os dois caminhos por centro de custo/projeto continuam existindo à parte**
 >
 > Esta permissão libera o cargo para solicitar pedidos **sem restrição de área**. Gestor de centro de custo e coordenador de projeto continuam tendo, além dela, um caminho **próprio e mais restrito**: um ajuste em [Fluxo de Aprovações → Quem pode solicitar pedidos de compra e pagamento](/configuracoes/aprovacoes/#quem-pode-solicitar-pedidos-de-pagamento) que permite solicitar, mas **só** para o centro de custo ou o projeto sob a responsabilidade da pessoa. Os dois mecanismos coexistem: um é a permissão geral do cargo, o outro é o recorte por área.
+
+### Aprovar é a terceira forma de virar aprovador
+{: #permissao-aprovar }
+
+[![Interruptor "Aprovar" no bloco de Reembolsos e pedidos de compra e pagamento, no cargo Coord. de projeto](/assets/screenshots/config-cargos-aprovar.png)](/assets/screenshots/config-cargos-aprovar.png)
+*A permissão "Aprovar", na área "Reembolsos e pedidos de compra e pagamento" — desligada por padrão para cargos que não a têm como essencial*
+
+A permissão **Aprovar**, na área "Reembolsos e pedidos de compra e pagamento", é um **terceiro caminho** para votar em reembolsos e pedidos de compra e pagamento — ao lado dos dois já configurados em [Fluxo de Aprovações](/configuracoes/aprovacoes/#papeis-elegiveis-para-aprovar): papel listado ali e pessoa nomeada ali. Ligar esta permissão para um cargo dá a **qualquer pessoa com aquele cargo** o poder de aprovar, mesmo que o cargo não apareça na lista de papéis elegíveis da tela de Fluxo de Aprovações.
+
+- **Presidente** e **Tesoureiro** já têm a permissão como **essencial**, e ela não pode ser removida — é o piso desses dois cargos.
+- Para qualquer outro cargo, padrão ou personalizado, é um interruptor: o Presidente liga quando quiser que aquele cargo também aprove.
+- A **Comissão Fiscal** nunca tem esta permissão — conflita com a independência de quem fiscaliza (ver "Comissão Fiscal: independência protegida", mais abaixo).
+
+> ✓ **As três formas contam igual**
+>
+> Antes, quem chegava à condição de aprovador **só** por esta permissão de cargo — sem estar listado como papel ou nomeado individualmente em Fluxo de Aprovações — conseguia votar, mas a fila de "Aguardando aprovação" não aparecia para ele, e o Painel não o contava entre os aprovadores. Isso foi corrigido: hoje, papel elegível no fluxo, pessoa nomeada no fluxo e cargo com esta permissão dão exatamente a mesma experiência — fila visível, contagem no Painel, botões de aprovar e reprovar.
+
+> 💡 **Por que isso importa**
+>
+> Papel elegível e pessoa nomeada, ambos configurados em Fluxo de Aprovações, cobrem a maioria dos casos. Esta permissão serve para quando a sua OSC quer que **um cargo inteiro** aprove — inclusive um cargo personalizado que ela mesma criou — sem precisar voltar à tela de Fluxo de Aprovações toda vez que atribuir o cargo a alguém novo. Quem recebe o cargo já nasce apto a aprovar; quem perde o cargo, deixa de ser.
 
 ### Redigir a nota explicativa da prestação de contas também é por cargo
 {: #permissao-nota-explicativa }

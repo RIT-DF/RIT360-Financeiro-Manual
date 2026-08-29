@@ -66,6 +66,8 @@ O módulo de **Pedidos de Compra e Pagamento** é onde alguém da OSC **pede aut
 
 A lista exibe todos os pedidos com colunas Descrição, Destinatário, Valor, Data da despesa, Solicitante e Status. Quando o pedido já tem um lançamento vinculado (aprovado ou pago), o código curto desse lançamento aparece abaixo da descrição — útil para localizá-lo rapidamente em Movimentações.
 
+> ℹ️ **Se você é aprovador, abrir Pagamentos e Reembolsos já leva direto à fila** — inclusive quando as solicitações que esperam por você estão na aba Reembolsos, não nesta. Detalhe completo, com o porquê e o que fazer se a tela não conseguir confirmar que você pode aprovar, em [Reembolsos → Ao abrir Pagamentos e Reembolsos, você já cai na fila certa](/modulos/reembolsos/#aterrissagem-na-fila) — o mecanismo é idêntico para os dois módulos.
+
 > 💡 **A lista carrega por página.** Em organizações com muitos pedidos, a tela não traz o histórico inteiro de uma vez — ela carrega aos poucos, conforme você navega. Os **filtros continuam valendo sobre o conjunto inteiro**, não só sobre a página aberta.
 
 Nas abas **Aprovado** e **Pago** há um filtro de período (mês atual, mês anterior, trimestre, ano etc.), igual ao de Movimentações, sempre aberto no **mês atual** por padrão. As abas **Aguardando aprovação**, **Rascunho** e **Rejeitado** não usam esse filtro — mostram sempre tudo, para nada que precise da sua atenção ficar escondido fora do período selecionado.

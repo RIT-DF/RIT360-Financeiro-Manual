@@ -55,6 +55,19 @@ A lista mostra todos os reembolsos da organização. Cada papel vê um recorte d
 
 Cada aba mostra a contagem entre parênteses (ex: "Aguardando aprovação (3)") — útil para ver rapidamente o que está pendente.
 
+### Ao abrir Pagamentos e Reembolsos, você já cai na fila certa {#aterrissagem-na-fila}
+
+[![As duas abas de Pagamentos e Reembolsos, Pedidos de compra e pagamento e Reembolsos, cada uma mostrando quantas solicitações aguardam a aprovação da pessoa logada](/assets/screenshots/pagamentos-fila-abas-contagem.png)](/assets/screenshots/pagamentos-fila-abas-contagem.png)
+*Cada aba do topo mostra quantas solicitações aguardam especificamente a sua aprovação — aqui, 1 pedido e 3 reembolsos*
+
+Se você é aprovador e tem solicitações esperando o seu voto, clicar em **Pagamentos e Reembolsos** no menu já abre direto na aba **Aguardando aprovação** — sem precisar navegar até lá. Isso vale **entre as duas abas do módulo**: se as suas pendências estão em Reembolsos, você cai lá mesmo que o link tenha vindo de um contexto de Pedidos de Compra e Pagamento, e vice-versa. Sem nada para aprovar, a tela abre normalmente na lista geral.
+
+Cada uma das duas abas do topo (Pedidos de Compra e Pagamento, Reembolsos) mostra, ao lado do nome, **quantas solicitações aguardam a sua aprovação naquele módulo especificamente** — é esse número, e não a contagem geral da aba interna "Aguardando aprovação (3)", que responde "o que sobrou para eu resolver".
+
+> ⚠️ **Atenção · Se a tela não conseguir confirmar que você é aprovador**
+>
+> Checar se você está apto a aprovar depende de consultar o servidor. Quando essa checagem falha — problema passageiro de rede, por exemplo —, a tela avisa que **não conseguiu confirmar** e oferece **tentar novamente**, em vez de simplesmente não mostrar a fila nem os botões de aprovar (o que antes parecia dizer "não há nada para aprovar", quando na verdade a checagem é que tinha falhado). Se isso persistir depois de tentar de novo, é queda de conexão ou instabilidade do servidor, não falta de permissão — atualize a página ou tente mais tarde.
+
 > 💡 **A lista carrega por página.** Em organizações com muitos reembolsos, a tela não traz o histórico inteiro de uma vez — ela carrega aos poucos, conforme você navega. Os **filtros continuam valendo sobre o conjunto inteiro**, não só sobre a página aberta: filtrar por período ou por status busca em todos os reembolsos da organização, não só nos que já apareceram na tela.
 
 **Colunas (desktop):** Data da despesa, Descrição, Valor, Status, Solicitante, Ações. Quando o reembolso já tem um lançamento vinculado (aprovado ou pago), o código curto desse lançamento aparece abaixo da descrição — útil para localizá-lo rapidamente em Movimentações.
