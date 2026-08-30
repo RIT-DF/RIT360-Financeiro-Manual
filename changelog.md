@@ -11,6 +11,29 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.79.1] — 2026-08-30
+
+### Corrigido
+
+- **O texto da seleção na área de Documentos agora diz exatamente quantos documentos ela alcança.**
+- **A planilha de orçamento anual entregue nunca mais aparece na lista como falha.**
+
+## [1.79.0] — 2026-08-30
+
+<!-- destaque: Agora existe um lugar para encontrar tudo o que você já gerou: a área de Documentos. -->
+
+### Adicionado
+
+- **Área "Documentos"**, nova no menu, onde você encontra e baixa de novo tudo o que já foi gerado: relatórios em PDF, prestações de contas, documentos de projeto e planilhas.
+- **Acompanhamento do que está sendo preparado**, sem precisar recarregar a página.
+- **Filtros por tipo de documento, período e quem pediu.**
+- **Baixar vários documentos de uma vez**, numa entrega única.
+- **Quatro planilhas passaram a ficar guardadas** e agora aparecem também na área de Documentos: lançamentos, relatório financeiro, orçamento anual e execução orçamentária. Antes elas sumiam ao fechar a aba; continuam baixando na hora, como sempre.
+
+### Observação
+
+- **Cada pessoa vê apenas os documentos que já alcançava pelo caminho de origem** — a área de Documentos não dá acesso novo a ninguém.
+
 ## [1.78.6] — 2026-08-30
 
 Versão interna, sem mudança perceptível para quem usa o sistema. Restauramos doze verificações automáticas que haviam sido removidas por engano na versão anterior e que protegem a forma como o sistema separa contas de ativo das de passivo.
