@@ -11,6 +11,20 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.77.0] — 2026-08-30
+
+### Corrigido
+
+- **As barras de ações em lote (Movimentações e Usuários) passaram a empilhar os botões no celular**, em vez de deixar os últimos fora da tela. Todas as ações continuam alcançáveis, com o motivo à mostra quando alguma está indisponível.
+- **Cabeçalhos de página e de card passaram a quebrar a linha quando o texto é longo**, em vez de espremer o título ou deixar o link vazar pela borda.
+- **Na confirmação de importação**, a explicação do que vai acontecer saiu de dentro do botão e ganhou linha própria, ficando legível por inteiro.
+
+## [1.76.0] — 2026-08-30
+
+### Modificado
+
+- **Importações e edições em lote muito mais rápidas**: a importação de orçamento anual, a importação de estrutura (categorias e centros de custo), a edição de série recorrente e a confirmação da conciliação de extrato passaram a gravar tudo de uma vez, em vez de uma linha por vez. Arquivos grandes terminam em uma fração do tempo anterior. O comportamento é o mesmo de sempre: o que está válido entra, o que foi recusado aparece na tela com o motivo.
+
 ## [1.75.1] — 2026-08-29
 
 ### Corrigido
