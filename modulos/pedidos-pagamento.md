@@ -118,7 +118,7 @@ Ao clicar em **Excluir rascunho**, a confirmação mostra qual solicitação ser
 - **Tipo do pedido** (único / recorrente / parcelado) com configuração da série/parcelas, quando aplicável
 - **Dados do pedido**: descrição, categoria, projeto, centro de custo
 - **Dados de pagamento do destinatário** (PIX, TED ou Boleto) — visíveis apenas para aprovadores e tesoureiro
-- **Documentos**: orçamento, nota fiscal, contrato ou outros anexos
+- **Documentos**: orçamento, nota fiscal, contrato ou outros anexos — visíveis apenas para quem já enxerga esta solicitação, ver [Movimentações → Quem consegue abrir um comprovante](/modulos/movimentacoes/#anexos-e-comprovantes)
 - **Histórico de aprovações**: timeline de todos os votos, com o **progresso do quórum** (ex.: "1 de 2 aprovações · falta 1") enquanto o pedido aguarda aprovação
 - **Ações**: ✓ Aprovar / ✕ Reprovar (somente para aprovadores; nunca para o próprio solicitante) · **Retirar solicitação** (somente para quem enviou — ver abaixo)
 
@@ -279,7 +279,7 @@ A escolha muda a dica de anexo (orçamentos, no estimado; boleto, nota ou recibo
 
 **Campos opcionais:** Categoria, Projeto, **Centro de custo**, Observações, Documentos (orçamento, nota fiscal, contrato) e, **apenas no tipo Único**, a **Data de pagamento solicitada**.
 
-> 💡 **Centro de custo no pedido** (opcional): a lista traz **apenas os centros de custo ativos** da OSC. Escolher um vincula o pedido àquela área desde a origem — quando ele for aprovado e virar movimentação, o lançamento já nasce com o centro de custo certo, sem precisar corrigir depois. Deixar em branco é normal para quem não usa centros de custo. Os centros de custo são cadastrados em [Configurações → Categorias → Centros de custo](/configuracoes/categorias/#centros-de-custo).
+> 💡 **Centro de custo no pedido** (opcional): a lista traz **apenas os centros de custo ativos** da OSC — ou, para quem é **Gestor de Centro de Custo**, apenas os que a pessoa gerencia (ver [Papéis e Permissões → Gestor de Centro de Custo](/papeis/#gestor-de-centro-de-custo)). Escolher um vincula o pedido àquela área desde a origem — quando ele for aprovado e virar movimentação, o lançamento já nasce com o centro de custo certo, sem precisar corrigir depois. Deixar em branco é normal para quem não usa centros de custo. Os centros de custo são cadastrados em [Configurações → Categorias → Centros de custo](/configuracoes/categorias/#centros-de-custo).
 
 > 💡 **Data de pagamento solicitada** (opcional, só no tipo Único): o prazo em que o fornecedor espera receber. Serve de **referência para o tesoureiro** na hora de pagar e aparece no detalhe do pedido. Deixá-la em branco não impede enviar o pedido.
 

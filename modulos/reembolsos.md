@@ -131,7 +131,7 @@ Ao clicar em **Excluir rascunho**, a confirmação mostra qual solicitação ser
 - **Status** em destaque no canto superior direito
 - **Dados da solicitação**: descrição, categoria (sempre tipo despesa), projeto, centro de custo
 - **Dados de pagamento**: método (PIX ou TED) e chave/conta — **visíveis apenas para aprovadores e tesoureiro** (voluntário não-aprovador vê só os próprios)
-- **Comprovantes**: nota fiscal, recibo ou foto da despesa anexados pelo solicitante, com pré-visualização inline para imagens e PDFs (não precisa baixar)
+- **Comprovantes**: nota fiscal, recibo ou foto da despesa anexados pelo solicitante, com pré-visualização inline para imagens e PDFs (não precisa baixar) — visíveis apenas para quem já enxerga esta solicitação, ver [Movimentações → Quem consegue abrir um comprovante](/modulos/movimentacoes/#anexos-e-comprovantes)
 - **Histórico de aprovações**: timeline de todos os votos com nome, papel e data, além do **progresso do quórum** (ex.: "1 de 2 aprovações · falta 1") enquanto o reembolso aguarda aprovação
 - **Ações**: ✓ Aprovar / ✕ Rejeitar (somente para aprovadores; nunca para o próprio solicitante) · **Retirar solicitação** (somente para quem enviou — ver abaixo)
 
@@ -245,7 +245,7 @@ Clique em **+ Nova solicitação** para abrir o formulário.
 **Campos opcionais:**
 
 - **Categoria** — sempre do tipo despesa (o RIT360 Financeiro só lista despesas aqui, não confunde com receita)
-- **Projeto** e **Centro de custo** — para OSCs que separam o financeiro por iniciativa ou área
+- **Projeto** e **Centro de custo** — para OSCs que separam o financeiro por iniciativa ou área. Quem é **Gestor de Centro de Custo** só vê, aqui, os centros que gerencia — ver [Papéis e Permissões → Gestor de Centro de Custo](/papeis/#gestor-de-centro-de-custo)
 - **Observações** — contexto adicional para o aprovador
 
 > ✓ **Dica · Configure dados de pagamento no perfil**

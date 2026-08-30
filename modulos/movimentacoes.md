@@ -326,7 +326,7 @@ Clique em **+ Novo lançamento** no topo da lista. O formulário abre em **pági
 - **Beneficiário / Pagador** — quem recebeu o pagamento (em Despesa, "Beneficiário") ou de quem veio o dinheiro (em Receita, "Pagador"). Fica no topo do formulário, logo após o tipo
 - **Tipo de documento fiscal** e **Número do documento** — para registrar a nota/recibo que originou o lançamento
 - **Data de pagamento** — se preenchida no momento da criação, o lançamento já entra como **Pago**; se vazia, entra como **Pendente** e você confirma o pagamento depois
-- **Projeto** e **Centro de custo** — para OSCs que dividem o financeiro por projeto/área
+- **Projeto** e **Centro de custo** — para OSCs que dividem o financeiro por projeto/área. Quem é **Gestor de Centro de Custo** só vê, aqui, os centros que gerencia — ver [Papéis e Permissões → Gestor de Centro de Custo](/papeis/#gestor-de-centro-de-custo)
 - **Forma de pagamento** (em Despesa) — como o pagamento será feito. Ao escolher **PIX**, o formulário abre os campos da **chave PIX** (tipo e chave); ao escolher **Transferência bancária**, abre os **dados bancários** do destinatário (banco, agência, conta e titular); **Boleto** e as demais formas não pedem campos extras. Esses dados são opcionais e ficam guardados no lançamento — úteis para quem for efetivar o pagamento depois
 - **Distribuir valor entre categorias** — divide um único valor por várias categorias (ex: uma compra de R$ 500 que vai 60% para "Material didático" e 40% para "Manutenção")
 
@@ -362,6 +362,10 @@ Você pode anexar arquivos (comprovantes, notas fiscais, contratos) ao lançamen
 **Em mobile**, a seção **DOCUMENTOS** exibe dois botões: **Tirar foto** (abre a câmera traseira do celular direto, com preview **Refazer** ou **Confirmar** antes de subir) e **Anexar arquivo**. O RIT360 Financeiro reduz a foto automaticamente antes do upload — fica leve mesmo em conexão móvel ruim, sem perder a legibilidade do cupom para auditoria humana ou para extração automática futura via IA.
 
 **Em desktop**, a seção mostra uma área para arrastar arquivos ou clicar para selecionar — o botão "Tirar foto" não aparece nesse contexto (webcam de laptop não serve para fotografar comprovante apoiado na mesa).
+
+> 🔒 **Privacidade · Quem consegue abrir um comprovante**
+>
+> O comprovante anexado a um **reembolso** ou a um **pedido de compra e pagamento** só abre para quem já pode ver aquela solicitação — ou para quem vê o lançamento que ela gerou, quando o mesmo comprovante é propagado a ele. Não é qualquer pessoa da organização que alcança o arquivo. Enviar e remover comprovante continuam funcionando do mesmo jeito; só o acesso de leitura ficou mais restrito.
 
 > 📖 **Conceito · Quais arquivos você pode anexar como comprovante**
 >

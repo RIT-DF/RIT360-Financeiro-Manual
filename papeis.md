@@ -78,6 +78,14 @@ O **Gestor de Centro de Custo** é para quem responde pelo dia a dia financeiro 
 
 > 💡 **Presidente e Tesoureiro veem todos os centros de custo.** O recorte por CC vale para o Gestor de Centro de Custo; quem opera o financeiro consolidado (Presidente, Tesoureiro) continua enxergando e lançando em qualquer centro de custo, sem depender de vínculo de responsável.
 
+> ⚠️ **Atenção · A tela agora explica por que a lista de centros de custo aparece curta**
+>
+> Ao abrir o campo **Centro de custo** em **novo e editar lançamento**, **novo e editar reembolso** e **novo e editar pedido de pagamento**, quem é Gestor de Centro de Custo via só os centros que gerencia — a regra já existia, mas a tela não dizia por quê, e isso travava gente achando que era erro do sistema. Agora aparece o aviso:
+>
+> *"Você só pode lançar em centros de custo que gerencia. Se precisar de outro, peça ao administrador da organização para incluí-lo como gestor desse centro."*
+>
+> A saída é sempre a mesma: pedir ao **Presidente** para marcar você como responsável pelo centro de custo que falta, em [Configurações → Categorias → Responsáveis pelo centro de custo](/configuracoes/categorias/#responsaveis-pelo-centro-de-custo). Presidente e Tesoureiro não veem esse aviso — para eles a lista sempre traz todos os centros de custo da OSC.
+
 O **rótulo** desse cargo pode ser renomeado pela OSC (por exemplo, "Responsável de Filial" ou "Gestor de Núcleo"), como qualquer outro cargo — ver [Configurações → Cargos e Permissões](/configuracoes/cargos/#renomear-o-rotulo-de-um-cargo).
 
 ## Regras importantes

@@ -22,7 +22,7 @@ Encontrou um problema, teve uma ideia ou quer deixar um elogio? O botão de **fe
    - **Outro** — qualquer coisa que não se encaixe nas anteriores.
 3. Escreva sua **mensagem**.
 4. Se ajudar a explicar, **anexe arquivos** (prints, planilhas ou documentos) — até 3 arquivos.
-5. Se quiser que a RIT possa **entrar em contato** com você sobre esse feedback, marque a autorização de contato.
+5. A opção de **autorizar contato** já vem **marcada** — se não quiser que a RIT entre em contato com você sobre esse feedback, desmarque antes de enviar.
 6. Clique em enviar.
 
 > 💡 **Antes de enviar, dê uma olhada no Manual**
