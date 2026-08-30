@@ -11,6 +11,24 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.78.6] — 2026-08-30
+
+Versão interna, sem mudança perceptível para quem usa o sistema. Restauramos doze verificações automáticas que haviam sido removidas por engano na versão anterior e que protegem a forma como o sistema separa contas de ativo das de passivo.
+
+## [1.78.5] — 2026-08-30
+
+### Modificado
+
+- **Ao cadastrar uma conta do tipo cartão de crédito, a opção "Compõe o saldo disponível" já vem desligada** — o saldo de um cartão é dívida a pagar ou crédito preso, não dinheiro disponível. Quem quiser pode ligar. Contas de cartão já cadastradas não mudaram.
+- **A importação de usuários por planilha passou a ler o cabeçalho da mesma forma que a importação por CSV**, para o mesmo arquivo não se comportar de um jeito num formato e de outro jeito no outro.
+
+## [1.78.4] — 2026-08-30
+
+### Modificado
+
+- **No pedido de compra e pagamento, os dados de pagamento do destinatário passaram a ser opcionais também ao editar e reenviar** — antes eram opcionais ao criar e obrigatórios ao reenviar, o que forçava a pessoa a inventar uma chave PIX só para conseguir mandar. No reembolso os dados continuam obrigatórios, porque ali quem pede é quem recebe.
+- **No reembolso, informar uma data de despesa que ainda não aconteceu agora mostra um aviso** com o caminho certo para quem precisa de aprovação antes de gastar — o pedido de compra e pagamento. É só aviso: quem precisar, segue normalmente.
+
 ## [1.78.3] — 2026-08-30
 
 ### Adicionado
