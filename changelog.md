@@ -11,6 +11,29 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.78.3] — 2026-08-30
+
+### Adicionado
+
+- **Enviar feedback agora também pelo celular**, no menu "Mais".
+
+### Modificado
+
+- **O aviso de feedback que chega à equipe passa a mostrar a tela de origem, a versão do app, o papel e o cargo de quem escreveu, e se o acesso foi por celular ou computador** — sem guardar identificadores de registros.
+- **Nomes de mês não aparecem mais em inglês** nas previsões de caixa.
+- **As filas de pagamento e os contadores passam a considerar exatamente a permissão que cada fluxo exige** — ajuste sobre a unificação da v1.78.2, que tinha deixado a fila de pedidos de pagamento usando a permissão de reembolso.
+
+## [1.78.2] — 2026-08-30
+
+### Corrigido
+
+- **O aviso de novidades não volta mais repetindo destaques já vistos**: depois de fechá-lo, só um destaque publicado depois disso pode trazê-lo de novo.
+- **A fila "Aguardando pagamento" de reembolsos agora aparece no Painel e nos contadores para as pessoas autorizadas a pagar**, e não apenas para quem tem o cargo de tesoureiro.
+
+### Modificado
+
+- **As duas filas de pagamento (pedidos e reembolsos) passam a usar o mesmo nome.**
+
 ## [1.78.1] — 2026-08-30
 
 ### Modificado

@@ -1,6 +1,16 @@
 {
   "versoes": [
     {
+      "versao": "1.78.3",
+      "data": "2026-08-30",
+      "destaque": false
+    },
+    {
+      "versao": "1.78.2",
+      "data": "2026-08-30",
+      "destaque": false
+    },
+    {
       "versao": "1.78.1",
       "data": "2026-08-30",
       "destaque": false
