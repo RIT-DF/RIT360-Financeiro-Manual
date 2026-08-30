@@ -11,6 +11,18 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.81.0] — 2026-08-30
+
+<!-- destaque: A tela de Relatórios foi reorganizada, e a Previsão agora é uma aba da tela inicial. -->
+
+### Modificado
+
+- **Relatórios deixou de ter abas** e virou uma página única, de cima a baixo — resultado do período, evolução do saldo, saldo por conta e receitas e despesas por categoria —, tudo obedecendo aos filtros e ao período escolhidos.
+- **Receitas e despesas, antes em abas separadas, agora aparecem lado a lado**: dá para comparar entrada e saída sem trocar de tela.
+- **A aba Atenção saiu dos Relatórios**: os pontos de atenção continuam no Painel, onde já eram mostrados. O "Ver todos" dos avisos do Painel agora abre a lista inteira ali mesmo, sem levar para outra tela.
+- **A Previsão virou a terceira aba da tela inicial**, ao lado do Painel e da Saúde 360, com todos os filtros que ela já tinha — inclusive o recorte por projeto. A tela inicial passa a responder três perguntas: o que urge hoje, como estamos, e para onde vamos.
+- **A prestação de contas ganhou botão próprio** na tela de Movimentações, em vez de ficar escondida dentro do menu "Exportar" como se fosse mais um formato de arquivo. Ao lado dele, um atalho para as prestações já geradas.
+
 ## [1.80.1] — 2026-08-30
 
 ### Corrigido

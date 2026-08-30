@@ -1,6 +1,12 @@
 {
   "versoes": [
     {
+      "versao": "1.81.0",
+      "data": "2026-08-30",
+      "destaque": true,
+      "resumo": "A tela de Relatórios foi reorganizada, e a Previsão agora é uma aba da tela inicial."
+    },
+    {
       "versao": "1.80.1",
       "data": "2026-08-30",
       "destaque": false
