@@ -11,6 +11,24 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.78.1] — 2026-08-30
+
+### Modificado
+
+- **Formulário de feedback: a opção de receber resposta agora nasce marcada.** É uma correção de rumo — a versão anterior tinha passado a opção a nascer desmarcada, e algumas pessoas deixavam de receber retorno só por esquecer de marcá-la. Quem não quiser resposta pode desmarcar antes de enviar.
+
+## [1.78.0] — 2026-08-30
+
+### Modificado
+
+- **Reprovar um pedido ou reembolso, gerar PDF, importar lançamentos, estornar e excluir ficaram mais rápidos**: o sistema passou a buscar de uma vez informações que antes buscava em várias etapas. Nenhuma regra de quem pode fazer o quê mudou.
+- **Importação de estrutura mais rápida em planilhas grandes**: categorias e centros de custo novos passam a ser criados de uma só vez, em vez de um por um.
+
+### Corrigido
+
+- **Detalhe do lançamento no celular**: os botões da barra de ações deixaram de ficar cortados fora da tela e agora quebram em mais de uma linha, todos com a mesma altura.
+- **Histórico de aprovações**: o link para o pedido passou a ficar embaixo do título, que não é mais partido no meio das palavras.
+
 ## [1.77.0] — 2026-08-30
 
 ### Corrigido
