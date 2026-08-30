@@ -1,10 +1,15 @@
 {
   "versoes": [
     {
+      "versao": "1.82.0",
+      "data": "2026-08-30",
+      "destaque": false
+    },
+    {
       "versao": "1.81.0",
       "data": "2026-08-30",
       "destaque": true,
-      "resumo": "A tela de Relatórios foi reorganizada, e a Previsão agora é uma aba da tela inicial."
+      "resumo": "A tela inicial agora tem três abas — Painel, Saúde 360 e Previsão —, existe uma área de Documentos com tudo o que você já gerou, e o resultado do mês passou a contar só o que aconteceu de fato."
     },
     {
       "versao": "1.80.1",
@@ -14,8 +19,7 @@
     {
       "versao": "1.80.0",
       "data": "2026-08-30",
-      "destaque": true,
-      "resumo": "O resultado do mês no Painel agora conta só o que aconteceu de fato — e a nova aba Saúde 360 mostra como a organização está."
+      "destaque": false
     },
     {
       "versao": "1.79.1",
@@ -25,8 +29,7 @@
     {
       "versao": "1.79.0",
       "data": "2026-08-30",
-      "destaque": true,
-      "resumo": "Agora existe um lugar para encontrar tudo o que você já gerou: a área de Documentos."
+      "destaque": false
     },
     {
       "versao": "1.78.6",

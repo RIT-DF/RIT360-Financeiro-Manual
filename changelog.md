@@ -11,9 +11,20 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.82.0] — 2026-08-30
+
+### Adicionado
+
+- **Reembolso aprovado agora pode ser marcado como pago direto na tela de reembolsos**, na linha e em lote — antes era preciso ir até Movimentações e achar o lançamento correspondente. A ação pede data do pagamento e conta, como no fluxo de pedidos de pagamento, e aparece para quem tem permissão de pagar reembolso.
+- **Pagar vários reembolsos de uma vez mostra o resultado item a item**: o que foi pago, o que foi recusado por regra, o que ficou retido por rubrica orçamentária e o que falhou — sem esconder falha parcial atrás de um "pronto" genérico.
+
+### Segurança
+
+- **Marcar como pago o lançamento de um reembolso que ainda não foi aprovado deixou de transformá-lo em pago.** O pagamento não pula mais a etapa de aprovação.
+
 ## [1.81.0] — 2026-08-30
 
-<!-- destaque: A tela de Relatórios foi reorganizada, e a Previsão agora é uma aba da tela inicial. -->
+<!-- destaque: A tela inicial agora tem três abas — Painel, Saúde 360 e Previsão —, existe uma área de Documentos com tudo o que você já gerou, e o resultado do mês passou a contar só o que aconteceu de fato. -->
 
 ### Modificado
 
@@ -30,8 +41,6 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 - **O resumo do mês passa a mostrar separadamente o que venceu e não foi pago e o que venceu e não foi recebido.** Antes os dois viravam um número só, que somava coisas opostas.
 
 ## [1.80.0] — 2026-08-30
-
-<!-- destaque: O resultado do mês no Painel agora conta só o que aconteceu de fato — e a nova aba Saúde 360 mostra como a organização está. -->
 
 ### Adicionado
 
@@ -52,8 +61,6 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 - **A planilha de orçamento anual entregue nunca mais aparece na lista como falha.**
 
 ## [1.79.0] — 2026-08-30
-
-<!-- destaque: Agora existe um lugar para encontrar tudo o que você já gerou: a área de Documentos. -->
 
 ### Adicionado
 
