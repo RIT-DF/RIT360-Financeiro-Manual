@@ -11,6 +11,27 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.80.1] — 2026-08-30
+
+### Corrigido
+
+- **O resumo do mês passa a mostrar separadamente o que venceu e não foi pago e o que venceu e não foi recebido.** Antes os dois viravam um número só, que somava coisas opostas.
+
+## [1.80.0] — 2026-08-30
+
+<!-- destaque: O resultado do mês no Painel agora conta só o que aconteceu de fato — e a nova aba Saúde 360 mostra como a organização está. -->
+
+### Adicionado
+
+- **Nova aba "Saúde 360"** na tela inicial, ao lado do Painel: o Painel mostra o que urge hoje, a Saúde 360 mostra como a organização está.
+- **Quatro respostas na Saúde 360**: quanto do dinheiro está livre para usar (separado do que está carimbado para projeto ou destinação), quanto já está comprometido e ainda não saiu, por quanto tempo o caixa aguenta, e quais projetos estão fora do ritmo — inclusive os que estão sobrando prazo e dinheiro, não só os que gastam demais.
+
+### Modificado
+
+- **O resultado do mês no Painel passa a contar só o que aconteceu de fato** (o que foi pago e recebido), em vez de somar também o que estava pendente ou atrasado pelo vencimento. Com conta do mês em aberto, a despesa do mês cai e o resultado sobe; com receita prevista ainda não recebida, a receita cai e o resultado desce. O que venceu e não foi pago não some da tela: aparece à parte, abaixo do resultado.
+- **O saldo por conta deixa de incluir pagamentos marcados para uma data futura** — no Painel, em Movimentações, no formulário de novo lançamento e em Configurações › Contas. Os quatro passam a mostrar o mesmo saldo que a tela de Relatórios mostra para hoje.
+- **A previsão de caixa passa a se comportar igual em todos os lugares**: quando não há histórico suficiente, ela usa só o que já está agendado e diz que é isso que está mostrando, em vez de aparecer vazia.
+
 ## [1.79.1] — 2026-08-30
 
 ### Corrigido

@@ -1,6 +1,17 @@
 {
   "versoes": [
     {
+      "versao": "1.80.1",
+      "data": "2026-08-30",
+      "destaque": false
+    },
+    {
+      "versao": "1.80.0",
+      "data": "2026-08-30",
+      "destaque": true,
+      "resumo": "O resultado do mês no Painel agora conta só o que aconteceu de fato — e a nova aba Saúde 360 mostra como a organização está."
+    },
+    {
       "versao": "1.79.1",
       "data": "2026-08-30",
       "destaque": false
