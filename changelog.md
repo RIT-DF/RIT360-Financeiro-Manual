@@ -11,6 +11,31 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.75.1] — 2026-08-29
+
+### Corrigido
+
+- **Sincronização com o WooCommerce e reprocessamento de categorias voltaram a funcionar**: a sincronização de pedidos, a de produtos e o reprocessamento de categorias paravam logo no início, antes de qualquer trabalho — defeito introduzido pela versão anterior e corrigido no mesmo dia.
+
+## [1.75.0] — 2026-08-29
+
+### Modificado
+
+- **App mais rápido em toda ação autenticada**: identificar quem está usando o sistema deixou de exigir uma consulta extra a cada ação. Operações que envolvem dinheiro, acesso e dados pessoais continuam com a checagem completa — nada muda em quem pode fazer o quê.
+- **Explicação da lista curta de centros de custo**: quem gerencia apenas alguns centros de custo agora vê, na tela, por que a lista aparece menor do que o total da organização — em novo e editar lançamento, novo e editar reembolso, e novo e editar pedido de pagamento.
+
+### Corrigido
+
+- **Remover e substituir comprovante de solicitação**: fechada uma falha que podia recusar a operação com um erro técnico, sem explicar o motivo.
+- **Formulário de feedback**: a opção de receber resposta agora nasce desmarcada.
+
+## [1.74.0] — 2026-08-29
+
+### Corrigido
+
+- **Comprovantes de reembolso e de pedido de pagamento agora só abrem para quem já pode ver a solicitação — ou o lançamento correspondente.** Quem enxerga a solicitação continua abrindo o anexo normalmente, e quem enxerga o lançamento gerado continua abrindo o comprovante propagado a ele; enviar e remover comprovante não mudaram.
+- **O logo da organização deixou de ser acessível por quem não está conectado ao sistema.**
+
 ## [1.73.1] — 2026-08-29
 
 ### Corrigido
