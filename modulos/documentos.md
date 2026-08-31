@@ -59,6 +59,8 @@ Marque a caixa de cada documento, ou use **Selecionar os N documentos exibidos**
 
 A área de Documentos é só de consulta e download — **não existe apagar um documento por ali**. É coerente com o papel dela de arquivo permanente: se você pudesse apagar, deixaria de ser um catálogo confiável do que já foi gerado.
 
+Um documento pode, ainda assim, aparecer como **Arquivo indisponível**, e há dois caminhos que levam a isso, ambos fora desta tela: o **prazo de guarda** da organização, que apaga automaticamente os arquivos vencidos, e a ação de **apagar o arquivo** de uma prestação de contas, disponível na tela de Prestações geradas para quem administra a plataforma ou tem permissão de exportar dados — ver [Prestações de contas](/modulos/relatorios/#e-se-for-preciso-apagar-o-arquivo-de-uma-prestacao). Nos dois casos o registro continua na lista; o que some é o arquivo.
+
 ## Glossário rápido
 
 - **Em preparo** — geração ainda rodando; a lista atualiza sozinha quando terminar.

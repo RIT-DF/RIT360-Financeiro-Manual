@@ -150,9 +150,19 @@ Toda vez que alguém gera uma [prestação de contas](/modulos/movimentacoes/#pr
 
 Em Documentos, cada linha traz quem pediu e quando, e o **Baixar** quando o arquivo ainda está disponível. Gerar de novo é feito voltando ao diálogo em [Movimentações → Prestação de contas](/modulos/movimentacoes/#prestacao-de-contas), escolhendo o mesmo período — cada geração entra como um registro novo, não substitui a anterior.
 
-> ⚠️ **Pendente de verificação**
+### E se for preciso apagar o arquivo de uma prestação?
+
+Dá, mas **não pela área de Documentos** — lá a prestação só se baixa. A ação de apagar fica na tela de **Prestações geradas**, alcançável pelo botão de mesmo nome em Movimentações, ao lado de "Prestação de contas".
+
+Ali cada linha que ainda tem arquivo oferece **Apagar o arquivo**, e também dá para apagar vários de uma vez pela seleção em lote. A ação pede confirmação antes.
+
+> ⚠️ **Quem pode, e o que exatamente some**
 >
-> Não confirmamos ao vivo, nesta rodada, se a área de Documentos ainda oferece apagar individualmente o arquivo de uma prestação (a página de Documentos que capturamos mostra só a ação **Baixar**, sem excluir — coerente com a regra "não há excluir" do catálogo). Se sua organização depende de apagar um PDF específico por algum motivo, confirme antes de contar com esse caminho; o descarte automático pelo prazo de guarda (abaixo) continua sendo a via garantida.
+> Apagar o arquivo é ação destrutiva e está restrita a quem administra a plataforma ou tem a permissão de **exportar dados** da organização. Quem não tem simplesmente não vê o botão.
+>
+> O que some é **o PDF**, não o registro: o período continua listado, com quem pediu e quando, apenas sem arquivo para baixar — o mesmo estado em que fica um documento cujo prazo de guarda venceu. Se precisar do conteúdo de novo, gere a prestação outra vez pelo mesmo período.
+
+Há ainda o caminho automático: o **prazo de guarda** configurado pela organização (abaixo), que apaga os arquivos vencidos sem ninguém precisar agir.
 
 ## Guarda dos documentos de prestação de contas
 

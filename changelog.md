@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.82.1] — 2026-08-30
+
+### Modificado
+
+- **A tela inicial agora se chama Saúde 360** (era "Painel" no menu), e as três abas dentro dela passaram a se chamar **Painel**, **Situação** e **Projeção** — cada uma nomeando o que entrega, com a mesma frase de apoio de antes: o que urge hoje, como estamos, para onde vamos.
+- **Atenção:** a aba que a versão anterior anunciou como "Saúde 360" agora se chama **"Situação"**. O nome Saúde 360 passou a ser o da tela inteira, porque descreve o conjunto das três perguntas e não apenas uma delas. Quem procurar a aba "Saúde 360" a encontra agora como "Situação".
+- Nada mudou no conteúdo: mesmos blocos, mesmos números, mesmos filtros, mesmo acesso. Endereços salvos continuam funcionando.
+
 ## [1.82.0] — 2026-08-30
 
 ### Adicionado
