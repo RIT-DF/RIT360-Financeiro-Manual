@@ -711,8 +711,10 @@ Marcou por engano? Dá para **desfazer** — mas só quando a marcação foi **m
 
 ## Prestação de contas {#prestacao-de-contas}
 
-[![Diálogo de prestação de contas](/assets/screenshots/manual-mov-prestacao-contas.png)](/assets/screenshots/manual-mov-prestacao-contas.png)
-*Em Exportar → Prestação de contas: escolha o período e, opcionalmente, anexe documentos complementares*
+[![Botões Prestação de contas e Prestações geradas, ao lado de Exportar, no topo de Movimentações](/assets/screenshots/mov-prestacao-botoes-topo.png)](/assets/screenshots/mov-prestacao-botoes-topo.png)
+*"Prestação de contas" ganhou botão próprio, ao lado de "Exportar" — com o atalho "Prestações geradas" logo depois*
+
+O botão **Prestação de contas** fica no topo de Movimentações, ao lado de **Exportar** — deixou de ficar escondido dentro do menu Exportar, como se fosse mais um formato de arquivo de exportação. Ao lado dele, o atalho **Prestações geradas** leva direto às prestações já emitidas (ver [Onde encontrar os documentos já gerados](#onde-encontrar-os-documentos-já-gerados), abaixo).
 
 A **prestação de contas** é um documento em PDF, no padrão visual do RIT360 Financeiro, que reúne **tudo o que a organização precisa apresentar de um período** — para a diretoria, o conselho fiscal, a assembleia de associados, um financiador ou um órgão público. Diferente do *Exportar PDF* (que é a lista de lançamentos), a prestação de contas é um **relatório contábil completo, em regime de caixa**, pronto para entregar. Está disponível para a **diretoria/tesouraria** e a **comissão fiscal** da organização.
 
@@ -755,20 +757,16 @@ Para anexar, na seção **Documentos complementares** do diálogo: escolha o arq
 
 ### Como gerar
 
-1. Em **Movimentações**, clique em **Exportar → Prestação de contas**.
+1. Em **Movimentações**, clique no botão **Prestação de contas**, ao lado de Exportar.
 2. Escolha o período:
    - **Mês** — um mês específico já **fechado** (o mês corrente, ainda em andamento, não fica disponível);
    - **Ano (acumulado)** — de janeiro até o último mês fechado daquele ano (ou o ano inteiro, se for um ano anterior).
 3. Se quiser, escreva a [nota explicativa](#nota-explicativa) e anexe [documentos complementares](#documentos-complementares-opcional).
 4. Clique em **Gerar PDF**. A geração roda **em segundo plano**: você pode continuar trabalhando, e **o link do PDF chega no seu e-mail** assim que ficar pronto (a montagem com gráficos e comprovantes pode levar de alguns segundos a poucos minutos). Se algo falhar, você é avisado por e-mail e por notificação no app.
 
-> 💡 **Também dá para emitir pela tela de Relatórios**
->
-> Além deste caminho, você pode gerar uma prestação de contas de um período novo direto em **Relatórios → [Prestações de contas](/modulos/relatorios/#prestacoes-de-contas)**, clicando em **Emitir prestação de contas** — mesmo diálogo, mesmos campos. Os dois caminhos levam ao mesmo lugar; use o que estiver mais à mão no momento.
-
 ### Onde encontrar os documentos já gerados
 
-Você **não depende do e-mail** para chegar a uma prestação de contas: todo documento gerado fica listado na página **[Prestações de contas](/modulos/relatorios/#prestacoes-de-contas)**, dentro de **Relatórios** — acessível pela pílula de mesmo nome, ao final da fileira de filtros. Lá você vê período, data e hora da geração, quem gerou e o intervalo coberto, e pode **baixar**, **gerar de novo** ou **apagar o arquivo**. A organização também pode definir, em **Configurações → Relatórios**, um **prazo de guarda** para esses PDFs — que por padrão é "sem descarte".
+Você **não depende do e-mail** para chegar a uma prestação de contas: clique em **Prestações geradas**, ao lado do botão Prestação de contas, ou acesse a área **[Documentos](/modulos/documentos/)** pelo menu principal e filtre por tipo "Prestação de contas". Lá você vê quem pediu e quando, e pode **baixar** enquanto o arquivo estiver disponível. A organização também pode definir, em **Configurações → Relatórios**, um **prazo de guarda** para esses PDFs — que por padrão é "sem descarte"; passado o prazo, o documento continua listado, só que sem o arquivo para baixar.
 
 > 💡 **Por que isso importa · Transparência e governança não são burocracia**
 >

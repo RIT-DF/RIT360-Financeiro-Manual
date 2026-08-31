@@ -68,12 +68,17 @@ permalink: /
   <a class="module-card" href="/modulos/relatorios/">
     <div class="module-card-icon">📈</div>
     <div class="module-card-title">Relatórios</div>
-    <div class="module-card-desc">Análises financeiras consolidadas — Visão Geral, Receitas, Despesas, Atenção e Previsão</div>
+    <div class="module-card-desc">Análise financeira consolidada do período — resultado, saldo, receitas e despesas por categoria</div>
   </a>
   <a class="module-card" href="/modulos/orcamento/">
     <div class="module-card-icon">🎯</div>
     <div class="module-card-title">Orçamento</div>
     <div class="module-card-desc">Orçamento anual por centro de custo e categoria — previsto × realizado ao longo do ano</div>
+  </a>
+  <a class="module-card" href="/modulos/documentos/">
+    <div class="module-card-icon">🗂️</div>
+    <div class="module-card-title">Documentos</div>
+    <div class="module-card-desc">Tudo o que já foi gerado no sistema, num catálogo só — com o que ainda está sendo preparado</div>
   </a>
 </div>
 

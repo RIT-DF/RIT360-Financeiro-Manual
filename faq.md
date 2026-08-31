@@ -143,11 +143,13 @@ Não. Ao preencher um **novo lançamento**, **reembolso** ou **pedido de compra 
 
 ### Um aviso que eu via no Painel sumiu. O que aconteceu?
 
-Pode ser uma entre três coisas: (1) o problema foi resolvido — o lançamento que gerou o aviso mudou de status ou foi corrigido; (2) o aviso saiu da **janela de 30 dias** que o Painel considera (ele é sobre o que aconteceu recentemente, não sobre o histórico inteiro); ou (3) alguém com acesso a Configurações **desligou aquele tipo de regra** para a organização. Para conferir o histórico completo sem o recorte de 30 dias, use [Relatórios → aba Atenção](/modulos/relatorios/#atencao) com o período que quiser.
+Pode ser uma entre três coisas: (1) o problema foi resolvido — o lançamento que gerou o aviso mudou de status ou foi corrigido; (2) o aviso saiu da **janela de 30 dias** que o Painel considera (ele é sobre o que aconteceu recentemente, não sobre o histórico inteiro); ou (3) alguém com acesso a Configurações **desligou aquele tipo de regra** para a organização.
 
-### Por que o Painel mostra avisos diferentes dos Relatórios?
+> ⚠️ Os pontos de atenção moram só no [Painel](/modulos/painel/#bloco-4-pontos-de-atencao), com a janela fixa de 30 dias — não existe mais uma tela para consultar o histórico completo de anomalias além desses 30 dias. Se sua OSC precisa desse histórico mais longo, é uma lacuna a reportar.
 
-Porque as duas telas recortam o tempo de forma diferente, de propósito. O **Painel** olha sempre os **últimos 30 dias** — é o "o que aconteceu recentemente". Os **Relatórios** (aba Atenção) olham o **período que você escolher** no filtro do cabeçalho — pode ser o mês fechado, o trimestre, o ano. Um aviso pode aparecer só em um dos dois: algo de 45 dias atrás some do Painel mas continua em Relatórios se o período escolhido incluir aquela data. Além disso, o Painel tem uma regra própria — **Déficit projetado no fluxo de caixa** — que não existe na aba Atenção dos Relatórios, porque olha para meses futuros, não para o período analisado.
+### Existe uma regra de atenção que só aparece no Painel?
+
+Sim — **Déficit projetado no fluxo de caixa**, que olha para meses **futuros**, não para o histórico recente das outras regras. Para o detalhe mês a mês dessa projeção, use a [aba Previsão](/modulos/painel/#previsao) da tela inicial.
 
 ### Quem pode desligar um aviso, e para quem vale?
 
@@ -201,15 +203,15 @@ Por padrão, **Presidente** e **Tesoureiro** — a mesma permissão de sempre. A
 
 ### Onde encontro uma prestação de contas que já foi gerada?
 
-Em **Relatórios**, clique na pílula **Prestações de contas**, ao final da fileira de filtros: ali está a lista de todos os documentos já gerados pela organização, com período, data e hora da geração, quem gerou e o intervalo coberto. Você pode **baixar** o PDF, **gerar de novo** ou **apagar o arquivo**. Antes, o único acesso era o link enviado por e-mail na hora da geração — agora o documento fica na plataforma. As três ações exigem a mesma permissão de exportar dados que já é necessária para ver a lista. Detalhes em [Relatórios → Prestações de contas](/modulos/relatorios/#prestacoes-de-contas).
+Na área de **[Documentos](/modulos/documentos/)**, filtre por tipo "Prestação de contas": ali está a lista de todos os documentos já gerados pela organização, com quem pediu e quando. Você pode **baixar** o PDF enquanto o arquivo estiver disponível. Antes da área de Documentos, o único acesso era o link enviado por e-mail na hora da geração — agora o documento fica na plataforma. Também há um atalho direto: o botão **Prestações geradas**, em [Movimentações](/modulos/movimentacoes/#onde-encontrar-os-documentos-já-gerados), ao lado do botão de gerar.
 
 ### "Gerar de novo" me devolve o mesmo PDF de antes?
 
 Não. O documento é montado com **os dados de hoje** — não é uma cópia do que foi entregue na época. Se algum lançamento daquele período foi editado, estornado ou cancelado desde então, o resultado vai ser diferente do original. O arquivo que já existe também **não é substituído**: cada geração cria um **registro novo** na lista, por isso é normal ver várias prestações do mesmo mês.
 
-### Apagar o arquivo apaga a prestação de contas?
+### O que significa "Arquivo indisponível" numa prestação de contas?
 
-Não. Sai **apenas o PDF**. A linha continua na lista de [Prestações de contas](/modulos/relatorios/#prestacoes-de-contas), marcada com a data em que o arquivo foi removido e por quem, e com a opção de gerar de novo. Antes de apagar, a confirmação mostra exatamente qual documento você escolheu (período, data e hora da geração, autor) — vale conferir, porque é comum haver várias prestações do mesmo mês.
+O documento existiu, mas o arquivo não está mais acessível para download — geralmente porque o **prazo de guarda** configurado em Configurações → Relatórios já passou (ver pergunta abaixo). O registro continua na lista de Documentos, só sem o botão de baixar; para recuperar o conteúdo, gere a prestação de novo.
 
 ### Por quanto tempo os PDFs de prestação de contas ficam guardados?
 

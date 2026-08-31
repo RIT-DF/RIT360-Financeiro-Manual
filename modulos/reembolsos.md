@@ -112,6 +112,20 @@ Antes de confirmar, a barra já mostra **quantas solicitações** e **o valor to
 >
 > Marcar itens não atravessa página, aba nem período: trocar qualquer um desses **limpa a seleção**. Selecione, aprove, e só então mude de página ou de filtro.
 
+### Pagar reembolso aprovado pela fila {#pagar-pela-fila}
+
+Reembolso aprovado pode ser marcado como pago **direto na aba "Aprovado"** — na linha, ou em lote — sem precisar ir até Movimentações procurar o lançamento correspondente. A ação pede a **data do pagamento** e a **conta** de onde o dinheiro saiu, do mesmo jeito que já funciona para pedidos de compra e pagamento. Só vê o botão de pagar quem tem a [permissão de pagar](/configuracoes/cargos/#permissao-pagar) — a mesma que já era exigida pelo caminho antigo, via Movimentações, que **continua funcionando** igual.
+
+Pagar vários de uma vez segue o mesmo padrão do lote de aprovação: marque os reembolsos aprovados que já confirmou o pagamento, informe data e conta, e confirme. O resultado volta **item por item** — o que foi pago, o que foi **recusado por regra**, o que ficou **retido por rubrica orçamentária** e o que **falhou** —, nunca um "pronto" genérico escondendo uma falha parcial no meio do lote.
+
+> 💡 **Por que isso importa**
+>
+> Antes, confirmar o pagamento de um reembolso aprovado exigia trocar de tela e caçar o lançamento certo em Movimentações — um passo a mais para uma ação que o tesoureiro já decidiu fazer ali mesmo, na fila. Pagar pela fila fecha o ciclo (aprovar → pagar) sem sair da tela de Pagamentos e Reembolsos.
+
+> ⚠️ **Captura pendente**
+>
+> Não conseguimos capturar o botão de pagar em ação nesta rodada — os reembolsos aprovados disponíveis na OSC de teste no momento da captura eram registros antigos, anteriores a este recurso, que mostram apenas um texto explicativo no lugar do botão (ver nota abaixo). Vale recapturar quando houver um reembolso aprovado "fresco" na fila.
+
 ## Detalhe do reembolso
 
 Clique em qualquer linha para abrir o detalhe completo. A página tem todas as informações necessárias para tomar uma decisão de aprovação consciente — sem precisar perguntar nada para ninguém.
@@ -204,9 +218,15 @@ O motivo da rejeição aparece em destaque no topo da página, e também fica re
 
 Painel de Ações mostra: **"Aprovado — aguardando confirmação de pagamento pelo tesoureiro."**
 
+Há dois caminhos para confirmar o pagamento, e os dois levam ao mesmo lugar: [pagar direto pela fila](#pagar-pela-fila), na aba "Aprovado" de Pagamentos e Reembolsos, ou pelo caminho mais antigo, abaixo.
+
 > 📖 **Conceito · Aprovado vira movimentação pendente automaticamente**
 >
-> No momento em que o reembolso é aprovado, o RIT360 Financeiro cria automaticamente uma **movimentação financeira pendente** em Movimentações com origem `reimbursement` (origem reembolso), valor e categoria corretos, ainda sem conta financeira definida. Cabe ao tesoureiro entrar em Movimentações, clicar nessa linha, escolher a conta de onde o dinheiro vai sair e marcar como paga. O ciclo só fecha quando essa confirmação acontece. Os comprovantes anexados ao reembolso **vão junto com o lançamento** — o tesoureiro confere o documento direto ali, na aba Documentos, sem precisar abrir a solicitação original. O lançamento também traz um link **"Ver pedido de reembolso →"**, útil quando o que falta conferir é o histórico de aprovações ou outro dado da solicitação, não o comprovante.
+> No momento em que o reembolso é aprovado, o RIT360 Financeiro cria automaticamente uma **movimentação financeira pendente** em Movimentações com origem `reimbursement` (origem reembolso), valor e categoria corretos, ainda sem conta financeira definida. Cabe a quem tem permissão de pagar entrar em Movimentações, clicar nessa linha, escolher a conta de onde o dinheiro vai sair e marcar como paga — ou fazer a mesma coisa em um passo só, [pagando pela fila](#pagar-pela-fila). O ciclo só fecha quando essa confirmação acontece, por qualquer um dos dois caminhos. Os comprovantes anexados ao reembolso **vão junto com o lançamento** — dá para conferir o documento direto ali, na aba Documentos do lançamento, sem precisar abrir a solicitação original. O lançamento também traz um link **"Ver pedido de reembolso →"**, útil quando o que falta conferir é o histórico de aprovações ou outro dado da solicitação, não o comprovante.
+
+> ℹ️ **Reembolso ainda não aprovado não vira pago por atalho**
+>
+> Marcar como paga a movimentação de um reembolso que ainda não passou pela aprovação não pula mais essa etapa — a confirmação de pagamento sempre respeita o fluxo de aprovação, não importa por qual caminho ela é feita.
 
 > 📖 **Conceito · Corrigir o centro de custo depois do envio**
 >
@@ -301,6 +321,7 @@ Padrão é tudo ligado; cada um silencia o que não quer receber.
 - **Auto-aprovação** — situação em que o solicitante é também o único aprovador elegível; permitida mas explicitamente marcada no audit log.
 - **PIX/TED** — métodos de pagamento aceitos para crédito do reembolso aprovado.
 - **Movimentação correspondente** — lançamento financeiro pendente criado automaticamente na aprovação, vinculado ao reembolso pelo campo origem.
+- **Pagar pela fila** — confirmar o pagamento de um reembolso aprovado direto na aba "Aprovado", na linha ou em lote, sem passar por Movimentações.
 - **Cancelado** — status de uma solicitação retirada pelo próprio solicitante antes da aprovação; diferente de rejeitado, pode ser reenviada sem precisar alterar nada.
 
 ## Por onde seguir

@@ -13,11 +13,11 @@ O módulo de **Relatórios** consolida o que entra e o que sai da sua OSC em **a
 
 ## Conceitos essenciais
 
-Antes de entrar nos botões, vale firmar três conceitos que aparecem em todas as cinco abas.
+Antes de entrar nos botões, vale firmar dois conceitos que aparecem em toda a página.
 
 > 📖 **Conceito · Regime de caixa**
 >
-> Toda análise dos Relatórios olha o **dinheiro que de fato entrou ou saiu** — não o que estava contratado ou previsto. Receita só conta quando a doação **caiu na conta**; despesa só conta quando o pagamento **saiu da conta**. Por isso a aba de Visão Geral mostra "Resultado do período" usando apenas movimentações com status **Pago**. Esse é o padrão usado por OSC para prestação de contas e bate com a forma como tesoureiros amadores enxergam o dinheiro: "quanto tem na conta hoje?".
+> Toda análise dos Relatórios olha o **dinheiro que de fato entrou ou saiu** — não o que estava contratado ou previsto. Receita só conta quando a doação **caiu na conta**; despesa só conta quando o pagamento **saiu da conta**. Por isso o bloco "Resultado do período" usa apenas movimentações com status **Pago**. Esse é o padrão usado por OSC para prestação de contas e bate com a forma como tesoureiros amadores enxergam o dinheiro: "quanto tem na conta hoje?".
 
 > 📖 **Conceito · O mesmo critério vale na página pública**
 >
@@ -26,10 +26,6 @@ Antes de entrar nos botões, vale firmar três conceitos que aparecem em todas a
 > 📖 **Conceito · Período anterior equivalente**
 >
 > O toggle **Comparar com período anterior** no cabeçalho compara o período carregado com o **mesmo tamanho de janela imediatamente anterior**. Se você está olhando Abril/2026 completo, a comparação é com Março/2026 completo. Se você selecionou um intervalo personalizado de 12 dias, a comparação é com os 12 dias anteriores ao início. Quando o período é um **mês em andamento** (ex: Maio até hoje), a comparação é com o mesmo número de dias do mês anterior — não com o mês anterior inteiro. Isso evita que uma comparação "honesta" mostre o mês em curso "menor" só porque ainda não terminou.
-
-> 📖 **Conceito · Histórico mínimo para anomalias e forecast**
->
-> Algumas análises (anomalias na aba Atenção, projeção na aba Previsão) precisam de **histórico mínimo** da OSC para fazer sentido. Sem histórico, não há base de comparação. Por isso, regras de atenção que dependem de média podem ficar silenciadas em OSC nova, e a aba Previsão tem horizontes (3, 6 ou 12 meses) que só liberam à medida que sua OSC acumula meses de movimentação registrada. **Não é bug — é honestidade estatística**.
 
 ## Quem acessa
 
@@ -43,122 +39,61 @@ Voluntários e Coordenadores de Projeto têm acesso restrito a Relatórios no mo
 
 > 💡 **Novidade · Filtro por projeto**
 >
-> Com o módulo de [Projetos](/modulos/projetos/), os Relatórios ganharam um **filtro por projeto** no cabeçalho: selecione uma iniciativa e todas as abas passam a mostrar apenas receitas, despesas e gráficos daquele projeto — pronto para a prestação de contas específica de um financiador. Cada projeto também tem uma aba **Relatório** própria, com os mesmos números recortados.
+> Com o módulo de [Projetos](/modulos/projetos/), os Relatórios ganharam um **filtro por projeto** no cabeçalho: selecione uma iniciativa e a página passa a mostrar apenas receitas, despesas e gráficos daquele projeto — pronto para a prestação de contas específica de um financiador. Cada projeto também tem uma aba **Relatório** própria, com os mesmos números recortados.
 
-## As cinco abas
+## Uma página só, de cima a baixo
 
-[![Aba Visão Geral](/assets/screenshots/manual-relatorios-01-visao-geral.png)](/assets/screenshots/manual-relatorios-01-visao-geral.png)
-*Visão Geral — resultado em destaque, evolução do saldo, cards por conta e top 5 categorias*
+[![Página de Relatórios com resultado do período, evolução do saldo, saldo por conta e receitas/despesas por categoria](/assets/screenshots/manual-relatorios-01-visao-geral.png)](/assets/screenshots/manual-relatorios-01-visao-geral.png)
+*Relatórios — resultado do período, evolução do saldo, saldo por conta na data final, e receitas/despesas lado a lado*
 
-O módulo tem cinco abas, navegáveis dentro de uma mesma tela (`/relatorios`). Filtros e período do cabeçalho valem para todas — você troca de aba sem perder o recorte. **A URL reflete o estado completo** (período, filtros, aba ativa, comparativo ligado/desligado): copiar e enviar o link leva outra pessoa exatamente ao mesmo recorte.
-
-### Visão Geral
-
-Resumo executivo do período:
-
-- **Resultado do período** — receitas menos despesas pagas, em destaque com cor semântica (verde se positivo, vermelho se negativo). Com comparativo ligado, mostra também variação em R$, em % e seta de tendência.
-- **Evolução do saldo** — gráfico de linha mostrando a trajetória do saldo da OSC ao longo do período. Quando o comparativo está ligado, uma linha pontilhada sobrepõe a evolução do período anterior.
-- **Saldos por conta** — cards com o saldo de cada conta financeira na **data final do período** (não "hoje"). Isso garante coerência com prestação de contas histórica: o saldo mostrado é o que de fato existia no fechamento daquele mês.
-- **Top 5 receitas e Top 5 despesas por categoria** — leitura rápida do que mais pesou. Link "Ver todas" leva às abas detalhadas.
-
-### Receitas e Despesas
-
-[![Aba Receitas](/assets/screenshots/manual-relatorios-02-receitas.png)](/assets/screenshots/manual-relatorios-02-receitas.png)
-*Receitas — gráfico por categoria + tabela completa*
-
-Duas abas com a mesma estrutura, separadas por tipo:
-
-- **Gráfico** por categoria (barras horizontais com top 10).
-- **Tabela detalhada** com todas as categorias, valor absoluto e % do total. Mais de 10 categorias? Aparece linha **Outros** agregada — clique para expandir todas.
-- Com **comparativo ligado**: colunas extras com valor do período anterior, variação em R$, variação em % e seta de tendência.
-- **Drilldown** — clique em uma linha de categoria e o RIT360 Financeiro abre `/movimentacoes` já filtrado por essa categoria + o mesmo período. Você passa do agregado para o detalhe em um clique.
-
-[![Aba Despesas](/assets/screenshots/manual-relatorios-03-despesas.png)](/assets/screenshots/manual-relatorios-03-despesas.png)
-*Despesas — mesma estrutura aplicada ao outro lado da equação*
-
-### Atenção
-
-[![Aba Atenção](/assets/screenshots/manual-relatorios-04-atencao.png)](/assets/screenshots/manual-relatorios-04-atencao.png)
-*Atenção — anomalias detectadas no período, ordenadas por severidade*
-
-O RIT360 Financeiro monitora **cinco regras determinísticas** sobre os seus lançamentos e destaca o que parece fora do padrão da sua OSC:
-
-1. **Despesa única concentrada** — um lançamento representa mais que X% do total do período
-2. **Categoria com pico de despesa** — uma categoria gastou muito mais que sua média histórica
-3. **Fornecedor novo com alto valor** — primeiro lançamento com um fornecedor, em valor relevante
-4. **Categoria zerada que voltou** — categoria sem movimento há N meses recebeu lançamento
-5. **Queda de receita** — receita do período caiu abaixo de um % da média histórica
-
-Cada anomalia tem **severidade** (leve / moderada / alta) com cor semântica e **link de ação contextual** ("Abrir lançamento", "Ver categoria", "Ver fornecedor", "Ver detalhe das receitas"). Ordenação: do mais severo para o menos severo. Um badge no nome da aba mostra a contagem total.
-
-> ℹ️ **Observação · Uma sexta regra existe, mas mora no Painel**
->
-> Desde a introdução dos [Pontos de Atenção no Painel](/modulos/painel/#bloco-4-pontos-de-atencao), existe uma sexta regra — **Déficit projetado no fluxo de caixa** — configurada nesta mesma tela (ver abaixo), mas que **não aparece nesta aba**. Ela é exclusiva do Painel, porque olha para o futuro (meses ainda não fechados), enquanto esta aba analisa o período que você escolheu. Para vê-la em ação, olhe o Painel; para o detalhe mês a mês, use a [aba Previsão](#previsao-forecast).
-
-> 📖 **Conceito · O que define severidade**
->
-> Severidade não é categoria abstrata — é matemática. **Leve** = o evento ultrapassa o limite em até 25%. **Moderada** = 25% a 50% acima do limite. **Alta** = mais de 50% acima. Exemplo: se a regra de "despesa concentrada" está em 20% e um lançamento representa 28% do total do mês, severidade é **leve** (28/20 − 1 = 40% acima → moderada, na verdade). Quanto mais "fora do padrão", mais visível na lista.
-
-> ⚠️ **Atenção · Regras silenciadas não são erro**
->
-> Se uma OSC nova ainda não tem 6 meses de histórico, várias regras simplesmente não disparam — não dá para detectar "pico de categoria" sem média de 6 meses para comparar. A regra fica **silenciada automaticamente** até o histórico permitir. Não é bug: é o RIT360 Financeiro sendo honesta sobre o que pode ou não afirmar.
-
-Os limites de cada regra são configuráveis em **Configurações → Relatórios** (ver mais abaixo). Quando a OSC tem **6+ meses de histórico**, há ainda a opção **Calibrar pelo histórico** que sugere limites personalizados baseados no padrão real da sua OSC — em vez de você adivinhar valores.
-
-### Previsão (forecast)
-
-[![Aba Previsão](/assets/screenshots/manual-relatorios-05-previsao.png)](/assets/screenshots/manual-relatorios-05-previsao.png)
-*Previsão — saldo projetado mês a mês, com badge de origem por célula*
-
-A aba **Previsão** projeta como a OSC tende a se comportar nos próximos meses. Útil quando a diretoria pergunta "vamos conseguir pagar o aluguel em agosto?" ou "tem espaço para contratar um voluntário remunerado em setembro?".
-
-> 📖 **Conceito · O que é forecast (projeção financeira)?**
->
-> Projeção financeira (em inglês, *forecast*) é a tentativa séria de responder "para onde meu saldo vai nos próximos meses, considerando o que já está combinado e o que costumo gastar?" — sem cair em adivinhação. Não é previsão do tempo nem chute. É **modelo matemático** que combina o que está cadastrado no sistema com o histórico real da OSC.
-
-> 📖 **Conceito · Como o RIT360 Financeiro monta a projeção (modelo híbrido)**
->
-> Para cada mês futuro e cada categoria, o RIT360 Financeiro soma duas fontes:
-> - **Agendados** — lançamentos pendentes com data futura, ocorrências futuras de séries recorrentes ativas (ex: aluguel mensal), parcelas futuras de pedidos de compra e pagamento aprovados. Tudo isso já está cadastrado no sistema.
-> - **Estimados** — quando uma categoria não tem agendado no mês mas tem padrão histórico (≥ 3 meses), usa a média dos últimos 6 meses. Categorias com menos de 3 meses de histórico não são projetadas.
->
-> Cada célula traz **badge de origem** indicando se o valor é agendado ou estimado — você não confunde "o que está realmente combinado" com "o que costuma acontecer".
-
-**Mês corrente:** entra como **primeiro mês projetado** com marcador "em curso", indicando que é projeção parcial — o mês ainda não terminou.
-
-**Horizonte** (3, 6 ou 12 meses) com pré-requisitos:
-
-| Horizonte | Histórico mínimo | Ideal |
-|---|---|---|
-| 3 meses | 3 meses de movimentação | 6 meses |
-| 6 meses | 6 meses | 12 meses |
-| 12 meses | 12 meses | 24 meses |
-
-Horizontes com histórico insuficiente ficam **desabilitados** no seletor com tooltip explicando o motivo. Histórico entre o mínimo e o ideal exibe um **banner de qualidade** acima do gráfico.
-
-**Alerta de meses críticos:** quando algum mês projetado fica com saldo negativo, um bloco destacado em vermelho lista os meses problemáticos — é a hora de revisar planejamento, não no dia que o saldo zerar de fato.
-
-**Drilldown:** clique em qualquer célula da tabela para abrir a composição por categoria. Para agendados, lista os lançamentos com link para abrir. Para estimados, explica em prosa: *"Média mensal dos últimos 6 meses para 'Aluguel': R$ X"*.
-
-> ⚠️ **Atenção · Projeção não é certeza**
->
-> Forecast é **estimativa baseada em padrões** — não previsão do futuro. Doação inesperada que entra em julho não aparece na projeção (porque não existe ainda). Despesa extraordinária do próximo mês também não aparece (idem). Use a aba como **alerta antecipado** ("vou ter problema?") e como **hipótese de trabalho** ("se mantiver o padrão, vou para onde?"), nunca como afirmação categórica.
+Relatórios deixou de ter abas: é hoje **uma página única**, que você rola de cima a baixo, com os filtros e o período do cabeçalho valendo para tudo. **A URL reflete o estado completo** (período, filtros, comparativo ligado/desligado): copiar e enviar o link leva outra pessoa exatamente ao mesmo recorte.
 
 > 💡 **Por que isso importa**
 >
-> A maioria das OSCs descobre que vai faltar dinheiro só quando o saldo já zerou. A aba Previsão muda esse jogo — você vê o vermelho aparecendo no horizonte de 3, 6, 12 meses e tem tempo de agir: revisar despesas, antecipar captação, conversar com financiador. **Esse "tempo de agir" é a diferença entre uma OSC que sobrevive e uma que entra em crise**.
+> Antes, cada pergunta ficava numa aba separada — trocar de "Visão geral" para "Receitas" perdia o fio da leitura. Numa página só, o resultado do mês, a curva do saldo, o saldo por conta e a composição por categoria aparecem juntos, na ordem em que a diretoria costuma perguntar: quanto sobrou, como o caixa andou, quanto tem em cada conta, e onde foi o dinheiro.
+
+### Resultado do período
+
+Receitas menos despesas pagas, em destaque com cor semântica (verde se positivo, vermelho se negativo). Com comparativo ligado, mostra também variação em R$, em % e seta de tendência.
+
+### Evolução do saldo
+
+Gráfico de linha mostrando a trajetória do saldo da OSC ao longo do período. Quando o comparativo está ligado, uma linha pontilhada sobrepõe a evolução do período anterior.
+
+### Saldo por conta na data final
+
+Cards com o saldo de cada conta financeira na **data final do período** (não "hoje"). Isso garante coerência com prestação de contas histórica: o saldo mostrado é o que de fato existia no fechamento daquele mês. Contas de **uso restrito** aparecem à parte, fora do total líquido consolidado — mesma separação que já existe no Painel.
+
+### Receitas e despesas por categoria
+
+Receitas e despesas aparecem **lado a lado**, não mais em abas separadas — dá para comparar entrada e saída sem trocar de tela:
+
+- **Gráfico** por categoria (barras horizontais com as principais categorias do período).
+- **Tabela detalhada** com valor absoluto e % do total, ordenada da maior categoria para a menor.
+- Com **comparativo ligado**: colunas extras com valor do período anterior, variação em R$, variação em % e seta de tendência.
+- **Drilldown** — clique em uma linha de categoria e o RIT360 Financeiro abre `/movimentacoes` já filtrado por essa categoria + o mesmo período. Você passa do agregado para o detalhe em um clique.
+
+## Onde foram parar Atenção e Previsão
+
+Duas seções que antes eram abas desta tela **mudaram de casa**, e continuam existindo — só que na tela inicial, não aqui:
+
+- **Pontos de atenção** — as anomalias detectadas nos seus lançamentos (despesa concentrada, categoria com pico, fornecedor novo, categoria que voltou, queda de receita) agora moram só no **[Painel](/modulos/painel/#bloco-4-pontos-de-atencao)**, considerando os últimos 30 dias. Os limites de cada regra continuam configuráveis em **Configurações → Relatórios**, no mesmo lugar de sempre.
+- **Previsão** — a projeção de saldo mês a mês virou a terceira aba da tela inicial, ao lado do Painel e da Saúde 360: veja **[Painel → Previsão](/modulos/painel/#previsao)**. Os mesmos filtros (Tipo, Projeto, Conta, Categoria, Centro de custo) e o mesmo horizonte de 3, 6 ou 12 meses continuam lá.
+
+> ⚠️ **Atenção · Se você procurar aqui, não vai achar**
+>
+> Se você está acostumado a abrir Relatórios para ver os avisos ou a projeção, essa é a mudança que mais pega quem já usava o sistema. Não é bug: **Atenção e Previsão saíram desta tela de propósito**, para responder à pergunta "para onde vamos" no mesmo lugar onde já se responde "o que urge hoje" e "como estamos" — a tela inicial.
 
 ## Filtros e período compartilhados
 
 Filtros disponíveis na barra do cabeçalho:
 
 - **Período** — presets (mês corrente, mês anterior, trimestre, semestre, **Ano até a data atual**, Ano atual, ano anterior) + intervalo customizado. Default: último mês fechado.
+- **Tipo** (receita / despesa)
+- **Projeto** (multi-select)
 - **Conta** (multi-select)
 - **Categoria** (multi-select)
-- **Tipo** (receita / despesa)
 - **Centro de custo** (multi-select)
-
-Aplicam-se a todas as abas. Trocar de aba preserva filtros e período. URL reflete o estado completo.
 
 > 📖 **Conceito · "Ano até a data atual" × "Ano atual"**
 >
@@ -166,23 +101,18 @@ Aplicam-se a todas as abas. Trocar de aba preserva filtros e período. URL refle
 
 > 📖 **Conceito · Por que status não aparece como filtro**
 >
-> Relatórios usam **regime de caixa** (ver início desta página): consideram apenas movimentações com status `pago`, agregadas pela data de pagamento. Pendentes e cancelados não entram no cálculo — exceto na aba Previsão, onde lançamentos pendentes futuros contam como "agendados".
+> Relatórios usam **regime de caixa** (ver início desta página): consideram apenas movimentações com status `pago`, agregadas pela data de pagamento. Pendentes e cancelados não entram no cálculo.
 
 ## Comparativo com período anterior
 
-Toggle no cabeçalho. Quando ligado, cada bloco/tabela/gráfico das abas **Visão Geral**, **Receitas** e **Despesas** mostra também a variação contra o período anterior equivalente.
-
-Nas abas **Atenção** e **Previsão**, o toggle fica visível mas inerte — comparar anomalias do período corrente ou projeção futura com passado não faz sentido conceitual.
+Toggle no cabeçalho. Quando ligado, cada bloco/gráfico/tabela da página mostra também a variação contra o período anterior equivalente.
 
 ## Exportação
 
-[![Menu Exportar](/assets/screenshots/manual-relatorios-06-exportar.png)](/assets/screenshots/manual-relatorios-06-exportar.png)
-*Menu Exportar com três opções*
-
 Botão **Exportar** no cabeçalho. Três opções:
 
-- **Exportar visão atual (PDF)** — apenas a aba ativa
-- **Exportar relatório completo (PDF)** — todas as cinco abas em sequência, com sumário no topo
+- **Exportar visão atual (PDF)** — a página com o recorte atual de filtros e período
+- **Exportar relatório completo (PDF)** — o relatório completo, com sumário no topo
 - **Exportar dados (Excel)** — planilha com uma worksheet por seção
 
 O **Excel** baixa na hora, como sempre. Já o **PDF** — nas duas variantes — é montado **em segundo plano**: ao clicar em exportar, abre uma página de acompanhamento com "Gerando…" e, assim que o documento fica pronto, **o download começa sozinho**. Você não precisa esperar parado — pode fechar a aba e continuar trabalhando, porque **o link do PDF também chega no seu e-mail**. É o mesmo comportamento já usado na exportação de Movimentações e na prestação de contas.
@@ -212,64 +142,17 @@ Fora a capa, os gráficos e essa reorganização, **o conteúdo é o mesmo de se
 
 ## Prestações de contas geradas {#prestacoes-de-contas}
 
-Toda vez que alguém gera uma [prestação de contas](/modulos/movimentacoes/#prestacao-de-contas), o documento fica **guardado na organização** — e a página **Prestações de contas** é onde você encontra todos eles.
-
-[![Pílula Prestações de contas](/assets/screenshots/manual-relatorios-pilula-prestacoes.png)](/assets/screenshots/manual-relatorios-pilula-prestacoes.png)
-*A pílula **Prestações de contas**, ao final da fileira de filtros do cabeçalho de Relatórios*
-
-Para abrir, clique na pílula **Prestações de contas**, ao final da fileira de filtros no cabeçalho de Relatórios.
-
-[![Página Prestações de contas](/assets/screenshots/manual-prestacoes-lista.png)](/assets/screenshots/manual-prestacoes-lista.png)
-*A lista de documentos já gerados, do mais recente para o mais antigo, com as três ações à direita de cada linha*
-
-[![Página Prestações de contas, com o botão Emitir prestação de contas e a seleção em lote](/assets/screenshots/rel-prestacoes-lista.png)](/assets/screenshots/rel-prestacoes-lista.png)
-*O botão "Emitir prestação de contas", no canto superior direito, e o checkbox "Selecionar os desta página", logo abaixo do título*
-
-Você também pode **emitir uma prestação de contas nova direto daqui**, sem passar por Movimentações: clique em **Emitir prestação de contas**, no canto superior direito da página, e escolha o período — é o mesmo diálogo descrito em [Movimentações → Prestação de contas](/modulos/movimentacoes/#prestacao-de-contas), com os mesmos campos (período, nota explicativa, documentos complementares). **O caminho antigo, pelo menu Exportar de Movimentações, continua funcionando** — os dois levam ao mesmo lugar; use o que já estiver na tela.
-
-Cada linha traz o **período do documento** (o mês, ou o acumulado do ano), a **data e a hora em que foi gerado**, **quem gerou** e o **intervalo de datas coberto**. Como é comum a organização gerar o mesmo mês mais de uma vez, esses quatro dados juntos são o que distingue um documento do outro.
+Toda vez que alguém gera uma [prestação de contas](/modulos/movimentacoes/#prestacao-de-contas), o documento fica **guardado na organização** — e é na área **[Documentos](/modulos/documentos/)** que você encontra todas as que já foram geradas, filtrando por tipo "Prestação de contas". A antiga página de prestações dentro de Relatórios não existe mais; o catálogo de Documentos é o novo lugar único para isso.
 
 > 💡 **Por que isso importa · O documento deixou de depender do e-mail**
 >
-> Até esta versão, o único caminho para chegar a uma prestação de contas já gerada era **o link enviado por e-mail** na hora da geração. Quem gerou trocou de e-mail, apagou a mensagem sem querer ou simplesmente não estava na organização na época? O documento existia, mas ninguém alcançava. Agora ele está **na plataforma, à vista de toda a diretoria** — e a prestação de contas do ano passado continua a um clique quando o conselho, o financiador ou a auditoria pedirem.
+> Antes da área de Documentos, o único caminho para chegar a uma prestação de contas já gerada era **o link enviado por e-mail** na hora da geração. Quem gerou trocou de e-mail, apagou a mensagem sem querer ou simplesmente não estava na organização na época? O documento existia, mas ninguém alcançava. Agora ele está **na plataforma, à vista de toda a diretoria** — e a prestação de contas do ano passado continua a um clique quando o conselho, o financiador ou a auditoria pedirem.
 
-### As três ações de cada documento
+Em Documentos, cada linha traz quem pediu e quando, e o **Baixar** quando o arquivo ainda está disponível. Gerar de novo é feito voltando ao diálogo em [Movimentações → Prestação de contas](/modulos/movimentacoes/#prestacao-de-contas), escolhendo o mesmo período — cada geração entra como um registro novo, não substitui a anterior.
 
-- **Baixar** — abre o PDF, quando o arquivo existe.
-- **Gerar de novo** — sempre disponível, inclusive para documentos cujo arquivo já foi apagado.
-- **Apagar o arquivo** — remove só o PDF, preservando o registro na lista.
-
-> ⚠️ **Atenção · "Gerar de novo" não é uma segunda via**
+> ⚠️ **Pendente de verificação**
 >
-> O novo documento é montado com **os dados de hoje**, não com uma fotografia do que foi entregue na época. Se algum lançamento daquele período foi editado, estornado ou cancelado desde então, **o resultado vai ser diferente do original** — e essa diferença é legítima, porque os números da organização mudaram. Use "Gerar de novo" para recuperar um arquivo apagado ou para refletir uma correção posterior; não conte com ele para reproduzir literalmente o PDF que foi assinado e entregue.
->
-> O arquivo que já existe **não é substituído**: cada geração nasce como um **registro novo** na lista. Por isso é normal encontrar várias prestações do mesmo mês, uma abaixo da outra — e é por isso que a data e a hora da geração importam tanto.
-
-> 📖 **Conceito · Apagar o arquivo não apaga a prestação**
->
-> Ao apagar, sai **só o PDF**. A linha continua na lista, agora marcada com a **data em que o arquivo foi removido** e **quem removeu**, e com a opção de **gerar de novo** disponível. A organização nunca perde o rastro de que aquela prestação foi feita, por quem e quando — o que sai é o peso do arquivo, não a memória do ato. É o mesmo princípio que vale em todo o RIT360 Financeiro: **corta-se o dado, preserva-se o registro**.
-
-> ✓ **Dica · Confira o documento na confirmação antes de apagar**
->
-> Antes de remover, a confirmação mostra **exatamente qual documento você escolheu** — período, data e hora da geração e autor. Leia essa linha com atenção: quando há cinco prestações de "Junho/2026" empilhadas, é a data e hora da geração que diferencia a que você quer apagar da que a diretoria usou na assembleia.
-
-### Apagar vários arquivos de uma vez {#selecao-em-lote}
-
-Quando a lista acumula muitos documentos — meses de prestações geradas de novo, por exemplo —, apagar um a um é trabalho repetitivo. Marque o checkbox de cada linha que quiser (ou **Selecionar os desta página**, no topo, para marcar todas de uma vez) e uma barra de ações aparece no rodapé:
-
-[![Barra de ações em lote, com dois documentos selecionados](/assets/screenshots/rel-prestacoes-selecao-lote.png)](/assets/screenshots/rel-prestacoes-selecao-lote.png)
-*"2 itens selecionados nesta página" e o botão "Apagar arquivos"*
-
-- **Apagar arquivos** — remove o PDF de todos os documentos marcados, de uma vez. Vale a mesma regra do apagamento individual: só o **arquivo** sai; o **registro** de cada prestação continua na lista, disponível para gerar de novo.
-- **Limpar seleção** — desmarca tudo sem apagar nada.
-
-> ⚠️ **Atenção · A seleção vale só para a página aberta**
->
-> "Selecionar os desta página" marca só o que está visível na tela naquele momento — não a lista inteira da organização. Trocar de página ou de filtro **limpa a seleção**; é preciso selecionar de novo do outro lado.
-
-### Quem acessa
-
-A lista está disponível para quem tem **permissão de exportar dados** da organização — na prática, os mesmos papéis que já acessam Relatórios e geram a prestação de contas: **Presidente**, **Tesoureiro** e **Comissão Fiscal**. **As três ações exigem essa mesma permissão**: quem enxerga a lista pode baixar, gerar de novo e apagar o arquivo; quem não a tem não vê a página nem a pílula.
+> Não confirmamos ao vivo, nesta rodada, se a área de Documentos ainda oferece apagar individualmente o arquivo de uma prestação (a página de Documentos que capturamos mostra só a ação **Baixar**, sem excluir — coerente com a regra "não há excluir" do catálogo). Se sua organização depende de apagar um PDF específico por algum motivo, confirme antes de contar com esse caminho; o descarte automático pelo prazo de guarda (abaixo) continua sendo a via garantida.
 
 ## Guarda dos documentos de prestação de contas
 
@@ -293,7 +176,7 @@ Ao escolher um prazo, **antes de salvar** a tela informa quantos documentos **j�
 
 > ⚠️ **Atenção · O registro nunca é apagado**
 >
-> Assim como no apagamento manual, o descarte automático remove **apenas o arquivo**. A prestação continua listada em [Prestações de contas](#prestacoes-de-contas), identificada como descartada e com a opção de **gerar de novo** — lembrando que o novo documento reflete os dados atuais, não o original.
+> O descarte automático remove **apenas o arquivo**. A prestação continua listada em [Documentos](/modulos/documentos/), com status **Arquivo indisponível** — lembrando que gerar de novo reflete os dados atuais, não o original.
 
 > ✓ **Dica · Só configure prazo se houver política que peça isso**
 >
@@ -304,7 +187,7 @@ Ao escolher um prazo, **antes de salvar** a tela informa quantos documentos **j�
 [![Configuração de regras](/assets/screenshots/manual-config-relatorios-regras.png)](/assets/screenshots/manual-config-relatorios-regras.png)
 *Configurações → Relatórios → Regras de pontos de atenção — cards editáveis, um por regra*
 
-Acessível em **Configurações → Relatórios → Regras de pontos de atenção** (só Presidente). Um card por regra — as cinco regras da aba Atenção **e** a regra de **Déficit projetado no fluxo de caixa**, que aparece só no Painel (ver [Pontos de atenção no Painel](/modulos/painel/#bloco-4-pontos-de-atencao)). Cada card tem:
+Acessível em **Configurações → Relatórios → Regras de pontos de atenção** (só Presidente). Um card por regra — as cinco regras que aparecem no bloco de [Pontos de atenção do Painel](/modulos/painel/#bloco-4-pontos-de-atencao) **e** a regra de **Déficit projetado no fluxo de caixa**, exclusiva de lá. Cada card tem:
 
 - **Toggle on/off** — ligar ou desligar a regra
 - **Limite (threshold)** em campo numérico editável com unidade clara (%, ×, R$ ou meses)
@@ -336,11 +219,11 @@ Três opções na hora de revisar:
 
 > ✓ **Dica · Olhe Relatórios uma vez por mês, no dia 5**
 >
-> Reserve 30 minutos no dia 5 de cada mês para abrir Relatórios filtrado no mês anterior fechado. Resultado do período + Top 5 receitas + Top 5 despesas + aba Atenção em sequência. Em 5 minutos você sabe se houve algo fora do esperado. Em outros 25, você manda o PDF do "relatório completo" para a diretoria com filtros do mês fechado — virou prestação de contas mensal sem esforço.
+> Reserve 30 minutos no dia 5 de cada mês para abrir Relatórios filtrado no mês anterior fechado e dar uma volta pela página — resultado, evolução do saldo, receitas e despesas por categoria. Passe também pelo [Painel](/modulos/painel/) para conferir os pontos de atenção do período. Em 5 minutos você sabe se houve algo fora do esperado. Em outros 25, você manda o PDF do "relatório completo" para a diretoria com filtros do mês fechado — virou prestação de contas mensal sem esforço.
 
-> ✓ **Dica · Forecast antes de decisão grande**
+> ✓ **Dica · Previsão antes de decisão grande**
 >
-> Antes de aprovar contratação, compra grande ou novo projeto, abra a aba Previsão com horizonte de 6 ou 12 meses. Veja se o gasto extra mantém o saldo positivo. Se o gráfico mostra vermelho aparecendo em algum mês, a decisão precisa de mais conversa antes — não menos.
+> Antes de aprovar contratação, compra grande ou novo projeto, abra a [aba Previsão](/modulos/painel/#previsao) da tela inicial, com horizonte de 6 ou 12 meses. Veja se o gasto extra mantém o saldo positivo. Se o gráfico mostra vermelho aparecendo em algum mês, a decisão precisa de mais conversa antes — não menos.
 
 > ⚠️ **Atenção · Comparativo só faz sentido se o período faz sentido**
 >
@@ -351,21 +234,19 @@ Três opções na hora de revisar:
 - **Regime de caixa** — modelo em que o que vale é a data em que o dinheiro entrou/saiu da conta, não a data do contrato ou da fatura.
 - **Período anterior equivalente** — janela imediatamente anterior, com a mesma duração do período carregado.
 - **Comparativo** — toggle que adiciona variação versus período anterior em cada bloco.
-- **Anomalia** — evento detectado por uma das 5 regras determinísticas da aba Atenção; ranqueado por severidade.
+- **Anomalia** — evento detectado por uma das 5 regras determinísticas de [Pontos de atenção, no Painel](/modulos/painel/#bloco-4-pontos-de-atencao); ranqueado por severidade.
 - **Déficit projetado no fluxo de caixa** — regra exclusiva do Painel que avisa quando o caixa tende a ficar negativo em um mês futuro, considerando agendados e, quando necessário, a média histórica.
 - **Severidade** — leve / moderada / alta, derivada do quanto o evento ultrapassa o limite da regra.
 - **Calibração** — análise estatística que sugere limites de regras personalizados ao padrão da sua OSC.
-- **Forecast (projeção)** — estimativa do comportamento financeiro futuro, combinando agendados (já cadastrados) com estimados (média histórica).
-- **Agendado** — lançamento pendente, ocorrência futura de série recorrente, ou parcela futura de pedido aprovado.
-- **Estimado** — projeção por média móvel de 6 meses, usada para categorias sem agendado no mês.
-- **Horizonte** — quantos meses adiante o forecast projeta (3, 6 ou 12).
-- **Mês em curso** — mês corrente projetado como primeiro mês do forecast, com badge indicando que é projeção parcial.
-- **Prestação de contas (documento)** — o PDF contábil completo de um período, gerado em Movimentações e listado na página Prestações de contas.
+- **Forecast (projeção)** — estimativa do comportamento financeiro futuro, combinando agendados (já cadastrados) com estimados (média histórica); veja [Painel → Previsão](/modulos/painel/#previsao).
+- **Prestação de contas (documento)** — o PDF contábil completo de um período, gerado em Movimentações e listado na área de [Documentos](/modulos/documentos/).
 - **Prazo de guarda** — por quantos anos os PDFs de prestação de contas são mantidos, contados do fim do período coberto. Padrão: sem descarte.
-- **Descarte** — remoção apenas do arquivo PDF; o registro da prestação permanece na lista, com data e autor da remoção.
+- **Descarte** — remoção apenas do arquivo PDF; o registro da prestação permanece listado, marcado como indisponível.
 
 ## Por onde seguir
 
 - **Movimentações** — onde estão os lançamentos que alimentam todas as análises, e onde a [prestação de contas](/modulos/movimentacoes/#prestacao-de-contas) é gerada.
+- **[Painel](/modulos/painel/)** — pontos de atenção e previsão de caixa, que saíram de Relatórios e viraram abas da tela inicial.
+- **[Documentos](/modulos/documentos/)** — onde ficam as prestações de contas e os PDFs já gerados.
 - **Configurações → Categorias** — relatório bom depende de categorização consistente.
 - **Configurações → Relatórios** (Presidente) — ajustar limites de pontos de atenção, calibrar pelo histórico e definir o prazo de guarda dos documentos de prestação de contas.

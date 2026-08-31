@@ -51,7 +51,7 @@ A tesouraria apresenta; a Comissão Fiscal **confere e atesta**. Os relatórios 
 
 - Compare o relatório do período com as movimentações que o sustentam.
 - Observe os **pontos de atenção** sinalizados — eles indicam onde olhar com mais cuidado.
-- Consulte as prestações já entregues em **Relatórios → [Prestações de contas](/modulos/relatorios/#prestacoes-de-contas)**: a lista mostra período, data e hora da geração e quem gerou, e você baixa o PDF direto — sem precisar pedir o arquivo à tesouraria.
+- Consulte as prestações já entregues na área de **[Documentos](/modulos/documentos/)**, filtrando por "Prestação de contas": a lista mostra quem pediu e quando, e você baixa o PDF direto — sem precisar pedir o arquivo à tesouraria.
 
 > 🧭 **Como o RIT360 Financeiro ajuda · Relatórios para conferência**
 >
