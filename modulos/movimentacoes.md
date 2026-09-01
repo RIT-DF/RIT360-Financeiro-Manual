@@ -52,6 +52,10 @@ No rodapé, sempre visível, fica o **Líquido** — a posição consolidada da 
 
 Ao fim de cada linha há uma **lupa** 🔎, que abre o **[Caça-diferenças](/modulos/caca-diferencas/)** daquela conta: você informa o saldo que aparece no app do banco e o sistema aponta onde está a diferença.
 
+> ⚠️ **Atenção · Ver o saldo é uma permissão à parte**
+>
+> Sem a permissão **Ver saldo das contas**, você continua vendo a lista de contas e usando a tela normalmente — só que no lugar do valor de cada conta, e do Líquido, aparece um aviso de que não tem permissão para ver o saldo. A mesma regra vale no formulário de novo lançamento, no Painel, em Configurações → Contas Bancárias e na aba Saúde 360. Ajuste em [Cargos e permissões](/configuracoes/cargos/#permissao-ver-saldo).
+
 > 💡 **Por que isso importa**
 >
 > Somar mentalmente "tenho R$ 7.000 no Sicredi e R$ 86.000 no MercadoPago, mas devo R$ 6.500 no cartão" é exatamente o tipo de conta que se erra com pressa — e errar para mais é o que faz uma organização autorizar um gasto que não cabe. O **Líquido** já entrega essa conta pronta, e sempre à vista.
@@ -311,7 +315,7 @@ Clique em **+ Novo lançamento** no topo da lista. O formulário abre em **pági
 - **Descrição** — descrição breve do lançamento (ex: "Conta de luz - março", "Doação Família Silva")
 - **Data de vencimento**
 - **Valor total**
-- **Conta** — qual conta financeira movimenta. Já vem **pré-selecionada com a [conta padrão](/configuracoes/contas/#conta-padrão)** da OSC; troque se for outra
+- **Conta** — qual conta financeira movimenta. Já vem **pré-selecionada com a [conta padrão](/configuracoes/contas/#conta-padrão)** da OSC; troque se for outra. O saldo de cada conta aparece junto no seletor — para quem tem a permissão [Ver saldo das contas](/configuracoes/cargos/#permissao-ver-saldo); sem ela, o seletor funciona igual, só sem mostrar o valor
 - **Categoria** — não pedida para Transferências (porque transferência é só mudança de lugar)
 
 #### Conta elegível por rubrica

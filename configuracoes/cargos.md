@@ -36,8 +36,10 @@ As permissões são organizadas por área, com as operações que importam separ
 
 - **Movimentações** — Ver · Criar / editar · **Pagar (marcar como pago)** · Excluir / estornar · Importar lançamentos
 - **Reembolsos e pedidos de compra e pagamento** — Ver · **Solicitar pedido de compra e pagamento** · **Aprovar** · Pagar
+- **Contas financeiras** — **Ver saldo das contas**
+- **Orçamento** — **Aprovar orçamento anual**
 - **Relatórios e auditoria** — Ver relatórios · **Redigir nota explicativa do relatório** · Ver trilha de auditoria · Exportar dados (LGPD)
-- **Configurações** — Config. financeira (contas e categorias) · Config. da OSC · Gerir membros e cargos
+- **Configurações** — Config. financeira (contas e categorias) · Config. da OSC · Gerir membros e cargos · **Gerir integrações e credenciais de API**
 
 ### Config. financeira também controla criar categoria e centro de custo "no meio do caminho"
 {: #permissao-config-financeira }
@@ -50,6 +52,35 @@ A permissão **Config. financeira** é a mesma que libera [Categorias e Centros 
 > ✓ **Quem não tem a permissão continua importando e conciliando normalmente**
 >
 > Faltando essa permissão, a pessoa não vê o botão de criar categoria/centro de custo nesses dois atalhos (aparece desabilitado, com o motivo). Ela resolve escolhendo um cadastro **já existente**, ou — no caso da importação — deixando aquelas linhas de fora para reimportar depois de a categoria ser cadastrada por quem tem a permissão.
+
+### Ver saldo das contas controla o número, não a tela
+{: #permissao-ver-saldo }
+
+[![Permissão "Ver saldo das contas", na área Contas financeiras do editor de cargos](/assets/screenshots/config-cargos-ver-saldo.png)](/assets/screenshots/config-cargos-ver-saldo.png)
+*A área "Contas financeiras" no editor de cargos, com o interruptor "Ver saldo das contas"*
+
+A permissão **Ver saldo das contas**, na área "Contas financeiras", decide quem enxerga o **valor** do saldo — não quem acessa a tela. Quem não tem a permissão continua usando **Painel**, **Movimentações**, o formulário de **novo lançamento**, **Configurações → Contas Bancárias** e a aba **Saúde 360** normalmente; só que, onde apareceria o número, lê uma frase avisando que não tem permissão para ver o saldo e a quem pedir.
+
+- Vale para **qualquer cargo, inclusive o Presidente e o Tesoureiro** — não é piso essencial de nenhum papel, nem mesmo dos dois que mais mexem com dinheiro. Se a sua OSC quiser que algum deles não veja saldo (por exemplo, um Presidente honorário que não cuida do dia a dia financeiro), o interruptor pode ficar desligado até para ele.
+- Em **todo cargo, padrão ou personalizado**, é um interruptor que o Presidente liga e desliga quando quiser.
+
+> 💡 **Por que isso importa**
+>
+> Nem toda OSC quer que todo mundo com acesso ao sistema veja quanto tem em caixa — um coordenador de projeto pode precisar lançar despesas e acompanhar pendências sem enxergar o saldo consolidado da organização inteira, por exemplo. Separar "usar as telas financeiras" de "ver o valor do saldo" deixa essa decisão de governança nas mãos de cada OSC, em vez de a plataforma impor um dos dois extremos.
+
+> ✓ **Nada muda se você não mexer em nada**
+>
+> A permissão vem **ligada** para todos os cargos que já existiam antes desta versão — ninguém perde acesso que já tinha por conta de uma migração. Se quiser restringir, é você quem desliga, cargo por cargo.
+
+### Aprovar orçamento anual é permissão própria
+{: #permissao-aprovar-orcamento }
+
+A permissão **Aprovar orçamento anual**, na área "Orçamento", define quem pode aprovar a proposta de orçamento da OSC em [Orçamento](/modulos/orcamento/) antes dela virar a versão vigente do ano. É um interruptor por cargo, do mesmo jeito que as demais permissões desta página.
+
+### Gerir integrações e credenciais de API
+{: #permissao-integracoes }
+
+A permissão **Gerir integrações e credenciais de API**, na área "Configurações", libera o cargo para cadastrar, alterar e revogar credenciais de integração da OSC (por exemplo, a chave usada por um sistema externo para consumir dados via API). Por envolver segredo de acesso, trate a concessão com o mesmo cuidado das demais permissões de configuração — ver "Delegar poderes de administrador", abaixo.
 
 ### Pagar é uma permissão separada de criar e editar
 {: #permissao-pagar }

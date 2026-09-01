@@ -106,6 +106,10 @@ O orçamento tem um ciclo de aprovação parecido com o dos demais fluxos da OSC
 
 Enquanto está em **rascunho**, você edita à vontade. Ao enviar para **aprovação**, os aprovadores configurados decidem. Uma vez **aprovado**, o orçamento congela como baseline.
 
+> ✓ **Dica · O selo diz "Vigente" ou "Anterior", não o nome técnico da versão**
+>
+> Ao navegar entre as versões aprovadas de um mesmo orçamento (por exemplo, depois de uma revisão), o selo ao lado de cada uma mostra **Vigente** (a que vale para o acompanhamento hoje) ou **Anterior** (a que foi substituída). Antes disso o selo trazia um identificador técnico de versão, que não dizia nada para quem só quer saber qual número está valendo agora.
+
 ### Revisar um orçamento aprovado
 
 A vida muda ao longo do ano, e às vezes o orçamento precisa mudar junto — entrou uma verba nova, um projeto foi cancelado, um custo disparou. Para isso existe a **revisão**:

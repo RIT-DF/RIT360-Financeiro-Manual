@@ -59,6 +59,10 @@ Uma linha por conta financeira da OSC (corrente, poupança, cartão, caixa inter
 >
 > O saldo por conta também **não conta pagamento marcado para uma data futura** — um lançamento com data de pagamento em, digamos, três dias, só entra no saldo quando essa data chegar. A regra vale igual aqui, em Movimentações, no formulário de novo lançamento e em Configurações › Contas: os quatro lugares mostram o mesmo número para hoje.
 
+> ⚠️ **Atenção · Ver o saldo é uma permissão à parte**
+>
+> Se o seu cargo não tem a permissão **Ver saldo das contas**, este bloco continua aparecendo, mas no lugar do valor você lê uma frase avisando que não tem permissão para ver o saldo, e a quem pedir. A regra vale igualmente em Movimentações, no formulário de novo lançamento, em Configurações → Contas Bancárias e na aba Saúde 360. Quem administra a organização ajusta isso em [Cargos e permissões](/configuracoes/cargos/#permissao-ver-saldo).
+
 ### Este mês
 
 O card **Este mês** mostra o **resultado do que já aconteceu de fato** — receitas recebidas menos despesas pagas, pela data do pagamento. Não é mais uma mistura de realizado com previsto: se uma despesa deste mês ainda não foi paga, ela **não entra** no resultado; se uma receita esperada ainda não caiu na conta, ela também fica de fora.
@@ -144,6 +148,8 @@ Enquanto o Painel responde "o que precisa de mim hoje", a **Saúde 360** respond
 ### Quanto está livre para usar
 
 Separa o **disponível** (uso livre) do **restrito** (carimbado para um destino específico — uma emenda, um convênio, uma conta de uso restrito) e do **passivo** (o que está no cartão de crédito, a pagar). É a resposta para "posso gastar isso, ou já tem dono?" — gastar do carimbado como se fosse livre é o erro mais caro que uma OSC comete com verba de projeto.
+
+Sem a permissão **Ver saldo das contas** (ver [Cargos e permissões](/configuracoes/cargos/#permissao-ver-saldo)), este bloco some do jeito costumeiro dos valores e mostra a frase de permissão negada no lugar dos números.
 
 ### Quanto já está comprometido e ainda não saiu
 

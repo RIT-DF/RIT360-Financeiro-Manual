@@ -21,13 +21,21 @@ Encontrou um problema, teve uma ideia ou quer deixar um elogio? O botão de **fe
    - **Depoimento** — sua experiência com o RIT360 Financeiro (veja abaixo).
    - **Outro** — qualquer coisa que não se encaixe nas anteriores.
 3. Escreva sua **mensagem**.
-4. Se ajudar a explicar, **anexe arquivos** (prints, planilhas ou documentos) — até 3 arquivos.
+4. Se ajudar a explicar, **anexe arquivos** — até **3 arquivos**, de até **10 MB** cada.
 5. A opção de **autorizar contato** já vem **marcada** — se não quiser que a RIT entre em contato com você sobre esse feedback, desmarque antes de enviar.
 6. Clique em enviar.
 
 > 💡 **Antes de enviar, dê uma olhada no Manual**
 >
 > Muitas dúvidas já têm resposta aqui no manual. A própria janela de feedback traz um lembrete com o link — vale conferir antes, principalmente para "como faço X".
+
+### Formatos de anexo aceitos
+
+Além de imagens comuns (PNG, JPG) e PDF, o feedback aceita: **Word (.docx)**, **fotos de iPhone (HEIC)**, **GIF**, **OpenDocument (.odt, .ods)**, **PowerPoint (.pptx)**, **OpenDocument de apresentação (.odp)**, **XML** e **ZIP**.
+
+> ⚠️ **Atenção · SVG não é aceito**
+>
+> Se você anexar um arquivo **.svg**, o envio recusa esse arquivo — remova-o ou converta para PNG/JPG antes de enviar.
 
 ## Depoimento
 

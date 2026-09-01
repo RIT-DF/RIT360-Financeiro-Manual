@@ -48,7 +48,7 @@ Clique em **+ Nova conta**. Preencha:
 - **Saldo inicial** — quanto tem na conta no momento do cadastro
 - **Data de abertura** — quando a conta começou a ser usada pela OSC (não a data de criação no RIT360 Financeiro)
 - **Conta padrão da organização** (opcional) — ver a seção **Conta padrão**, abaixo
-- **Compõe o saldo disponível da organização** — ligado por padrão; ver a seção **Compõe o saldo disponível da organização**, abaixo
+- **Compõe o saldo disponível da organização** — ligado por padrão, **exceto para o tipo Cartão de crédito, que já nasce desligado**; ver a seção **Compõe o saldo disponível da organização**, abaixo
 - **Dados bancários** (opcional, recolhível) — banco, agência e demais dados, quando aplicável
 - **Personalização** (opcional, recolhível) — uma **cor** e um **ícone** para a conta; ver a seção **Personalização**, abaixo
 
@@ -71,8 +71,12 @@ Clique em **+ Nova conta**. Preencha:
 
 ## Compõe o saldo disponível da organização
 
-No cadastro da conta, o interruptor **Compõe o saldo disponível da organização** decide se ela entra no total consolidado exibido como saldo disponível — no Painel e em qualquer outro lugar que mostre esse total. Vem **ligado por padrão**.
+No cadastro da conta, o interruptor **Compõe o saldo disponível da organização** decide se ela entra no total consolidado exibido como saldo disponível — no Painel e em qualquer outro lugar que mostre esse total. Vem **ligado por padrão** para a maioria dos tipos.
 
+- **Cartão de crédito nasce com o interruptor desligado.** Saldo de cartão é dívida a pagar (ou crédito preso, quando a fatura está no seu favor), não dinheiro disponível para gastar — somá-lo ao disponível inflaria o número com um valor que, na verdade, é o oposto de folga. Você pode ligar manualmente se preferir outro critério para a sua OSC, mas o padrão já nasce correto para o caso comum.
+
+  [![Texto de ajuda do interruptor "Compõe o saldo disponível" já desligado para conta tipo Cartão de crédito](/assets/screenshots/config-contas-cartao-nao-compoe-saldo.png)](/assets/screenshots/config-contas-cartao-nao-compoe-saldo.png)
+  *Cadastro de conta tipo Cartão de crédito — o interruptor já nasce desligado*
 - **Desligado**, a conta **sai apenas desse total**. Quando alguma conta está fora, o total avisa quanto ficou de fora e em quantas contas.
 - **Nada mais muda.** O saldo individual da própria conta, os lançamentos, as transferências, a conciliação, os relatórios analíticos, as exportações e a prestação de contas continuam considerando a conta normalmente — é uma marcação de **exibição de disponibilidade**, não de escopo do dado.
 - A conta continua **ativa e visível** em todas as listas, formulários e filtros.
@@ -111,6 +115,10 @@ Na seção **Personalização** do cadastro da conta, você pode definir uma **c
 ## Saldo em tempo real
 
 Cada conta na lista mostra o **saldo atual**, calculado em tempo real a partir das movimentações pagas. Quando você marca uma receita ou despesa como paga em Movimentações, o saldo aqui atualiza imediatamente.
+
+> ⚠️ **Atenção · Ver o saldo é uma permissão à parte**
+>
+> Sem a permissão **Ver saldo das contas**, esta página continua acessível para quem tem permissão de configuração financeira, mas o valor de cada conta aparece substituído por um aviso de permissão negada, dizendo a quem pedir. A mesma regra vale no Painel, em Movimentações, no formulário de novo lançamento e na aba Saúde 360. Concede-se e revoga-se em [Cargos e permissões](/configuracoes/cargos/#permissao-ver-saldo) — inclusive para o cargo Presidente.
 
 > ✓ **Dica · Concilie mensalmente contra o extrato bancário**
 >

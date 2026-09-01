@@ -185,9 +185,9 @@ Agora, enquanto o reembolso está **Aguardando aprovação**, quem o enviou vê 
 
 O motivo da rejeição aparece em destaque no topo da página, e também fica registrado na timeline do **histórico de aprovações**, com o nome de quem reprovou e a data. O solicitante (e somente o solicitante) vê o botão **Editar e reenviar** — clicando, os campos passam a ser editáveis na própria página, sem precisar criar um reembolso novo. Corrige o que foi apontado (valor errado, comprovante ausente, categoria trocada), reenvia, e o fluxo recomeça.
 
-> ⚠️ **Atenção · Chave PIX/dados bancários já salvos aparecem protegidos**
+> ⚠️ **Atenção · Dados de recebimento não se editam por aqui**
 >
-> Se a chave PIX ou os dados bancários já estavam preenchidos, o campo aparece **bloqueado** na edição: mostra só uma parte do valor, a etiqueta **Protegido**, e um botão **Substituir** — salvar sem tocar nele não muda o que está guardado. Esvaziar um campo protegido pede confirmação, porque a remoção é definitiva. O mesmo vale para pedidos de compra e pagamento e para a edição de um lançamento em Movimentações — ver [Movimentações → Editar um lançamento → Dados bancários protegidos](/modulos/movimentacoes/#dados-bancários-protegidos).
+> Ao editar e reenviar, o formulário não traz mais campo de chave PIX/dados bancários para mexer — esse dado vem do seu perfil (ver [Para onde vai o dinheiro](#dados-de-pagamento-vem-do-perfil)). Se a rejeição foi por causa de chave errada, corrija em **Meu Perfil → Dados para Reembolso** antes de reenviar; os demais campos (valor, descrição, categoria, comprovante etc.) continuam editáveis normalmente na própria página. O mesmo vale para pedidos de compra e pagamento e para a edição de um lançamento em Movimentações, quando o destinatário é um terceiro — ver [Movimentações → Editar um lançamento → Dados bancários protegidos](/modulos/movimentacoes/#dados-bancários-protegidos).
 
 > 📖 **Conceito · Quantas reprovações barram o reembolso**
 >
@@ -201,7 +201,7 @@ O motivo da rejeição aparece em destaque no topo da página, e também fica re
 
 > ⚠️ **Atenção · Reenviar exige mudar algo de verdade**
 >
-> Reenviar sem alterar nada é recusado, com a mensagem **"Nenhuma alteração detectada. Corrija a solicitação antes de reenviar."** — assim o mesmo pedido não volta para a fila de aprovação repetidamente sem que nada tenha sido corrigido. Conta como alteração: valor, descrição, data da despesa, categoria, projeto, centro de custo, dados de pagamento, observações — **e também incluir ou remover um comprovante**. Na prática, esse costuma ser o único ajuste necessário: quando o motivo da rejeição foi "faltou a nota fiscal", basta anexar o comprovante e reenviar — já é alteração suficiente.
+> Reenviar sem alterar nada é recusado, com a mensagem **"Nenhuma alteração detectada. Corrija a solicitação antes de reenviar."** — assim o mesmo pedido não volta para a fila de aprovação repetidamente sem que nada tenha sido corrigido. Conta como alteração: valor, descrição, data da despesa, categoria, projeto, centro de custo, observações — **e também incluir ou remover um comprovante**. (Dados de pagamento não fazem mais parte da edição do reembolso — ver acima.) Na prática, esse costuma ser o único ajuste necessário: quando o motivo da rejeição foi "faltou a nota fiscal", basta anexar o comprovante e reenviar — já é alteração suficiente.
 
 > ⚠️ **Atenção · O reenvio reinicia as aprovações**
 >
@@ -259,7 +259,7 @@ Clique em **+ Nova solicitação** para abrir o formulário.
 - **Data da despesa** — quando você efetivamente gastou
 - **Valor** — total a ser reembolsado
 - **Descrição** — o que foi comprado e para qual atividade (seja específico: "Combustível para transporte do material do bazar no sábado" vence "gasolina")
-- **Forma de pagamento**: **PIX** ou **TED**, com a chave/dados bancários onde quer receber
+- **Forma de pagamento**: **PIX** ou **TED**. Os dados de recebimento (chave/conta) não são digitados aqui — veja a seção abaixo
 - **Documentos**: nota fiscal, recibo, comprovante de pagamento ou foto da despesa
 
 **Campos opcionais:**
@@ -268,9 +268,21 @@ Clique em **+ Nova solicitação** para abrir o formulário.
 - **Projeto** e **Centro de custo** — para OSCs que separam o financeiro por iniciativa ou área. Quem é **Gestor de Centro de Custo** só vê, aqui, os centros que gerencia — ver [Papéis e Permissões → Gestor de Centro de Custo](/papeis/#gestor-de-centro-de-custo)
 - **Observações** — contexto adicional para o aprovador
 
-> ✓ **Dica · Configure dados de pagamento no perfil**
+### Para onde vai o dinheiro: sempre a conta de quem pediu {#dados-de-pagamento-vem-do-perfil}
+
+O reembolso devolve dinheiro a quem **gastou do próprio bolso** — por isso ele só pode pagar a própria pessoa que está solicitando. Os dados de recebimento (chave PIX ou dados bancários) não são mais digitados no formulário do reembolso: eles vêm de **Meu Perfil → Dados para Reembolso**.
+
+- **Se você já tem os dados preenchidos no perfil**, o reembolso usa esses dados automaticamente — nada para digitar aqui.
+- **Se ainda não tem**, o próprio formulário do reembolso pede que você preencha uma vez; ao salvar, esses dados passam a valer também no seu perfil, prontos para os próximos reembolsos.
+- **Para alterar depois**, o caminho é **Meu Perfil → Dados para Reembolso** — o formulário do reembolso não edita mais esse dado.
+
+> 💡 **Por que isso importa**
 >
-> Os dados de pagamento (PIX/TED) são pré-preenchidos automaticamente se você configurou o **Método de pagamento padrão** em **Meu Perfil → Dados para Reembolso**. Configura uma vez, todo reembolso futuro já vem com chave correta — você não erra e não precisa redigitar.
+> Reembolso é diferente de pagar um fornecedor: o dinheiro só pode voltar para quem de fato desembolsou. Deixar o campo aberto para digitar qualquer chave a cada solicitação abria margem para erro (chave errada, conta de outra pessoa) e para reembolso pago à conta errada por engano ou má-fé. Fixar a origem no perfil de quem pede fecha essa porta, sem tirar a flexibilidade de quem ainda não tinha cadastrado nada.
+
+> ⚠️ **Atenção · Precisa pagar alguém que não é membro da OSC?**
+>
+> O reembolso não serve para isso — ele só paga quem está logado e pedindo. Quando quem recebe é um terceiro (um fornecedor, um prestador de serviço, alguém que pagou uma despesa sem ter cadastro no sistema), use **[Pedido de Compra e Pagamento](/modulos/pedidos-pagamento/)**, que tem um campo próprio de favorecido para isso. Por padrão, só **Presidência** e **Tesouraria** podem abrir esse tipo de pedido.
 
 **Botões de ação:**
 
@@ -328,6 +340,6 @@ Padrão é tudo ligado; cada um silencia o que não quer receber.
 
 - **Pedidos de Compra e Pagamento** — para autorizar despesas que **ainda vão ser pagas** pela OSC (em vez de já ter pagado do bolso).
 - **Movimentações** — para o tesoureiro confirmar o pagamento do reembolso aprovado e fechar o ciclo.
-- **Meu Perfil → Dados para Reembolso** — para pré-preencher PIX/TED em futuras solicitações.
+- **Meu Perfil → Dados para Reembolso** — de onde vêm os dados de PIX/TED de todas as suas solicitações; é lá que você cadastra e atualiza.
 - **Configurações → Fluxo de Aprovações** — para a OSC ajustar quórum, reprovações necessárias e papéis aprovadores.
 - **Meu Perfil → Notificações** — para escolher quais eventos receber e em quais canais.
