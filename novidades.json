@@ -1,6 +1,52 @@
 {
   "versoes": [
     {
+      "versao": "1.97.1",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.97.0",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.96.0",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.95.0",
+      "data": "2026-09-01",
+      "destaque": true,
+      "resumo": "Ao conciliar o extrato do banco, agora você escolhe também o centro de custo — de uma linha ou de todas de uma vez."
+    },
+    {
+      "versao": "1.94.1",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.94.0",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.93.0",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.92.0",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.91.0",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
       "versao": "1.90.1",
       "data": "2026-09-01",
       "destaque": true,

@@ -21,7 +21,8 @@ A página **Organização** centraliza os dados da sua OSC e as **integrações*
 [![Identidade da OSC — Nome, CNPJ, Inscrição Estadual e Municipal](/assets/screenshots/config-organizacao-identidade.png)](/assets/screenshots/config-organizacao-identidade.png)
 *Identidade da OSC — Inscrição Estadual e Inscrição Municipal ficam ao lado do CNPJ*
 
-- **Nome** — como a OSC se identifica oficialmente
+- **Nome** — a razão social. É este nome que aparece em documentos, e-mails e na página pública
+- **Nome curto** (opcional) — nome fantasia ou sigla pela qual a organização é conhecida (ex.: "RFCC Brasília"). Aparece só na **navegação do sistema** — cabeçalho, seletor de organização e menu do celular —, para caber e ser lido de relance. **Não substitui a razão social**: documentos, e-mails e a página pública continuam usando o Nome. Em branco, a navegação também mostra a razão social — nada muda.
 - **CNPJ** — formatado automaticamente conforme você digita. Aceita tanto o CNPJ numérico tradicional quanto o novo **CNPJ alfanumérico** (que passa a valer a partir de julho/2026)
 - **Inscrição Estadual** — campo opcional, de preenchimento livre. Se a OSC não tem inscrição estadual, digite **"ISENTO"**
 - **Inscrição Municipal** — campo opcional, de preenchimento livre
@@ -29,6 +30,10 @@ A página **Organização** centraliza os dados da sua OSC e as **integrações*
 - **Telefone** — com **seletor de país** (Brasil já selecionado por padrão) e a mesma máscara única usada em todo o sistema; ao abrir o cadastro salvo, o país é reconhecido automaticamente pelo número
 - **Site** — endereço completo (`https://...`)
 - **Identificador único** — slug não editável usado em URLs e identificações internas (gerado a partir do nome no cadastro)
+
+> 💡 **Por que isso importa**
+>
+> Razão social costuma ser longa — "Associação Beneficente de Apoio à Família e à Criança", por exemplo — e não cabe no cabeçalho nem no seletor de organização, sobretudo em quem participa de mais de uma OSC. O nome curto resolve isso sem mexer no que é oficial: você continua vendo a razão social completa em qualquer documento, e-mail ou relatório, e ganha uma identificação enxuta só para navegar no dia a dia.
 
 ## Endereço e redes sociais
 

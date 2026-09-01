@@ -11,6 +11,75 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.97.1] — 2026-09-01
+
+### Corrigido
+
+- **A tela de Documentos deixou de listar documentos cujo arquivo não existe mais.** Eles ocupavam a lista sem servir para nada — não abriam, não diziam quando nem por que o arquivo saiu. O registro continua guardado, e a tela de Prestações de Contas segue mostrando quando o arquivo foi removido e por quem.
+
+## [1.97.0] — 2026-09-01
+
+### Corrigido
+
+- **Na prestação de contas, os pagamentos originados de reembolso voltaram a mostrar quem autorizou** — todos os aprovadores, com decisão e data — além do solicitante e do destinatário corretos.
+- **Cada pagamento passou a ocupar bem menos espaço no documento.**
+
+## [1.96.0] — 2026-09-01
+
+### Adicionado
+
+- **Em Pedidos de compra e pagamento, agora é possível selecionar vários pedidos aprovados e marcá-los como pagos de uma vez**, informando conta e data uma única vez.
+- **Se um pedido falhar, os já pagos permanecem pagos** e o resultado aparece item a item.
+
+## [1.95.0] — 2026-09-01
+
+<!-- destaque: Ao conciliar o extrato do banco, agora você escolhe também o centro de custo — de uma linha ou de todas de uma vez. -->
+
+### Adicionado
+
+- **Na conciliação de extrato, a linha marcada para criar lançamento agora oferece centro de custo ao lado da categoria.**
+- **Um aplicador define o mesmo centro de custo para todas as linhas marcadas para criar de uma vez.**
+
+## [1.94.1] — 2026-09-01
+
+### Corrigido
+
+- **A prestação de contas e os extratos do relatório voltaram a funcionar.**
+- **A exclusão em lote e a troca de categoria em lote (usada pela edição de série recorrente) voltaram a funcionar.**
+
+## [1.94.0] — 2026-09-01
+
+### Adicionado
+
+- **Exclusão em lote de categorias, centros de custo e contas**, com seleção múltipla.
+- **Agora é possível excluir contas** — antes não era possível.
+
+## [1.93.0] — 2026-09-01
+
+### Adicionado
+
+- **Atribuição em lote de categoria e de centro de custo.** Na lista de Movimentações, selecione vários lançamentos e defina a mesma categoria — ou o mesmo centro de custo — para todos de uma vez, em vez de abrir um por um.
+
+### Corrigido
+
+- **O saldo do relatório passou a respeitar a conta escolhida.** Ao filtrar por uma conta, o cartão de saldo mostrava o consolidado de todas.
+
+## [1.92.0] — 2026-09-01
+
+### Modificado
+
+- **Na conciliação por extrato, a lista de categorias passou a aparecer organizada por grupo e a mostrar só as ativas.**
+
+### Corrigido
+
+- **Linha do extrato sem decisão deixou de ser pré-marcada como ignorada.** Quem não decide fica pendente e reaparece na próxima importação, em vez de ser descartada em silêncio.
+
+## [1.91.0] — 2026-09-01
+
+### Adicionado
+
+- **A organização ganhou um campo de nome curto/sigla nas configurações**, e é ele que passa a identificar a OSC no seletor do cabeçalho. Documentos continuam usando o nome completo.
+
 ## [1.90.1] — 2026-09-01
 
 <!-- destaque: Agora dá para dividir o custo de um lançamento entre vários centros de custo, sem lançar duas vezes. -->

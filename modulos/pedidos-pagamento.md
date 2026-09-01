@@ -87,6 +87,18 @@ No **celular**, os cards de resumo ficam em grade de 2 colunas e a lista de pedi
 [![Pedidos de pagamento no celular](/assets/screenshots/mobile-pedidos-pagamento.png)](/assets/screenshots/mobile-pedidos-pagamento.png)
 *Pedidos de compra e pagamento no celular — KPIs em grade 2×N e abas roláveis horizontalmente*
 
+### Pagar vários pedidos de uma vez {#pagar-varios-de-uma-vez}
+
+Na aba **Aprovado**, marque o checkbox de cada pedido que você já conferiu e vai pagar. No rodapé, o botão **"Marcar como pago (N)"** abre um diálogo em que você informa **a conta** e **a data do pagamento** uma única vez — em vez de repetir os dois campos pedido por pedido.
+
+Cada pedido é pago **separadamente**: se um falhar no meio do lote, os que já foram pagos **continuam pagos**, e você pode interromper a qualquer momento sem perder o que já foi feito. Ao final, o resultado vem **item por item** — pago, recusado por regra (por exemplo, retenção por orçamento do projeto, ver [Pagamento retido ou recusado por orçamento do projeto](#retencao-por-orcamento-do-projeto)), com o motivo, ou falhou, também com o motivo.
+
+Funciona do mesmo jeito que já funciona para reembolsos — ver [Reembolsos → Pagar reembolso aprovado pela fila](/modulos/reembolsos/#pagar-pela-fila).
+
+> ⚠️ **Atenção · Lote tem limite de itens**
+>
+> Selecionar um número muito grande de pedidos de uma vez trava o botão de pagar, com o aviso de quantos são permitidos por vez. Nesse caso, pague em duas levas: selecione uma parte, pague, e repita com o restante.
+
 ### Cards de resumo no topo
 
 De acordo com seu papel, você vê cards que viram atalhos para as listas filtradas:

@@ -26,7 +26,7 @@ A entrada no RIT360 Financeiro é **controlada pela organização**, não por ca
 
 > 📖 **Conceito · Múltiplas organizações na mesma conta**
 >
-> Sua conta no RIT360 Financeiro é **única e atrelada ao seu e-mail**, mas você pode ser membro de várias OSCs simultaneamente. Útil para quem é voluntário em mais de um grupo, contador que atende várias OSCs, dirigente que participa de federação e grupo local. Use o **seletor de organização** no topo da tela para alternar — a tela inteira reage à OSC ativa, mostrando os dados dela.
+> Sua conta no RIT360 Financeiro é **única e atrelada ao seu e-mail**, mas você pode ser membro de várias OSCs simultaneamente. Útil para quem é voluntário em mais de um grupo, contador que atende várias OSCs, dirigente que participa de federação e grupo local. Use o **seletor de organização** no topo da tela para alternar — a tela inteira reage à OSC ativa, mostrando os dados dela. Cada OSC aparece pelo **nome curto**, quando a organização cadastrou um em [Configurações → Organização](/configuracoes/organizacao/#identidade-da-osc) — sem ele, aparece a razão social completa.
 
 ## Primeiro acesso (via e-mail de acesso)
 

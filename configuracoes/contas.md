@@ -64,10 +64,26 @@ Clique em **+ Nova conta**. Preencha:
 - **Definir padrão / Remover padrão** — marca (ou desmarca) a conta como **padrão da organização**; ver abaixo
 - **Editar** — alterar nome, banco, tipo, cor e ícone (não o saldo — saldo só muda via movimentações)
 - **Desativar / Reativar** — uma conta desativada deixa de ser oferecida em novos lançamentos e importações, mas seu histórico permanece preservado e continua aparecendo nos filtros das listas
+- **Excluir** — remove o cadastro definitivamente; só para conta sem nenhuma movimentação. Ver [Excluir contas](#excluir-contas), abaixo.
 
-> ⚠️ **Atenção · Conta com movimentações não pode ser excluída**
+> ⚠️ **Atenção · Só sai do cadastro a conta sem nenhuma movimentação**
 >
-> O RIT360 Financeiro **não permite excluir conta que tem movimentações registradas** — só desativar. Motivo: excluir destruiria a história contábil dessas movimentações ("essa receita foi para qual conta?"). Para "encerrar" uma conta na prática, **desative** — inclusive uma conta com histórico extenso; ter movimentações vinculadas nunca impede a desativação. As movimentações ficam intactas no histórico, e a conta desativada não aparece nos formulários de novo lançamento nem nas importações.
+> Excluir apaga o cadastro **de vez** — por isso só é permitido para uma conta que **nunca teve nenhuma movimentação registrada**. Havendo qualquer lançamento vinculado, mesmo um só, a exclusão é recusada (excluir destruiria a história contábil dessas movimentações — "essa receita foi para qual conta?") e a única saída é **desativar**. Desativar continua funcionando do mesmo jeito de sempre, inclusive para conta com histórico extenso: as movimentações ficam intactas, e a conta desativada só some dos formulários de novo lançamento e das importações.
+
+## Excluir contas {#excluir-contas}
+
+Diferente de desativar, a exclusão **apaga o cadastro da conta**, não só o retira de oferta. É por isso que ela só vale para uma conta que **nunca movimentou nada** — criada por engano, duplicada no cadastro, ou de um teste que não seguiu adiante.
+
+- **Uma de cada vez** — no ícone de lixeira, na linha da conta. O diálogo confere antes: se houver qualquer movimentação vinculada, mostra o que impede e a exclusão fica bloqueada.
+- **Várias de uma vez** — marque o checkbox de cada conta (há **selecionar todos**, no cabeçalho da lista) e clique em **Excluir selecionadas**. A recusa de uma não trava as demais: o resultado volta **item por item**, dizendo quem foi excluída e quem foi recusada, com o motivo.
+
+> ⚠️ **Atenção · Não tem como desfazer**
+>
+> A exclusão é definitiva, e o diálogo sempre avisa quantas contas serão apagadas antes de confirmar. Na dúvida entre excluir e desativar, prefira **desativar** — inclusive porque, tendo qualquer movimentação, excluir não é mesmo uma opção.
+
+> 💡 **Por que isso importa**
+>
+> Antes desta versão, a única forma de tirar uma conta cadastrada por engano da lista era desativá-la — e ela ficava para sempre no cadastro, mesmo sem nunca ter sido usada para nada. Agora, o que nunca chegou a movimentar dinheiro sai de vez, sem exigir esse "encerramento" permanente de algo que nunca chegou a existir de fato para a contabilidade da OSC.
 
 > 💡 **Antes de confirmar, você sabe o que está desativando**
 >

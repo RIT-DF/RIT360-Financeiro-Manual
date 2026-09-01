@@ -95,6 +95,25 @@ Uma categoria ou centro de custo desativado deixa de ser oferecido no formulári
 >
 > A única restrição que permanece é de **hierarquia**, não de histórico: uma categoria-mãe não pode ser desativada enquanto tiver alguma sub-categoria **ativa**. Desative (ou mova) as sub-categorias primeiro. Isso vale mesmo que a categoria-mãe não tenha nenhum lançamento vinculado — é uma regra de estrutura, independente do uso.
 
+## Excluir categorias e centros de custo
+
+Diferente de desativar, **excluir apaga o cadastro definitivamente** — por isso só é possível para categoria ou centro de custo que **nunca foi usado em nada**: nenhum lançamento, nenhum pedido, nenhum reembolso, nenhuma configuração vinculada. Tendo qualquer vínculo, a exclusão é recusada e a alternativa continua sendo [desativar](#desativar-categorias-e-centros-de-custo), que preserva o histórico.
+
+- **Uma de cada vez** — no ícone de lixeira da linha, na lista de categorias ou de centros de custo. O diálogo confere antes e mostra se dá para excluir; havendo vínculo, lista o que impede (por exemplo, "3 lançamentos").
+- **Várias de uma vez** — marque o checkbox de cada linha (há também **selecionar todos**, no cabeçalho da lista) e clique em **Excluir selecionadas**. A recusa de uma não trava as demais: o resultado volta **item por item** — quem foi excluída e quem foi recusada, com o vínculo que impediu cada uma.
+
+> ⚠️ **Atenção · Não tem como desfazer**
+>
+> A exclusão é definitiva. Antes de confirmar, o diálogo sempre avisa quantas categorias ou centros de custo serão apagados. Na dúvida entre excluir e desativar, prefira **desativar** — o cadastro sai da oferta em telas novas do mesmo jeito, mas fica lá para consulta se você precisar dele de novo.
+
+> 💡 **Por que isso importa**
+>
+> Categoria criada por engano, ou uma leva de centros de custo de um teste que não vingou, ficavam para sempre na lista — desativar resolvia a poluição visual, mas não tirava o cadastro do banco. Agora, o que nunca chegou a ser usado sai de vez, sem deixar rastro nem exigir desativação permanente de algo que nunca existiu de fato para a contabilidade da OSC.
+
+## Excluir contas financeiras
+
+A mesma exclusão definitiva existe para **contas financeiras**, com a mesma regra: só sai do cadastro a conta que **nunca teve nenhuma movimentação**. Conta com histórico continua só podendo ser desativada. Seleção múltipla, ação em lote e o resultado item por item funcionam do mesmo jeito descrito acima — ver [Contas Bancárias → Excluir contas](/configuracoes/contas/#excluir-contas).
+
 ## Template de categorias
 
 Para começar rapidamente, clique em **Aplicar template**. O RIT360 Financeiro tem modelos prontos por tipo de OSC — há templates para **Grupo Escoteiro, Associação, Instituto, Fundação, ONG, Coletivo e Cooperativa**, cada um com as categorias de receita e despesa típicas daquele perfil. Escolha o modelo mais próximo da sua organização; aplicar o template importa as categorias do modelo para a sua OSC, sem apagar o que você já tinha.

@@ -674,11 +674,23 @@ Se você baixa o **extrato do banco em formato OFX** (a maioria dos bancos ofere
 
 1. Escolha a **conta** e suba o arquivo `.ofx`.
 2. O RIT360 Financeiro lê cada transação do extrato e **procura o lançamento correspondente** (por valor e proximidade de data), organizando tudo em quatro grupos:
-   - **Conciliados** — alta confiança no casamento; já vêm pré-marcados.
-   - **Em revisão** — casamento provável, mas com alguns dias de diferença; você confirma ou recusa.
-   - **Novos** — transações sem lançamento correspondente; você pode **criar** o lançamento (escolhendo a categoria) ou ignorar. Se a categoria certa ainda não existe, não precisa sair da conciliação para cadastrar: clique em **criar categoria** ali mesmo, e ela já entra escolhida na linha (exige a permissão **Config. financeira** — ver abaixo).
+   - **Conciliados** — alta confiança no casamento; já vêm pré-marcados para marcar como pago.
+   - **Em revisão** — casamento provável, mas com alguns dias de diferença; você aceita ou ignora, uma a uma.
+   - **Novos** — transações sem lançamento correspondente; para cada uma você **cria o lançamento** (escolhendo categoria e, se a organização usa, centro de custo) ou **ignora**. Se a categoria certa ainda não existe, não precisa sair da conciliação para cadastrar: clique em **criar categoria** ali mesmo, e ela já entra escolhida na linha (exige a permissão **Config. financeira** — ver abaixo).
    - **Já conciliados** — transações que você já processou antes (apenas informativo).
-3. Ao **confirmar**, os lançamentos conciliados/aceitos são marcados como **pagos** com a data do extrato e ficam vinculados à conciliação; os "novos" que você escolher viram lançamentos.
+3. Ao **confirmar**, os lançamentos conciliados/aceitos são marcados como **pagos** com a data do extrato e ficam vinculados à conciliação; os "novos" que você escolher **criar** viram lançamentos.
+
+> 📖 **Conceito · Linha sem decisão fica pendente, nunca é descartada**
+>
+> Você não é obrigado a decidir todas as linhas na mesma sessão. O que você **não marcar** — nem para conciliar, nem para criar, nem para ignorar — fica **pendente** e **reaparece na próxima vez que você importar o mesmo extrato** (ou um que contenha a mesma transação), como se fosse a primeira vez. A barra no rodapé da tela mostra, o tempo todo, quantas linhas ainda estão pendentes.
+>
+> **Ignorar é a única decisão definitiva**: uma linha ignorada **não volta a ser oferecida** em importações futuras — por isso o RIT360 Financeiro pede uma confirmação à parte antes de gravar, avisando quantas linhas você está prestes a descartar de vez. Se bateu a dúvida, é só **não decidir aquela linha** e resolver depois, com calma — ela vai continuar aparecendo até você decidir.
+
+**A lista de categorias, ao criar um lançamento, vem organizada por grupo e mostra só as categorias ativas** — a mesma lista, na mesma ordem, que você já vê no formulário de novo lançamento. Categoria desativada não aparece aqui (ver [Configurações → Categorias → Desativar categorias e centros de custo](/configuracoes/categorias/#desativar-categorias-e-centros-de-custo)); se for o caso de reativar uma para usá-la na conciliação, faça isso primeiro.
+
+> 💡 **Centro de custo, um a um ou para o grupo inteiro**
+>
+> Ao marcar uma linha do grupo **Novos** para criar lançamento, o centro de custo aparece **ao lado da categoria** — opcional, e só quando a organização usa centros de custo (organização que não usa não vê o campo). Marcou várias linhas para criar? No topo do grupo **Novos**, escolha o centro de custo no seletor e clique em **"Aplicar a todas as marcadas para criar"** — ele é aplicado de uma vez a todas as linhas já marcadas para **criar lançamento**, sem tocar nas que você vai conciliar, ignorar ou ainda não decidiu. Aplicar de novo com outro centro de custo (ou em branco, para remover) troca o valor das mesmas linhas.
 
 **Reimportar o mesmo extrato não duplica nada** — cada transação é reconhecida pelo identificador único do banco.
 
@@ -687,7 +699,13 @@ Se você baixa o **extrato do banco em formato OFX** (a maioria dos bancos ofere
 **Quem pode criar categoria durante a conciliação:** é a permissão **Config. financeira**, a mesma de [Categorias e Centros de Custo](/configuracoes/categorias/) — ver [Cargos e permissões](/configuracoes/cargos/#permissao-config-financeira). Sem ela, o botão de criar categoria aparece desabilitado; escolha uma categoria já cadastrada.
 
 > 💡 **Por que isso importa**
-> Conciliar pelo extrato substitui a conferência manual lançamento a lançamento, reduz erro e dá confiança de que o que está registrado no RIT360 Financeiro bate com o banco.
+> Conciliar pelo extrato substitui a conferência manual lançamento a lançamento, reduz erro e dá confiança de que o que está registrado no RIT360 Financeiro bate com o banco. E, deixando o que ainda não deu tempo de decidir como pendente em vez de descartado, você pode conciliar aos poucos, sessão após sessão, sem risco de uma linha sumir só porque não coube revisar naquele dia.
+
+[![Grupo "Novos" da conciliação, com o seletor de centro de custo e o botão "Aplicar a todas as marcadas para criar" no topo](/assets/screenshots/manual-conciliacao-aplicador-em-massa.png)](/assets/screenshots/manual-conciliacao-aplicador-em-massa.png)
+*O aplicador em massa de centro de custo, no topo do grupo "Novos" — só aparece quando há alguma linha marcada para criar lançamento*
+
+[![Linha do grupo "Novos" com os campos de categoria e centro de custo lado a lado](/assets/screenshots/manual-conciliacao-linha-categoria-e-centro.png)](/assets/screenshots/manual-conciliacao-linha-categoria-e-centro.png)
+*Categoria e centro de custo lado a lado, na linha marcada para criar lançamento*
 
 > 🔎 **Não tem o arquivo OFX?** Se você só tem o **saldo final** que aparece na tela do banco, use o **[Caça-diferenças](/modulos/caca-diferencas/)**: informe o saldo e ele aponta na hora onde está a diferença, com correção em um clique. É a conferência rápida "pelo número", complementar a esta conciliação por extrato.
 
@@ -739,7 +757,7 @@ Por padrão o documento traz todas as seções abaixo; na hora de gerar, você e
 - **Demonstração de receitas e despesas** — totais por categoria, com **gráficos** por grupo e o resultado do período (superávit ou déficit).
 - **Posição de caixa por conta** — saldo inicial, créditos, débitos e saldo final de cada conta, com o total geral que reconcilia.
 - **Demonstrativo analítico** — lançamento a lançamento, **separado em Receitas, Despesas e Transferências** e agrupado por categoria, com os valores sinalizados e coloridos (entradas em verde com `+`, saídas em vermelho com `−`), no mesmo padrão do extrato. As transferências aparecem com a conta de origem e a de destino.
-- **Pagamentos e Autorizações** — para cada pagamento do período, quem **pediu**, quem **aprovou** e quem **pagou**. É a seção que mostra, além do que foi gasto, **quem autorizou cada gasto** — informação que a diretoria, o conselho fiscal e um financiador costumam perguntar à parte quando ela não está no relatório.
+- **Pagamentos e Autorizações** — para cada pagamento do período, quem **pediu**, quem **pagou** e **todos os aprovadores que votaram**, com a decisão de cada um (aprovou ou reprovou) e a data do voto — não só o primeiro ou o que decidiu. Nos pagamentos originados de **reembolso**, a seção traz o histórico completo de aprovação, do mesmo jeito que já trazia para pedidos de compra e pagamento, num formato mais compacto do que antes. É a seção que mostra, além do que foi gasto, **quem autorizou cada gasto** — informação que a diretoria, o conselho fiscal e um financiador costumam perguntar à parte quando ela não está no relatório.
 - **Extrato por conta** — a movimentação cronológica de cada conta, com saldo corrente.
 - **Notas Explicativas** (opcional) — o texto livre que quem gerou o relatório escreveu sobre aquele período, numa seção própria do PDF. Ver **Nota explicativa**, logo abaixo.
 - **Comprovantes** — as imagens e PDFs anexados aos lançamentos, **mesclados ao final** do documento e organizados em três grupos (**Despesas, Receitas e Transferências**), na ordem dos lançamentos. Quando o comprovante é um **documento de escritório** (Word, Excel, PowerPoint, OpenDocument) ou outro arquivo que não dá para exibir embutido, o PDF mostra em seu lugar uma observação **"📎 nome-do-arquivo — disponível no lançamento"** — o comprovante está anexado e continua acessível, só não aparece embutido no relatório. Os lançamentos sem nenhum comprovante ficam listados à parte.
