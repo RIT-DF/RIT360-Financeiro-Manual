@@ -120,7 +120,7 @@ Pagar vários de uma vez segue o mesmo padrão do lote de aprovação: marque os
 
 > 💡 **Por que isso importa**
 >
-> Antes, confirmar o pagamento de um reembolso aprovado exigia trocar de tela e caçar o lançamento certo em Movimentações — um passo a mais para uma ação que o tesoureiro já decidiu fazer ali mesmo, na fila. Pagar pela fila fecha o ciclo (aprovar → pagar) sem sair da tela de Pagamentos e Reembolsos.
+> Antes, confirmar o pagamento de um reembolso aprovado exigia trocar de tela e caçar o lançamento certo em Movimentações — um passo a mais para uma ação que o tesoureiro já decidiu fazer ali mesmo, na fila. Pagar pela fila fecha o ciclo (aprovar → pagar) sem sair da tela de Pagamentos e Reembolsos. O mesmo botão existe também [no detalhe do próprio reembolso](#aprovado-aguardando-pagamento), para quem chega até lá por outro caminho (por exemplo, um link de notificação) e prefere confirmar ali, sem voltar para a fila.
 
 > ⚠️ **Captura pendente**
 >
@@ -216,13 +216,13 @@ O motivo da rejeição aparece em destaque no topo da página, e também fica re
 [![Reembolso aprovado](/assets/screenshots/manual-06c-reembolso-aprovado.png)](/assets/screenshots/manual-06c-reembolso-aprovado.png)
 *Detalhe de reembolso aprovado, aguardando confirmação de pagamento*
 
-Painel de Ações mostra: **"Aprovado — aguardando confirmação de pagamento pelo tesoureiro."**
+Painel de Ações mostra: **"Aprovado — aguardando confirmação de pagamento pelo tesoureiro."**, e quem tem a [permissão de pagar](/configuracoes/cargos/#permissao-pagar) vê aqui, direto no painel, os mesmos campos de **data do pagamento** e **conta** de origem do dinheiro que a fila pede — sem precisar sair do detalhe.
 
-Há dois caminhos para confirmar o pagamento, e os dois levam ao mesmo lugar: [pagar direto pela fila](#pagar-pela-fila), na aba "Aprovado" de Pagamentos e Reembolsos, ou pelo caminho mais antigo, abaixo.
+Há três caminhos para confirmar o pagamento, e todos levam ao mesmo lugar: pagar **direto aqui no detalhe**, [pagar pela fila](#pagar-pela-fila) na aba "Aprovado" de Pagamentos e Reembolsos, ou pelo caminho mais antigo, abaixo, via Movimentações.
 
 > 📖 **Conceito · Aprovado vira movimentação pendente automaticamente**
 >
-> No momento em que o reembolso é aprovado, o RIT360 Financeiro cria automaticamente uma **movimentação financeira pendente** em Movimentações com origem `reimbursement` (origem reembolso), valor e categoria corretos, ainda sem conta financeira definida. Cabe a quem tem permissão de pagar entrar em Movimentações, clicar nessa linha, escolher a conta de onde o dinheiro vai sair e marcar como paga — ou fazer a mesma coisa em um passo só, [pagando pela fila](#pagar-pela-fila). O ciclo só fecha quando essa confirmação acontece, por qualquer um dos dois caminhos. Os comprovantes anexados ao reembolso **vão junto com o lançamento** — dá para conferir o documento direto ali, na aba Documentos do lançamento, sem precisar abrir a solicitação original. O lançamento também traz um link **"Ver pedido de reembolso →"**, útil quando o que falta conferir é o histórico de aprovações ou outro dado da solicitação, não o comprovante.
+> No momento em que o reembolso é aprovado, o RIT360 Financeiro cria automaticamente uma **movimentação financeira pendente** em Movimentações com origem `reimbursement` (origem reembolso), valor e categoria corretos, ainda sem conta financeira definida. Cabe a quem tem permissão de pagar entrar em Movimentações, clicar nessa linha, escolher a conta de onde o dinheiro vai sair e marcar como paga — ou fazer a mesma coisa em um passo só, [pagando pela fila](#pagar-pela-fila) ou aqui mesmo, no detalhe. O ciclo só fecha quando essa confirmação acontece, por qualquer um dos três caminhos. Os comprovantes anexados ao reembolso **vão junto com o lançamento** — dá para conferir o documento direto ali, na aba Documentos do lançamento, sem precisar abrir a solicitação original. O lançamento também traz um link **"Ver pedido de reembolso →"**, útil quando o que falta conferir é o histórico de aprovações ou outro dado da solicitação, não o comprovante.
 
 > ℹ️ **Reembolso ainda não aprovado não vira pago por atalho**
 >

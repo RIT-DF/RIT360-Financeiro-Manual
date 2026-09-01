@@ -11,6 +11,17 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.88.0] — 2026-09-01
+
+### Adicionado
+
+- **Reembolso aprovado agora pode ser marcado como pago direto na tela do reembolso**, por quem tem permissão de pagar reembolso.
+
+### Corrigido
+
+- **Na lista de Pedidos de pagamento, o botão de pagar passou a funcionar para pedidos aprovados.**
+- **Quando um pagamento em lote é recusado, a mensagem agora diz se faltou permissão ou se a categoria não está prevista no orçamento do projeto.**
+
 ## [1.87.1] — 2026-09-01
 
 ### Corrigido

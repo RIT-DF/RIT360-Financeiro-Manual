@@ -72,6 +72,10 @@ A lista exibe todos os pedidos com colunas Descrição, Destinatário, Valor, Da
 
 Nas abas **Aprovado** e **Pago** há um filtro de período (mês atual, mês anterior, trimestre, ano etc.), igual ao de Movimentações, sempre aberto no **mês atual** por padrão. As abas **Aguardando aprovação**, **Rascunho** e **Rejeitado** não usam esse filtro — mostram sempre tudo, para nada que precise da sua atenção ficar escondido fora do período selecionado.
 
+### Pagar pedido aprovado pela lista {#pagar-pela-lista}
+
+Pedido aprovado pode ser marcado como pago **direto na aba "Aprovado"**, sem precisar abrir o detalhe nem ir até Movimentações procurar o lançamento correspondente. A ação pede a **data do pagamento** e a **conta** de onde o dinheiro saiu, do mesmo jeito que já funciona [para reembolsos](/modulos/reembolsos/#pagar-pela-fila). Só vê o botão de pagar quem tem a [permissão de pagar](/configuracoes/cargos/#permissao-pagar) — a mesma já exigida no detalhe do pedido, que **continua funcionando** igual.
+
 No **celular**, os cards de resumo ficam em grade de 2 colunas e a lista de pedidos vira cards verticais otimizados para toque:
 
 [![Pedidos de pagamento no celular](/assets/screenshots/mobile-pedidos-pagamento.png)](/assets/screenshots/mobile-pedidos-pagamento.png)
@@ -148,11 +152,13 @@ O motivo da rejeição aparece em destaque no topo, e também fica registrado na
 [![Pedido aprovado](/assets/screenshots/manual-08c-pedido-aprovado.png)](/assets/screenshots/manual-08c-pedido-aprovado.png)
 *Detalhe de pedido aprovado, aguardando pagamento*
 
-Painel de Ações mostra: **"Aprovado — aguardando confirmação de pagamento pelo tesoureiro."**
+Painel de Ações mostra: **"Aprovado — aguardando confirmação de pagamento pelo tesoureiro."**, e quem tem a [permissão de pagar](/configuracoes/cargos/#permissao-pagar) vê aqui os mesmos campos de **data do pagamento** e **conta** que a lista pede — sem precisar sair do detalhe.
+
+Há três caminhos para confirmar o pagamento, e todos levam ao mesmo lugar: pagar **direto aqui no detalhe**, [pagar pela lista](#pagar-pela-lista) na aba "Aprovado", ou pelo caminho mais antigo, abaixo, via Movimentações.
 
 > 📖 **Conceito · Aprovado vira movimentação automaticamente**
 >
-> No momento da aprovação, o RIT360 Financeiro cria automaticamente a **movimentação financeira pendente** (ou várias, no caso de parcelado e recorrente) com origem `purchase_order` (pedido de compra e pagamento). O tesoureiro entra em Movimentações, escolhe a conta de saída e marca como paga. Cada ocorrência de uma série recorrente gera um movimento individual no momento programado, pago separadamente. Os comprovantes anexados ao pedido **vão junto com o lançamento** — aparecem direto na aba Documentos, sem precisar abrir o pedido original para conferir. O lançamento em Movimentações também tem o link **"Ver pedido de compra e pagamento →"**, útil para consultar o histórico de aprovações ou outros dados da solicitação.
+> No momento da aprovação, o RIT360 Financeiro cria automaticamente a **movimentação financeira pendente** (ou várias, no caso de parcelado e recorrente) com origem `purchase_order` (pedido de compra e pagamento). O tesoureiro entra em Movimentações, escolhe a conta de saída e marca como paga — ou faz a mesma coisa em um passo só, [pagando pela lista](#pagar-pela-lista) ou aqui no detalhe. Cada ocorrência de uma série recorrente gera um movimento individual no momento programado, pago separadamente. Os comprovantes anexados ao pedido **vão junto com o lançamento** — aparecem direto na aba Documentos, sem precisar abrir o pedido original para conferir. O lançamento em Movimentações também tem o link **"Ver pedido de compra e pagamento →"**, útil para consultar o histórico de aprovações ou outros dados da solicitação.
 
 > 📖 **Conceito · Confirmar o pagamento exige permissão própria**
 >
