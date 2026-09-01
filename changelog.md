@@ -15,7 +15,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ### Corrigido
 
-- **O nome de quem recebe voltou a aparecer em todos os lançamentos vindos de reembolso.** Em alguns casos ele estava sumindo, porque o tipo de origem do lançamento era decidido em dois lugares diferentes, com regras que não coincidiam sempre.
+- **O nome de quem recebe passou a aparecer em todos os lançamentos vindos de reembolso.** Na versão anterior ele não aparecia em nenhum: o tipo de origem do lançamento era decidido em dois lugares, com regras diferentes, e o nome acabava descartado.
 - **O selo do orçamento anual agora diz "Vigente" ou "Anterior"**, em vez de mostrar o nome técnico da versão.
 
 ## [1.85.0] — 2026-09-01

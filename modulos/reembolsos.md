@@ -276,6 +276,8 @@ O reembolso devolve dinheiro a quem **gastou do próprio bolso** — por isso el
 - **Se ainda não tem**, o próprio formulário do reembolso pede que você preencha uma vez; ao salvar, esses dados passam a valer também no seu perfil, prontos para os próximos reembolsos.
 - **Para alterar depois**, o caminho é **Meu Perfil → Dados para Reembolso** — o formulário do reembolso não edita mais esse dado.
 
+[![Bloco Forma de pagamento no formulário de reembolso: método, tipo de chave, chave PIX e titular vindos do perfil, sem campos editáveis, com o aviso de que o reembolso é sempre pago a quem está pedindo e o link Alterar em Meu perfil](/assets/screenshots/reembolso-dados-pagamento-do-perfil.png)](/assets/screenshots/reembolso-dados-pagamento-do-perfil.png)
+
 > 💡 **Por que isso importa**
 >
 > Reembolso é diferente de pagar um fornecedor: o dinheiro só pode voltar para quem de fato desembolsou. Deixar o campo aberto para digitar qualquer chave a cada solicitação abria margem para erro (chave errada, conta de outra pessoa) e para reembolso pago à conta errada por engano ou má-fé. Fixar a origem no perfil de quem pede fecha essa porta, sem tirar a flexibilidade de quem ainda não tinha cadastrado nada.
