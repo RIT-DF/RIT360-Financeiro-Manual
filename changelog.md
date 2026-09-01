@@ -11,6 +11,26 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.98.1] — 2026-09-01
+
+### Corrigido
+
+- **Na prestação de contas, o cargo ao lado do nome do aprovador foi removido.** Quando a pessoa tinha mais de um cargo, aparecia o de menor alcance, o que fazia o documento sugerir que um voluntário havia aprovado um pagamento.
+
+## [1.98.0] — 2026-09-01
+
+### Adicionado
+
+- **Na tela de Documentos, agora é possível excluir o arquivo de um documento** — por linha ou em lote, pela seleção que já existia. A confirmação em lote diz quantos serão apagados, e o resultado mostra item a item o que foi apagado, recusado ou falhou. O registro do documento continua guardado; o que sai é o arquivo.
+
+### Modificado
+
+- **Na conciliação por extrato, a categoria e o centro de custo escolhidos passaram a aparecer por inteiro, sem corte, no computador e no celular.**
+
+### Corrigido
+
+- **Na conciliação por extrato, falha ao consultar categorias ou centros de custo passou a avisar que a consulta falhou**, em vez de dizer que a escolha da pessoa era inválida.
+
 ## [1.97.1] — 2026-09-01
 
 ### Corrigido
