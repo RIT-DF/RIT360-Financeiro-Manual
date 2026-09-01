@@ -777,6 +777,9 @@ Para anexar, na seção **Documentos complementares** do diálogo: escolha o arq
 
 ### Como gerar {#como-gerar-prestacao}
 
+[![Diálogo de prestação de contas, no modo Período livre — seções do documento, recorte por projeto ou centro de custo, formato de saída e a opção de proteger o nome dos favorecidos](/assets/screenshots/mov-prestacao-dialog-completo.png)](/assets/screenshots/mov-prestacao-dialog-completo.png)
+*O diálogo de prestação de contas — período (Mês, Ano acumulado ou Período livre), seções do documento, recorte, formato e proteção de favorecidos*
+
 1. Em **Movimentações**, clique no botão **Prestação de contas**, ao lado de Exportar.
 2. Escolha o período:
    - **Mês** — um mês específico já **fechado** (o mês corrente, ainda em andamento, não fica disponível);
@@ -788,6 +791,11 @@ Para anexar, na seção **Documentos complementares** do diálogo: escolha o arq
 6. Se quiser, marque **[Proteger nome dos favorecidos](#proteger-nome-favorecidos)**.
 7. Se quiser, escreva a [nota explicativa](#nota-explicativa) e anexe [documentos complementares](#documentos-complementares-opcional) — disponíveis só quando o formato escolhido é PDF.
 8. Clique em **Gerar**. A geração roda **em segundo plano**: você pode continuar trabalhando, e **o link do documento chega no seu e-mail** assim que ficar pronto (a montagem com gráficos e comprovantes pode levar de alguns segundos a poucos minutos). Se algo falhar, você é avisado por e-mail e por notificação no app.
+
+No celular, o mesmo diálogo aparece em tela cheia, rolável, com os mesmos campos:
+
+[![Diálogo de prestação de contas no celular, com o período em Mês e a lista de seções do documento](/assets/screenshots/mov-prestacao-dialog-mobile.png)](/assets/screenshots/mov-prestacao-dialog-mobile.png)
+*O mesmo diálogo em 375px — período, seções e o restante dos campos ficam abaixo, ao rolar*
 
 ### Formato de saída: PDF ou planilha {#formato-de-saida-prestacao}
 

@@ -76,7 +76,13 @@ Nas abas **Aprovado** e **Pago** há um filtro de período (mês atual, mês ant
 
 Pedido aprovado pode ser marcado como pago **direto na aba "Aprovado"**, sem precisar abrir o detalhe nem ir até Movimentações procurar o lançamento correspondente. A ação pede a **data do pagamento** e a **conta** de onde o dinheiro saiu, do mesmo jeito que já funciona [para reembolsos](/modulos/reembolsos/#pagar-pela-fila). Só vê o botão de pagar quem tem a [permissão de pagar](/configuracoes/cargos/#permissao-pagar) — a mesma já exigida no detalhe do pedido, que **continua funcionando** igual.
 
-No **celular**, os cards de resumo ficam em grade de 2 colunas e a lista de pedidos vira cards verticais otimizados para toque:
+[![Aba Aprovado da lista de pedidos, com o ícone de pagar na coluna Ações de cada linha](/assets/screenshots/ped-pagar-pela-lista-desktop.png)](/assets/screenshots/ped-pagar-pela-lista-desktop.png)
+*Aba "Aprovado" — o ícone de pagar aparece na coluna Ações de cada pedido, sem precisar abrir o detalhe*
+
+No **celular**, os cards de resumo ficam em grade de 2 colunas e a lista de pedidos vira cards verticais otimizados para toque, com o mesmo botão de pagar:
+
+[![Cards de pedidos aprovados no celular, cada um com o botão de pagar](/assets/screenshots/ped-pagar-pela-lista-mobile.png)](/assets/screenshots/ped-pagar-pela-lista-mobile.png)
+*Aba "Aprovado" no celular — cada card traz o botão de pagar, sem precisar entrar no detalhe do pedido*
 
 [![Pedidos de pagamento no celular](/assets/screenshots/mobile-pedidos-pagamento.png)](/assets/screenshots/mobile-pedidos-pagamento.png)
 *Pedidos de compra e pagamento no celular — KPIs em grade 2×N e abas roláveis horizontalmente*
