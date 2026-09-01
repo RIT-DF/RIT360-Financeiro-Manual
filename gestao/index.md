@@ -32,3 +32,4 @@ Cada guia segue a mesma estrutura:
 | [Como montar o plano de contas da sua OSC](/gestao/plano-de-contas/) | Ao começar, ou quando os relatórios não respondem o que você precisa saber |
 | [A rotina de fechamento do mês](/gestao/fechamento-do-mes/) | Todo mês — e especialmente se faz tempo que ninguém fecha |
 | [O que entregar ao conselho fiscal, e quando](/gestao/conselho-fiscal/) | Se o conselho só é acionado no fim do ano — ou se você vai acioná-lo pela primeira vez |
+| [Usar os relatórios para captar recurso](/gestao/relatorios-para-captacao/) | Antes de mandar material para um financiador, doador ou edital |
