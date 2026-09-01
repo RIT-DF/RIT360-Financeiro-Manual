@@ -11,6 +11,17 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.90.1] — 2026-09-01
+
+<!-- destaque: Agora dá para dividir o custo de um lançamento entre vários centros de custo, sem lançar duas vezes. -->
+
+### Adicionado
+
+- **Agora é possível dividir o custo de um lançamento entre vários centros de custo.** A responsabilidade continua com um único centro — quem aprova, paga e gerencia não muda.
+- **Orçamento anual (tela, fechamento e histórico), relatórios filtrados por centro de custo, extratos e prestação de contas passam a considerar a parte de cada centro.**
+- **A lista de movimentações mostra a marca "Custo dividido"** e, quando há filtro por centro, a parte daquele centro ao lado do valor cheio.
+- **Em Pontos de Atenção, o lançamento dividido aparece com o valor inteiro, marcado como dividido** — ali o que se avalia é a transação. Lançamento sem divisão continua exatamente como antes.
+
 ## [1.89.0] — 2026-09-01
 
 ### Corrigido

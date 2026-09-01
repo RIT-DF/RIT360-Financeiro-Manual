@@ -171,6 +171,7 @@ Ao lado do título de cada movimentação, badges contam mais sobre a origem e a
 - **Estornado** — aparece tanto no lançamento original quanto no contrário gerado pelo estorno
 - **Transferência**, com um ponto colorido ao lado — identifica de relance um movimento entre contas da própria OSC, sem precisar abrir o lançamento para saber. O ponto existe para não confundir o selo com o status **Pendente**, que aparece na mesma linha e também usa uma cor de destaque. Aparece igual na tabela do computador, nos cartões do celular e no bloco de lançamentos vinculados da tela de Projetos
 - **WooCommerce** (roxo) — pedido importado automaticamente da sua loja online; clique no badge abre o pedido no admin do WooCommerce em nova aba
+- **Custo dividido** — o lançamento tem o custo repartido entre vários centros de custo (ver **Distribuir valor entre centros de custo**, em **Registrar novo lançamento**). Quando a lista está filtrada por **um** centro de custo específico, a linha mostra também **a parte daquele centro**, ao lado do valor cheio do lançamento
 
 Na coluna **Valor**, um ícone de clipe 📎 ao lado do número avisa que o lançamento **tem documento anexado** — sem precisar abrir o detalhe para saber. Vale para qualquer origem: anexo feito à mão, comprovante trazido de uma importação, ou o comprovante de um reembolso/pedido de compra e pagamento aprovado (ver **Anexos e comprovantes**, abaixo).
 
@@ -334,6 +335,11 @@ Clique em **+ Novo lançamento** no topo da lista. O formulário abre em **pági
 - **Projeto** e **Centro de custo** — para OSCs que dividem o financeiro por projeto/área. Quem é **Gestor de Centro de Custo** só vê, aqui, os centros que gerencia — ver [Papéis e Permissões → Gestor de Centro de Custo](/papeis/#gestor-de-centro-de-custo)
 - **Forma de pagamento** (em Despesa) — como o pagamento será feito. Ao escolher **PIX**, o formulário abre os campos da **chave PIX** (tipo e chave); ao escolher **Transferência bancária**, abre os **dados bancários** do destinatário (banco, agência, conta e titular); **Boleto** e as demais formas não pedem campos extras. Esses dados são opcionais e ficam guardados no lançamento — úteis para quem for efetivar o pagamento depois
 - **Distribuir valor entre categorias** — divide um único valor por várias categorias (ex: uma compra de R$ 500 que vai 60% para "Material didático" e 40% para "Manutenção")
+- **Distribuir valor entre centros de custo** — divide um único lançamento por vários centros de custo (ex: a folha de pagamento paga pela sede, com parte para a unidade A e parte para a unidade B). Não aparece em Transferência, que é só mudança de lugar do dinheiro dentro da própria OSC.
+
+> 📖 **Conceito · Centro de custo responsável × distribuição de custo — não é a mesma pergunta**
+>
+> O campo **Centro de custo** responde "**quem responde** por este pagamento" — é ele que governa aprovação, permissão e o que aparece para cada [Gestor de Centro de Custo](/papeis/#gestor-de-centro-de-custo). A **distribuição de custo** responde "**onde este gasto caiu**" — é ela que governa orçamento e relatórios. As duas coexistem: um lançamento sempre tem **um** centro responsável, e pode, além disso, ter o custo **repartido** entre vários. Exemplo: a folha de pagamento da sede cobre profissionais de duas unidades. O centro de custo responsável continua sendo o da sede — é ela quem aprova e paga —, mas a distribuição manda parte do valor para o orçamento e os relatórios de cada unidade coberta. A soma das partes tem que fechar exatamente com o valor do lançamento; a tela não deixa salvar se não fechar.
 
 > 📖 **Conceito · O formulário se adapta ao tipo**
 >

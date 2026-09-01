@@ -1,6 +1,12 @@
 {
   "versoes": [
     {
+      "versao": "1.90.1",
+      "data": "2026-09-01",
+      "destaque": true,
+      "resumo": "Agora dá para dividir o custo de um lançamento entre vários centros de custo, sem lançar duas vezes."
+    },
+    {
       "versao": "1.89.0",
       "data": "2026-09-01",
       "destaque": false

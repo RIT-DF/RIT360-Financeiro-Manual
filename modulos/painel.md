@@ -115,6 +115,10 @@ Quem tem permissão de administrar as configurações financeiras vê, no própr
 
 O bloco **só aparece quando há algum aviso** nos últimos 30 dias — sem avisos, o Painel simplesmente termina no bloco de Pendências. Só vê este bloco quem tem permissão de ver Relatórios (Presidente, Tesoureiro e Comissão Fiscal).
 
+> 📖 **Conceito · Lançamento com custo dividido aparece pelo valor inteiro**
+>
+> Um lançamento com o [custo dividido entre centros de custo](/modulos/movimentacoes/#registrar-novo-lançamento) entra nos Pontos de atenção pelo **valor cheio**, não pela parte de cada centro — o texto do aviso avisa que o custo está dividido. Aqui o que se avalia é a transação inteira (uma concentração de gasto incomum, por exemplo), não o recorte por centro de custo que orçamento e relatórios usam.
+
 ### Novo aviso · Déficit projetado no fluxo de caixa
 
 Este é o aviso mais recente: ele avisa quando o caixa da sua OSC caminha para ficar **negativo** em algum mês futuro, considerando o que já está agendado e, quando necessário, a média dos meses anteriores.
