@@ -1,7 +1,7 @@
 ---
 title: "Presidente"
 nav_order: 4
-parent: "Guias por Papel"
+parent: "Quem faz o Que"
 permalink: /guias/presidente/
 ---
 

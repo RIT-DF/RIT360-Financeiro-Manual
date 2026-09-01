@@ -1,7 +1,7 @@
 ---
 title: "Tesoureiro"
 nav_order: 2
-parent: "Guias por Papel"
+parent: "Quem faz o Que"
 permalink: /guias/tesoureiro/
 ---
 

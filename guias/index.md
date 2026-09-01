@@ -1,11 +1,11 @@
 ---
-title: Guias por Papel
+title: Quem faz o Que
 nav_order: 9
 has_children: true
 permalink: /guias/
 ---
 
-# Guias por Papel
+# Quem faz o Que
 
 Guias focados no dia a dia de cada papel da OSC, reunindo as funcionalidades mais relevantes para cada um.
 

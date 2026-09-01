@@ -20,13 +20,14 @@ Cada guia segue a mesma estrutura:
 | **E se já estiver errado** | como sair de um cadastro que ficou torto |
 | **Para saber mais** | as páginas do manual que detalham cada tela citada |
 
-> **Guia, guia por papel ou perguntas frequentes?**
-> As [Perguntas frequentes](/faq/) respondem dúvidas pontuais sobre o sistema — *"sumiu o botão, por quê?"*.
-> Os [Guias por Papel](/guias/) reúnem o que cada função da OSC usa no dia a dia.
-> Os **Guias de Gestão**, aqui, tratam de decisões que atravessam várias telas — e às vezes não passam por tela nenhuma.
+> **Onde procurar cada coisa**
+> [Perguntas frequentes](/faq/) — dúvidas pontuais sobre o sistema: *"sumiu o botão, por quê?"*.
+> [Quem faz o Que](/guias/) — o que cada função da OSC usa no dia a dia.
+> **Guias de Gestão**, aqui — decisões que atravessam várias telas, e às vezes não passam por tela nenhuma.
 
 ## Guias disponíveis
 
 | Guia | Quando usar |
 |---|---|
 | [Como montar o plano de contas da sua OSC](/gestao/plano-de-contas/) | Ao começar, ou quando os relatórios não respondem o que você precisa saber |
+| [A rotina de fechamento do mês](/gestao/fechamento-do-mes/) | Todo mês — e especialmente se faz tempo que ninguém fecha |

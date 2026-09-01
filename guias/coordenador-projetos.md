@@ -1,7 +1,7 @@
 ---
 title: "Coordenador de Projetos"
 nav_order: 1
-parent: "Guias por Papel"
+parent: "Quem faz o Que"
 permalink: /guias/coordenador-projetos/
 ---
 

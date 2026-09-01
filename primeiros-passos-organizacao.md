@@ -101,4 +101,4 @@ Com a base pronta, traga o histórico:
 ## Próximo passo
 
 - Conheça o passo a passo de cada pessoa em **[Primeiros Passos do Usuário](/primeiros-passos/)**.
-- Veja a cartilha de atuação do seu papel em **[Guias por Papel](/guias/coordenador-projetos/)** (Coordenador, Tesoureiro, Comissão Fiscal, Presidente).
+- Veja a cartilha de atuação do seu papel em **[Quem faz o Que](/guias/coordenador-projetos/)** (Coordenador, Tesoureiro, Comissão Fiscal, Presidente).

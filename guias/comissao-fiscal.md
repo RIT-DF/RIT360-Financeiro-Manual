@@ -1,7 +1,7 @@
 ---
 title: "Comissão Fiscal"
 nav_order: 3
-parent: "Guias por Papel"
+parent: "Quem faz o Que"
 permalink: /guias/comissao-fiscal/
 ---
 
