@@ -11,6 +11,18 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.89.0] — 2026-09-01
+
+### Corrigido
+
+- **Agora é possível desativar contas, categorias e centros de custo que já têm histórico.** Nada é apagado; os lançamentos existentes continuam como estão.
+- **Antes de confirmar, o aviso informa quantos lançamentos estão vinculados e, no caso de conta, quantos ainda estão pendentes.** Enquanto a contagem carrega, isso é dito; se falhar, também — nunca aparece "0" inventado.
+- **Lançamentos pendentes numa conta desativada continuam podendo ser pagos nela, inclusive na baixa em lote.** Apontar outra conta inativa recusa o item com o motivo à vista.
+- **Os filtros das listas passam a oferecer contas, categorias e centros de custo inativos que têm histórico, marcados como inativos.** O formulário de lançamento novo e as importações continuam oferecendo apenas ativos.
+- **Mensagens de erro do servidor passam a chegar à tela com o motivo real em 16 pontos do sistema.**
+
+A regra que impede desativar uma categoria com subcategorias ativas continua valendo — é hierarquia, não histórico.
+
 ## [1.88.0] — 2026-09-01
 
 ### Adicionado

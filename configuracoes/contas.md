@@ -63,11 +63,21 @@ Clique em **+ Nova conta**. Preencha:
 
 - **Definir padrão / Remover padrão** — marca (ou desmarca) a conta como **padrão da organização**; ver abaixo
 - **Editar** — alterar nome, banco, tipo, cor e ícone (não o saldo — saldo só muda via movimentações)
-- **Desativar / Reativar** — uma conta desativada não aparece em filtros e formulários, mas seu histórico permanece preservado
+- **Desativar / Reativar** — uma conta desativada deixa de ser oferecida em novos lançamentos e importações, mas seu histórico permanece preservado e continua aparecendo nos filtros das listas
 
 > ⚠️ **Atenção · Conta com movimentações não pode ser excluída**
 >
-> O RIT360 Financeiro **não permite excluir conta que tem movimentações registradas** — só desativar. Motivo: excluir destruiria a história contábil dessas movimentações ("essa receita foi para qual conta?"). Para "encerrar" uma conta na prática, **desative**. As movimentações ficam intactas no histórico, e a conta desativada não aparece nos formulários de novo lançamento.
+> O RIT360 Financeiro **não permite excluir conta que tem movimentações registradas** — só desativar. Motivo: excluir destruiria a história contábil dessas movimentações ("essa receita foi para qual conta?"). Para "encerrar" uma conta na prática, **desative** — inclusive uma conta com histórico extenso; ter movimentações vinculadas nunca impede a desativação. As movimentações ficam intactas no histórico, e a conta desativada não aparece nos formulários de novo lançamento nem nas importações.
+
+> 💡 **Antes de confirmar, você sabe o que está desativando**
+>
+> O diálogo de confirmação mostra quantos lançamentos estão vinculados à conta e, entre eles, quantos ainda estão **pendentes de pagamento**. Enquanto a contagem carrega, o diálogo avisa que está verificando; se a verificação falhar, ele avisa isso também — nunca mostra "nenhum lançamento" por não ter conseguido checar.
+>
+> **Lançamento pendente numa conta desativada continua podendo ser pago nela normalmente**, inclusive na baixa em lote (marcar vários lançamentos como pagos de uma vez). A única restrição é apontar, na baixa em lote, uma conta inativa **diferente** da que o lançamento já usa — nesse caso o item é recusado, com o motivo explicado, e os demais itens do lote seguem normalmente.
+
+> ✓ **Dica · Conta desativada continua nos filtros**
+>
+> Uma conta desativada some das listas de escolha em lançamento novo e importação, mas **continua disponível no filtro de conta das listas de consulta** (Movimentações e relatórios), identificada como inativa — desde que tenha algum lançamento vinculado. É assim que você continua conseguindo revisar o histórico de uma conta encerrada sem precisar reativá-la.
 
 ## Compõe o saldo disponível da organização
 

@@ -81,6 +81,20 @@ A lista da aba **Centros de custo** tem uma coluna **"Gestor(es)"** que mostra, 
 >
 > Essa coluna é o jeito rápido de auditar quem está no comando de cada área: um centro de custo importante com "—" na coluna Gestor(es) é sinal de que falta atribuir responsável (ou que quem foi atribuído ainda não tem o cargo Gestor de Centro de Custo).
 
+## Desativar categorias e centros de custo
+
+Categoria ou centro de custo que saiu de uso pode ser **desativado** — inclusive quando já tem lançamentos vinculados, quantos quer que sejam. Ter histórico nunca impede a desativação: nada é apagado, e os lançamentos existentes continuam exatamente como estavam, com aquela categoria ou centro de custo.
+
+> 💡 **Antes de confirmar, você sabe o que está desativando**
+>
+> O diálogo de confirmação mostra quantos lançamentos estão vinculados àquela categoria ou centro de custo. Enquanto a contagem carrega, o diálogo avisa que está verificando; se a verificação falhar, avisa isso também — nunca mostra "nenhum lançamento" por não ter conseguido checar.
+
+Uma categoria ou centro de custo desativado deixa de ser oferecido no formulário de novo lançamento e nas importações, mas continua aparecendo no **filtro** das listas de consulta (Movimentações e relatórios), identificado como inativo — desde que tenha algum lançamento vinculado. É assim que você continua conseguindo revisar o histórico depois de desativar.
+
+> ⚠️ **Atenção · Categoria-mãe com sub-categoria ativa continua bloqueada**
+>
+> A única restrição que permanece é de **hierarquia**, não de histórico: uma categoria-mãe não pode ser desativada enquanto tiver alguma sub-categoria **ativa**. Desative (ou mova) as sub-categorias primeiro. Isso vale mesmo que a categoria-mãe não tenha nenhum lançamento vinculado — é uma regra de estrutura, independente do uso.
+
 ## Template de categorias
 
 Para começar rapidamente, clique em **Aplicar template**. O RIT360 Financeiro tem modelos prontos por tipo de OSC — há templates para **Grupo Escoteiro, Associação, Instituto, Fundação, ONG, Coletivo e Cooperativa**, cada um com as categorias de receita e despesa típicas daquele perfil. Escolha o modelo mais próximo da sua organização; aplicar o template importa as categorias do modelo para a sua OSC, sem apagar o que você já tinha.
