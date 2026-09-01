@@ -205,6 +205,10 @@ Por padrão, **Presidente** e **Tesoureiro** — a mesma permissão de sempre. A
 
 Na área de **[Documentos](/modulos/documentos/)**, filtre por tipo "Prestação de contas": ali está a lista de todos os documentos já gerados pela organização, com quem pediu e quando. Você pode **baixar** o PDF enquanto o arquivo estiver disponível. Antes da área de Documentos, o único acesso era o link enviado por e-mail na hora da geração — agora o documento fica na plataforma. Também há um atalho direto: o botão **Prestações geradas**, em [Movimentações](/modulos/movimentacoes/#onde-encontrar-os-documentos-já-gerados), ao lado do botão de gerar.
 
+### Recebi uma prestação de contas em PDF. Como sei que é mesmo da organização?
+
+Acesse **financeiro.rit360.org.br/verificar** (sem precisar de login) e digite o código de verificação impresso no rodapé do documento — ou aponte a câmera para o QR Code que vem junto. A página confirma que aquele código corresponde a um documento real, emitido por aquela organização, naquela data e período; ela **não mostra** o conteúdo financeiro do PDF, só confirma a emissão. Vale para quem recebe de dentro ou de fora da OSC. Ver [Relatórios → Como quem recebe confere a autenticidade](/modulos/relatorios/#conferir-autenticidade).
+
 ### "Gerar de novo" me devolve o mesmo PDF de antes?
 
 Não. O documento é montado com **os dados de hoje** — não é uma cópia do que foi entregue na época. Se algum lançamento daquele período foi editado, estornado ou cancelado desde então, o resultado vai ser diferente do original. O arquivo que já existe também **não é substituído**: cada geração cria um **registro novo** na lista, por isso é normal ver várias prestações do mesmo mês.

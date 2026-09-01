@@ -823,7 +823,7 @@ No celular, o mesmo diálogo aparece em tela cheia, rolável, com os mesmos camp
 
 ### Formato de saída: PDF ou planilha {#formato-de-saida-prestacao}
 
-- **PDF** — o documento completo, no padrão visual do RIT360 Financeiro, com gráficos, comprovantes mesclados, documentos complementares e o termo de encerramento. Leva o **selo de autenticidade eletrônica**, no Termo de encerramento: um código e um QR Code que qualquer pessoa confere, numa página pública sem login, para saber que aquele PDF realmente foi emitido pela organização.
+- **PDF** — o documento completo, no padrão visual do RIT360 Financeiro, com gráficos, comprovantes mesclados, documentos complementares e o termo de encerramento. Leva o **selo de autenticidade eletrônica**, na capa e no Termo de encerramento: um código e um QR Code que qualquer pessoa confere, numa página pública sem login, para saber que aquele PDF realmente foi emitido pela organização — ver [Relatórios → Como quem recebe confere a autenticidade](/modulos/relatorios/#conferir-autenticidade).
 - **Planilha** — as mesmas seções, em formato de tabela editável (Excel), para quem precisa cruzar os números com outra planilha ou ajustar antes de repassar. **Não leva selo de autenticidade**, porque é editável: uma planilha pode ser alterada depois de baixada, então ela não serve como prova de que o conteúdo é o que a organização emitiu. Não inclui comprovantes nem documentos complementares, que são arquivos, não dados tabulares.
 
 > ⚠️ **Atenção · Planilha é para uso interno ou de trabalho — PDF é o documento oficial**

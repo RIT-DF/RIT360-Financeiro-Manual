@@ -150,21 +150,57 @@ Toda vez que alguém gera uma [prestação de contas](/modulos/movimentacoes/#pr
 
 Em Documentos, cada linha traz quem pediu e quando, e o **Baixar** quando o arquivo ainda está disponível. Gerar de novo é feito voltando ao diálogo em [Movimentações → Prestação de contas](/modulos/movimentacoes/#prestacao-de-contas), escolhendo o mesmo período — cada geração entra como um registro novo, não substitui a anterior.
 
+### Como quem recebe confere a autenticidade {#conferir-autenticidade}
+
+Toda prestação de contas em **PDF** sai com um **código de verificação e um QR Code**, impressos duas vezes no documento: na capa e no Termo de Encerramento, ao lado das assinaturas. Qualquer pessoa que receber esse PDF — inclusive alguém **de fora da OSC, sem login no sistema** — pode conferir, numa página pública, que aquele arquivo específico foi mesmo emitido pela organização e não foi alterado depois de gerado.
+
+> 💡 **Por que isso importa**
+>
+> Um financiador, um conselheiro ou um auditor não tem como saber, só olhando um PDF, se ele é o documento original ou uma versão editada. O selo resolve isso sem exigir confiança cega: em vez de acreditar na palavra de quem entregou o arquivo, quem recebe confere direto com o sistema que o emitiu. É também uma forma de a OSC se proteger — um documento falsificado em nome dela não passa pela conferência.
+
+**Como conferir**, sem precisar de conta nem senha:
+
+1. Acesse **financeiro.rit360.org.br/verificar** (o mesmo endereço impresso no PDF), ou aponte a câmera do celular para o **QR Code** do documento.
+2. Digite o **código de verificação** que aparece no rodapé do PDF — pode digitar com ou sem espaços e hífens, o sistema entende do mesmo jeito. Quem chegou pelo QR Code não precisa digitar nada: a conferência já roda sozinha.
+3. Clique em **Conferir**.
+
+[![Página pública de conferência de autenticidade, com o campo para digitar o código de verificação](/assets/screenshots/manual-verificar-documento.png)](/assets/screenshots/manual-verificar-documento.png)
+*A página de conferência — sem login, sem menu, só o campo do código*
+
+A página devolve um destes resultados:
+
+- **Documento reconhecido** — é a versão vigente, emitida pela organização indicada, com o tipo, o período e a data de emissão.
+- **Documento reconhecido, mas substituído** — a organização gerou de novo o mesmo período depois; o código ainda é autêntico, mas não é mais a versão atual. Quem recebeu deve pedir a versão nova.
+- **Documento reconhecido, arquivo removido** — o documento foi emitido de fato, mas o PDF já não está guardado no sistema (por prazo de guarda vencido, ou porque alguém apagou o arquivo). O registro da emissão continua válido; o que não existe mais é o arquivo.
+- **Código não reconhecido** — nenhum documento deste sistema corresponde ao código digitado. Confira a digitação; se o código veio impresso, o problema pode ser leitura errada de um caractere parecido (zero e letra O, por exemplo — o campo já corrige essas trocas comuns sozinho).
+
+> 📖 **Conceito · A página confirma, não mostra**
+>
+> A conferência **nunca exibe o conteúdo financeiro do documento** — nem valores, nem nomes, nem anexos. Ela só responde "este código corresponde a um documento real, emitido por esta organização, nesta data, para este período?". Quem quer ver o conteúdo precisa do próprio PDF, entregue por quem gerou.
+
+> ⚠️ **Atenção · Só o PDF tem selo**
+>
+> A versão em **planilha** da prestação de contas **não leva** código nem QR Code — ela é editável, então não serviria como prova de autenticidade mesmo que tivesse um. Quem precisa comprovar o documento perante terceiros deve gerar em PDF, não em planilha. Ver [Movimentações → Formato de saída](/modulos/movimentacoes/#formato-de-saida-prestacao).
+
+> ✓ **Dica · Avise quem recebe que o documento pode ser conferido**
+>
+> Quase ninguém sabe, de cara, que o PDF se verifica sozinho — e essa informação sozinha já aumenta a confiança de quem recebe. Ver [Usar os relatórios para captar recurso](/gestao/relatorios-para-captacao/#5-use-o-selo-de-autenticidade).
+
 ### E se for preciso apagar o arquivo de uma prestação?
 
-Dá, mas **não pela área de Documentos** — lá a prestação só se baixa. A ação de apagar fica na tela de **Prestações geradas**, alcançável pelo botão de mesmo nome em Movimentações, ao lado de "Prestação de contas".
+Dá, por dois caminhos: direto na área **[Documentos](/modulos/documentos/#excluir-arquivo)** (por linha ou em lote, junto com qualquer outro tipo de documento), ou na tela de **Prestações geradas**, alcançável pelo botão de mesmo nome em Movimentações, ao lado de "Prestação de contas" — que continua existindo e mostrando o histórico completo de cada prestação, inclusive as que já perderam o arquivo.
 
-Ali cada linha que ainda tem arquivo oferece **Apagar o arquivo**, e também dá para apagar vários de uma vez pela seleção em lote. A ação pede confirmação antes.
+Em qualquer um dos dois lugares, cada linha que ainda tem arquivo oferece **Apagar o arquivo** (ou **Excluir arquivo**, em Documentos), e também dá para apagar vários de uma vez pela seleção em lote. A ação pede confirmação antes, dizendo quantos documentos serão afetados.
 
 > ⚠️ **Quem pode, e o que exatamente some**
 >
-> Apagar o arquivo é ação destrutiva e está restrita a quem administra a plataforma ou tem a permissão de **exportar dados** da organização. Quem não tem simplesmente não vê o botão.
+> Apagar o arquivo é ação destrutiva e está restrita a quem administra a plataforma ou tem a permissão de **exportar dados** da organização. Quem não tem simplesmente não vê o botão, em nenhuma das duas telas.
 >
-> O que some é **o PDF**, não o registro: o período continua listado, com quem pediu e quando, apenas sem arquivo para baixar — o mesmo estado em que fica um documento cujo prazo de guarda venceu. Se precisar do conteúdo de novo, gere a prestação outra vez pelo mesmo período.
+> O que some é **o PDF**, não o registro. Em **Prestações geradas**, o período continua listado, com quem pediu e quando, e a marca de quando o arquivo foi removido e por quem. Em **Documentos**, porém, um documento sem arquivo **deixa de aparecer na lista** (desde a v1.97.1) — o registro não some, só a tela que o mostra é outra. Se precisar do conteúdo de novo, gere a prestação outra vez pelo mesmo período.
 
 Há ainda o caminho automático: o **prazo de guarda** configurado pela organização (abaixo), que apaga os arquivos vencidos sem ninguém precisar agir.
 
-## Guarda dos documentos de prestação de contas
+## Guarda dos documentos de prestação de contas {#guarda-dos-documentos}
 
 [![Guarda dos documentos de prestação de contas](/assets/screenshots/manual-prestacoes-guarda-config.png)](/assets/screenshots/manual-prestacoes-guarda-config.png)
 *Configurações → Relatórios — o bloco de guarda fica acima das regras de pontos de atenção*
@@ -250,6 +286,8 @@ Três opções na hora de revisar:
 - **Calibração** — análise estatística que sugere limites de regras personalizados ao padrão da sua OSC.
 - **Forecast (projeção)** — estimativa do comportamento financeiro futuro, combinando agendados (já cadastrados) com estimados (média histórica); veja [Painel → Previsão](/modulos/painel/#previsao).
 - **Prestação de contas (documento)** — o relatório contábil completo de um período, gerado em PDF ou planilha em Movimentações e listado na área de [Documentos](/modulos/documentos/).
+- **Selo de autenticidade** — o código de verificação e o QR Code impressos no PDF da prestação de contas, que permitem a qualquer pessoa conferir a emissão numa página pública, sem login.
+- **Código de verificação** — a sequência impressa no PDF que se digita em [financeiro.rit360.org.br/verificar](https://financeiro.rit360.org.br/verificar) para conferir a autenticidade — ver [Como quem recebe confere a autenticidade](#conferir-autenticidade).
 - **Prazo de guarda** — por quantos anos os PDFs de prestação de contas são mantidos, contados do fim do período coberto. Padrão: sem descarte.
 - **Descarte** — remoção apenas do arquivo PDF; o registro da prestação permanece listado, marcado como indisponível.
 

@@ -7,8 +7,8 @@ task: encontrar-documento-ja-gerado
 role: [presidente, tesoureiro, comissao-fiscal, coordenador-projetos]
 routes: [/documentos]
 screenshots: [documentos-lista, documentos-selecao-lote]
-source_docs: [changelog v1.79.0, v1.79.1]
-last_verified: 2026-08-30
+source_docs: [changelog v1.79.0, v1.79.1, v1.97.1, v1.98.0]
+last_verified: 2026-09-01
 status: publicado
 ---
 
@@ -28,7 +28,11 @@ Cada linha é um documento gerado (ou em preparo), com o tipo, um resumo do per�
 
 - **Pronto** — o arquivo existe e pode ser baixado agora, pelo botão **Baixar**.
 - **Em preparo** — a geração ainda está rodando em segundo plano; a lista se atualiza sozinha, sem precisar recarregar a página.
-- **Arquivo indisponível** — o documento existiu, mas o arquivo não está mais acessível (prazo de guarda vencido, ou falha na geração). Nesse caso não há botão de baixar; se você precisar do conteúdo, gere de novo pelo módulo de origem.
+- **Falhou** — a geração não terminou com sucesso. Não há arquivo para baixar nem para apagar; o link **Gerar de novo na origem** leva de volta ao módulo onde o documento nasce (Movimentações, Relatórios, Projetos ou Orçamento), para tentar de novo.
+
+> ⚠️ **Atenção · Documento sem arquivo não aparece mais aqui**
+>
+> Até a v1.97.0, um documento cujo arquivo tinha sumido (prazo de guarda vencido, ou falha na geração) continuava na lista com o status "Arquivo indisponível" — ocupando espaço sem que houvesse nada a fazer com ele ali. Desde a v1.97.1, esse documento **some da tela de Documentos**. O registro não foi apagado: para a **prestação de contas**, ele continua visível na tela de **Prestações geradas** (em Movimentações), mostrando quando o arquivo foi removido e por quem — ver [Guarda dos documentos de prestação de contas](/modulos/relatorios/#guarda-dos-documentos). Se precisar do conteúdo de novo, gere o documento outra vez pelo módulo de origem.
 
 ### Tipos de documento cobertos
 
@@ -51,20 +55,50 @@ PDF de lançamentos, planilha de lançamentos, PDF e planilha do relatório fina
 
 Marque a caixa de cada documento, ou use **Selecionar os N documentos exibidos** para marcar tudo o que está na tela (respeitando os filtros ativos). Com um ou mais marcados, aparece a barra de seleção com o total marcado e o botão **Baixar em lote**.
 
-> ⚠️ **Atenção · Documento indisponível não entra na entrega**
+> ⚠️ **Atenção · Só documento Pronto entra na entrega**
 >
-> Se a seleção incluir um documento com status **Arquivo indisponível**, ele fica de fora do lote — o download em lote entrega só o que está **Pronto**, e avisa quantos documentos ficaram fora por esse motivo. Não é falha silenciosa: a contagem do que foi entregue e do que ficou de fora aparece separada.
+> Se a seleção incluir um documento **Em preparo** ou que **Falhou**, ele fica de fora do lote — o download em lote entrega só o que está **Pronto**, e avisa quantos documentos ficaram fora por esse motivo. Não é falha silenciosa: a contagem do que foi entregue e do que ficou de fora aparece separada.
 
-## Não há exclusão
+## Excluir o arquivo de um documento {#excluir-arquivo}
 
-A área de Documentos é só de consulta e download — **não existe apagar um documento por ali**. É coerente com o papel dela de arquivo permanente: se você pudesse apagar, deixaria de ser um catálogo confiável do que já foi gerado.
+Desde a v1.98.0, quem tem permissão pode apagar o **arquivo** de um documento direto na área de Documentos — por linha, ou em lote pela mesma seleção usada para baixar.
 
-Um documento pode, ainda assim, aparecer como **Arquivo indisponível**, e há dois caminhos que levam a isso, ambos fora desta tela: o **prazo de guarda** da organização, que apaga automaticamente os arquivos vencidos, e a ação de **apagar o arquivo** de uma prestação de contas, disponível na tela de Prestações geradas para quem administra a plataforma ou tem permissão de exportar dados — ver [Prestações de contas](/modulos/relatorios/#e-se-for-preciso-apagar-o-arquivo-de-uma-prestacao). Nos dois casos o registro continua na lista; o que some é o arquivo.
+> 💡 **Por que isso importa**
+>
+> Nem todo documento gerado precisa continuar ocupando espaço de armazenamento para sempre. Um relatório de teste, um PDF gerado com o filtro errado, ou um documento que já foi substituído por uma versão mais recente do mesmo período — antes disso só se resolvia esperando o prazo de guarda vencer sozinho (quando existia um configurado) ou, para prestação de contas, indo até a tela de Prestações geradas. Agora dá para limpar isso na hora, no mesmo lugar em que o documento é encontrado.
+
+### O que exatamente é apagado
+
+**Só o arquivo — nunca o registro.** O documento continua listado no histórico da organização (a menos que, sem arquivo, ele deixe de aparecer nesta lista — ver o aviso acima), com quem pediu, quando e o que ele cobria. O que some é o PDF ou a planilha em si; não há como recuperá-lo depois, a não ser gerando o documento de novo pelo módulo de origem — e, se os dados mudaram desde então, o resultado não será uma cópia idêntica.
+
+> ⚠️ **Atenção · Não existe "desfazer"**
+>
+> Apagar o arquivo é uma ação **irreversível**: não existe lixeira nem restauração. Antes de confirmar, especialmente em lote, confira se a seleção é mesmo a que você quer apagar.
+
+### Por linha
+
+Em cada documento com arquivo disponível, aparece o botão **Excluir arquivo**, ao lado de Baixar. Ele pede confirmação, informando qual documento será afetado, antes de apagar.
+
+### Em lote
+
+Marque um ou mais documentos (do mesmo jeito que para baixar em lote) e use o botão **Excluir selecionados**, na barra de seleção. A confirmação diz **quantos documentos** terão o arquivo apagado antes de você confirmar — e, se algum item da seleção já não tiver arquivo para apagar, ela avisa que esse ficará de fora.
+
+O resultado, depois de confirmar, mostra **item a item** o que aconteceu: apagado, recusado (documento sem arquivo, ou fora do seu acesso) ou falhou. Não é um "pronto" genérico que esconde falha parcial — se cinco documentos forem selecionados e um falhar, você vê exatamente qual.
+
+### Quem pode
+
+A mesma permissão que já existia para apagar o arquivo de uma prestação de contas pela tela de Prestações geradas: quem administra a plataforma ou tem a permissão de **exportar dados** da organização. Quem não tem essa permissão **não vê o botão**, nem por linha nem em lote — em nenhum documento.
+
+## Não há exclusão do registro
+
+O que **continua** impossível é apagar a **linha** — o registro de que aquele documento foi gerado, por quem e quando. Isso é coerente com o papel de Documentos como arquivo permanente da organização: mesmo sem o PDF, fica a prova de que ele existiu, para quando conselho, financiador ou auditoria perguntarem "vocês geraram esse relatório?".
+
+Além de apagar pela tela, há um caminho automático que também remove só o arquivo, nunca o registro: o **prazo de guarda** configurado pela organização para prestações de contas, em Configurações → Relatórios — ver [Guarda dos documentos de prestação de contas](/modulos/relatorios/#guarda-dos-documentos).
 
 ## Glossário rápido
 
 - **Em preparo** — geração ainda rodando; a lista atualiza sozinha quando terminar.
-- **Arquivo indisponível** — documento que existiu mas cujo arquivo não está mais acessível; gere de novo no módulo de origem se precisar do conteúdo.
+- **Excluir arquivo** — remove o PDF ou a planilha, mantendo o registro do documento no histórico; ação irreversível.
 
 ## Por onde seguir
 
