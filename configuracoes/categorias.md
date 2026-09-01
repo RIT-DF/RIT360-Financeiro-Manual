@@ -152,6 +152,57 @@ O RIT360 Financeiro suporta **categorias-mãe com sub-categorias** — útil par
 
 O modo automático de integração com WooCommerce (em Configurações → Organização) usa exatamente esse padrão: cria sub-categorias sob a categoria-mãe escolhida para cada categoria do WC.
 
+## Acompanhar quanto da despesa vai para cada finalidade
+
+Algumas OSCs precisam comprovar que uma **parcela mínima da despesa** foi aplicada em determinada finalidade. É o caso de quem tem CEBAS na área da saúde, que precisa demonstrar que 60% da despesa foi em saúde — mas vale para qualquer certificação, convênio ou estatuto que imponha proporção.
+
+O sistema entrega esse número **sem nenhuma configuração especial**, desde que as categorias estejam organizadas do jeito certo.
+
+### Como organizar
+
+**Coloque a finalidade no primeiro nível das categorias de despesa** e tudo o mais abaixo dela:
+
+- **Saúde**
+  - Folha de pagamento
+  - Material de enfermagem
+  - Manutenção da sala do hospital
+- **Assistência**
+  - Folha de pagamento
+  - Cesta básica
+  - Transporte de pacientes
+- **Administrativa**
+  - Folha de pagamento
+  - Aluguel
+  - Contabilidade
+
+⚠️ **Use no máximo dois níveis.** O relatório soma cada categoria dentro da **categoria imediatamente acima dela**. Com dois níveis, a soma cai na finalidade, que é o que você quer. Com três — "Saúde → Pessoal → Folha" —, a soma para em "Pessoal" e a finalidade não aparece.
+
+### Onde ler o percentual
+
+Em **Relatórios**, escolha o período e abra a visão de despesa por categoria. Cada linha de primeiro nível traz o **percentual sobre o total** do período, e ainda a variação em relação ao período anterior.
+
+É esse percentual que responde "quanto da minha despesa foi em saúde neste ano". Escolhendo o período do exercício, ele responde a pergunta do órgão certificador; escolhendo o mês, mostra se você está no caminho.
+
+### A despesa que pertence a mais de uma finalidade
+
+Esse é o caso que costuma parecer sem saída: a folha de pagamento de quem trabalha metade do tempo no atendimento em saúde e metade na administração.
+
+**Não é preciso escolher uma finalidade nem "puxar" a folha inteira para um lado.** Ao lançar a despesa, divida o valor entre as categorias correspondentes — uma parte em "Saúde / Folha de pagamento", outra em "Administrativa / Folha de pagamento". O sistema aceita a divisão por valor, e o relatório soma cada parte na finalidade certa.
+
+A proporção pode ser diferente a cada mês: você informa a divisão do mês, e pronto. Nada precisa ser reclassificado depois.
+
+> 💡 **Por que isso importa**
+>
+> Quem só descobre o percentual no fechamento do exercício descobre tarde: se faltou, já não há o que fazer, e sobra a tentação de reclassificar despesa no fim do ano para fechar a conta — o que um auditor enxerga e questiona. Olhando o percentual a cada mês, a correção é operacional e legítima: dá tempo de priorizar um projeto da finalidade que está atrás.
+
+### E os centros de custo, não serviriam?
+
+Serviriam para o número, mas com dois problemas.
+
+O primeiro é que **um lançamento pertence a um único centro de custo** — então a folha dividida entre duas finalidades não tem como ser representada. Você voltaria a ter que escolher um lado, que é exatamente o problema que a divisão por categoria resolve.
+
+O segundo é que centro de custo responde a outra pergunta: **onde** o dinheiro é gasto — a casa de apoio, o bazar, a unidade no hospital. É por ele que se faz orçamento por unidade, se define quem responde por cada uma e se emite prestação de contas de uma unidade específica. Usando-o para finalidade, você perde a possibilidade de dizer "casa de apoio" **e** "saúde" ao mesmo tempo.
+
 ## Por onde seguir
 
 - **Movimentações** — onde as categorias aparecem nos formulários de novo lançamento e nos filtros da lista.
