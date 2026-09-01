@@ -1,6 +1,32 @@
 {
   "versoes": [
     {
+      "versao": "1.85.1",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.85.0",
+      "data": "2026-09-01",
+      "destaque": true,
+      "resumo": "Os dados bancários do reembolso agora vêm do seu perfil — confira os seus em Meu perfil."
+    },
+    {
+      "versao": "1.84.0",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.83.1",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.83.0",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
       "versao": "1.82.1",
       "data": "2026-08-30",
       "destaque": false
