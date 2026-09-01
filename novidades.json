@@ -1,6 +1,17 @@
 {
   "versoes": [
     {
+      "versao": "1.87.1",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.87.0",
+      "data": "2026-09-01",
+      "destaque": true,
+      "resumo": "A prestação de contas agora mostra quem autorizou cada pagamento, e você escolhe o que entra no documento."
+    },
+    {
       "versao": "1.86.1",
       "data": "2026-09-01",
       "destaque": false

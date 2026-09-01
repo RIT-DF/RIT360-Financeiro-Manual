@@ -721,19 +721,34 @@ Marcou por engano? Dá para **desfazer** — mas só quando a marcação foi **m
 
 O botão **Prestação de contas** fica no topo de Movimentações, ao lado de **Exportar** — deixou de ficar escondido dentro do menu Exportar, como se fosse mais um formato de arquivo de exportação. Ao lado dele, o atalho **Prestações geradas** leva direto às prestações já emitidas (ver [Onde encontrar os documentos já gerados](#onde-encontrar-os-documentos-já-gerados), abaixo).
 
-A **prestação de contas** é um documento em PDF, no padrão visual do RIT360 Financeiro, que reúne **tudo o que a organização precisa apresentar de um período** — para a diretoria, o conselho fiscal, a assembleia de associados, um financiador ou um órgão público. Diferente do *Exportar PDF* (que é a lista de lançamentos), a prestação de contas é um **relatório contábil completo, em regime de caixa**, pronto para entregar. Está disponível para a **diretoria/tesouraria** e a **comissão fiscal** da organização.
+A **prestação de contas** é um documento, no padrão visual do RIT360 Financeiro, que reúne **tudo o que a organização precisa apresentar de um período** — para a diretoria, o conselho fiscal, a assembleia de associados, um financiador ou um órgão público. Diferente do *Exportar PDF* (que é a lista de lançamentos), a prestação de contas é um **relatório contábil completo, em regime de caixa**, pronto para entregar. Está disponível para a **diretoria/tesouraria** e a **comissão fiscal** da organização.
+
+Dá para gerar em **PDF** ou em **planilha** (ver [Formato de saída: PDF ou planilha](#formato-de-saida-prestacao), abaixo), escolher **quais seções** entram no documento, recortar por **projeto** ou **centro de custo**, e usar, além de mês fechado e acumulado do ano, um **período com datas livres** — ver [Como gerar](#como-gerar-prestacao), abaixo.
 
 ### O que o documento traz
+
+Por padrão o documento traz todas as seções abaixo; na hora de gerar, você escolhe quais entram (ver [Como gerar](#como-gerar-prestacao)).
 
 - **Capa e termo de abertura** — identidade da OSC (razão social, CNPJ), período e regime.
 - **Demonstração de receitas e despesas** — totais por categoria, com **gráficos** por grupo e o resultado do período (superávit ou déficit).
 - **Posição de caixa por conta** — saldo inicial, créditos, débitos e saldo final de cada conta, com o total geral que reconcilia.
 - **Demonstrativo analítico** — lançamento a lançamento, **separado em Receitas, Despesas e Transferências** e agrupado por categoria, com os valores sinalizados e coloridos (entradas em verde com `+`, saídas em vermelho com `−`), no mesmo padrão do extrato. As transferências aparecem com a conta de origem e a de destino.
+- **Pagamentos e Autorizações** — para cada pagamento do período, quem **pediu**, quem **aprovou** e quem **pagou**. É a seção que mostra, além do que foi gasto, **quem autorizou cada gasto** — informação que a diretoria, o conselho fiscal e um financiador costumam perguntar à parte quando ela não está no relatório.
 - **Extrato por conta** — a movimentação cronológica de cada conta, com saldo corrente.
 - **Notas Explicativas** (opcional) — o texto livre que quem gerou o relatório escreveu sobre aquele período, numa seção própria do PDF. Ver **Nota explicativa**, logo abaixo.
 - **Comprovantes** — as imagens e PDFs anexados aos lançamentos, **mesclados ao final** do documento e organizados em três grupos (**Despesas, Receitas e Transferências**), na ordem dos lançamentos. Quando o comprovante é um **documento de escritório** (Word, Excel, PowerPoint, OpenDocument) ou outro arquivo que não dá para exibir embutido, o PDF mostra em seu lugar uma observação **"📎 nome-do-arquivo — disponível no lançamento"** — o comprovante está anexado e continua acessível, só não aparece embutido no relatório. Os lançamentos sem nenhum comprovante ficam listados à parte.
-- **Documentos complementares** (opcional) — outros documentos que você anexar na hora de gerar (extrato bancário, parecer da comissão fiscal, notas explicativas), incluídos **no fim do PDF**, cada um precedido de uma folha com título e descrição.
-- **Termo de encerramento** — com os nomes do **Presidente** e do **Tesoureiro** e um bloco de **autenticação eletrônica** (data/hora de geração e um código de verificação único do documento).
+- **Documentos complementares** (opcional) — outros documentos que você anexar na hora de gerar (extrato bancário, parecer da comissão fiscal, notas explicativas), incluídos **no fim do PDF**, cada um precedido de uma folha com título e descrição. Só existem no PDF; a planilha não os inclui.
+- **Termo de encerramento** — com os nomes do **Presidente** e do **Tesoureiro** e um bloco de **autenticação eletrônica** (data/hora de geração e um código de verificação único do documento). Só existe no PDF — ver [Formato de saída: PDF ou planilha](#formato-de-saida-prestacao).
+
+### Proteger o nome dos favorecidos {#proteger-nome-favorecidos}
+
+Ao gerar a prestação de contas, você pode marcar a opção **Proteger nome dos favorecidos**. Ligada, o documento inteiro — todas as seções em que o nome de quem recebeu um pagamento apareceria, e também a planilha, quando for esse o formato escolhido — passa a mostrar o nome mascarado, em vez do nome completo.
+
+**Quem pediu, quem aprovou e quem pagou continua identificado** — a proteção é só do nome de quem **recebeu** o pagamento (o favorecido), não de quem participou da autorização. Isso preserva a seção **Pagamentos e Autorizações** como instrumento de governança interna, ao mesmo tempo em que permite compartilhar o documento fora da organização (um financiador, uma publicação) sem expor a quem cada valor foi pago.
+
+> 💡 **Quando usar**
+>
+> Uma prestação de contas destinada só à diretoria e ao conselho fiscal normalmente não precisa da proteção — quem lê já tem acesso aos dados. Ela ganha sentido quando o documento vai sair da organização: for anexado a um edital, publicado, ou entregue a alguém que não deveria ver a quem cada pagamento foi feito.
 
 ### Nota explicativa (opcional) {#nota-explicativa}
 
@@ -760,14 +775,28 @@ Para anexar, na seção **Documentos complementares** do diálogo: escolha o arq
 
 > ⚠️ Escolher o arquivo **não basta** — é o botão **Anexar este documento** que efetiva o anexo. Se você clicar em *Gerar PDF* com um arquivo escolhido mas ainda não anexado, o RIT360 Financeiro anexa automaticamente (quando há título) ou avisa para você concluir antes.
 
-### Como gerar
+### Como gerar {#como-gerar-prestacao}
 
 1. Em **Movimentações**, clique no botão **Prestação de contas**, ao lado de Exportar.
 2. Escolha o período:
    - **Mês** — um mês específico já **fechado** (o mês corrente, ainda em andamento, não fica disponível);
-   - **Ano (acumulado)** — de janeiro até o último mês fechado daquele ano (ou o ano inteiro, se for um ano anterior).
-3. Se quiser, escreva a [nota explicativa](#nota-explicativa) e anexe [documentos complementares](#documentos-complementares-opcional).
-4. Clique em **Gerar PDF**. A geração roda **em segundo plano**: você pode continuar trabalhando, e **o link do PDF chega no seu e-mail** assim que ficar pronto (a montagem com gráficos e comprovantes pode levar de alguns segundos a poucos minutos). Se algo falhar, você é avisado por e-mail e por notificação no app.
+   - **Ano (acumulado)** — de janeiro até o último mês fechado daquele ano (ou o ano inteiro, se for um ano anterior);
+   - **Período livre** — escolha a data inicial e a data final, sem estar preso ao início ou ao fim de um mês. Útil para o período exato de um edital, de um projeto ou de uma gestão.
+3. Se a organização usa [Projetos](/modulos/projetos/) ou centro de custo, recorte o documento por **projeto** ou por **centro de custo** — a prestação sai só com o que pertence àquele recorte, pronta para um financiador específico.
+4. Escolha **quais seções** entram no documento, entre as listadas em [O que o documento traz](#o-que-o-documento-traz). Todas vêm marcadas por padrão.
+5. Escolha o **formato de saída**: PDF ou planilha (ver [Formato de saída: PDF ou planilha](#formato-de-saida-prestacao), abaixo).
+6. Se quiser, marque **[Proteger nome dos favorecidos](#proteger-nome-favorecidos)**.
+7. Se quiser, escreva a [nota explicativa](#nota-explicativa) e anexe [documentos complementares](#documentos-complementares-opcional) — disponíveis só quando o formato escolhido é PDF.
+8. Clique em **Gerar**. A geração roda **em segundo plano**: você pode continuar trabalhando, e **o link do documento chega no seu e-mail** assim que ficar pronto (a montagem com gráficos e comprovantes pode levar de alguns segundos a poucos minutos). Se algo falhar, você é avisado por e-mail e por notificação no app.
+
+### Formato de saída: PDF ou planilha {#formato-de-saida-prestacao}
+
+- **PDF** — o documento completo, no padrão visual do RIT360 Financeiro, com gráficos, comprovantes mesclados, documentos complementares e o termo de encerramento. Leva o **selo de autenticidade eletrônica**, no Termo de encerramento: um código e um QR Code que qualquer pessoa confere, numa página pública sem login, para saber que aquele PDF realmente foi emitido pela organização.
+- **Planilha** — as mesmas seções, em formato de tabela editável (Excel), para quem precisa cruzar os números com outra planilha ou ajustar antes de repassar. **Não leva selo de autenticidade**, porque é editável: uma planilha pode ser alterada depois de baixada, então ela não serve como prova de que o conteúdo é o que a organização emitiu. Não inclui comprovantes nem documentos complementares, que são arquivos, não dados tabulares.
+
+> ⚠️ **Atenção · Planilha é para uso interno ou de trabalho — PDF é o documento oficial**
+>
+> Quando o documento precisar comprovar autenticidade perante terceiros — financiador, órgão público, auditoria — gere em **PDF**. A planilha é a opção certa para revisar números, montar outra análise em cima, ou compartilhar internamente antes de fechar o relatório oficial.
 
 ### Onde encontrar os documentos já gerados
 
@@ -815,6 +844,7 @@ Você **não depende do e-mail** para chegar a uma prestação de contas: clique
 - **Rubrica** — no orçamento de um projeto com controle por fonte, a linha que amarra conta + categoria + valor previsto. Ver [Projetos → Orçamento por fonte de recurso](/modulos/projetos/#orcamento-por-fonte-de-recurso).
 - **Pagamento retido** — pagamento que não se completa porque passa da rubrica prevista de um projeto; o lançamento não vira "Pago" até alguém decidir.
 - **Líquido** — a posição consolidada da OSC: tudo o que ela tem (ativos) menos tudo o que ela deve (passivos).
+- **Proteção do nome dos favorecidos** — opção da prestação de contas que mascara, no documento inteiro (PDF ou planilha), o nome de quem recebeu cada pagamento. Não afeta quem pediu, aprovou ou pagou.
 
 ## Por onde seguir
 

@@ -11,6 +11,24 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.87.1] — 2026-09-01
+
+### Corrigido
+
+- **A opção de proteger o nome dos favorecidos passou a valer para o documento inteiro**, em todas as seções e também na planilha. Quem pediu, aprovou e pagou continua identificado.
+
+## [1.87.0] — 2026-09-01
+
+<!-- destaque: A prestação de contas agora mostra quem autorizou cada pagamento, e você escolhe o que entra no documento. -->
+
+### Adicionado
+
+- **Prestação de contas agora mostra quem pediu, quem aprovou e quem pagou cada pagamento do período.**
+- **Você escolhe quais seções entram no documento.**
+- **Novo recorte por projeto ou por centro de custo.**
+- **Novo período com datas livres**, além de mês e acumulado.
+- **Nova saída em planilha**, além do PDF — a planilha é editável e, por isso, não leva selo de autenticidade.
+
 ## [1.86.1] — 2026-09-01
 
 ### Corrigido

@@ -32,7 +32,7 @@ Cada linha é um documento gerado (ou em preparo), com o tipo, um resumo do per�
 
 ### Tipos de documento cobertos
 
-PDF de lançamentos, planilha de lançamentos, PDF e planilha do relatório financeiro, PDF de encerramento de projeto, relatório parcial de projeto, planilha do orçamento anual, planilha de execução orçamentária, e prestação de contas. Cada um é gerado no módulo a que pertence (Movimentações, Relatórios, Projetos, Orçamento) — a área de Documentos não gera nada por conta própria, só reúne e guarda o que os outros módulos já produziram.
+PDF de lançamentos, planilha de lançamentos, PDF e planilha do relatório financeiro, PDF de encerramento de projeto, relatório parcial de projeto, planilha do orçamento anual, planilha de execução orçamentária, e PDF ou planilha de [prestação de contas](/modulos/movimentacoes/#prestacao-de-contas). Cada um é gerado no módulo a que pertence (Movimentações, Relatórios, Projetos, Orçamento) — a área de Documentos não gera nada por conta própria, só reúne e guarda o que os outros módulos já produziram.
 
 ## Filtros
 

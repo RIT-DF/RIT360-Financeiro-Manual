@@ -249,7 +249,7 @@ Três opções na hora de revisar:
 - **Severidade** — leve / moderada / alta, derivada do quanto o evento ultrapassa o limite da regra.
 - **Calibração** — análise estatística que sugere limites de regras personalizados ao padrão da sua OSC.
 - **Forecast (projeção)** — estimativa do comportamento financeiro futuro, combinando agendados (já cadastrados) com estimados (média histórica); veja [Painel → Previsão](/modulos/painel/#previsao).
-- **Prestação de contas (documento)** — o PDF contábil completo de um período, gerado em Movimentações e listado na área de [Documentos](/modulos/documentos/).
+- **Prestação de contas (documento)** — o relatório contábil completo de um período, gerado em PDF ou planilha em Movimentações e listado na área de [Documentos](/modulos/documentos/).
 - **Prazo de guarda** — por quantos anos os PDFs de prestação de contas são mantidos, contados do fim do período coberto. Padrão: sem descarte.
 - **Descarte** — remoção apenas do arquivo PDF; o registro da prestação permanece listado, marcado como indisponível.
 
