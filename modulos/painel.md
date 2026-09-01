@@ -109,7 +109,7 @@ Quando a OSC usa o módulo de [Projetos](/modulos/projetos/), a terceira coluna 
 
 Fechando a aba Painel, o bloco de **Pontos de atenção** mostra o que saiu do padrão, considerando os **últimos 30 dias** — não o período que você escolheria em Relatórios, mas uma janela curta e fixa, pensada para "o que aconteceu recentemente que merece uma olhada". Esses avisos moram só aqui: Relatórios não tem mais uma aba própria para eles (ver [Relatórios](/modulos/relatorios/)).
 
-O bloco mostra até **quatro avisos**. Havendo mais, um link **Ver todos** abre a lista inteira **na própria tela**, sem levar para outro módulo. Cada aviso é clicável e leva direto ao que ele aponta — o lançamento, a categoria, o fornecedor.
+O bloco mostra até **quatro avisos**. Havendo mais, um link **Ver todos** abre a lista inteira **na própria tela**, sem levar para outro módulo. Cada aviso é clicável e leva direto para **Movimentações**, já filtrada pela categoria, pelo fornecedor ou pelo período que gerou o alerta — em vez do período padrão da tela. Quando algum desses filtros não pode ser aplicado (por exemplo, a categoria do aviso já não existe mais), um aviso fica **visível junto dos filtros até você dispensá-lo**, em vez de sumir sozinho.
 
 Quem tem permissão de administrar as configurações financeiras vê, no próprio aviso, a opção de **desligar aquele tipo de alerta**. Atenção: esse desligamento **vale para toda a organização**, não só para quem clicou — o texto do aviso deixa isso explícito antes de você confirmar.
 

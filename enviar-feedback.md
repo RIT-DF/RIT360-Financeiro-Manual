@@ -31,7 +31,7 @@ Encontrou um problema, teve uma ideia ou quer deixar um elogio? O botão de **fe
 
 ### Formatos de anexo aceitos
 
-Além de imagens comuns (PNG, JPG) e PDF, o feedback aceita: **Word (.docx)**, **fotos de iPhone (HEIC)**, **GIF**, **OpenDocument (.odt, .ods)**, **PowerPoint (.pptx)**, **OpenDocument de apresentação (.odp)**, **XML** e **ZIP**.
+Além de imagens comuns (PNG, JPG) e PDF, o feedback aceita: **Word (.docx)** e **Excel (.xlsx)**, **fotos de iPhone (HEIC)**, **GIF**, **OpenDocument (.odt, .ods)**, **PowerPoint (.pptx)**, **OpenDocument de apresentação (.odp)**, **planilha CSV**, **XML** e **ZIP**.
 
 > ⚠️ **Atenção · SVG não é aceito**
 >

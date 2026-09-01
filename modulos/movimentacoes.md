@@ -136,6 +136,7 @@ No lugar das antigas abas por tipo, a lista agora tem **filtros por marcadores (
 - **Tipo** (receita, despesa, transferência)
 - **Conta**
 - **Categoria**
+- **Fornecedor**
 - **Status**
 - **Projeto**
 - **Centro de custo**
@@ -146,12 +147,12 @@ Em cada um desses filtros você escolhe **vários valores** de uma vez e ainda d
 A **busca e os filtros ficam na mesma linha**, logo acima da lista — ocupam uma faixa só da tela, sobrando mais espaço vertical para os lançamentos.
 
 [![Filtros combináveis em Movimentações](/assets/screenshots/mov-filtros-chips.png)](/assets/screenshots/mov-filtros-chips.png)
-*Filtre por tipo, conta, categoria, status, projeto e centro de custo — combinando vários ao mesmo tempo.*
+*Filtre por tipo, conta, categoria, fornecedor, status, projeto e centro de custo — combinando vários ao mesmo tempo.*
 > 💡 **Por que isso importa**
 >
 > Filtro combinável responde perguntas que aba única não alcança: "todas as despesas de material do projeto Feira, exceto as da conta Caixa". Antes você via um tipo de cada vez; agora cruza tipo, categoria, projeto e centro de custo numa consulta só — a conferência e a análise gerencial ficam muito mais rápidas.
 
-Quando há filtros ativos, uma linha "Filtrado por: …" indica o que está sendo aplicado, e o botão **Limpar filtros** remove todos de uma vez. Os totais do **Resumo do período** acompanham o recorte filtrado — o que você vê resumido é sempre o que está na lista.
+Quando há filtros ativos, uma linha "Filtrado por: …" indica o que está sendo aplicado, e o botão **Limpar filtros** remove todos de uma vez. O nome de uma categoria filtrada aparece com o **caminho completo** (categoria e subcategoria), igual ao que aparece no seletor. Os totais do **Resumo do período** acompanham o recorte filtrado — o que você vê resumido é sempre o que está na lista.
 
 > 📱 **No celular**
 >

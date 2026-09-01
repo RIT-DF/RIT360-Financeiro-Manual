@@ -11,6 +11,24 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.86.1] — 2026-09-01
+
+### Corrigido
+
+- **Os links dos avisos (Painel e Pontos de atenção) agora abrem as movimentações já no período que gerou o alerta**, e não mais no período padrão da tela.
+- **Quando parte dos filtros de um link não pode ser aplicada, o aviso passa a ficar visível junto dos filtros até você dispensá-lo**, em vez de sumir sozinho.
+- **O nome da categoria filtrada por link agora mostra o caminho completo**, igual ao do seletor.
+
+## [1.86.0] — 2026-09-01
+
+### Adicionado
+
+- **Links de aviso agora abrem a lista de Movimentações já filtrada pela categoria, fornecedor ou período do aviso**, e existe um novo filtro por fornecedor na tela.
+
+### Corrigido
+
+- **O texto de ajuda dos anexos do formulário de feedback passou a listar os formatos realmente aceitos** (imagens, PDF, XML, ZIP, CSV, documentos do Office e do LibreOffice) e a avisar que SVG não é aceito.
+
 ## [1.85.1] — 2026-09-01
 
 ### Corrigido
