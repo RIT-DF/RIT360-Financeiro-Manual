@@ -11,6 +11,50 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.85.1] — 2026-09-01
+
+### Corrigido
+
+- **O nome de quem recebe voltou a aparecer em todos os lançamentos vindos de reembolso.** Em alguns casos ele estava sumindo, porque o tipo de origem do lançamento era decidido em dois lugares diferentes, com regras que não coincidiam sempre.
+- **O selo do orçamento anual agora diz "Vigente" ou "Anterior"**, em vez de mostrar o nome técnico da versão.
+
+## [1.85.0] — 2026-09-01
+
+<!-- destaque: Os dados bancários do reembolso agora vêm do seu perfil — confira os seus em Meu perfil. -->
+
+### Modificado
+
+- **O reembolso agora sempre paga quem pediu.** Os dados bancários (PIX ou dados de TED) deixaram de ser digitados no formulário de reembolso e passam a vir do seu perfil. Quem ainda não tem dados cadastrados preenche uma vez ali, e eles passam a valer também para os próximos reembolsos; para alterar depois, é em **Meu perfil**.
+- **O nome de quem recebe passou a aparecer no reembolso, no pedido de pagamento e no lançamento gerado**, inclusive quando o pagamento é por PIX.
+- **Pagar uma pessoa diferente de quem fez a despesa deixou de ser reembolso** — isso agora é pedido de compra e pagamento.
+
+## [1.84.0] — 2026-09-01
+
+### Corrigido
+
+- **A tela de Cargos e Permissões passou a mostrar duas permissões que já existiam e não apareciam ali**: "Aprovar orçamento anual" e "Gerir integrações e credenciais de API". Quem já tinha essas permissões concedidas não percebe diferença; agora dá para ver e ajustar quem tem cada uma.
+- Pequenos ajustes de texto na mesma tela: a permissão de orçamento ganhou grupo próprio, dois rótulos foram atualizados, e duas permissões que apareciam travadas no Presidente (mas nunca estiveram) deixaram de aparecer assim.
+
+## [1.83.1] — 2026-09-01
+
+### Corrigido
+
+- **Três telas passaram a dizer a coisa certa para quem não tem permissão de ver saldo**, em vez de sugerir que algo deu errado ou que não há dados: a aba Situação, o cartão do mês e a tela de contas agora distinguem "não tenho permissão" de "não há informação".
+- **O assistente de criação de conta passou a mostrar o nome comum do cargo** (ex.: "Gestor de centro de custo") em vez do nome técnico (`gestor_centro_custo`).
+- Pequenos ajustes de anexo: SVG deixou de ser aceito nos dois pontos de upload; HEIF, TIFF e ZIP do Windows passaram a ser aceitos também no download por link.
+
+## [1.83.0] — 2026-09-01
+
+### Adicionado
+
+- **Ver o saldo das contas agora é uma permissão**, atribuível por cargo em "Contas financeiras", nas telas de Cargos e Permissões. Pode ser desmarcada em qualquer cargo, inclusive Presidente. Quem administra uma organização nova já encontra essa permissão concedida a Presidente, Tesoureiro, Diretor e Comissão Fiscal. Ninguém que já usava o sistema perdeu acesso com esta mudança.
+- **As cinco telas que mostram saldo passaram a avisar quando falta essa permissão**, em vez de simplesmente não mostrar o número, e continuam úteis sem ele.
+
+### Modificado
+
+- **Conta de cartão de crédito deixou de contar no saldo disponível.**
+- **Os anexos de feedback passaram a aceitar mais formatos**: .docx, HEIC, GIF, ODT, ODS, PPTX, ODP, XML e ZIP.
+
 ## [1.82.1] — 2026-08-30
 
 ### Modificado
