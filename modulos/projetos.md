@@ -148,10 +148,10 @@ Depois de confirmar, um painel de resultado mostra, separadamente, o que foi **c
 
 ### Editar um projeto arquivado
 
-[![Aviso ao tentar editar um projeto arquivado](/assets/screenshots/manual-projetos-14-arquivado-editar-bloqueado.png)](/assets/screenshots/manual-projetos-14-arquivado-editar-bloqueado.png)
-*Tentativa de editar um projeto arquivado — a tela explica que é preciso desarquivar primeiro*
+[![Projeto arquivado com o botão Editar desativado](/assets/screenshots/manual-projetos-14-arquivado-editar-bloqueado.png)](/assets/screenshots/manual-projetos-14-arquivado-editar-bloqueado.png)
+*Num projeto arquivado, o botão **Editar** do bloco Identidade aparece desativado, e o selo "Arquivado" fica ao lado do status*
 
-O **nome e os dados de identificação** de um projeto arquivado ficam **congelados**. Se você tentar editar, a tela avisa que é preciso **desarquivar** primeiro.
+O **nome e os dados de identificação** de um projeto arquivado ficam **congelados**: o botão **Editar** fica desativado enquanto ele estiver arquivado. Para mudar qualquer coisa, **desarquive** primeiro — use **Reabrir**, no topo da página do projeto.
 
 > ⚠️ **Atenção · Congelado é de propósito, não é bug**
 >
