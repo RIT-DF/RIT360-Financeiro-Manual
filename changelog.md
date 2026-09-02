@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.99.0] — 2026-09-02
+
+### Modificado
+
+- **Nas telas de Contas Bancárias, Categorias e Centros de Custo, as ações de cada linha (editar, ativar/desativar, excluir e, em contas, definir/remover conta padrão) passaram a ser ícones com dica ao passar o mouse**, no lugar de botões com texto — antes, com quatro botões lado a lado, o texto aparecia cortado.
+- **O botão de excluir passou a aparecer em vermelho suave**, para se distinguir das demais ações antes do clique — também em Movimentações, que tinha o mesmo problema.
+- Em celular, os ícones ganharam área de toque maior. As setas de reordenar categorias foram igualadas em tamanho às novas ações.
+
 ## [1.98.1] — 2026-09-01
 
 ### Corrigido
