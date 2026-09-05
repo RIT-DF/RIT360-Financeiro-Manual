@@ -37,7 +37,7 @@ Todo projeto caminha por uma sequência de status, com aprovações nos momentos
 
 | Status | O que significa |
 |---|---|
-| **Em planejamento** | Rascunho. A equipe está montando escopo, equipe e orçamento. |
+| **Em planejamento** | A equipe está montando escopo, equipe e orçamento. |
 | **Aguardando aprovação inicial** | O coordenador pediu autorização para iniciar; falta a aprovação da OSC. |
 | **Em execução** | Aprovado e rodando. É aqui que as tarefas andam e o dinheiro se movimenta. |
 | **Aguardando encerramento** | A execução terminou; falta a avaliação final e a aprovação do encerramento. |
@@ -94,7 +94,7 @@ A tela **Projetos** lista as iniciativas da OSC. No **computador** (telas a part
 
 No topo você tem **busca por nome** e filtros por **Status**, **Tipo** e **Saúde** — úteis para, por exemplo, ver só os projetos em execução que estão em atenção.
 
-O botão **Novo projeto** abre um **assistente de 3 passos** (tipo e identidade · período · financeiro essencial), com textos de ajuda em cada etapa e o aviso de que você ficará registrado como coordenador do projeto. Para um Evento, o assistente pede o número estimado de participantes; o texto se adapta ao tipo escolhido. Convidar outras pessoas para a equipe é feito depois, já com o projeto criado (ver "Equipe" na aba Planejamento).
+O botão **Criar projeto** abre um **assistente de 3 passos** (tipo e identidade · período · financeiro essencial), com textos de ajuda em cada etapa e o aviso de que você ficará registrado como coordenador do projeto. Para um Evento, o assistente pede o número estimado de participantes; o texto se adapta ao tipo escolhido. Convidar outras pessoas para a equipe é feito depois, já com o projeto criado (ver "Equipe" na aba Planejamento).
 
 ## Arquivar e desarquivar um projeto
 {: #arquivar-projeto }
@@ -152,6 +152,8 @@ Depois de confirmar, um painel de resultado mostra, separadamente, o que foi **c
 *Num projeto arquivado, o botão **Editar** do bloco Identidade aparece desativado, e o selo "Arquivado" fica ao lado do status*
 
 O **nome e os dados de identificação** de um projeto arquivado ficam **congelados**: o botão **Editar** fica desativado enquanto ele estiver arquivado. Para mudar qualquer coisa, **desarquive** primeiro — use **Reabrir**, no topo da página do projeto.
+
+Se você chegar direto ao endereço de edição de um projeto arquivado ou encerrado — por um link salvo ou pelo histórico do navegador — a tela explica que o projeto está arquivado (ou encerrado) e que é preciso reabri-lo antes de editar, com um botão para voltar à página do projeto. Antes, esse caminho não mostrava nada.
 
 > ⚠️ **Atenção · Congelado é de propósito, não é bug**
 >

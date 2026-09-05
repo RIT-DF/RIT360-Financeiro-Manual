@@ -11,6 +11,21 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.100.0] — 2026-09-05
+
+### Corrigido
+
+- **Qualquer pessoa com vínculo ativo na organização agora consegue criar um projeto.** Antes, quem não tinha um cargo específico preenchia o assistente inteiro e só descobria a recusa no fim, perdendo tudo o que havia digitado. Quem cria continua virando coordenador daquele projeto na hora.
+- **Quem não pode criar um projeto agora descobre isso ao chegar na tela**, com o motivo explicado — em vez de percorrer os três passos do assistente para ser recusado só no final.
+- **Se a criação falhar por outro motivo, nada do que foi preenchido se perde.** A mensagem de erro fica visível até você agir, e o formulário continua com os dados digitados.
+- **Abrir a edição de um projeto arquivado ou encerrado por um link salvo ou pelo histórico do navegador agora explica o motivo** e oferece o caminho para reabrir o projeto, em vez de não mostrar nada.
+
+### Modificado
+
+- **O botão de criar projeto passou a se chamar "Criar projeto"** (era "Criar como rascunho"), com uma frase explicando que o projeto nasce em planejamento e pode ser ajustado antes de ir para aprovação. A palavra "rascunho" saiu da interface de projetos.
+
+---
+
 ## [1.99.0] — 2026-09-02
 
 ### Modificado

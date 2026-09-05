@@ -265,11 +265,11 @@ Provavelmente o valor final passou do valor autorizado além do limiar de reapro
 
 ### Como crio um projeto?
 
-Em **Projetos → Novo projeto**. Um assistente de 3 passos (tipo e identidade, período, financeiro essencial) conduz a criação, com textos de ajuda em cada etapa; no último passo você vê o aviso de que ficará registrado como coordenador. O projeto nasce como rascunho "Em planejamento"; quando estiver pronto, você solicita a aprovação de abertura. Convidar outras pessoas para a equipe é feito depois, já dentro do projeto.
+Em **Projetos → Criar projeto**. Um assistente de 3 passos (tipo e identidade, período, financeiro essencial) conduz a criação, com textos de ajuda em cada etapa; no último passo você vê o aviso de que ficará registrado como coordenador. O projeto nasce em "Em planejamento"; quando estiver pronto, você solicita a aprovação de abertura. Convidar outras pessoas para a equipe é feito depois, já dentro do projeto.
 
 ### Quem pode criar projetos?
 
-Presidente, Tesoureiro e Coordenador podem criar diretamente. O **Voluntário** pode **propor** um projeto — ao ser aprovado, ele é promovido a coordenador daquele projeto. Veja o [Guia do Coordenador de Projetos](/guias/coordenador-projetos/).
+Qualquer pessoa com vínculo ativo na organização pode criar um projeto. Quem cria já é registrado como coordenador daquele projeto na hora — não é preciso esperar nenhuma aprovação para isso. Veja o [Guia do Coordenador de Projetos](/guias/coordenador-projetos/).
 
 ### Como vinculo uma despesa (ou receita) a um projeto?
 
