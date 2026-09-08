@@ -708,7 +708,8 @@ Se você baixa o **extrato do banco em formato OFX** (a maioria dos bancos ofere
 [![A mesma linha do grupo "Novos" no celular, com o seletor da conta do outro lado](/assets/screenshots/manual-conciliacao-linha-transferencia-mobile.png)](/assets/screenshots/manual-conciliacao-linha-transferencia-mobile.png)
 *No celular, os botões de decisão e o seletor da conta se empilham na mesma linha do extrato*
 
-<!-- CAPTURA PENDENTE: linha do grupo "Já conciliados" mostrando uma transferência reconhecida pelo lado do destino, com a nota informativa citando a conta do outro lado. Rota: tela de Conciliação, a partir de /movimentacoes. -->
+[![Grupo "Já conciliados" com a mesma transferência reconhecida pelo extrato da outra conta, informando que nada há a fazer](/assets/screenshots/manual-conciliacao-transferencia-outro-lado.png)](/assets/screenshots/manual-conciliacao-transferencia-outro-lado.png)
+*"Uma ponta basta": ao importar o extrato da outra conta, a mesma transferência aparece apenas como informação — com o valor no sentido daquela conta, o nome da conta do outro lado, e nenhuma decisão a tomar*
 
 > 💡 **Dica · Para lançar transferência, as duas contas precisam existir**
 >
