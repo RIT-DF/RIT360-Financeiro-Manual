@@ -702,7 +702,11 @@ Se você baixa o **extrato do banco em formato OFX** (a maioria dos bancos ofere
 >
 > **Uma ponta basta.** A mesma transferência aparece no extrato das duas contas envolvidas, cada uma com seu identificador de banco. Conferir por qualquer um dos dois extratos deixa a transferência conferida por inteiro. Quando o extrato da outra conta for importado depois, aquela linha aparece em **Já conciliados**, como informativa, explicando que corresponde a uma transferência já registrada e conferida — e dizendo qual é a conta do outro lado. Não há risco de a mesma transferência ser criada duas vezes.
 
-<!-- CAPTURA PENDENTE: linha do grupo "Novos" na tela de Conciliação, mostrando o seletor de destino (receita/despesa vs. transferência) e, ao escolher transferência, o campo de "conta do outro lado" no lugar da categoria. Rota: tela de Conciliação, a partir de /movimentacoes. Viewport desktop e mobile. -->
+[![Grupo "Novos" da conciliação, com uma linha de entrada marcada como transferência e o seletor da conta de origem do dinheiro no lugar da categoria](/assets/screenshots/manual-conciliacao-linha-transferencia.png)](/assets/screenshots/manual-conciliacao-linha-transferencia.png)
+*A linha do resgate marcada como transferência: no lugar da categoria, o seletor pede a **conta de origem do dinheiro** — e a conta do próprio extrato não aparece na lista. O rodapé passa a contar "1 transferência a registrar"*
+
+[![A mesma linha do grupo "Novos" no celular, com o seletor da conta do outro lado](/assets/screenshots/manual-conciliacao-linha-transferencia-mobile.png)](/assets/screenshots/manual-conciliacao-linha-transferencia-mobile.png)
+*No celular, os botões de decisão e o seletor da conta se empilham na mesma linha do extrato*
 
 <!-- CAPTURA PENDENTE: linha do grupo "Já conciliados" mostrando uma transferência reconhecida pelo lado do destino, com a nota informativa citando a conta do outro lado. Rota: tela de Conciliação, a partir de /movimentacoes. -->
 
