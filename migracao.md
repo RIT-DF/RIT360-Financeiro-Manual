@@ -104,6 +104,8 @@ Em **Movimentações → Importar Lançamentos**, baixe o **template CSV** e use
 > 💡 **Conceito · Transferência é uma linha só**
 >
 > Para mover dinheiro entre duas contas da própria OSC, use **uma única linha** com `tipo=transferencia`, a conta de origem em `conta` e a de destino em `conta_destino`. Não lance como uma despesa numa conta e uma receita na outra — isso infla os relatórios. A transferência preserva o saldo total e mantém os relatórios limpos.
+>
+> Se em vez de planilha você tem o **extrato do banco em OFX**, não precisa importar a transferência por aqui: a [Conciliação bancária](/modulos/movimentacoes/#conciliacao-bancaria-ofx) reconhece o resgate de aplicação, a movimentação para poupança e casos parecidos direto do extrato, e cria a transferência sozinha.
 
 > 💡 **Conceito · Vincular a um projeto**
 >

@@ -135,6 +135,14 @@ Porque a cor sinaliza **o que exige atenção** — por isso nem tudo é colorid
 
 No **cartão de crédito** a lógica é a mesma vista pelo avesso: o valor **"a pagar"** é dívida, e aparece em vermelho; quando o cartão está com **"crédito"** (saldo a seu favor, por exemplo depois de um estorno da operadora), fica neutro. O mesmo critério vale no Painel e nos Relatórios.
 
+### Resgatei uma aplicação (ou fiz outra transferência entre contas da OSC). Como lanço isso pela conciliação de extrato?
+
+Na tela de **Conciliação**, no grupo **Novos**, escolha **transferência** em vez de receita/despesa. O campo de categoria dá lugar à escolha da **conta do outro lado** — a conta do próprio extrato não aparece na lista, porque não pode ser as duas pontas. O sistema decide qual conta é origem e qual é destino pelo **sinal do valor** da linha; você não precisa informar. **As duas contas precisam estar cadastradas** em [Configurações → Contas Bancárias](/configuracoes/contas/) — existe o tipo **Investimento** para aplicações financeiras. Ver [Conciliação bancária (extrato OFX)](/modulos/movimentacoes/#conciliacao-bancaria-ofx).
+
+### Uma transferência apareceu no extrato das duas contas. Isso vai criar o lançamento duas vezes?
+
+Não. A mesma transferência aparece no extrato das duas contas envolvidas, cada um com seu próprio identificador de banco, mas o RIT360 Financeiro reconhece que é a mesma transferência **pelos dois lados** — seja a conta do extrato a origem, seja o destino. **Uma ponta basta** para conferir a transferência por inteiro; quando você importar o extrato da outra conta depois, aquela linha aparece em **Já conciliados**, apenas informando que já corresponde a uma transferência registrada e conferida, e qual é a conta do outro lado. Ver [Conciliação bancária (extrato OFX)](/modulos/movimentacoes/#conciliacao-bancaria-ofx).
+
 ### Se eu sair da tela enquanto preencho, perco o que já digitei?
 
 Não. Ao preencher um **novo lançamento**, **reembolso** ou **pedido de compra e pagamento**, o que você digita é salvo automaticamente no seu dispositivo. Se você sair da tela — por exemplo, para escolher um arquivo para anexar — ou o navegador recarregar a página, ao voltar os campos continuam preenchidos e aparece um aviso de **"rascunho recuperado"**. O rascunho é apagado assim que você envia o formulário (ou clica em descartar), e some ao sair da sua conta. Observação: **arquivos ainda não enviados** não são guardados — só os campos digitados.

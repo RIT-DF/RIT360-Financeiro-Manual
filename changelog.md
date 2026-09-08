@@ -11,6 +11,26 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.101.1] — 2026-09-08
+
+### Corrigido
+
+- **Corrigida uma permissão da efetivação de transferência pela conciliação de extrato**, que aceitava também quem só tinha a permissão de pagar reembolso — uma permissão sem relação com transferência. Nenhum cargo configurado usava essa combinação, então não houve efeito para nenhuma organização.
+
+## [1.101.0] — 2026-09-08
+
+<!-- destaque: Transferência entre contas agora tem caminho próprio na conciliação de extrato. -->
+
+### Adicionado
+
+- **A conciliação de extrato bancário passa a reconhecer transferência entre contas da própria organização.** Antes, uma linha do extrato sem lançamento correspondente só podia virar receita, despesa, ou ser ignorada — o que inflava a receita ou a despesa quando o dinheiro só havia mudado de conta. Agora, no grupo "Novos", a linha pode ser marcada como transferência: no lugar da categoria, escolhe-se a conta do outro lado, e a origem e o destino são decididos pelo sinal do valor. O lançamento nasce só um, já efetivado na data da linha e já conferido, sem categoria e sem data de pagamento — e a linha do extrato fica marcada como resolvida, sem duplicar se o mesmo arquivo for importado de novo.
+- **Transferência já lançada no sistema passa a casar com a linha do extrato**, seja pela conta de origem ou pela conta de destino. Se a transferência ainda não tinha data efetiva, confirmar o casamento a efetiva na data da linha; se já estava efetivada e só faltava a conferência, o casamento apenas registra a conferência, sem alterar data nem contas. Transferência que já estava conferida aparece entre os "Já conciliados", explicando a que ela corresponde e qual é a conta do outro lado.
+- **Uma conferência já é suficiente para as duas contas envolvidas.** Conciliar pelo extrato de qualquer um dos dois lados de uma transferência deixa o lançamento conferido por inteiro — não é preciso repetir a conferência na outra conta.
+
+### Modificado
+
+- **Centro de custo, quando informado, passa a valer também para transferência**, inclusive na aplicação em lote do grupo "Novos" da conciliação.
+
 ## [1.100.0] — 2026-09-05
 
 ### Corrigido

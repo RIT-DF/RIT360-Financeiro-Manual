@@ -676,9 +676,11 @@ Se você baixa o **extrato do banco em formato OFX** (a maioria dos bancos ofere
 2. O RIT360 Financeiro lê cada transação do extrato e **procura o lançamento correspondente** (por valor e proximidade de data), organizando tudo em quatro grupos:
    - **Conciliados** — alta confiança no casamento; já vêm pré-marcados para marcar como pago.
    - **Em revisão** — casamento provável, mas com alguns dias de diferença; você aceita ou ignora, uma a uma.
-   - **Novos** — transações sem lançamento correspondente; para cada uma você **cria o lançamento** (escolhendo categoria e, se a organização usa, centro de custo) ou **ignora**. Se a categoria certa ainda não existe, não precisa sair da conciliação para cadastrar: clique em **criar categoria** ali mesmo, e ela já entra escolhida na linha (exige a permissão **Config. financeira** — ver abaixo).
+   - **Novos** — transações sem lançamento correspondente; para cada uma você escolhe o que fazer, ou **ignora**:
+     - **criar como receita ou despesa** — escolhendo categoria e, se a organização usa, centro de custo. Se a categoria certa ainda não existe, não precisa sair da conciliação para cadastrar: clique em **criar categoria** ali mesmo, e ela já entra escolhida na linha (exige a permissão **Config. financeira** — ver abaixo);
+     - **criar como transferência entre contas da própria organização** — para resgate de aplicação financeira, movimentação para poupança, retirada para o caixa e casos parecidos. Escolhendo transferência, o campo de categoria dá lugar à escolha da **conta do outro lado**; a conta do próprio extrato não aparece na lista, porque não pode ser as duas pontas ao mesmo tempo. Quem é origem e quem é destino o sistema decide pelo **sinal do valor** da linha — você não precisa informar. Transferência não pede categoria, nem favorecido, nem forma de pagamento.
    - **Já conciliados** — transações que você já processou antes (apenas informativo).
-3. Ao **confirmar**, os lançamentos conciliados/aceitos são marcados como **pagos** com a data do extrato e ficam vinculados à conciliação; os "novos" que você escolher **criar** viram lançamentos.
+3. Ao **confirmar**, os lançamentos conciliados/aceitos são marcados como **pagos** com a data do extrato e ficam vinculados à conciliação; os "novos" que você escolher **criar** viram lançamentos. Quando o que você criar for uma **transferência**, o resultado é **um lançamento só**, guardando as duas contas — nunca dois lançamentos espelhados —, já **efetivado** na data da linha do extrato e já **conferido**.
 
 > 📖 **Conceito · Linha sem decisão fica pendente, nunca é descartada**
 >
@@ -690,9 +692,27 @@ Se você baixa o **extrato do banco em formato OFX** (a maioria dos bancos ofere
 
 > 💡 **Centro de custo, um a um ou para o grupo inteiro**
 >
-> Ao marcar uma linha do grupo **Novos** para criar lançamento, o centro de custo aparece **ao lado da categoria** — opcional, e só quando a organização usa centros de custo (organização que não usa não vê o campo). Marcou várias linhas para criar? No topo do grupo **Novos**, escolha o centro de custo no seletor e clique em **"Aplicar a todas as marcadas para criar"** — ele é aplicado de uma vez a todas as linhas já marcadas para **criar lançamento**, sem tocar nas que você vai conciliar, ignorar ou ainda não decidiu. Aplicar de novo com outro centro de custo (ou em branco, para remover) troca o valor das mesmas linhas.
+> Ao marcar uma linha do grupo **Novos** para criar lançamento, o centro de custo aparece **ao lado da categoria** — opcional, e só quando a organização usa centros de custo (organização que não usa não vê o campo). Escolhendo **transferência**, o centro de custo continua disponível do mesmo jeito (opcional), mesmo sem o campo de categoria ao lado. Marcou várias linhas para criar? No topo do grupo **Novos**, escolha o centro de custo no seletor e clique em **"Aplicar a todas as marcadas para criar"** — ele é aplicado de uma vez a todas as linhas já marcadas para **criar lançamento** (receita, despesa ou transferência), sem tocar nas que você vai conciliar, ignorar ou ainda não decidiu. Aplicar de novo com outro centro de custo (ou em branco, para remover) troca o valor das mesmas linhas.
 
 **Reimportar o mesmo extrato não duplica nada** — cada transação é reconhecida pelo identificador único do banco.
+
+> 📖 **Conceito · Transferência já lançada é reconhecida — pelos dois lados**
+>
+> Se a transferência já existe no RIT360 Financeiro, a conciliação reconhece a linha do extrato como correspondente a ela, tanto quando a conta do extrato é a **origem** quanto quando é o **destino**. Se a transferência estava lançada como **prevista**, confirmar a conciliação a torna **efetivada** e a **confere**. Se já estava efetivada e só faltava conferir, confirmar apenas registra a conferência — sem mudar data nem contas.
+>
+> **Uma ponta basta.** A mesma transferência aparece no extrato das duas contas envolvidas, cada uma com seu identificador de banco. Conferir por qualquer um dos dois extratos deixa a transferência conferida por inteiro. Quando o extrato da outra conta for importado depois, aquela linha aparece em **Já conciliados**, como informativa, explicando que corresponde a uma transferência já registrada e conferida — e dizendo qual é a conta do outro lado. Não há risco de a mesma transferência ser criada duas vezes.
+
+<!-- CAPTURA PENDENTE: linha do grupo "Novos" na tela de Conciliação, mostrando o seletor de destino (receita/despesa vs. transferência) e, ao escolher transferência, o campo de "conta do outro lado" no lugar da categoria. Rota: tela de Conciliação, a partir de /movimentacoes. Viewport desktop e mobile. -->
+
+<!-- CAPTURA PENDENTE: linha do grupo "Já conciliados" mostrando uma transferência reconhecida pelo lado do destino, com a nota informativa citando a conta do outro lado. Rota: tela de Conciliação, a partir de /movimentacoes. -->
+
+> 💡 **Dica · Para lançar transferência, as duas contas precisam existir**
+>
+> Resgate de aplicação, retirada para o caixa, movimentação para a poupança — tudo isso só aparece como opção de transferência se **as duas contas envolvidas estiverem cadastradas** em [Configurações → Contas Bancárias](/configuracoes/contas/). Quem tem aplicação financeira, poupança ou caixa e nunca cadastrou aquela conta acaba lançando o resgate como **receita**, o que infla a receita do exercício com dinheiro que já era da organização. Existe o tipo de conta **Investimento** para esse caso — ver [Tipos de conta suportados](/configuracoes/contas/#tipos-de-conta-suportados).
+
+> ⚠️ **Atenção · Ignorar uma linha é definitivo**
+>
+> Antes desta função, quem encontrava um resgate de aplicação no extrato não tinha uma opção boa, e muita gente **ignorava** a linha ou criava como receita. Ignorar é decisão que não volta: a transferência ainda pode ser lançada normalmente pelo formulário depois, mas fica **sem o selo de conferido**, porque a linha do extrato que provaria a conferência já foi descartada. Quem criou como receita por engano precisa **corrigir o lançamento** — o valor está contado como receita nova, quando na verdade é dinheiro que já era da OSC.
 
 **Quem pode confirmar:** subir e conferir o extrato é uma coisa; **confirmar** — que marca lançamentos como pagos — exige a **permissão de pagar**, a mesma de marcar como pago em Movimentações. Ver [Cargos e permissões](/configuracoes/cargos/#permissao-pagar).
 
