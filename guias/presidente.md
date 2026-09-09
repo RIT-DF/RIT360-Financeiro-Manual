@@ -68,6 +68,10 @@ O presidente não precisa ser o gargalo de tudo. O fluxo de aprovação existe p
 >
 > [![Fluxo de aprovações](/assets/screenshots/manual-09f-config-workflow.png)](/assets/screenshots/manual-09f-config-workflow.png)
 
+> ✓ **Dica · Se você é a única pessoa na administração, indique um segundo aprovador**
+>
+> Numa OSC pequena, é comum a presidência ser a única pessoa habilitada a aprovar abertura e encerramento de projetos — nesse caso, o próprio sistema permite que ela aprove os seus próprios projetos, para o trabalho não travar. Mas isso abre mão da conferência de quatro olhos, que é o motivo de a aprovação existir. Assim que houver uma segunda pessoa de confiança na diretoria, vale indicá-la em **Configurações → Fluxo de Aprovações → aba Projetos** — mesmo que ela raramente precise aprovar. Ver [Projetos → Quem aprova, e o que fazer se não houver ninguém](/modulos/projetos/#quem-aprova-e-o-que-fazer-se-nao-houver-ninguem).
+
 ## 6. Garantir a prestação de contas
 
 A prestação de contas é, no fim, **responsabilidade da presidência** — não necessariamente montá-la, mas **garantir que ela exista, seja correta e chegue a quem precisa**.

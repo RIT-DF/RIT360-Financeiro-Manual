@@ -49,6 +49,29 @@ Todo projeto caminha por uma sequência de status, com aprovações nos momentos
 >
 > Os dois "portões" de aprovação (iniciar e encerrar) existem para dar **governança** sem burocratizar o resto. Aprovar a abertura significa: "a diretoria concorda com este escopo e este orçamento". Aprovar o encerramento significa: "a diretoria reconhece que este projeto acabou, com este resultado e esta prestação de contas". Entre os dois portões, a equipe trabalha com autonomia. Quem aprova é configurável pela OSC, como nos demais fluxos.
 
+### Quem aprova, e o que fazer se não houver ninguém
+{: #quem-aprova-e-o-que-fazer-se-nao-houver-ninguem }
+
+Quem pode aprovar a abertura e o encerramento de um projeto é definido pela organização em **Configurações → Fluxo de Aprovações → aba Projetos** — por papel (Presidente e Tesoureiro, por padrão) ou por pessoas específicas. Ver [Fluxo de Aprovações → Aprovação de projetos](/configuracoes/aprovacoes/#aprovacao-de-projetos-aba-projetos).
+
+Ao **solicitar aprovação** (na abertura) ou **solicitar encerramento**, a tela do projeto passa a mostrar **quem está apto a aprovar**. Se você for uma dessas pessoas, a tela avisa e traz o botão de aprovar ali mesmo — não é preciso perguntar à diretoria quem decide, nem procurar em outro lugar.
+
+<!-- CAPTURA PENDENTE: cartão/aviso na aba Resumo de um projeto "Aguardando aprovação inicial", mostrando quem está apto a aprovar (ex.: "Presidente, Tesoureiro" ou nomes específicos) e, quando o usuário logado é um deles, o botão de aprovar em destaque. Rota /projetos/{id}, viewport desktop e mobile. Precisa de um projeto de teste no status "Aguardando aprovação inicial" — OSC Alpha não serve para prints (dado real), usar organização de teste dedicada. -->
+
+> ⚠️ **Atenção · Quem propõe, normalmente, não aprova**
+>
+> A regra geral é que quem solicita a abertura ou o encerramento **não é quem aprova** — é a segunda pessoa conferindo que dá valor à aprovação. A exceção é a OSC com **uma única pessoa habilitada** a aprovar: nesse caso, ela pode aprovar o próprio projeto, porque impedir isso travaria o projeto indefinidamente. Havendo mais de uma pessoa apta, a regra de quatro olhos volta a valer — mesmo que a organização tenha ligado o ajuste **"Permitir auto-aprovação"** em Configurações → Fluxo de Aprovações (ver [Fluxo de Aprovações](/configuracoes/aprovacoes/#aprovacao-de-projetos-aba-projetos)).
+>
+> Ao **solicitar aprovação** sendo você a única pessoa habilitada, o sistema mostra uma confirmação avisando disso antes de concluir — para você já saber, na hora de enviar, que a aprovação vai cair na sua própria mão.
+
+> ⚠️ **Atenção · Se ninguém puder aprovar**
+>
+> Pode acontecer de a organização ficar **sem nenhuma pessoa habilitada** a aprovar projetos — por exemplo, quando a única pessoa indicada teve o vínculo com a OSC encerrado. Nesse caso, a tela do projeto avisa que é uma situação a resolver e leva direto para **Configurações → Fluxo de Aprovações**, para que alguém com acesso a essa página indique um aprovador. Sem isso, o projeto fica parado em "Aguardando aprovação" sem ninguém conseguir liberá-lo.
+
+> ✓ **Dica · OSC pequena, indique um segundo aprovador**
+>
+> Se a sua organização tem só uma pessoa na administração, vale conferir em **Configurações → Fluxo de Aprovações → aba Projetos** quem está indicado como aprovador de projetos. Ter **uma segunda pessoa** — mesmo que raramente precise aprovar — mantém a conferência de quatro olhos, que é o motivo de a aprovação existir. Foi exatamente a falta dessa segunda pessoa, numa OSC onde a presidente era a única aprovadora possível, que deixou um projeto esperando uma aprovação que só ela mesma podia dar.
+
 ### As três fases de trabalho
 
 Dentro do projeto, o trabalho se organiza em abas que correspondem às fases:

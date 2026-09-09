@@ -151,6 +151,7 @@ Voluntários não podem criar pedidos de compra e pagamento (só reembolsos), po
 > Independentemente da configuração de papéis aprovadores, o RIT360 Financeiro **bloqueia automaticamente** o solicitante de votar no próprio reembolso ou pedido — a aprovação é gesto de controle externo, faz sentido apenas se alguém **diferente** do solicitante revisa. A exceção é quando o solicitante é o único aprovador elegível (OSC muito pequena); aí o RIT360 Financeiro permite a auto-aprovação mas **marca explicitamente** no audit log como `self_approved` para revisão futura.
 
 ## Aprovação de projetos (aba Projetos)
+{: #aprovacao-de-projetos-aba-projetos }
 
 [![Fluxo de aprovação de projetos](/assets/screenshots/manual-config-aprovacoes-projetos.png)](/assets/screenshots/manual-config-aprovacoes-projetos.png)
 *Aba Projetos — quem aprova a abertura e o encerramento de projetos*
@@ -159,11 +160,13 @@ A aba **Projetos** define **quem pode aprovar a abertura e o encerramento** de u
 
 - **Papéis elegíveis para aprovar projetos** — default: Presidente e Tesoureiro.
 - **Pessoas específicas como aprovadores** — membros individuais, independentemente do papel. Membros **somente leitura** no módulo (Comissão Fiscal, Dirigente) **não podem** ser aprovadores de projeto.
-- **Permitir auto-aprovação** — quando ligado, o próprio solicitante pode aprovar a abertura ou o encerramento **apenas se for o único aprovador elegível** da OSC (mesma lógica conservadora dos demais fluxos: a auto-aprovação fica registrada na auditoria).
+- **Permitir auto-aprovação** — pensado para a OSC que tem **vários** aprovadores elegíveis e, ainda assim, quer permitir que quem propõe a abertura ou o encerramento também possa aprovar o próprio projeto. Quando a organização tem **uma única** pessoa habilitada a aprovar, a auto-aprovação já é permitida **independentemente** deste ajuste — impedir isso travaria o projeto, já que não existe mais ninguém para aprovar. Nos dois casos, a auto-aprovação fica registrada na auditoria.
 
 > 💡 **Por que isso importa**
 >
 > Os dois portões dão governança ao projeto sem engessar o dia a dia: aprovar a **abertura** é a diretoria concordando com o escopo e o orçamento; aprovar o **encerramento** é reconhecer que o projeto acabou, com aquele resultado e aquela prestação de contas. Entre os dois, a equipe trabalha com autonomia.
+>
+> A regra de quatro olhos (quem propõe não aprova) é o padrão de sempre; o único caso em que ela cede é quando **não existe segunda pessoa possível**. Fora desse caso extremo, permitir a auto-aprovação é uma escolha de governança da OSC — não uma necessidade do sistema. Ver [Projetos → Quem aprova, e o que fazer se não houver ninguém](/modulos/projetos/#quem-aprova-e-o-que-fazer-se-nao-houver-ninguem).
 
 ## Aprovação de orçamento (aba Orçamento) {#aba-orcamento}
 

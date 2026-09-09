@@ -11,6 +11,19 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.102.0] — 2026-09-09
+
+### Adicionado
+
+- **Quando você é a única pessoa habilitada a aprovar projetos na sua organização, agora pode aprovar os próprios projetos** — na abertura, no encerramento e nas mudanças de identidade do projeto. Havendo outra pessoa habilitada a aprovar, a separação entre quem propõe e quem aprova continua valendo como antes. O ajuste "Permitir auto-aprovação", em Configurações → Aprovações, continua existindo e agora serve só para permitir a auto-aprovação mesmo havendo outros aprovadores.
+- **A tela do projeto aguardando aprovação passa a mostrar quem pode aprovar.** Se for você, a tela também aponta a ação.
+- **Quando não há ninguém que possa aprovar um projeto, a tela deixa de parecer uma espera comum** e leva direto a Configurações → Aprovações para resolver.
+- **Um aviso aparece ao enviar um projeto para aprovação, quando você é a única pessoa habilitada a aprovar** — para não ficar esperando uma conferência que só você mesmo pode fazer.
+
+### Corrigido
+
+- **Um pedido de aviso sem ninguém para notificar deixou de ser tratado como envio concluído com sucesso** — passa a ficar registrado como algo a resolver.
+
 ## [1.101.1] — 2026-09-08
 
 ### Corrigido

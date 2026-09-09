@@ -279,6 +279,12 @@ Em **Projetos → Criar projeto**. Um assistente de 3 passos (tipo e identidade,
 
 Qualquer pessoa com vínculo ativo na organização pode criar um projeto. Quem cria já é registrado como coordenador daquele projeto na hora — não é preciso esperar nenhuma aprovação para isso. Veja o [Guia do Coordenador de Projetos](/guias/coordenador-projetos/).
 
+### Enviei o projeto para aprovação. Quem aprova?
+
+Quem pode aprovar a abertura (e depois o encerramento) é definido pela sua organização em **Configurações → Fluxo de Aprovações → aba Projetos** — por papel (Presidente e Tesoureiro, por padrão) ou por pessoas específicas. Você não precisa adivinhar quem é: a própria tela do projeto, enquanto ele está "Aguardando aprovação", mostra quem está apto a aprovar — e, se for você, mostra o botão ali mesmo.
+
+Se você for a **única pessoa habilitada** a aprovar na organização, pode aprovar o seu próprio projeto (o sistema avisa disso no momento em que você envia para aprovação). Havendo mais de uma pessoa apta, quem propõe não aprova o próprio projeto — é a segunda pessoa conferindo que dá valor à aprovação. E se, por algum motivo, **ninguém** estiver habilitado a aprovar (por exemplo, a única pessoa indicada saiu da organização), a tela avisa que é uma situação a resolver e leva direto para a configuração. Ver [Projetos → Quem aprova, e o que fazer se não houver ninguém](/modulos/projetos/#quem-aprova-e-o-que-fazer-se-nao-houver-ninguem).
+
 ### Como vinculo uma despesa (ou receita) a um projeto?
 
 No formulário de lançamento, use o campo **Projeto** (opcional). O dinheiro continua sendo da OSC, nas mesmas contas — o projeto apenas **rotula** a movimentação, para você ver o recorte dele sem perder o todo. O mesmo vale para reembolsos e pedidos de compra e pagamento.
