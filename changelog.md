@@ -11,6 +11,25 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.103.1] — 2026-09-09
+
+### Corrigido
+
+- **Corrigida a largura de janelas do sistema** (como a de vincular lançamentos) que às vezes deixavam campo de busca, lista ou botão de confirmar cortados na lateral. A correção foi feita na peça usada por todas as janelas do produto, então vale em qualquer uma delas — não só na que apresentou o problema.
+
+## [1.103.0] — 2026-09-09
+
+### Corrigido
+
+- **A tela de categorias permitidas do projeto voltava a salvar.** Em alguns projetos, a lista de categorias permitidas guardava categorias que já haviam sido apagadas — elas não apareciam na tela, então não havia como desmarcá-las, e a tela nunca conseguia salvar. Essas categorias já removidas foram limpas dos projetos afetados, e apagar uma categoria agora já limpa automaticamente qualquer projeto que ainda a referenciasse — para o problema não voltar a acontecer.
+- **A mensagem de recusa passa a dizer qual categoria é o problema**, e por quê: se ela não existe mais, ou se pertence a outra organização — em vez da mensagem genérica anterior, que não dizia qual das categorias selecionadas era a culpada.
+
+### Adicionado
+
+- **Marcar todas e desmarcar todas**, na escolha de categorias permitidas do projeto. Com uma busca ativa, os botões passam a se chamar "Marcar todas as encontradas" e "Desmarcar as encontradas", deixando claro que valem só sobre o que a busca está mostrando.
+
+Também nesta versão: quando você é a única pessoa habilitada a aprovar projetos e aprova sua própria proposta, essa aprovação passa a ficar registrada no histórico de auditoria, do mesmo jeito que já acontece com reembolso e pedido de pagamento.
+
 ## [1.102.1] — 2026-09-09
 
 ### Corrigido

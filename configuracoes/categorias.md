@@ -106,6 +106,10 @@ Diferente de desativar, **excluir apaga o cadastro definitivamente** — por iss
 >
 > A exclusão é definitiva. Antes de confirmar, o diálogo sempre avisa quantas categorias ou centros de custo serão apagados. Na dúvida entre excluir e desativar, prefira **desativar** — o cadastro sai da oferta em telas novas do mesmo jeito, mas fica lá para consulta se você precisar dele de novo.
 
+> 📖 **Conceito · A categoria também sai das listas de categorias permitidas dos projetos**
+>
+> Excluir uma categoria a remove automaticamente da lista de **categorias permitidas** de qualquer projeto que a usasse — não é preciso editar cada projeto para tirá-la manualmente. Um projeto nunca fica com uma categoria permitida que não existe mais no cadastro. Ver [Projetos → Escolher as categorias permitidas](/modulos/projetos/#escolher-as-categorias-permitidas).
+
 > 💡 **Por que isso importa**
 >
 > Categoria criada por engano, ou uma leva de centros de custo de um teste que não vingou, ficavam para sempre na lista — desativar resolvia a poluição visual, mas não tirava o cadastro do banco. Agora, o que nunca chegou a ser usado sai de vez, sem deixar rastro nem exigir desativação permanente de algo que nunca existiu de fato para a contabilidade da OSC.

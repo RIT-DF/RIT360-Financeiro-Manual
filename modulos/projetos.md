@@ -202,6 +202,20 @@ No topo do detalhe ficam as **ações de ciclo de vida** disponíveis para o sta
 
 Projetos mudam durante a execução — troca a coordenação, a data escorrega, o escopo se ajusta. Por isso os dados de identidade **podem ser editados depois de criados**, pelo botão **Editar** no cartão **Identidade** da aba Resumo. Dá para ajustar **nome, descrição, tipo, datas de início e fim e as categorias permitidas** (e, em projetos do tipo Evento, o número de participantes esperados).
 
+### Escolher as categorias permitidas
+
+Tanto na criação quanto na edição, a lista de **categorias permitidas** do projeto vem com uma **busca por nome** e dois botões: **Marcar todas** e **Desmarcar todas**. Com uma busca ativa, os próprios botões mudam de nome — passam a ser **Marcar todas as encontradas** e **Desmarcar as encontradas** — porque aí eles valem só sobre o que a busca está mostrando, e não sobre a lista inteira. É o próprio botão dizendo o que vai fazer antes de você clicar.
+
+<!-- CAPTURA PENDENTE: seção de categorias permitidas (criação ou edição do projeto), com a busca ativa filtrando parte das categorias e os botões visíveis já com o texto de busca ativa ("Marcar todas as encontradas" / "Desmarcar as encontradas"). Rota /projetos/novo ou /projetos/{id} (editar identidade), viewport desktop e mobile. -->
+
+> ✓ **Dica · Projeto que aceita quase tudo**
+>
+> Um projeto com orçamento amplo, que aceita quase todas as categorias da OSC, não precisa mais ser marcado categoria por categoria. Filtre pelas poucas que **não** devem entrar, marque todas as outras e depois desmarque as exceções — ou o caminho inverso, filtrando pelo que deve entrar.
+
+> ⚠️ **Atenção · Se uma categoria não puder ser aceita**
+>
+> Ao salvar, o sistema confere cada categoria escolhida antes de gravar. Havendo alguma que não pode ser aceita, a mensagem diz **o motivo exato**, categoria por categoria: **apagada do cadastro** (foi excluída em Configurações → Categorias — ver [Excluir categorias e centros de custo](/configuracoes/categorias/#excluir-categorias-e-centros-de-custo)) ou **de outra organização**. Remova a categoria apontada da lista, escolha a categoria certa e salve de novo.
+
 **Mudanças que exigem reaprovação.** A regra depende do estado do projeto:
 
 - **Projeto ainda não aprovado** — você edita direto.

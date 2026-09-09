@@ -326,6 +326,10 @@ Isso vale também na **baixa em lote**: se você selecionar lançamentos de vár
 
 Não. É um recurso **opcional**, pensado para quem administra recurso carimbado a um financiador específico (convênio, emenda, termo de fomento) e precisa provar, na prestação de contas, que cada gasto saiu da fonte certa. Se a sua OSC trabalha só com o caixa geral, o orçamento do projeto continua funcionando exatamente como antes — por categoria e valor, sem conta associada, sem nenhuma trava na hora de pagar.
 
+### Editei as categorias permitidas do meu projeto e não consigo salvar. Por quê?
+
+O sistema confere cada categoria escolhida antes de gravar. Havendo alguma que não pode ser aceita, a mensagem diz o motivo exato: **apagada do cadastro**, se a categoria foi excluída em Configurações → Categorias, ou **de outra organização**. Remova da lista a categoria apontada, escolha a categoria certa e salve de novo. Ver [Projetos → Escolher as categorias permitidas](/modulos/projetos/#escolher-as-categorias-permitidas).
+
 ## Estornos
 
 ### Quando devo estornar e quando cancelar?
