@@ -11,6 +11,13 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.102.1] — 2026-09-09
+
+### Corrigido
+
+- Pequenos ajustes internos de manutenção — na conciliação de extrato e no registro de avisos que não encontram ninguém para notificar —, sem efeito perceptível no dia a dia (#315, #316).
+- No painel do administrador da plataforma, o indicador de e-mails entregues pelo provedor reserva passa a mostrar também, separadamente, quantos e-mails não chegaram a ninguém (#309).
+
 ## [1.102.0] — 2026-09-09
 
 ### Adicionado

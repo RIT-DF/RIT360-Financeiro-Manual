@@ -56,7 +56,7 @@ Quem pode aprovar a abertura e o encerramento de um projeto é definido pela org
 
 Ao **solicitar aprovação** (na abertura) ou **solicitar encerramento**, a tela do projeto passa a mostrar **quem está apto a aprovar**. Se você for uma dessas pessoas, a tela avisa e traz o botão de aprovar ali mesmo — não é preciso perguntar à diretoria quem decide, nem procurar em outro lugar.
 
-<!-- CAPTURA PENDENTE: cartão/aviso na aba Resumo de um projeto "Aguardando aprovação inicial", mostrando quem está apto a aprovar (ex.: "Presidente, Tesoureiro" ou nomes específicos) e, quando o usuário logado é um deles, o botão de aprovar em destaque. Rota /projetos/{id}, viewport desktop e mobile. Precisa de um projeto de teste no status "Aguardando aprovação inicial" — OSC Alpha não serve para prints (dado real), usar organização de teste dedicada. -->
+<!-- CAPTURA PENDENTE: cartão/aviso na aba Resumo de um projeto "Aguardando aprovação inicial", mostrando quem está apto a aprovar (ex.: "Presidente, Tesoureiro" ou nomes específicos) e, quando o usuário logado é um deles, o botão de aprovar em destaque. Rota /projetos/{id}, viewport desktop e mobile. Precisa de um projeto de teste no status "Aguardando aprovação inicial". O aviso mostra nome de aprovador, que é dado pessoal: capturar na OSC Alpha é possível desde que os nomes sejam substituídos no DOM antes do disparo (não editar a imagem depois). -->
 
 > ⚠️ **Atenção · Quem propõe, normalmente, não aprova**
 >
