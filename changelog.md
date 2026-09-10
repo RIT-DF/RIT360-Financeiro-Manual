@@ -11,6 +11,12 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.112.1] — 2026-09-10
+
+### Modificado
+
+- Melhoria interna de manutenção: as rotinas automáticas do sistema passaram a seguir um padrão único, o que reduz a chance de defeito ao criar rotinas novas. Nada muda no uso do sistema.
+
 ## [1.112.0] — 2026-09-10
 
 ### Corrigido
