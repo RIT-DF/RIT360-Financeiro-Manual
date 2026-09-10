@@ -1,6 +1,17 @@
 {
   "versoes": [
     {
+      "versao": "1.109.1",
+      "data": "2026-09-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.109.0",
+      "data": "2026-09-10",
+      "destaque": true,
+      "resumo": "No celular, contas bancárias e centros de custo agora aparecem em cartões: dá para selecionar vários e usar todas as ações sem sair da tela."
+    },
+    {
       "versao": "1.108.0",
       "data": "2026-09-10",
       "destaque": false

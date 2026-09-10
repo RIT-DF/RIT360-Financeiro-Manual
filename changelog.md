@@ -11,6 +11,22 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.109.1] — 2026-09-10
+
+### Corrigido
+
+- **Voltou a funcionar a definição da conta padrão da organização.** Marcar, trocar e desmarcar a conta padrão agora gravam de verdade, e só uma conta fica como padrão por vez. Voltaram a valer também: a marcação de conta que compõe o saldo disponível, a proteção do saldo inicial de contas que já têm lançamentos, e a exigência de permissão financeira para cadastrar contas. Se algo impedir o salvamento de uma conta, a tela agora avisa em vez de dizer que deu certo.
+
+## [1.109.0] — 2026-09-10
+
+<!-- destaque: No celular, contas bancárias e centros de custo agora aparecem em cartões: dá para selecionar vários e usar todas as ações sem sair da tela. -->
+
+### Modificado
+
+- **No celular, as telas de contas bancárias e de centros de custo deixaram de ser tabelas cortadas e passaram a aparecer como cartões, um por registro.** Dá para selecionar vários, usar as ações em lote e chegar a todas as ações de cada registro sem sair da tela. Em tela larga nada muda.
+
+Também nesta versão: limpeza interna de código que sobrou da entrega anterior, sem efeito visível.
+
 ## [1.108.0] — 2026-09-10
 
 ### Corrigido
