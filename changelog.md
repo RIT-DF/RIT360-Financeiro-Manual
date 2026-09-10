@@ -11,6 +11,28 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.108.0] — 2026-09-10
+
+### Corrigido
+
+- **O comprovante anexado a um reembolso ou a um pedido de pagamento passou a abrir só para quem pode ver esse reembolso ou pedido** — quem pediu, quem aprova, quem tem permissão de ver reembolsos ou pedidos, e o superadministrador. Antes, qualquer pessoa da organização conseguia abrir o arquivo mesmo sem essa permissão, desde que conhecesse o endereço dele. Quem não pode abrir continua vendo que o anexo existe; ao tentar abrir, recebe uma frase explicando o motivo — nunca imagem quebrada nem erro técnico. Vale nas telas de lançamento, reembolso e pedido, e nos três jeitos de abrir o arquivo (baixar, ver imagem, ver PDF). Comprovante de lançamento comum, que não veio de reembolso nem de pedido, continua visível a toda a organização, como sempre foi.
+- **A recusa por "categoria não permitida pelo projeto" ganhou um atalho para o lugar onde se resolve** — direto para a aba de categorias permitidas do projeto —, nos pontos em que a mensagem fica na tela esperando uma ação. Onde ela aparece como aviso passageiro, o atalho não entra: ele levaria a pessoa embora e descartaria o que ela já tinha selecionado ou preenchido, então ali continua só o texto.
+
+Também nesta versão, duas correções sem efeito visível: a recusa por justificativa curta ao mudar a identidade de um projeto passou a usar o mesmo código de erro das outras recusas da mesma família; e a consulta que alimenta a tela de avisos que não saíram deixou de poder ser executada por quem não está autenticado (ela já negava os dados a esse visitante — a mudança fecha uma permissão mais larga do que precisava ser).
+
+## [1.107.0] — 2026-09-10
+
+### Adicionado
+
+- **Nova tela para superadministrador, "Avisos que não saíram"**, com filtro dos últimos 7, 30 ou 90 dias. O destinatário aparece sempre mascarado, e a tela distingue três situações: nenhuma falha no período, nenhuma falha desde sempre, e consulta que não respondeu — esta última nunca confundida com "está tudo certo".
+
+### Corrigido
+
+- **Falha ao enviar um aviso do sistema — uma notificação ou um e-mail — passa a ficar registrada de uma forma só**, em vez de cada rotina anotar do seu próprio jeito.
+- **Os pedidos de exportação e de anonimização dos próprios dados deixaram de perder a falha do aviso ao titular.** O pedido continua marcado como concluído — o trabalho de fato terminou, e em anonimização é irreversível —, mas a falha do aviso agora fica visível para ser resolvida.
+
+Também nesta versão: a falha ao acionar a sincronização com a loja virtual passou a ser registrada do mesmo jeito, mas de propósito não entra na lista de avisos que não saíram — ela não é um aviso a ninguém, e contá-la faria o total mentir.
+
 ## [1.106.0] — 2026-09-10
 
 ### Corrigido
