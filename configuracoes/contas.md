@@ -48,6 +48,7 @@ Clique em **+ Nova conta**. Preencha:
 - **Saldo inicial** — quanto tem na conta no momento do cadastro
 - **Data de abertura** — quando a conta começou a ser usada pela OSC (não a data de criação no RIT360 Financeiro)
 - **Conta padrão da organização** (opcional) — ver a seção **Conta padrão**, abaixo
+- **Projeto padrão** e **Centro de custo padrão** (opcionais) — ver a seção **Projeto e centro de custo padrão da conta**, abaixo
 - **Compõe o saldo disponível da organização** — ligado por padrão, **exceto para o tipo Cartão de crédito, que já nasce desligado**; ver a seção **Compõe o saldo disponível da organização**, abaixo
 - **Dados bancários** (opcional, recolhível) — banco, agência e demais dados, quando aplicável
 - **Personalização** (opcional, recolhível) — uma **cor** e um **ícone** para a conta; ver a seção **Personalização**, abaixo
@@ -129,6 +130,26 @@ Uma das contas pode ser marcada como **conta padrão da organização**. A conta
 > ✓ **Dica · Aponte para a conta que mais movimenta**
 >
 > Defina como padrão a conta por onde passa o grosso do dia a dia (geralmente a conta corrente principal). Como ela já vem selecionada no novo lançamento, você economiza um passo na maioria dos registros e reduz o risco de lançar na conta errada por desatenção.
+
+## Projeto e centro de custo padrão da conta
+{: #projeto-e-centro-de-custo-padrao-da-conta }
+
+Além da conta padrão da organização (acima), cada conta pode ter, no próprio cadastro, um **Projeto padrão (sugestão)** e um **Centro de custo padrão (sugestão)**.
+
+<!-- CAPTURA PENDENTE: cadastro/edição de conta com os campos "Projeto padrão (sugestão)" e "Centro de custo padrão (sugestão)" preenchidos, logo abaixo do interruptor de conta padrão. Rota /configuracoes/contas (editar uma conta), viewport desktop e mobile. -->
+
+> 💡 **Por que isso importa**
+>
+> OSC que mantém uma conta bancária por projeto — comum em quem administra convênio ou emenda com conta segregada — lançava a despesa e depois precisava lembrar de marcar o projeto (e o centro de custo) toda vez, na mesma tela. Com o padrão da conta configurado, os dois campos **já chegam preenchidos** ao escolher aquela conta em um novo lançamento — sobra só confirmar ou trocar, quando for o caso.
+
+- **É sugestão, não trava.** Quem está lançando pode trocar o projeto e o centro de custo livremente, ou deixar em branco; o padrão da conta só preenche o campo quando ele ainda está vazio — nunca sobrescreve uma escolha que a pessoa já fez na mesma tela.
+- **Onde configurar:** no cadastro ou na edição da conta, em **Configurações → Contas Bancárias**, junto do interruptor de conta padrão.
+- **Onde funciona:** no formulário de **[novo lançamento](/modulos/movimentacoes/#registrar-novo-lançamento)**, ao escolher a conta. Se a conta tem projeto padrão e você registra o lançamento com outro projeto (ou nenhum), a tela pede uma confirmação antes de salvar — para evitar que a divergência passe batido sem ninguém notar.
+- **Nenhum dos dois é obrigatório.** Conta sem projeto e centro de custo padrão continua funcionando exatamente como antes — o novo lançamento simplesmente não vem com nada pré-preenchido a partir da conta.
+
+> ✓ **Dica · Uma conta por projeto é o caso que mais aproveita**
+>
+> Se a sua OSC segrega uma conta bancária por convênio ou por projeto grande, configure o projeto padrão daquela conta uma vez e deixe de repetir a escolha em cada lançamento. Vale o mesmo para um centro de custo que sempre responde pela mesma conta (a filial que só movimenta pela conta local, por exemplo).
 
 ## Personalização (cor e ícone)
 

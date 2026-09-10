@@ -11,6 +11,49 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.106.0] — 2026-09-10
+
+### Corrigido
+
+- **Corrigir um lançamento já pago passou a recusar a troca de projeto quando alguma categoria do lançamento não está entre as permitidas pelo projeto de destino**, com a mesma frase citando o nome da categoria.
+
+### Adicionado
+
+- **Toda mudança de identidade do projeto (nome, descrição, tipo, datas, categorias permitidas, público esperado) passou a exigir motivo com pelo menos 10 caracteres** — ao editar, ao propor mudança em projeto já aprovado, ao aprovar e ao recusar. E quem aprova vê o motivo informado dentro do próprio aviso de mudança pendente, antes de decidir.
+- **O formulário de novo projeto passou a guardar rascunho no aparelho**, inclusive o passo em que a pessoa parou. Ao voltar, aparece o aviso de recuperação com opção de descartar. O rascunho é apagado quando o projeto é criado ou quando a pessoa descarta.
+
+## [1.105.0] — 2026-09-09
+
+### Adicionado
+
+- **A janela de vincular lançamentos a um projeto ficou utilizável**: filtro por conta bancária, contagem de quantos lançamentos podem e quantos não podem ser vinculados, alternância para ver os que não podem (com as caixas desabilitadas), e o motivo escrito em cada linha em vez de escondido numa dica de mouse.
+- **Quando o projeto só aceita certas categorias e nenhum lançamento da lista está nelas, a tela explica isso e diz o caminho para autorizar a categoria.**
+- **Na tela de categorias permitidas do projeto, um contador mostra quantas categorias estão selecionadas.**
+
+### Corrigido
+
+- **A recusa por "categoria não permitida pelo projeto" passou a ser uma frase única, citando o nome da categoria, nos oito pontos do sistema onde ela pode aparecer** — antes variava de lugar para lugar, e em alguns mostrava um identificador interno em vez do nome.
+
+## [1.104.1] — 2026-09-09
+
+### Corrigido
+
+- Pequenos ajustes de texto e de estado de tela nas telas de atribuição de projeto em lote e de conta bancária, introduzidas na versão anterior.
+
+## [1.104.0] — 2026-09-09
+
+<!-- destaque: Agora dá para atribuir um projeto a vários lançamentos de uma vez, e cada conta pode já vir com projeto e centro de custo preenchidos. -->
+
+### Adicionado
+
+- **Atribuir projeto a vários lançamentos de uma vez, pela lista de Movimentações.** Antes de aplicar, a lista de tudo o que será alterado aparece para conferência, e a mudança exige uma justificativa.
+- **Cada conta bancária pode ter um projeto e um centro de custo padrão.** Ao lançar por essa conta, esses campos já vêm preenchidos — é um padrão, não uma trava: a pessoa pode trocar como quiser.
+- **Aviso quando o projeto escolhido para um lançamento está encerrado.**
+
+### Corrigido
+
+- **A conciliação por arquivo do banco passou a registrar como a conferência foi feita.** Antes esse registro ficava vazio, e a tela não deixava isso visível.
+
 ## [1.103.1] — 2026-09-09
 
 ### Corrigido

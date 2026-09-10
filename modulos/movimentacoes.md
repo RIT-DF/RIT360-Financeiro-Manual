@@ -224,7 +224,44 @@ Cada linha tem ícones de ação que mudam conforme o status:
 
 ### Seleção em lote
 
-Marque o checkbox no início das linhas para selecionar várias movimentações. A barra de ações em lote aparece no rodapé com as opções **Marcar como pago** (para quem tem permissão de pagar), **Marcar como conciliado** (para quem tem a permissão Criar / editar — ver **[Conciliação manual](#conciliacao-manual)**, abaixo) e **Excluir**.
+Marque o checkbox no início das linhas para selecionar várias movimentações. A barra de ações em lote aparece no rodapé com as opções **Marcar como pago** (para quem tem permissão de pagar), **Marcar como conciliado** (para quem tem a permissão Criar / editar — ver **[Conciliação manual](#conciliacao-manual)**, abaixo), **Atribuir categoria**, **Atribuir centro de custo**, **Atribuir projeto** e **Excluir**.
+
+#### Atribuir projeto a vários lançamentos de uma vez
+{: #atribuir-projeto-em-lote }
+
+<!-- CAPTURA PENDENTE: janela "Atribuir projeto" aberta a partir da seleção em lote de Movimentações, mostrando o seletor de projeto, a lista do que vai mudar (ex.: "N lançamentos passarão a ser vinculados...") e, se possível, o aviso de recusa por categoria não permitida. Rota /movimentacoes com 3-4 linhas selecionadas, viewport desktop e mobile. Precisa de um projeto de teste com categorias permitidas restritas na OSC Alpha. -->
+
+> 💡 **Por que isso importa**
+>
+> Vincular lançamento a lançamento a um projeto que só foi criado depois — ou reclassificar um período inteiro de uma importação antiga — é inviável um a um. Selecione tudo o que pertence àquele projeto e atribua de uma vez, com o mesmo ganho de tempo das demais ações em lote.
+
+Selecione as movimentações e clique em **Atribuir projeto**, na barra de ações. Escolha o projeto de destino; antes de você confirmar, a janela já mostra o que vai mudar:
+
+- quantos lançamentos vão passar a ficar vinculados ao projeto escolhido;
+- quantos já estavam vinculados a **outro** projeto — nesses, o vínculo é **trocado**, não somado a mais um;
+- o aviso de que qualquer lançamento **já pago** da seleção passa pela mesma rotina de **[Corrigir os dados de um lançamento pago](#corrigir-os-dados-de-um-lançamento-pago)**, que registra o motivo na trilha de auditoria.
+
+> ⚠️ **Atenção · Transferência não recebe projeto**
+>
+> Transferência é só mudança de lugar do próprio dinheiro da OSC entre contas (ver **Conceitos essenciais**, no início desta página) — nunca é receita nem despesa de um projeto. Uma transferência dentro da seleção é automaticamente deixada de fora, com o motivo explicado no resultado.
+
+**Recusas mostradas antes de confirmar.** Ao escolher o projeto, a janela roda um ensaio a seco — sem gravar nada — e avisa quantos e quais lançamentos da seleção **não** poderão ser vinculados, com o motivo agrupado (ex.: "3 por categoria fora das permitidas do projeto"). O motivo mais comum é a categoria do lançamento não estar entre as **categorias permitidas do projeto** — ver [Quando uma categoria não é aceita pelo projeto](/modulos/projetos/#quando-uma-categoria-nao-e-aceita-pelo-projeto), em Projetos.
+
+> ✓ **Dica · Recusado no ensaio não trava o resto da seleção**
+>
+> O ensaio é só um aviso: ao confirmar, os lançamentos sem problema são vinculados normalmente, e apenas os apontados ficam de fora. Resolva a categoria — ou escolha outro projeto para eles — e repita a atribuição depois só para os que faltaram.
+
+**Justificativa obrigatória havendo lançamento pago na seleção.** Se algum dos lançamentos selecionados já está **pago** ou **efetivado**, a janela pede uma justificativa de pelo menos **10 caracteres** antes de deixar confirmar — a mesma exigência de [Corrigir os dados de um lançamento pago](#corrigir-os-dados-de-um-lançamento-pago). Selecionando só lançamentos pendentes ou atrasados, esse campo nem aparece.
+
+**Aviso ao tirar lançamento de um projeto já encerrado.** Se algum dos selecionados já pertence a um projeto **concluído, cancelado ou arquivado**, a janela pede que você confirme que entende a consequência: os números daquele projeto vão mudar, e uma prestação de contas dele já emitida pode ficar com valores diferentes dos que constavam na hora da emissão.
+
+> ⚠️ **Atenção · Projeto de destino encerrado bloqueia a ação inteira**
+>
+> Se o projeto que você escolher como **destino** já estiver concluído, cancelado ou arquivado, a atribuição inteira é recusada com um aviso explicando o motivo — nada é alterado, nem os lançamentos que não teriam problema nenhum. Projeto encerrado não aceita trabalho novo, nem por esta porta; ver [Arquivar e desarquivar um projeto](/modulos/projetos/#arquivar-projeto).
+
+> 💡 **Categoria e centro de custo funcionam mais simples**
+>
+> **Atribuir categoria** e **Atribuir centro de custo** seguem a mesma seleção e o mesmo botão de confirmação, mas sem o ensaio de recusas nem a justificativa: qualquer categoria (ou centro de custo) cadastrado vale para qualquer lançamento, então não há elegibilidade a checar. Atribuir uma categoria nova **substitui** a classificação atual do lançamento — inclusive quando ela estava dividida entre várias categorias, a divisão é desfeita em favor da categoria única escolhida.
 
 #### Baixa em lote com lançamentos de projetos diferentes
 {: #baixa-em-lote-projetos-diferentes }
@@ -318,6 +355,17 @@ Clique em **+ Novo lançamento** no topo da lista. O formulário abre em **pági
 - **Data de vencimento**
 - **Valor total**
 - **Conta** — qual conta financeira movimenta. Já vem **pré-selecionada com a [conta padrão](/configuracoes/contas/#conta-padrão)** da OSC; troque se for outra. O saldo de cada conta aparece junto no seletor — para quem tem a permissão [Ver saldo das contas](/configuracoes/cargos/#permissao-ver-saldo); sem ela, o seletor funciona igual, só sem mostrar o valor
+
+#### Conta com projeto e centro de custo padrão
+{: #conta-com-projeto-e-centro-de-custo-padrao }
+
+> 📖 **Conceito**
+>
+> Se a conta escolhida tem um **[projeto ou centro de custo padrão](/configuracoes/contas/#projeto-e-centro-de-custo-padrao-da-conta)** configurado, os campos **Projeto** e **Centro de custo** (abaixo) já chegam preenchidos com essa sugestão — só quando estiverem vazios; uma escolha que você já tiver feito na tela não é sobrescrita. Troque livremente se este lançamento for de outro projeto.
+
+> ⚠️ **Atenção · Salvar com um projeto diferente do padrão da conta pede confirmação**
+>
+> Se a conta tem projeto padrão e, na hora de salvar, o lançamento está com **outro** projeto (ou nenhum), a tela avisa a divergência e pergunta se você quer prosseguir assim mesmo — **Voltar e ajustar** ou **Prosseguir**. É um aviso, não uma trava: existe para o caso comum de esquecer de trocar o projeto ao usar a conta errada, mas não impede o lançamento legítimo fora do padrão daquela conta.
 - **Categoria** — não pedida para Transferências (porque transferência é só mudança de lugar)
 
 #### Conta elegível por rubrica
@@ -332,7 +380,7 @@ Clique em **+ Novo lançamento** no topo da lista. O formulário abre em **pági
 - **Beneficiário / Pagador** — quem recebeu o pagamento (em Despesa, "Beneficiário") ou de quem veio o dinheiro (em Receita, "Pagador"). Fica no topo do formulário, logo após o tipo
 - **Tipo de documento fiscal** e **Número do documento** — para registrar a nota/recibo que originou o lançamento
 - **Data de pagamento** — se preenchida no momento da criação, o lançamento já entra como **Pago**; se vazia, entra como **Pendente** e você confirma o pagamento depois
-- **Projeto** e **Centro de custo** — para OSCs que dividem o financeiro por projeto/área. Quem é **Gestor de Centro de Custo** só vê, aqui, os centros que gerencia — ver [Papéis e Permissões → Gestor de Centro de Custo](/papeis/#gestor-de-centro-de-custo)
+- **Projeto** e **Centro de custo** — para OSCs que dividem o financeiro por projeto/área. Quem é **Gestor de Centro de Custo** só vê, aqui, os centros que gerencia — ver [Papéis e Permissões → Gestor de Centro de Custo](/papeis/#gestor-de-centro-de-custo). Se o projeto escolhido tiver categorias permitidas e a categoria deste lançamento não estiver nela, salvar é recusado — ver [Projetos → Quando uma categoria não é aceita pelo projeto](/modulos/projetos/#quando-uma-categoria-nao-e-aceita-pelo-projeto)
 - **Forma de pagamento** (em Despesa) — como o pagamento será feito. Ao escolher **PIX**, o formulário abre os campos da **chave PIX** (tipo e chave); ao escolher **Transferência bancária**, abre os **dados bancários** do destinatário (banco, agência, conta e titular); **Boleto** e as demais formas não pedem campos extras. Esses dados são opcionais e ficam guardados no lançamento — úteis para quem for efetivar o pagamento depois
 - **Distribuir valor entre categorias** — divide um único valor por várias categorias (ex: uma compra de R$ 500 que vai 60% para "Material didático" e 40% para "Manutenção")
 - **Distribuir valor entre centros de custo** — divide um único lançamento por vários centros de custo (ex: a folha de pagamento paga pela sede, com parte para a unidade A e parte para a unidade B). Não aparece em Transferência, que é só mudança de lugar do dinheiro dentro da própria OSC.
@@ -486,6 +534,10 @@ Para corrigir:
 > 📖 **Conceito · Reclassificar não é remexer o dinheiro — mas trocar a conta é**
 >
 > Mudar a **categoria**, o **centro de custo**, o **projeto**, a **descrição** ou o **favorecido** de um lançamento pago muda só a **classificação gerencial** — os saldos das contas não mudam. Já mudar a **conta bancária** move o valor de fato entre os saldos das duas contas envolvidas, na data do pagamento — é o que corrige um erro de digitação (marcou a conta errada na hora de pagar) sem o custo de estornar e relançar. Como qualquer correção sobre lançamento pago, o **motivo** fica guardado na trilha de auditoria — quem prestar contas depois vê o que foi corrigido e por quê.
+
+> ⚠️ **Atenção · Trocar o projeto pode ser recusado pela categoria do lançamento**
+>
+> Se o projeto de destino tem uma lista de **[categorias permitidas](/modulos/projetos/#escolher-as-categorias-permitidas)** e a categoria deste lançamento não está nela, a correção é recusada — a mensagem diz **qual categoria** é o problema e onde autorizá-la (ver [Quando uma categoria não é aceita pelo projeto](/modulos/projetos/#quando-uma-categoria-nao-e-aceita-pelo-projeto), em Projetos). O lançamento continua no projeto anterior até você resolver: incluir a categoria na lista de permitidas do projeto de destino, ou corrigir para outro projeto.
 
 > 💡 **Se você chegou aqui por um link antigo**
 >
@@ -902,6 +954,8 @@ Você **não depende do e-mail** para chegar a uma prestação de contas: clique
 - **Pagamento retido** — pagamento que não se completa porque passa da rubrica prevista de um projeto; o lançamento não vira "Pago" até alguém decidir.
 - **Líquido** — a posição consolidada da OSC: tudo o que ela tem (ativos) menos tudo o que ela deve (passivos).
 - **Proteção do nome dos favorecidos** — opção da prestação de contas que mascara, no documento inteiro (PDF ou planilha), o nome de quem recebeu cada pagamento. Não afeta quem pediu, aprovou ou pagou.
+- **Projeto padrão da conta** — projeto sugerido para preencher automaticamente o campo Projeto ao lançar por aquela conta; é sugestão, não trava. Ver [Conta com projeto e centro de custo padrão](#conta-com-projeto-e-centro-de-custo-padrao).
+- **Categoria não permitida** — recusa que aparece ao tentar ligar um lançamento a um projeto cujas categorias permitidas não incluem a categoria daquele lançamento — ao lançar, editar, corrigir dados de um pago, atribuir em lote ou vincular. Ver [Projetos → Quando uma categoria não é aceita pelo projeto](/modulos/projetos/#quando-uma-categoria-nao-e-aceita-pelo-projeto).
 
 ## Por onde seguir
 

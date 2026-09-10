@@ -119,6 +119,25 @@ No topo você tem **busca por nome** e filtros por **Status**, **Tipo** e **Saú
 
 O botão **Novo projeto** abre um **assistente de 3 passos** (tipo e identidade · período · financeiro essencial), com textos de ajuda em cada etapa e o aviso de que você ficará registrado como coordenador do projeto. Para um Evento, o assistente pede o número estimado de participantes; o texto se adapta ao tipo escolhido. Convidar outras pessoas para a equipe é feito depois, já com o projeto criado (ver "Equipe" na aba Planejamento). No último passo, o botão **Criar projeto** conclui — e o projeto nasce **Em planejamento**, ainda ajustável antes de você pedir a aprovação de abertura.
 
+### Sair no meio do cadastro não perde o preenchimento
+{: #rascunho-do-cadastro-de-projeto }
+
+<!-- CAPTURA PENDENTE: aviso "Rascunho recuperado do seu dispositivo. Continue de onde parou." no topo do assistente de Novo projeto, com o botão "Descartar" visível, e o passo/progresso restaurado (ex.: passo 2 de 3). Rota /projetos/novo, viewport desktop e mobile. Fechar a aba no meio do passo 2 com campos preenchidos e reabrir a mesma rota para reproduzir. -->
+
+> 💡 **Por que isso importa**
+>
+> Preencher escopo, período e orçamento essencial de um projeto novo leva alguns minutos, e é comum ser interrompido no meio — uma ligação, uma reunião, o celular que trava no seletor de arquivo. Antes, fechar a aba nesse momento significava perder tudo e começar de novo. Agora não perde.
+
+Enquanto você preenche o assistente de **Novo projeto**, o RIT360 Financeiro salva um **rascunho automaticamente no seu dispositivo** — sem precisar clicar em nada para isso acontecer. Se você fechar a aba, recarregar a página ou o navegador cair no meio do preenchimento, ao voltar em **Projetos → Novo projeto** o assistente **restaura os campos e o passo em que você estava**, com um aviso no topo: *"Rascunho recuperado do seu dispositivo. Continue de onde parou."*
+
+- **O rascunho é só seu, e só naquele aparelho.** Ele fica guardado no navegador do dispositivo onde você estava digitando — não vai para o servidor, não aparece para outra pessoa da equipe, e não existe se você abrir o assistente num computador ou celular diferente.
+- **Descartar** — o aviso de rascunho recuperado tem um botão para isso: começa o assistente do zero, limpo, sem o que estava preenchido antes.
+- **O rascunho some quando o projeto é criado** — ao concluir o assistente com sucesso, o rascunho local é apagado; ele não fica sobrando para reaparecer num próximo projeto novo.
+
+> ✓ **Dica · O rascunho não substitui salvar de vez em quando em telas longas**
+>
+> Fora do assistente de projeto, o mesmo mecanismo guarda rascunho local em outros formulários longos do RIT360 Financeiro (novo lançamento, reembolso, pedido de pagamento). Ele é uma rede de segurança contra fechamento acidental — não um lugar para deixar um cadastro pela metade por dias; prefira concluir ou descartar.
+
 ## Arquivar e desarquivar um projeto
 {: #arquivar-projeto }
 
@@ -216,10 +235,31 @@ Tanto na criação quanto na edição, a lista de **categorias permitidas** do p
 >
 > Ao salvar, o sistema confere cada categoria escolhida antes de gravar. Havendo alguma que não pode ser aceita, a mensagem diz **o motivo exato**, categoria por categoria: **apagada do cadastro** (foi excluída em Configurações → Categorias — ver [Excluir categorias e centros de custo](/configuracoes/categorias/#excluir-categorias-e-centros-de-custo)) ou **de outra organização**. Remova a categoria apontada da lista, escolha a categoria certa e salve de novo.
 
+### Quando uma categoria não é aceita pelo projeto
+{: #quando-uma-categoria-nao-e-aceita-pelo-projeto }
+
+Um projeto com lista de categorias permitidas (acima) só aceita lançamento cuja categoria esteja **nessa** lista. Sempre que você tenta ligar um lançamento a um projeto assim — lançando, editando, corrigindo dados de um lançamento pago, pedindo reembolso ou pagamento, ou vinculando lançamentos já existentes (ver **[Vincular lançamentos existentes](#vincular-lançamentos-existentes)**, abaixo) — e a categoria não está na lista, a ação é recusada com **uma mensagem única**, em qualquer um desses lugares:
+
+> *"A categoria "Material de construção" não está entre as permitidas por este projeto. Para usá-la, abra o projeto, vá em Identidade › Categorias permitidas e inclua a categoria — depois refaça este lançamento."*
+
+- **A mensagem nomeia a categoria** — a sua, não uma lista genérica de "categoria inválida". Havendo mais de uma categoria recusada de uma vez (lançamento com valor dividido entre categorias), a mensagem nomeia até três e resume o resto ("e mais N").
+- **O caminho que ela indica é sempre o mesmo:** abrir o projeto, ir em **Identidade → Categorias permitidas** (ver [Escolher as categorias permitidas](#escolher-as-categorias-permitidas), acima) e incluir a categoria que faltou — depois repetir a ação que foi recusada.
+- **Nada é gravado enquanto a recusa não for resolvida.** O lançamento continua como estava antes da tentativa — sem projeto, no projeto anterior, ou fora da correção que você tentou fazer.
+
+> ✓ **Dica · Duas saídas, dependendo do que faz mais sentido**
+>
+> Encontrou a recusa? Você tem duas opções, não uma só: **incluir a categoria** na lista de permitidas do projeto (quando ela realmente deveria caber ali), ou **trocar a categoria do lançamento** (quando foi ela que saiu errada). A mensagem só aponta o conflito — qual dos dois lados corrigir é uma decisão sua.
+
 **Mudanças que exigem reaprovação.** A regra depende do estado do projeto:
 
 - **Projeto ainda não aprovado** — você edita direto.
-- **Projeto com abertura já aprovada** — mudanças de **nome e descrição** valem na hora; já as que afetam **prazo ou escopo** (datas, categorias permitidas, tipo) entram como uma **alteração proposta, aguardando reaprovação**. O projeto **continua rodando com os valores atuais** e um aviso mostra a mudança proposta (de → para). Quem aprova pode **aprovar** (passa a valer) ou **rejeitar** com um motivo; quem propôs pode **cancelar** a proposta. As pessoas certas são avisadas pelos canais que escolherem nas preferências de notificação.
+- **Projeto com abertura já aprovada** — mudanças de **nome e descrição** valem na hora; já as que afetam **prazo ou escopo** (datas, categorias permitidas, tipo, número de participantes esperados) entram como uma **alteração proposta, aguardando reaprovação**. O projeto **continua rodando com os valores atuais** e um aviso mostra a mudança proposta (de → para). Quem aprova pode **aprovar** ou **rejeitar**; quem propôs pode **cancelar** a proposta. As pessoas certas são avisadas pelos canais que escolherem nas preferências de notificação.
+
+> ⚠️ **Atenção · Toda mudança de identidade pede um motivo, de pelo menos 10 caracteres**
+>
+> Editar direto, propor mudança num projeto já aprovado, aprovar a proposta ou rejeitá-la: nos **quatro** caminhos, o campo **Motivo** é obrigatório, com no mínimo **10 caracteres** — a tela não deixa confirmar antes disso. Ao **propor** uma mudança, o motivo fica visível para quem for aprovar, ao lado do de→para de cada campo alterado; ao **aprovar** ou **rejeitar**, o motivo de quem decidiu fica registrado junto com a decisão. Em qualquer um dos quatro, o texto fica guardado na trilha do projeto — quem revisar depois vê não só o que mudou, mas **por que**.
+>
+> *Exemplo de motivo ao propor:* "O acampamento foi adiado e o período precisou ser ajustado." *Exemplo ao aprovar:* "Nova data confirmada com a diretoria." *Exemplo ao rejeitar:* "A nova data conflita com outro evento já confirmado."
 
 **Avisos antes de salvar.** Sem apagar nada, o sistema avisa quando uma edição pode ter efeito colateral: ao **remover uma categoria** que já tem lançamentos, ao **encurtar as datas** deixando lançamentos fora do novo período, ou ao **trocar o tipo** de um projeto que já tem dados específicos. Em todos os casos você vê o aviso e **confirma antes de seguir**.
 
@@ -324,7 +364,7 @@ Vale a mesma regra de sempre: **coordenação remove qualquer evidência; quem e
 O Financeiro mostra o dinheiro do projeto sem tirar nada do caixa geral da OSC:
 
 - **Registrar despesa do projeto** — abre um **reembolso** ou um **pedido de compra e pagamento** já vinculado a este projeto. A solicitação segue o **fluxo normal de aprovação** da OSC.
-- **Vincular lançamentos existentes** — atribui a este projeto movimentações que já foram lançadas e ainda não tinham projeto.
+- **Vincular lançamentos existentes** — atribui a este projeto movimentações que já foram lançadas e ainda não tinham projeto. Ver **[Vincular lançamentos existentes](#vincular-lançamentos-existentes)**, abaixo.
 - **Aguardando aprovação** — lista os pedidos e reembolsos do projeto que **ainda não foram aprovados** (com o selo "Aguardando Aprovação" ou "Rascunho"). Clique para abrir o pedido. **Esses pendentes não entram nos totais** — servem só para você saber o que já foi solicitado e **não pedir o mesmo pagamento duas vezes**. Quando aprovados, saem daqui e passam a contar como movimentação vinculada.
 - **Receitas e Despesas / Orçamento previsto / Previsto × Realizado** — o orçamento do projeto (total e, opcionalmente, por categoria) confrontado com o que já foi gasto, com saldo e percentual de consumo. O bloco de **Receitas** mostra sempre os valores realizados e previstos de receita vinculada ao projeto; se o projeto ainda não tem nenhuma receita lançada, aparece zerado, com a frase "Nenhuma receita vinculada a este projeto ainda.".
 - **Lançamentos vinculados** — as movimentações já atribuídas ao projeto, com filtros. Cada linha mostra o **valor** e acompanha a **situação do lançamento conforme ele evolui**: aparece quando é vinculado (previsto), muda para **pago** quando o pagamento é registrado e para **estornado** se for revertido — sempre na mesma linha, sem duplicar. Assim toda a equipe do projeto enxerga, em um só lugar, o que já foi previsto, o que foi efetivamente pago e o que foi estornado, com os valores visíveis a todos os membros.
@@ -332,6 +372,29 @@ O Financeiro mostra o dinheiro do projeto sem tirar nada do caixa geral da OSC:
 > ✓ **Dica · Todo mundo vê o dinheiro do projeto**
 >
 > Os lançamentos vinculados e seus valores ficam visíveis para **todos os membros do projeto**, não só para a coordenação. Isso mantém a equipe alinhada sobre quanto já foi gasto e evita a sensação de "caixa-preta" que costuma minar a confiança em iniciativas coletivas.
+
+### Vincular lançamentos existentes
+{: #vincular-lançamentos-existentes }
+
+<!-- CAPTURA PENDENTE: janela "Vincular lançamentos existentes" aberta a partir do botão na aba Financeiro do projeto, com: (a) o filtro por conta bancária visível; (b) a faixa "N lançamentos podem ser vinculados; M têm categoria fora das permitidas" com o botão "Mostrar os M não elegíveis"; (c) a lista com os não elegíveis expandida, mostrando a caixa de seleção desabilitada e o motivo em laranja em pelo menos uma linha. Rota /projetos/{id}, aba Financeiro, viewport desktop e mobile. Precisa de um projeto de teste com categorias permitidas restritas e lançamentos sem projeto na OSC Alpha, alguns com categoria fora da lista. -->
+
+Ao clicar em **Vincular lançamentos existentes**, a janela lista as movimentações da organização que **ainda não têm projeto** — com busca por título ou contraparte e um **filtro por conta bancária**, útil quando a OSC segrega uma conta por projeto (ver [Conta com projeto e centro de custo padrão](/modulos/movimentacoes/#conta-com-projeto-e-centro-de-custo-padrao), em Movimentações) e você quer vincular só o que passou por aquela conta.
+
+A janela **conta**, o tempo todo, quantos lançamentos da lista **podem** e quantos **não podem** ser vinculados — a mesma regra de [Quando uma categoria não é aceita pelo projeto](#quando-uma-categoria-nao-e-aceita-pelo-projeto), acima: um projeto com categorias permitidas só aceita lançamento cuja categoria esteja na lista. Por padrão, a lista mostra só os elegíveis; um botão **"Mostrar os N não elegíveis"** traz os demais para conferência, com a caixa de seleção **desabilitada** em cada um — dá para ver por que ficaram de fora, mas não para marcá-los sem resolver o motivo primeiro.
+
+- **Cada lançamento não elegível mostra o motivo na própria linha** — "Categoria fora das permitidas por este projeto — autorize-a em Identidade › Categorias permitidas para vincular."
+- **Selecionar todos** marca só os elegíveis da lista filtrada no momento — nunca os desabilitados.
+- O botão de confirmação já diz quantos serão vinculados ("Vincular 4 lançamentos"), e some se nada estiver selecionado.
+
+> ⚠️ **Atenção · Nenhum lançamento cabe no projeto? A tela explica por quê**
+>
+> Se, depois de filtrar, **nenhum** lançamento da lista puder ser vinculado, a janela não mostra uma lista vazia sem contexto — ela diz que este projeto só aceita algumas categorias e que nenhum dos lançamentos está nelas, e aponta o caminho: abrir o projeto, ir em **Identidade › Categorias permitidas** e incluir as categorias que faltam. Um link permite ver os não elegíveis mesmo assim, para você conferir de qual categoria se trata antes de decidir.
+
+> ✓ **Dica · Filtre por conta antes de vincular um lote grande**
+>
+> Numa OSC com muitas contas e vários projetos rodando ao mesmo tempo, filtrar por conta antes de selecionar reduz o risco de vincular ao projeto errado um lançamento de outra iniciativa que só coincide de estar sem projeto ainda.
+
+**Quem pode:** vincular lançamentos exige o papel de **Coordenador do projeto** (ver **Conceitos essenciais**, acima). Projeto **concluído ou cancelado** não recebe novos vínculos por aqui, do mesmo jeito que não recebe pelo [Corrigir dados de um lançamento pago](/modulos/movimentacoes/#corrigir-os-dados-de-um-lançamento-pago) nem pela [atribuição em lote](/modulos/movimentacoes/#atribuir-projeto-em-lote).
 
 ### Calculadora de taxa de evento (projetos do tipo Evento)
 
@@ -549,11 +612,14 @@ Cada encerramento alimenta um **acervo de Lições Aprendidas** da OSC, acessív
 - **Conta de recurso restrito** — conta que não soma no saldo disponível da organização (convênio, emenda, fundo carimbado). Estourar rubrica nela nunca tem autorização interna.
 - **Retenção de pagamento** — quando a conta é elegível mas o valor ultrapassa o previsto de uma rubrica, o pagamento não se completa até alguém decidir; o lançamento nunca aparece como pago enquanto retido.
 - **Recusa por regra** — quando a conta escolhida **não tem** rubrica prevista para a categoria da despesa; diferente da retenção, não há decisão de autorizar — é preciso trocar a conta ou ajustar o orçamento.
+- **Categoria não permitida** — recusa que aparece sempre que se tenta ligar um lançamento (lançar, editar, corrigir, vincular, pedir reembolso ou pagamento) a um projeto cujas categorias permitidas não incluem a categoria daquele lançamento. Ver [Quando uma categoria não é aceita pelo projeto](#quando-uma-categoria-nao-e-aceita-pelo-projeto).
+- **Rascunho local** — cópia do que você está preenchendo num formulário longo (como o cadastro de projeto), guardada automaticamente no seu dispositivo para sobreviver a um fechamento acidental. Some quando o cadastro é concluído; não é enviada ao servidor nem visível a outra pessoa. Ver [Sair no meio do cadastro não perde o preenchimento](#rascunho-do-cadastro-de-projeto).
 - **Remanejamento** — mudança autorizada e documentada de quanto uma rubrica pode receber, registrada com o documento (evidência do projeto) que a embasa.
 
 ## Por onde seguir
 
-- **Movimentações** — onde os lançamentos vivem; o financeiro do projeto se apoia neles. Ver [Conta elegível por rubrica](/modulos/movimentacoes/#conta-elegivel-por-rubrica) e [Baixa em lote com lançamentos de projetos diferentes](/modulos/movimentacoes/#baixa-em-lote-projetos-diferentes).
+- **Movimentações** — onde os lançamentos vivem; o financeiro do projeto se apoia neles. Ver [Conta elegível por rubrica](/modulos/movimentacoes/#conta-elegivel-por-rubrica), [Baixa em lote com lançamentos de projetos diferentes](/modulos/movimentacoes/#baixa-em-lote-projetos-diferentes) e [Atribuir projeto a vários lançamentos de uma vez](/modulos/movimentacoes/#atribuir-projeto-em-lote).
+- **Configurações → Contas Bancárias** — para definir o [projeto e o centro de custo padrão de uma conta](/configuracoes/contas/#projeto-e-centro-de-custo-padrao-da-conta).
 - **Reembolsos** e **Pedidos de Compra e Pagamento** — os fluxos que o botão "Registrar despesa do projeto" aciona. Ver [Pagamento retido ou recusado por orçamento do projeto](/modulos/pedidos-pagamento/#retencao-por-orcamento-do-projeto).
 - **Relatórios** — agora com filtro por projeto.
 - **Painel** — onde a saúde de todos os projetos aparece de relance.

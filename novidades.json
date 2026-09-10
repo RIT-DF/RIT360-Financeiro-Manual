@@ -1,6 +1,27 @@
 {
   "versoes": [
     {
+      "versao": "1.106.0",
+      "data": "2026-09-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.105.0",
+      "data": "2026-09-09",
+      "destaque": false
+    },
+    {
+      "versao": "1.104.1",
+      "data": "2026-09-09",
+      "destaque": false
+    },
+    {
+      "versao": "1.104.0",
+      "data": "2026-09-09",
+      "destaque": true,
+      "resumo": "Agora dá para atribuir um projeto a vários lançamentos de uma vez, e cada conta pode já vir com projeto e centro de custo preenchidos."
+    },
+    {
       "versao": "1.103.1",
       "data": "2026-09-09",
       "destaque": false
