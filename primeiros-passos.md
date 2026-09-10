@@ -123,29 +123,42 @@ Além do tour de boas-vindas, algumas telas têm um **vídeo tutorial** próprio
 >
 > Os vídeos **não têm som** — a explicação vem em **legendas na própria imagem**. Se você abrir esperando ouvir alguém falando, é normal não sair áudio nenhum: basta ler a legenda. E como são feitos para uma tela maior, funcionam melhor **no computador**; no celular a legenda aparece pequena.
 
-Hoje existem vinte vídeos, cobrindo as tarefas mais comuns:
+Hoje existem trinta e três vídeos, cobrindo as tarefas mais comuns:
 
 | Vídeo | Onde assistir |
 |---|---|
 | Primeiro acesso: o que tem em cada lugar | [Painel](/modulos/painel/) |
+| Dados da organização e logo | [Configurações → Organização → Identidade da OSC](/configuracoes/organizacao/#identidade-da-osc) |
 | O que configurar antes de começar | [Configurações → Categorias](/configuracoes/categorias/) |
 | Conta que já vem com projeto e centro de custo | [Configurações → Contas Bancárias](/configuracoes/contas/) |
 | Convidar alguém e definir o que essa pessoa faz | [Configurações → Usuários](/configuracoes/usuarios/) e [Cargos e permissões](/configuracoes/cargos/) |
 | Quem aprova o quê na sua OSC | [Configurações → Fluxo de Aprovações](/configuracoes/aprovacoes/) |
+| A página pública de transparência | [Configurações → Página Pública](/configuracoes/pagina-publica/) |
+| Meus avisos: e-mail e Telegram | [Meu Perfil → Notificações](/configuracoes/perfil/#notificações) |
 | Registrar uma despesa com comprovante | [Movimentações → Registrar novo lançamento](/modulos/movimentacoes/#registrar-novo-lançamento) |
+| Registrar uma receita ou doação | [Movimentações → Registrar novo lançamento](/modulos/movimentacoes/#registrar-novo-lançamento) |
 | Parcelado ou recorrente: qual é qual | [Movimentações → Tipo de repetição](/modulos/movimentacoes/#tipo-de-repetição) |
 | Dinheiro que muda de conta não é despesa | [Movimentações → Conceitos essenciais](/modulos/movimentacoes/#conceitos-essenciais) |
 | Corrigir um lançamento já pago | [Movimentações → Corrigir os dados de um lançamento pago](/modulos/movimentacoes/#corrigir-os-dados-de-um-lançamento-pago) |
 | Corrigir, excluir ou estornar: qual usar | [Movimentações → Estornar um lançamento](/modulos/movimentacoes/#estornar-um-lançamento) |
 | Mudar vários lançamentos de uma vez | [Movimentações → Seleção em lote](/modulos/movimentacoes/#seleção-em-lote) |
 | Trazer lançamentos por planilha | [Movimentações → Importação por CSV](/modulos/movimentacoes/#importação-por-csv) |
+| Vendas da loja virtual entrando sozinhas | [Movimentações → Importação do WooCommerce](/modulos/movimentacoes/#importação-do-woocommerce) |
 | Conciliar o extrato do banco | [Movimentações → Conciliação bancária (extrato OFX)](/modulos/movimentacoes/#conciliacao-bancaria-ofx) |
 | Pedir uma compra ou um pagamento | [Pedidos de Compra e Pagamento](/modulos/pedidos-pagamento/) |
 | Pedir e aprovar um reembolso | [Reembolsos](/modulos/reembolsos/) |
 | Onde ficam os documentos gerados | [Documentos](/modulos/documentos/) |
+| Conferir se um documento é autêntico | [Relatórios → Como quem recebe confere a autenticidade](/modulos/relatorios/#conferir-autenticidade) |
 | Orçamento anual: prever e acompanhar | [Orçamento](/modulos/orcamento/) |
+| Criar um projeto do zero | [Projetos → A lista de projetos](/modulos/projetos/#a-lista-de-projetos) |
+| O ciclo de vida do projeto | [Projetos → O ciclo de vida](/modulos/projetos/#o-ciclo-de-vida) |
 | Criei um projeto: quem aprova? | [Projetos → A lista de projetos](/modulos/projetos/#a-lista-de-projetos) |
+| Restringir as categorias de um projeto | [Projetos → Escolher as categorias permitidas](/modulos/projetos/#escolher-as-categorias-permitidas) |
 | Vincular lançamentos a um projeto | [Projetos → A aba Financeiro](/modulos/projetos/#a-aba-financeiro) |
+| O orçamento do projeto | [Projetos → A aba Financeiro](/modulos/projetos/#a-aba-financeiro) |
+| Mudar um projeto que já está em andamento | [Projetos → Editar o projeto após a criação](/modulos/projetos/#editar-o-projeto-após-a-criação) |
+| Encerrar um projeto e o relatório de fechamento | [Projetos → A aba Encerramento](/modulos/projetos/#a-aba-encerramento) |
+| Lições aprendidas dos projetos | [Projetos → O acervo de Lições Aprendidas](/modulos/projetos/#o-acervo-de-lições-aprendidas) |
 | Gerar a prestação de contas | [Relatórios](/modulos/relatorios/) |
 
 > 💡 **Por que isso importa**
