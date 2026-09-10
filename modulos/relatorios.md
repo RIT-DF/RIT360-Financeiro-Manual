@@ -11,6 +11,10 @@ O módulo de **Relatórios** consolida o que entra e o que sai da sua OSC em **a
 >
 > O dado que entra no sistema todo dia (lançamentos, reembolsos, pedidos) **só vale se vira informação para decidir**. OSC sem relatórios financeiros bem feitos toma decisões no escuro: contratar ou não contratar, gastar ou poupar, captar ou esperar. Relatório bom não é firula visual — é base para a diretoria escolher caminho com segurança e para a OSC prestar contas com transparência para conselho, financiadores e assembleia.
 
+> 🎥 **Vídeo tutorial · Gerar a prestação de contas**
+>
+> Esta tela tem um vídeo curto (sem áudio, com legendas) mostrando como montar e baixar a prestação de contas — clique no ícone de vídeo, no canto direito do cabeçalho. Veja todos os vídeos disponíveis em [Vídeos tutoriais dentro do app](/primeiros-passos/#videos-tutoriais).
+
 ## Conceitos essenciais
 
 Antes de entrar nos botões, vale firmar dois conceitos que aparecem em toda a página.

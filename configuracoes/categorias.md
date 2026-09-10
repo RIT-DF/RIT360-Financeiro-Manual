@@ -16,6 +16,10 @@ A página **Categorias** organiza as categorias contábeis e os centros de custo
 >
 > Categoria é o que **faz o relatório financeiro fazer sentido**. Sem categoria, você tem 200 lançamentos no mês e nenhuma resposta sobre "para onde vai o dinheiro?". Com categoria ruim (inconsistente, duplicada, vaga), o relatório engana mais do que ajuda. Com categoria boa (enxuta, consistente, semântica), o relatório responde sozinho — você vê em 30 segundos quanto a OSC gastou com aluguel, quanto com material, quanto recebeu de doação, quanto de mensalidade. **Tempo investido em organizar categorias é o investimento de melhor retorno** que uma OSC pode fazer no RIT360 Financeiro.
 
+> 🎥 **Vídeo tutorial · O que configurar antes de começar**
+>
+> Esta tela tem um vídeo curto (sem áudio, com legendas) sobre por onde começar com categorias e centros de custo — clique no ícone de vídeo, no canto direito do cabeçalho. Veja todos os vídeos disponíveis em [Vídeos tutoriais dentro do app](/primeiros-passos/#videos-tutoriais).
+
 A página tem 3 abas: **Receitas**, **Despesas** e **Centros de custo**.
 
 ## Receitas

@@ -16,6 +16,10 @@ A página **Contas Bancárias** lista as contas financeiras da sua OSC e permite
 >
 > "Conta financeira" no RIT360 Financeiro não é só **conta bancária**. É qualquer lugar onde a OSC guarda dinheiro: a conta corrente do banco, a poupança, o caixa interno em dinheiro vivo, o cartão de crédito da OSC, a conta no Mercado Pago para recebimentos online, o saldo no PayPal. Cada um desses é uma "conta" diferente, e mantê-los separados no RIT360 Financeiro **faz a contabilidade bater com a realidade** — você sabe quanto tem em cada lugar, e o saldo total consolidado reflete a posição real da OSC.
 
+> 🎥 **Vídeo tutorial · Conta que já vem com projeto e centro de custo**
+>
+> Esta tela tem um vídeo curto (sem áudio, com legendas) mostrando como deixar a conta preencher sozinha o que se repete — clique no ícone de vídeo, no canto direito do cabeçalho. Veja todos os vídeos disponíveis em [Vídeos tutoriais dentro do app](/primeiros-passos/#videos-tutoriais).
+
 ## Tipos de conta suportados
 
 - **Corrente** — conta bancária de uso geral

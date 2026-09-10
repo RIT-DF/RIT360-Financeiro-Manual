@@ -115,6 +115,33 @@ Quer rever mais tarde? O tour está sempre disponível pelo item **Rever tutoria
 
 O tour funciona igual em celular e computador, adaptando os pontos destacados ao que aparece em cada tamanho de tela.
 
+## Vídeos tutoriais dentro do app {#videos-tutoriais}
+
+Além do tour de boas-vindas, algumas telas têm um **vídeo tutorial** próprio — curto, focado só naquela tela, e disponível sempre que você precisar, não só na primeira vez. Procure o ícone de vídeo (▶️) no **canto direito do cabeçalho**: se a tela tiver um vídeo, ele aparece ali, sempre como o último botão da fileira. A janela abre por cima da tela atual, e nada do que você já preencheu se perde ao abrir ou fechar.
+
+> ⚠️ **Atenção · Sem áudio, pensado para o computador**
+>
+> Os vídeos **não têm som** — a explicação vem em **legendas na própria imagem**. Se você abrir esperando ouvir alguém falando, é normal não sair áudio nenhum: basta ler a legenda. E como são feitos para uma tela maior, funcionam melhor **no computador**; no celular a legenda aparece pequena.
+
+Hoje existem dez vídeos, cobrindo as tarefas mais comuns:
+
+| Vídeo | Onde assistir |
+|---|---|
+| Primeiro acesso: o que tem em cada lugar | [Painel](/modulos/painel/) |
+| O que configurar antes de começar | [Configurações → Categorias](/configuracoes/categorias/) |
+| Conta que já vem com projeto e centro de custo | [Configurações → Contas Bancárias](/configuracoes/contas/) |
+| Convidar alguém e definir o que essa pessoa faz | [Configurações → Usuários](/configuracoes/usuarios/) e [Cargos e permissões](/configuracoes/cargos/) |
+| Registrar uma despesa com comprovante | [Movimentações → Registrar novo lançamento](/modulos/movimentacoes/#registrar-novo-lançamento) |
+| Conciliar o extrato do banco | [Movimentações → Conciliação bancária (extrato OFX)](/modulos/movimentacoes/#conciliacao-bancaria-ofx) |
+| Criei um projeto: quem aprova? | [Projetos → A lista de projetos](/modulos/projetos/#a-lista-de-projetos) |
+| Vincular lançamentos a um projeto | [Projetos → A aba Financeiro](/modulos/projetos/#a-aba-financeiro) |
+| Gerar a prestação de contas | [Relatórios](/modulos/relatorios/) |
+| Pedir e aprovar um reembolso | [Reembolsos](/modulos/reembolsos/) |
+
+> 💡 **Por que isso importa**
+>
+> Ler um manual funciona bem para entender o todo; às vezes o que você quer é só **ver alguém fazendo aquela tela específica**, na hora em que está diante dela. Os vídeos existem para esse momento — não substituem este manual, complementam.
+
 ## Navegação principal
 
 A barra de navegação no topo é o seu mapa:

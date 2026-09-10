@@ -16,6 +16,10 @@ A página **Cargos e permissões** vai além dos 7 cargos padrão da plataforma:
 >
 > Cada OSC se organiza de um jeito. Os 7 papéis padrão cobrem a maioria dos casos, mas às vezes você precisa de uma função sob medida — um "Secretário" que só vê relatórios, um "Tesoureiro júnior" que lança mas não exclui, um "Captador de recursos" com acesso a reembolsos. Em vez de forçar a pessoa num papel que dá acesso demais (ou de menos), você monta o cargo certo e atribui. Tudo é validado **no servidor** — a tela só reflete o que a pessoa realmente pode fazer.
 
+> 🎥 **Vídeo tutorial · Convidar alguém e definir o que essa pessoa faz**
+>
+> Esta tela tem o mesmo vídeo curto (sem áudio, com legendas) que aparece em [Usuários](/configuracoes/usuarios/) — clique no ícone de vídeo, no canto direito do cabeçalho. Veja todos os vídeos disponíveis em [Vídeos tutoriais dentro do app](/primeiros-passos/#videos-tutoriais).
+
 ## Conceitos
 
 > 📖 **Conceito · Cargo padrão × cargo personalizado**

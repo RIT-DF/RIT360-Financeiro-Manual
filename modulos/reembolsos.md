@@ -13,6 +13,10 @@ O módulo de **Reembolsos** é onde voluntários, dirigentes e colaboradores **p
 >
 > Reembolso parece uma operação simples — "fulano gastou, OSC paga de volta" — mas é o ponto onde **mais coisas dão errado em OSC sem controle**: gente que reembolsou e ninguém anotou, comprovante que sumiu, valor que ficou maior do que combinado, dirigente que aprovou para si mesmo sem registro. O módulo de Reembolsos resolve isso com um fluxo simples: **quem pediu, quem aprovou, quanto, com qual comprovante, e quando foi pago — tudo registrado, com auditoria**. Resultado: voluntário recebe rápido, a OSC tem transparência, a diretoria dorme em paz.
 
+> 🎥 **Vídeo tutorial · Pedir e aprovar um reembolso**
+>
+> Esta tela tem um vídeo curto (sem áudio, com legendas) mostrando o caminho de um reembolso, de ponta a ponta — clique no ícone de vídeo, no canto direito do cabeçalho. Veja todos os vídeos disponíveis em [Vídeos tutoriais dentro do app](/primeiros-passos/#videos-tutoriais).
+
 ## Conceitos essenciais
 
 > 📖 **Conceito · Reembolso ≠ Pedido de Compra e Pagamento**

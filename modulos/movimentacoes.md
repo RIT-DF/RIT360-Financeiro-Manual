@@ -346,6 +346,10 @@ Linha do tempo com todas as ações sobre o lançamento — quem criou, quem mar
 [![Formulário de novo lançamento](/assets/screenshots/manual-04-novo-lancamento.png)](/assets/screenshots/manual-04-novo-lancamento.png)
 *Formulário de novo lançamento*
 
+> 🎥 **Vídeo tutorial · Registrar uma despesa com comprovante**
+>
+> Esta tela tem um vídeo curto (sem áudio, com legendas) mostrando o caminho do valor ao anexo do comprovante — clique no ícone de vídeo, no canto direito do cabeçalho. Veja todos os vídeos disponíveis em [Vídeos tutoriais dentro do app](/primeiros-passos/#videos-tutoriais).
+
 Clique em **+ Novo lançamento** no topo da lista. O formulário abre em **página própria**, com um resumo e um checklist do lado direito que vão se preenchendo conforme você digita.
 
 **Campos obrigatórios:**
@@ -719,6 +723,10 @@ Enquanto há importação em andamento, a aba **se atualiza sozinha**; há tamb�
 ## Conciliação bancária (extrato OFX) {#conciliacao-bancaria-ofx}
 
 Se você baixa o **extrato do banco em formato OFX** (a maioria dos bancos oferece), pode conciliá-lo com seus lançamentos no RIT360 Financeiro — em vez de marcar conta por conta como paga.
+
+> 🎥 **Vídeo tutorial · Conciliar o extrato do banco**
+>
+> Esta tela tem um vídeo curto (sem áudio, com legendas) mostrando como conferir o extrato contra os lançamentos — clique no ícone de vídeo, no canto direito do cabeçalho. Veja todos os vídeos disponíveis em [Vídeos tutoriais dentro do app](/primeiros-passos/#videos-tutoriais).
 
 **Acesso:** tela de **Conciliação**, a partir das movimentações.
 

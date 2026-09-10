@@ -14,6 +14,10 @@ A **tela inicial** é a primeira coisa que você vê após o login, e responde t
 >
 > A maioria das ferramentas financeiras te despeja em uma lista enorme de lançamentos no login. A tela inicial inverte isso: **mostra primeiro o que importa para você decidir o próximo passo**, e separa três tipos de pergunta que normalmente ficam misturados — o que precisa de ação agora (Painel), se a organização está saudável (Saúde 360) e o que vem pela frente (Previsão). Tesoureiro vê quantos reembolsos esperam pagamento; presidente vê pedidos aguardando aprovação; voluntário vê seus próprios reembolsos pendentes. Resultado: você gasta menos tempo procurando informação, mais tempo decidindo.
 
+> 🎥 **Vídeo tutorial · Primeiro acesso: o que tem em cada lugar**
+>
+> Esta tela tem um vídeo curto (sem áudio, com legendas) explicando o que cada bloco mostra — clique no ícone de vídeo, no canto direito do cabeçalho. Veja todos os vídeos disponíveis em [Vídeos tutoriais dentro do app](/primeiros-passos/#videos-tutoriais).
+
 ## As três abas
 
 - **[Painel](#aba-painel)** — a aba padrão ao entrar. O que precisa da sua atenção hoje: saldo das contas, resumo do mês, pendências por papel e pontos de atenção recentes.

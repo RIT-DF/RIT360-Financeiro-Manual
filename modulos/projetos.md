@@ -113,6 +113,10 @@ A cada projeto o RIT360 Financeiro atribui um **indicador de saúde** — um sem
 [![Lista de projetos em desktop](/assets/screenshots/manual-projetos-01-lista.png)](/assets/screenshots/manual-projetos-01-lista.png)
 *Lista de projetos em desktop — cada linha mostra tipo, status, saúde e período*
 
+> 🎥 **Vídeo tutorial · Criei um projeto: quem aprova?**
+>
+> Esta tela tem um vídeo curto (sem áudio, com legendas) mostrando o caminho de um projeto até ficar aprovado — clique no ícone de vídeo, no canto direito do cabeçalho. Veja todos os vídeos disponíveis em [Vídeos tutoriais dentro do app](/primeiros-passos/#videos-tutoriais).
+
 A tela **Projetos** lista as iniciativas da OSC. No **computador** (telas a partir de 1024 px), a lista é uma **tabela** com as colunas **Nome**, **Tipo**, **Status**, **Saúde** (o semáforo + pontuação) e **Período**. No **celular**, a mesma informação vira **cards** verticais. Clique em qualquer projeto para abrir o detalhe.
 
 No topo você tem **busca por nome** e filtros por **Status**, **Tipo** e **Saúde** — úteis para, por exemplo, ver só os projetos em execução que estão em atenção.
@@ -360,6 +364,10 @@ Vale a mesma regra de sempre: **coordenação remove qualquer evidência; quem e
 
 [![Aba Financeiro](/assets/screenshots/manual-projetos-05-financeiro.png)](/assets/screenshots/manual-projetos-05-financeiro.png)
 *Financeiro do projeto — registrar despesa, pendentes de aprovação, orçamento e lançamentos vinculados*
+
+> 🎥 **Vídeo tutorial · Vincular lançamentos a um projeto**
+>
+> Esta tela tem um vídeo curto (sem áudio, com legendas) mostrando como ligar receitas e despesas ao projeto certo — clique no ícone de vídeo, no canto direito do cabeçalho. Veja todos os vídeos disponíveis em [Vídeos tutoriais dentro do app](/primeiros-passos/#videos-tutoriais).
 
 O Financeiro mostra o dinheiro do projeto sem tirar nada do caixa geral da OSC:
 

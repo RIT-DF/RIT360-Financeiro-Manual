@@ -16,6 +16,10 @@ A página **Usuários** é onde você gerencia quem tem acesso à sua OSC dentro
 >
 > A pessoa errada com permissão errada é o caminho mais curto para um problema sério em OSC. Acesso administrativo dado para alguém que não devia, papel de aprovador para quem não tem mandato, voluntário recém-saído que ainda tem acesso meses depois — todos os casos derivam de gestão de usuários frouxa. Esta página é o ponto onde você mantém **quem entra, quem sai e quem pode o quê**.
 
+> 🎥 **Vídeo tutorial · Convidar alguém e definir o que essa pessoa faz**
+>
+> Esta tela tem um vídeo curto (sem áudio, com legendas) sobre como adicionar pessoas e escolher o cargo de cada uma — clique no ícone de vídeo, no canto direito do cabeçalho. O mesmo vídeo também aparece em [Cargos e permissões](/configuracoes/cargos/). Veja todos os vídeos disponíveis em [Vídeos tutoriais dentro do app](/primeiros-passos/#videos-tutoriais).
+
 Listagem traz todos os membros da OSC com nome, e-mail, papel, status (ativo/pendente/inativo) e foto de perfil.
 
 ## Adicionar usuário
