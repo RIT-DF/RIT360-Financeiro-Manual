@@ -11,6 +11,13 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.115.0] — 2026-09-10
+
+### Adicionado
+
+- **Treze vídeos novos de ajuda entraram no sistema, e o botão de vídeo passou a existir em mais telas: criar e editar projeto, lições aprendidas, meu perfil, dados da organização e página pública.**
+- **No detalhe do projeto, os vídeos oferecidos mudam conforme a aba que você está vendo.**
+
 ## [1.114.0] — 2026-09-10
 
 <!-- destaque: Mudar as categorias permitidas de um projeto agora vale na hora, sem esperar aprovação. -->
