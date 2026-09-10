@@ -1,6 +1,22 @@
 {
   "versoes": [
     {
+      "versao": "1.112.0",
+      "data": "2026-09-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.111.1",
+      "data": "2026-09-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.111.0",
+      "data": "2026-09-10",
+      "destaque": true,
+      "resumo": "Os vídeos de ajuda dobraram: agora são vinte, e telas com mais de um vídeo deixam você escolher qual assistir."
+    },
+    {
       "versao": "1.110.1",
       "data": "2026-09-10",
       "destaque": false

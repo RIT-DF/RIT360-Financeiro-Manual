@@ -11,6 +11,30 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.112.0] — 2026-09-10
+
+### Corrigido
+
+- **Documento que ficava travado em "em preparo" para sempre agora é liberado sozinho.** Passada meia hora sem terminar, ele aparece como falho e a pessoa pode pedir o documento de novo — pelo mesmo caminho que os documentos falhos já oferecem. O motivo registrado diz que o preparo não terminou a tempo, diferente de uma falha de conteúdo.
+
+## [1.111.1] — 2026-09-10
+
+### Corrigido
+
+- **Os avisos de orçamento passaram a ficar registrados junto da linha do orçamento que os originou** — antes, o registro apontava para um identificador que não existia.
+- **A duração mostrada em cada vídeo de ajuda passou a ser a real**, medida no próprio arquivo — dez deles traziam uma estimativa.
+
+## [1.111.0] — 2026-09-10
+
+<!-- destaque: Os vídeos de ajuda dobraram: agora são vinte, e telas com mais de um vídeo deixam você escolher qual assistir. -->
+
+### Adicionado
+
+- **Os vídeos de ajuda passaram de dez para vinte.** Ganharam botão as telas de: lista de Movimentações, Importar lançamentos, detalhe do lançamento, Fluxo de Aprovações, pedidos de compra e pagamento, Orçamento e Documentos.
+- **Cada vídeo agora mostra quanto tempo dura, ao lado do título.**
+- **Quando uma tela tem mais de um vídeo, o botão abre uma lista para escolher** — com título, duração e uma frase sobre cada um. Dá para voltar à lista sem fechar a janela, e a dica do mouse avisa quantos vídeos existem.
+- Cada tela continua com um único botão de vídeo, no canto direito do cabeçalho.
+
 ## [1.110.1] — 2026-09-10
 
 ### Corrigido
