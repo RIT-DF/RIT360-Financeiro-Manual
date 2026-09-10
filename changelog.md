@@ -11,6 +11,26 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.114.0] — 2026-09-10
+
+<!-- destaque: Mudar as categorias permitidas de um projeto agora vale na hora, sem esperar aprovação. -->
+
+### Modificado
+
+- **Mudar as categorias permitidas de um projeto agora vale na hora — sem esperar aprovação.** Tipo, datas e número de participantes continuam passando por aprovação, e a mensagem de salvar diz claramente o que já valeu e o que foi enviado.
+- Propostas antigas que só mudavam categorias aparecem como desnecessárias, com um botão para descartar.
+
+## [1.113.0] — 2026-09-10
+
+### Adicionado
+
+- **A mensagem de categoria não permitida agora leva direto para onde a lista de categorias do projeto é ajustada** — e, para quem não pode ajustá-la, diz a quem pedir.
+- Editar a identidade do projeto passou a ser possível de qualquer aba.
+
+### Modificado
+
+- A lista de categorias permitidas agora mostra sempre quantas estão marcadas, avisa quando você deixa vazio (todas passam a ser aceitas) e não deixa mais você achar que limpou tudo tendo limpado só parte.
+
 ## [1.112.1] — 2026-09-10
 
 ### Modificado

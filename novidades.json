@@ -1,6 +1,17 @@
 {
   "versoes": [
     {
+      "versao": "1.114.0",
+      "data": "2026-09-10",
+      "destaque": true,
+      "resumo": "Mudar as categorias permitidas de um projeto agora vale na hora, sem esperar aprovação."
+    },
+    {
+      "versao": "1.113.0",
+      "data": "2026-09-10",
+      "destaque": false
+    },
+    {
       "versao": "1.112.1",
       "data": "2026-09-10",
       "destaque": false
