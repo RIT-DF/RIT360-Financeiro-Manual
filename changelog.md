@@ -11,6 +11,27 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.110.1] — 2026-09-10
+
+### Corrigido
+
+- **O botão de vídeo passou a ficar sempre no mesmo lugar: o último item à direita do cabeçalho, em todas as telas, inclusive no celular.** Antes ele caía em posições diferentes conforme a quantidade de botões de cada tela — agora fica sempre à mesma distância da borda. Ficou também um pouco maior e ganhou um respiro em relação ao botão vizinho, para se diferenciar das ações da tela.
+
+### Modificado
+
+- **A ação de desmarcar itens selecionados passou a se chamar "Desmarcar todas" em todo o sistema** — antes tinha três nomes diferentes em telas diferentes.
+
+## [1.110.0] — 2026-09-10
+
+<!-- destaque: As telas principais agora têm um botão de vídeo no cabeçalho: um tutorial curto de menos de um minuto, sem sair de onde você está. -->
+
+### Adicionado
+
+- **As telas principais ganharam um botão de vídeo no cabeçalho** — Painel, Contas bancárias, Categorias e centros de custo, Usuários, Cargos e permissões, Novo lançamento, Conciliação por extrato, Projetos, o detalhe do projeto (aba Financeiro), Relatórios e Reembolsos. Clicar abre um tutorial curto numa janela sobre a tela atual, sem perder o que já estava preenchido.
+- **Os vídeos não têm áudio** — a explicação vem em legendas na própria imagem, e a janela avisa isso antes de tocar.
+- O vídeo só é baixado quando você manda tocar; antes disso aparece a imagem de capa.
+- Se o vídeo não carregar, a janela explica o que houve e oferece "Tentar de novo", em vez de mostrar uma tela preta.
+
 ## [1.109.1] — 2026-09-10
 
 ### Corrigido

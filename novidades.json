@@ -1,6 +1,17 @@
 {
   "versoes": [
     {
+      "versao": "1.110.1",
+      "data": "2026-09-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.110.0",
+      "data": "2026-09-10",
+      "destaque": true,
+      "resumo": "As telas principais agora têm um botão de vídeo no cabeçalho: um tutorial curto de menos de um minuto, sem sair de onde você está."
+    },
+    {
       "versao": "1.109.1",
       "data": "2026-09-10",
       "destaque": false
