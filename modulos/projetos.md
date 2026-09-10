@@ -216,24 +216,33 @@ Arquivar e desarquivar são ações de quem **administra os projetos da organiza
 
 O **Resumo** é a visão de uma página: a **identidade** do projeto (tipo, status, datas, coordenadores), o cartão de **saúde** com os três sinais (Prazo, Orçamento, Riscos), os **próximos marcos** e o **último status update** publicado pela coordenação. É a tela para olhar de manhã e saber, em segundos, como o projeto está.
 
-No topo do detalhe ficam as **ações de ciclo de vida** disponíveis para o status atual (ex.: *Solicitar aprovação*, *Pausar*, *Solicitar encerramento*, *Cancelar*).
+No topo do detalhe ficam as **ações de ciclo de vida** disponíveis para o status atual (ex.: *Solicitar aprovação*, *Pausar*, *Solicitar encerramento*, *Cancelar projeto*), e, ao lado delas, o botão **Editar** — ver "Editar o projeto após a criação", abaixo.
 
 ### Editar o projeto após a criação
 
 [![Editar a identidade do projeto](/assets/screenshots/manual-projetos-editar.png)](/assets/screenshots/manual-projetos-editar.png)
 *Edição da identidade: nome, descrição, tipo, datas e categorias permitidas*
 
-Projetos mudam durante a execução — troca a coordenação, a data escorrega, o escopo se ajusta. Por isso os dados de identidade **podem ser editados depois de criados**, pelo botão **Editar** no cartão **Identidade** da aba Resumo. Dá para ajustar **nome, descrição, tipo, datas de início e fim e as categorias permitidas** (e, em projetos do tipo Evento, o número de participantes esperados).
+Projetos mudam durante a execução — troca a coordenação, a data escorrega, o escopo se ajusta. Por isso os dados de identidade **podem ser editados depois de criados**, pelo botão **Editar**, no **cabeçalho do projeto** — ao lado das ações de ciclo de vida (ver "A aba Resumo", acima), alcançável **de qualquer aba**, não só da aba Resumo. No celular ele entra no mesmo menu **Mais ações** das transições de status. Dá para ajustar **nome, descrição, tipo, datas de início e fim e as categorias permitidas** (e, em projetos do tipo Evento, o número de participantes esperados).
 
 ### Escolher as categorias permitidas
+{: #escolher-as-categorias-permitidas }
 
-Tanto na criação quanto na edição, a lista de **categorias permitidas** do projeto vem com uma **busca por nome** e dois botões: **Marcar todas** e **Desmarcar todas**. Com uma busca ativa, os próprios botões mudam de nome — passam a ser **Marcar todas as encontradas** e **Desmarcar as encontradas** — porque aí eles valem só sobre o que a busca está mostrando, e não sobre a lista inteira. É o próprio botão dizendo o que vai fazer antes de você clicar.
+> 📖 **Conceito · Categorias permitidas são uma restrição, não uma lista de inclusão**
+>
+> É o ponto que mais confunde: marcar categorias aqui **não adiciona** opções ao projeto — **restringe** quais categorias de despesa ele aceita. **Lista vazia significa "todas as categorias são aceitas"**, inclusive as que a OSC criar depois de hoje. Marcar uma ou mais categorias tira o projeto desse modo aberto e passa a aceitar só o que estiver marcado — nem as futuras entram automaticamente.
 
-<!-- CAPTURA PENDENTE: seção de categorias permitidas (criação ou edição do projeto), com a busca ativa filtrando parte das categorias e os botões visíveis já com o texto de busca ativa ("Marcar todas as encontradas" / "Desmarcar as encontradas"). Rota /projetos/novo ou /projetos/{id} (editar identidade), viewport desktop e mobile. -->
+Tanto na criação quanto na edição, a lista de **categorias permitidas** do projeto vem com uma **busca por nome** e dois botões: **Marcar todas** e **Desmarcar todas**. Com uma busca ativa, os próprios botões mudam de nome — passam a ser **Marcar todas as encontradas** e **Desmarcar as N encontradas** — porque aí eles valem só sobre o que a busca está mostrando, e não sobre a lista inteira. É o próprio botão dizendo o que vai fazer antes de você clicar. Abaixo da lista, um texto conta sempre quantas categorias estão marcadas — ou avisa que nenhuma está, e que por isso todas são aceitas.
+
+<!-- CAPTURA PENDENTE: seção de categorias permitidas (criação ou edição do projeto), com a busca ativa filtrando parte das categorias e os botões visíveis já com o texto de busca ativa ("Marcar todas as encontradas" / "Desmarcar as N encontradas"), mais o aviso de categorias marcadas fora da busca e o botão extra "Desmarcar todas (N)". Rota /projetos/novo ou /projetos/{id} (editar identidade), viewport desktop e mobile. -->
+
+> ⚠️ **Atenção · Com a busca ativa, "Desmarcar" só limpa o que está na tela**
+>
+> Se você digitou algo na busca, o botão vira **Desmarcar as N encontradas** — e ele desmarca só as categorias que a busca está mostrando naquele momento, não a lista inteira. Já aconteceu de alguém achar que tinha limpado tudo, sem perceber que categorias marcadas fora da busca continuavam marcadas — e o projeto continuou restrito a elas. Para desmarcar tudo de verdade: **limpe o texto da busca antes** de clicar em Desmarcar todas, ou use o texto de contagem abaixo da lista para confirmar que chegou a zero. Se sobrar algo marcado fora da busca atual, a tela mostra um aviso e um botão extra — **Desmarcar todas (N)** — que limpa a seleção inteira de uma vez, independente da busca.
 
 > ✓ **Dica · Projeto que aceita quase tudo**
 >
-> Um projeto com orçamento amplo, que aceita quase todas as categorias da OSC, não precisa mais ser marcado categoria por categoria. Filtre pelas poucas que **não** devem entrar, marque todas as outras e depois desmarque as exceções — ou o caminho inverso, filtrando pelo que deve entrar.
+> Um projeto com orçamento amplo, que aceita quase todas as categorias da OSC, não precisa mais ser marcado categoria por categoria. Filtre pelas poucas que **não** devem entrar, marque todas as outras e depois desmarque as exceções — ou o caminho inverso, filtrando pelo que deve entrar. Lembrando que deixar a lista **vazia** é a forma mais simples de aceitar tudo, inclusive categorias que a OSC ainda vai criar.
 
 > ⚠️ **Atenção · Se uma categoria não puder ser aceita**
 >
@@ -256,8 +265,12 @@ Um projeto com lista de categorias permitidas (acima) só aceita lançamento cuj
 
 **Mudanças que exigem reaprovação.** A regra depende do estado do projeto:
 
-- **Projeto ainda não aprovado** — você edita direto.
-- **Projeto com abertura já aprovada** — mudanças de **nome e descrição** valem na hora; já as que afetam **prazo ou escopo** (datas, categorias permitidas, tipo, número de participantes esperados) entram como uma **alteração proposta, aguardando reaprovação**. O projeto **continua rodando com os valores atuais** e um aviso mostra a mudança proposta (de → para). Quem aprova pode **aprovar** ou **rejeitar**; quem propôs pode **cancelar** a proposta. As pessoas certas são avisadas pelos canais que escolherem nas preferências de notificação.
+- **Projeto ainda não aprovado** — você edita direto, qualquer campo.
+- **Projeto com abertura já aprovada** — mudanças de **nome, descrição e categorias permitidas valem na hora**, sem esperar aprovação de ninguém; já as que afetam **prazo ou escopo** (datas, tipo, número de participantes esperados) entram como uma **alteração proposta, aguardando reaprovação**. O projeto **continua rodando com os valores atuais** (do prazo/escopo) e um aviso mostra a mudança proposta (de → para). Quem aprova pode **aprovar** ou **rejeitar**; quem propôs pode **cancelar** a proposta. As pessoas certas são avisadas pelos canais que escolherem nas preferências de notificação. Ao salvar, a mensagem de confirmação diz separadamente o que **já valeu** e o que **foi enviado para aprovação** — nunca dá a entender que tudo foi aplicado de uma vez.
+
+> 📖 **Conceito · Categorias permitidas saíram da reaprovação**
+>
+> Até pouco tempo, mudar as categorias permitidas de um projeto já aprovado também gerava uma proposta pendente, junto com tipo, datas e participantes. Isso mudou: hoje a mudança de categorias **vale na hora**, porque restringir ou liberar categorias não altera o prazo nem o escopo aprovado do projeto — é ajuste de conformidade contábil, não decisão que precise da segunda pessoa. Se o projeto tinha uma proposta pendente que só pedia mudança de categorias, ela passou a aparecer como **desnecessária**, com um botão para descartar.
 
 > ⚠️ **Atenção · Toda mudança de identidade pede um motivo, de pelo menos 10 caracteres**
 >

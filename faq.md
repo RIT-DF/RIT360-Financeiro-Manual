@@ -303,7 +303,7 @@ Na aba **Encerramento** do projeto, um assistente de avaliação conduz por perg
 
 ### Meu programa não tem data para acabar. Que data eu coloco?
 
-Todo projeto no RIT360 Financeiro precisa de uma data de início e de fim — inclusive o tipo **Programa**, pensado justamente para atividade contínua (um atendimento, uma cesta básica mensal, uma linha de serviço). Isso não significa que o programa "acaba": coloque uma **data de término distante**, compatível com o horizonte real dele (por exemplo, o fim do exercício seguinte). É essa data que baliza o orçamento e a prestação de contas do período. Quando ela chegar e o programa continuar, **edite as datas** do projeto (aba Resumo → Editar) e siga — o histórico e as tarefas não se perdem.
+Todo projeto no RIT360 Financeiro precisa de uma data de início e de fim — inclusive o tipo **Programa**, pensado justamente para atividade contínua (um atendimento, uma cesta básica mensal, uma linha de serviço). Isso não significa que o programa "acaba": coloque uma **data de término distante**, compatível com o horizonte real dele (por exemplo, o fim do exercício seguinte). É essa data que baliza o orçamento e a prestação de contas do período. Quando ela chegar e o programa continuar, **edite as datas** do projeto (botão **Editar**, no cabeçalho do projeto) e siga — o histórico e as tarefas não se perdem.
 
 ### Qual a diferença entre meu papel na OSC e meu papel no projeto?
 

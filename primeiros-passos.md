@@ -123,7 +123,7 @@ Além do tour de boas-vindas, algumas telas têm um **vídeo tutorial** próprio
 >
 > Os vídeos **não têm som** — a explicação vem em **legendas na própria imagem**. Se você abrir esperando ouvir alguém falando, é normal não sair áudio nenhum: basta ler a legenda. E como são feitos para uma tela maior, funcionam melhor **no computador**; no celular a legenda aparece pequena.
 
-Hoje existem dez vídeos, cobrindo as tarefas mais comuns:
+Hoje existem vinte vídeos, cobrindo as tarefas mais comuns:
 
 | Vídeo | Onde assistir |
 |---|---|
@@ -131,12 +131,22 @@ Hoje existem dez vídeos, cobrindo as tarefas mais comuns:
 | O que configurar antes de começar | [Configurações → Categorias](/configuracoes/categorias/) |
 | Conta que já vem com projeto e centro de custo | [Configurações → Contas Bancárias](/configuracoes/contas/) |
 | Convidar alguém e definir o que essa pessoa faz | [Configurações → Usuários](/configuracoes/usuarios/) e [Cargos e permissões](/configuracoes/cargos/) |
+| Quem aprova o quê na sua OSC | [Configurações → Fluxo de Aprovações](/configuracoes/aprovacoes/) |
 | Registrar uma despesa com comprovante | [Movimentações → Registrar novo lançamento](/modulos/movimentacoes/#registrar-novo-lançamento) |
+| Parcelado ou recorrente: qual é qual | [Movimentações → Tipo de repetição](/modulos/movimentacoes/#tipo-de-repetição) |
+| Dinheiro que muda de conta não é despesa | [Movimentações → Conceitos essenciais](/modulos/movimentacoes/#conceitos-essenciais) |
+| Corrigir um lançamento já pago | [Movimentações → Corrigir os dados de um lançamento pago](/modulos/movimentacoes/#corrigir-os-dados-de-um-lançamento-pago) |
+| Corrigir, excluir ou estornar: qual usar | [Movimentações → Estornar um lançamento](/modulos/movimentacoes/#estornar-um-lançamento) |
+| Mudar vários lançamentos de uma vez | [Movimentações → Seleção em lote](/modulos/movimentacoes/#seleção-em-lote) |
+| Trazer lançamentos por planilha | [Movimentações → Importação por CSV](/modulos/movimentacoes/#importação-por-csv) |
 | Conciliar o extrato do banco | [Movimentações → Conciliação bancária (extrato OFX)](/modulos/movimentacoes/#conciliacao-bancaria-ofx) |
+| Pedir uma compra ou um pagamento | [Pedidos de Compra e Pagamento](/modulos/pedidos-pagamento/) |
+| Pedir e aprovar um reembolso | [Reembolsos](/modulos/reembolsos/) |
+| Onde ficam os documentos gerados | [Documentos](/modulos/documentos/) |
+| Orçamento anual: prever e acompanhar | [Orçamento](/modulos/orcamento/) |
 | Criei um projeto: quem aprova? | [Projetos → A lista de projetos](/modulos/projetos/#a-lista-de-projetos) |
 | Vincular lançamentos a um projeto | [Projetos → A aba Financeiro](/modulos/projetos/#a-aba-financeiro) |
 | Gerar a prestação de contas | [Relatórios](/modulos/relatorios/) |
-| Pedir e aprovar um reembolso | [Reembolsos](/modulos/reembolsos/) |
 
 > 💡 **Por que isso importa**
 >
