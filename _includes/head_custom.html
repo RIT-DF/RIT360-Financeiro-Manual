@@ -124,3 +124,37 @@
     });
   })();
 </script>
+
+<!-- issue #56: ancora rola para o lugar errado porque o navegador pula para o
+     #hash antes das imagens (capturas de tela, sem width/height) carregarem;
+     quando elas chegam, empurram o conteudo e o titulo da ancora sai da tela.
+     Reposiciona no evento load da window, que so dispara depois das imagens.
+     IMPORTANTE: mesma regra do bloco acima — sem comentarios de linha `//`,
+     apenas `/* */`, por causa da minificacao do HTML. -->
+<script>
+  /* Sem comentarios de linha // aqui dentro: a minificacao junta tudo numa linha. */
+  (function () {
+    var pageLoaded = false;
+    var pendingHash = null;
+
+    function scrollToHash(hash) {
+      if (!hash || hash.length < 2) return;
+      var id = hash.charAt(0) === '#' ? hash.slice(1) : hash;
+      try { id = decodeURIComponent(id); } catch (err) { }
+      var el = document.getElementById(id);
+      if (el && el.scrollIntoView) el.scrollIntoView();
+    }
+
+    window.addEventListener('load', function () {
+      pageLoaded = true;
+      scrollToHash(pendingHash || location.hash);
+    });
+
+    document.addEventListener('click', function (e) {
+      if (pageLoaded) return; /* imagens ja carregaram: o scroll padrao do navegador ja acerta */
+      var a = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;
+      if (!a) return;
+      pendingHash = a.getAttribute('href') || '';
+    });
+  })();
+</script>

@@ -21,8 +21,8 @@ A **tela inicial** é a primeira coisa que você vê após o login, e responde t
 ## As três abas
 
 - **[Painel](#aba-painel)** — a aba padrão ao entrar. O que precisa da sua atenção hoje: saldo das contas, resumo do mês, pendências por papel e pontos de atenção recentes.
-- **[Saúde 360](#saude-360)** — quatro respostas sobre a saúde financeira da OSC: quanto está livre para usar, quanto já está comprometido, por quanto tempo o caixa aguenta, e quais projetos estão fora do ritmo.
-- **[Previsão](#previsao)** — a projeção de saldo dos próximos meses, com os mesmos filtros de Relatórios (tipo, projeto, conta, categoria, centro de custo).
+- **[Saúde 360](#saúde-360)** — quatro respostas sobre a saúde financeira da OSC: quanto está livre para usar, quanto já está comprometido, por quanto tempo o caixa aguenta, e quais projetos estão fora do ritmo.
+- **[Previsão](#previsão)** — a projeção de saldo dos próximos meses, com os mesmos filtros de Relatórios (tipo, projeto, conta, categoria, centro de custo).
 
 Quando existe algum aviso **grave** em aberto, um selo no topo da tela mostra quantos são, em qualquer uma das três abas. Clicar nesse selo leva direto ao bloco de Pontos de atenção, na aba Painel.
 
@@ -136,9 +136,9 @@ Em ambos os casos, o aviso informa **em que mês** o caixa fica negativo, **de q
 
 > ⚠️ **Atenção · Este aviso só aparece no Painel**
 >
-> O déficit projetado **só aparece aqui**, no bloco de Pontos de atenção do Painel — não é repetido em nenhum outro lugar. Para a projeção completa mês a mês, com todos os filtros, use a [aba Previsão](#previsao), logo ao lado do Painel.
+> O déficit projetado **só aparece aqui**, no bloco de Pontos de atenção do Painel — não é repetido em nenhum outro lugar. Para a projeção completa mês a mês, com todos os filtros, use a [aba Previsão](#previsão), logo ao lado do Painel.
 
-A regra vem **ligada por padrão**, com antecedência de **6 meses** (configurável para 3, 6 ou 12), em **Configurações → Relatórios → Regras de pontos de atenção** — junto com as demais regras (ver [Configuração das regras de atenção](/modulos/relatorios/#configuracao-das-regras-de-atencao)).
+A regra vem **ligada por padrão**, com antecedência de **6 meses** (configurável para 3, 6 ou 12), em **Configurações → Relatórios → Regras de pontos de atenção** — junto com as demais regras (ver [Configuração das regras de atenção](/modulos/relatorios/#configuração-das-regras-de-atenção)).
 
 No rodapé do bloco de Pontos de atenção, um link indica onde ajustar as regras — visível só para quem tem permissão de mexer nelas.
 
@@ -165,7 +165,7 @@ Soma o que a organização **já deve**: pedidos de compra e pagamento aprovados
 
 ### Por quanto tempo o caixa aguenta
 
-Projeta quantos meses faltam até o saldo projetado ficar negativo, considerando o que já está agendado e, quando necessário, a média dos meses anteriores — o mesmo cálculo por trás do [aviso de déficit projetado](#novo-aviso-deficit-projetado-no-fluxo-de-caixa) do Painel, aqui apresentado como resposta direta em vez de alerta.
+Projeta quantos meses faltam até o saldo projetado ficar negativo, considerando o que já está agendado e, quando necessário, a média dos meses anteriores — o mesmo cálculo por trás do [aviso de déficit projetado](#novo-aviso--déficit-projetado-no-fluxo-de-caixa) do Painel, aqui apresentado como resposta direta em vez de alerta.
 
 ### Se algum projeto está fora do ritmo
 

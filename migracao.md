@@ -26,7 +26,7 @@ Você tem um Excel ou Google Sheets com o histórico de entradas e saídas. Esse
 
 ### Vindo de outro sistema (ERP, app financeiro, contabilidade)
 
-Quase todo sistema exporta os lançamentos para **CSV ou Excel**. Exporte de lá, ajuste as colunas para o formato do RIT360 Financeiro (a tabela está em [Importar o histórico](#4-importe-o-historico-csv)) e siga a espinha como quem vem de planilha.
+Quase todo sistema exporta os lançamentos para **CSV ou Excel**. Exporte de lá, ajuste as colunas para o formato do RIT360 Financeiro (a tabela está em [Importar o histórico](#4-importe-o-histórico-csv)) e siga a espinha como quem vem de planilha.
 
 > ⚠️ **Atenção · Não cancele o sistema antigo cedo demais**
 >

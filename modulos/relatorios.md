@@ -81,8 +81,8 @@ Receitas e despesas aparecem **lado a lado**, não mais em abas separadas — d�
 
 Duas seções que antes eram abas desta tela **mudaram de casa**, e continuam existindo — só que na tela inicial, não aqui:
 
-- **Pontos de atenção** — as anomalias detectadas nos seus lançamentos (despesa concentrada, categoria com pico, fornecedor novo, categoria que voltou, queda de receita) agora moram só no **[Painel](/modulos/painel/#bloco-4-pontos-de-atencao)**, considerando os últimos 30 dias. Os limites de cada regra continuam configuráveis em **Configurações → Relatórios**, no mesmo lugar de sempre.
-- **Previsão** — a projeção de saldo mês a mês virou a terceira aba da tela inicial, ao lado do Painel e da Saúde 360: veja **[Painel → Previsão](/modulos/painel/#previsao)**. Os mesmos filtros (Tipo, Projeto, Conta, Categoria, Centro de custo) e o mesmo horizonte de 3, 6 ou 12 meses continuam lá.
+- **Pontos de atenção** — as anomalias detectadas nos seus lançamentos (despesa concentrada, categoria com pico, fornecedor novo, categoria que voltou, queda de receita) agora moram só no **[Painel](/modulos/painel/#bloco-4--pontos-de-atenção)**, considerando os últimos 30 dias. Os limites de cada regra continuam configuráveis em **Configurações → Relatórios**, no mesmo lugar de sempre.
+- **Previsão** — a projeção de saldo mês a mês virou a terceira aba da tela inicial, ao lado do Painel e da Saúde 360: veja **[Painel → Previsão](/modulos/painel/#previsão)**. Os mesmos filtros (Tipo, Projeto, Conta, Categoria, Centro de custo) e o mesmo horizonte de 3, 6 ou 12 meses continuam lá.
 
 > ⚠️ **Atenção · Se você procurar aqui, não vai achar**
 >
@@ -237,7 +237,7 @@ Ao escolher um prazo, **antes de salvar** a tela informa quantos documentos **j�
 [![Configuração de regras](/assets/screenshots/manual-config-relatorios-regras.png)](/assets/screenshots/manual-config-relatorios-regras.png)
 *Configurações → Relatórios → Regras de pontos de atenção — cards editáveis, um por regra*
 
-Acessível em **Configurações → Relatórios → Regras de pontos de atenção** (só Presidente). Um card por regra — as cinco regras que aparecem no bloco de [Pontos de atenção do Painel](/modulos/painel/#bloco-4-pontos-de-atencao) **e** a regra de **Déficit projetado no fluxo de caixa**, exclusiva de lá. Cada card tem:
+Acessível em **Configurações → Relatórios → Regras de pontos de atenção** (só Presidente). Um card por regra — as cinco regras que aparecem no bloco de [Pontos de atenção do Painel](/modulos/painel/#bloco-4--pontos-de-atenção) **e** a regra de **Déficit projetado no fluxo de caixa**, exclusiva de lá. Cada card tem:
 
 - **Toggle on/off** — ligar ou desligar a regra
 - **Limite (threshold)** em campo numérico editável com unidade clara (%, ×, R$ ou meses)
@@ -273,7 +273,7 @@ Três opções na hora de revisar:
 
 > ✓ **Dica · Previsão antes de decisão grande**
 >
-> Antes de aprovar contratação, compra grande ou novo projeto, abra a [aba Previsão](/modulos/painel/#previsao) da tela inicial, com horizonte de 6 ou 12 meses. Veja se o gasto extra mantém o saldo positivo. Se o gráfico mostra vermelho aparecendo em algum mês, a decisão precisa de mais conversa antes — não menos.
+> Antes de aprovar contratação, compra grande ou novo projeto, abra a [aba Previsão](/modulos/painel/#previsão) da tela inicial, com horizonte de 6 ou 12 meses. Veja se o gasto extra mantém o saldo positivo. Se o gráfico mostra vermelho aparecendo em algum mês, a decisão precisa de mais conversa antes — não menos.
 
 > ⚠️ **Atenção · Comparativo só faz sentido se o período faz sentido**
 >
@@ -284,11 +284,11 @@ Três opções na hora de revisar:
 - **Regime de caixa** — modelo em que o que vale é a data em que o dinheiro entrou/saiu da conta, não a data do contrato ou da fatura.
 - **Período anterior equivalente** — janela imediatamente anterior, com a mesma duração do período carregado.
 - **Comparativo** — toggle que adiciona variação versus período anterior em cada bloco.
-- **Anomalia** — evento detectado por uma das 5 regras determinísticas de [Pontos de atenção, no Painel](/modulos/painel/#bloco-4-pontos-de-atencao); ranqueado por severidade.
+- **Anomalia** — evento detectado por uma das 5 regras determinísticas de [Pontos de atenção, no Painel](/modulos/painel/#bloco-4--pontos-de-atenção); ranqueado por severidade.
 - **Déficit projetado no fluxo de caixa** — regra exclusiva do Painel que avisa quando o caixa tende a ficar negativo em um mês futuro, considerando agendados e, quando necessário, a média histórica.
 - **Severidade** — leve / moderada / alta, derivada do quanto o evento ultrapassa o limite da regra.
 - **Calibração** — análise estatística que sugere limites de regras personalizados ao padrão da sua OSC.
-- **Forecast (projeção)** — estimativa do comportamento financeiro futuro, combinando agendados (já cadastrados) com estimados (média histórica); veja [Painel → Previsão](/modulos/painel/#previsao).
+- **Forecast (projeção)** — estimativa do comportamento financeiro futuro, combinando agendados (já cadastrados) com estimados (média histórica); veja [Painel → Previsão](/modulos/painel/#previsão).
 - **Prestação de contas (documento)** — o relatório contábil completo de um período, gerado em PDF ou planilha em Movimentações e listado na área de [Documentos](/modulos/documentos/).
 - **Selo de autenticidade** — o código de verificação e o QR Code impressos no PDF da prestação de contas, que permitem a qualquer pessoa conferir a emissão numa página pública, sem login.
 - **Código de verificação** — a sequência impressa no PDF que se digita em [financeiro.rit360.org.br/verificar](https://financeiro.rit360.org.br/verificar) para conferir a autenticidade — ver [Como quem recebe confere a autenticidade](#conferir-autenticidade).

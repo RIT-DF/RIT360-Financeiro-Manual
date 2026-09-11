@@ -66,7 +66,7 @@ A organização que utiliza o RIT360 Financeiro se compromete a:
 - Designar ao menos um administrador responsável pela gestão da conta.
 - Garantir que todos os usuários cadastrados na plataforma tenham autorização para acessá-la em nome da OSC.
 - Utilizar a plataforma exclusivamente para fins lícitos e compatíveis com sua natureza de organização da sociedade civil.
-- Informar seus colaboradores, fornecedores e prestadores de serviço cadastrados sobre o tratamento de dados realizado pela plataforma, conforme previsto na [Política de Privacidade](privacidade).
+- Informar seus colaboradores, fornecedores e prestadores de serviço cadastrados sobre o tratamento de dados realizado pela plataforma, conforme previsto na [Política de Privacidade](/privacidade/).
 - Manter a confidencialidade das credenciais de acesso e responder por acessos não autorizados decorrentes de negligência na sua guarda.
 
 ---
@@ -112,7 +112,7 @@ A RIT não se responsabiliza por:
 
 ## 9. Dados e privacidade
 
-O tratamento de dados pessoais realizado pela plataforma é regido pela [Política de Privacidade](privacidade), que é parte integrante destes Termos. Em caso de conflito entre estes Termos e a Política de Privacidade em matéria de dados pessoais, prevalece a Política de Privacidade.
+O tratamento de dados pessoais realizado pela plataforma é regido pela [Política de Privacidade](/privacidade/), que é parte integrante destes Termos. Em caso de conflito entre estes Termos e a Política de Privacidade em matéria de dados pessoais, prevalece a Política de Privacidade.
 
 Nesse tratamento, cada parte responde pelo que decide. A organização é a **controladora** dos dados pessoais que cadastra e gerencia na plataforma — é ela quem decide o que registrar e para quê — e, sobre esses mesmos dados, a RIT atua como **operadora**, tratando-os por conta da organização e conforme as instruções dela, sem finalidade própria. Já os dados de conta e de funcionamento da plataforma — login e autenticação, registro do aceite destes Termos, segurança e auditoria — têm a **RIT como controladora**. O detalhamento de cada tipo de dado, e de com quem falar em cada caso, está na Política de Privacidade.
 

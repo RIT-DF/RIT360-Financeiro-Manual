@@ -153,11 +153,11 @@ Não. Ao preencher um **novo lançamento**, **reembolso** ou **pedido de compra 
 
 Pode ser uma entre três coisas: (1) o problema foi resolvido — o lançamento que gerou o aviso mudou de status ou foi corrigido; (2) o aviso saiu da **janela de 30 dias** que o Painel considera (ele é sobre o que aconteceu recentemente, não sobre o histórico inteiro); ou (3) alguém com acesso a Configurações **desligou aquele tipo de regra** para a organização.
 
-> ⚠️ Os pontos de atenção moram só no [Painel](/modulos/painel/#bloco-4-pontos-de-atencao), com a janela fixa de 30 dias — não existe mais uma tela para consultar o histórico completo de anomalias além desses 30 dias. Se sua OSC precisa desse histórico mais longo, é uma lacuna a reportar.
+> ⚠️ Os pontos de atenção moram só no [Painel](/modulos/painel/#bloco-4--pontos-de-atenção), com a janela fixa de 30 dias — não existe mais uma tela para consultar o histórico completo de anomalias além desses 30 dias. Se sua OSC precisa desse histórico mais longo, é uma lacuna a reportar.
 
 ### Existe uma regra de atenção que só aparece no Painel?
 
-Sim — **Déficit projetado no fluxo de caixa**, que olha para meses **futuros**, não para o histórico recente das outras regras. Para o detalhe mês a mês dessa projeção, use a [aba Previsão](/modulos/painel/#previsao) da tela inicial.
+Sim — **Déficit projetado no fluxo de caixa**, que olha para meses **futuros**, não para o histórico recente das outras regras. Para o detalhe mês a mês dessa projeção, use a [aba Previsão](/modulos/painel/#previsão) da tela inicial.
 
 ### Quem pode desligar um aviso, e para quem vale?
 
