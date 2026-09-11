@@ -118,9 +118,9 @@ No cadastro da conta, o interruptor **Compõe o saldo disponível da organizaç�
 
 **Exemplo:** a OSC administra a "Emenda 04/2024" (R$ 120.000, todo destinado à reforma da sede) e o "Caixa Geral" (R$ 18.000, de uso livre). Com a emenda marcada como fora do saldo disponível, o Painel mostra **R$ 18.000 disponíveis** — e um aviso indicando que R$ 120.000 em 1 conta ficaram de fora do total. Sem o interruptor desligado, o Painel mostraria R$ 138.000 disponíveis, dando a impressão de uma folga que não existe.
 
-> ✓ **Dica · É o mesmo conceito da "conta de recurso restrito" em Projetos**
+> ✓ **Dica · É a conta que costuma ser a exclusiva de um financiador**
 >
-> No [Orçamento por fonte de recurso](/modulos/projetos/#orcamento-por-fonte-de-recurso), uma "conta de recurso restrito" é justamente uma conta com este interruptor desligado — por isso ela não soma no saldo disponível da organização, e por isso estourar uma rubrica nela nunca tem autorização interna (só remanejamento documentado). É a mesma marcação vista pelos dois lados: aqui, no cadastro da conta; lá, no controle do orçamento do projeto.
+> Uma conta que guarda recurso carimbado de um convênio ou termo de fomento normalmente tem este interruptor desligado — e é justamente esse tipo de conta que costuma ser marcada como **conta exclusiva** de uma fonte, em [Quem paga este projeto](/modulos/projetos/#quem-paga-este-projeto). São dois ajustes independentes, cada um no seu lugar (aqui, o que entra no saldo disponível; lá, se aquele dinheiro sai só por aquela conta), mas costumam andar juntos na prática.
 
 ## Conta padrão
 

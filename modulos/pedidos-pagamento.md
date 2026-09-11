@@ -91,7 +91,7 @@ No **celular**, os cards de resumo ficam em grade de 2 colunas e a lista de pedi
 
 Na aba **Aprovado**, marque o checkbox de cada pedido que você já conferiu e vai pagar. No rodapé, o botão **"Marcar como pago (N)"** abre um diálogo em que você informa **a conta** e **a data do pagamento** uma única vez — em vez de repetir os dois campos pedido por pedido.
 
-Cada pedido é pago **separadamente**: se um falhar no meio do lote, os que já foram pagos **continuam pagos**, e você pode interromper a qualquer momento sem perder o que já foi feito. Ao final, o resultado vem **item por item** — pago, recusado por regra (por exemplo, retenção por orçamento do projeto, ver [Pagamento retido ou recusado por orçamento do projeto](#retencao-por-orcamento-do-projeto)), com o motivo, ou falhou, também com o motivo.
+Cada pedido é pago **separadamente**: se um falhar no meio do lote, os que já foram pagos **continuam pagos**, e você pode interromper a qualquer momento sem perder o que já foi feito. Ao final, o resultado vem **item por item** — pago, recusado por regra (sem permissão de pagar, ou conta inativa diferente da do lançamento), com o motivo, ou falhou, também com o motivo. Pedido de projeto com financiador pode ainda sair pago com aviso de fonte ou item do plano de trabalho pendentes de escolha — ver [Projetos → De qual fonte e de qual item sai cada despesa](/modulos/projetos/#de-qual-fonte-e-item).
 
 Funciona do mesmo jeito que já funciona para reembolsos — ver [Reembolsos → Pagar reembolso aprovado pela fila](/modulos/reembolsos/#pagar-pela-fila).
 
@@ -216,44 +216,18 @@ O valor **autorizado** na aprovação fica guardado separado do valor **efetivam
 >
 > O valor estimado dá agilidade para autorizar uma compra antes do preço fechado — mas sem limite, a aprovação original perderia o sentido: qualquer coisa poderia ser aprovada por um valor e paga por outro bem maior, sem ninguém revisar. O limiar é o equilíbrio: pequena variação (frete, arredondamento) passa direto; diferença grande volta para quem autorizou decidir se topa.
 
-### Pagamento retido ou recusado por orçamento do projeto
-{: #retencao-por-orcamento-do-projeto }
+### Pedido vinculado a um financiador com plano de trabalho
 
-Quando o pedido está vinculado a um **projeto com controle por fonte de recurso ligado** (ver [Projetos → Orçamento por fonte de recurso](/modulos/projetos/#orcamento-por-fonte-de-recurso)), o pagamento passa por uma segunda checagem, independente da checagem de valor autorizado acima — e essa checagem hoje vale **também no servidor**, lançamento a lançamento: mesmo um caminho que não passa pela tela de pagamento (baixa em lote, edição, importação) é conferido do mesmo jeito antes de efetivar o pagamento.
+Quando o pedido está vinculado a um projeto que tem um financiador com **plano de trabalho** (ver [Projetos → Plano de trabalho](/modulos/projetos/#plano-de-trabalho)), o pagamento continua acontecendo normalmente, mesmo que o valor passe do que foi aprovado para aquele item. O que aparece é um **aviso**, independente do cartão de valor acima do autorizado (seção anterior):
 
-Essa checagem pode dar dois resultados diferentes, e a diferença importa porque cada um pede uma ação distinta:
+- **Acima do plano** — o valor deste pagamento faz o item do plano de trabalho passar do aprovado. O pedido mostra o aviso de risco de glosa, com o atalho para [registrar um remanejamento](/modulos/projetos/#plano-de-trabalho). Nada trava.
+- **Fora do plano de trabalho** — a categoria da despesa não está associada a nenhum item do plano vigente daquela fonte. O pedido é pago e marcado como tal, com o atalho para incluir a categoria num item.
 
-#### Recusado por regra × retido por estouro
-{: #recusado-por-regra-x-retido-por-estouro }
-
-- **Recusado por regra** — a conta escolhida **não tem rubrica prevista** para a categoria daquela despesa dentro do projeto. Não existe "quanto falta autorizar" aqui: **não há o que autorizar**, porque a conta nunca poderia pagar essa categoria. O caminho é **escolher outra conta** (uma que tenha rubrica prevista) ou **ajustar o orçamento do projeto**, incluindo a rubrica que falta.
-- **Retido por estouro de rubrica** — a conta **tem** rubrica prevista para a categoria, mas o valor deste pagamento passa do que foi previsto. Aqui existe caminho de decisão: **autorizar a diferença** (conta comum) ou **corrigir a despesa / registrar um remanejamento** (conta de recurso restrito). Detalhe completo do conceito, com exemplo, em [Projetos → Pagamento acima do previsto: retenção, não recusa](/modulos/projetos/#pagamento-acima-do-previsto-retencao-nao-recusa).
-
-O cartão que aparece no pedido diz qual dos dois é o caso. No de retenção por estouro, ele mostra o previsto, o já aplicado, este pagamento e a diferença, e o que fazer depende do tipo da conta:
-
-- **Conta comum** — quem tem alçada de aprovação vê o botão **Autorizar a diferença**.
-- **Conta de recurso restrito** (convênio, emenda, fundo carimbado) — não há autorização interna. É preciso corrigir a despesa ou registrar um remanejamento no projeto, com o documento que o autoriza.
-
-<div markdown="1" style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin: 1.5rem 0;">
-<div markdown="1" style="flex: 1 1 320px; min-width: 280px;">
-
-[![Cartão de retenção numa conta comum, com o botão Autorizar a diferença](/assets/screenshots/manual-projetos-fonte-04-retencao-comum.png)](/assets/screenshots/manual-projetos-fonte-04-retencao-comum.png)
-*Conta comum — o cartão mostra o botão **Autorizar a diferença**.*
-
-</div>
-<div markdown="1" style="flex: 1 1 320px; min-width: 280px;">
-
-[![Mesmo cartão de retenção numa conta de recurso restrito, sem o botão de autorizar](/assets/screenshots/manual-projetos-fonte-03-retencao.png)](/assets/screenshots/manual-projetos-fonte-03-retencao.png)
-*Conta de recurso restrito — mesmo cartão, sem o botão; só **Encerrar retenção** e o caminho de remanejamento.*
-
-</div>
-</div>
-
-> ✓ **Dica · Recusado não é retido**
+> ✓ **Dica · Estes dois avisos nunca retêm o pagamento**
 >
-> Se o pedido voltou **recusado**, insistir na mesma conta não resolve — ela nunca vai aceitar aquela categoria enquanto o orçamento não tiver rubrica prevista para ela. Procurar um botão de autorizar aqui é procurar algo que não existe: o botão só aparece no caso de **retenção por estouro**.
+> Diferente do aviso de **valor acima do autorizado** (seção anterior — esse sim pode reter, por decisão da própria OSC), acima do plano e fora do plano de trabalho são só avisos: o pagamento acontece, e a decisão de corrigir, remanejar ou aceitar o risco de glosa é sua, sem prazo.
 
-Os cartões de valor acima do autorizado (seção anterior) e de rubrica do projeto (recusa ou retenção) são **independentes**: um pedido pode ter mais de um pendente ao mesmo tempo, cada um com a sua decisão própria.
+Os cartões de valor acima do autorizado (seção anterior) e de plano de trabalho do financiador são **independentes**: um pedido pode ter mais de um aviso ao mesmo tempo.
 
 ### Corrigir o centro de custo depois do envio
 

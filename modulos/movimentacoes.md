@@ -218,9 +218,9 @@ Cada linha tem ícones de ação que mudam conforme o status:
 >
 > **Marcar como pago** exige a permissão de **pagar**, que é separada da de criar e editar. Quem registra lançamentos mas não tem essa permissão simplesmente **não vê** a ação de marcar como pago — nem na linha, nem no detalhe, nem na seleção em lote, nem na conciliação de extrato. Isso permite que uma pessoa organize as contas a pagar e outra confirme a saída do dinheiro. Quem ajusta isso é o Presidente, em [Cargos e permissões](/configuracoes/cargos/#permissao-pagar); por padrão, quem já podia pagar continua podendo.
 
-> ⚠️ **Atenção · Um lançamento de projeto pode ficar retido — ou ser recusado — ao marcar como pago**
+> 💡 **Por que isso importa · Marcar como pago nunca fica esperando decisão por causa de rubrica**
 >
-> Num projeto com controle por fonte ligado, marcar como pago passa por uma checagem: se a conta não tem rubrica prevista para a categoria, o pagamento é **recusado por regra** (troque a conta ou ajuste o orçamento); se a conta é elegível mas o valor passa do previsto, o pagamento fica **retido**, esperando decisão (autorização, em conta comum; correção ou remanejamento, em conta de recurso restrito). Em nenhum dos dois casos o lançamento vira "Pago" sozinho. Ver [Projetos → A regra vale também no servidor](/modulos/projetos/#o-que-muda-na-hora-de-pagar) e [Pagamento acima do previsto: retenção, não recusa](/modulos/projetos/#pagamento-acima-do-previsto-retencao-nao-recusa).
+> Num lançamento de projeto com financiador, marcar como pago pode disparar um aviso — fonte ainda sem escolha clara, categoria fora de qualquer item do plano de trabalho, valor acima do aprovado — mas **nunca retém nem recusa o pagamento** por essas razões. O lançamento vira "Pago" normalmente; o que falta (fonte, item) fica registrado como pendência de preenchimento, resolvível depois em [Quem pagou este lançamento](/modulos/projetos/#de-qual-fonte-e-item). Ver [Projetos → Acima do plano](/modulos/projetos/#plano-de-trabalho).
 
 ### Seleção em lote
 
@@ -268,29 +268,20 @@ Selecione as movimentações e clique em **Atribuir projeto**, na barra de açõ
 
 > 💡 **Por que isso importa**
 >
-> Baixar em lote economiza tempo quando há muitas contas a pagar de uma vez — mas isso não pode custar confiança. Por isso o RIT360 Financeiro confere **cada lançamento selecionado, um a um**, antes de efetivar o pagamento, mesmo quando a seleção mistura lançamentos de **projetos diferentes**. Não existe mais a orientação de separar a baixa por projeto antes de confirmar: selecione o que precisar, e a conferência é feita internamente, lançamento a lançamento.
+> Baixar em lote economiza tempo quando há muitas contas a pagar de uma vez, mesmo quando a seleção mistura lançamentos de **projetos diferentes**, com financiadores diferentes. Selecione o que precisar — o RIT360 Financeiro efetiva cada lançamento normalmente, e o que precisar de decisão sua (fonte, item do plano de trabalho) vira aviso à parte, nunca uma trava no meio da baixa.
 
-Ao concluir a baixa, o resultado distingue quatro situações:
+Ao concluir a baixa, o resultado distingue:
 
-- **Pagos** — passaram na checagem e foram efetivados normalmente.
-- **Recusados por regra** — a conta do lançamento **não tem rubrica prevista** para a categoria daquele projeto. Não há o que autorizar: é preciso escolher outra conta ou ajustar o orçamento do projeto, e tentar de novo.
-- **Retidos por estouro de rubrica** — a conta é elegível, mas o valor passa do previsto da rubrica. Aqui existe decisão a tomar: autorizar a diferença (conta comum) ou corrigir/remanejar (conta de recurso restrito). Ver [Pedidos de Compra e Pagamento → Recusado por regra × retido por estouro](/modulos/pedidos-pagamento/#recusado-por-regra-x-retido-por-estouro).
+- **Pagos** — a grande maioria: o lançamento vira "Pago" normalmente.
+- **Não pagos** — só por dois motivos, nenhum ligado a rubrica ou plano de trabalho: **sem permissão** para pagar aquele lançamento, ou a **conta escolhida está inativa** e não é a conta que o próprio lançamento já usava. Escolha outra conta ativa, ou peça a alguém com a permissão de pagar, e tente de novo — só esses ficam de fora, o resto da seleção segue pago.
+- **Pagos sem fonte ou sem item do plano definidos** — o pagamento aconteceu; o aviso avisa quantos lançamentos ficaram assim, para você abrir cada um e completar em [Quem pagou este lançamento](/modulos/projetos/#de-qual-fonte-e-item) — senão eles ficam de fora da prestação de contas daquela fonte.
 - **Falhas** — problema técnico ao processar aquele lançamento específico; tente novamente.
 
-[![Lista de movimentações depois de uma baixa em lote com lançamentos de projetos diferentes](/assets/screenshots/manual-movimentacoes-lote-desfechos.png)](/assets/screenshots/manual-movimentacoes-lote-desfechos.png)
-*Depois da baixa: lançamentos pagos aparecem como "Pago" (com a opção de estornar); os que ficaram retidos continuam "Pendente" — na lista, hoje, um lançamento retido por estouro e um recusado por regra têm a mesma aparência.*
+**Exemplo:** você seleciona 12 lançamentos para baixar de uma vez — 8 do projeto "Reforma da Sede" (sem financiador) e 4 do projeto "Termo 045/2026" (com plano de trabalho). Ao confirmar, os 12 são pagos. Dentre os da fonte "Termo 045/2026", 1 fica marcado acima do plano (aviso de risco de glosa) e 1 fica sem item do plano escolhido (aviso para você completar depois) — nenhum dos dois trava o restante, que já está pago.
 
-Um lançamento recusado ou retido **não trava os demais** — o resto da seleção que não tem nenhum desses problemas é pago normalmente.
-
-**Exemplo:** você seleciona 12 lançamentos para baixar de uma vez — 8 do projeto "Reforma da Sede" (sem controle por fonte) e 4 do projeto "Emenda 04/2024" (com controle por fonte ligado). Ao confirmar: os 8 da Reforma e 2 da Emenda são pagos normalmente; 1 lançamento da Emenda volta **recusado por regra** (a conta escolhida não tinha rubrica prevista para "Combustível"); e 1 volta **retido por estouro** (a rubrica de "Material" já estava no limite). Você resolve os dois separadamente — o restante já está pago.
-
-> ✓ **Dica · Recusado não é retido**
+> ✓ **Dica · "Não pago" nunca é por causa do orçamento do projeto**
 >
-> Se um lançamento voltou **recusado**, insistir na mesma conta não resolve — ela nunca vai aceitar aquela categoria enquanto o orçamento não tiver rubrica prevista para ela. Se voltou **retido**, existe uma decisão a tomar (autorizar, corrigir ou remanejar). Procurar um botão de autorizar para um recusado é procurar algo que não existe.
-
-> ⚠️ **Atenção · Lançamento recusado por falta de rubrica fica "Pendente", sem aviso na tela**
->
-> Hoje a lista não sinaliza visualmente quando um lançamento voltou **recusado por regra** dentro de uma baixa em lote — ele simplesmente continua com o status **Pendente**, com a mesma aparência de um lançamento retido ou de um que nem passou pela baixa ainda. Já está registrado como melhoria a fazer. Enquanto isso: **se depois de uma baixa em lote algum lançamento continuar pendente, verifique se a conta escolhida tem rubrica prevista para a categoria dele** — é a causa mais provável quando o lançamento pertence a um projeto com controle por fonte ligado.
+> Se um lançamento voltou como **não pago** numa baixa em lote, a causa é sempre permissão ou conta inativa — nunca falta de rubrica prevista ou valor acima do plano de trabalho, porque essas duas coisas não impedem mais o pagamento. Se um lançamento de projeto continuar pendente depois de uma baixa em lote, confira a permissão de quem baixou e se a conta escolhida está ativa.
 
 ### Exportação
 
@@ -372,12 +363,14 @@ Clique em **+ Novo lançamento** no topo da lista. O formulário abre em **pági
 > Se a conta tem projeto padrão e, na hora de salvar, o lançamento está com **outro** projeto (ou nenhum), a tela avisa a divergência e pergunta se você quer prosseguir assim mesmo — **Voltar e ajustar** ou **Prosseguir**. É um aviso, não uma trava: existe para o caso comum de esquecer de trocar o projeto ao usar a conta errada, mas não impede o lançamento legítimo fora do padrão daquela conta.
 - **Categoria** — não pedida para Transferências (porque transferência é só mudança de lugar)
 
-#### Conta elegível por rubrica
-{: #conta-elegivel-por-rubrica }
+#### De qual dinheiro sai este lançamento
+{: #de-qual-dinheiro-sai-este-lancamento }
 
-> 📖 **Conceito**
+> 📖 **Conceito · Perguntado quando há dúvida, nunca travado**
 >
-> Se você escolher um **Projeto** que tenha o **controle por fonte de recurso** ligado (ver [Projetos → Orçamento por fonte de recurso](/modulos/projetos/#orcamento-por-fonte-de-recurso)), o campo **Conta** passa a mostrar só as contas com **rubrica prevista** para a categoria escolhida — as demais somem da lista. É assim que o sistema garante que uma despesa de um convênio, por exemplo, não saia sem querer do caixa geral. Isso vale para **novo lançamento**, **edição**, **baixa (marcar como pago)** e **pagamento de pedido de compra e pagamento**. Se nenhuma conta tiver rubrica prevista, a tela explica o motivo em vez de mostrar a lista vazia. Projetos sem o controle ligado (a maioria) não têm essa restrição — todas as contas ativas aparecem normalmente.
+> Quando o **Projeto** escolhido tem um financiador com **plano de trabalho** (ver [Projetos → Plano de trabalho](/modulos/projetos/#plano-de-trabalho)), um bloco **"De qual dinheiro sai este lançamento"** aparece no formulário. Ele pergunta a **fonte** e o **item do plano** só quando há mais de uma opção possível — havendo uma só, o RIT360 Financeiro escolhe sozinho. Isso vale para **novo lançamento**, **edição**, **baixa (marcar como pago)** e **pagamento de pedido de compra e pagamento**. O campo **Conta** nunca é restringido por causa disso: todas as contas ativas continuam aparecendo, mesmo em projeto com financiador. Projeto sem financiador (a maioria) não mostra esse bloco.
+
+Ver [Projetos → De qual fonte e de qual item sai cada despesa](/modulos/projetos/#de-qual-fonte-e-item) para o detalhe completo — incluindo o aviso de lançamento sem fonte, o aviso de risco de glosa, e como corrigir a escolha depois pelo bloco **[Quem pagou este lançamento](/modulos/projetos/#de-qual-fonte-e-item)** no detalhe do lançamento.
 
 **Campos opcionais:**
 
@@ -958,8 +951,8 @@ Você **não depende do e-mail** para chegar a uma prestação de contas: clique
 - **Realizado** — o que já foi efetivamente pago ou recebido; o dinheiro mexeu na conta.
 - **Previsto** — o que está pendente ou atrasado; ainda vai acontecer.
 - **Conciliado** — conferido com o extrato bancário, por importação de OFX ou por marcação manual. Diferente de **Pago**: pago é o que o sistema afirma; conciliado é o que o banco confirma.
-- **Rubrica** — no orçamento de um projeto com controle por fonte, a linha que amarra conta + categoria + valor previsto. Ver [Projetos → Orçamento por fonte de recurso](/modulos/projetos/#orcamento-por-fonte-de-recurso).
-- **Pagamento retido** — pagamento que não se completa porque passa da rubrica prevista de um projeto; o lançamento não vira "Pago" até alguém decidir.
+- **Item do plano de trabalho (rubrica)** — no plano de trabalho de um financiador, a linha que amarra um nome, um valor aprovado e as categorias da organização que contam para ela. Ver [Projetos → Plano de trabalho](/modulos/projetos/#plano-de-trabalho).
+- **Acima do plano** — despesa que faz um item do plano de trabalho passar do valor aprovado; é paga normalmente, com aviso de risco de glosa — nunca fica retida. Ver [Projetos → Plano de trabalho](/modulos/projetos/#plano-de-trabalho).
 - **Líquido** — a posição consolidada da OSC: tudo o que ela tem (ativos) menos tudo o que ela deve (passivos).
 - **Proteção do nome dos favorecidos** — opção da prestação de contas que mascara, no documento inteiro (PDF ou planilha), o nome de quem recebeu cada pagamento. Não afeta quem pediu, aprovou ou pagou.
 - **Projeto padrão da conta** — projeto sugerido para preencher automaticamente o campo Projeto ao lançar por aquela conta; é sugestão, não trava. Ver [Conta com projeto e centro de custo padrão](#conta-com-projeto-e-centro-de-custo-padrao).

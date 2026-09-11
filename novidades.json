@@ -1,6 +1,12 @@
 {
   "versoes": [
     {
+      "versao": "1.116.2",
+      "data": "2026-09-11",
+      "destaque": true,
+      "resumo": "A aba Financeiro do projeto mudou: agora você diz quem paga cada projeto e acompanha o plano de trabalho de cada financiador — e estourar uma rubrica não trava mais o pagamento."
+    },
+    {
       "versao": "1.115.0",
       "data": "2026-09-10",
       "destaque": false

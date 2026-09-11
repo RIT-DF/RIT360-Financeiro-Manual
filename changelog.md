@@ -11,6 +11,25 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.116.2] — 2026-09-11
+
+<!-- destaque: A aba Financeiro do projeto mudou: agora você diz quem paga cada projeto e acompanha o plano de trabalho de cada financiador — e estourar uma rubrica não trava mais o pagamento. -->
+
+### Adicionado
+
+- **Nova pergunta na aba Financeiro do projeto: quem paga este projeto?** Cada projeto passa a ter uma lista de fontes — caixa geral da organização, receitas do próprio projeto (festa, bazar, doação) ou um financiador (edital, convênio, termo de fomento, patrocínio) — cada uma valendo por um período. Um financiador pode exigir conta bancária exclusiva para o dinheiro dele. Todo projeto existente já ganhou automaticamente a fonte correspondente à forma de financiamento que ele já tinha.
+- **Financiador ganha plano de trabalho.** Você cadastra os itens do plano com o nome que o financiador usa e o valor aprovado, e liga a eles as categorias que a sua organização já usa — o "de → para" que antes só existia na hora de montar a prestação de contas na mão. Um aditivo do financiador entra como uma nova versão aprovada, sem apagar a anterior; um remanejamento entre itens do mesmo plano pede justificativa (documento é opcional) e fica registrado com data. "Ver histórico" mostra a sequência completa: aprovado original, aditivos, remanejamentos, até o plano vigente hoje.
+- **Ao lançar ou pagar uma despesa, o sistema agora ajuda a dizer de qual fonte e de qual item do plano ela é** — perguntando só quando há dúvida real, e atribuindo sozinho quando só existe um caminho possível (por exemplo, quando a conta é exclusiva de uma fonte). Parcelas e lançamentos recorrentes herdam a escolha feita no lançamento que os originou.
+- Nas duas telas de lançamento, é possível marcar uma despesa como **devolução ao financiador**.
+- Encerrar uma fonte (quando o convênio termina) é simples: você só registra a data. Tudo o que já foi pago com aquele dinheiro continua visível e identificado como daquela fonte, para sempre.
+
+### Modificado
+
+- **Pagamento acima do valor aprovado de um item do plano não trava mais.** O pagamento acontece normalmente, com um aviso de que o valor passou do aprovado e pode ser questionado (glosado) pelo financiador na prestação de contas — sem impedir nada e sem virar pendência.
+- **Despesa numa categoria que não está em nenhum item do plano também não é mais recusada.** Ela é paga normalmente e fica marcada "fora do plano de trabalho", com um atalho para incluir a categoria num item, se for o caso.
+- Saiu da aba Financeiro o bloco antigo de "decomposição por categoria" e o interruptor "controlar gastos por fonte de recurso" — vocabulário confuso que quase ninguém usava. O total previsto do projeto continua editável, do mesmo jeito.
+- Projeto sem financiador continua simples: mostra só a lista de fontes e o total previsto/gasto/sobra, com uma frase explicando que o plano de trabalho aparece quando você acrescentar um financiador.
+
 ## [1.115.0] — 2026-09-10
 
 ### Adicionado

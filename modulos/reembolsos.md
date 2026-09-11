@@ -120,7 +120,7 @@ Antes de confirmar, a barra já mostra **quantas solicitações** e **o valor to
 
 Reembolso aprovado pode ser marcado como pago **direto na aba "Aprovado"** — na linha, ou em lote — sem precisar ir até Movimentações procurar o lançamento correspondente. A ação pede a **data do pagamento** e a **conta** de onde o dinheiro saiu, do mesmo jeito que já funciona para pedidos de compra e pagamento. Só vê o botão de pagar quem tem a [permissão de pagar](/configuracoes/cargos/#permissao-pagar) — a mesma que já era exigida pelo caminho antigo, via Movimentações, que **continua funcionando** igual.
 
-Pagar vários de uma vez segue o mesmo padrão do lote de aprovação: marque os reembolsos aprovados que já confirmou o pagamento, informe data e conta, e confirme. O resultado volta **item por item** — o que foi pago, o que foi **recusado por regra**, o que ficou **retido por rubrica orçamentária** e o que **falhou** —, nunca um "pronto" genérico escondendo uma falha parcial no meio do lote.
+Pagar vários de uma vez segue o mesmo padrão do lote de aprovação: marque os reembolsos aprovados que já confirmou o pagamento, informe data e conta, e confirme. O resultado volta **item por item** — o que foi pago, o que foi **recusado por regra** (sem permissão de pagar, ou conta inativa diferente da do lançamento) e o que **falhou** —, nunca um "pronto" genérico escondendo uma falha parcial no meio do lote. Reembolso de projeto com financiador pode sair pago com aviso de fonte ou item do plano de trabalho pendentes de escolha — ver [Projetos → De qual fonte e de qual item sai cada despesa](/modulos/projetos/#de-qual-fonte-e-item).
 
 > 💡 **Por que isso importa**
 >

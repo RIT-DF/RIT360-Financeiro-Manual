@@ -309,22 +309,25 @@ Todo projeto no RIT360 Financeiro precisa de uma data de início e de fim — in
 
 São independentes. Seu **papel na OSC** (Presidente, Tesoureiro, Voluntário...) define o acesso geral. Seu **papel no projeto** (Coordenador, integrante, observador) define o que você faz **dentro daquele projeto** — um voluntário pode ser coordenador de um projeto específico, e um tesoureiro pode ser só integrante de outro.
 
-### Por que não consigo ligar o controle por fonte no meu projeto?
+### Meu projeto agora mostra "Quem paga este projeto". O que é isso?
 
-O interruptor só liga quando **toda rubrica do orçamento tem uma conta definida** — a tela mostra quantas ainda faltam completar (ou pede para detalhar o orçamento por rubrica, se ele ainda estiver vazio). É de propósito: ligar o controle com alguma categoria "solta", sem conta associada, deixaria uma brecha exatamente onde o recurso mais precisa de rastreio. Complete a conta de cada linha do orçamento do projeto e tente de novo. Ver [Projetos → Orçamento por fonte de recurso](/modulos/projetos/#orcamento-por-fonte-de-recurso).
+É a lista de **fontes** que financiam o projeto — caixa geral da organização, receitas do próprio projeto e financiadores (edital, convênio, termo de fomento, emenda, patrocínio), cada uma valendo por um **período**. Se o seu projeto já existia antes desta novidade, ele ganhou automaticamente uma primeira fonte, refletindo como já estava declarado — nada foi perdido. Acrescente um financiador ali quando entrar dinheiro de fora, e o sistema passa a acompanhar o **plano de trabalho** dele. Ver [Projetos → Quem paga este projeto](/modulos/projetos/#quem-paga-este-projeto).
 
-### Meu pagamento ficou retido — ou recusado — por causa do orçamento do projeto. E agora?
+### Preciso usar o plano de trabalho na minha OSC?
 
-Depende de qual dos dois aconteceu — são situações diferentes, com caminhos diferentes:
+Não. É um recurso que aparece só quando o projeto tem um **financiador** cadastrado — edital, convênio, termo de fomento, emenda ou patrocínio. Projeto que só usa caixa geral e receitas próprias continua mostrando só o orçamento total (previsto, gasto, sobra), sem plano de trabalho nenhum. Ver [Projetos → Projeto sem financiador](/modulos/projetos/#quem-paga-este-projeto).
 
-- **Retido por estouro de rubrica** — a conta é a certa (tem rubrica prevista para a categoria), mas o valor passou do previsto. Se é uma **conta comum** da organização, quem tem alçada de aprovação vê o botão **Autorizar a diferença** no cartão de retenção, com um motivo obrigatório — e o pagamento se completa depois disso. Se é uma **conta de recurso restrito** (convênio, emenda, fundo carimbado), não existe autorização interna: **corrija a despesa** (categoria ou valor errados) ou **registre um remanejamento** no projeto, anexando o documento que autoriza a mudança (ofício, aditivo, anuência do financiador). Enquanto a retenção não é resolvida, o lançamento não vira "Pago". Ver [Projetos → Pagamento acima do previsto: retenção, não recusa](/modulos/projetos/#pagamento-acima-do-previsto-retencao-nao-recusa).
-- **Recusado por regra** — a conta escolhida **não tem** nenhuma rubrica prevista para aquela categoria dentro do projeto. Não há nada para autorizar aqui: procure o botão de autorizar e não vai achar, porque a decisão não é essa. O caminho é **trocar a conta** por uma que tenha rubrica prevista, ou **ajustar o orçamento do projeto** incluindo a rubrica que falta. Ver [Pedidos de Compra e Pagamento → Recusado por regra × retido por estouro](/modulos/pedidos-pagamento/#recusado-por-regra-x-retido-por-estouro).
+### Por que o sistema não trava pagamento acima da rubrica?
 
-Isso vale também na **baixa em lote**: se você selecionar lançamentos de vários projetos de uma vez, cada um é conferido individualmente, e o resultado mostra separadamente quem foi pago, quem foi recusado e quem ficou retido. Não é mais preciso separar a baixa por projeto antes de confirmar. Ver [Movimentações → Baixa em lote com lançamentos de projetos diferentes](/modulos/movimentacoes/#baixa-em-lote-projetos-diferentes).
+Porque não é uma decisão que o RIT360 Financeiro tem elementos para tomar. Passar do valor aprovado num item do plano de trabalho é um **risco de glosa** — o financiador pode não reconhecer aquela despesa — mas pode ser também um remanejamento já acertado informalmente, uma negociação em curso, ou uma decisão consciente da OSC de assumir o gasto por fora. O sistema **avisa o risco** na hora (para você não ser pego de surpresa na prestação de contas) e **registra o fato** (o aviso fica no item, no lançamento e numa futura prestação de contas) — mas quem decide se aquilo pode ou deve acontecer é quem coordena o projeto, e no fim das contas o próprio financiador. Ver [Projetos → Acima do plano](/modulos/projetos/#plano-de-trabalho).
 
-### Preciso usar o controle por fonte na minha OSC?
+### E se a categoria da despesa não estiver em nenhum item do plano de trabalho?
 
-Não. É um recurso **opcional**, pensado para quem administra recurso carimbado a um financiador específico (convênio, emenda, termo de fomento) e precisa provar, na prestação de contas, que cada gasto saiu da fonte certa. Se a sua OSC trabalha só com o caixa geral, o orçamento do projeto continua funcionando exatamente como antes — por categoria e valor, sem conta associada, sem nenhuma trava na hora de pagar.
+A despesa é paga normalmente, e fica marcada como **fora do plano de trabalho** — um aviso, nunca uma pendência. Um atalho na própria tela leva direto a incluir a categoria num item do plano. Ver [Projetos → Fora do plano de trabalho](/modulos/projetos/#plano-de-trabalho).
+
+### O que aconteceu com a retenção de pagamento por rubrica e a recusa de conta?
+
+Foram substituídas por aviso. Na versão anterior, um pagamento que passasse do previsto de uma rubrica podia ficar **retido**, e uma conta sem rubrica prevista para a categoria podia deixar o pagamento **recusado**. Isso não existe mais: hoje o pagamento sempre acontece, e o que existia como travas virou aviso — de risco de glosa (acima do plano) ou de despesa fora do plano de trabalho. Ver [Projetos → Plano de trabalho](/modulos/projetos/#plano-de-trabalho).
 
 ### Editei as categorias permitidas do meu projeto e não consigo salvar. Por quê?
 
