@@ -157,7 +157,7 @@ Pode ser uma entre três coisas: (1) o problema foi resolvido — o lançamento 
 
 ### Existe uma regra de atenção que só aparece no Painel?
 
-Sim — **Déficit projetado no fluxo de caixa**, que olha para meses **futuros**, não para o histórico recente das outras regras. Para o detalhe mês a mês dessa projeção, use a [aba Projeção](/modulos/painel/#previsão) da Saúde 360.
+Sim — **Déficit projetado no fluxo de caixa**, que olha para meses **futuros**, não para o histórico recente das outras regras. Para o detalhe mês a mês dessa projeção, use a [aba Projeção](/modulos/painel/#projeção) da Saúde 360.
 
 ### Quem pode desligar um aviso, e para quem vale?
 

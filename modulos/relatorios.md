@@ -82,7 +82,7 @@ Receitas e despesas aparecem **lado a lado**, não mais em abas separadas — d�
 Duas seções que antes eram abas desta tela **mudaram de casa**, e continuam existindo — só que na Saúde 360 (a tela inicial), não aqui:
 
 - **Pontos de atenção** — as anomalias detectadas nos seus lançamentos (despesa concentrada, categoria com pico, fornecedor novo, categoria que voltou, queda de receita) agora moram só no **[Painel](/modulos/painel/#bloco-4--pontos-de-atenção)**, considerando os últimos 30 dias. Os limites de cada regra continuam configuráveis em **Configurações → Relatórios**, no mesmo lugar de sempre.
-- **Projeção** — a projeção de saldo mês a mês virou a terceira aba da tela inicial, ao lado do Painel e da Situação: veja **[Saúde 360 → Projeção](/modulos/painel/#previsão)**. Os mesmos filtros (Tipo, Projeto, Conta, Categoria, Centro de custo) e o mesmo horizonte de 3, 6 ou 12 meses continuam lá.
+- **Projeção** — a projeção de saldo mês a mês virou a terceira aba da tela inicial, ao lado do Painel e da Situação: veja **[Saúde 360 → Projeção](/modulos/painel/#projeção)**. Os mesmos filtros (Tipo, Projeto, Conta, Categoria, Centro de custo) e o mesmo horizonte de 3, 6 ou 12 meses continuam lá.
 
 > ⚠️ **Atenção · Se você procurar aqui, não vai achar**
 >
@@ -273,7 +273,7 @@ Três opções na hora de revisar:
 
 > ✓ **Dica · Projeção antes de decisão grande**
 >
-> Antes de aprovar contratação, compra grande ou novo projeto, abra a [aba Projeção](/modulos/painel/#previsão) da Saúde 360, com horizonte de 6 ou 12 meses. Veja se o gasto extra mantém o saldo positivo. Se o gráfico mostra vermelho aparecendo em algum mês, a decisão precisa de mais conversa antes — não menos.
+> Antes de aprovar contratação, compra grande ou novo projeto, abra a [aba Projeção](/modulos/painel/#projeção) da Saúde 360, com horizonte de 6 ou 12 meses. Veja se o gasto extra mantém o saldo positivo. Se o gráfico mostra vermelho aparecendo em algum mês, a decisão precisa de mais conversa antes — não menos.
 
 > ⚠️ **Atenção · Comparativo só faz sentido se o período faz sentido**
 >
@@ -288,7 +288,7 @@ Três opções na hora de revisar:
 - **Déficit projetado no fluxo de caixa** — regra exclusiva do Painel que avisa quando o caixa tende a ficar negativo em um mês futuro, considerando agendados e, quando necessário, a média histórica.
 - **Severidade** — leve / moderada / alta, derivada do quanto o evento ultrapassa o limite da regra.
 - **Calibração** — análise estatística que sugere limites de regras personalizados ao padrão da sua OSC.
-- **Forecast (projeção)** — estimativa do comportamento financeiro futuro, combinando agendados (já cadastrados) com estimados (média histórica); veja [Saúde 360 → Projeção](/modulos/painel/#previsão).
+- **Forecast (projeção)** — estimativa do comportamento financeiro futuro, combinando agendados (já cadastrados) com estimados (média histórica); veja [Saúde 360 → Projeção](/modulos/painel/#projeção).
 - **Prestação de contas (documento)** — o relatório contábil completo de um período, gerado em PDF ou planilha em Movimentações e listado na área de [Documentos](/modulos/documentos/).
 - **Selo de autenticidade** — o código de verificação e o QR Code impressos no PDF da prestação de contas, que permitem a qualquer pessoa conferir a emissão numa página pública, sem login.
 - **Código de verificação** — a sequência impressa no PDF que se digita em [financeiro.rit360.org.br/verificar](https://financeiro.rit360.org.br/verificar) para conferir a autenticidade — ver [Como quem recebe confere a autenticidade](#conferir-autenticidade).

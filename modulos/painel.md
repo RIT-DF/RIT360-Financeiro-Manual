@@ -21,8 +21,8 @@ A **Saúde 360** é a tela inicial — a primeira coisa que você vê após o lo
 ## As três abas
 
 - **[Painel](#aba-painel)** — a aba padrão ao entrar. O que precisa da sua atenção hoje: saldo das contas, resumo do mês, pendências por papel e pontos de atenção recentes.
-- **[Situação](#saúde-360)** — quatro respostas sobre a saúde financeira da OSC: quanto está livre para usar, quanto já está comprometido, por quanto tempo o caixa aguenta, e quais projetos estão fora do ritmo.
-- **[Projeção](#previsão)** — a projeção de saldo dos próximos meses, com os mesmos filtros de Relatórios (tipo, projeto, conta, categoria, centro de custo).
+- **[Situação](#situação)** — quatro respostas sobre a saúde financeira da OSC: quanto está livre para usar, quanto já está comprometido, por quanto tempo o caixa aguenta, e quais projetos estão fora do ritmo.
+- **[Projeção](#projeção)** — a projeção de saldo dos próximos meses, com os mesmos filtros de Relatórios (tipo, projeto, conta, categoria, centro de custo).
 
 Quando existe algum aviso **grave** em aberto, um selo no topo da tela mostra quantos são, em qualquer uma das três abas. Clicar nesse selo leva direto ao bloco de Pontos de atenção, na aba Painel.
 
@@ -136,7 +136,7 @@ Em ambos os casos, o aviso informa **em que mês** o caixa fica negativo, **de q
 
 > ⚠️ **Atenção · Este aviso só aparece no Painel**
 >
-> O déficit projetado **só aparece aqui**, no bloco de Pontos de atenção do Painel — não é repetido em nenhum outro lugar. Para a projeção completa mês a mês, com todos os filtros, use a [aba Projeção](#previsão), logo ao lado do Painel.
+> O déficit projetado **só aparece aqui**, no bloco de Pontos de atenção do Painel — não é repetido em nenhum outro lugar. Para a projeção completa mês a mês, com todos os filtros, use a [aba Projeção](#projeção), logo ao lado do Painel.
 
 A regra vem **ligada por padrão**, com antecedência de **6 meses** (configurável para 3, 6 ou 12), em **Configurações → Relatórios → Regras de pontos de atenção** — junto com as demais regras (ver [Configuração das regras de atenção](/modulos/relatorios/#configuração-das-regras-de-atenção)).
 
@@ -146,8 +146,9 @@ No rodapé do bloco de Pontos de atenção, um link indica onde ajustar as regra
 >
 > 5 minutos no Painel todo dia (ou toda segunda de manhã) substituem 1 hora de garimpo no final do mês. **Olhe contas e resumo, leia pendências, confira os pontos de atenção, decida o que precisa decidir, fecha.** Em OSC bem gerida, o Painel não tem cards com números altos parados ali há semanas — pendência só fica parada quando ninguém olhou.
 
+<span id="saúde-360"></span>
+
 ## Situação
-{: #saúde-360 }
 
 [![Aba Situação, com os quatro blocos: disponível, comprometido, fôlego de caixa e projetos fora do ritmo](/assets/screenshots/painel-saude360.png)](/assets/screenshots/painel-saude360.png)
 *Aba Situação — quanto está livre, quanto está comprometido, por quanto tempo o caixa aguenta, e os projetos fora do ritmo*
@@ -176,8 +177,9 @@ Lista os projetos que estão **fora do ritmo esperado** entre prazo e orçamento
 >
 > "Prazo e dinheiro sobrando" parece bom à primeira vista, mas costuma ser sintoma de projeto **parado** — verba captada e não executada, prazo que passou sem que ninguém tenha dado falta. A Situação trata isso como ponto de atenção, não como conquista, porque financiador cobra execução, não sobra.
 
+<span id="previsão"></span>
+
 ## Projeção
-{: #previsão }
 
 [![Aba Projeção, com filtros, escolha de horizonte e a tabela de meses projetados](/assets/screenshots/painel-previsao.png)](/assets/screenshots/painel-previsao.png)
 *Aba Projeção — saldo projetado mês a mês, com receita e despesa estimada ou já agendada*
