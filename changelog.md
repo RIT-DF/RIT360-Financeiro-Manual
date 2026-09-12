@@ -11,6 +11,29 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.117.1] — 2026-09-11
+
+### Adicionado
+
+- **Prestação de contas por fonte.** Na aba Financeiro do projeto, cada fonte de financiamento — ativa ou já encerrada — ganha o botão "Prestação de contas", com o período que você escolher. O documento é gerado em segundo plano (você recebe aviso quando estiver pronto) e fica disponível em Documentos como "Prestação de contas por fonte". Ele traz: resumo do período, os repasses recebidos, o plano de trabalho vigente com o gasto e a categoria de cada despesa em cada rubrica, o histórico completo do plano (versão original, aditivos e remanejamentos, com a justificativa e o documento de cada remanejamento), as despesas fora do plano de trabalho, as despesas ainda sem rubrica escolhida, as devoluções feitas ao financiador, os lançamentos do projeto sem fonte definida e o anexo com o "de → para" de categorias e rubricas.
+- Na lista de contas, uma conta exclusiva de um financiador agora mostra quais fontes ela atende, com atalho direto para a prestação de contas daquela fonte.
+- Um estorno passa a levar sempre a mesma fonte e a mesma rubrica do lançamento que ele desfaz.
+
+### Modificado
+
+- **Na barra de navegação do computador, o nome de cada seção deixou de ser cortado.** Quando a tela não é larga o suficiente para mostrar todas as seções por extenso, as que não cabem passam para um item "Mais", no final da barra.
+- Ajustes na janela "de qual dinheiro sai este lançamento" (fonte e rubrica): receita e transferência nunca levam rubrica; a sugestão é refeita sempre que você muda tipo, categoria, projeto, conta ou data do lançamento, e recomeça do zero ao usar "Salvar e fazer outro"; só fica marcada como escolha sua se você realmente mudar o que foi sugerido.
+- A data sugerida ao abrir os formulários de plano de trabalho e de remanejamento passa a ser a data de hoje no fuso da sua organização.
+- Na janela de plano de trabalho e de aditivo, a lista de categorias agora tem busca, e a janela passa a caber na tela mesmo com muitas rubricas ou muitas categorias, com rolagem por dentro e os botões sempre visíveis.
+- Na tela de "Lançamentos vinculados" (conciliação de extrato), a coluna Conta passou a aparecer.
+
+## [1.116.3] — 2026-09-11
+
+### Modificado
+
+- **Na barra de navegação do computador, a logo da sua organização passou para a esquerda, ao lado da logo do RIT360 Financeiro** — sem o nome escrito ao lado; passe o mouse sobre a logo para ver o nome completo, ou veja o nome curto quando a organização ainda não tem logo cadastrada. Se você participa de mais de uma organização, a logo também é o seletor para trocar entre elas.
+- Os botões de superadmin, de enviar feedback e de configurações passaram a ser ícones, posicionados antes da sua foto de perfil.
+
 ## [1.116.2] — 2026-09-11
 
 <!-- destaque: A aba Financeiro do projeto mudou: agora você diz quem paga cada projeto e acompanha o plano de trabalho de cada financiador — e estourar uma rubrica não trava mais o pagamento. -->

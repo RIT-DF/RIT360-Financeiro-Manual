@@ -35,8 +35,9 @@ Cada linha é um documento gerado (ou em preparo), com o tipo, um resumo do per�
 > Até a v1.97.0, um documento cujo arquivo tinha sumido (prazo de guarda vencido, ou falha na geração) continuava na lista com o status "Arquivo indisponível" — ocupando espaço sem que houvesse nada a fazer com ele ali. Desde a v1.97.1, esse documento **some da tela de Documentos**. O registro não foi apagado: para a **prestação de contas**, ele continua visível na tela de **Prestações geradas** (em Movimentações), mostrando quando o arquivo foi removido e por quem — ver [Guarda dos documentos de prestação de contas](/modulos/relatorios/#guarda-dos-documentos). Se precisar do conteúdo de novo, gere o documento outra vez pelo módulo de origem.
 
 ### Tipos de documento cobertos
+{: #tipos-de-documento-cobertos }
 
-PDF de lançamentos, planilha de lançamentos, PDF e planilha do relatório financeiro, PDF de encerramento de projeto, relatório parcial de projeto, planilha do orçamento anual, planilha de execução orçamentária, e PDF ou planilha de [prestação de contas](/modulos/movimentacoes/#prestacao-de-contas). Cada um é gerado no módulo a que pertence (Movimentações, Relatórios, Projetos, Orçamento) — a área de Documentos não gera nada por conta própria, só reúne e guarda o que os outros módulos já produziram.
+PDF de lançamentos, planilha de lançamentos, PDF e planilha do relatório financeiro, PDF de encerramento de projeto, relatório parcial de projeto, planilha do orçamento anual, planilha de execução orçamentária, PDF ou planilha de [prestação de contas](/modulos/movimentacoes/#prestacao-de-contas) e PDF de [prestação de contas por fonte](/modulos/projetos/#prestacao-de-contas-por-fonte). Cada um é gerado no módulo a que pertence (Movimentações, Relatórios, Projetos, Orçamento) — a área de Documentos não gera nada por conta própria, só reúne e guarda o que os outros módulos já produziram.
 
 ## Filtros
 
@@ -105,3 +106,4 @@ Além de apagar pela tela, há um caminho automático que também remove só o a
 - [Movimentações → Prestação de contas](/modulos/movimentacoes/#prestacao-de-contas) — como gerar uma prestação de contas nova.
 - [Relatórios](/modulos/relatorios/) — como gerar um PDF ou planilha de relatório financeiro.
 - [Projetos](/modulos/projetos/) — relatórios parciais e de encerramento de projeto.
+- [Projetos → Prestação de contas de uma fonte](/modulos/projetos/#prestacao-de-contas-por-fonte) — como emitir a prestação de contas de um financiador específico.

@@ -122,6 +122,19 @@ No cadastro da conta, o interruptor **Compõe o saldo disponível da organizaç�
 >
 > Uma conta que guarda recurso carimbado de um convênio ou termo de fomento normalmente tem este interruptor desligado — e é justamente esse tipo de conta que costuma ser marcada como **conta exclusiva** de uma fonte, em [Quem paga este projeto](/modulos/projetos/#quem-paga-este-projeto). São dois ajustes independentes, cada um no seu lugar (aqui, o que entra no saldo disponível; lá, se aquele dinheiro sai só por aquela conta), mas costumam andar juntos na prática.
 
+## Conta exclusiva de uma fonte
+{: #conta-exclusiva-de-uma-fonte }
+
+Quando uma conta é marcada, num projeto, como **conta exclusiva** de uma fonte de financiamento (ver [Projetos → Acrescentar ou editar uma fonte](/modulos/projetos/#acrescentar-ou-editar-uma-fonte)), a lista de Contas Bancárias passa a mostrar isso na própria linha da conta: **"Conta exclusiva da fonte {nome} · projeto {nome do projeto}"**. Uma conta atendendo mais de uma fonte — uma encerrada e uma nova, por exemplo — mostra todas.
+
+<!-- CAPTURA PENDENTE: linha da lista de Contas Bancárias mostrando o texto "Conta exclusiva da fonte {nome} · projeto {nome do projeto}" abaixo do nome da conta, e o menu de ações da linha aberto com a opção "Prestação de contas · {nome da fonte}" visível. Rota /configuracoes/contas, viewport desktop e mobile. Precisa de uma conta marcada como exclusiva de uma fonte de financiador num projeto de teste na OSC Alpha, para um usuário com permissão de emitir. -->
+
+Quem tem permissão para emitir a prestação daquela fonte (coordenador do projeto, ou quem tem a permissão de ver relatórios — ver [Projetos → Quem pode emitir](/modulos/projetos/#prestacao-de-contas-por-fonte)) encontra, no menu de ações da própria linha da conta, o atalho **Prestação de contas** — direto para a mesma janela de período que existe na aba Financeiro do projeto. Sem essa permissão, o aviso da fonte continua aparecendo, mas o atalho não.
+
+> ✓ **Dica · Dois caminhos para o mesmo documento**
+>
+> Se você já sabe qual é o **financiador**, o caminho mais natural é abrir o projeto e usar o botão na fonte (ver [Projetos → Prestação de contas de uma fonte](/modulos/projetos/#prestacao-de-contas-por-fonte)). Se você está olhando para a **conta** — por exemplo, conferindo o extrato de uma conta de convênio — este atalho evita ter que lembrar em qual projeto ela está e abrir o projeto só para achar o botão.
+
 ## Conta padrão
 
 Uma das contas pode ser marcada como **conta padrão da organização**. A conta padrão é **pré-selecionada automaticamente ao criar um novo lançamento** — assim, quem registra movimentações não precisa escolher a conta toda vez (é só mudar quando for outra).
@@ -232,3 +245,4 @@ Quem pede a exclusão da própria conta passa a ter apagados também os dados ba
 - **Painel** — onde os saldos consolidados das contas ativas aparecem.
 - **[Cargos e permissões](/configuracoes/cargos/#permissao-pagar)** — onde se define quem pode pagar (e, por consequência, quem vê os dados bancários completos).
 - **Configurações → Organização → Integrações → WooCommerce** — onde você define qual conta recebe receitas da loja online.
+- **[Projetos → Quem paga este projeto](/modulos/projetos/#quem-paga-este-projeto)** — onde se marca uma conta como exclusiva de uma fonte, e onde a prestação de contas por fonte também pode ser emitida.

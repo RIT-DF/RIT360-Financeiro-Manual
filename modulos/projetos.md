@@ -95,6 +95,7 @@ A cada projeto o RIT360 Financeiro atribui um **indicador de saúde** — um sem
 > O semáforo é o que transforma "uma porção de projetos" em **gestão de portfólio**. No Painel, a diretoria vê de relance quantos projetos estão saudáveis e quais pedem atenção — sem abrir um por um. É a diferença entre descobrir que um projeto estourou o orçamento *no dia da prestação de contas* e descobrir *a tempo de fazer algo*.
 
 ## Conceitos essenciais
+{: #conceitos-essenciais }
 
 > 📖 **Conceito · Tipo do projeto**
 >
@@ -460,6 +461,7 @@ Cada projeto tem uma lista de **fontes** — de onde vem o dinheiro que o financ
 *"Quem paga este projeto" — caixa geral, uma receita própria e um financiador com plano de trabalho, cada um com seu período*
 
 ### Acrescentar ou editar uma fonte
+{: #acrescentar-ou-editar-uma-fonte }
 
 Clique em **Acrescentar fonte** (ou **Editar fonte**, numa já existente). Preencha:
 
@@ -502,6 +504,63 @@ Encerrar uma fonte é **só marcar uma data de fim** — não existe uma operaç
 > 💡 **Por que isso importa**
 >
 > É comum um convênio acabar e o projeto seguir rodando com outro dinheiro, ou terminar de fato. Tratar isso como "encerrar uma fonte com data", em vez de uma decisão especial e irreversível, deixa a prestação de contas daquele financiador intacta e não obriga a OSC a decidir, na hora do encerramento, o que vai acontecer com o projeto depois.
+
+> ✓ **Dica · Fonte encerrada continua emitindo prestação de contas**
+>
+> Encerrar não tira o botão **Prestação de contas** da fonte (ver [Prestação de contas de uma fonte](#prestacao-de-contas-por-fonte), abaixo). Você continua podendo emitir o documento dela — inclusive anos depois, para uma auditoria ou uma cópia perdida — com o mesmo período que ela cobriu enquanto esteve ativa.
+
+## Prestação de contas de uma fonte
+{: #prestacao-de-contas-por-fonte }
+
+> 💡 **Por que isso importa**
+>
+> Prestar contas a um financiador é provar, com números e documento, quanto ele repassou, quanto foi gasto em cada item do plano de trabalho e quanto sobrou ou foi devolvido — para o edital, o convênio, a emenda ou o patrocínio, **daquela fonte específica**, não da OSC inteira. Sem isso, prestar contas significa recortar manualmente as movimentações do projeto que pertencem àquele financiador em particular, separando-as do que veio do caixa geral ou de outro financiador do mesmo projeto — trabalho que se repete a cada prestação e que é fácil de errar. O RIT360 Financeiro monta esse documento pronto, pela própria fonte.
+>
+> **Exemplo:** o Instituto Exemplo tem um projeto de reforço escolar financiado por dois convênios ao mesmo tempo — a Prefeitura (R$ 40.000, já encerrado) e uma fundação privada (R$ 25.000, ainda em execução). Ao prestar contas à Prefeitura, a coordenadora abre a fonte "Prefeitura — Convênio 12/2025" e emite a prestação de contas **só dela**: o documento não mistura o dinheiro da fundação, mesmo que as duas fontes financiem o mesmo projeto ao mesmo tempo.
+
+Cada fonte de um projeto — ativa ou já encerrada — tem o botão **Prestação de contas**, no bloco [Quem paga este projeto](#quem-paga-este-projeto), na aba Financeiro. Ele abre uma janela para escolher o **período**: por padrão, do **início da fonte** até o **fim dela** (se já encerrada) ou até **hoje** (se ainda ativa) — mas você pode estreitar ou alargar as datas antes de confirmar.
+
+<!-- CAPTURA PENDENTE: janela "Prestação de contas de {nome da fonte}" aberta a partir do botão na aba Financeiro do projeto, com os campos De/Até preenchidos com o período padrão e o botão "Emitir prestação de contas". Rota /projetos/{id}, aba Financeiro, viewport desktop e mobile. Precisa de um projeto de teste com uma fonte de financiador na OSC Alpha. -->
+
+Ao confirmar, o documento é **preparado em segundo plano** — o mesmo comportamento de todo relatório do RIT360 Financeiro, já visto no [relatório de encerramento do projeto](#a-aba-encerramento): abre uma página de acompanhamento, e o download começa sozinho quando o PDF fica pronto (você pode fechar a aba, porque o link também chega por aviso). O documento pronto fica guardado na área **[Documentos](/modulos/documentos/)**, com o tipo **"Prestação de contas por fonte"**.
+
+### O que vem no documento
+
+Na ordem:
+
+1. **Capa** — organização, projeto, financiador, instrumento (o edital/convênio, quando informado) e período; e, quando a fonte tem conta exclusiva, o nome da conta.
+2. **Resumo** — recebido do financiador, gasto, devolvido e saldo, em quatro números.
+3. **Repasses recebidos** — cada valor que entrou daquela fonte, no período.
+4. **Plano de trabalho vigente**, item a item — para cada rubrica, o aprovado original, o aprovado vigente (depois de aditivos e remanejamentos), o gasto e o saldo, com as despesas daquele item listadas por baixo. Rubrica **acima do plano** ganha um selo de aviso.
+5. **Histórico do plano** — as versões aprovadas (original e aditivos) e os remanejamentos do período, cada um com data, valor, justificativa e se há documento anexado.
+6. **Despesas fora do plano de trabalho** — as que usam categoria não associada a nenhum item.
+7. **Despesas sem item escolhido** — as que ficaram associadas à fonte sem alguém ter escolhido a rubrica.
+8. **Devoluções ao financiador** — o que foi devolvido no período (ver [Devolução é despesa da fonte, não estorno](#corrigir-depois-quem-pagou-este-lancamento), acima).
+9. **Despesas do projeto sem fonte definida no período** — um alerta de que esses lançamentos não entram nos números acima e precisam ser corrigidos para a prestação fechar certo.
+10. **Anexo "de → para"** — a ligação, vigente em cada data, entre os itens do plano e as categorias da organização que contam para eles.
+
+> 📖 **Conceito · Seção vazia não some — ela diz "Nada no período"**
+>
+> Uma fonte sem devolução no período, ou sem nenhuma despesa fora do plano, continua mostrando a seção correspondente — só que com o aviso **"Nada no período"**, em vez de simplesmente pular a seção. É assim que quem lê a prestação sabe que aquele item foi checado e deu zero, não que o documento esqueceu de olhar.
+
+> ⚠️ **Atenção · Fonte sem plano de trabalho traz um documento mais simples**
+>
+> Uma fonte do tipo **Caixa geral** ou **Receitas do próprio projeto** que nunca teve plano de trabalho cadastrado (ver [Plano de trabalho](#plano-de-trabalho), abaixo) gera a prestação **sem** as seções de plano, histórico, fora do plano, sem item escolhido e "de → para" — ficam só capa, resumo, repasses, devoluções e despesas sem fonte definida. Nada é inventado para preencher espaço.
+
+### Quem pode emitir
+
+Quem **coordena o projeto** (ver [Papel no projeto](#conceitos-essenciais), acima) ou tem a **permissão de ver relatórios** da organização. Sem nenhum dos dois, o botão **Prestação de contas** não aparece naquela fonte.
+
+### Quando dá errado
+
+- **"Você não pode emitir a prestação de contas desta fonte."** — sua permissão mudou, ou você não é mais coordenador daquele projeto. Peça a alguém com acesso.
+- **"Confira as datas do período: a data final não pode ser anterior à inicial."** — ajuste o período antes de confirmar; a própria janela já avisa isso antes de você clicar em Emitir.
+- **"A geração de documentos não está configurada. Avise o suporte."** — falha de infraestrutura da organização, não algo que se resolve tentando de novo.
+- **"Não foi possível pedir a prestação de contas agora. Tente novamente."** — instabilidade momentânea; tente de novo em instantes.
+
+### Um atalho a partir da lista de contas
+
+Uma fonte com **conta exclusiva** (ver [Acrescentar ou editar uma fonte](#acrescentar-ou-editar-uma-fonte), acima) aparece também em **Configurações → Contas Bancárias**: a linha da conta mostra a que fonte e a que projeto ela atende, e quem pode emitir a prestação encontra o mesmo botão ali — ver [Contas Bancárias → Conta exclusiva de uma fonte](/configuracoes/contas/#conta-exclusiva-de-uma-fonte). Útil quando você parte da conta, não do projeto, para achar a prestação de um financiador.
 
 ## Plano de trabalho (plano de aplicação)
 {: #plano-de-trabalho }
@@ -604,6 +663,7 @@ Se a despesa não tem conta que identifique a fonte e há mais de uma possível 
 Você confirma e o lançamento segue normalmente — **nada é bloqueado**. A aba "Quem paga este projeto" também avisa, à parte, quantos lançamentos do projeto ainda estão sem fonte.
 
 ### Corrigir depois: "Quem pagou este lançamento"
+{: #corrigir-depois-quem-pagou-este-lancamento }
 
 Escolheu errado, ou quer completar um lançamento que ficou sem fonte? Abra o lançamento — o bloco **"Quem pagou este lançamento"** deixa trocar a **fonte** e o **item do plano de trabalho** a qualquer momento, e também marcar a despesa como **devolução ao financiador** (dinheiro que volta para ele, e por isso não conta como gasto do projeto).
 
@@ -622,6 +682,7 @@ Escolheu errado, ou quer completar um lançamento que ficou sem fonte? Abra o la
 A aba **Relatório** mostra os números do projeto dentro dos relatórios financeiros da OSC: **receitas e despesas por categoria**, com gráficos de distribuição, abas de **Atenção** e **Previsão**, escolha de período e **exportação**. Os [Relatórios](/modulos/relatorios/) gerais também ganharam um **filtro por projeto**, para você recortar receitas, despesas e gráficos por uma iniciativa específica.
 
 ## A aba Encerramento
+{: #a-aba-encerramento }
 
 [![Wizard de encerramento](/assets/screenshots/manual-projetos-07-encerramento-wizard.png)](/assets/screenshots/manual-projetos-07-encerramento-wizard.png)
 *Encerramento — assistente de avaliação guiado por passos*
@@ -710,6 +771,7 @@ Cada encerramento alimenta um **acervo de Lições Aprendidas** da OSC, acessív
 - **Fora do plano de trabalho** — despesa cuja categoria não está associada a nenhum item do plano vigente daquela fonte. É paga normalmente e aparece como aviso, nunca como pendência.
 - **Acima do plano** — despesa que faz um item do plano passar do valor aprovado. É paga normalmente, com aviso de risco de glosa.
 - **Categoria não permitida** — recusa que aparece sempre que se tenta ligar um lançamento (lançar, editar, corrigir, vincular, pedir reembolso ou pagamento) a um projeto cujas categorias permitidas não incluem a categoria daquele lançamento. Ver [Quando uma categoria não é aceita pelo projeto](#quando-uma-categoria-nao-e-aceita-pelo-projeto) — independente do plano de trabalho.
+- **Prestação de contas por fonte** — o documento que reúne o que uma fonte recebeu, gastou e devolveu, item a item do plano de trabalho dela, para entregar ao financiador. Emitido pelo botão **Prestação de contas** da fonte, fica guardado em [Documentos](/modulos/documentos/). Ver [Prestação de contas de uma fonte](#prestacao-de-contas-por-fonte).
 - **Rascunho local** — cópia do que você está preenchendo num formulário longo (como o cadastro de projeto), guardada automaticamente no seu dispositivo para sobreviver a um fechamento acidental. Some quando o cadastro é concluído; não é enviada ao servidor nem visível a outra pessoa. Ver [Sair no meio do cadastro não perde o preenchimento](#rascunho-do-cadastro-de-projeto).
 
 ## Por onde seguir
@@ -720,3 +782,5 @@ Cada encerramento alimenta um **acervo de Lições Aprendidas** da OSC, acessív
 - **Relatórios** — agora com filtro por projeto.
 - **Painel** — onde a saúde de todos os projetos aparece de relance.
 - **Papéis e Permissões** — para entender o papel de Coordenador de Projeto na OSC.
+- **Documentos** — onde toda prestação de contas por fonte já emitida fica guardada. Ver [Documentos → Tipos de documento cobertos](/modulos/documentos/#tipos-de-documento-cobertos).
+- **Configurações → Contas Bancárias** — o atalho para emitir a prestação de uma fonte com conta exclusiva a partir da lista de contas.

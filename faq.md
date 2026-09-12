@@ -333,6 +333,14 @@ Foram substituídas por aviso. Na versão anterior, um pagamento que passasse do
 
 O sistema confere cada categoria escolhida antes de gravar. Havendo alguma que não pode ser aceita, a mensagem diz o motivo exato: **apagada do cadastro**, se a categoria foi excluída em Configurações → Categorias, ou **de outra organização**. Remova da lista a categoria apontada, escolha a categoria certa e salve de novo. Ver [Projetos → Escolher as categorias permitidas](/modulos/projetos/#escolher-as-categorias-permitidas).
 
+### Como entrego ao financiador a prestação de contas do projeto dele?
+
+Abra o projeto, na aba **Financeiro**, e ache a fonte daquele financiador em **Quem paga este projeto**. O botão **Prestação de contas**, na própria fonte, gera um documento só com o dinheiro dela — o que foi recebido, o que foi gasto em cada item do plano de trabalho e o que foi devolvido — sem misturar com outras fontes do mesmo projeto ou com o caixa geral da OSC. Escolha o período (por padrão, do início da fonte até o fim dela ou até hoje), confirme, e o documento é montado em segundo plano — um aviso chega quando fica pronto, e ele fica guardado em [Documentos](/modulos/documentos/). Uma fonte já **encerrada** continua gerando o documento normalmente. Ver [Projetos → Prestação de contas de uma fonte](/modulos/projetos/#prestacao-de-contas-por-fonte).
+
+### Posso emitir a prestação de contas de uma fonte que já foi encerrada?
+
+Sim. Encerrar uma fonte só para de oferecê-la para lançamentos novos — o histórico, o plano de trabalho e o botão **Prestação de contas** continuam disponíveis, sem prazo de validade. Ver [Projetos → Encerrar uma fonte](/modulos/projetos/#encerrar-fonte).
+
 ## Estornos
 
 ### Quando devo estornar e quando cancelar?

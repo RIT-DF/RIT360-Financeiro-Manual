@@ -370,7 +370,15 @@ Clique em **+ Novo lançamento** no topo da lista. O formulário abre em **pági
 >
 > Quando o **Projeto** escolhido tem um financiador com **plano de trabalho** (ver [Projetos → Plano de trabalho](/modulos/projetos/#plano-de-trabalho)), um bloco **"De qual dinheiro sai este lançamento"** aparece no formulário. Ele pergunta a **fonte** e o **item do plano** só quando há mais de uma opção possível — havendo uma só, o RIT360 Financeiro escolhe sozinho. Isso vale para **novo lançamento**, **edição**, **baixa (marcar como pago)** e **pagamento de pedido de compra e pagamento**. O campo **Conta** nunca é restringido por causa disso: todas as contas ativas continuam aparecendo, mesmo em projeto com financiador. Projeto sem financiador (a maioria) não mostra esse bloco.
 
-Ver [Projetos → De qual fonte e de qual item sai cada despesa](/modulos/projetos/#de-qual-fonte-e-item) para o detalhe completo — incluindo o aviso de lançamento sem fonte, o aviso de risco de glosa, e como corrigir a escolha depois pelo bloco **[Quem pagou este lançamento](/modulos/projetos/#de-qual-fonte-e-item)** no detalhe do lançamento.
+> ⚠️ **Atenção · Só despesa pergunta fonte e rubrica**
+>
+> O bloco só aparece em lançamentos do tipo **Despesa** — é a despesa que consome o plano de trabalho de um financiador. **Receita** e **Transferência** nunca pedem fonte nem item do plano, mesmo num projeto com financiador: uma receita entra pelo bloco **[Quem paga este projeto](/modulos/projetos/#quem-paga-este-projeto)** do próprio projeto (repasse recebido), não pela escolha de rubrica de uma despesa; e transferência é só mudança de lugar do dinheiro dentro da própria OSC.
+
+Ver [Projetos → De qual fonte e de qual item sai cada despesa](/modulos/projetos/#de-qual-fonte-e-item) para o detalhe completo — incluindo o aviso de lançamento sem fonte, o aviso de risco de glosa, e como corrigir a escolha depois pelo bloco **[Quem pagou este lançamento](/modulos/projetos/#corrigir-depois-quem-pagou-este-lancamento)** no detalhe do lançamento.
+
+> ✓ **Dica · "Salvar e fazer outro" recomeça a escolha de fonte**
+>
+> Ao usar o botão **Salvar e fazer outro**, no rodapé do formulário, para lançar várias despesas em sequência, a fonte e o item do plano **não ficam marcados** de um lançamento para o próximo — o formulário limpo volta a perguntar (ou a decidir sozinho, se houver uma única opção) a cada nova despesa. Confira a fonte a cada lançamento se estiver alternando entre financiadores diferentes do mesmo projeto.
 
 **Campos opcionais:**
 

@@ -169,7 +169,17 @@ Hoje existem trinta e três vídeos, cobrindo as tarefas mais comuns:
 
 ## Navegação principal
 
-A barra de navegação no topo é o seu mapa:
+No computador (telas largas), a barra de navegação no topo é o seu mapa. Ela se divide em três blocos.
+
+### À esquerda: as duas logos
+
+A **logo do RIT360 Financeiro** fica sempre visível, à esquerda, e leva ao Painel. Ao lado dela, separada por uma linha vertical, fica a **logo da sua organização** — a mesma que a OSC cadastrou em [Configurações → Organização](/configuracoes/organizacao/#identidade-da-osc).
+
+- **Sem logo cadastrada**, aparece o **nome curto** da organização (ou a razão social completa, se ela não tiver um nome curto definido) em texto, no lugar da imagem.
+- **Passe o mouse** sobre a logo (ou o nome) para ver o **nome completo** da organização, mesmo quando a tela mostra só a logo ou um nome curto.
+- **Você participa de mais de uma organização?** Clique na logo (ou no nome) para abrir a lista e trocar — a tela inteira passa a mostrar os dados da OSC escolhida. Com uma única organização, o clique não faz nada: não há lista para abrir.
+
+### No centro: as seções
 
 | Item | O que é |
 |---|---|
@@ -179,18 +189,24 @@ A barra de navegação no topo é o seu mapa:
 | **Projetos** | Planejamento, execução e prestação de contas de projetos |
 | **Orçamento** | Orçamento anual por centro de custo e categoria — previsto × realizado |
 | **Relatórios** | Relatórios gerenciais — Visão Geral, Receitas, Despesas, Atenção e Previsão |
+| **Documentos** | Catálogo de tudo que já foi gerado — relatórios, prestações de contas, planilhas |
 
-À direita da TopNav ficam, em ordem:
+> ✓ **Dica · Em tela mais estreita, o que não cabe vai para "Mais"**
+>
+> Numa janela menor (por exemplo, o navegador não ocupando a tela cheia), pode não haver espaço para todas as seções ao mesmo tempo. As que não couberem — sempre as últimas da lista, nunca as primeiras — saem da barra e entram num menu **Mais**, ao final; a seção continua a um clique, só que dentro desse menu. Isso não é o menu **Mais** do celular (esse é outro, na barra inferior) — é o mesmo mecanismo resolvendo o mesmo problema em duas larguras de tela diferentes.
 
-- **Botão Feedback** — para enviar sugestão ou reportar problema à equipe RIT
-- **Seletor de organização** — alterna entre OSCs em que você é membro
-- **Botão Superadmin** — só visível para administradores de plataforma RIT
-- **⚙️ Engrenagem** — atalho para **Configurações da organização**, **só visível para admin e tesoureiro**
-- **Avatar do usuário** — menu com **Meu perfil**, **Novidades**, **Rever tutorial** (reabre o [tour de boas-vindas](#tour-de-boas-vindas)) e **Sair**
+### À direita: ações e a sua conta
+
+- **⚡ Superadmin** — só para quem administra a plataforma RIT, nunca para uma OSC comum
+- **💬 Enviar feedback** — abre a janela de sugestão ou problema para a equipe RIT, disponível para qualquer pessoa
+- **⚙️ Configurações** — atalho para **Configurações da organização**, só visível para quem administra ou é tesoureiro
+- **Avatar do usuário** — menu com **Meu perfil**, **Novidades** (com um pontinho quando há novidade não vista), **Rever tutorial** (reabre o [tour de boas-vindas](#tour-de-boas-vindas)) e **Sair**
 
 > 📖 **Conceito · Perfil x Configurações**
 >
 > Há uma distinção importante: **Perfil é seu** (dados pessoais, foto, dados para reembolso, preferências de notificação) — acessado pelo menu do avatar, na rota `/perfil`, disponível a qualquer usuário. **Configurações é da organização** (usuários, contas bancárias, categorias, fluxo de aprovações, integrações) — acessado pelo ícone de engrenagem, restrito a admin e tesoureiro. Não há confusão entre os dois.
+
+<!-- CAPTURA PENDENTE: barra de navegação completa no topo, desktop largo (>=1280px), mostrando as duas logos à esquerda (RIT360 Financeiro + organização), as seções no centro e os ícones à direita (feedback, configurações, avatar) — e um segundo print em janela mais estreita (~1024-1150px) mostrando o menu "Mais" recolhendo as últimas seções. Anonimizar/usar organização de teste para a logo. -->
 
 ## Como saber quando há novidades
 
