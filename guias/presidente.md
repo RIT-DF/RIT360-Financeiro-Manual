@@ -42,9 +42,9 @@ O instrumento mais poderoso do presidente é a **delegação bem feita**. Dar a 
 
 A tranquilidade do presidente vem de uma coisa simples: **conseguir abrir o sistema e, em segundos, saber como a OSC está**. Não é preciso mergulhar nos detalhes — é preciso ter o panorama e saber onde olhar mais de perto quando algo pede atenção.
 
-> 🧭 **Como o RIT360 Financeiro ajuda · Painel com as pendências e a saúde**
+> 🧭 **Como o RIT360 Financeiro ajuda · Saúde 360 com as pendências e a saúde**
 >
-> O **Painel** reúne o que importa para a presidência: saldos, o que está pendente de aprovação e a saúde dos projetos. É a sua visão de relance — sem abrir um a um, você vê o que vai bem e o que pede atenção.
+> A **Saúde 360** reúne o que importa para a presidência: saldos, o que está pendente de aprovação e a saúde dos projetos. É a sua visão de relance — sem abrir um a um, você vê o que vai bem e o que pede atenção.
 >
 > [![Painel com pendências](/assets/screenshots/manual-painel-pendencias.png)](/assets/screenshots/manual-painel-pendencias.png)
 
@@ -54,7 +54,7 @@ Uma OSC ativa toca vários projetos ao mesmo tempo. O presidente não conduz cad
 
 > 🧭 **Como o RIT360 Financeiro ajuda · Portfólio de projetos com semáforo**
 >
-> Cada projeto tem uma **saúde** (verde/amarelo/vermelho) que considera orçamento, prazo e marcos. No Painel, você vê o portfólio inteiro de uma vez — a diferença entre descobrir um problema *a tempo de agir* e descobri-lo no dia da prestação de contas.
+> Cada projeto tem uma **saúde** (verde/amarelo/vermelho) que considera orçamento, prazo e marcos. Na Saúde 360, você vê o portfólio inteiro de uma vez — a diferença entre descobrir um problema *a tempo de agir* e descobri-lo no dia da prestação de contas.
 >
 > [![Projetos no painel](/assets/screenshots/manual-10-projetos.png)](/assets/screenshots/manual-10-projetos.png)
 
@@ -88,7 +88,7 @@ A prestação de contas é, no fim, **responsabilidade da presidência** — nã
 ## Checklist do presidente tranquilo
 
 - [ ] Papéis atribuídos com critério — cada pessoa com o acesso certo.
-- [ ] Painel consultado com regularidade — saldos, pendências, saúde dos projetos.
+- [ ] Saúde 360 consultada com regularidade — saldos, pendências, saúde dos projetos.
 - [ ] Portfólio de projetos acompanhado pelo semáforo.
 - [ ] Fluxo de aprovação configurado; a presidência decide o que é da sua alçada.
 - [ ] Relatórios acompanhados antes das reuniões.

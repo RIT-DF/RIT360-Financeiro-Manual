@@ -13,7 +13,7 @@ Você acabou de **criar ou assumir uma organização** no RIT360 Financeiro. Ant
 
 > 📖 **O Painel te ajuda a lembrar**
 >
-> Se você é admin, parte deste roteiro já aparece sozinha no **Painel**, num card **"Primeiros passos"** que marca sozinho os itens conforme você conclui (conta bancária, equipe, primeiro movimento) e traz atalhos para revisar dados da OSC e categorias. O card some quando os passos principais terminam, e pode ser dispensado a qualquer momento. Veja em [Painel → Checklist "Primeiros passos"](/modulos/painel/#checklist-primeiros-passos-para-quem-administra-a-osc).
+> Se você é admin, parte deste roteiro já aparece sozinha no **Painel**, num card **"Primeiros passos"** que marca sozinho os itens conforme você conclui (conta bancária, equipe, primeiro movimento) e traz atalhos para revisar dados da OSC e categorias. O card some quando os passos principais terminam, e pode ser dispensado a qualquer momento. Veja em [Saúde 360 → Checklist "Primeiros passos"](/modulos/painel/#checklist-primeiros-passos-para-quem-administra-a-osc).
 
 ## A ordem recomendada
 
@@ -96,7 +96,7 @@ Com a base pronta, traga o histórico:
 
 > ✓ **Pronto para operar**
 >
-> Com dados da OSC, contas, categorias, fluxo de aprovação e usuários configurados, a sua organização está pronta. A partir daqui, o dia a dia é lançar, aprovar, acompanhar o Painel e gerar relatórios — tudo coberto nas seções de **Módulos** deste manual.
+> Com dados da OSC, contas, categorias, fluxo de aprovação e usuários configurados, a sua organização está pronta. A partir daqui, o dia a dia é lançar, aprovar, acompanhar a Saúde 360 e gerar relatórios — tudo coberto nas seções de **Módulos** deste manual.
 
 ## Próximo passo
 

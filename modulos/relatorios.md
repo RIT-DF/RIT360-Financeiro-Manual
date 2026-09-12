@@ -77,16 +77,16 @@ Receitas e despesas aparecem **lado a lado**, não mais em abas separadas — d�
 - Com **comparativo ligado**: colunas extras com valor do período anterior, variação em R$, variação em % e seta de tendência.
 - **Drilldown** — clique em uma linha de categoria e o RIT360 Financeiro abre `/movimentacoes` já filtrado por essa categoria + o mesmo período. Você passa do agregado para o detalhe em um clique.
 
-## Onde foram parar Atenção e Previsão
+## Onde foram parar Atenção e Projeção
 
-Duas seções que antes eram abas desta tela **mudaram de casa**, e continuam existindo — só que na tela inicial, não aqui:
+Duas seções que antes eram abas desta tela **mudaram de casa**, e continuam existindo — só que na Saúde 360 (a tela inicial), não aqui:
 
 - **Pontos de atenção** — as anomalias detectadas nos seus lançamentos (despesa concentrada, categoria com pico, fornecedor novo, categoria que voltou, queda de receita) agora moram só no **[Painel](/modulos/painel/#bloco-4--pontos-de-atenção)**, considerando os últimos 30 dias. Os limites de cada regra continuam configuráveis em **Configurações → Relatórios**, no mesmo lugar de sempre.
-- **Previsão** — a projeção de saldo mês a mês virou a terceira aba da tela inicial, ao lado do Painel e da Saúde 360: veja **[Painel → Previsão](/modulos/painel/#previsão)**. Os mesmos filtros (Tipo, Projeto, Conta, Categoria, Centro de custo) e o mesmo horizonte de 3, 6 ou 12 meses continuam lá.
+- **Projeção** — a projeção de saldo mês a mês virou a terceira aba da tela inicial, ao lado do Painel e da Situação: veja **[Saúde 360 → Projeção](/modulos/painel/#previsão)**. Os mesmos filtros (Tipo, Projeto, Conta, Categoria, Centro de custo) e o mesmo horizonte de 3, 6 ou 12 meses continuam lá.
 
 > ⚠️ **Atenção · Se você procurar aqui, não vai achar**
 >
-> Se você está acostumado a abrir Relatórios para ver os avisos ou a projeção, essa é a mudança que mais pega quem já usava o sistema. Não é bug: **Atenção e Previsão saíram desta tela de propósito**, para responder à pergunta "para onde vamos" no mesmo lugar onde já se responde "o que urge hoje" e "como estamos" — a tela inicial.
+> Se você está acostumado a abrir Relatórios para ver os avisos ou a projeção, essa é a mudança que mais pega quem já usava o sistema. Não é bug: **Atenção e Projeção saíram desta tela de propósito**, para responder à pergunta "para onde vamos" no mesmo lugar onde já se responde "o que urge hoje" e "como estamos" — a Saúde 360.
 
 ## Filtros e período compartilhados
 
@@ -271,9 +271,9 @@ Três opções na hora de revisar:
 >
 > Reserve 30 minutos no dia 5 de cada mês para abrir Relatórios filtrado no mês anterior fechado e dar uma volta pela página — resultado, evolução do saldo, receitas e despesas por categoria. Passe também pelo [Painel](/modulos/painel/) para conferir os pontos de atenção do período. Em 5 minutos você sabe se houve algo fora do esperado. Em outros 25, você manda o PDF do "relatório completo" para a diretoria com filtros do mês fechado — virou prestação de contas mensal sem esforço.
 
-> ✓ **Dica · Previsão antes de decisão grande**
+> ✓ **Dica · Projeção antes de decisão grande**
 >
-> Antes de aprovar contratação, compra grande ou novo projeto, abra a [aba Previsão](/modulos/painel/#previsão) da tela inicial, com horizonte de 6 ou 12 meses. Veja se o gasto extra mantém o saldo positivo. Se o gráfico mostra vermelho aparecendo em algum mês, a decisão precisa de mais conversa antes — não menos.
+> Antes de aprovar contratação, compra grande ou novo projeto, abra a [aba Projeção](/modulos/painel/#previsão) da Saúde 360, com horizonte de 6 ou 12 meses. Veja se o gasto extra mantém o saldo positivo. Se o gráfico mostra vermelho aparecendo em algum mês, a decisão precisa de mais conversa antes — não menos.
 
 > ⚠️ **Atenção · Comparativo só faz sentido se o período faz sentido**
 >
@@ -288,7 +288,7 @@ Três opções na hora de revisar:
 - **Déficit projetado no fluxo de caixa** — regra exclusiva do Painel que avisa quando o caixa tende a ficar negativo em um mês futuro, considerando agendados e, quando necessário, a média histórica.
 - **Severidade** — leve / moderada / alta, derivada do quanto o evento ultrapassa o limite da regra.
 - **Calibração** — análise estatística que sugere limites de regras personalizados ao padrão da sua OSC.
-- **Forecast (projeção)** — estimativa do comportamento financeiro futuro, combinando agendados (já cadastrados) com estimados (média histórica); veja [Painel → Previsão](/modulos/painel/#previsão).
+- **Forecast (projeção)** — estimativa do comportamento financeiro futuro, combinando agendados (já cadastrados) com estimados (média histórica); veja [Saúde 360 → Projeção](/modulos/painel/#previsão).
 - **Prestação de contas (documento)** — o relatório contábil completo de um período, gerado em PDF ou planilha em Movimentações e listado na área de [Documentos](/modulos/documentos/).
 - **Selo de autenticidade** — o código de verificação e o QR Code impressos no PDF da prestação de contas, que permitem a qualquer pessoa conferir a emissão numa página pública, sem login.
 - **Código de verificação** — a sequência impressa no PDF que se digita em [financeiro.rit360.org.br/verificar](https://financeiro.rit360.org.br/verificar) para conferir a autenticidade — ver [Como quem recebe confere a autenticidade](#conferir-autenticidade).
@@ -298,7 +298,7 @@ Três opções na hora de revisar:
 ## Por onde seguir
 
 - **Movimentações** — onde estão os lançamentos que alimentam todas as análises, e onde a [prestação de contas](/modulos/movimentacoes/#prestacao-de-contas) é gerada.
-- **[Painel](/modulos/painel/)** — pontos de atenção e previsão de caixa, que saíram de Relatórios e viraram abas da tela inicial.
+- **[Saúde 360](/modulos/painel/)** — pontos de atenção e previsão de caixa, que saíram de Relatórios e viraram abas da tela inicial.
 - **[Documentos](/modulos/documentos/)** — onde ficam as prestações de contas e os PDFs já gerados.
 - **Configurações → Categorias** — relatório bom depende de categorização consistente.
 - **Configurações → Relatórios** (Presidente) — ajustar limites de pontos de atenção, calibrar pelo histórico e definir o prazo de guarda dos documentos de prestação de contas.

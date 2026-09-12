@@ -42,7 +42,7 @@ permalink: /
 <div class="module-grid">
   <a class="module-card" href="/modulos/painel/">
     <div class="module-card-icon">📊</div>
-    <div class="module-card-title">Painel</div>
+    <div class="module-card-title">Saúde 360</div>
     <div class="module-card-desc">Cockpit da sua OSC — saldos, resumo e pendências por papel</div>
   </a>
   <a class="module-card" href="/modulos/movimentacoes/">

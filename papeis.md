@@ -19,7 +19,7 @@ O RIT360 Financeiro tem **sete papéis** que um usuário pode ocupar dentro de u
 | **Diretor** | — | Membro da diretoria com **visão ampla de supervisão**: vê movimentações, relatórios e projetos para acompanhar, mas **não opera** (não lança, não aprova). Pode solicitar reembolso próprio |
 | **Gestor de Centro de Custo** | — | Cuida das movimentações **do(s) centro(s) de custo sob sua responsabilidade**: pode **criar e editar** lançamentos daquele CC e vê movimentações e relatórios recortados a ele. Não exclui/estorna, não importa, não aprova, não configura |
 | **Coordenador de Projeto** | — | Solicitar reembolsos e pedidos de compra e pagamento, ver movimentações |
-| **Voluntário** | — | Solicitar reembolsos (apenas os próprios), ver o painel |
+| **Voluntário** | — | Solicitar reembolsos (apenas os próprios), ver a Saúde 360 |
 | **Comissão Fiscal** | — | Lê tudo (movimentações, reembolsos, pedidos de compra e pagamento, auditoria) **sem operar, aprovar ou solicitar pedidos de compra e pagamento**. Pode solicitar reembolso próprio |
 
 > 💡 O papel **Diretor** era chamado "Dirigente" em versões anteriores — é o mesmo papel, só o nome na tela mudou (versão 0.23.0).

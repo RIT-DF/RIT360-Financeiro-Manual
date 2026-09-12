@@ -54,7 +54,7 @@ Ao fim de cada linha há uma **lupa** 🔎, que abre o **[Caça-diferenças](/mo
 
 > ⚠️ **Atenção · Ver o saldo é uma permissão à parte**
 >
-> Sem a permissão **Ver saldo das contas**, você continua vendo a lista de contas e usando a tela normalmente — só que no lugar do valor de cada conta, e do Líquido, aparece um aviso de que não tem permissão para ver o saldo. A mesma regra vale no formulário de novo lançamento, no Painel, em Configurações → Contas Bancárias e na aba Saúde 360. Ajuste em [Cargos e permissões](/configuracoes/cargos/#permissao-ver-saldo).
+> Sem a permissão **Ver saldo das contas**, você continua vendo a lista de contas e usando a tela normalmente — só que no lugar do valor de cada conta, e do Líquido, aparece um aviso de que não tem permissão para ver o saldo. A mesma regra vale no formulário de novo lançamento, no Painel, em Configurações → Contas Bancárias e na aba Situação. Ajuste em [Cargos e permissões](/configuracoes/cargos/#permissao-ver-saldo).
 
 > 💡 **Por que isso importa**
 >

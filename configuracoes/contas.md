@@ -189,7 +189,7 @@ Cada conta na lista mostra o **saldo atual**, calculado em tempo real a partir d
 
 > ⚠️ **Atenção · Ver o saldo é uma permissão à parte**
 >
-> Sem a permissão **Ver saldo das contas**, esta página continua acessível para quem tem permissão de configuração financeira, mas o valor de cada conta aparece substituído por um aviso de permissão negada, dizendo a quem pedir. A mesma regra vale no Painel, em Movimentações, no formulário de novo lançamento e na aba Saúde 360. Concede-se e revoga-se em [Cargos e permissões](/configuracoes/cargos/#permissao-ver-saldo) — inclusive para o cargo Presidente.
+> Sem a permissão **Ver saldo das contas**, esta página continua acessível para quem tem permissão de configuração financeira, mas o valor de cada conta aparece substituído por um aviso de permissão negada, dizendo a quem pedir. A mesma regra vale no Painel, em Movimentações, no formulário de novo lançamento e na aba Situação. Concede-se e revoga-se em [Cargos e permissões](/configuracoes/cargos/#permissao-ver-saldo) — inclusive para o cargo Presidente.
 
 > ✓ **Dica · Concilie mensalmente contra o extrato bancário**
 >
@@ -249,7 +249,7 @@ Quem pede a exclusão da própria conta passa a ter apagados também os dados ba
 ## Por onde seguir
 
 - **Movimentações** — onde as contas aparecem como destino/origem dos lançamentos.
-- **Painel** — onde os saldos consolidados das contas ativas aparecem.
+- **Saúde 360** — onde os saldos consolidados das contas ativas aparecem.
 - **[Cargos e permissões](/configuracoes/cargos/#permissao-pagar)** — onde se define quem pode pagar (e, por consequência, quem vê os dados bancários completos).
 - **Configurações → Organização → Integrações → WooCommerce** — onde você define qual conta recebe receitas da loja online.
 - **[Projetos → Quem paga este projeto](/modulos/projetos/#quem-paga-este-projeto)** — onde se marca uma conta como exclusiva de uma fonte, e onde a prestação de contas por fonte também pode ser emitida.

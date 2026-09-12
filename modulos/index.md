@@ -11,7 +11,7 @@ O RIT360 Financeiro é organizado em módulos, cada um responsável por uma áre
 
 | Módulo | Descrição |
 |---|---|
-| [Painel](/modulos/painel/) | Cockpit da OSC — saldos, resumo e pendências por papel |
+| [Saúde 360](/modulos/painel/) | Cockpit da OSC — saldos, resumo e pendências por papel |
 | [Movimentações](/modulos/movimentacoes/) | Receitas, despesas e transferências — o coração do sistema |
 | [Caça-diferenças](/modulos/caca-diferencas/) | Conferir o saldo de uma conta contra o banco e caçar a diferença |
 | [Reembolsos](/modulos/reembolsos/) | Solicitar e aprovar reembolsos de despesas pagas do próprio bolso |

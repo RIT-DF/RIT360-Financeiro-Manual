@@ -63,7 +63,7 @@ A permissão **Config. financeira** é a mesma que libera [Categorias e Centros 
 [![Permissão "Ver saldo das contas", na área Contas financeiras do editor de cargos](/assets/screenshots/config-cargos-ver-saldo.png)](/assets/screenshots/config-cargos-ver-saldo.png)
 *A área "Contas financeiras" no editor de cargos, com o interruptor "Ver saldo das contas"*
 
-A permissão **Ver saldo das contas**, na área "Contas financeiras", decide quem enxerga o **valor** do saldo — não quem acessa a tela. Quem não tem a permissão continua usando **Painel**, **Movimentações**, o formulário de **novo lançamento**, **Configurações → Contas Bancárias** e a aba **Saúde 360** normalmente; só que, onde apareceria o número, lê uma frase avisando que não tem permissão para ver o saldo e a quem pedir.
+A permissão **Ver saldo das contas**, na área "Contas financeiras", decide quem enxerga o **valor** do saldo — não quem acessa a tela. Quem não tem a permissão continua usando **Painel**, **Movimentações**, o formulário de **novo lançamento**, **Configurações → Contas Bancárias** e a aba **Situação** normalmente; só que, onde apareceria o número, lê uma frase avisando que não tem permissão para ver o saldo e a quem pedir.
 
 - Vale para **qualquer cargo, inclusive o Presidente e o Tesoureiro** — não é piso essencial de nenhum papel, nem mesmo dos dois que mais mexem com dinheiro. Se a sua OSC quiser que algum deles não veja saldo (por exemplo, um Presidente honorário que não cuida do dia a dia financeiro), o interruptor pode ficar desligado até para ele.
 - Em **todo cargo, padrão ou personalizado**, é um interruptor que o Presidente liga e desliga quando quiser.

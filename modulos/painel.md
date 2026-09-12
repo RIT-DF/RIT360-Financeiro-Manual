@@ -1,18 +1,18 @@
 ---
-title: "Painel"
+title: "Saúde 360"
 nav_order: 1
 parent: "Módulos"
 permalink: /modulos/painel/
 ---
 
-A **tela inicial** é a primeira coisa que você vê após o login, e responde três perguntas separadas, em três abas: **Painel** (o que urge hoje), **Saúde 360** (como a OSC está) e **Previsão** (para onde ela vai). As três dividem o mesmo cabeçalho e o mesmo selo de pontos de atenção — você troca de aba sem perder o contexto.
+A **Saúde 360** é a tela inicial — a primeira coisa que você vê após o login — e responde três perguntas separadas, em três abas: **Painel** (o que urge hoje), **Situação** (como a OSC está) e **Projeção** (para onde ela vai). As três dividem o mesmo cabeçalho e o mesmo selo de pontos de atenção — você troca de aba sem perder o contexto.
 
 [![Painel](/assets/screenshots/painel-visao-geral.png)](/assets/screenshots/painel-visao-geral.png)
 *Aba Painel — contas e resumo do mês, fluxo de caixa, pendências e pontos de atenção*
 
 > 💡 **Por que isso importa**
 >
-> A maioria das ferramentas financeiras te despeja em uma lista enorme de lançamentos no login. A tela inicial inverte isso: **mostra primeiro o que importa para você decidir o próximo passo**, e separa três tipos de pergunta que normalmente ficam misturados — o que precisa de ação agora (Painel), se a organização está saudável (Saúde 360) e o que vem pela frente (Previsão). Tesoureiro vê quantos reembolsos esperam pagamento; presidente vê pedidos aguardando aprovação; voluntário vê seus próprios reembolsos pendentes. Resultado: você gasta menos tempo procurando informação, mais tempo decidindo.
+> A maioria das ferramentas financeiras te despeja em uma lista enorme de lançamentos no login. A Saúde 360 inverte isso: **mostra primeiro o que importa para você decidir o próximo passo**, e separa três tipos de pergunta que normalmente ficam misturados — o que precisa de ação agora (Painel), se a organização está saudável (Situação) e o que vem pela frente (Projeção). Tesoureiro vê quantos reembolsos esperam pagamento; presidente vê pedidos aguardando aprovação; voluntário vê seus próprios reembolsos pendentes. Resultado: você gasta menos tempo procurando informação, mais tempo decidindo.
 
 > 🎥 **Vídeo tutorial · Primeiro acesso: o que tem em cada lugar**
 >
@@ -21,8 +21,8 @@ A **tela inicial** é a primeira coisa que você vê após o login, e responde t
 ## As três abas
 
 - **[Painel](#aba-painel)** — a aba padrão ao entrar. O que precisa da sua atenção hoje: saldo das contas, resumo do mês, pendências por papel e pontos de atenção recentes.
-- **[Saúde 360](#saúde-360)** — quatro respostas sobre a saúde financeira da OSC: quanto está livre para usar, quanto já está comprometido, por quanto tempo o caixa aguenta, e quais projetos estão fora do ritmo.
-- **[Previsão](#previsão)** — a projeção de saldo dos próximos meses, com os mesmos filtros de Relatórios (tipo, projeto, conta, categoria, centro de custo).
+- **[Situação](#saúde-360)** — quatro respostas sobre a saúde financeira da OSC: quanto está livre para usar, quanto já está comprometido, por quanto tempo o caixa aguenta, e quais projetos estão fora do ritmo.
+- **[Projeção](#previsão)** — a projeção de saldo dos próximos meses, com os mesmos filtros de Relatórios (tipo, projeto, conta, categoria, centro de custo).
 
 Quando existe algum aviso **grave** em aberto, um selo no topo da tela mostra quantos são, em qualquer uma das três abas. Clicar nesse selo leva direto ao bloco de Pontos de atenção, na aba Painel.
 
@@ -65,7 +65,7 @@ Uma linha por conta financeira da OSC (corrente, poupança, cartão, caixa inter
 
 > ⚠️ **Atenção · Ver o saldo é uma permissão à parte**
 >
-> Se o seu cargo não tem a permissão **Ver saldo das contas**, este bloco continua aparecendo, mas no lugar do valor você lê uma frase avisando que não tem permissão para ver o saldo, e a quem pedir. A regra vale igualmente em Movimentações, no formulário de novo lançamento, em Configurações → Contas Bancárias e na aba Saúde 360. Quem administra a organização ajusta isso em [Cargos e permissões](/configuracoes/cargos/#permissao-ver-saldo).
+> Se o seu cargo não tem a permissão **Ver saldo das contas**, este bloco continua aparecendo, mas no lugar do valor você lê uma frase avisando que não tem permissão para ver o saldo, e a quem pedir. A regra vale igualmente em Movimentações, no formulário de novo lançamento, em Configurações → Contas Bancárias e na aba Situação. Quem administra a organização ajusta isso em [Cargos e permissões](/configuracoes/cargos/#permissao-ver-saldo).
 
 ### Este mês
 
@@ -136,7 +136,7 @@ Em ambos os casos, o aviso informa **em que mês** o caixa fica negativo, **de q
 
 > ⚠️ **Atenção · Este aviso só aparece no Painel**
 >
-> O déficit projetado **só aparece aqui**, no bloco de Pontos de atenção do Painel — não é repetido em nenhum outro lugar. Para a projeção completa mês a mês, com todos os filtros, use a [aba Previsão](#previsão), logo ao lado do Painel.
+> O déficit projetado **só aparece aqui**, no bloco de Pontos de atenção do Painel — não é repetido em nenhum outro lugar. Para a projeção completa mês a mês, com todos os filtros, use a [aba Projeção](#previsão), logo ao lado do Painel.
 
 A regra vem **ligada por padrão**, com antecedência de **6 meses** (configurável para 3, 6 ou 12), em **Configurações → Relatórios → Regras de pontos de atenção** — junto com as demais regras (ver [Configuração das regras de atenção](/modulos/relatorios/#configuração-das-regras-de-atenção)).
 
@@ -146,12 +146,13 @@ No rodapé do bloco de Pontos de atenção, um link indica onde ajustar as regra
 >
 > 5 minutos no Painel todo dia (ou toda segunda de manhã) substituem 1 hora de garimpo no final do mês. **Olhe contas e resumo, leia pendências, confira os pontos de atenção, decida o que precisa decidir, fecha.** Em OSC bem gerida, o Painel não tem cards com números altos parados ali há semanas — pendência só fica parada quando ninguém olhou.
 
-## Saúde 360
+## Situação
+{: #saúde-360 }
 
-[![Aba Saúde 360, com os quatro blocos: disponível, comprometido, fôlego de caixa e projetos fora do ritmo](/assets/screenshots/painel-saude360.png)](/assets/screenshots/painel-saude360.png)
-*Aba Saúde 360 — quanto está livre, quanto está comprometido, por quanto tempo o caixa aguenta, e os projetos fora do ritmo*
+[![Aba Situação, com os quatro blocos: disponível, comprometido, fôlego de caixa e projetos fora do ritmo](/assets/screenshots/painel-saude360.png)](/assets/screenshots/painel-saude360.png)
+*Aba Situação — quanto está livre, quanto está comprometido, por quanto tempo o caixa aguenta, e os projetos fora do ritmo*
 
-Enquanto o Painel responde "o que precisa de mim hoje", a **Saúde 360** responde "como a OSC está, de forma geral" — quatro blocos, cada um com uma pergunta central:
+Enquanto o Painel responde "o que precisa de mim hoje", a **Situação** responde "como a OSC está, de forma geral" — quatro blocos, cada um com uma pergunta central:
 
 ### Quanto está livre para usar
 
@@ -173,14 +174,15 @@ Lista os projetos que estão **fora do ritmo esperado** entre prazo e orçamento
 
 > 💡 **Por que isso importa**
 >
-> "Prazo e dinheiro sobrando" parece bom à primeira vista, mas costuma ser sintoma de projeto **parado** — verba captada e não executada, prazo que passou sem que ninguém tenha dado falta. A Saúde 360 trata isso como ponto de atenção, não como conquista, porque financiador cobra execução, não sobra.
+> "Prazo e dinheiro sobrando" parece bom à primeira vista, mas costuma ser sintoma de projeto **parado** — verba captada e não executada, prazo que passou sem que ninguém tenha dado falta. A Situação trata isso como ponto de atenção, não como conquista, porque financiador cobra execução, não sobra.
 
-## Previsão
+## Projeção
+{: #previsão }
 
-[![Aba Previsão, com filtros, escolha de horizonte e a tabela de meses projetados](/assets/screenshots/painel-previsao.png)](/assets/screenshots/painel-previsao.png)
-*Aba Previsão — saldo projetado mês a mês, com receita e despesa estimada ou já agendada*
+[![Aba Projeção, com filtros, escolha de horizonte e a tabela de meses projetados](/assets/screenshots/painel-previsao.png)](/assets/screenshots/painel-previsao.png)
+*Aba Projeção — saldo projetado mês a mês, com receita e despesa estimada ou já agendada*
 
-A **Previsão** projeta o saldo dos próximos meses, mês a mês, com um gráfico e uma tabela mostrando receita e despesa projetadas (marcadas como **Estimado** quando vêm de média histórica, ou **Agendado** quando já existe um lançamento futuro real por trás do número).
+A **Projeção** projeta o saldo dos próximos meses, mês a mês, com um gráfico e uma tabela mostrando receita e despesa projetadas (marcadas como **Estimado** quando vêm de média histórica, ou **Agendado** quando já existe um lançamento futuro real por trás do número).
 
 - **Horizonte** — 3, 6 ou 12 meses. Horizontes maiores exigem mais histórico de movimentação da OSC para liberar; sem histórico suficiente, a projeção soma só o que já está agendado e avisa que é isso que está mostrando, em vez de aparecer vazia.
 - **Filtros** — Tipo, Projeto, Conta, Categoria e Centro de custo, os mesmos filtros que Relatórios usa. Dá para projetar o caixa de um projeto específico, não só o consolidado da OSC.

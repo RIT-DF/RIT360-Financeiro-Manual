@@ -786,7 +786,7 @@ Cada encerramento alimenta um **acervo de Lições Aprendidas** da OSC, acessív
 - **Configurações → Contas Bancárias** — para definir o [projeto e o centro de custo padrão de uma conta](/configuracoes/contas/#projeto-e-centro-de-custo-padrao-da-conta).
 - **Reembolsos** e **Pedidos de Compra e Pagamento** — os fluxos que o botão "Registrar despesa do projeto" aciona; a mesma pergunta de fonte e item aparece ali.
 - **Relatórios** — agora com filtro por projeto.
-- **Painel** — onde a saúde de todos os projetos aparece de relance.
+- **Saúde 360** — onde a saúde de todos os projetos aparece de relance.
 - **Papéis e Permissões** — para entender o papel de Coordenador de Projeto na OSC.
 - **Documentos** — onde toda prestação de contas por fonte já emitida fica guardada. Ver [Documentos → Tipos de documento cobertos](/modulos/documentos/#tipos-de-documento-cobertos).
 - **Configurações → Contas Bancárias** — o atalho para emitir a prestação de uma fonte com conta exclusiva a partir da lista de contas.

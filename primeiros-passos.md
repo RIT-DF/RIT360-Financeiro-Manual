@@ -36,7 +36,7 @@ A entrada no RIT360 Financeiro é **controlada pela organização**, não por ca
 4. Leia e aceite a **Política de Privacidade** e os **Termos de Uso** (ambos disponíveis em `docs.financeiro.rit360.org.br`).
 5. Clique em **Concluir**.
 
-Após o primeiro acesso, você cai direto no **Painel** da sua organização, já com a OSC selecionada no topo da tela.
+Após o primeiro acesso, você cai direto na **Saúde 360** da sua organização, já com a OSC selecionada no topo da tela.
 
 > ⚠️ **Se a senha for recusada**
 >
@@ -129,7 +129,7 @@ Hoje existem trinta e três vídeos, cobrindo as tarefas mais comuns:
 
 | Vídeo | Onde assistir | Onde aparece no sistema |
 |---|---|---|
-| Primeiro acesso: o que tem em cada lugar | [Painel](/modulos/painel/) | Painel |
+| Primeiro acesso: o que tem em cada lugar | [Saúde 360](/modulos/painel/) | Saúde 360 |
 | Dados da organização e logo | [Configurações → Organização → Identidade da OSC](/configuracoes/organizacao/#identidade-da-osc) | Configurações › Organização |
 | O que configurar antes de começar | [Configurações → Categorias](/configuracoes/categorias/) | Configurações › Categorias |
 | Conta que já vem com projeto e centro de custo | [Configurações → Contas Bancárias](/configuracoes/contas/) | Configurações › Contas Bancárias |
@@ -173,7 +173,7 @@ No computador (telas largas), a barra de navegação no topo é o seu mapa. Ela 
 
 ### À esquerda: as duas logos
 
-A **logo do RIT360 Financeiro** fica sempre visível, à esquerda, e leva ao Painel. Ao lado dela, separada por uma linha vertical, fica a **logo da sua organização** — a mesma que a OSC cadastrou em [Configurações → Organização](/configuracoes/organizacao/#identidade-da-osc).
+A **logo do RIT360 Financeiro** fica sempre visível, à esquerda, e leva à Saúde 360. Ao lado dela, separada por uma linha vertical, fica a **logo da sua organização** — a mesma que a OSC cadastrou em [Configurações → Organização](/configuracoes/organizacao/#identidade-da-osc).
 
 - **Sem logo cadastrada**, aparece o **nome curto** da organização (ou a razão social completa, se ela não tiver um nome curto definido) em texto, no lugar da imagem.
 - **Passe o mouse** sobre a logo (ou o nome) para ver o **nome completo** da organização, mesmo quando a tela mostra só a logo ou um nome curto.
@@ -183,7 +183,7 @@ A **logo do RIT360 Financeiro** fica sempre visível, à esquerda, e leva ao Pai
 
 | Item | O que é |
 |---|---|
-| **Painel** | Visão consolidada de saldos e pendências |
+| **Saúde 360** | Visão consolidada de saldos e pendências |
 | **Movimentações** | Receitas, despesas e transferências |
 | **Pagamentos e Reembolsos** | Pedidos de compra e pagamento e reembolsos, em abas |
 | **Projetos** | Planejamento, execução e prestação de contas de projetos |
@@ -220,7 +220,7 @@ O RIT360 Financeiro avisa quando o sistema ganhou algo novo, sem atrapalhar o se
 
 ## Seu roteiro recomendado nos primeiros 30 minutos
 
-1. **Acesse o Painel** — entenda saldos e pendências da sua OSC
+1. **Acesse a Saúde 360** — entenda saldos e pendências da sua OSC
 2. **Vá em Meu Perfil** (menu do avatar) — confira nome/foto, ative as notificações por e-mail e push, configure dados para reembolso (PIX/TED) se você vai pedir reembolsos
 3. **Configure preferências de notificação** — escolha quais eventos receber por quais canais na matriz da seção Notificações do Perfil
 4. **Explore Movimentações** — abra a lista, aplique filtros, veja como o sistema mostra a saúde financeira
@@ -234,7 +234,7 @@ A explicação detalhada de papéis e permissões está em [Papéis e Permissõe
 - **Tesoureiro** — lançamentos, aprovações, confirmação de pagamentos, cadastro de contas e categorias
 - **Diretor** — supervisão de diretoria: vê movimentações, relatórios e projetos sem operar nem aprovar; pode solicitar reembolso próprio
 - **Coordenador de Projeto** — solicitar pagamentos e reembolsos, ver movimentações
-- **Voluntário** — solicitar os próprios reembolsos, ver o painel
+- **Voluntário** — solicitar os próprios reembolsos, ver a Saúde 360
 - **Comissão Fiscal** — leitura ampla de todos os dados financeiros (movimentações, reembolsos, pedidos, auditoria) sem operar nem aprovar; pode solicitar reembolso próprio
 
 Um usuário pode acumular mais de um papel na mesma OSC (ver [Múltiplos papéis](/papeis/#múltiplos-papéis-no-mesmo-vínculo)).
