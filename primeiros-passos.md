@@ -206,7 +206,11 @@ A **logo do RIT360 Financeiro** fica sempre visível, à esquerda, e leva à Sa�
 >
 > Há uma distinção importante: **Perfil é seu** (dados pessoais, foto, dados para reembolso, preferências de notificação) — acessado pelo menu do avatar, na rota `/perfil`, disponível a qualquer usuário. **Configurações é da organização** (usuários, contas bancárias, categorias, fluxo de aprovações, integrações) — acessado pelo ícone de engrenagem, restrito a admin e tesoureiro. Não há confusão entre os dois.
 
-<!-- CAPTURA PENDENTE: barra de navegação completa no topo, desktop largo (>=1280px), mostrando as duas logos à esquerda (RIT360 Financeiro + organização), as seções no centro e os ícones à direita (feedback, configurações, avatar) — e um segundo print em janela mais estreita (~1024-1150px) mostrando o menu "Mais" recolhendo as últimas seções. Anonimizar/usar organização de teste para a logo. -->
+[![Barra de navegação completa, em janela larga: as duas logos à esquerda, as seções no centro e os ícones de ação à direita](/assets/screenshots/primeiros-passos-navbar-larga.png)](/assets/screenshots/primeiros-passos-navbar-larga.png)
+*Barra de navegação em janela larga — todas as seções visíveis*
+
+[![Barra de navegação em janela mais estreita, com o menu "Mais" recolhendo as últimas seções](/assets/screenshots/primeiros-passos-navbar-mais.png)](/assets/screenshots/primeiros-passos-navbar-mais.png)
+*Janela mais estreita — "Documentos" recolhido dentro do menu "Mais"*
 
 ## Como saber quando há novidades
 

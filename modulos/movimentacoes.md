@@ -229,7 +229,11 @@ Marque o checkbox no início das linhas para selecionar várias movimentações.
 #### Atribuir projeto a vários lançamentos de uma vez
 {: #atribuir-projeto-em-lote }
 
-<!-- CAPTURA PENDENTE: janela "Atribuir projeto" aberta a partir da seleção em lote de Movimentações, mostrando o seletor de projeto, a lista do que vai mudar (ex.: "N lançamentos passarão a ser vinculados...") e, se possível, o aviso de recusa por categoria não permitida. Rota /movimentacoes com 3-4 linhas selecionadas, viewport desktop e mobile. Precisa de um projeto de teste com categorias permitidas restritas na OSC Alpha. -->
+[![Janela "Atribuir projeto" com o seletor de projeto, o resumo do que vai mudar e o aviso de recusa por categoria fora das permitidas](/assets/screenshots/manual-movimentacoes-atribuir-projeto-lote-desktop.png)](/assets/screenshots/manual-movimentacoes-atribuir-projeto-lote-desktop.png)
+*Atribuir projeto em lote — o aviso em laranja mostra quantos lançamentos foram recusados por categoria e por quê*
+
+[![A mesma janela no celular](/assets/screenshots/manual-movimentacoes-atribuir-projeto-lote-mobile.png)](/assets/screenshots/manual-movimentacoes-atribuir-projeto-lote-mobile.png)
+*A mesma janela, no celular*
 
 > 💡 **Por que isso importa**
 >
@@ -605,7 +609,8 @@ Em vez de digitar lançamento por lançamento, você pode importar de duas fonte
 >
 > Se a conta citada na coluna `conta` de uma linha tiver [projeto ou centro de custo padrão](/configuracoes/contas/#projeto-e-centro-de-custo-padrao-da-conta) configurado — a mesma sugestão que já preenche o [formulário de novo lançamento](#conta-com-projeto-e-centro-de-custo-padrao) —, a **prévia** mostra, nas linhas em que a planilha deixou as colunas `projeto` e `centro_de_custo` vazias, o nome do padrão seguido de **"(padrão da conta)"**. É só a prévia mostrando o que vai ser gravado; se a planilha já traz um valor naquelas colunas, ele **vence** e o padrão da conta não entra. Como cada linha tem sua própria conta, uma planilha que mistura contas diferentes pode trazer padrões diferentes, linha a linha.
 
-<!-- CAPTURA PENDENTE: prévia da importação por CSV com uma linha mostrando "Nome do projeto (padrão da conta)" e/ou "Nome do centro de custo (padrão da conta)", e outra linha com o aviso "inativo — o lançamento entra nele mesmo assim" no centro de custo. Rota /movimentacoes (Importar Lançamentos → aba CSV, depois de enviar um arquivo de exemplo), viewport desktop e mobile. -->
+[![Prévia da importação por CSV, com a linha mostrando "Oficina de Artesanato (padrão da conta)" e "Projetos (padrão da conta)"](/assets/screenshots/manual-movimentacoes-importar-csv-projeto-padrao-desktop.png)](/assets/screenshots/manual-movimentacoes-importar-csv-projeto-padrao-desktop.png)
+*A planilha não trouxe projeto nem centro de custo para esta linha — os dois vieram do padrão da conta "Caixinha"*
 
 > ✓ **Sem permissão para criar categoria/centro de custo? Você continua importando**
 >
@@ -780,8 +785,11 @@ Marcou várias linhas para criar? No topo do grupo **Novos**, escolha o projeto 
 
 Nenhum dos dois toca nas linhas que você vai conciliar, ignorar ou ainda não decidiu. Aplicar de novo com outro valor (ou em branco, para remover) troca o valor das mesmas linhas.
 
-<!-- CAPTURA PENDENTE: linha do grupo "Novos" marcada para criar despesa, com Projeto e Centro de custo preenchidos e a frase "veio do padrão desta conta" em ambos; e uma segunda linha com o aviso "Esta categoria não é aceita pelo projeto..." em laranja. Rota /movimentacoes (Conciliação → subir um OFX de exemplo numa conta com projeto padrão configurado), viewport desktop e mobile. -->
-<!-- CAPTURA PENDENTE: aplicador em massa no topo do grupo "Novos", com os dois seletores (Projeto e Centro de custo) e os dois botões "Aplicar a todas as marcadas para criar" lado a lado. Mesma rota, viewport desktop e mobile. -->
+[![Grupo "Novos" da conciliação: o aplicador em massa de Projeto e Centro de custo no topo, e uma linha marcada para criar despesa com os dois campos preenchidos "do padrão desta conta"](/assets/screenshots/manual-movimentacoes-conciliacao-projeto-padrao-desktop.png)](/assets/screenshots/manual-movimentacoes-conciliacao-projeto-padrao-desktop.png)
+*O aplicador em massa no topo, e a linha "Cola bastão" com projeto e centro de custo vindos do padrão da conta "Caixinha"*
+
+[![A mesma tela no celular](/assets/screenshots/manual-movimentacoes-conciliacao-projeto-padrao-mobile.png)](/assets/screenshots/manual-movimentacoes-conciliacao-projeto-padrao-mobile.png)
+*A mesma tela, no celular*
 
 **Reimportar o mesmo extrato não duplica nada** — cada transação é reconhecida pelo identificador único do banco.
 

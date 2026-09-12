@@ -127,7 +127,11 @@ No cadastro da conta, o interruptor **Compõe o saldo disponível da organizaç�
 
 Quando uma conta é marcada, num projeto, como **conta exclusiva** de uma fonte de financiamento (ver [Projetos → Acrescentar ou editar uma fonte](/modulos/projetos/#acrescentar-ou-editar-uma-fonte)), a lista de Contas Bancárias passa a mostrar isso na própria linha da conta: **"Conta exclusiva da fonte {nome} · projeto {nome do projeto}"**. Uma conta atendendo mais de uma fonte — uma encerrada e uma nova, por exemplo — mostra todas.
 
-<!-- CAPTURA PENDENTE: linha da lista de Contas Bancárias mostrando o texto "Conta exclusiva da fonte {nome} · projeto {nome do projeto}" abaixo do nome da conta, e o menu de ações da linha aberto com a opção "Prestação de contas · {nome da fonte}" visível. Rota /configuracoes/contas, viewport desktop e mobile. Precisa de uma conta marcada como exclusiva de uma fonte de financiador num projeto de teste na OSC Alpha, para um usuário com permissão de emitir. -->
+[![Linha da lista de Contas Bancárias mostrando "Conta exclusiva da fonte Fundo Municipal de Cultura · projeto Oficina de Artesanato"](/assets/screenshots/config-contas-conta-exclusiva-fonte-desktop.png)](/assets/screenshots/config-contas-conta-exclusiva-fonte-desktop.png)
+*A conta "Banco Exemplo · Poupança" avisando de qual fonte e projeto ela é exclusiva*
+
+[![A mesma lista no celular](/assets/screenshots/config-contas-conta-exclusiva-fonte-mobile.png)](/assets/screenshots/config-contas-conta-exclusiva-fonte-mobile.png)
+*A mesma lista, no celular*
 
 Quem tem permissão para emitir a prestação daquela fonte (coordenador do projeto, ou quem tem a permissão de ver relatórios — ver [Projetos → Quem pode emitir](/modulos/projetos/#prestacao-de-contas-por-fonte)) encontra, no menu de ações da própria linha da conta, o atalho **Prestação de contas** — direto para a mesma janela de período que existe na aba Financeiro do projeto. Sem essa permissão, o aviso da fonte continua aparecendo, mas o atalho não.
 
@@ -153,7 +157,11 @@ Uma das contas pode ser marcada como **conta padrão da organização**. A conta
 
 Além da conta padrão da organização (acima), cada conta pode ter, no próprio cadastro, um **Projeto padrão (sugestão)** e um **Centro de custo padrão (sugestão)**.
 
-<!-- CAPTURA PENDENTE: cadastro/edição de conta com os campos "Projeto padrão (sugestão)" e "Centro de custo padrão (sugestão)" preenchidos, logo abaixo do interruptor de conta padrão. Rota /configuracoes/contas (editar uma conta), viewport desktop e mobile. -->
+[![Edição de conta com os campos "Projeto padrão (sugestão)" e "Centro de custo padrão (sugestão)" preenchidos](/assets/screenshots/config-contas-projeto-centro-custo-padrao-desktop.png)](/assets/screenshots/config-contas-projeto-centro-custo-padrao-desktop.png)
+*Conta "Caixinha" com projeto e centro de custo padrão configurados*
+
+[![O mesmo formulário no celular](/assets/screenshots/config-contas-projeto-centro-custo-padrao-mobile.png)](/assets/screenshots/config-contas-projeto-centro-custo-padrao-mobile.png)
+*O mesmo formulário, no celular*
 
 > 💡 **Por que isso importa**
 >

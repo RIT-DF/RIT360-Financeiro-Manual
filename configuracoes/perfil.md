@@ -77,7 +77,11 @@ A ativação é **por dispositivo**, com um interruptor mestre **"Ativar push ne
 
 A partir da versão **v1.69.0**, **Telegram** é o terceiro canal de notificações, ao lado do E-mail e do Push. É pensado para quem já usa Telegram no dia a dia e não quer depender de abrir o e-mail ou o navegador para saber que um reembolso foi aprovado ou que um pedido está esperando seu voto.
 
-<!-- CAPTURA PENDENTE: cartão "Telegram" em Meu Perfil → Notificações, estado NÃO vinculado (botão para gerar o link de vínculo). Rota /perfil, viewport desktop e mobile. Sessão de teste (OSC Alpha) caiu para a tela de login no momento desta redação — captura fica para quando o Bruno confirmar sessão autenticada. -->
+[![Cartão Telegram em Meu Perfil → Notificações, ainda não vinculado, com o botão Vincular Telegram](/assets/screenshots/config-perfil-telegram-nao-vinculado-desktop.png)](/assets/screenshots/config-perfil-telegram-nao-vinculado-desktop.png)
+*Cartão Telegram, ainda sem vínculo — o botão gera o link de uso único*
+
+[![O mesmo cartão Telegram no celular](/assets/screenshots/config-perfil-telegram-nao-vinculado-mobile.png)](/assets/screenshots/config-perfil-telegram-nao-vinculado-mobile.png)
+*O mesmo cartão, no celular*
 
 **Como vincular:**
 

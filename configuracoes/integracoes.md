@@ -100,7 +100,7 @@ curl -H "Authorization: Bearer rit_3b95e9fe_..." \
   "organization_id": "c121b5a6-...",
   "period": { "from": "2026-07-01", "to": "2026-07-31" },
   "currency": "BRL",
-  "balance": { "total": 82643.47 },
+  "balance": { "total": 82643.47, "available": 61210.30, "restricted": 21433.17 },
   "realized": { "receitas": 595.02, "despesas": 7790, "resultado": -7194.98 },
   "budget": [
     { "fiscal_year": 2026, "available": false, "reason": "sem_versao_vigente_aprovada" }
@@ -111,6 +111,17 @@ curl -H "Authorization: Bearer rit_3b95e9fe_..." \
 ```
 
 Com `group_by=category` (ou `project`), o campo `group_by` ecoa o valor pedido e `breakdown` passa a trazer uma lista de itens, cada um com `id`, `name`, `receitas` e `despesas`. **A soma dos itens da quebra fecha exatamente com os totais de `realized`** — é uma garantia da API, não uma aproximação.
+
+### Sobre o saldo
+{: #sobre-o-saldo }
+
+O campo `balance` é sempre o **saldo de hoje** das contas ativas — ele não muda com o período `from`/`to` consultado (o período vale para `realized`, `budget` e `breakdown`).
+
+- `total` soma todas as contas ativas;
+- `available` é o saldo disponível: exclui as contas marcadas para **não compor o saldo disponível** da organização (recurso carimbado de convênio, emenda ou fundo restrito, e cartão de crédito) — ver [Compõe o saldo disponível da organização](/configuracoes/contas/);
+- `restricted` é exatamente o que ficou de fora: `total − available`.
+
+Para mostrar "quanto a organização pode usar", use `available`, não `total`.
 
 ### Sobre o orçamento
 

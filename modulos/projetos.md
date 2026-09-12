@@ -56,7 +56,11 @@ Quem pode aprovar a abertura e o encerramento de um projeto é definido pela org
 
 Ao **solicitar aprovação** (na abertura) ou **solicitar encerramento**, a tela do projeto passa a mostrar **quem está apto a aprovar**. Se você for uma dessas pessoas, a tela avisa e traz o botão de aprovar ali mesmo — não é preciso perguntar à diretoria quem decide, nem procurar em outro lugar.
 
-<!-- CAPTURA PENDENTE: cartão/aviso na aba Resumo de um projeto "Aguardando aprovação inicial", mostrando quem está apto a aprovar (ex.: "Presidente, Tesoureiro" ou nomes específicos) e, quando o usuário logado é um deles, o botão de aprovar em destaque. Rota /projetos/{id}, viewport desktop e mobile. Precisa de um projeto de teste no status "Aguardando aprovação inicial". O aviso mostra nome de aprovador, que é dado pessoal: capturar na OSC Alpha é possível desde que os nomes sejam substituídos no DOM antes do disparo (não editar a imagem depois). -->
+[![Projeto "Aguardando aprovação inicial", com o aviso "Você aprova este projeto" e o botão Aprovar abertura em destaque](/assets/screenshots/manual-projetos-aguardando-aprovacao-inicial-desktop.png)](/assets/screenshots/manual-projetos-aguardando-aprovacao-inicial-desktop.png)
+*Projeto aguardando aprovação inicial — quem pode aprovar vê o botão em destaque*
+
+[![O mesmo aviso no celular](/assets/screenshots/manual-projetos-aguardando-aprovacao-inicial-mobile.png)](/assets/screenshots/manual-projetos-aguardando-aprovacao-inicial-mobile.png)
+*O mesmo aviso, no celular*
 
 > ⚠️ **Atenção · Quem propõe, normalmente, não aprova**
 >
@@ -127,7 +131,11 @@ O botão **Novo projeto** abre um **assistente de 3 passos** (tipo e identidade 
 ### Sair no meio do cadastro não perde o preenchimento
 {: #rascunho-do-cadastro-de-projeto }
 
-<!-- CAPTURA PENDENTE: aviso "Rascunho recuperado do seu dispositivo. Continue de onde parou." no topo do assistente de Novo projeto, com o botão "Descartar" visível, e o passo/progresso restaurado (ex.: passo 2 de 3). Rota /projetos/novo, viewport desktop e mobile. Fechar a aba no meio do passo 2 com campos preenchidos e reabrir a mesma rota para reproduzir. -->
+[![Aviso "Rascunho recuperado do seu dispositivo", com o botão Descartar, e o assistente restaurado no passo 2 de 3](/assets/screenshots/manual-projetos-rascunho-recuperado-desktop.png)](/assets/screenshots/manual-projetos-rascunho-recuperado-desktop.png)
+*Reabrindo "Novo projeto" depois de sair no meio do passo 2 — o rascunho volta de onde parou*
+
+[![O mesmo aviso no celular](/assets/screenshots/manual-projetos-rascunho-recuperado-mobile.png)](/assets/screenshots/manual-projetos-rascunho-recuperado-mobile.png)
+*O mesmo aviso, no celular*
 
 > 💡 **Por que isso importa**
 >
@@ -235,7 +243,11 @@ Projetos mudam durante a execução — troca a coordenação, a data escorrega,
 
 Tanto na criação quanto na edição, a lista de **categorias permitidas** do projeto vem com uma **busca por nome** e dois botões: **Marcar todas** e **Desmarcar todas**. Com uma busca ativa, os próprios botões mudam de nome — passam a ser **Marcar todas as encontradas** e **Desmarcar as N encontradas** — porque aí eles valem só sobre o que a busca está mostrando, e não sobre a lista inteira. É o próprio botão dizendo o que vai fazer antes de você clicar. Abaixo da lista, um texto conta sempre quantas categorias estão marcadas — ou avisa que nenhuma está, e que por isso todas são aceitas.
 
-<!-- CAPTURA PENDENTE: seção de categorias permitidas (criação ou edição do projeto), com a busca ativa filtrando parte das categorias e os botões visíveis já com o texto de busca ativa ("Marcar todas as encontradas" / "Desmarcar as N encontradas"), mais o aviso de categorias marcadas fora da busca e o botão extra "Desmarcar todas (N)". Rota /projetos/novo ou /projetos/{id} (editar identidade), viewport desktop e mobile. -->
+[![Categorias permitidas com busca ativa: botões "Marcar todas as encontradas" e "Desmarcar as N encontradas", e o aviso de categorias marcadas fora da busca](/assets/screenshots/manual-projetos-categorias-busca-desktop.png)](/assets/screenshots/manual-projetos-categorias-busca-desktop.png)
+*Busca ativa filtrando "material" — os botões mudam de nome e o aviso mostra o que está marcado fora da busca*
+
+[![A mesma tela no celular](/assets/screenshots/manual-projetos-categorias-busca-mobile.png)](/assets/screenshots/manual-projetos-categorias-busca-mobile.png)
+*A mesma tela, no celular*
 
 > ⚠️ **Atenção · Com a busca ativa, "Desmarcar" só limpa o que está na tela**
 >
@@ -400,7 +412,11 @@ O Financeiro mostra o dinheiro do projeto sem tirar nada do caixa geral da OSC:
 ### Vincular lançamentos existentes
 {: #vincular-lançamentos-existentes }
 
-<!-- CAPTURA PENDENTE: janela "Vincular lançamentos existentes" aberta a partir do botão na aba Financeiro do projeto, com: (a) o filtro por conta bancária visível; (b) a faixa "N lançamentos podem ser vinculados; M têm categoria fora das permitidas" com o botão "Mostrar os M não elegíveis"; (c) a lista com os não elegíveis expandida, mostrando a caixa de seleção desabilitada e o motivo em laranja em pelo menos uma linha. Rota /projetos/{id}, aba Financeiro, viewport desktop e mobile. Precisa de um projeto de teste com categorias permitidas restritas e lançamentos sem projeto na OSC Alpha, alguns com categoria fora da lista. -->
+[![Janela "Vincular lançamentos existentes", com o filtro por conta, a faixa "N pode ser vinculado; M têm categoria fora das permitidas" e a lista de não elegíveis expandida, com a caixa desabilitada e o motivo em laranja](/assets/screenshots/manual-projetos-vincular-lancamentos-desktop.png)](/assets/screenshots/manual-projetos-vincular-lancamentos-desktop.png)
+*Vincular lançamentos existentes — os não elegíveis aparecem com o motivo, mas não podem ser marcados*
+
+[![A mesma janela no celular](/assets/screenshots/manual-projetos-vincular-lancamentos-mobile.png)](/assets/screenshots/manual-projetos-vincular-lancamentos-mobile.png)
+*A mesma janela, no celular*
 
 Ao clicar em **Vincular lançamentos existentes**, a janela lista as movimentações da organização que **ainda não têm projeto** — com busca por título ou contraparte e um **filtro por conta bancária**, útil quando a OSC segrega uma conta por projeto (ver [Conta com projeto e centro de custo padrão](/modulos/movimentacoes/#conta-com-projeto-e-centro-de-custo-padrao), em Movimentações) e você quer vincular só o que passou por aquela conta.
 
@@ -438,7 +454,11 @@ Você pode **salvar** simulações no histórico, **adotar uma como taxa oficial
 
 O bloco **Orçamento do projeto**, na aba Financeiro, mostra três números do projeto **como um todo**: **Previsto**, **Gasto** e **Sobra**. Quem coordena o projeto pode **editar o total previsto** a qualquer momento, pelo botão **Editar total**.
 
-<!-- CAPTURA PENDENTE: bloco "Orçamento do projeto" na aba Financeiro, com Previsto/Gasto/Sobra e o botão "Editar total" (e o diálogo de edição aberto, num segundo print). Rota /projetos/{id}, aba Financeiro, viewport desktop e mobile. -->
+[![Bloco Orçamento do projeto com Previsto, Gasto e Sobra, e o diálogo "Editar total previsto" aberto](/assets/screenshots/manual-projetos-orcamento-editar-total-desktop.png)](/assets/screenshots/manual-projetos-orcamento-editar-total-desktop.png)
+*Orçamento do projeto — Previsto, Gasto e Sobra, com o diálogo de edição do total aberto*
+
+[![O bloco Orçamento do projeto no celular](/assets/screenshots/manual-projetos-orcamento-mobile.png)](/assets/screenshots/manual-projetos-orcamento-mobile.png)
+*O mesmo bloco, no celular*
 
 Este número não se divide por categoria nem por conta — é a visão rápida de "o projeto está dentro do orçamento?". O detalhe **por financiador** — o que cada um aprovou, quanto já foi gasto de cada rubrica — vive no **plano de trabalho** de cada fonte, a seguir.
 
@@ -457,8 +477,8 @@ Cada projeto tem uma lista de **fontes** — de onde vem o dinheiro que o financ
 | **Receitas do próprio projeto** | festa, bazar, doação dirigida ao projeto | Não | Não |
 | **Financiador** | edital, convênio, termo de fomento, emenda parlamentar, patrocínio | Sim, no sentido de que é para isso que ele serve | Opcional — pergunta-se se o financiador exige |
 
-[![Bloco "Quem paga este projeto" com três fontes cadastradas](/assets/screenshots/manual-projetos-fontes-01-lista.png)](/assets/screenshots/manual-projetos-fontes-01-lista.png)
-*"Quem paga este projeto" — caixa geral, uma receita própria e um financiador com plano de trabalho, cada um com seu período*
+[![Bloco "Quem paga este projeto" com dois financiadores e o caixa geral](/assets/screenshots/manual-projetos-fontes-01-lista.png)](/assets/screenshots/manual-projetos-fontes-01-lista.png)
+*"Quem paga este projeto" — dois financiadores e o caixa geral da OSC, cada um com seu período, o recebido, o gasto e o próprio plano de trabalho*
 
 ### Acrescentar ou editar uma fonte
 {: #acrescentar-ou-editar-uma-fonte }
@@ -520,7 +540,8 @@ Encerrar uma fonte é **só marcar uma data de fim** — não existe uma operaç
 
 Cada fonte de um projeto — ativa ou já encerrada — tem o botão **Prestação de contas**, no bloco [Quem paga este projeto](#quem-paga-este-projeto), na aba Financeiro. Ele abre uma janela para escolher o **período**: por padrão, do **início da fonte** até o **fim dela** (se já encerrada) ou até **hoje** (se ainda ativa) — mas você pode estreitar ou alargar as datas antes de confirmar.
 
-<!-- CAPTURA PENDENTE: janela "Prestação de contas de {nome da fonte}" aberta a partir do botão na aba Financeiro do projeto, com os campos De/Até preenchidos com o período padrão e o botão "Emitir prestação de contas". Rota /projetos/{id}, aba Financeiro, viewport desktop e mobile. Precisa de um projeto de teste com uma fonte de financiador na OSC Alpha. -->
+[![Janela "Prestação de contas de {fonte}", com os campos De/Até e o botão Emitir prestação de contas](/assets/screenshots/manual-projetos-prestacao-contas-fonte-desktop.png)](/assets/screenshots/manual-projetos-prestacao-contas-fonte-desktop.png)
+*Prestação de contas de uma fonte — escolha o período e emita o documento*
 
 Ao confirmar, o documento é **preparado em segundo plano** — o mesmo comportamento de todo relatório do RIT360 Financeiro, já visto no [relatório de encerramento do projeto](#a-aba-encerramento): abre uma página de acompanhamento, e o download começa sozinho quando o PDF fica pronto (você pode fechar a aba, porque o link também chega por aviso). O documento pronto fica guardado na área **[Documentos](/modulos/documentos/)**, com o tipo **"Prestação de contas por fonte"**.
 
@@ -571,8 +592,8 @@ Uma fonte com **conta exclusiva** (ver [Acrescentar ou editar uma fonte](#acresc
 
 Cada **financiador** tem o seu próprio plano de trabalho. O **caixa geral** também pode ter um, se a OSC quiser acompanhar internamente sem financiador nenhum de fora.
 
-[![Plano de trabalho de um financiador, com três itens, gasto e categorias associadas](/assets/screenshots/manual-projetos-fontes-02-plano.png)](/assets/screenshots/manual-projetos-fontes-02-plano.png)
-*Plano de trabalho (plano de aplicação) de um Termo de fomento — cada item com o aprovado, o gasto e as categorias da organização que contam para ele*
+[![Plano de trabalho de um financiador, com item, gasto e categorias associadas](/assets/screenshots/manual-projetos-fontes-02-plano.png)](/assets/screenshots/manual-projetos-fontes-02-plano.png)
+*Plano de trabalho (plano de aplicação) de um convênio — cada item com o gasto e o aprovado, as categorias da organização que contam para ele e o aviso de despesa fora do plano*
 
 ### Criar o plano de trabalho de uma fonte
 
@@ -614,7 +635,7 @@ Clique em **Remanejar** para passar valor aprovado de um item para outro **do me
 O botão **Ver histórico**, no plano de trabalho de cada fonte, mostra a sequência completa: o **plano aprovado original**, cada **aditivo**, cada **remanejamento** (com a justificativa e se há documento anexado) e as mudanças no **"de → para"** das categorias — cada uma com a data em que passou a valer. É como ver o plano em qualquer dia do passado, e é o material pronto para uma prestação de contas ou uma auditoria.
 
 [![Histórico do plano de trabalho, com versões, remanejamentos e mudanças de categoria](/assets/screenshots/manual-projetos-fontes-03-historico.png)](/assets/screenshots/manual-projetos-fontes-03-historico.png)
-*Histórico do plano de trabalho — versões aprovadas, remanejamentos com justificativa e documento, e mudanças no "de → para"*
+*Histórico do plano de trabalho — versões aprovadas, remanejamentos (com justificativa e indicação de documento, quando houver) e as categorias ligadas a cada rubrica, com data*
 
 > 📖 **Conceito · O plano aprovado nunca é sobrescrito**
 >
@@ -628,8 +649,7 @@ Uma despesa cuja categoria **não está associada a nenhum item** do plano vigen
 
 Se uma despesa faz um item **passar do valor aprovado**, o pagamento acontece normalmente — o RIT360 Financeiro **nunca retém nem recusa** um pagamento por isso. O que aparece é um aviso, no item e no lançamento, de que o valor está acima do aprovado e que o **financiador pode glosar** a despesa. O atalho para **Remanejar** fica à mão, junto do aviso.
 
-[![Item do plano com o aviso de gasto acima do aprovado](/assets/screenshots/manual-projetos-fontes-04-acima-do-plano.png)](/assets/screenshots/manual-projetos-fontes-04-acima-do-plano.png)
-*Item "Material de consumo" com gasto acima do aprovado — aviso em laranja e o atalho para registrar o remanejamento*
+<!-- CAPTURA PENDENTE: item do plano de trabalho com gasto acima do aprovado — aviso "Já foi gasto mais do que o previsto nesta rubrica..." e o botão Remanejar. Rota /projetos/{id}?aba=financeiro, no Instituto Exemplo (projeto Oficina de Artesanato), desktop. Precisa de uma despesa que passe do aprovado de uma rubrica. Arquivo esperado: manual-projetos-fontes-04-acima-do-plano.png -->
 
 > ⚠️ **Por que o sistema não trava o pagamento acima da rubrica**
 >
@@ -650,7 +670,8 @@ Ao lançar ou pagar uma despesa do projeto, o RIT360 Financeiro decide **fonte**
 - **Categoria associada a mais de um item, ou fonte com itens sem categoria** — o lançamento pergunta o item, sugerindo o provável.
 - **Categoria não associada a nenhum item** — a despesa é paga e marcada [fora do plano de trabalho](#plano-de-trabalho), sem perguntar (não há o que escolher).
 
-<!-- CAPTURA PENDENTE: bloco "De qual dinheiro sai este lançamento" no formulário de novo lançamento (ou edição), mostrando os seletores de Fonte e de Rubrica do plano de trabalho quando há mais de uma opção, e o aviso de risco de glosa. Rota /movimentacoes/novo com um projeto de financiador com plano de trabalho e mais de uma fonte/item possível, viewport desktop e mobile. -->
+<!-- CAPTURA PENDENTE: bloco "De qual dinheiro sai este lançamento" no formulário de novo lançamento (ou edição), mostrando os seletores de Fonte e de Rubrica do plano de trabalho quando há mais de uma opção, e o aviso de risco de glosa. Rota /movimentacoes/novo com um projeto de financiador com plano de trabalho e mais de uma fonte/item possível, viewport desktop e mobile.
+Tentativa registrada em 11/09/2026 (sessão de captura do manual): montei, no Instituto Exemplo, um projeto (Oficina de Artesanato) com DUAS fontes sem conta exclusiva (Caixa geral e o financiador "Instituto Parceiro Educacional"), cada uma com um item de plano de trabalho usando a MESMA categoria ("Material de escritório"), para forçar a ambiguidade que o texto acima descreve. Mesmo assim, o formulário de novo lançamento só mostrou a caixa "Esta despesa é uma devolução ao financiador", sem os seletores de Fonte/Rubrica — e a chamada de rede `resolve_movement_funding` sempre voltou com uma fonte e um item já decididos, sem pedir confirmação. Não decidido se é um caso que o sistema realmente resolve sozinho por alguma regra de desempate não documentada aqui, ou se a tela do seletor não está implementada neste cenário. Quem retomar: comece conferindo o código-fonte da resolução (RPC `resolve_movement_funding`) antes de tentar mais combinações de dados de teste. -->
 
 **Parcelas e recorrências herdam a escolha** feita no lançamento — todas as ocorrências criadas junto passam a valer para a mesma fonte e item, exceto as que caem fora do período de validade da fonte escolhida.
 
@@ -667,14 +688,21 @@ Você confirma e o lançamento segue normalmente — **nada é bloqueado**. A ab
 
 Escolheu errado, ou quer completar um lançamento que ficou sem fonte? Abra o lançamento — o bloco **"Quem pagou este lançamento"** aparece em qualquer movimentação vinculada a um projeto, seja **despesa**, **receita** ou **transferência**, e deixa trocar a **fonte** a qualquer momento.
 
-[![Bloco "Quem pagou este lançamento" no detalhe da movimentação](/assets/screenshots/manual-projetos-fontes-05-quem-pagou.png)](/assets/screenshots/manual-projetos-fontes-05-quem-pagou.png)
-*"Quem pagou este lançamento" — trocar a fonte, o item do plano e marcar como devolução ao financiador*
+[![Bloco "Quem pagou este lançamento" numa despesa, com os seletores de Fonte e Rubrica do plano de trabalho](/assets/screenshots/manual-projetos-fontes-05-quem-pagou-desktop.png)](/assets/screenshots/manual-projetos-fontes-05-quem-pagou-desktop.png)
+*"Quem pagou este lançamento" numa despesa — fonte e rubrica já resolvidas automaticamente pelo sistema*
+
+[![O mesmo bloco no celular](/assets/screenshots/manual-projetos-fontes-05-quem-pagou-mobile.png)](/assets/screenshots/manual-projetos-fontes-05-quem-pagou-mobile.png)
+*O mesmo bloco, no celular*
 
 > ⚠️ **Atenção · Rubrica e devolução só existem em despesa**
 >
 > Numa **receita** ou numa **transferência**, o bloco mostra só o seletor de **Fonte** — sem o item do plano de trabalho e sem a caixa de devolução ao financiador. Faz sentido: rubrica é *onde* uma despesa consumiu o plano de trabalho, e devolução é dinheiro que **volta** ao financiador — nenhum dos dois se aplica a dinheiro que está **entrando** (receita) ou só mudando de conta dentro da própria organização (transferência). Nesses dois tipos, o bloco serve só para você saber (e registrar) de qual fonte veio ou para qual fonte foi aquele lançamento.
 
-<!-- CAPTURA PENDENTE: bloco "Quem pagou este lançamento" no detalhe de uma RECEITA (ou transferência) de projeto, mostrando só o seletor de Fonte, sem rubrica nem caixa de devolução — para contrastar com o print de despesa acima. Rota /movimentacoes/:id de uma receita vinculada a um projeto com financiador, viewport desktop e mobile. -->
+[![Bloco "Quem pagou este lançamento" numa receita, mostrando só o seletor de Fonte — sem rubrica nem caixa de devolução](/assets/screenshots/manual-projetos-fontes-06-quem-pagou-receita-desktop.png)](/assets/screenshots/manual-projetos-fontes-06-quem-pagou-receita-desktop.png)
+*Numa receita, o bloco só pergunta a fonte — sem rubrica nem devolução, que só existem em despesa*
+
+[![O mesmo bloco no celular](/assets/screenshots/manual-projetos-fontes-06-quem-pagou-receita-mobile.png)](/assets/screenshots/manual-projetos-fontes-06-quem-pagou-receita-mobile.png)
+*O mesmo bloco, no celular*
 
 > ✓ **Dica · Devolução é despesa da fonte, não estorno**
 >
