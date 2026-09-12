@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.117.4] — 2026-09-12
+
+### Corrigido
+
+- A consulta externa de resumo financeiro (usada por sistemas integrados, como o RFCC+) deixou de somar as contas de uso restrito no saldo disponível — agora mostra separado o valor disponível e o valor reservado.
+- O acesso aos comprovantes de pedidos de compra e de reembolsos passou a ser verificado de forma explícita, sem mudar quem tem acesso.
+- O aviso de categoria não permitida pelo projeto passou a ser o mesmo em todas as telas (lançamento manual, importação por planilha, conciliação de extrato e vínculo de lançamentos), explicando onde autorizar a categoria.
+
 ## [1.117.3] — 2026-09-11
 
 ### Corrigido
