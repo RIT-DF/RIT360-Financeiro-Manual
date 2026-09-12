@@ -665,10 +665,16 @@ Você confirma e o lançamento segue normalmente — **nada é bloqueado**. A ab
 ### Corrigir depois: "Quem pagou este lançamento"
 {: #corrigir-depois-quem-pagou-este-lancamento }
 
-Escolheu errado, ou quer completar um lançamento que ficou sem fonte? Abra o lançamento — o bloco **"Quem pagou este lançamento"** deixa trocar a **fonte** e o **item do plano de trabalho** a qualquer momento, e também marcar a despesa como **devolução ao financiador** (dinheiro que volta para ele, e por isso não conta como gasto do projeto).
+Escolheu errado, ou quer completar um lançamento que ficou sem fonte? Abra o lançamento — o bloco **"Quem pagou este lançamento"** aparece em qualquer movimentação vinculada a um projeto, seja **despesa**, **receita** ou **transferência**, e deixa trocar a **fonte** a qualquer momento.
 
 [![Bloco "Quem pagou este lançamento" no detalhe da movimentação](/assets/screenshots/manual-projetos-fontes-05-quem-pagou.png)](/assets/screenshots/manual-projetos-fontes-05-quem-pagou.png)
 *"Quem pagou este lançamento" — trocar a fonte, o item do plano e marcar como devolução ao financiador*
+
+> ⚠️ **Atenção · Rubrica e devolução só existem em despesa**
+>
+> Numa **receita** ou numa **transferência**, o bloco mostra só o seletor de **Fonte** — sem o item do plano de trabalho e sem a caixa de devolução ao financiador. Faz sentido: rubrica é *onde* uma despesa consumiu o plano de trabalho, e devolução é dinheiro que **volta** ao financiador — nenhum dos dois se aplica a dinheiro que está **entrando** (receita) ou só mudando de conta dentro da própria organização (transferência). Nesses dois tipos, o bloco serve só para você saber (e registrar) de qual fonte veio ou para qual fonte foi aquele lançamento.
+
+<!-- CAPTURA PENDENTE: bloco "Quem pagou este lançamento" no detalhe de uma RECEITA (ou transferência) de projeto, mostrando só o seletor de Fonte, sem rubrica nem caixa de devolução — para contrastar com o print de despesa acima. Rota /movimentacoes/:id de uma receita vinculada a um projeto com financiador, viewport desktop e mobile. -->
 
 > ✓ **Dica · Devolução é despesa da fonte, não estorno**
 >

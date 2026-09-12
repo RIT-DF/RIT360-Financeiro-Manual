@@ -11,6 +11,26 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.117.3] — 2026-09-11
+
+### Corrigido
+
+- A lista de Projetos deixou de mostrar a barrinha de cor cinza ao lado do nome — ela não carregava informação nenhuma.
+- Na tela de Usuários, o campo de busca (por nome ou e-mail) deixou de ficar espremido entre os filtros de cargo e situação.
+- O cadastro de conta deixou de pedir o nome de um ícone — ninguém sabia preencher esse campo.
+
+## [1.117.2] — 2026-09-11
+
+### Adicionado
+
+- Na importação por planilha e na conciliação do extrato, agora é possível ver, antes de confirmar, em qual projeto e centro de custo cada lançamento vai entrar.
+- Na conciliação do extrato, dá para escolher o projeto de cada linha (ou "nenhum projeto") antes de confirmar. Se a categoria da linha não for aceita pelo projeto escolhido, você é avisado antes, e a linha não é criada.
+
+### Corrigido
+
+- Na planilha, um centro de custo inativo citado na importação deixou de gerar um cadastro repetido — o lançamento entra no centro de custo já existente.
+- No detalhe de uma receita ou de uma transferência, o cartão de "quem pagou este lançamento" passou a mostrar só a fonte, sem oferecer rubrica ou devolução (que só fazem sentido em despesa).
+
 ## [1.117.1] — 2026-09-11
 
 ### Adicionado

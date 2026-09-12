@@ -55,10 +55,10 @@ Clique em **+ Nova conta**. Preencha:
 - **Projeto padrão** e **Centro de custo padrão** (opcionais) — ver a seção **Projeto e centro de custo padrão da conta**, abaixo
 - **Compõe o saldo disponível da organização** — ligado por padrão, **exceto para o tipo Cartão de crédito, que já nasce desligado**; ver a seção **Compõe o saldo disponível da organização**, abaixo
 - **Dados bancários** (opcional, recolhível) — banco, agência e demais dados, quando aplicável
-- **Personalização** (opcional, recolhível) — uma **cor** e um **ícone** para a conta; ver a seção **Personalização**, abaixo
+- **Personalização** (opcional, recolhível) — uma **cor** para a conta; ver a seção **Personalização**, abaixo
 
 [![Editar conta — conta padrão e personalização](/assets/screenshots/config-contas-editar.png)](/assets/screenshots/config-contas-editar.png)
-*Cadastro/edição de conta — alternar conta padrão e definir cor e ícone*
+*Cadastro/edição de conta — alternar conta padrão e definir a cor*
 
 > 📖 **Conceito · Saldo inicial e data de abertura**
 >
@@ -67,7 +67,7 @@ Clique em **+ Nova conta**. Preencha:
 ## Ações por conta
 
 - **Definir padrão / Remover padrão** — marca (ou desmarca) a conta como **padrão da organização**; ver abaixo
-- **Editar** — alterar nome, banco, tipo, cor e ícone (não o saldo — saldo só muda via movimentações)
+- **Editar** — alterar nome, banco, tipo e cor (não o saldo — saldo só muda via movimentações)
 - **Desativar / Reativar** — uma conta desativada deixa de ser oferecida em novos lançamentos e importações, mas seu histórico permanece preservado e continua aparecendo nos filtros das listas
 - **Excluir** — remove o cadastro definitivamente; só para conta sem nenhuma movimentação. Ver [Excluir contas](#excluir-contas), abaixo.
 
@@ -157,20 +157,27 @@ Além da conta padrão da organização (acima), cada conta pode ter, no própri
 
 > 💡 **Por que isso importa**
 >
-> OSC que mantém uma conta bancária por projeto — comum em quem administra convênio ou emenda com conta segregada — lançava a despesa e depois precisava lembrar de marcar o projeto (e o centro de custo) toda vez, na mesma tela. Com o padrão da conta configurado, os dois campos **já chegam preenchidos** ao escolher aquela conta em um novo lançamento — sobra só confirmar ou trocar, quando for o caso.
+> OSC que mantém uma conta bancária por projeto — comum em quem administra convênio ou emenda com conta segregada — lançava a despesa e depois precisava lembrar de marcar o projeto (e o centro de custo) toda vez, na mesma tela, na planilha de migração e na conciliação do extrato. Com o padrão da conta configurado, os campos **já chegam preenchidos** nos três caminhos — sobra só confirmar ou trocar, quando for o caso.
 
-- **É sugestão, não trava.** Quem está lançando pode trocar o projeto e o centro de custo livremente, ou deixar em branco; o padrão da conta só preenche o campo quando ele ainda está vazio — nunca sobrescreve uma escolha que a pessoa já fez na mesma tela.
+> 📖 **Conceito · Por que é sugestão, e não trava**
+>
+> **Exemplo:** o Instituto Exemplo abriu uma conta corrente exclusiva para o Termo de Fomento 12/2026 e configurou o projeto correspondente como padrão dela. No mesmo extrato dessa conta, ao lado dos repasses e das despesas do termo, aparecem também a **tarifa bancária mensal** e o **rendimento da conta remunerada** — nenhum dos dois é despesa ou receita do projeto, e sim custo/rendimento financeiro da própria organização. Se o padrão da conta **travasse** o projeto, esses dois lançamentos entrariam no termo por engano, distorcendo a prestação de contas ao financiador. Sendo sugestão, o projeto vem pré-marcado (poupando o trabalho nas dezenas de lançamentos que são mesmo do termo) e a pessoa troca para "Sem projeto" só nesses dois casos.
+
+- **É sugestão, não trava — nos três caminhos.** Quem está lançando, importando por planilha ou conciliando o extrato pode trocar o projeto e o centro de custo livremente, ou deixar sem projeto; o padrão da conta só preenche o campo quando ele ainda está vazio (planilha) ou ainda não foi trocado na tela (lançamento manual e conciliação) — nunca sobrescreve uma escolha que a pessoa já fez.
 - **Onde configurar:** no cadastro ou na edição da conta, em **Configurações → Contas Bancárias**, junto do interruptor de conta padrão.
-- **Onde funciona:** no formulário de **[novo lançamento](/modulos/movimentacoes/#registrar-novo-lançamento)**, ao escolher a conta. Se a conta tem projeto padrão e você registra o lançamento com outro projeto (ou nenhum), a tela pede uma confirmação antes de salvar — para evitar que a divergência passe batido sem ninguém notar.
-- **Nenhum dos dois é obrigatório.** Conta sem projeto e centro de custo padrão continua funcionando exatamente como antes — o novo lançamento simplesmente não vem com nada pré-preenchido a partir da conta.
+- **Onde funciona:**
+  - no formulário de **[novo lançamento](/modulos/movimentacoes/#registrar-novo-lançamento)**, ao escolher a conta — e, aqui, se você registrar com outro projeto (ou nenhum), a tela pede uma confirmação antes de salvar, para a divergência não passar batida sem ninguém notar;
+  - na **[importação por planilha](/modulos/movimentacoes/#importar-lançamentos)**, nas linhas em que as colunas `projeto` e `centro_de_custo` vierem vazias — a planilha, quando traz valor nessas colunas, sempre vence o padrão;
+  - na **[conciliação do extrato](/modulos/movimentacoes/#conciliacao-projeto-e-centro-de-custo)**, em toda linha marcada para criar receita ou despesa.
+- **Nenhum dos dois é obrigatório.** Conta sem projeto e centro de custo padrão continua funcionando exatamente como antes — nenhum dos três caminhos vem com algo pré-preenchido a partir da conta.
 
 > ✓ **Dica · Uma conta por projeto é o caso que mais aproveita**
 >
-> Se a sua OSC segrega uma conta bancária por convênio ou por projeto grande, configure o projeto padrão daquela conta uma vez e deixe de repetir a escolha em cada lançamento. Vale o mesmo para um centro de custo que sempre responde pela mesma conta (a filial que só movimenta pela conta local, por exemplo).
+> Se a sua OSC segrega uma conta bancária por convênio ou por projeto grande, configure o projeto padrão daquela conta uma vez e deixe de repetir a escolha em cada lançamento, em cada linha da planilha de migração e em cada linha da conciliação. Vale o mesmo para um centro de custo que sempre responde pela mesma conta (a filial que só movimenta pela conta local, por exemplo).
 
-## Personalização (cor e ícone)
+## Personalização (cor)
 
-Na seção **Personalização** do cadastro da conta, você pode definir uma **cor** (em hexadecimal) e um **ícone** para a conta. A cor vira um **acento visual** nos cartões de saldo — no **Painel**, na lista de movimentações e nos relatórios —, ajudando a distinguir as contas de relance.
+Na seção **Personalização** do cadastro da conta, você pode definir uma **cor** para a conta. A cor vira um **acento visual** nos cartões de saldo — no **Painel**, na lista de movimentações e nos relatórios —, ajudando a distinguir as contas de relance.
 
 > ✓ **Dica · Cores ajudam a bater o olho**
 >

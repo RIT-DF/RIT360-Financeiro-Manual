@@ -588,8 +588,8 @@ Em vez de digitar lançamento por lançamento, você pode importar de duas fonte
 | `conta` | Sim | Conta de origem (deve existir na OSC). |
 | `categoria` | Sim (exceto transferência) | Categoria compatível com o tipo. Transferência não tem categoria. |
 | `conta_destino` | Só em transferência | Conta que recebe; obrigatória e diferente da origem. |
-| `projeto` | Não | Projeto **aberto** para vincular (qualquer tipo). |
-| `centro_de_custo` | Não | Centro de custo para vincular (qualquer tipo). |
+| `projeto` | Não | Projeto **aberto** para vincular (qualquer tipo). Vazio → **padrão da conta**, quando a conta tiver um configurado. |
+| `centro_de_custo` | Não | Centro de custo para vincular (qualquer tipo). Vazio → **padrão da conta**, quando a conta tiver um configurado. |
 | `data_pagamento` | Não | Data de efetivação. Em branco = pendente. |
 | `beneficiario` | Não | Quem recebeu/pagou. |
 | `forma_pagamento` | Não | `pix`, `cartão`, `dinheiro`, etc. |
@@ -599,6 +599,13 @@ Em vez de digitar lançamento por lançamento, você pode importar de duas fonte
 - **Projeto** não encontrado (fechado/inexistente) → o lançamento entra **sem o vínculo**, com aviso; nunca bloqueia.
 - **Conta ou categoria que ainda não existe** na OSC vira uma **pendência resolvida na própria tela de resumo**, com três opções: **criar** o cadastro que falta (categoria ou conta), **mapear** para um existente, ou **deixar de fora** as linhas correspondentes — nesse último caso, cadastre depois e reimporte a mesma planilha: só as linhas que ficaram de fora entram, sem repetir o que já foi importado. O casamento de nomes ignora acentos, maiúsculas/minúsculas e espaços.
 - **Centro de custo que ainda não existe** também vira **pendência na tela de resumo**, com três opções por nome: **criar** o centro de custo, **mapear** para um existente, ou **importar aquelas linhas sem** centro de custo. Centro de custo em branco (ou coluna ausente) → o lançamento entra sem centro de custo, sem aviso.
+- **Centro de custo que existe mas está inativo** não vira pendência: a prévia mostra o aviso **"inativo — o lançamento entra nele mesmo assim"**, e é isso que acontece. Nada novo é criado e o cadastro inativo **não é reativado** — se quiser voltar a usá-lo normalmente, reative-o antes em [Categorias e Centros de Custo](/configuracoes/categorias/#desativar-categorias-e-centros-de-custo).
+
+> 📖 **Conceito · A prévia já mostra o padrão da conta, e a planilha vence quando preenchida**
+>
+> Se a conta citada na coluna `conta` de uma linha tiver [projeto ou centro de custo padrão](/configuracoes/contas/#projeto-e-centro-de-custo-padrao-da-conta) configurado — a mesma sugestão que já preenche o [formulário de novo lançamento](#conta-com-projeto-e-centro-de-custo-padrao) —, a **prévia** mostra, nas linhas em que a planilha deixou as colunas `projeto` e `centro_de_custo` vazias, o nome do padrão seguido de **"(padrão da conta)"**. É só a prévia mostrando o que vai ser gravado; se a planilha já traz um valor naquelas colunas, ele **vence** e o padrão da conta não entra. Como cada linha tem sua própria conta, uma planilha que mistura contas diferentes pode trazer padrões diferentes, linha a linha.
+
+<!-- CAPTURA PENDENTE: prévia da importação por CSV com uma linha mostrando "Nome do projeto (padrão da conta)" e/ou "Nome do centro de custo (padrão da conta)", e outra linha com o aviso "inativo — o lançamento entra nele mesmo assim" no centro de custo. Rota /movimentacoes (Importar Lançamentos → aba CSV, depois de enviar um arquivo de exemplo), viewport desktop e mobile. -->
 
 > ✓ **Sem permissão para criar categoria/centro de custo? Você continua importando**
 >
@@ -738,7 +745,7 @@ Se você baixa o **extrato do banco em formato OFX** (a maioria dos bancos ofere
    - **Conciliados** — alta confiança no casamento; já vêm pré-marcados para marcar como pago.
    - **Em revisão** — casamento provável, mas com alguns dias de diferença; você aceita ou ignora, uma a uma.
    - **Novos** — transações sem lançamento correspondente; para cada uma você escolhe o que fazer, ou **ignora**:
-     - **criar como receita ou despesa** — escolhendo categoria e, se a organização usa, centro de custo. Se a categoria certa ainda não existe, não precisa sair da conciliação para cadastrar: clique em **criar categoria** ali mesmo, e ela já entra escolhida na linha (exige a permissão **Config. financeira** — ver abaixo);
+     - **criar como receita ou despesa** — escolhendo categoria, projeto e, se a organização usa, centro de custo. Se a categoria certa ainda não existe, não precisa sair da conciliação para cadastrar: clique em **criar categoria** ali mesmo, e ela já entra escolhida na linha (exige a permissão **Config. financeira** — ver abaixo);
      - **criar como transferência entre contas da própria organização** — para resgate de aplicação financeira, movimentação para poupança, retirada para o caixa e casos parecidos. Escolhendo transferência, o campo de categoria dá lugar à escolha da **conta do outro lado**; a conta do próprio extrato não aparece na lista, porque não pode ser as duas pontas ao mesmo tempo. Quem é origem e quem é destino o sistema decide pelo **sinal do valor** da linha — você não precisa informar. Transferência não pede categoria, nem favorecido, nem forma de pagamento.
    - **Já conciliados** — transações que você já processou antes (apenas informativo).
 3. Ao **confirmar**, os lançamentos conciliados/aceitos são marcados como **pagos** com a data do extrato e ficam vinculados à conciliação; os "novos" que você escolher **criar** viram lançamentos. Quando o que você criar for uma **transferência**, o resultado é **um lançamento só**, guardando as duas contas — nunca dois lançamentos espelhados —, já **efetivado** na data da linha do extrato e já **conferido**.
@@ -751,9 +758,30 @@ Se você baixa o **extrato do banco em formato OFX** (a maioria dos bancos ofere
 
 **A lista de categorias, ao criar um lançamento, vem organizada por grupo e mostra só as categorias ativas** — a mesma lista, na mesma ordem, que você já vê no formulário de novo lançamento. Categoria desativada não aparece aqui (ver [Configurações → Categorias → Desativar categorias e centros de custo](/configuracoes/categorias/#desativar-categorias-e-centros-de-custo)); se for o caso de reativar uma para usá-la na conciliação, faça isso primeiro.
 
-> 💡 **Centro de custo, um a um ou para o grupo inteiro**
+### Projeto e centro de custo, linha a linha ou para o grupo inteiro
+{: #conciliacao-projeto-e-centro-de-custo }
+
+Toda linha do grupo **Novos** marcada para **criar receita ou despesa** mostra, junto da categoria, os campos **Projeto** e **Centro de custo** (este último só quando a organização usa a dimensão).
+
+> 📖 **Conceito · O padrão da conta já vem preenchido, e você troca à vontade**
 >
-> Ao marcar uma linha do grupo **Novos** para criar lançamento, o centro de custo aparece **ao lado da categoria** — opcional, e só quando a organização usa centros de custo (organização que não usa não vê o campo). Escolhendo **transferência**, o centro de custo continua disponível do mesmo jeito (opcional), mesmo sem o campo de categoria ao lado. Marcou várias linhas para criar? No topo do grupo **Novos**, escolha o centro de custo no seletor e clique em **"Aplicar a todas as marcadas para criar"** — ele é aplicado de uma vez a todas as linhas já marcadas para **criar lançamento** (receita, despesa ou transferência), sem tocar nas que você vai conciliar, ignorar ou ainda não decidiu. Aplicar de novo com outro centro de custo (ou em branco, para remover) troca o valor das mesmas linhas.
+> Se a conta do extrato tiver [projeto ou centro de custo padrão](/configuracoes/contas/#projeto-e-centro-de-custo-padrao-da-conta) configurado, os dois campos já chegam com essa sugestão marcada, e a linha traz a frase **"Projeto [nome] veio do padrão desta conta"** (o mesmo aviso existe para centro de custo). É sugestão, não trava: troque para outro projeto, escolha **"Sem projeto"**, ou deixe como está — o que estiver marcado na tela no momento de confirmar é o que é gravado.
+
+Escolhendo **transferência** em vez de receita/despesa, o campo **Projeto** desaparece — transferência entre contas da própria organização não leva projeto, porque o dinheiro continua sendo da OSC, só mudou de lugar. O centro de custo continua disponível, do mesmo jeito.
+
+> ⚠️ **Atenção · Categoria fora da lista de permitidas do projeto? A linha avisa antes, e não é criada**
+>
+> Projetos que restringem as [categorias permitidas](/modulos/projetos/#escolher-as-categorias-permitidas) recusam, também aqui, uma categoria fora da lista: a linha mostra o aviso **Esta categoria não é aceita pelo projeto "[nome]" — a linha não será criada** antes de você confirmar. Confirmando assim mesmo, a linha **não vira lançamento** e o resultado final da conciliação lista o motivo ao lado dela — mas, como nada foi gravado para aquela transação, ela **continua pendente** e volta a aparecer em **Novos** na próxima vez que você importar o mesmo extrato, do mesmo jeito que qualquer linha não decidida. Troque a categoria ou o projeto e decida de novo.
+
+Marcou várias linhas para criar? No topo do grupo **Novos**, escolha o projeto (ou "Sem projeto") ou o centro de custo no seletor correspondente e clique em **"Aplicar a todas as marcadas para criar"**:
+
+- O aplicador de **projeto** só afeta as linhas marcadas para **receita ou despesa** — transferência não leva projeto, então essas linhas não mudam.
+- O aplicador de **centro de custo** afeta todas as linhas marcadas para **criar lançamento**, incluindo transferência.
+
+Nenhum dos dois toca nas linhas que você vai conciliar, ignorar ou ainda não decidiu. Aplicar de novo com outro valor (ou em branco, para remover) troca o valor das mesmas linhas.
+
+<!-- CAPTURA PENDENTE: linha do grupo "Novos" marcada para criar despesa, com Projeto e Centro de custo preenchidos e a frase "veio do padrão desta conta" em ambos; e uma segunda linha com o aviso "Esta categoria não é aceita pelo projeto..." em laranja. Rota /movimentacoes (Conciliação → subir um OFX de exemplo numa conta com projeto padrão configurado), viewport desktop e mobile. -->
+<!-- CAPTURA PENDENTE: aplicador em massa no topo do grupo "Novos", com os dois seletores (Projeto e Centro de custo) e os dois botões "Aplicar a todas as marcadas para criar" lado a lado. Mesma rota, viewport desktop e mobile. -->
 
 **Reimportar o mesmo extrato não duplica nada** — cada transação é reconhecida pelo identificador único do banco.
 
@@ -963,8 +991,8 @@ Você **não depende do e-mail** para chegar a uma prestação de contas: clique
 - **Acima do plano** — despesa que faz um item do plano de trabalho passar do valor aprovado; é paga normalmente, com aviso de risco de glosa — nunca fica retida. Ver [Projetos → Plano de trabalho](/modulos/projetos/#plano-de-trabalho).
 - **Líquido** — a posição consolidada da OSC: tudo o que ela tem (ativos) menos tudo o que ela deve (passivos).
 - **Proteção do nome dos favorecidos** — opção da prestação de contas que mascara, no documento inteiro (PDF ou planilha), o nome de quem recebeu cada pagamento. Não afeta quem pediu, aprovou ou pagou.
-- **Projeto padrão da conta** — projeto sugerido para preencher automaticamente o campo Projeto ao lançar por aquela conta; é sugestão, não trava. Ver [Conta com projeto e centro de custo padrão](#conta-com-projeto-e-centro-de-custo-padrao).
-- **Categoria não permitida** — recusa que aparece ao tentar ligar um lançamento a um projeto cujas categorias permitidas não incluem a categoria daquele lançamento — ao lançar, editar, corrigir dados de um pago, atribuir em lote ou vincular. Ver [Projetos → Quando uma categoria não é aceita pelo projeto](/modulos/projetos/#quando-uma-categoria-nao-e-aceita-pelo-projeto).
+- **Projeto/centro de custo padrão da conta** — projeto e centro de custo sugeridos para preencher automaticamente os campos correspondentes ao lançar, importar por planilha ou conciliar o extrato daquela conta; é sugestão, não trava, nos três caminhos. Ver [Contas → Projeto e centro de custo padrão da conta](/configuracoes/contas/#projeto-e-centro-de-custo-padrao-da-conta).
+- **Categoria não permitida** — recusa que aparece ao tentar ligar um lançamento a um projeto cujas categorias permitidas não incluem a categoria daquele lançamento — ao lançar, editar, corrigir dados de um pago, atribuir em lote, importar por planilha, conciliar o extrato ou vincular. Ver [Projetos → Quando uma categoria não é aceita pelo projeto](/modulos/projetos/#quando-uma-categoria-nao-e-aceita-pelo-projeto).
 
 ## Por onde seguir
 
