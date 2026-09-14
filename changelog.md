@@ -11,6 +11,27 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.118.1] — 2026-09-14
+
+### Corrigido
+
+- O detalhe do lançamento voltou a mostrar a divisão do custo entre centros de custo, e a janela "Corrigir dados" já abre com essa divisão preenchida.
+- Reforçamos a proteção da rotina que grava essa divisão.
+
+## [1.118.0] — 2026-09-14
+
+### Adicionado
+
+- Um lançamento já pago agora pode ter o valor repartido entre várias categorias e o custo dividido entre centros de custo, pela correção "Corrigir dados" — com registro completo do que mudou.
+- A divisão do custo entre centros de custo passou a ser salva também na edição de lançamentos pendentes, e acompanha o estorno.
+- Na importação por planilha, a prévia diz onde cada categoria nova será criada.
+
+### Corrigido
+
+- Ao corrigir as categorias de um lançamento sem escolher a fonte manualmente, a rubrica do plano de trabalho passa a acompanhar as categorias novas.
+- A troca de categoria em lote passa a funcionar em lançamento pago que estava dividido — antes era recusada.
+- Quem é gestor só de alguns centros de custo deixou de conseguir, pela correção "Corrigir dados", mover o custo para um centro de custo que não gerencia.
+
 ## [1.117.5] — 2026-09-14
 
 ### Corrigido
