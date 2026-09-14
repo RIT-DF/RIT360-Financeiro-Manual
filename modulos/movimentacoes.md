@@ -517,7 +517,6 @@ Para estornar: vá no detalhe do lançamento → botão **Estornar** → informe
 
 Às vezes o que ficou registrado num lançamento pago sai diferente do que aconteceu — você pagou por uma conta e lançou por outra, pagou num dia e lançou no outro, a despesa entrou na categoria/centro de custo errado, o valor deveria ter sido repartido entre mais de uma categoria ou centro de custo (e não foi, ou foi do jeito errado), ou o projeto/descrição/favorecido precisam de ajuste. Existe uma **porta única** para esse tipo de correção, direto no detalhe do lançamento: o botão **Corrigir dados**.
 
-<!-- CAPTURA PENDENTE: tela de Corrigir dados agora mostra também as opções de dividir entre categorias e entre centros de custo — refazer o print mov-editar-cc-categoria-01.png com uma divisão aberta -->
 [![Corrigir dados de um lançamento pago](/assets/screenshots/mov-editar-cc-categoria-01.png)](/assets/screenshots/mov-editar-cc-categoria-01.png)
 *Corrigir dados — ajuste data de pagamento, conta bancária, categoria (ou a divisão entre categorias), centro de custo (ou a divisão entre centros de custo), projeto, descrição e/ou favorecido, e informe o motivo*
 
