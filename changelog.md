@@ -11,6 +11,12 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.118.2] — 2026-09-14
+
+### Corrigido
+
+- Quem é aprovador de projetos passa a ver e abrir todos os projetos da organização, inclusive pelo link do e-mail de aprovação. Antes, era possível receber o pedido de aprovação sem conseguir abrir o projeto. Continua valendo só para visualizar: editar e movimentar projetos segue com as mesmas regras de antes.
+
 ## [1.118.1] — 2026-09-14
 
 ### Corrigido
