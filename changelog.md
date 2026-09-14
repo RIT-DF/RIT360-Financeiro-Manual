@@ -11,6 +11,15 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.117.5] — 2026-09-14
+
+### Corrigido
+
+- Ao atribuir um projeto em lote, a mensagem de confirmação não anuncia mais um número antes de conferir os lançamentos — e avisa enquanto está conferindo. Quando algum lançamento não é aceito pelo projeto escolhido, a contagem final mostra só os que serão vinculados, com um único aviso de quantos ficaram de fora. Se a conferência não puder ser feita, o sistema avisa que não foi possível conferir.
+- Na importação por planilha, categorias escritas como "Grupo > Subcategoria" agora casam com as categorias que já existem, em vez de criar duplicadas — mesmo ao reimportar a própria planilha exportada pelo sistema. Nenhuma categoria nasce mais com " > " no nome: a subcategoria entra dentro do grupo certo, criando o grupo junto se ele também não existir. Quando o mesmo nome de categoria existe em mais de um grupo, a importação pergunta para qual grupo as linhas devem ir.
+- A importação de orçamento anual por planilha passou a reconhecer as categorias do mesmo jeito, sem se importar com acento ou maiúsculas.
+- Durações de vídeo de ajuda corrigidas, o vídeo do orçamento do projeto ganhou título e descrição novos, e entrou um vídeo novo explicando como dividir um lançamento entre várias categorias e centros de custo.
+
 ## [1.117.4] — 2026-09-12
 
 ### Corrigido
