@@ -125,7 +125,7 @@ Além do tour de boas-vindas, algumas telas têm um **vídeo tutorial** próprio
 
 O botão é sempre **um só por tela**, no **canto direito do cabeçalho**. Quando aquela tela tem **mais de um vídeo**, clicar nele abre uma lista para você escolher qual assistir — não escolhe por você. No **detalhe do projeto**, a lista muda conforme a **aba aberta**: cada uma das abas Resumo, Financeiro e Encerramento tem seus próprios vídeos, e as abas Planejamento, Execução e Relatório não têm nenhum, então o botão não aparece nelas.
 
-Hoje existem trinta e três vídeos, cobrindo as tarefas mais comuns:
+Hoje existem trinta e quatro vídeos, cobrindo as tarefas mais comuns:
 
 | Vídeo | Onde assistir | Onde aparece no sistema |
 |---|---|---|
@@ -141,6 +141,7 @@ Hoje existem trinta e três vídeos, cobrindo as tarefas mais comuns:
 | Registrar uma receita ou doação | [Movimentações → Registrar novo lançamento](/modulos/movimentacoes/#registrar-novo-lançamento) | Novo lançamento |
 | Parcelado ou recorrente: qual é qual | [Movimentações → Tipo de repetição](/modulos/movimentacoes/#tipo-de-repetição) | Novo lançamento |
 | Dinheiro que muda de conta não é despesa | [Movimentações → Conceitos essenciais](/modulos/movimentacoes/#conceitos-essenciais) | Novo lançamento |
+| Um lançamento, várias categorias e centros de custo | [Movimentações → Registrar novo lançamento](/modulos/movimentacoes/#registrar-novo-lançamento) | Novo lançamento |
 | Corrigir um lançamento já pago | [Movimentações → Corrigir os dados de um lançamento pago](/modulos/movimentacoes/#corrigir-os-dados-de-um-lançamento-pago) | Movimentações, detalhe de um lançamento |
 | Corrigir, excluir ou estornar: qual usar | [Movimentações → Estornar um lançamento](/modulos/movimentacoes/#estornar-um-lançamento) | Movimentações, detalhe de um lançamento |
 | Mudar vários lançamentos de uma vez | [Movimentações → Seleção em lote](/modulos/movimentacoes/#seleção-em-lote) | Movimentações (a lista) |

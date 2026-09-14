@@ -316,7 +316,7 @@ Clique em qualquer linha da lista para abrir o detalhe completo, organizado em d
 - Dados do lançamento: vencimento, pagamento, conta, categoria, beneficiário/fornecedor, forma de pagamento, projeto, centro de custo
 - **Dados de pagamento** — quando o lançamento tem chave PIX ou dados bancários do destinatário, um card mostra esses dados para efetivar o pagamento sem abrir a solicitação de origem. Vale tanto para lançamentos vindos de **reembolso/pedido de compra e pagamento** quanto para **despesas lançadas à mão** (ver "Forma de pagamento" no formulário). **Quem tem permissão de pagar vê os dados por inteiro; os demais veem apenas os últimos dígitos** — o nome do titular da chave PIX fica visível para todos, quando essa informação existe. Passado o prazo de descarte definido pela OSC, o card informa que os dados foram removidos por já terem cumprido sua finalidade. Detalhes em [Contas Bancárias → Dados bancários de quem recebe](/configuracoes/contas/#dados-bancarios-de-quem-recebe)
 - **Quem solicitou** — quando o lançamento veio de um reembolso ou de um pedido de compra e pagamento, o nome de quem fez a solicitação aparece junto com os dados do lançamento. Antes só apareciam os dados bancários, sem dizer de quem eram. Repare na diferença entre os dois fluxos: num **reembolso**, quem solicitou é a própria pessoa que vai receber o dinheiro de volta; num **pedido de compra e pagamento**, quem solicitou só está pedindo autorização para pagar — quem recebe é um **terceiro** que ele indicou (um fornecedor, um prestador de serviço), não ele mesmo
-- Distribuição entre categorias (se o valor foi dividido)
+- **Divisão do custo** (quando o valor foi repartido) — por categoria, por centro de custo, ou pelos dois, com o valor de cada parte
 - **Conciliação** — se o lançamento já foi conferido com o extrato bancário, quando isso aconteceu, e como: pela importação de um extrato OFX, ou por marcação manual (com o nome de quem marcou). Sem essa conferência, o bloco mostra que o lançamento ainda não foi conciliado — não é um erro, é o estado normal até alguém cruzar com o banco. Ver **[Coluna Conferido](#coluna-conferido)** e **[Conciliação manual](#conciliacao-manual)**
 - Observações
 - Documentos: comprovantes e notas fiscais anexados, com pré-visualização inline para imagens e PDFs. Isso inclui os comprovantes que já estavam anexados ao **reembolso ou pedido de compra e pagamento** que deu origem ao lançamento — eles aparecem aqui automaticamente desde a aprovação, sem precisar reanexar nada
@@ -470,6 +470,10 @@ Lançamentos **pendentes** ou **atrasados** podem ser editados por completo. Cli
 
 O formulário de edição tem os mesmos campos do lançamento novo (descrição, datas, conta, categoria, projeto, centro de custo, forma de pagamento, anexos — ver **Registrar novo lançamento**, acima).
 
+> ⚠️ **Atenção · Mudou o valor de um lançamento dividido? Atualize a divisão também**
+>
+> Se o lançamento tem o valor repartido entre categorias e/ou centros de custo, a edição de um lançamento **pendente** grava essa divisão junto com o resto. Ao mudar o **valor total**, a soma das partes já lançadas deixa de fechar — ajuste cada parte da divisão antes de salvar, ou a tela recusa a edição.
+
 > ⚠️ **Atenção · Alterar o valor de um lançamento vindo de pedido exige a permissão Pagar**
 >
 > Quem não tem a permissão **Pagar (marcar como pago)** não altera o valor de um lançamento gerado por um pedido de compra e pagamento — só acompanha. É o caminho pelo qual se registra o **valor efetivo** de um pedido de **valor estimado**, depois que o preço é negociado com o fornecedor. Se o novo valor passar do que foi autorizado além do limiar configurado pela OSC, o pagamento fica retido até um aprovador liberar a diferença. Ver [Pedidos de Compra e Pagamento → Quando o valor pago diverge do autorizado](/modulos/pedidos-pagamento/#valor-diverge-do-autorizado) e [Cargos e permissões → Pagar](/configuracoes/cargos/#permissao-pagar).
@@ -500,6 +504,8 @@ Estornar é diferente de cancelar. Estorno é a forma contábil correta de rever
 > 📖 **Conceito · O que acontece quando você estorna**
 >
 > O RIT360 Financeiro não apaga o lançamento original. Em vez disso, cria automaticamente um **lançamento contrário** com a mesma data, o mesmo valor e a categoria/conta espelhadas — uma receita estornada vira uma despesa de igual valor, e vice-versa. Os dois ficam vinculados na timeline e ambos exibem o badge "Estornado". O resultado no saldo é o mesmo que se nada tivesse acontecido, mas **a história fica preservada**: você consegue mostrar, anos depois, que aquele depósito chegou, foi estornado, e por quê.
+>
+> Se o lançamento original tinha o valor **repartido entre categorias e/ou centros de custo**, o lançamento contrário do estorno leva **a mesma divisão** — cada parte espelhada com o valor correspondente, não um valor único.
 
 Para estornar: vá no detalhe do lançamento → botão **Estornar** → informe a razão. O lançamento contrário é criado e ambos ficam marcados na lista.
 
@@ -509,17 +515,18 @@ Para estornar: vá no detalhe do lançamento → botão **Estornar** → informe
 
 ## Corrigir os dados de um lançamento pago
 
-Às vezes o que ficou registrado num lançamento pago sai diferente do que aconteceu — você pagou por uma conta e lançou por outra, pagou num dia e lançou no outro, a despesa entrou na categoria/centro de custo errado, ou o projeto/descrição/favorecido precisam de ajuste. Existe uma **porta única** para esse tipo de correção, direto no detalhe do lançamento: o botão **Corrigir dados**.
+Às vezes o que ficou registrado num lançamento pago sai diferente do que aconteceu — você pagou por uma conta e lançou por outra, pagou num dia e lançou no outro, a despesa entrou na categoria/centro de custo errado, o valor deveria ter sido repartido entre mais de uma categoria ou centro de custo (e não foi, ou foi do jeito errado), ou o projeto/descrição/favorecido precisam de ajuste. Existe uma **porta única** para esse tipo de correção, direto no detalhe do lançamento: o botão **Corrigir dados**.
 
+<!-- CAPTURA PENDENTE: tela de Corrigir dados agora mostra também as opções de dividir entre categorias e entre centros de custo — refazer o print mov-editar-cc-categoria-01.png com uma divisão aberta -->
 [![Corrigir dados de um lançamento pago](/assets/screenshots/mov-editar-cc-categoria-01.png)](/assets/screenshots/mov-editar-cc-categoria-01.png)
-*Corrigir dados — ajuste data de pagamento, conta bancária, categoria, centro de custo, projeto, descrição e/ou favorecido, e informe o motivo*
+*Corrigir dados — ajuste data de pagamento, conta bancária, categoria (ou a divisão entre categorias), centro de custo (ou a divisão entre centros de custo), projeto, descrição e/ou favorecido, e informe o motivo*
 
 **Quem pode:** exige a permissão **Criar / editar**, em Movimentações. Ver [Cargos e permissões](/configuracoes/cargos/).
 
 Para corrigir:
 
 1. Abra o **detalhe** do lançamento (ele precisa estar com status **Pago**) e clique em **Corrigir dados**.
-2. Ajuste o que precisar: **data de pagamento**, **conta bancária**, **categoria**, **centro de custo**, **projeto**, **descrição** e/ou **favorecido**.
+2. Ajuste o que precisar: **data de pagamento**, **conta bancária**, **categoria** (ou a **divisão entre categorias**), **centro de custo** (ou a **divisão entre centros de custo**), **projeto**, **descrição** e/ou **favorecido**.
 3. Escreva um **motivo** (obrigatório) — ele fica guardado na **trilha de auditoria** do lançamento.
 4. Confirme. Se o lançamento estiver no período de uma **[prestação de contas](#prestacao-de-contas)** já emitida, ou já **[conciliado](#coluna-conferido)**, a tela avisa antes de você confirmar — leia o aviso e decida com essa informação em mãos (ver caixas abaixo).
 
@@ -552,11 +559,31 @@ Para corrigir:
 >
 > Um link ou atalho salvo de antes desta versão pode tentar abrir o formulário de edição comum para um lançamento já **pago**. Isso não é mais possível: você é redirecionado ao **detalhe** do lançamento, com um aviso explicando por quê — a porta para corrigir um lançamento pago é sempre o **Corrigir dados**, no detalhe.
 
-> 📖 **Conceito · Lançamento dividido entre categorias não mostra o campo Categoria aqui**
+> 📖 **Conceito · Dividir entre categorias e entre centros de custo — as mesmas regras do lançamento novo**
 >
-> Um lançamento pode estar [dividido entre várias categorias](#registrar-novo-lançamento) — é o caso, por exemplo, dos pedidos importados da loja virtual com produtos de categorias diferentes, e de qualquer lançamento que você mesmo tenha dividido na hora de registrar. Nesse caso, o **Corrigir dados** não oferece o campo **Categoria**: "corrigir a categoria" deixa de ter um significado único quando o valor está repartido em várias linhas — não dá para saber qual delas deveria mudar, nem o que aconteceria com o valor de cada uma. O ajuste, então, é feito **na própria divisão**, onde cada categoria tem seu valor. Os demais campos — **data de pagamento**, **conta bancária**, **centro de custo**, **projeto**, **descrição** e **favorecido** — continuam corrigíveis normalmente, do mesmo jeito.
+> Pelo **Corrigir dados**, você também redefine a divisão de um lançamento pago: reparte o valor entre **várias categorias**, entre **vários centros de custo**, ou nos dois ao mesmo tempo — e pode remover uma divisão que já existia, voltando a uma categoria ou centro único. Valem as mesmas regras de quando o lançamento é criado (ver **[Distribuir valor entre categorias / entre centros de custo](#registrar-novo-lançamento)**, acima): a **soma das partes** tem que fechar exatamente o valor do lançamento — a tela não deixa confirmar se não fechar — e cada categoria ou centro de custo só pode aparecer **uma vez** na divisão.
+>
+> O **centro de custo responsável** — quem aprova e para quem o lançamento aparece — continua sendo **um só**, escolhido no campo **Centro de custo**; a divisão é outra coisa e não o substitui (ver **[Centro de custo responsável × distribuição de custo](#registrar-novo-lançamento)**, acima). Isto vale para lançamento **único**; transferência não se corrige por aqui (ver caixa acima).
+
+> ⚠️ **Atenção · Dividir centro de custo por aqui só em lançamento único**
+>
+> Redefinir a divisão entre centros de custo pelo **Corrigir dados** vale para lançamento **único** — não para uma parcela de um lançamento **parcelado**, nem para uma ocorrência de um lançamento **recorrente**. Nesses dois casos o campo **Centro de custo** continua corrigível normalmente; só a divisão entre vários centros não está disponível.
+
+> ⚠️ **Atenção · Gestor de Centro de Custo não corrige para fora do que gerencia**
+>
+> Quem é [Gestor de Centro de Custo](/papeis/#gestor-de-centro-de-custo) de apenas alguns centros só encontra, para escolher na correção — seja no campo **Centro de custo** ou na divisão entre centros —, os centros que **gerencia**; os demais nem aparecem. Precisando mover a correção para um centro fora da sua responsabilidade, peça a alguém com acesso ao financeiro completo (Presidente ou Tesoureiro).
+
+> 📖 **Conceito · Categoria muda, e a rubrica pode mudar com ela**
+>
+> Se o lançamento pertence a um projeto com financiador de **[plano de trabalho](/modulos/projetos/#plano-de-trabalho)** e a **rubrica** (o item do plano) nunca foi escolhida manualmente para ele, trocar a categoria — ou a divisão entre categorias — pela correção faz o RIT360 Financeiro **recalcular a rubrica** de acordo com a nova categoria. Se a rubrica já tinha sido escolhida à mão, ela não muda sozinha; ajuste-a pelo bloco [Quem pagou este lançamento](/modulos/projetos/#corrigir-depois-quem-pagou-este-lancamento), no detalhe do lançamento.
 >
 > Se a correção não puder ser salva, a tela informa o motivo, em vez de uma mensagem genérica.
+
+O detalhe do lançamento passa a mostrar um bloco **Divisão do custo** sempre que houver partes — ver **[Detalhe de uma movimentação](#detalhe-de-uma-movimentação)**, acima.
+
+> 🎥 **Vídeo tutorial · Um lançamento, várias categorias e centros de custo**
+>
+> A tela de **novo lançamento** tem um vídeo curto (sem áudio, com legendas) mostrando como dividir o valor entre categorias e entre centros de custo — clique no ícone de vídeo, no canto direito do cabeçalho. As mesmas regras valem ao dividir pelo **Corrigir dados**, num lançamento já pago. Veja todos os vídeos disponíveis em [Vídeos tutoriais dentro do app](/primeiros-passos/#videos-tutoriais).
 
 ## Importar lançamentos
 
