@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.124.2] — 2026-09-18
+
+### Alterado
+
+- Na lista de Projetos, o botão "Ordenar:" que ficava acima da tabela saiu. Agora a ordenação é feita clicando no título da coluna, com uma setinha ao lado — o mesmo jeito que já funciona na tela de Movimentações. Ordenam pelo cabeçalho: Nome, Tipo, Status, Criado em e Período; clicar de novo na mesma coluna inverte o sentido. Saúde não ordena, porque o indicador é calculado à parte.
+- A tabela de Projetos ganhou a coluna "Criado em", com a data de criação de cada projeto.
+- Tipo e Status seguem a ordem alfabética do texto em português mostrado na tela; Período ordena pela data de início do projeto. A ordem escolhida continua valendo ao compartilhar o endereço da tela, e no celular a lista em cartões segue a ordem em vigor.
+
 ## [1.124.1] — 2026-09-18
 
 ### Corrigido

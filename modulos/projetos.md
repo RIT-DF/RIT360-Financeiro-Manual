@@ -116,13 +116,15 @@ A cada projeto o RIT360 Financeiro atribui um **indicador de saúde** — um sem
 ## A lista de projetos
 
 [![Lista de projetos em desktop](/assets/screenshots/manual-projetos-01-lista.png)](/assets/screenshots/manual-projetos-01-lista.png)
-*Lista de projetos em desktop — cada linha mostra tipo, status, saúde e período*
+*Lista de projetos em desktop — cada linha resume o projeto e leva ao detalhe*
 
 > 🎥 **Vídeo tutorial · Criei um projeto: quem aprova?**
 >
 > Esta tela tem um vídeo curto (sem áudio, com legendas) mostrando o caminho de um projeto até ficar aprovado — clique no ícone de vídeo, no canto direito do cabeçalho. Veja todos os vídeos disponíveis em [Vídeos tutoriais dentro do app](/primeiros-passos/#videos-tutoriais).
 
-A tela **Projetos** lista as iniciativas da OSC. No **computador** (telas a partir de 1024 px), a lista é uma **tabela** com as colunas **Nome**, **Tipo**, **Status**, **Saúde** (o semáforo + pontuação) e **Período**. No **celular**, a mesma informação vira **cards** verticais. Clique em qualquer projeto para abrir o detalhe.
+A tela **Projetos** lista as iniciativas da OSC. No **computador** (telas a partir de 1024 px), a lista é uma **tabela** com as colunas **Nome**, **Tipo**, **Status**, **Saúde** (o semáforo + pontuação), **Criado em** (a data em que o projeto foi cadastrado) e **Período**. No **celular**, a mesma informação vira **cards** verticais, sem cabeçalho de coluna. Clique em qualquer projeto para abrir o detalhe.
+
+Para ordenar a lista, clique no título de uma das colunas **Nome**, **Tipo**, **Status**, **Criado em** ou **Período** — um segundo clique na mesma coluna inverte o sentido (crescente/decrescente). A coluna **Saúde** não ordena, porque aquele indicador é calculado à parte da lista. Sem nenhuma coluna escolhida, a lista vem com os projetos **criados mais recentemente primeiro**; a coluna **Período** ordena pela **data de início** do projeto. A ordem escolhida entra no endereço da tela, então quem copiar o link e mandar para outra pessoa entrega a lista na mesma ordem — do mesmo jeito que já acontece com a busca e os filtros. No celular, sem cabeçalho para clicar, a lista em cards segue a ordem que estiver em vigor.
 
 No topo você tem **busca por nome** e filtros por **Status**, **Tipo** e **Saúde** — úteis para, por exemplo, ver só os projetos em execução que estão em atenção.
 
