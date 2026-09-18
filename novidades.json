@@ -1,6 +1,48 @@
 {
   "versoes": [
     {
+      "versao": "1.124.1",
+      "data": "2026-09-18",
+      "destaque": false
+    },
+    {
+      "versao": "1.124.0",
+      "data": "2026-09-18",
+      "destaque": true,
+      "resumo": "Digitar os primeiros caracteres da descrição agora oferece registros parecidos e preenche o formulário inteiro — menos o valor."
+    },
+    {
+      "versao": "1.123.0",
+      "data": "2026-09-18",
+      "destaque": false
+    },
+    {
+      "versao": "1.122.1",
+      "data": "2026-09-18",
+      "destaque": false
+    },
+    {
+      "versao": "1.122.0",
+      "data": "2026-09-18",
+      "destaque": false
+    },
+    {
+      "versao": "1.121.0",
+      "data": "2026-09-18",
+      "destaque": false
+    },
+    {
+      "versao": "1.120.0",
+      "data": "2026-09-18",
+      "destaque": false
+    },
+    {
+      "versao": "1.119.0",
+      "data": "2026-09-18",
+      "destaque": true,
+      "resumo": "A prestação de contas por financiador ganhou caminho próprio em Relatórios, e agora mostra também as despesas que ficaram em aberto."
+    },
+    {
       "versao": "1.118.2",
       "data": "2026-09-14",
       "destaque": false
