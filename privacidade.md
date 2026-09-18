@@ -3,15 +3,16 @@ title: "Privacidade"
 nav_order: 1
 parent: "Termos e Privacidade"
 permalink: /privacidade/
-version: "1.4"
-change_summary: "Passamos a dizer com todas as letras quem responde por cada dado. Nos dados que a organização cadastra — membros, fornecedores, prestadores, participantes de projeto, dados bancários, anexos e lançamentos —, quem decide é a organização, e a RIT atua como operadora, tratando por conta dela. Nos dados da sua conta e da plataforma — login, aceite dos documentos, segurança —, quem decide é a RIT. Incluímos uma tabela de quem é o quê para cada tipo de dado e reescrevemos a seção de contato para indicar com quem falar em cada caso, informando que hoje a plataforma ainda não guarda um contato de proteção de dados de cada organização."
+version: "1.5"
+change_summary: "Detalhamos o que acontece com o CPF, os dados bancários e a chave PIX de quem recebe um pagamento pela plataforma (fornecedores, prestadores e beneficiários pessoa física): esses três dados ficam cifrados, do mesmo jeito que o seu próprio CPF e RG, e são descartados automaticamente algum tempo depois de o pagamento ser concluído — prazo que a organização escolhe (30, 90, 180 ou 365 dias; 90 dias quando ela não escolhe). O nome do destinatário não é descartado, porque quem aprova e presta contas precisa continuar sabendo para quem o pagamento foi feito. Acrescentamos a linha correspondente na tabela de prazos de guarda. Também passamos a informar que, quando você envia um feedback pelo aplicativo, o conteúdo e a sua identificação são registrados em uma ferramenta de acompanhamento de terceiro (GitHub), sediada nos Estados Unidos, em repositório privado — acrescentamos esse serviço à lista de subprocessadores."
 requires_reconsent: true
 ---
 
 # Política de Privacidade — RIT360 Financeiro
 
-**Vigência:** 11 de agosto de 2026
-**Versão:** 1.4
+<!-- Data de vigência: ajustar se a publicação ocorrer em outro dia. -->
+**Vigência:** 18 de setembro de 2026
+**Versão:** 1.5
 
 ---
 
@@ -83,6 +84,8 @@ Nas três últimas situações, a pessoa **não tem conta na plataforma** e seus
 
 **Seu CPF e seu RG são guardados cifrados**, em um cofre de segredos separado do restante do banco de dados. Nem quem administra a organização enxerga esses valores no banco — eles só são revelados para você, no seu próprio perfil.
 
+**Quando você envia um feedback pela tela de feedback**, o conteúdo da mensagem e a sua identificação — nome, e-mail, organização, papel e cargo — são registrados em uma ferramenta de acompanhamento de tarefas, para que o pedido seja tratado pela nossa equipe.
+
 ### 3.2 Dados de destinatários de pagamentos (não usuários)
 
 Quando uma OSC registra um pagamento ou reembolso a uma pessoa física, coletamos:
@@ -92,6 +95,10 @@ Quando uma OSC registra um pagamento ou reembolso a uma pessoa física, coletamo
 - Número e tipo de documento fiscal (nota, recibo)
 
 **Base legal:** execução do pagamento — não é possível transferir valores sem identificar o destinatário (Art. 7º, V) — e cumprimento de obrigação legal contábil e fiscal (Art. 7º, II).
+
+**O CPF do destinatário, os dados bancários e a chave PIX são guardados cifrados**, no mesmo cofre de segredos usado para o seu próprio CPF e RG (seção 3.1) — a coluna do banco de dados guarda apenas uma máscara, e o valor completo só é revelado a quem tem permissão para efetuar pagamentos.
+
+**Esses três dados — CPF, dados bancários e chave PIX — são descartados automaticamente** algum tempo depois de o pagamento ser concluído, em um prazo que cada organização pode configurar: 30, 90, 180 ou 365 dias; quando ela não configura, o prazo padrão é de 90 dias. Passado esse prazo, os três são apagados de forma irreversível. **O nome do destinatário não é descartado** — quem aprova um pagamento e presta contas dele precisa continuar sabendo para quem o pagamento foi feito, e uma prestação de contas sem nome não presta contas.
 
 Dados de pessoas jurídicas (CNPJ) não são dados pessoais e não estão sujeitos à LGPD. No cadastro de fornecedores, porém, também guardamos **nome, e-mail e telefone da pessoa de contato**, que são dados pessoais.
 
@@ -179,6 +186,7 @@ Para operar a plataforma, utilizamos os seguintes serviços de terceiros. Alguns
 | **Gotenberg** | Geração de documentos PDF | Alemanha (União Europeia — RGPD/GDPR aplicável) |
 | **Google Drive** | Armazenamento de documentos (quando ativado pela OSC) | Estados Unidos |
 | **WooCommerce** | Importação de pedidos da loja virtual (quando ativada pela OSC) | Definida pela organização |
+| **GitHub** | Registro e acompanhamento dos feedbacks enviados pelos usuários (repositório privado) | Estados Unidos |
 
 Google Drive e WooCommerce são recursos opcionais, ativados a critério de cada OSC. A ativação implica a aceitação da política de privacidade do respectivo fornecedor.
 
@@ -200,6 +208,7 @@ Os prazos abaixo são os que a plataforma aplica. Nos dados que a organização 
 | Comprovantes e anexos de lançamentos | 5 anos, acompanhando o registro financeiro a que se referem |
 | Logs de auditoria | 5 anos após o encerramento da OSC na plataforma |
 | Dados de perfil e acesso dos membros | Eliminados ou anonimizados em até 90 dias após o encerramento da OSC |
+| CPF, dados bancários e chave PIX de destinatários de pagamento | 30, 90, 180 ou 365 dias após a conclusão do pagamento, conforme a organização configurar (90 dias quando não configurado) — o nome do destinatário não é descartado |
 | Documentos de prestação de contas gerados pela plataforma | **Prazo em definição** — ver a nota abaixo |
 
 Após os prazos acima, os dados são eliminados de forma segura ou anonimizados de modo irreversível.
