@@ -11,6 +11,81 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.124.1] — 2026-09-18
+
+### Corrigido
+
+- Na solicitação de pagamento, aceitar uma sugestão de preenchimento agora limpa os dados de pagamento do fornecedor que já estivessem na tela (chave PIX, banco, agência, conta, titular e CPF do titular). Antes, o nome do fornecedor era trocado pelo da sugestão e os dados bancários de quem estava ali antes ficavam, o que podia levar a pagar a conta errada. O aviso abaixo da descrição agora diz que esses dados precisam ser informados de novo. O formulário de lançamento já se comportava assim; o de reembolso não muda.
+
+## [1.124.0] — 2026-09-18
+
+### Adicionado
+
+- Nos três formulários — lançamento, solicitação de pagamento e reembolso — digitar os primeiros 3 caracteres da descrição agora mostra registros parecidos que já foram lançados antes. No lançamento, a lista mostra registros parecidos já lançados na sua organização inteira; na solicitação de pagamento e no reembolso, mostra os seus próprios registros, do mesmo jeito que essas telas já restringem em outros pontos. No lançamento e na solicitação, a busca também encontra pelo nome de quem recebeu.
+- Escolhendo um registro da lista, o formulário vem preenchido: categoria, centro de custo, projeto, conta, forma de pagamento, nome de quem recebe, documento fiscal, etiquetas e observações. Valor e datas ficam em branco, para você preencher com o valor e a data certos desta vez.
+- Quando o registro escolhido tinha o custo repartido entre categorias ou centros de custo, a divisão é copiada com os valores zerados, e a tela avisa que falta distribuir o valor. Quando a divisão não pode ser copiada, aparece um aviso que não some sozinho.
+- Cada sugestão mostra quem recebeu, o último valor, a última data e quantas vezes aquele registro já foi lançado.
+- Dados protegidos de quem recebe o pagamento — chave PIX, banco, agência, conta e CPF — nunca são copiados pela sugestão. O nome continua sendo copiado.
+- Usar a lista de sugestões é sempre opcional: quem prefere digitar tudo continua digitando normalmente.
+
+<!-- destaque: Digitar os primeiros caracteres da descrição agora oferece registros parecidos e preenche o formulário inteiro — menos o valor. -->
+
+## [1.123.0] — 2026-09-18
+
+### Adicionado
+
+- O índice da prestação de contas passou a listar também a seção de despesas em aberto.
+
+### Corrigido
+
+- Os dados de quem recebe pagamento passaram a ser protegidos também no documento de movimentações, em PDF e em planilha — antes a proteção não alcançava esse documento.
+- Quando a proteção do favorecido está ligada e não sobra ninguém para mostrar de forma protegida, o documento deixa de ser entregue, em vez de sair sem a proteção.
+
+## [1.122.1] — 2026-09-18
+
+### Corrigido
+
+- A tela de entrada passou a explicar quando a sessão foi encerrada, em vez de mostrar um erro sem explicação.
+
+## [1.122.0] — 2026-09-18
+
+### Corrigido
+
+- A leitura de erro nas diferentes telas do sistema foi unificada: quando o servidor explica o motivo de uma recusa, esse motivo agora chega até a tela, em vez de aparecer só uma mensagem genérica de falha.
+
+## [1.121.0] — 2026-09-18
+
+### Adicionado
+
+- A seção "Pontos de atenção" voltou para a tela de Relatórios da organização, respeitando o período que você escolher ali. Ela tinha ficado restrita ao Painel, com janela fixa dos últimos 30 dias.
+- O aviso de novidades ganhou um intervalo mínimo de 7 dias entre uma aparição e outra, para não abrir a cada versão nova lançada em sequência.
+- As páginas de entrar, criar conta e conferir autenticidade de documento passaram a ter título próprio na aba do navegador, em vez de todas mostrarem o mesmo título.
+- A lista de Projetos passou a ter uma ordenação própria.
+
+## [1.120.0] — 2026-09-18
+
+### Adicionado
+
+- O envio de e-mail ganhou retentativa automática, um teto de quantos e-mails saem ao mesmo tempo, e limites configuráveis.
+
+### Corrigido
+
+- Uma falha no envio de e-mail passou a deixar rastro nos fluxos de recuperação de senha, conclusão de cadastro e troca de e-mail — antes podia falhar sem deixar sinal.
+
+## [1.119.0] — 2026-09-18
+
+### Adicionado
+
+- A prestação de contas passou a poder ser emitida por fonte de financiamento, com o total e a lista de movimentações saindo da mesma apuração.
+- Os documentos de prestação de contas ganharam uma seção "Despesas em aberto (não pagas)".
+- A tela de Relatórios passou a ser a porta de entrada para emitir a prestação de contas.
+
+### Alterado
+
+- Emitir prestação de contas passou a depender de uma permissão própria, separada da permissão de apenas visualizar relatórios. Quem só visualizava relatórios continua visualizando; a emissão agora é concedida à parte.
+
+<!-- destaque: A prestação de contas por financiador ganhou caminho próprio em Relatórios, e agora mostra também as despesas que ficaram em aberto. -->
+
 ## [1.118.2] — 2026-09-14
 
 ### Corrigido
