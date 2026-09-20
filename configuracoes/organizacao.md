@@ -88,9 +88,6 @@ Configure URL da loja, Consumer Key e Consumer Secret (com instruções passo a 
 #### Mapeamento manual de categorias tem ordem
 {: #mapeamento-manual-de-categorias-tem-ordem }
 
-[![Mapeamento manual do WooCommerce, com setas de subir e descer em cada linha](/assets/screenshots/config-organizacao-woocommerce-mapeamento.png)](/assets/screenshots/config-organizacao-woocommerce-mapeamento.png)
-*Configurações → Organização → WooCommerce — mapeamento manual de categorias, com as setas de reordenar em cada linha*
-
 No **modo manual**, a tela de mapeamento lista uma linha por categoria da loja, cada uma apontando para uma categoria financeira do RIT360 Financeiro. Cada linha tem setas para **subir** e **descer** — e a ordem não é só visual: ela decide o desempate quando um produto da loja está em **mais de uma** categoria mapeada ao mesmo tempo.
 
 > 📖 **Conceito · Por que precisa de desempate**

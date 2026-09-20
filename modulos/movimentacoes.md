@@ -718,9 +718,6 @@ Mais detalhes na seção de configurações.
 #### Reprocessar categorias de lançamentos já importados
 {: #reprocessar-categorias-woocommerce }
 
-[![Reprocessamento de categorias do WooCommerce — resultado do ensaio a seco antes de aplicar](/assets/screenshots/manual-importar-woocommerce-reprocessar-ensaio.png)](/assets/screenshots/manual-importar-woocommerce-reprocessar-ensaio.png)
-*Importar Lançamentos → aba WooCommerce — bloco de reprocessamento, com o ensaio a seco mostrando o antes → depois*
-
 Mudou o [mapeamento de categorias do WooCommerce](/configuracoes/organizacao/#mapeamento-manual-de-categorias-tem-ordem) ou reorganizou as categorias da própria loja? Os pedidos **já importados** não se atualizam sozinhos — ficam com a categoria que valia no momento em que entraram. O bloco **Reprocessar categorias**, na aba **WooCommerce**, recalcula a divisão por categorias desses lançamentos, num período que você escolhe, sem precisar apagar e reimportar nada.
 
 **Exige a permissão *Criar / editar*, em Movimentações** (a mesma de [Cargos e permissões](/configuracoes/cargos/)) — quem só visualiza movimentações não vê a opção habilitada.
