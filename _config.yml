@@ -56,6 +56,13 @@ aux_links:
 aux_links_new_tab: true
 
 # Rodapé
+# ⚠️ `footer_content` NÃO renderiza nada. A versão do just-the-docs que estes
+# sites usam ignora essa chave — o valor abaixo está aqui e não aparece em
+# página nenhuma. Não é problema: o rodapé vazio é o que se quer, e a frase de
+# atribuição do tema é removida por _includes/nav_footer_custom.html.
+# O registro existe porque a chave parece funcionar e não funciona: quem
+# precisar mesmo de texto no rodapé um dia deve editar aquele include, não
+# esta linha. (Descoberto no manual do RIT360 Realiza, 20/09/2026.)
 footer_content: '© 2026 <a href="https://rit.org.br" target="_blank" rel="noopener">RIT — Rede de Inovação e Transformação</a>. Todos os direitos reservados. · <a href="/termos/">Termos de Uso</a> · <a href="/privacidade/">Privacidade</a>'
 last_edit_timestamp: false
 back_to_top: true
