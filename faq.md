@@ -153,7 +153,7 @@ Não. Ao preencher um **novo lançamento**, **reembolso** ou **pedido de compra 
 
 Pode ser uma entre três coisas: (1) o problema foi resolvido — o lançamento que gerou o aviso mudou de status ou foi corrigido; (2) o aviso saiu da **janela de 30 dias** que o Painel considera (ele é sobre o que aconteceu recentemente, não sobre o histórico inteiro); ou (3) alguém com acesso a Configurações **desligou aquele tipo de regra** para a organização.
 
-> ⚠️ Os pontos de atenção moram só no [Painel](/modulos/painel/#bloco-4--pontos-de-atenção), com a janela fixa de 30 dias — não existe mais uma tela para consultar o histórico completo de anomalias além desses 30 dias. Se sua OSC precisa desse histórico mais longo, é uma lacuna a reportar.
+> 💡 Para consultar o histórico de anomalias além dos últimos 30 dias, use os **Pontos de atenção dentro de [Relatórios](/modulos/relatorios/#pontos-de-atenção)** — a mesma análise, aplicada ao período que você escolher no cabeçalho (o mês fechado, o trimestre, o ano inteiro). O Painel e Relatórios batem a mesma bateria de regras; só muda a janela.
 
 ### Existe uma regra de atenção que só aparece no Painel?
 

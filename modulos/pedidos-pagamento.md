@@ -283,7 +283,7 @@ A escolha muda a dica de anexo (orçamentos, no estimado; boleto, nota ou recibo
 
 > ⚠️ **Atenção · Dados são do destinatário, não do solicitante**
 >
-> No reembolso, a chave PIX é a sua. No Pedido de Compra e Pagamento, é a do **fornecedor**. Não há pré-preenchimento automático — informe corretamente os dados do destinatário a cada solicitação (ou cadastre o fornecedor nos seus contatos e copie). Erro nesses dados significa transferência para destino errado.
+> No reembolso, a chave PIX é a sua. No Pedido de Compra e Pagamento, é a do **fornecedor**. Mesmo quando a descrição parece com a de um pedido anterior, **os dados de pagamento nunca vêm preenchidos automaticamente** — chave PIX, banco, agência, conta e CPF do destinatário precisam ser conferidos e informados a cada solicitação (ou cadastre o fornecedor nos seus contatos e copie). Erro nesses dados significa transferência para destino errado.
 
 ### Tipo do pedido (Único / Recorrente / Parcelado)
 

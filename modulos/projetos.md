@@ -559,8 +559,9 @@ Na ordem:
 6. **Despesas fora do plano de trabalho** — as que usam categoria não associada a nenhum item.
 7. **Despesas sem item escolhido** — as que ficaram associadas à fonte sem alguém ter escolhido a rubrica.
 8. **Devoluções ao financiador** — o que foi devolvido no período (ver [Devolução é despesa da fonte, não estorno](#corrigir-depois-quem-pagou-este-lancamento), acima).
-9. **Despesas do projeto sem fonte definida no período** — um alerta de que esses lançamentos não entram nos números acima e precisam ser corrigidos para a prestação fechar certo.
-10. **Anexo "de → para"** — a ligação, vigente em cada data, entre os itens do plano e as categorias da organização que contam para eles.
+9. **Despesas em aberto** — despesas da fonte já assumidas mas ainda não pagas no período, com vencimento, situação e valor. Assim como na [prestação de contas geral](/modulos/movimentacoes/#prestacao-de-contas), essa seção **aparece sozinha** quando há alguma despesa em aberto e some quando não há; o total em aberto aparece à parte, **sem entrar em nenhuma soma da apuração** acima.
+10. **Despesas do projeto sem fonte definida no período** — um alerta de que esses lançamentos não entram nos números acima e precisam ser corrigidos para a prestação fechar certo.
+11. **Anexo "de → para"** — a ligação, vigente em cada data, entre os itens do plano e as categorias da organização que contam para eles.
 
 > 📖 **Conceito · Seção vazia não some — ela diz "Nada no período"**
 >

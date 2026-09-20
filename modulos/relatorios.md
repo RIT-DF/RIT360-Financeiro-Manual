@@ -68,6 +68,16 @@ Gráfico de linha mostrando a trajetória do saldo da OSC ao longo do período. 
 
 Cards com o saldo de cada conta financeira na **data final do período** (não "hoje"). Isso garante coerência com prestação de contas histórica: o saldo mostrado é o que de fato existia no fechamento daquele mês. Contas de **uso restrito** aparecem à parte, fora do total líquido consolidado — mesma separação que já existe no Painel.
 
+### Pontos de atenção
+
+As mesmas anomalias detectadas nos seus lançamentos (despesa concentrada, categoria com pico, fornecedor novo, categoria que voltou, queda de receita) aparecem aqui também, considerando o **período e os filtros escolhidos no cabeçalho** — não uma janela fixa. O Painel mostra o mesmo tipo de aviso, mas olhando só os últimos 30 dias e sem filtro nenhum (ver [Painel → Pontos de atenção](/modulos/painel/#bloco-4--pontos-de-atenção)); aqui você enxerga a mesma análise no recorte que estiver consultando — o mês fechado inteiro, o trimestre, o ano até a data atual. Os limites de cada regra são os mesmos nos dois lugares, configuráveis em **Configurações → Relatórios → Regras de pontos de atenção**.
+
+> 📖 **Conceito · Duas janelas, a mesma regra**
+>
+> Pense no Painel como o aviso de "o que aconteceu recentemente" (30 dias, sempre) e nesta seção de Relatórios como "o que aconteceu neste recorte que estou analisando agora" (o período que você escolher). As duas batem a mesma bateria de regras contra os lançamentos; só a janela muda.
+
+O aviso de **déficit projetado no fluxo de caixa** é exceção: ele só aparece no Painel, porque depende da projeção de caixa, não do histórico de um período fechado — ver [Painel → Déficit projetado](/modulos/painel/#novo-aviso--déficit-projetado-no-fluxo-de-caixa).
+
 ### Receitas e despesas por categoria
 
 Receitas e despesas aparecem **lado a lado**, não mais em abas separadas — dá para comparar entrada e saída sem trocar de tela:
@@ -77,16 +87,13 @@ Receitas e despesas aparecem **lado a lado**, não mais em abas separadas — d�
 - Com **comparativo ligado**: colunas extras com valor do período anterior, variação em R$, variação em % e seta de tendência.
 - **Drilldown** — clique em uma linha de categoria e o RIT360 Financeiro abre `/movimentacoes` já filtrado por essa categoria + o mesmo período. Você passa do agregado para o detalhe em um clique.
 
-## Onde foram parar Atenção e Projeção
+## Onde foi parar a Projeção
 
-Duas seções que antes eram abas desta tela **mudaram de casa**, e continuam existindo — só que na Saúde 360 (a tela inicial), não aqui:
+A projeção de saldo mês a mês **não está mais aqui**: ela virou a terceira aba da tela inicial, ao lado do Painel e da Situação — veja **[Saúde 360 → Projeção](/modulos/painel/#projeção)**. Os mesmos filtros (Tipo, Projeto, Conta, Categoria, Centro de custo) e o mesmo horizonte de 3, 6 ou 12 meses continuam lá.
 
-- **Pontos de atenção** — as anomalias detectadas nos seus lançamentos (despesa concentrada, categoria com pico, fornecedor novo, categoria que voltou, queda de receita) agora moram só no **[Painel](/modulos/painel/#bloco-4--pontos-de-atenção)**, considerando os últimos 30 dias. Os limites de cada regra continuam configuráveis em **Configurações → Relatórios**, no mesmo lugar de sempre.
-- **Projeção** — a projeção de saldo mês a mês virou a terceira aba da tela inicial, ao lado do Painel e da Situação: veja **[Saúde 360 → Projeção](/modulos/painel/#projeção)**. Os mesmos filtros (Tipo, Projeto, Conta, Categoria, Centro de custo) e o mesmo horizonte de 3, 6 ou 12 meses continuam lá.
-
-> ⚠️ **Atenção · Se você procurar aqui, não vai achar**
+> ⚠️ **Atenção · Se você procurar a Projeção aqui, não vai achar**
 >
-> Se você está acostumado a abrir Relatórios para ver os avisos ou a projeção, essa é a mudança que mais pega quem já usava o sistema. Não é bug: **Atenção e Projeção saíram desta tela de propósito**, para responder à pergunta "para onde vamos" no mesmo lugar onde já se responde "o que urge hoje" e "como estamos" — a Saúde 360.
+> Se você está acostumado a abrir Relatórios para ver a projeção de caixa, essa é a mudança que mais pega quem já usava o sistema. Não é bug: a **Projeção saiu desta tela de propósito**, para responder à pergunta "para onde vamos" no mesmo lugar onde já se responde "o que urge hoje" e "como estamos" — a Saúde 360. Os **Pontos de atenção**, ao contrário, voltaram para cá (ver acima) — eles não saíram do Painel, passaram a existir **nos dois lugares**.
 
 ## Filtros e período compartilhados
 
@@ -113,11 +120,16 @@ Toggle no cabeçalho. Quando ligado, cada bloco/gráfico/tabela da página mostr
 
 ## Exportação
 
-Botão **Exportar** no cabeçalho. Três opções:
+Botão **Exportar** no cabeçalho, com quatro opções:
 
-- **Exportar visão atual (PDF)** — a página com o recorte atual de filtros e período
-- **Exportar relatório completo (PDF)** — o relatório completo, com sumário no topo
-- **Exportar dados (Excel)** — planilha com uma worksheet por seção
+- **Visão atual, com totais (PDF)** — a página com o recorte atual de filtros e período
+- **Todas as visões, com totais (PDF)** — o relatório completo, com sumário no topo
+- **Todas as visões, com totais (Excel)** — planilha com uma worksheet por seção
+- **Prestação de contas, com cada lançamento…** — leva direto para [emitir a prestação de contas](/modulos/movimentacoes/#prestacao-de-contas), já com o projeto em foco pré-selecionado quando o filtro de Projeto estiver marcado. É a porta de entrada para gerar a prestação de contas a partir de Relatórios, sem precisar ir até Movimentações primeiro.
+
+> 📖 **Conceito · Totalização não é extrato**
+>
+> As três primeiras opções trazem **totais** (por categoria, por conta, por período) — o mesmo tipo de número que já está na tela. Quem precisa do **extrato lançamento a lançamento**, com cada movimentação listada, usa a quarta opção, que leva à prestação de contas.
 
 O **Excel** baixa na hora, como sempre. Já o **PDF** — nas duas variantes — é montado **em segundo plano**: ao clicar em exportar, abre uma página de acompanhamento com "Gerando…" e, assim que o documento fica pronto, **o download começa sozinho**. Você não precisa esperar parado — pode fechar a aba e continuar trabalhando, porque **o link do PDF também chega no seu e-mail**. É o mesmo comportamento já usado na exportação de Movimentações e na prestação de contas.
 
@@ -284,7 +296,7 @@ Três opções na hora de revisar:
 - **Regime de caixa** — modelo em que o que vale é a data em que o dinheiro entrou/saiu da conta, não a data do contrato ou da fatura.
 - **Período anterior equivalente** — janela imediatamente anterior, com a mesma duração do período carregado.
 - **Comparativo** — toggle que adiciona variação versus período anterior em cada bloco.
-- **Anomalia** — evento detectado por uma das 5 regras determinísticas de [Pontos de atenção, no Painel](/modulos/painel/#bloco-4--pontos-de-atenção); ranqueado por severidade.
+- **Anomalia** — evento detectado por uma das 5 regras determinísticas de [Pontos de atenção](#pontos-de-atenção), vistas aqui pelo período escolhido ou no [Painel](/modulos/painel/#bloco-4--pontos-de-atenção) pela janela fixa de 30 dias; ranqueado por severidade.
 - **Déficit projetado no fluxo de caixa** — regra exclusiva do Painel que avisa quando o caixa tende a ficar negativo em um mês futuro, considerando agendados e, quando necessário, a média histórica.
 - **Severidade** — leve / moderada / alta, derivada do quanto o evento ultrapassa o limite da regra.
 - **Calibração** — análise estatística que sugere limites de regras personalizados ao padrão da sua OSC.
@@ -298,7 +310,7 @@ Três opções na hora de revisar:
 ## Por onde seguir
 
 - **Movimentações** — onde estão os lançamentos que alimentam todas as análises, e onde a [prestação de contas](/modulos/movimentacoes/#prestacao-de-contas) é gerada.
-- **[Saúde 360](/modulos/painel/)** — pontos de atenção e previsão de caixa, que saíram de Relatórios e viraram abas da tela inicial.
+- **[Saúde 360](/modulos/painel/)** — a mesma bateria de pontos de atenção, na janela fixa de 30 dias, mais a previsão de caixa mês a mês (que só existe lá).
 - **[Documentos](/modulos/documentos/)** — onde ficam as prestações de contas e os PDFs já gerados.
 - **Configurações → Categorias** — relatório bom depende de categorização consistente.
 - **Configurações → Relatórios** (Presidente) — ajustar limites de pontos de atenção, calibrar pelo histórico e definir o prazo de guarda dos documentos de prestação de contas.
