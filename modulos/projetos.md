@@ -116,7 +116,7 @@ A cada projeto o RIT360 Financeiro atribui um **indicador de saúde** — um sem
 ## A lista de projetos
 
 [![Lista de projetos em desktop](/assets/screenshots/manual-projetos-01-lista.png)](/assets/screenshots/manual-projetos-01-lista.png)
-*Lista de projetos em desktop — cada linha resume o projeto e leva ao detalhe*
+*Lista de projetos em desktop — as colunas Nome, Tipo, Status, Criado em e Período ordenam ao clique no título*
 
 > 🎥 **Vídeo tutorial · Criei um projeto: quem aprova?**
 >
