@@ -41,6 +41,29 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 - Tentativa de eliminar as folhas em branco da prestação de contas em PDF removendo páginas vazias de dentro dos arquivos anexados. Não resolveu, e a regra foi retirada na versão seguinte.
 
+## [1.126.0] — 2026-10-12
+
+### Adicionado
+
+- Na prestação de contas em PDF, nova seção Execução por Projeto, ao lado da Execução por Centro de Custo.
+- O índice do documento passou a trazer o número da página de cada seção.
+
+### Corrigido
+
+- O documento inteiro passou a sair em A4. Antes, a maior parte das folhas saía em tamanho carta.
+- Cabeçalho com o logo da organização em todas as folhas, menos a capa.
+- Os dois gráficos do resultado do período passaram a sair lado a lado, e as três apurações (posição de caixa, centro de custo e projeto) na mesma folha.
+- O rótulo do tipo de conta (Corrente, Poupança, Cartão de crédito, Outro) passou a ser o mesmo que aparece na tela.
+- Arquivo anexado que não dá para imprimir (nota fiscal em XML, planilha) passou a ser citado junto da descrição do lançamento, em vez de ocupar uma folha própria.
+- Acabaram as folhas de capa de grupo de comprovantes, e o comprovante não invade mais o rodapé.
+- As páginas de um mesmo anexo passaram a sair todas no mesmo tamanho.
+
+## [1.125.0] — 2026-10-12
+
+### Corrigido
+
+- Na prestação de contas, o campo "Pago por" mostrava quem aprovou o pagamento, e não quem efetivamente pagou. Agora, no lançamento feito direto, aparece quem registrou o pagamento; no que veio de pedido de compra, o nome só aparece quando se sabe quem pagou, e nunca o do aprovador no lugar dele.
+
 ## [1.124.2] — 2026-09-18
 
 ### Alterado
