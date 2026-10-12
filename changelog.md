@@ -11,6 +11,36 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.126.4] — 2026-10-12
+
+### Corrigido
+
+- Na prestação de contas em PDF, as folhas que saíam em branco logo depois de comprovantes com várias páginas voltaram a mostrar o conteúdo: cabeçalho, comprovante e numeração das páginas. As folhas já existiam no documento, mas o leitor de PDF não conseguia exibi-las.
+
+## [1.126.3] — 2026-10-12
+
+### Corrigido
+
+- Na prestação de contas em PDF, todas as páginas dos arquivos anexados voltaram a entrar no documento.
+- No detalhe de uma receita ligada a um projeto, o bloco que mostra a origem do dinheiro passou a dizer de onde o dinheiro entrou, em vez de "quem pagou".
+- A seção Execução por Projeto da prestação de contas passou a obedecer à marcação própria dela.
+
+## [1.126.2] — 2026-10-12
+
+### Adicionado
+
+- Na tela de emissão da prestação de contas, a Execução por Projeto ganhou uma opção própria, separada da Execução por Centro de Custo. Quem desmarca centro de custo não perde mais, sem perceber, a apuração por projeto.
+
+### Corrigido
+
+- A regra que removia páginas vazias de dentro dos arquivos anexados (introduzida na 1.126.1) foi retirada, porque não resolvia as folhas em branco da prestação de contas.
+
+## [1.126.1] — 2026-10-12
+
+### Corrigido
+
+- Tentativa de eliminar as folhas em branco da prestação de contas em PDF removendo páginas vazias de dentro dos arquivos anexados. Não resolveu, e a regra foi retirada na versão seguinte.
+
 ## [1.124.2] — 2026-09-18
 
 ### Alterado
