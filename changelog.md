@@ -11,6 +11,13 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.126.5] — 2026-10-12
+
+### Corrigido
+
+- As folhas de comprovante com várias páginas na prestação de contas em PDF agora saem certas desde a montagem do documento. A correção anterior consertava o documento no fim; agora o problema deixou de ser criado.
+- O índice da prestação de contas ficou mais enxuto: saiu a frase "Este documento contém exatamente as seções listadas acima.", que repetia o que a lista logo acima já dizia. As seções e os números de página continuam os mesmos.
+
 ## [1.126.4] — 2026-10-12
 
 ### Corrigido
