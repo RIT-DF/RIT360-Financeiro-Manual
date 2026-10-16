@@ -11,6 +11,19 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.128.0] — 2026-10-16
+
+### Modificado
+
+- Lançar despesa ficou mais claro. Quando o projeto não tem fonte de recursos para a despesa, aparece um aviso e o lançamento é salvo normalmente.
+- A lista de conferência do formulário agora mostra todo motivo que impede de salvar e diz o que fazer para resolver.
+
+### Corrigido
+
+- Trocar de organização com um formulário aberto descarta o rascunho e avisa. Nada preenchido numa organização aparece na outra.
+- O sistema recusa categoria, projeto ou centro de custo de outra organização, com uma mensagem clara.
+- Nas listas de pedidos e reembolsos, um cancelamento só aparece como retirado pelo solicitante quando foi ele mesmo quem cancelou.
+
 ## [1.127.1] — 2026-10-15
 
 ### Corrigido
