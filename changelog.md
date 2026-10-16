@@ -11,6 +11,19 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.129.0] — 2026-10-16
+
+### Modificado
+
+- Transferências feitas por engano agora podem ser estornadas. O estorno cria a transferência de volta, da conta de destino para a de origem, com as mesmas datas, e o saldo das duas contas volta ao que era.
+- Lançamento com data de pagamento no futuro passa a ser registrado como previsto, com vencimento nessa data, e a tela avisa antes de salvar. Quando o pagamento acontecer, é só marcar como pago. Vale para receitas, despesas, transferências, marcação como pago, pagamento de pedido e importação de planilha. "Hoje" segue o fuso horário configurado da organização.
+
+### Corrigido
+
+- A lista de movimentações não oferece mais uma ação que o sistema vai recusar, e o resumo das ações em lote diz por que cada item foi ignorado.
+- O aviso de estorno passou a dizer a data certa: o estorno usa as mesmas datas do lançamento original.
+- Trocar de organização logo depois de abrir o formulário também descarta o rascunho, e o aviso de descarte só aparece quando algo foi preenchido.
+
 ## [1.128.0] — 2026-10-16
 
 ### Modificado
