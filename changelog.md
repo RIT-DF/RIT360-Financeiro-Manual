@@ -11,6 +11,25 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.127.1] — 2026-10-15
+
+### Corrigido
+
+- Pedido de pagamento único que teve o pagamento estornado deixa de aparecer como pago e passa a constar como cancelado.
+- A tela do pedido só diz que o solicitante retirou o pedido quando foi ele mesmo quem o retirou. Nos outros casos, mostra apenas "Cancelado".
+- A confirmação de cancelamento agora concorda com a quantidade: "Será cancelada 1 ocorrência", no singular, quando for uma só.
+
+## [1.127.0] — 2026-10-15
+
+### Adicionado
+
+- Na tela do pedido de pagamento, o botão **Cancelar pedido** cancela de uma vez todas as ocorrências pendentes. Antes de confirmar, a tela mostra quantas ocorrências serão canceladas e quanto elas somam. O botão substitui o antigo "Cancelar série" e agora também vale para pedido de pagamento único.
+- Quando o pedido já tem pagamento registrado, o botão explica que é preciso estornar o pagamento primeiro.
+
+### Corrigido
+
+- Pedido de pagamento cujo pagamento foi estornado e que não tem mais nenhuma ocorrência a pagar passa a ser encerrado sozinho, em vez de continuar aparecendo como aprovado.
+
 ## [1.126.5] — 2026-10-12
 
 ### Corrigido
