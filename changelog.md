@@ -11,6 +11,31 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.130.1] — 2026-10-16
+
+### Corrigido
+
+- Na prestação de contas, lançamentos de categorias que dispensam comprovante deixam de aparecer como "sem comprovante" e passam a ser indicados por um aviso com o nome da categoria.
+
+## [1.130.0] — 2026-10-16
+
+### Adicionado
+
+- Categorias podem ser marcadas como "Dispensa comprovante" (em Configurações > Categorias, ao criar ou editar). Serve para lançamentos que não geram nota, recibo ou boleto, como tarifas bancárias e rendimentos, que só aparecem no extrato.
+- Reembolsos e pedidos de pagamento de categoria marcada podem ser enviados sem anexo.
+- Os modelos de categoria já trazem marcadas "Taxas bancárias", "Receita financeira" e "Rendimento da dotação (aplicações)".
+
+### Modificado
+
+- Na prestação de contas, transferências entre contas deixaram de ser cobradas de comprovante.
+- A tela de editar e reenviar um pedido de pagamento passou a avisar a falta de anexo antes de enviar.
+
+### Corrigido
+
+- O texto do aviso de estorno não sai mais com as frases coladas.
+
+<!-- destaque: Agora dá para marcar categorias que não exigem comprovante, como tarifas bancárias. -->
+
 ## [1.129.0] — 2026-10-16
 
 ### Modificado

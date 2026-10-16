@@ -1,6 +1,17 @@
 {
   "versoes": [
     {
+      "versao": "1.130.1",
+      "data": "2026-10-16",
+      "destaque": false
+    },
+    {
+      "versao": "1.130.0",
+      "data": "2026-10-16",
+      "destaque": true,
+      "resumo": "Agora dá para marcar categorias que não exigem comprovante, como tarifas bancárias."
+    },
+    {
       "versao": "1.129.0",
       "data": "2026-10-16",
       "destaque": false
