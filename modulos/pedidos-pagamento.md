@@ -48,7 +48,7 @@ O módulo de **Pedidos de Compra e Pagamento** é onde alguém da OSC **pede aut
 
 > 📖 **Conceito · Status do pedido**
 >
-> O ciclo normal é **Rascunho → Aguardando aprovação → Aprovado → Pago**. **Rejeitado** é desvio do caminho aprovado — solicitante pode editar e reenviar.
+> O ciclo normal é **Rascunho → Aguardando aprovação → Aprovado → Pago**. **Rejeitado** é desvio do caminho aprovado — solicitante pode editar e reenviar. **Cancelado** é o encerramento do pedido por outro caminho: o solicitante o retirou antes da aprovação, ou o pedido aprovado foi [cancelado](#cancelar-pedido) — por quem cuida dos pagamentos ou automaticamente, quando um pagamento estornado deixou o pedido sem nada a pagar.
 
 | Status | Significado |
 |---|---|
@@ -57,7 +57,7 @@ O módulo de **Pedidos de Compra e Pagamento** é onde alguém da OSC **pede aut
 | 🟢 **Aprovado** | Aprovado; movimentação financeira pendente criada automaticamente |
 | 🔴 **Rejeitado** | Reprovado com motivo registrado — pode ser editado e reenviado |
 | 💙 **Pago** | Tesoureiro confirmou o pagamento na movimentação correspondente |
-| ⬛ **Cancelado** | Retirado pelo próprio solicitante antes de ser aprovado — pode ser enviado de novo, mesmo sem alterar nada |
+| ⬛ **Cancelado** | Encerrado sem pagamento. Aparece como **Retirado pelo solicitante** quando foi o próprio solicitante que o retirou antes da aprovação (pode ser enviado de novo, mesmo sem alterar nada); nos demais casos — cancelamento do pedido aprovado, ou pagamento estornado sem nada mais a pagar — aparece só como **Cancelado**, sem apontar ninguém |
 
 ## Lista de pedidos de compra e pagamento
 
@@ -174,6 +174,8 @@ Painel de Ações mostra: **"Aprovado — aguardando confirmação de pagamento 
 
 Há três caminhos para confirmar o pagamento, e todos levam ao mesmo lugar: pagar **direto aqui no detalhe**, [pagar pela lista](#pagar-pela-lista) na aba "Aprovado", ou pelo caminho mais antigo, abaixo, via Movimentações.
 
+Se o pedido não vai mais ser pago — a compra foi desfeita, o fornecedor desistiu, o pedido foi aprovado por engano —, o botão **Cancelar pedido**, no alto da tela, encerra tudo de uma vez. Ver [Cancelar o pedido](#cancelar-pedido).
+
 > 📖 **Conceito · Aprovado vira movimentação automaticamente**
 >
 > No momento da aprovação, o RIT360 Financeiro cria automaticamente a **movimentação financeira pendente** (ou várias, no caso de parcelado e recorrente) com origem `purchase_order` (pedido de compra e pagamento). O tesoureiro entra em Movimentações, escolhe a conta de saída e marca como paga — ou faz a mesma coisa em um passo só, [pagando pela lista](#pagar-pela-lista) ou aqui no detalhe. Cada ocorrência de uma série recorrente gera um movimento individual no momento programado, pago separadamente. Os comprovantes anexados ao pedido **vão junto com o lançamento** — aparecem direto na aba Documentos, sem precisar abrir o pedido original para conferir. O lançamento em Movimentações também tem o link **"Ver pedido de compra e pagamento →"**, útil para consultar o histórico de aprovações ou outros dados da solicitação.
@@ -238,15 +240,71 @@ Se o pedido já foi enviado — inclusive **aprovado** ou até **pago** — e o 
 
 Escolha o **novo centro de custo** e escreva o **motivo da correção** (obrigatório) — ele fica guardado na trilha de auditoria, junto com o valor anterior e o novo. Antes de confirmar, a tela mostra o que será alterado: a própria solicitação e quantos lançamentos financeiros gerados por ela também vão mudar. A correção alcança os lançamentos já criados a partir deste pedido, **inclusive os que já foram pagos**.
 
-### Cancelar série (recorrente / parcelado)
+### Cancelar o pedido {#cancelar-pedido}
 
-Para séries (recorrentes ou parceladas), o detalhe permite **cancelar com 3 escopos diferentes**, escolhidos no momento do cancelamento:
+[![Detalhe de um pedido aprovado com o botão Cancelar pedido desabilitado e a explicação logo abaixo](/assets/screenshots/ped-cancelar-pedido-desabilitado.png)](/assets/screenshots/ped-cancelar-pedido-desabilitado.png)
+*Pedido aprovado em que não há mais nada a cancelar: o botão fica desabilitado e a tela diz por quê*
 
-- **Apenas esta ocorrência** — cancela só a parcela/ocorrência específica
-- **Esta e todas as futuras** — encerra a série a partir de uma data
-- **Série inteira** — cancela tudo (apenas ocorrências ainda não pagas)
+> 💡 **Por que isso importa**
+>
+> Um pedido aprovado cria lançamentos pendentes que ficam esperando pagamento — e continuam aparecendo na previsão e nas filas de quem paga. Se o pedido deixou de fazer sentido e você só apaga lançamento por lançamento, o pedido continua **Aprovado** (e a tela continua oferecendo pagar algo que não existe mais). **Cancelar o pedido** resolve tudo de uma vez e deixa o pedido no histórico como **Cancelado**, com o motivo guardado.
 
-Ocorrências já pagas não podem ser canceladas (preservação de auditoria) — apenas estornadas via Movimentações.
+O botão **Cancelar pedido** fica no alto do detalhe, ao lado do status, e serve para qualquer tipo de pedido — **único**, **parcelado** ou **recorrente**. Ele **substituiu o antigo "Cancelar série"**: antes, um pedido de pagamento único não tinha como ser cancelado pela tela.
+
+> 📖 **Conceito · Quem vê o botão e quando ele aparece**
+>
+> O botão aparece enquanto o pedido está **Aprovado**, para quem tem a [permissão de pagar](/configuracoes/cargos/#permissao-pagar) — quem decide pagar é quem pode decidir não pagar. Pedido que ainda aguarda aprovação não usa este botão: o solicitante o [retira](#retirar-uma-solicitação-enviada), ou os aprovadores o rejeitam.
+
+**Para cancelar:**
+
+1. Abra o pedido aprovado e clique em **Cancelar pedido**.
+2. A confirmação diz **quantas ocorrências serão canceladas e quanto elas somam** — por exemplo, "Serão canceladas 12 ocorrências, somando R$ 1.800,00". Confira se é isso mesmo que você quer encerrar.
+3. Escreva o **Motivo** (obrigatório) e clique em **Cancelar 12 ocorrências** (o número muda conforme o pedido). O motivo fica na trilha de auditoria.
+
+[![Confirmação do cancelamento: 12 ocorrências somando R$ 1.800,00, aviso de que o pedido será encerrado e campo Motivo](/assets/screenshots/ped-cancelar-pedido-confirmacao.png)](/assets/screenshots/ped-cancelar-pedido-confirmacao.png)
+*Confirmação única: quantas ocorrências, quanto somam, e o aviso de que não há volta*
+
+> ⚠️ **Atenção · Não há como desfazer**
+>
+> A confirmação traz, em um quadro laranja, o aviso de que o **pedido inteiro será encerrado como cancelado, junto com a trilha de aprovação**, e de que não há como desfazer. Se você cancelou o pedido errado, a saída é **abrir um novo pedido e passar de novo pela aprovação** — o cancelado não volta. Por isso o motivo é obrigatório e a confirmação mostra o total antes: leia antes de confirmar.
+
+**Só cancela o que ainda não foi pago.** Ocorrências já pagas ficam preservadas (auditoria). Por isso, quando o pedido **já tem pagamento registrado**, o botão fica **desabilitado** e a tela explica o caminho: *estorne o pagamento na tela de movimentações e depois cancele o pedido*. O botão também fica desabilitado quando **não há ocorrências canceláveis** (por exemplo, todas já foram canceladas).
+
+#### Paguei por engano, e agora? {#paguei-por-engano}
+
+Este é o caso que mais gera dúvida: o pedido foi aprovado, o pagamento foi confirmado — e não deveria ter sido. A ordem é sempre a mesma:
+
+1. **Estorne o pagamento** em **Movimentações**, no lançamento que foi pago — ver [Estornar um lançamento](/modulos/movimentacoes/#estornar-um-lançamento). O estorno cria o lançamento contrário e preserva a história do que aconteceu.
+2. **Se não sobrou nada a pagar no pedido, ele se encerra sozinho**, como **Cancelado**. É o caso típico de um pedido de pagamento único: pagou, estornou, acabou. Você não precisa fazer mais nada.
+3. **Se ainda restam ocorrências pendentes** (um pedido parcelado ou recorrente em que só uma parcela foi paga por engano), o pedido continua **Aprovado** e o botão **Cancelar pedido** passa a funcionar — use-o para encerrar as parcelas restantes, ou deixe-as seguir se o resto do pedido continua valendo.
+
+> ⚠️ **Atenção · Estornar não é cancelar, e não adianta tentar cancelar antes**
+>
+> Com pagamento registrado, o botão **Cancelar pedido** fica desabilitado de propósito. Excluir ou "apagar" o pagamento também não é o caminho: pagamento já feito só se reverte por **estorno**. Antes dessa mudança, o pedido ficava **Aprovado** (ou **Pago**, no caso do pagamento único) para sempre depois do estorno, oferecendo uma ação de pagamento que não funcionava — hoje ele se encerra sozinho quando não resta nada a pagar.
+
+> ✓ **Dica · Pagou e vai pagar de novo?**
+>
+> Se o estorno foi para refazer o pagamento com outro valor, outra conta ou outro destinatário, abra um **novo pedido**: o cancelado não é reaproveitado, e o novo passa pela aprovação com as informações corretas.
+
+#### Quando dá errado
+
+| O que aparece | O que significa | O que fazer |
+|---|---|---|
+| Botão **Cancelar pedido** desabilitado: *"Há pagamento registrado neste pedido. Estorne o pagamento na tela de movimentações e depois cancele o pedido."* | Há pelo menos uma ocorrência paga e não estornada | [Estorne o pagamento](/modulos/movimentacoes/#estornar-um-lançamento) e volte ao pedido |
+| Botão desabilitado: *"Não há ocorrências canceláveis."* | Todas as ocorrências já foram canceladas ou estornadas | Nada a cancelar. Se o pedido segue como **Aprovado** e você precisa pagar o fornecedor, abra um novo pedido |
+| *"Este pedido não tem ocorrência a pagar: as ocorrências foram canceladas ou estornadas. Para pagar este fornecedor, abra um novo pedido."* (no painel **Ações**) | Mesmo caso acima, visto do lado de quem paga | Abra um novo pedido |
+| *"Não foi possível conferir as ocorrências deste pedido. Recarregue a página."* | A tela não conseguiu consultar as ocorrências | Recarregue a página; se persistir, envie um [feedback](/enviar-feedback/) |
+| *"O pedido não foi encerrado: N cancelada(s), N recusada(s) por regra, N com falha…"* (dentro da confirmação) | O cancelamento rodou **parcialmente**: algumas ocorrências foram canceladas e outras não, por regra do sistema ou por falha | Leia a mensagem que acompanha cada recusa, resolva o impedimento e clique em cancelar de novo — o pedido só se encerra quando não resta nenhuma ocorrência |
+
+### Cancelar só uma ocorrência (recorrente / parcelado) {#cancelar-ocorrencia}
+
+Para encerrar **apenas parte** de um pedido recorrente ou parcelado, use a lista de **Ocorrências** do detalhe: no menu **⋯** da linha, a opção **Cancelar esta ocorrência**. A janela pergunta o alcance:
+
+- **Apenas este lançamento** — cancela só a parcela/ocorrência escolhida
+- **Este e os próximos** — encerra a série a partir dali
+- **Toda a série** — cancela tudo o que ainda está pendente
+
+Ocorrências já pagas não podem ser canceladas (preservação de auditoria) — apenas estornadas via Movimentações. Cancelar **a última** ocorrência viva encerra o pedido inteiro, como se você tivesse usado **Cancelar pedido** — a janela avisa antes.
 
 ## Novo pedido de compra e pagamento
 
@@ -337,8 +395,10 @@ Cada usuário escolhe em **Meu Perfil → Notificações** quais eventos receber
 - **Tipo do pedido** — único, recorrente ou parcelado.
 - **Ocorrência** — uma das execuções programadas de um pedido recorrente.
 - **Parcela** — uma das partes de um pedido parcelado.
-- **Cancelar série** — encerrar pedido recorrente/parcelado em um dos 3 escopos (apenas uma / esta e futuras / série inteira). Não confundir com o status **Cancelado**, abaixo — são mecanismos diferentes.
-- **Cancelado** — status de uma solicitação retirada pelo próprio solicitante antes da aprovação; diferente de rejeitado, pode ser reenviada sem precisar alterar nada.
+- **Cancelar pedido** — botão do detalhe de um pedido aprovado que encerra, de uma vez, todas as ocorrências ainda não pagas e leva o pedido ao status **Cancelado**. Substituiu o antigo "Cancelar série" e vale também para pedido único. Sem volta.
+- **Cancelar esta ocorrência** — cancela só uma parcela ou ocorrência de um pedido recorrente/parcelado (apenas ela, ela e as próximas, ou toda a série pendente).
+- **Cancelado** — status de um pedido encerrado sem pagamento: retirado pelo solicitante antes da aprovação (aparece como **Retirado pelo solicitante** e pode ser reenviado sem alterar nada), cancelado depois de aprovado, ou encerrado sozinho porque o pagamento foi estornado e não restou nada a pagar. Diferente de rejeitado.
+- **Estorno** — a forma de reverter um pagamento já feito: cria um lançamento contrário em Movimentações e preserva a história. Não se cancela pagamento já realizado.
 - **Reprovações necessárias** — número de votos contrários necessários para barrar o pedido (configurável: de 1 até o total de pessoas aptas a aprovar; padrão 1).
 - **Valor fechado** — condição do pedido em que o valor declarado é o que vai ser pago (o boleto, a nota ou o recibo já existem).
 - **Valor estimado** — condição do pedido em que o preço final ainda vai ser negociado; a aprovação autoriza com base numa estimativa.
@@ -349,7 +409,7 @@ Cada usuário escolhe em **Meu Perfil → Notificações** quais eventos receber
 ## Por onde seguir
 
 - **Reembolsos** — para despesas que **já foram pagas** do bolso e querem ressarcimento.
-- **Movimentações** — para o tesoureiro confirmar o pagamento do pedido aprovado, ou registrar o valor efetivo de um pedido de valor estimado.
+- **Movimentações** — para o tesoureiro confirmar o pagamento do pedido aprovado, registrar o valor efetivo de um pedido de valor estimado, ou [estornar um pagamento feito por engano](#paguei-por-engano).
 - **Configurações → Fluxo de Aprovações** — para a OSC ajustar quórum, reprovações necessárias, papéis aprovadores e o limiar de reaprovação.
 - **Cargos e permissões** — para saber quem pode alterar o valor de um lançamento vindo de pedido (exige a permissão **Pagar**).
 - **Meu Perfil → Notificações** — para configurar canais e eventos das notificações de pedido.
