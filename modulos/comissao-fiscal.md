@@ -28,21 +28,8 @@ O módulo **Comissão Fiscal** é o ambiente de trabalho onde os conselheiros fi
 
 Se você abriu o sistema para realizar a fiscalização anual ou periódica, este é o fluxo ideal de trabalho:
 
-```mermaid
-flowchart TD
-    A["1. Selecionar o Período Fiscal"] --> B["2. Avaliar o Semáforo dos 3 Pilares"]
-    B --> C["3. Conferir Comprovantes e Emitir Atestes"]
-    C --> D["4. Verificar Conciliação com Extrato Bancário (OFX)"]
-    D --> E["5. Validar Finalidade Estatutária e Projetos"]
-    E --> F["6. Examinar os Demonstrativos Contábeis Oficiais"]
-    F --> G{"Há dúvidas ou falhas?"}
-    G -- "Sim" --> H["7. Abrir Diligência Formal para a Tesouraria"]
-    H --> I["Tesouraria responde e anexa esclarecimentos"]
-    I --> J["Comissão julga a resposta (Esclarecida ou Insuficiente)"]
-    J --> K["8. Registrar Votos e Emitir o Parecer Final"]
-    G -- "Não" --> K
-    K --> L["Exportar Caderno de Fiscalização (PDF e Planilha)"]
-```
+[![Roteiro de Fiscalização em 8 Passos](/assets/diagrams/comissao-fiscal-roteiro.png)](/assets/diagrams/comissao-fiscal-roteiro.png)
+*O rito estatutário da Comissão Fiscal em 8 passos: da conferência dos 3 pilares à emissão do parecer oficial.*
 
 ---
 
