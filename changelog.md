@@ -11,6 +11,45 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.132.0] — 2026-10-23
+
+### Adicionado
+
+- Módulo da Comissão Fiscal (/comissao-fiscal e Configurações > Comissão Fiscal): rito deliberativo e ambiente de trabalho próprio para os conselheiros fiscais da organização (#257).
+- Painel de conferência estruturado em 3 pilares de conformidade:
+  1. Comprovantes de despesa com identificação imediata de pendências (respeitando as regras de dispensa por categoria);
+  2. Inconsistências de conciliação bancária contra extratos OFX;
+  3. Conformidade orçamentária e finalidade estatutária em projetos e centros de custo.
+- Abertura de diligências: os membros fiscais podem abrir pedidos de esclarecimento com prazo diretamente para a tesouraria em lançamentos específicos, com respostas e novos comprovantes anexados no próprio sistema.
+- Votação colegiada com apuração automática de quórum (maioria simples, 2/3 ou unanimidade), modalidade de voto nominal ou anônimo, desempate e desfechos formais (aprovação, aprovação com ressalvas, reprovação ou recusa fundamentada de parecer).
+- Emissão oficial do Parecer Fiscal em PDF para apresentação em Assembleia Geral, amarrado à fotografia imutável das contas do período, com carimbo permanente de qualquer alteração extemporânea posterior.
+- Salvaguardas de governança e conflito de interesses: permissão `config.fiscal_council` atribuída ao administrador e excluída por padrão do tesoureiro e dos membros fiscais; tratamento explícito de silêncio (encerramento por decurso de prazo, sem aprovação tácita).
+
+## [1.131.2] — 2026-10-23
+
+### Modificado
+
+- No painel de Inteligência Artificial do Superadmin, a ordem de tentativa da cascata de provedores agora pode ser reordenada visualmente com botões Subir e Descer em cada cartão, eliminando a digitação manual de texto.
+- O campo de modelo de cada provedor de IA passou a ser selecionado por lista suspensa com opções curadas, indicação visual do modelo recomendado da casa e botão para restaurar o padrão com um toque, mantendo a opção de informar outro modelo manualmente.
+
+## [1.131.1] — 2026-10-23
+
+### Adicionado
+
+- Botão "Testar conexão" no painel de Inteligência Artificial do Superadmin para cada provedor configurado, medindo a latência da chamada em tempo real e apontando claramente eventuais erros de chave, saldo ou comunicação.
+- Configuração de modelo customizado por provedor de inteligência artificial cadastrado.
+
+### Modificado
+
+- A integração de Inteligência Artificial no Superadmin agora reflete o status "Ativo" assim que as chaves de API são configuradas, deixando de exibir o aviso "Em breve".
+
+## [1.131.0] — 2026-10-23
+
+### Adicionado
+
+- Envio de notas fiscais, cupons e boletos via bot do Telegram para abertura de solicitações financeiras. O bot aceita fotos e arquivos PDF de até 10 MB, extraindo valor, data, fornecedor e descrição com inteligência artificial multimodal em cascata (Gemini, Claude e OpenAI).
+- Confirmação obrigatória antes da gravação: o bot apresenta o resumo dos dados lidos com botões de confirmar ou cancelar. Ao confirmar, cria o rascunho de reembolso ou pedido de pagamento com o arquivo anexado e devolve o link de acesso no sistema web.
+
 ## [1.130.2] — 2026-10-23
 
 ### Corrigido

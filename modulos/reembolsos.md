@@ -258,6 +258,17 @@ Marcar como pago exige a permissão de **pagar**, separada da de criar e editar 
 
 Clique em **+ Nova solicitação** para abrir o formulário.
 
+### Envio rápido de comprovantes via Bot do Telegram
+
+Além de preencher o formulário manualmente na tela, você pode fotografar ou encaminhar o comprovante diretamente para o **Bot do RIT360 no Telegram** (`@rit360_bot`):
+
+1. **Vincule seu Telegram:** Inicie uma conversa com o bot e confirme o código de acesso enviado para o seu e-mail de membro da OSC.
+2. **Envie o recibo ou cupom:** Basta tirar uma foto do cupom fiscal, recibo ou enviar o arquivo PDF na conversa.
+3. **Extração inteligente com IA:** A inteligência artificial da plataforma faz a leitura imediata da imagem, identificando data, valor e fornecedor/estabelecimento.
+4. **Confirmação e criação de rascunho:** O bot mostra o resumo lido para a sua confirmação. Confirmado, um **Rascunho de Reembolso** é criado imediatamente no sistema, já com a imagem do comprovante anexada e os campos pré-preenchidos.
+5. **Revisão:** Basta acessar o RIT360 Financeiro na aba **Rascunho**, conferir os detalhes e clicar em **Enviar para aprovação**.
+
+
 **Campos obrigatórios:**
 
 - **Data da despesa** — quando você efetivamente gastou

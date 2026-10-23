@@ -313,6 +313,16 @@ Ocorrências já pagas não podem ser canceladas (preservação de auditoria) �
 
 Clique em **+ Nova solicitação** para abrir o formulário.
 
+### Envio rápido de faturas e boletos via Bot do Telegram
+
+Assim como nos reembolsos, você pode cadastrar um novo pedido de pagamento enviando o documento diretamente para o **Bot do RIT360 no Telegram** (`@rit360_bot`):
+
+1. **Envie a foto ou arquivo:** Encaminhe o boleto bancário, a fatura em PDF ou a foto da nota fiscal do fornecedor na conversa com o bot.
+2. **Extração inteligente com IA:** O sistema extrai automaticamente o valor, a data de vencimento e os dados do favorecido/fornecedor (inclusive linha digitável quando identificada).
+3. **Confirmação e criação de rascunho:** Após sua conferência rápida pelo chat, o bot salva um **Rascunho de Pedido de Compra e Pagamento** com o anexo pronto.
+4. **Envio:** Basta abrir a aba **Rascunho** no sistema, escolher o centro de custo ou categoria se necessário, e clicar em **Enviar para aprovação**.
+
+
 ### Condição do valor
 
 [![Condição do valor no formulário de novo pedido](/assets/screenshots/pedido-condicao-do-valor.png)](/assets/screenshots/pedido-condicao-do-valor.png)

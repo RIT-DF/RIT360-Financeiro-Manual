@@ -98,6 +98,49 @@ curl -H "Authorization: Bearer rit_3b95e9fe_..." \
 ```json
 {
   "organization_id": "c121b5a6-...",
+  "organization_name": "Minha OSC",
+  "period": {
+    "from": "2026-07-01",
+    "to": "2026-07-31"
+  },
+  "summary": {
+    "total_income": 15000.00,
+    "total_expense": 8200.00,
+    "net_result": 6800.00
+  }
+}
+```
+
+---
+
+## Provedores de Inteligência Artificial (Superadmin)
+
+> Disponível para quem tem papel de **Superadministrador da Plataforma** na rota `/superadmin/configuracoes`.
+
+O RIT360 Financeiro utiliza inteligência artificial multimodal de ponta para leitura e extração automática de dados de comprovantes, notas fiscais e recibos enviados pelos usuários (por exemplo, via bot do Telegram).
+
+[![Configuração de Provedores de Inteligência Artificial em cascata no Desktop](/assets/screenshots/config-ia-cascade-desktop.png)](/assets/screenshots/config-ia-cascade-desktop.png)
+*Configurações da Plataforma: Cascata de IA com reordenação de prioridade, seleção assistida de modelos e teste de latência*
+
+[![Configuração de Provedores de Inteligência Artificial no Celular](/assets/screenshots/config-ia-cascade-mobile.png)](/assets/screenshots/config-ia-cascade-mobile.png)
+*Ajuste de provedores e modelos no celular*
+
+### Cascata e redundância inteligente
+
+Para garantir disponibilidade contínua e tolerância a falhas, os provedores operam em **cascata ordenada**:
+1. **Google Gemini** (Gemini 2.5 Flash, Gemini 1.5 Pro)
+2. **Anthropic Claude** (Claude 3.5 Sonnet, Claude 3.5 Haiku)
+3. **OpenAI** (GPT-4o, GPT-4o-mini)
+
+Se a chamada ao primeiro provedor da fila atingir limite de cota, timeout ou indisponibilidade temporária, o sistema chaveia automaticamente para o próximo provedor ativo da sequência, sem interromper a experiência do usuário final.
+
+### Como configurar e testar
+
+1. **Ativação e Chave de API:** Ative o toggle do provedor e informe a chave de API correspondente. As chaves são armazenadas com segurança no cofre de segredos da plataforma.
+2. **Teste de conexão:** Clique em **Testar** para validar a chave em tempo real. O sistema exibe o status de resposta e a **latência em milissegundos** medida pela Edge Function (`test_ai_provider`).
+3. **Seleção assistida de modelos:** Após o teste bem-sucedido, o seletor lista os modelos compatíveis e ativos daquele provedor, com o modelo recomendado pré-selecionado (e identificação clara do recomendado para facilitar o retorno futuro).
+4. **Reordenação visual:** Utilize as setas de subida e descida (**↑** e **↓**) para reordenar a prioridade da cascata visualmente, eliminando digitação manual de índices.
+
   "period": { "from": "2026-07-01", "to": "2026-07-31" },
   "currency": "BRL",
   "balance": { "total": 82643.47, "available": 61210.30, "restricted": 21433.17 },
