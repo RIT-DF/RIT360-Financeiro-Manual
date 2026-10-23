@@ -75,6 +75,11 @@ permalink: /
     <div class="module-card-title">Orçamento</div>
     <div class="module-card-desc">Orçamento anual por centro de custo e categoria — previsto × realizado ao longo do ano</div>
   </a>
+  <a class="module-card" href="/modulos/comissao-fiscal/">
+    <div class="module-card-icon">⚖️</div>
+    <div class="module-card-title">Comissão Fiscal</div>
+    <div class="module-card-desc">Fiscalização contábil e estatutária, 3 pilares, diligências e emissão de parecer</div>
+  </a>
   <a class="module-card" href="/modulos/documentos/">
     <div class="module-card-icon">🗂️</div>
     <div class="module-card-title">Documentos</div>
@@ -119,6 +124,11 @@ permalink: /
     <div class="module-card-icon">✅</div>
     <div class="module-card-title">Fluxo de Aprovações</div>
     <div class="module-card-desc">Quórum e aprovadores elegíveis para reembolsos e pedidos</div>
+  </a>
+  <a class="module-card" href="/configuracoes/comissao-fiscal/">
+    <div class="module-card-icon">🏛️</div>
+    <div class="module-card-title">Comissão Fiscal</div>
+    <div class="module-card-desc">Parâmetros estatutários, mandatos, quórum e deliberação do Conselho Fiscal</div>
   </a>
 </div>
 

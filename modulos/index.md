@@ -19,4 +19,5 @@ O RIT360 Financeiro é organizado em módulos, cada um responsável por uma áre
 | [Projetos](/modulos/projetos/) | Planejar, executar, acompanhar a saúde e encerrar iniciativas da OSC |
 | [Relatórios](/modulos/relatorios/) | Análise financeira consolidada do período — resultado, saldo, receitas e despesas por categoria |
 | [Orçamento](/modulos/orcamento/) | Orçamento anual por centro de custo e categoria — previsto × realizado ao longo do ano |
+| [Comissão Fiscal](/modulos/comissao-fiscal/) | Fiscalização contábil e estatutária, conferência dos 3 pilares, diligências e emissão de parecer colegiado |
 | [Documentos](/modulos/documentos/) | Tudo o que já foi gerado no sistema, num catálogo só — com o que ainda está sendo preparado |

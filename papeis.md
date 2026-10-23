@@ -20,7 +20,7 @@ O RIT360 Financeiro tem **sete papéis** que um usuário pode ocupar dentro de u
 | **Gestor de Centro de Custo** | — | Cuida das movimentações **do(s) centro(s) de custo sob sua responsabilidade**: pode **criar e editar** lançamentos daquele CC e vê movimentações e relatórios recortados a ele. Não exclui/estorna, não importa, não aprova, não configura |
 | **Coordenador de Projeto** | — | Solicitar reembolsos e pedidos de compra e pagamento, ver movimentações |
 | **Voluntário** | — | Solicitar reembolsos (apenas os próprios), ver a Saúde 360 |
-| **Comissão Fiscal** | — | Lê tudo (movimentações, reembolsos, pedidos de compra e pagamento, auditoria) **sem operar, aprovar ou solicitar pedidos de compra e pagamento**. Pode solicitar reembolso próprio |
+| **Comissão Fiscal** | — | Fiscalizar contas no módulo [Comissão Fiscal](/modulos/comissao-fiscal/): confere comprovantes, conciliação e finalidade estatutária, formula diligências e emite parecer colegiado. Lê movimentações e relatórios sem operar, pagar ou aprovar. Pode solicitar reembolso próprio |
 
 > 💡 O papel **Diretor** era chamado "Dirigente" em versões anteriores — é o mesmo papel, só o nome na tela mudou (versão 0.23.0).
 
@@ -36,6 +36,8 @@ Visão rápida do que cada papel pode fazer. **✓** = pode operar · **👁** =
 | Confirmar pagamento (marcar como pago) | ✓ | ✓ | — | — | — | — |
 | Cadastrar contas bancárias e categorias | ✓ | ✓ | — | — | — | — |
 | Configurar a OSC (dados, usuários, papéis, fluxo de aprovação) | ✓ | — | — | — | — | — |
+| Configurar parâmetros e mandatos da Comissão Fiscal (`config.fiscal_council`) | ✓ | — | — | — | — | — |
+| Atuar no módulo Comissão Fiscal (atestes, diligências, parecer) | 👁 | — | 👁 | ✓ | — | — |
 | Aprovar reembolsos / pedidos | conforme o fluxo | conforme o fluxo | — | — | conforme o fluxo | conforme o fluxo |
 | Solicitar pedido de compra e pagamento | ✓ | ✓ | — | — | ✓ | — |
 | Solicitar o **próprio** reembolso | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
@@ -93,22 +95,25 @@ O **rótulo** desse cargo pode ser renomeado pela OSC (por exemplo, "Responsáve
 - **Voluntários** não podem solicitar pedidos de compra e pagamento (só reembolsos). Pedido de compra e pagamento envolve dispor de dinheiro da OSC; reembolso é só ressarcimento.
 - **Voluntários** não veem dados de pagamento (PIX/TED/conta) de outros membros nos reembolsos. Só veem os próprios dados.
 - **Diretor** é um papel de **supervisão, somente leitura**: enxerga movimentações, relatórios, projetos e a trilha de auditoria para acompanhar a OSC, mas **não opera** — não lança, não aprova, não configura. Pode solicitar o próprio reembolso, como qualquer membro. **Não acessa Configurações da OSC.**
-- **Comissão Fiscal** tem leitura ampla de todos os dados financeiros mas não realiza nenhuma operação, não participa de fluxos de aprovação e não solicita pedidos de compra e pagamento. Pode solicitar reembolso próprio (mesma regra dos demais membros). **Não acessa Configurações da OSC** — o papel é de fiscalização, separado da gestão.
-- **Configurações da Organização** se divide por papel: **Presidente** acessa tudo (dados da OSC, usuários, papéis, contas bancárias, categorias, fluxo de aprovações, relatórios); **Tesoureiro** acessa apenas **Contas Bancárias e Categorias** (o cadastro financeiro). O Fluxo de Aprovações, por ser configuração de governança, é **só do Presidente**. O ícone de engrenagem aparece para Presidente e Tesoureiro; ao clicar, cada um vai para a primeira seção que pode acessar.
+- **Comissão Fiscal** atua no módulo dedicado [Comissão Fiscal](/modulos/comissao-fiscal/). Tem leitura ampla de todos os dados financeiros mas não realiza nenhuma operação cotidiana (não lança, não paga, não aprova reembolsos ou pedidos de compra). Sua atuação concentra-se em atestar conformidade de comprovantes, conferir conciliação bancária, verificar finalidade estatutária, formular diligências e emitir o parecer oficial colegiado. Pode solicitar reembolso próprio (mesma regra dos demais membros). **Não acessa Configurações da OSC** — o papel é de fiscalização, separado da gestão.
+- **Configurações da Organização** se divide por papel:
+  - **Presidente**: acessa tudo (dados da OSC, usuários, papéis, contas bancárias, categorias, fluxo de aprovações, relatórios e parâmetros da [Comissão Fiscal](/configuracoes/comissao-fiscal/)).
+  - **Tesoureiro**: acessa apenas **Contas Bancárias e Categorias** (o cadastro financeiro operacional). O Fluxo de Aprovações e as regras da Comissão Fiscal são exclusivas do Presidente, garantindo que quem executa as contas não configure sua própria aprovação ou fiscalização.
 - **Aprovadores não aprovam a si mesmos** — o RIT360 Financeiro bloqueia automaticamente quando há outros aprovadores elegíveis no fluxo.
+- **Conselheiros fiscais com impedimento ético** — se um membro da Comissão Fiscal criou uma despesa ou reembolso em outro papel, o sistema bloqueia o ateste daquele item específico para ele, registrando abstenção automática por impedimento ético.
 
 ## Múltiplos papéis no mesmo vínculo
 
 Um usuário pode ter **mais de um papel** dentro da mesma OSC. As capacidades se somam — quem tem dois papéis pode fazer tudo que qualquer um dos dois permite. Exemplos comuns:
 
-- **Coordenador de Projeto + Comissão Fiscal** — coordena um projeto específico e ao mesmo tempo fiscaliza as contas da OSC.
+- **Coordenador de Projeto + Comissão Fiscal** — coordena um projeto específico e ao mesmo tempo fiscaliza as contas da OSC (com abstenção automática nos lançamentos que ele próprio tiver criado no projeto).
 - **Tesoureiro + Coordenador de Projeto** — opera o financeiro consolidado e também responde por um projeto específico.
 - **Diretor + Coordenador de Projeto** — acompanha a OSC como diretoria (leitura) e, no projeto que coordena, pode operar.
 - **Voluntário + Comissão Fiscal** — atua como voluntário regular e fiscaliza as contas (o papel de fiscal já cobre tudo que voluntário pode fazer).
 
 > ⚠️ **Restrição · Comissão Fiscal não acumula com Presidente ou Tesoureiro**
 >
-> Por princípio de fiscalização independente, **Comissão Fiscal não pode ser combinada com Presidente nem com Tesoureiro**. Quem opera o financeiro (Presidente, Tesoureiro) não pode fiscalizar a si mesmo. O sistema bloqueia essa combinação no editor de papéis e no backend.
+> Por princípio de fiscalização independente e exigência legal do terceiro setor, **Comissão Fiscal não pode ser combinada com Presidente nem com Tesoureiro**. Quem opera o financeiro (Presidente, Tesoureiro) não pode fiscalizar a si mesmo. O sistema bloqueia essa combinação no editor de papéis e no backend.
 
 > 📖 **Conceito · Auto-aprovação quando solicitante é o único aprovador**
 >
@@ -144,4 +149,6 @@ Use coordenador quando: a pessoa não opera o financeiro consolidado, mas pede s
 
 - **Configurações → Usuários** — para adicionar pessoas e atribuir papéis.
 - **Configurações → Fluxo de Aprovações** — para ajustar quórum, papéis aprovadores e aprovadores individuais.
+- **Configurações → Comissão Fiscal** — para parametrizar mandatos e quórum estatutário do conselho.
+- **Módulos → Comissão Fiscal** — para conhecer o fluxo de conferência dos 3 pilares e emissão de parecer.
 - **Primeiros Passos** — orientações práticas para quem está começando.

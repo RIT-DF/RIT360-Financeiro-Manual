@@ -1,6 +1,26 @@
 {
   "versoes": [
     {
+      "versao": "1.134.1",
+      "data": "2026-10-23",
+      "destaque": false
+    },
+    {
+      "versao": "1.134.0",
+      "data": "2026-10-23",
+      "destaque": false
+    },
+    {
+      "versao": "1.133.0",
+      "data": "2026-10-23",
+      "destaque": false
+    },
+    {
+      "versao": "1.132.1",
+      "data": "2026-10-23",
+      "destaque": false
+    },
+    {
       "versao": "1.132.0",
       "data": "2026-10-23",
       "destaque": false

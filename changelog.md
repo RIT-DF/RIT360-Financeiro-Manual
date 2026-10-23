@@ -11,6 +11,51 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.134.1] — 2026-10-23
+
+### Corrigido
+
+- Na aba de demonstrativos contábeis da Comissão Fiscal, corrigida a consulta de listagem de documentos para carregar sem erro no banco de dados.
+- O estado vazio da aba de demonstrativos contábeis agora exibe botão de ação direto no corpo para os responsáveis pela anexação.
+- No menu lateral de Configurações, "Organização" permanece como primeiro item e "Comissão Fiscal" fica posicionada logo após "Cargos e permissões".
+
+## [1.134.0] — 2026-10-23
+
+### Adicionado
+
+- Nova aba "Demonstrativos Contábeis" no ambiente da Comissão Fiscal (/comissao-fiscal), permitindo que a tesouraria e a administração anexem os relatórios oficiais emitidos pela contabilidade externa (DRE, Balanço Patrimonial, Balancetes, DFC e Notas Explicativas) para exame dos conselheiros (#394).
+
+### Modificado
+
+- Na tela de conferência da Comissão Fiscal, os lançamentos agora são dispostos em linhas compactas com 3 colunas (identificação e status à esquerda, valor com destaque de cor ao centro e botões de ação à direita), reduzindo drasticamente o consumo de espaço vertical.
+- Visualização de documentos em 1 clique: o botão de anexo expande e carrega o arquivo imediatamente abaixo da linha do lançamento sem cliques adicionais.
+- Na aba de deliberação, o seletor entre gerar parecer do sistema ou anexar parecer externo passou a usar abas neutras, e o botão oficial de emissão agora só fica ativo após a conclusão dos votos exigidos pelo quórum.
+
+## [1.133.0] — 2026-10-23
+
+### Adicionado
+
+- Semáforo consolidado e filtro por exceção no topo da Comissão Fiscal: cartões com percentuais de conformidade nos 3 pilares e filtro para exibir rapidamente apenas os lançamentos com pendências ou divergências.
+- Visualização inline de comprovantes na tela de fiscalização com preview de PDFs e imagens na própria página sem forçar o download.
+- Ações em lote e ateste rápido: seleção múltipla por caixas de seleção para atestar despesas conformes em lote, além de botão global para atestar todas as despesas do período.
+- Exportação de dados do período em Caderno formatado em PDF e em planilha Excel (XLSX).
+- Possibilidade de anexar parecer externo emitido e assinado fora do sistema em PDF, com registro de hash de integridade e encerramento formal do período.
+- Notificações multicanal imediatas na abertura de períodos fiscais (e-mail, Telegram e push web) para os membros da comissão.
+
+### Modificado
+
+- As parametrizações da Comissão Fiscal foram migradas para a área oficial de Configurações da Organização (/configuracoes/comissao-fiscal), acompanhadas de textos de ajuda explicativos para prazos e quóruns.
+- A votação colegiada passou a ficar disponível imediatamente na aba de deliberação a qualquer momento enquanto o período estiver aberto.
+
+## [1.132.1] — 2026-10-23
+
+### Adicionado
+
+- Fluxo conversacional completo e flexível no bot do Telegram: possibilidade de informar ou selecionar categoria, projeto, centro de custo e dados de pagamento diretamente no chat com opções explícitas de pular qualquer etapa.
+- Reconhecimento inteligente de entidades: se o usuário já citar a categoria, projeto ou forma de pagamento na mensagem ou legenda inicial, o bot pré-preenche automaticamente sem repetir perguntas.
+- Suporte a documentos não reconhecidos inicialmente pela inteligência artificial (como planilhas ou fotos atípicas), permitindo ao usuário indicar o tipo e os valores essenciais pelo chat.
+- Ao confirmar no Telegram, o bot agora pode submeter a solicitação diretamente para a fila de aprovação da organização, preservando como rascunho com aviso explicativo apenas se houver alguma pendência bloqueante.
+
 ## [1.132.0] — 2026-10-23
 
 ### Adicionado
