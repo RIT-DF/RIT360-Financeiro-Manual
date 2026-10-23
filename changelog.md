@@ -11,6 +11,13 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.130.2] — 2026-10-23
+
+### Corrigido
+
+- A conciliação bancária por extrato OFX agora reconhece lançamentos já quitados (receitas e despesas com status "pago") que ainda não haviam sido conciliados, casando-os automaticamente com as linhas do extrato pelo valor e pela data de pagamento. Ao confirmar, o sistema vincula a conferência sem duplicar o lançamento e sem tentar dar baixa redundante.
+- Na lista de prestações de contas geradas, uma prestação emitida no modo de período livre agora exibe o intervalo real de datas (ex.: "De 01/05/2026 a 30/06/2026") no título e no botão de baixar, em vez de mostrar "Acumulado de [ano]".
+
 ## [1.130.1] — 2026-10-16
 
 ### Corrigido

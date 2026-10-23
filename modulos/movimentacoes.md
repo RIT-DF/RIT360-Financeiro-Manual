@@ -771,14 +771,14 @@ Se você baixa o **extrato do banco em formato OFX** (a maioria dos bancos ofere
 **Como funciona:**
 
 1. Escolha a **conta** e suba o arquivo `.ofx`.
-2. O RIT360 Financeiro lê cada transação do extrato e **procura o lançamento correspondente** (por valor e proximidade de data), organizando tudo em quatro grupos:
-   - **Conciliados** — alta confiança no casamento; já vêm pré-marcados para marcar como pago.
+2. O RIT360 Financeiro lê cada transação do extrato e **procura o lançamento correspondente** — tanto lançamentos pendentes quanto os já lançados como **pagos** que ainda não foram conciliados (por valor e proximidade de data) —, organizando tudo em quatro grupos:
+   - **Conciliados** — alta confiança no casamento; já vêm pré-marcados para confirmação.
    - **Em revisão** — casamento provável, mas com alguns dias de diferença; você aceita ou ignora, uma a uma.
    - **Novos** — transações sem lançamento correspondente; para cada uma você escolhe o que fazer, ou **ignora**:
      - **criar como receita ou despesa** — escolhendo categoria, projeto e, se a organização usa, centro de custo. Se a categoria certa ainda não existe, não precisa sair da conciliação para cadastrar: clique em **criar categoria** ali mesmo, e ela já entra escolhida na linha (exige a permissão **Config. financeira** — ver abaixo);
      - **criar como transferência entre contas da própria organização** — para resgate de aplicação financeira, movimentação para poupança, retirada para o caixa e casos parecidos. Escolhendo transferência, o campo de categoria dá lugar à escolha da **conta do outro lado**; a conta do próprio extrato não aparece na lista, porque não pode ser as duas pontas ao mesmo tempo. Quem é origem e quem é destino o sistema decide pelo **sinal do valor** da linha — você não precisa informar. Transferência não pede categoria, nem favorecido, nem forma de pagamento.
    - **Já conciliados** — transações que você já processou antes (apenas informativo).
-3. Ao **confirmar**, os lançamentos conciliados/aceitos são marcados como **pagos** com a data do extrato e ficam vinculados à conciliação; os "novos" que você escolher **criar** viram lançamentos. Quando o que você criar for uma **transferência**, o resultado é **um lançamento só**, guardando as duas contas — nunca dois lançamentos espelhados —, já **efetivado** na data da linha do extrato e já **conferido**.
+3. Ao **confirmar**, os lançamentos conciliados/aceitos que estavam pendentes são marcados como **pagos** com a data do extrato; os que já estavam pagos apenas recebem o registro de conferência com o extrato (sem duplicar); e os "novos" que você escolher **criar** viram lançamentos. Quando o que você criar for uma **transferência**, o resultado é **um lançamento só**, guardando as duas contas — nunca dois lançamentos espelhados —, já **efetivado** na data da linha do extrato e já **conferido**.
 
 > 📖 **Conceito · Linha sem decisão fica pendente, nunca é descartada**
 >
