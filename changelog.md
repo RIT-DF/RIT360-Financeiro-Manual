@@ -11,6 +11,13 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.135.0] — 2026-10-23
+
+### Adicionado
+
+- Botão de ajuda em vídeo no cabeçalho das páginas da Comissão Fiscal (listagem de períodos e espaço de trabalho do período).
+- Catálogo de vídeos expandido com dois novos tutoriais: "Como examinar e conferir as contas" e "Deliberação, votação e parecer oficial".
+
 ## [1.134.1] — 2026-10-23
 
 ### Corrigido
