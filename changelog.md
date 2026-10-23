@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.136.0] — 2026-10-23
+
+### Adicionado
+
+- Desconexão automática por inatividade após 2 horas sem uso, com aviso prévio aos 115 minutos (5 minutos antes) e opção de continuar conectado.
+- Sincronização de atividade entre abas abertas no navegador (nenhuma aba desloga enquanto o usuário estiver interagindo no sistema em outra aba).
+- Mensagem informativa na tela de entrada quando a sessão expirar por inatividade.
+
 ## [1.135.0] — 2026-10-23
 
 ### Adicionado
