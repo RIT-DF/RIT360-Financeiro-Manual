@@ -11,6 +11,18 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.136.1] — 2026-10-27
+
+### Corrigido
+
+- Comissão Fiscal: os lançamentos que o tesoureiro conciliou em Movimentações — inclusive quando a conciliação foi feita pelo extrato em papel e nenhum arquivo foi importado — passam a aparecer como "Conciliado manualmente" e contam como conformes no pilar Extrato bancário. Antes, todos apareciam como pendentes.
+- Comissão Fiscal: a lista "Extrato sem lançamento vinculado" deixa de mostrar as linhas que correspondem a um lançamento já conciliado. A tela, o Caderno exportado e o parecer em PDF agora mostram os mesmos números.
+
+### Modificado
+
+- Reembolsos e pedidos de pagamento: a tela de detalhe mostra o código do lançamento gerado no pagamento, igual ao da lista, com acesso direto ao lançamento.
+- Reembolsos e pedidos de pagamento: os botões Aprovar e Reprovar ficam no topo da tela de detalhe para quem pode decidir, sem precisar rolar até o fim da página. Quem pode aprovar não mudou.
+
 ## [1.136.0] — 2026-10-23
 
 ### Adicionado
