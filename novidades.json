@@ -1,0 +1,1903 @@
+{
+  "versoes": [
+    {
+      "versao": "1.136.2",
+      "data": "2026-11-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.136.1",
+      "data": "2026-10-27",
+      "destaque": false
+    },
+    {
+      "versao": "1.136.0",
+      "data": "2026-10-23",
+      "destaque": false
+    },
+    {
+      "versao": "1.135.0",
+      "data": "2026-10-23",
+      "destaque": false
+    },
+    {
+      "versao": "1.134.1",
+      "data": "2026-10-23",
+      "destaque": false
+    },
+    {
+      "versao": "1.134.0",
+      "data": "2026-10-23",
+      "destaque": false
+    },
+    {
+      "versao": "1.133.0",
+      "data": "2026-10-23",
+      "destaque": false
+    },
+    {
+      "versao": "1.132.1",
+      "data": "2026-10-23",
+      "destaque": false
+    },
+    {
+      "versao": "1.132.0",
+      "data": "2026-10-23",
+      "destaque": false
+    },
+    {
+      "versao": "1.131.2",
+      "data": "2026-10-23",
+      "destaque": false
+    },
+    {
+      "versao": "1.131.1",
+      "data": "2026-10-23",
+      "destaque": false
+    },
+    {
+      "versao": "1.131.0",
+      "data": "2026-10-23",
+      "destaque": false
+    },
+    {
+      "versao": "1.130.2",
+      "data": "2026-10-23",
+      "destaque": false
+    },
+    {
+      "versao": "1.130.1",
+      "data": "2026-10-16",
+      "destaque": false
+    },
+    {
+      "versao": "1.130.0",
+      "data": "2026-10-16",
+      "destaque": true,
+      "resumo": "Agora dá para marcar categorias que não exigem comprovante, como tarifas bancárias."
+    },
+    {
+      "versao": "1.129.0",
+      "data": "2026-10-16",
+      "destaque": false
+    },
+    {
+      "versao": "1.128.0",
+      "data": "2026-10-16",
+      "destaque": false
+    },
+    {
+      "versao": "1.127.1",
+      "data": "2026-10-15",
+      "destaque": false
+    },
+    {
+      "versao": "1.127.0",
+      "data": "2026-10-15",
+      "destaque": false
+    },
+    {
+      "versao": "1.126.5",
+      "data": "2026-10-12",
+      "destaque": false
+    },
+    {
+      "versao": "1.126.4",
+      "data": "2026-10-12",
+      "destaque": false
+    },
+    {
+      "versao": "1.126.3",
+      "data": "2026-10-12",
+      "destaque": false
+    },
+    {
+      "versao": "1.126.2",
+      "data": "2026-10-12",
+      "destaque": false
+    },
+    {
+      "versao": "1.126.1",
+      "data": "2026-10-12",
+      "destaque": false
+    },
+    {
+      "versao": "1.126.0",
+      "data": "2026-10-12",
+      "destaque": false
+    },
+    {
+      "versao": "1.125.0",
+      "data": "2026-10-12",
+      "destaque": false
+    },
+    {
+      "versao": "1.124.2",
+      "data": "2026-09-18",
+      "destaque": false
+    },
+    {
+      "versao": "1.124.1",
+      "data": "2026-09-18",
+      "destaque": false
+    },
+    {
+      "versao": "1.124.0",
+      "data": "2026-09-18",
+      "destaque": true,
+      "resumo": "Digitar os primeiros caracteres da descrição agora oferece registros parecidos e preenche o formulário inteiro — menos o valor."
+    },
+    {
+      "versao": "1.123.0",
+      "data": "2026-09-18",
+      "destaque": false
+    },
+    {
+      "versao": "1.122.1",
+      "data": "2026-09-18",
+      "destaque": false
+    },
+    {
+      "versao": "1.122.0",
+      "data": "2026-09-18",
+      "destaque": false
+    },
+    {
+      "versao": "1.121.0",
+      "data": "2026-09-18",
+      "destaque": false
+    },
+    {
+      "versao": "1.120.0",
+      "data": "2026-09-18",
+      "destaque": false
+    },
+    {
+      "versao": "1.119.0",
+      "data": "2026-09-18",
+      "destaque": true,
+      "resumo": "A prestação de contas por financiador ganhou caminho próprio em Relatórios, e agora mostra também as despesas que ficaram em aberto."
+    },
+    {
+      "versao": "1.118.2",
+      "data": "2026-09-14",
+      "destaque": false
+    },
+    {
+      "versao": "1.118.1",
+      "data": "2026-09-14",
+      "destaque": false
+    },
+    {
+      "versao": "1.118.0",
+      "data": "2026-09-14",
+      "destaque": false
+    },
+    {
+      "versao": "1.117.5",
+      "data": "2026-09-14",
+      "destaque": false
+    },
+    {
+      "versao": "1.117.4",
+      "data": "2026-09-12",
+      "destaque": false
+    },
+    {
+      "versao": "1.117.3",
+      "data": "2026-09-11",
+      "destaque": false
+    },
+    {
+      "versao": "1.117.2",
+      "data": "2026-09-11",
+      "destaque": false
+    },
+    {
+      "versao": "1.117.1",
+      "data": "2026-09-11",
+      "destaque": false
+    },
+    {
+      "versao": "1.116.3",
+      "data": "2026-09-11",
+      "destaque": false
+    },
+    {
+      "versao": "1.116.2",
+      "data": "2026-09-11",
+      "destaque": true,
+      "resumo": "A aba Financeiro do projeto mudou: agora você diz quem paga cada projeto e acompanha o plano de trabalho de cada financiador — e estourar uma rubrica não trava mais o pagamento."
+    },
+    {
+      "versao": "1.115.0",
+      "data": "2026-09-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.114.0",
+      "data": "2026-09-10",
+      "destaque": true,
+      "resumo": "Mudar as categorias permitidas de um projeto agora vale na hora, sem esperar aprovação."
+    },
+    {
+      "versao": "1.113.0",
+      "data": "2026-09-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.112.1",
+      "data": "2026-09-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.112.0",
+      "data": "2026-09-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.111.1",
+      "data": "2026-09-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.111.0",
+      "data": "2026-09-10",
+      "destaque": true,
+      "resumo": "Os vídeos de ajuda dobraram: agora são vinte, e telas com mais de um vídeo deixam você escolher qual assistir."
+    },
+    {
+      "versao": "1.110.1",
+      "data": "2026-09-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.110.0",
+      "data": "2026-09-10",
+      "destaque": true,
+      "resumo": "As telas principais agora têm um botão de vídeo no cabeçalho: um tutorial curto de menos de um minuto, sem sair de onde você está."
+    },
+    {
+      "versao": "1.109.1",
+      "data": "2026-09-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.109.0",
+      "data": "2026-09-10",
+      "destaque": true,
+      "resumo": "No celular, contas bancárias e centros de custo agora aparecem em cartões: dá para selecionar vários e usar todas as ações sem sair da tela."
+    },
+    {
+      "versao": "1.108.0",
+      "data": "2026-09-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.107.0",
+      "data": "2026-09-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.106.0",
+      "data": "2026-09-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.105.0",
+      "data": "2026-09-09",
+      "destaque": false
+    },
+    {
+      "versao": "1.104.1",
+      "data": "2026-09-09",
+      "destaque": false
+    },
+    {
+      "versao": "1.104.0",
+      "data": "2026-09-09",
+      "destaque": true,
+      "resumo": "Agora dá para atribuir um projeto a vários lançamentos de uma vez, e cada conta pode já vir com projeto e centro de custo preenchidos."
+    },
+    {
+      "versao": "1.103.1",
+      "data": "2026-09-09",
+      "destaque": false
+    },
+    {
+      "versao": "1.103.0",
+      "data": "2026-09-09",
+      "destaque": false
+    },
+    {
+      "versao": "1.102.1",
+      "data": "2026-09-09",
+      "destaque": false
+    },
+    {
+      "versao": "1.102.0",
+      "data": "2026-09-09",
+      "destaque": false
+    },
+    {
+      "versao": "1.101.1",
+      "data": "2026-09-08",
+      "destaque": false
+    },
+    {
+      "versao": "1.101.0",
+      "data": "2026-09-08",
+      "destaque": true,
+      "resumo": "Transferência entre contas agora tem caminho próprio na conciliação de extrato."
+    },
+    {
+      "versao": "1.100.0",
+      "data": "2026-09-05",
+      "destaque": false
+    },
+    {
+      "versao": "1.99.0",
+      "data": "2026-09-02",
+      "destaque": false
+    },
+    {
+      "versao": "1.98.1",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.98.0",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.97.1",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.97.0",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.96.0",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.95.0",
+      "data": "2026-09-01",
+      "destaque": true,
+      "resumo": "Ao conciliar o extrato do banco, agora você escolhe também o centro de custo — de uma linha ou de todas de uma vez."
+    },
+    {
+      "versao": "1.94.1",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.94.0",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.93.0",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.92.0",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.91.0",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.90.1",
+      "data": "2026-09-01",
+      "destaque": true,
+      "resumo": "Agora dá para dividir o custo de um lançamento entre vários centros de custo, sem lançar duas vezes."
+    },
+    {
+      "versao": "1.89.0",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.88.0",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.87.1",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.87.0",
+      "data": "2026-09-01",
+      "destaque": true,
+      "resumo": "A prestação de contas agora mostra quem autorizou cada pagamento, e você escolhe o que entra no documento."
+    },
+    {
+      "versao": "1.86.1",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.86.0",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.85.1",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.85.0",
+      "data": "2026-09-01",
+      "destaque": true,
+      "resumo": "Os dados bancários do reembolso agora vêm do seu perfil — confira os seus em Meu perfil."
+    },
+    {
+      "versao": "1.84.0",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.83.1",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.83.0",
+      "data": "2026-09-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.82.1",
+      "data": "2026-08-30",
+      "destaque": false
+    },
+    {
+      "versao": "1.82.0",
+      "data": "2026-08-30",
+      "destaque": false
+    },
+    {
+      "versao": "1.81.0",
+      "data": "2026-08-30",
+      "destaque": true,
+      "resumo": "A tela inicial agora tem três abas — Painel, Saúde 360 e Previsão —, existe uma área de Documentos com tudo o que você já gerou, e o resultado do mês passou a contar só o que aconteceu de fato."
+    },
+    {
+      "versao": "1.80.1",
+      "data": "2026-08-30",
+      "destaque": false
+    },
+    {
+      "versao": "1.80.0",
+      "data": "2026-08-30",
+      "destaque": false
+    },
+    {
+      "versao": "1.79.1",
+      "data": "2026-08-30",
+      "destaque": false
+    },
+    {
+      "versao": "1.79.0",
+      "data": "2026-08-30",
+      "destaque": false
+    },
+    {
+      "versao": "1.78.6",
+      "data": "2026-08-30",
+      "destaque": false
+    },
+    {
+      "versao": "1.78.5",
+      "data": "2026-08-30",
+      "destaque": false
+    },
+    {
+      "versao": "1.78.4",
+      "data": "2026-08-30",
+      "destaque": false
+    },
+    {
+      "versao": "1.78.3",
+      "data": "2026-08-30",
+      "destaque": false
+    },
+    {
+      "versao": "1.78.2",
+      "data": "2026-08-30",
+      "destaque": false
+    },
+    {
+      "versao": "1.78.1",
+      "data": "2026-08-30",
+      "destaque": false
+    },
+    {
+      "versao": "1.78.0",
+      "data": "2026-08-30",
+      "destaque": false
+    },
+    {
+      "versao": "1.77.0",
+      "data": "2026-08-30",
+      "destaque": false
+    },
+    {
+      "versao": "1.76.0",
+      "data": "2026-08-30",
+      "destaque": false
+    },
+    {
+      "versao": "1.75.1",
+      "data": "2026-08-29",
+      "destaque": false
+    },
+    {
+      "versao": "1.75.0",
+      "data": "2026-08-29",
+      "destaque": false
+    },
+    {
+      "versao": "1.74.0",
+      "data": "2026-08-29",
+      "destaque": false
+    },
+    {
+      "versao": "1.73.1",
+      "data": "2026-08-29",
+      "destaque": false
+    },
+    {
+      "versao": "1.73.0",
+      "data": "2026-08-29",
+      "destaque": false
+    },
+    {
+      "versao": "1.72.1",
+      "data": "2026-08-29",
+      "destaque": false
+    },
+    {
+      "versao": "1.72.0",
+      "data": "2026-08-29",
+      "destaque": false
+    },
+    {
+      "versao": "1.71.0",
+      "data": "2026-08-29",
+      "destaque": true,
+      "resumo": "A fila de aprovações agora aparece assim que você abre Pagamentos e Reembolsos."
+    },
+    {
+      "versao": "1.70.0",
+      "data": "2026-08-29",
+      "destaque": false
+    },
+    {
+      "versao": "1.69.2",
+      "data": "2026-08-29",
+      "destaque": false
+    },
+    {
+      "versao": "1.69.1",
+      "data": "2026-08-29",
+      "destaque": false
+    },
+    {
+      "versao": "1.69.0",
+      "data": "2026-08-29",
+      "destaque": true,
+      "resumo": "Agora dá para receber os avisos do sistema pelo Telegram — vincule sua conta em Meu perfil."
+    },
+    {
+      "versao": "1.68.0",
+      "data": "2026-08-24",
+      "destaque": false
+    },
+    {
+      "versao": "1.67.4",
+      "data": "2026-08-24",
+      "destaque": false
+    },
+    {
+      "versao": "1.67.3",
+      "data": "2026-08-24",
+      "destaque": false
+    },
+    {
+      "versao": "1.67.2",
+      "data": "2026-08-24",
+      "destaque": false
+    },
+    {
+      "versao": "1.67.1",
+      "data": "2026-08-24",
+      "destaque": false
+    },
+    {
+      "versao": "1.67.0",
+      "data": "2026-08-24",
+      "destaque": false
+    },
+    {
+      "versao": "1.66.3",
+      "data": "2026-08-24",
+      "destaque": false
+    },
+    {
+      "versao": "1.66.2",
+      "data": "2026-08-24",
+      "destaque": false
+    },
+    {
+      "versao": "1.66.1",
+      "data": "2026-08-23",
+      "destaque": false
+    },
+    {
+      "versao": "1.66.0",
+      "data": "2026-08-23",
+      "destaque": true,
+      "resumo": "Agora dá para escolher quais projetos aparecem na página pública de transparência — antes, apareciam todos."
+    },
+    {
+      "versao": "1.65.1",
+      "data": "2026-08-23",
+      "destaque": false
+    },
+    {
+      "versao": "1.65.0",
+      "data": "2026-08-23",
+      "destaque": true,
+      "resumo": "Projetos agora podem ser arquivados: eles saem da lista e dos formulários do dia a dia, sem perder nada do histórico."
+    },
+    {
+      "versao": "1.64.5",
+      "data": "2026-08-23",
+      "destaque": false
+    },
+    {
+      "versao": "1.64.4",
+      "data": "2026-08-23",
+      "destaque": false
+    },
+    {
+      "versao": "1.64.3",
+      "data": "2026-08-23",
+      "destaque": false
+    },
+    {
+      "versao": "1.64.2",
+      "data": "2026-08-22",
+      "destaque": false
+    },
+    {
+      "versao": "1.64.1",
+      "data": "2026-08-22",
+      "destaque": false
+    },
+    {
+      "versao": "1.64.0",
+      "data": "2026-08-22",
+      "destaque": true,
+      "resumo": "Os PDFs do módulo Relatórios agora têm o mesmo visual caprichado da prestação de contas — com gráficos e numeração de páginas."
+    },
+    {
+      "versao": "1.63.0",
+      "data": "2026-08-22",
+      "destaque": true,
+      "resumo": "Tarefas de projeto, evidências de projeto e feedbacks do superadmin ganharam seleção múltipla e ação em lote."
+    },
+    {
+      "versao": "1.62.0",
+      "data": "2026-08-22",
+      "destaque": false
+    },
+    {
+      "versao": "1.61.0",
+      "data": "2026-08-22",
+      "destaque": true,
+      "resumo": "A prestação de contas ganhou um texto de abertura padronizado e um código de verificação que qualquer pessoa pode conferir sem login."
+    },
+    {
+      "versao": "1.60.1",
+      "data": "2026-08-22",
+      "destaque": false
+    },
+    {
+      "versao": "1.60.0",
+      "data": "2026-08-22",
+      "destaque": true,
+      "resumo": "Agora dá para ver quais lançamentos já foram conferidos com o extrato, conciliar manualmente e corrigir a categoria de um pagamento já registrado."
+    },
+    {
+      "versao": "1.59.3",
+      "data": "2026-08-21",
+      "destaque": false
+    },
+    {
+      "versao": "1.59.2",
+      "data": "2026-08-21",
+      "destaque": false
+    },
+    {
+      "versao": "1.59.1",
+      "data": "2026-08-21",
+      "destaque": false
+    },
+    {
+      "versao": "1.59.0",
+      "data": "2026-08-21",
+      "destaque": false
+    },
+    {
+      "versao": "1.58.0",
+      "data": "2026-08-21",
+      "destaque": false
+    },
+    {
+      "versao": "1.57.0",
+      "data": "2026-08-21",
+      "destaque": false
+    },
+    {
+      "versao": "1.56.1",
+      "data": "2026-08-21",
+      "destaque": false
+    },
+    {
+      "versao": "1.56.0",
+      "data": "2026-08-21",
+      "destaque": false
+    },
+    {
+      "versao": "1.55.0",
+      "data": "2026-08-21",
+      "destaque": false
+    },
+    {
+      "versao": "1.54.2",
+      "data": "2026-08-21",
+      "destaque": false
+    },
+    {
+      "versao": "1.54.1",
+      "data": "2026-08-21",
+      "destaque": false
+    },
+    {
+      "versao": "1.54.0",
+      "data": "2026-08-21",
+      "destaque": false
+    },
+    {
+      "versao": "1.53.1",
+      "data": "2026-08-21",
+      "destaque": false
+    },
+    {
+      "versao": "1.53.0",
+      "data": "2026-08-21",
+      "destaque": false
+    },
+    {
+      "versao": "1.52.0",
+      "data": "2026-08-21",
+      "destaque": false
+    },
+    {
+      "versao": "1.51.2",
+      "data": "2026-08-21",
+      "destaque": false
+    },
+    {
+      "versao": "1.51.1",
+      "data": "2026-08-21",
+      "destaque": false
+    },
+    {
+      "versao": "1.51.0",
+      "data": "2026-08-21",
+      "destaque": false
+    },
+    {
+      "versao": "1.50.0",
+      "data": "2026-08-21",
+      "destaque": false
+    },
+    {
+      "versao": "1.49.1",
+      "data": "2026-08-21",
+      "destaque": false
+    },
+    {
+      "versao": "1.49.0",
+      "data": "2026-08-21",
+      "destaque": false
+    },
+    {
+      "versao": "1.48.0",
+      "data": "2026-08-20",
+      "destaque": false
+    },
+    {
+      "versao": "1.47.0",
+      "data": "2026-08-20",
+      "destaque": false
+    },
+    {
+      "versao": "1.46.1",
+      "data": "2026-08-20",
+      "destaque": false
+    },
+    {
+      "versao": "1.46.0",
+      "data": "2026-08-20",
+      "destaque": false
+    },
+    {
+      "versao": "1.45.1",
+      "data": "2026-08-20",
+      "destaque": false
+    },
+    {
+      "versao": "1.45.0",
+      "data": "2026-08-20",
+      "destaque": false
+    },
+    {
+      "versao": "1.44.1",
+      "data": "2026-08-17",
+      "destaque": false
+    },
+    {
+      "versao": "1.44.0",
+      "data": "2026-08-16",
+      "destaque": false
+    },
+    {
+      "versao": "1.43.1",
+      "data": "2026-08-15",
+      "destaque": false
+    },
+    {
+      "versao": "1.43.0",
+      "data": "2026-08-15",
+      "destaque": false
+    },
+    {
+      "versao": "1.42.0",
+      "data": "2026-08-15",
+      "destaque": false
+    },
+    {
+      "versao": "1.41.1",
+      "data": "2026-08-15",
+      "destaque": false
+    },
+    {
+      "versao": "1.41.0",
+      "data": "2026-08-15",
+      "destaque": false
+    },
+    {
+      "versao": "1.40.1",
+      "data": "2026-08-15",
+      "destaque": false
+    },
+    {
+      "versao": "1.40.0",
+      "data": "2026-08-15",
+      "destaque": false
+    },
+    {
+      "versao": "1.39.1",
+      "data": "2026-08-14",
+      "destaque": false
+    },
+    {
+      "versao": "1.39.0",
+      "data": "2026-08-14",
+      "destaque": false
+    },
+    {
+      "versao": "1.38.2",
+      "data": "2026-08-14",
+      "destaque": false
+    },
+    {
+      "versao": "1.38.1",
+      "data": "2026-08-14",
+      "destaque": false
+    },
+    {
+      "versao": "1.38.0",
+      "data": "2026-08-14",
+      "destaque": false
+    },
+    {
+      "versao": "1.37.0",
+      "data": "2026-08-14",
+      "destaque": false
+    },
+    {
+      "versao": "1.36.2",
+      "data": "2026-08-14",
+      "destaque": false
+    },
+    {
+      "versao": "1.36.1",
+      "data": "2026-08-14",
+      "destaque": false
+    },
+    {
+      "versao": "1.36.0",
+      "data": "2026-08-14",
+      "destaque": false
+    },
+    {
+      "versao": "1.35.0",
+      "data": "2026-08-11",
+      "destaque": false
+    },
+    {
+      "versao": "1.34.0",
+      "data": "2026-08-11",
+      "destaque": false
+    },
+    {
+      "versao": "1.33.1",
+      "data": "2026-08-11",
+      "destaque": false
+    },
+    {
+      "versao": "1.33.0",
+      "data": "2026-08-11",
+      "destaque": false
+    },
+    {
+      "versao": "1.32.1",
+      "data": "2026-08-11",
+      "destaque": false
+    },
+    {
+      "versao": "1.32.0",
+      "data": "2026-08-11",
+      "destaque": false
+    },
+    {
+      "versao": "1.31.0",
+      "data": "2026-08-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.30.0",
+      "data": "2026-08-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.29.0",
+      "data": "2026-08-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.28.0",
+      "data": "2026-08-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.27.2",
+      "data": "2026-08-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.27.1",
+      "data": "2026-08-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.27.0",
+      "data": "2026-08-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.26.8",
+      "data": "2026-08-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.26.7",
+      "data": "2026-08-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.26.6",
+      "data": "2026-08-10",
+      "destaque": false
+    },
+    {
+      "versao": "1.26.5",
+      "data": "2026-08-08",
+      "destaque": false
+    },
+    {
+      "versao": "1.26.4",
+      "data": "2026-08-08",
+      "destaque": false,
+      "versao_inicial": "1.26.2"
+    },
+    {
+      "versao": "1.26.1",
+      "data": "2026-08-08",
+      "destaque": false
+    },
+    {
+      "versao": "1.26.0",
+      "data": "2026-08-08",
+      "destaque": false
+    },
+    {
+      "versao": "1.25.5",
+      "data": "2026-08-07",
+      "destaque": false
+    },
+    {
+      "versao": "1.25.4",
+      "data": "2026-08-07",
+      "destaque": false
+    },
+    {
+      "versao": "1.25.3",
+      "data": "2026-08-07",
+      "destaque": false
+    },
+    {
+      "versao": "1.25.2",
+      "data": "2026-08-07",
+      "destaque": false
+    },
+    {
+      "versao": "1.25.1",
+      "data": "2026-08-07",
+      "destaque": false
+    },
+    {
+      "versao": "1.25.0",
+      "data": "2026-08-07",
+      "destaque": false
+    },
+    {
+      "versao": "1.24.10",
+      "data": "2026-08-07",
+      "destaque": false,
+      "versao_inicial": "1.24.9"
+    },
+    {
+      "versao": "1.24.8",
+      "data": "2026-08-07",
+      "destaque": false
+    },
+    {
+      "versao": "1.24.7",
+      "data": "2026-08-07",
+      "destaque": false
+    },
+    {
+      "versao": "1.24.6",
+      "data": "2026-08-07",
+      "destaque": false
+    },
+    {
+      "versao": "1.24.5",
+      "data": "2026-08-07",
+      "destaque": false
+    },
+    {
+      "versao": "1.24.4",
+      "data": "2026-08-05",
+      "destaque": false
+    },
+    {
+      "versao": "1.24.3",
+      "data": "2026-08-05",
+      "destaque": false
+    },
+    {
+      "versao": "1.24.2",
+      "data": "2026-08-05",
+      "destaque": false
+    },
+    {
+      "versao": "1.24.1",
+      "data": "2026-08-05",
+      "destaque": false
+    },
+    {
+      "versao": "1.24.0",
+      "data": "2026-08-05",
+      "destaque": false
+    },
+    {
+      "versao": "1.23.3",
+      "data": "2026-08-05",
+      "destaque": false
+    },
+    {
+      "versao": "1.23.2",
+      "data": "2026-08-05",
+      "destaque": false
+    },
+    {
+      "versao": "1.23.1",
+      "data": "2026-08-04",
+      "destaque": false
+    },
+    {
+      "versao": "1.23.0",
+      "data": "2026-08-04",
+      "destaque": true,
+      "resumo": "O Painel foi reorganizado: contas e resumo do mês no topo, gráfico de fluxo de caixa dos últimos 6 meses, pendências em três colunas e os pontos de atenção fechando a tela."
+    },
+    {
+      "versao": "1.22.1",
+      "data": "2026-08-04",
+      "destaque": false
+    },
+    {
+      "versao": "1.22.0",
+      "data": "2026-08-04",
+      "destaque": false
+    },
+    {
+      "versao": "1.21.4",
+      "data": "2026-08-04",
+      "destaque": false,
+      "versao_inicial": "1.21.3"
+    },
+    {
+      "versao": "1.21.2",
+      "data": "2026-08-03",
+      "destaque": false,
+      "versao_inicial": "1.21.0"
+    },
+    {
+      "versao": "1.20.8",
+      "data": "2026-08-03",
+      "destaque": false,
+      "versao_inicial": "1.20.0"
+    },
+    {
+      "versao": "1.19.2",
+      "data": "2026-08-03",
+      "destaque": false
+    },
+    {
+      "versao": "1.19.1",
+      "data": "2026-08-03",
+      "destaque": false
+    },
+    {
+      "versao": "1.19.0",
+      "data": "2026-08-02",
+      "destaque": false
+    },
+    {
+      "versao": "1.18.2",
+      "data": "2026-07-29",
+      "destaque": false
+    },
+    {
+      "versao": "1.18.1",
+      "data": "2026-07-29",
+      "destaque": false
+    },
+    {
+      "versao": "1.18.0",
+      "data": "2026-07-29",
+      "destaque": false
+    },
+    {
+      "versao": "1.17.3",
+      "data": "2026-07-27",
+      "destaque": false
+    },
+    {
+      "versao": "1.17.2",
+      "data": "2026-07-27",
+      "destaque": false
+    },
+    {
+      "versao": "1.17.1",
+      "data": "2026-07-27",
+      "destaque": false
+    },
+    {
+      "versao": "1.17.0",
+      "data": "2026-07-27",
+      "destaque": false
+    },
+    {
+      "versao": "1.16.0",
+      "data": "2026-07-27",
+      "destaque": false
+    },
+    {
+      "versao": "1.15.3",
+      "data": "2026-07-27",
+      "destaque": false
+    },
+    {
+      "versao": "1.15.2",
+      "data": "2026-07-27",
+      "destaque": false
+    },
+    {
+      "versao": "1.15.0",
+      "data": "2026-07-27",
+      "destaque": false
+    },
+    {
+      "versao": "1.14.3",
+      "data": "2026-07-26",
+      "destaque": false
+    },
+    {
+      "versao": "1.14.0",
+      "data": "2026-07-26",
+      "destaque": false
+    },
+    {
+      "versao": "1.13.10",
+      "data": "2026-07-26",
+      "destaque": false
+    },
+    {
+      "versao": "1.13.9",
+      "data": "2026-07-26",
+      "destaque": false
+    },
+    {
+      "versao": "1.13.8",
+      "data": "2026-07-26",
+      "destaque": false
+    },
+    {
+      "versao": "1.13.7",
+      "data": "2026-07-26",
+      "destaque": false
+    },
+    {
+      "versao": "1.13.5",
+      "data": "2026-07-26",
+      "destaque": false
+    },
+    {
+      "versao": "1.13.4",
+      "data": "2026-07-26",
+      "destaque": false
+    },
+    {
+      "versao": "1.13.3",
+      "data": "2026-07-26",
+      "destaque": false
+    },
+    {
+      "versao": "1.13.2",
+      "data": "2026-07-26",
+      "destaque": false
+    },
+    {
+      "versao": "1.13.1",
+      "data": "2026-07-26",
+      "destaque": false
+    },
+    {
+      "versao": "1.12.4",
+      "data": "2026-07-26",
+      "destaque": false
+    },
+    {
+      "versao": "1.12.2",
+      "data": "2026-07-26",
+      "destaque": false
+    },
+    {
+      "versao": "1.12.1",
+      "data": "2026-07-26",
+      "destaque": false
+    },
+    {
+      "versao": "1.12.0",
+      "data": "2026-07-26",
+      "destaque": false
+    },
+    {
+      "versao": "1.11.0",
+      "data": "2026-07-26",
+      "destaque": false
+    },
+    {
+      "versao": "1.10.0",
+      "data": "2026-07-26",
+      "destaque": false
+    },
+    {
+      "versao": "1.9.0",
+      "data": "2026-07-26",
+      "destaque": false
+    },
+    {
+      "versao": "1.8.0",
+      "data": "2026-07-26",
+      "destaque": false
+    },
+    {
+      "versao": "1.7.0",
+      "data": "2026-07-25",
+      "destaque": false
+    },
+    {
+      "versao": "1.6.2",
+      "data": "2026-07-16",
+      "destaque": false
+    },
+    {
+      "versao": "1.6.0",
+      "data": "2026-07-15",
+      "destaque": false
+    },
+    {
+      "versao": "1.5.0",
+      "data": "2026-07-14",
+      "destaque": false
+    },
+    {
+      "versao": "1.3.3",
+      "data": "2026-07-08",
+      "destaque": false
+    },
+    {
+      "versao": "1.3.2",
+      "data": "2026-07-08",
+      "destaque": false
+    },
+    {
+      "versao": "1.3.1",
+      "data": "2026-07-08",
+      "destaque": false
+    },
+    {
+      "versao": "1.3.0",
+      "data": "2026-07-08",
+      "destaque": false
+    },
+    {
+      "versao": "1.2.1",
+      "data": "2026-07-07",
+      "destaque": false
+    },
+    {
+      "versao": "1.2.0",
+      "data": "2026-07-07",
+      "destaque": false
+    },
+    {
+      "versao": "1.1.3",
+      "data": "2026-07-07",
+      "destaque": false
+    },
+    {
+      "versao": "1.1.2",
+      "data": "2026-07-07",
+      "destaque": false
+    },
+    {
+      "versao": "1.1.1",
+      "data": "2026-07-07",
+      "destaque": false
+    },
+    {
+      "versao": "1.1.0",
+      "data": "2026-07-07",
+      "destaque": false
+    },
+    {
+      "versao": "1.0.1",
+      "data": "2026-07-07",
+      "destaque": false
+    },
+    {
+      "versao": "1.0.0",
+      "data": "2026-07-07",
+      "destaque": false
+    },
+    {
+      "versao": "0.43.0",
+      "data": "2026-07-07",
+      "destaque": false
+    },
+    {
+      "versao": "0.42.0",
+      "data": "2026-07-07",
+      "destaque": false
+    },
+    {
+      "versao": "0.41.8",
+      "data": "2026-07-06",
+      "destaque": false
+    },
+    {
+      "versao": "0.41.7",
+      "data": "2026-07-06",
+      "destaque": false
+    },
+    {
+      "versao": "0.41.6",
+      "data": "2026-07-06",
+      "destaque": false
+    },
+    {
+      "versao": "0.41.4",
+      "data": "2026-07-06",
+      "destaque": false
+    },
+    {
+      "versao": "0.41.3",
+      "data": "2026-07-06",
+      "destaque": false
+    },
+    {
+      "versao": "0.41.2",
+      "data": "2026-07-06",
+      "destaque": false
+    },
+    {
+      "versao": "0.41.1",
+      "data": "2026-07-06",
+      "destaque": false
+    },
+    {
+      "versao": "0.41.0",
+      "data": "2026-07-01",
+      "destaque": false
+    },
+    {
+      "versao": "0.40.4",
+      "data": "2026-07-01",
+      "destaque": false
+    },
+    {
+      "versao": "0.40.2",
+      "data": "2026-07-01",
+      "destaque": false
+    },
+    {
+      "versao": "0.40.1",
+      "data": "2026-06-30",
+      "destaque": false
+    },
+    {
+      "versao": "0.40.0",
+      "data": "2026-06-30",
+      "destaque": false
+    },
+    {
+      "versao": "0.39.5",
+      "data": "2026-06-30",
+      "destaque": false
+    },
+    {
+      "versao": "0.39.4",
+      "data": "2026-06-30",
+      "destaque": false
+    },
+    {
+      "versao": "0.39.0",
+      "data": "2026-06-22",
+      "destaque": false
+    },
+    {
+      "versao": "0.38.0",
+      "data": "2026-06-21",
+      "destaque": false
+    },
+    {
+      "versao": "0.37.0",
+      "data": "2026-06-21",
+      "destaque": false
+    },
+    {
+      "versao": "0.36.2",
+      "data": "2026-06-21",
+      "destaque": false
+    },
+    {
+      "versao": "0.36.1",
+      "data": "2026-06-21",
+      "destaque": false
+    },
+    {
+      "versao": "0.36.0",
+      "data": "2026-06-21",
+      "destaque": false
+    },
+    {
+      "versao": "0.35.3",
+      "data": "2026-06-21",
+      "destaque": false
+    },
+    {
+      "versao": "0.35.2",
+      "data": "2026-06-21",
+      "destaque": false
+    },
+    {
+      "versao": "0.35.1",
+      "data": "2026-06-21",
+      "destaque": false
+    },
+    {
+      "versao": "0.35.0",
+      "data": "2026-06-20",
+      "destaque": false
+    },
+    {
+      "versao": "0.34.0",
+      "data": "2026-06-20",
+      "destaque": false
+    },
+    {
+      "versao": "0.33.1",
+      "data": "2026-06-17",
+      "destaque": false
+    },
+    {
+      "versao": "0.33.0",
+      "data": "2026-06-17",
+      "destaque": false
+    },
+    {
+      "versao": "0.32.0",
+      "data": "2026-06-16",
+      "destaque": false
+    },
+    {
+      "versao": "0.31.3",
+      "data": "2026-06-15",
+      "destaque": false
+    },
+    {
+      "versao": "0.31.2",
+      "data": "2026-06-15",
+      "destaque": false
+    },
+    {
+      "versao": "0.31.1",
+      "data": "2026-06-15",
+      "destaque": false
+    },
+    {
+      "versao": "0.31.0",
+      "data": "2026-06-15",
+      "destaque": false
+    },
+    {
+      "versao": "0.30.4",
+      "data": "2026-06-15",
+      "destaque": false
+    },
+    {
+      "versao": "0.30.3",
+      "data": "2026-06-15",
+      "destaque": false
+    },
+    {
+      "versao": "0.30.2",
+      "data": "2026-06-15",
+      "destaque": false
+    },
+    {
+      "versao": "0.30.1",
+      "data": "2026-06-15",
+      "destaque": false
+    },
+    {
+      "versao": "0.29.0",
+      "data": "2026-06-15",
+      "destaque": false
+    },
+    {
+      "versao": "0.28.7",
+      "data": "2026-06-15",
+      "destaque": false
+    },
+    {
+      "versao": "0.28.4",
+      "data": "2026-06-15",
+      "destaque": false
+    },
+    {
+      "versao": "0.28.1",
+      "data": "2026-06-15",
+      "destaque": false
+    },
+    {
+      "versao": "0.28.0",
+      "data": "2026-06-15",
+      "destaque": false
+    },
+    {
+      "versao": "0.27.0",
+      "data": "2026-06-14",
+      "destaque": false
+    },
+    {
+      "versao": "0.26.7",
+      "data": "2026-06-12",
+      "destaque": false
+    },
+    {
+      "versao": "0.26.3",
+      "data": "2026-06-12",
+      "destaque": false
+    },
+    {
+      "versao": "0.26.2",
+      "data": "2026-06-12",
+      "destaque": false
+    },
+    {
+      "versao": "0.26.1",
+      "data": "2026-06-12",
+      "destaque": false
+    },
+    {
+      "versao": "0.26.0",
+      "data": "2026-06-11",
+      "destaque": false
+    },
+    {
+      "versao": "0.25.4",
+      "data": "2026-06-11",
+      "destaque": false
+    },
+    {
+      "versao": "0.25.3",
+      "data": "2026-06-11",
+      "destaque": false
+    },
+    {
+      "versao": "0.25.2",
+      "data": "2026-06-11",
+      "destaque": false
+    },
+    {
+      "versao": "0.25.1",
+      "data": "2026-06-11",
+      "destaque": false
+    },
+    {
+      "versao": "0.25.0",
+      "data": "2026-06-11",
+      "destaque": false
+    },
+    {
+      "versao": "0.24.7",
+      "data": "2026-06-11",
+      "destaque": false
+    },
+    {
+      "versao": "0.24.5",
+      "data": "2026-06-11",
+      "destaque": false
+    },
+    {
+      "versao": "0.24.3",
+      "data": "2026-06-11",
+      "destaque": false
+    },
+    {
+      "versao": "0.24.2",
+      "data": "2026-06-11",
+      "destaque": false
+    },
+    {
+      "versao": "0.24.1",
+      "data": "2026-06-11",
+      "destaque": false
+    },
+    {
+      "versao": "0.24.0",
+      "data": "2026-06-11",
+      "destaque": false
+    },
+    {
+      "versao": "0.23.1",
+      "data": "2026-06-11",
+      "destaque": false
+    },
+    {
+      "versao": "0.23.0",
+      "data": "2026-06-10",
+      "destaque": false
+    },
+    {
+      "versao": "0.22.1",
+      "data": "2026-06-10",
+      "destaque": false
+    },
+    {
+      "versao": "0.22.0",
+      "data": "2026-06-10",
+      "destaque": false
+    },
+    {
+      "versao": "0.21.0",
+      "data": "2026-06-10",
+      "destaque": false
+    },
+    {
+      "versao": "0.20.0",
+      "data": "2026-06-10",
+      "destaque": false
+    },
+    {
+      "versao": "0.19.4",
+      "data": "2026-05-22",
+      "destaque": false
+    },
+    {
+      "versao": "0.19.3",
+      "data": "2026-05-21",
+      "destaque": false
+    },
+    {
+      "versao": "0.19.2",
+      "data": "2026-05-21",
+      "destaque": false
+    },
+    {
+      "versao": "0.19.1",
+      "data": "2026-05-21",
+      "destaque": false
+    },
+    {
+      "versao": "0.19.0",
+      "data": "2026-05-20",
+      "destaque": false
+    },
+    {
+      "versao": "0.18.0",
+      "data": "2026-05-20",
+      "destaque": false
+    },
+    {
+      "versao": "0.17.2",
+      "data": "2026-05-19",
+      "destaque": false
+    },
+    {
+      "versao": "0.17.1",
+      "data": "2026-05-19",
+      "destaque": false
+    },
+    {
+      "versao": "0.17.0",
+      "data": "2026-05-19",
+      "destaque": false
+    },
+    {
+      "versao": "0.16.1",
+      "data": "2026-05-19",
+      "destaque": false
+    },
+    {
+      "versao": "0.16.0",
+      "data": "2026-05-19",
+      "destaque": false
+    },
+    {
+      "versao": "0.15.0",
+      "data": "2026-05-19",
+      "destaque": false
+    },
+    {
+      "versao": "0.14.0",
+      "data": "2026-05-19",
+      "destaque": false
+    },
+    {
+      "versao": "0.13.1",
+      "data": "2026-05-19",
+      "destaque": false
+    },
+    {
+      "versao": "0.13.0",
+      "data": "2026-05-18",
+      "destaque": false
+    },
+    {
+      "versao": "0.12.0",
+      "data": "2026-05-18",
+      "destaque": false
+    },
+    {
+      "versao": "0.11.0",
+      "data": "2026-05-18",
+      "destaque": false
+    },
+    {
+      "versao": "0.10.8",
+      "data": "2026-05-18",
+      "destaque": false
+    },
+    {
+      "versao": "0.10.7",
+      "data": "2026-05-18",
+      "destaque": false
+    },
+    {
+      "versao": "0.10.6",
+      "data": "2026-05-18",
+      "destaque": false
+    },
+    {
+      "versao": "0.10.5",
+      "data": "2026-05-18",
+      "destaque": false
+    },
+    {
+      "versao": "0.10.4",
+      "data": "2026-05-18",
+      "destaque": false
+    },
+    {
+      "versao": "0.10.3",
+      "data": "2026-05-18",
+      "destaque": false
+    },
+    {
+      "versao": "0.10.2",
+      "data": "2026-05-18",
+      "destaque": false
+    },
+    {
+      "versao": "0.10.1",
+      "data": "2026-05-18",
+      "destaque": false
+    }
+  ]
+}

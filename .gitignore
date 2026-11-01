@@ -1,0 +1,4 @@
+# Build output do Jekyll — o GitHub Pages regenera; não versionar.
+_site/
+.jekyll-cache/
+.sass-cache/

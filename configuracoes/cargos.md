@@ -1,0 +1,229 @@
+---
+title: "Cargos e Permissões"
+nav_order: 3
+parent: "Configurações da Organização"
+permalink: /configuracoes/cargos/
+---
+
+> Disponível para **Presidente (admin)**.
+
+A página **Cargos e permissões** vai além dos 7 cargos padrão da plataforma: além de **renomear** cada cargo, o Presidente pode **criar cargos novos** e **ajustar as permissões** com controle fino — por exemplo, um "Tesoureiro sem exclusão" que registra lançamentos mas não pode excluí-los.
+
+[![Configurações — Cargos e permissões](/assets/screenshots/config-cargos.png)](/assets/screenshots/config-cargos.png)
+*Editor de cargos — à esquerda a lista, à direita as permissões do cargo selecionado*
+
+> 💡 **Por que isso importa**
+>
+> Cada OSC se organiza de um jeito. Os 7 papéis padrão cobrem a maioria dos casos, mas às vezes você precisa de uma função sob medida — um "Secretário" que só vê relatórios, um "Tesoureiro júnior" que lança mas não exclui, um "Captador de recursos" com acesso a reembolsos. Em vez de forçar a pessoa num papel que dá acesso demais (ou de menos), você monta o cargo certo e atribui. Tudo é validado **no servidor** — a tela só reflete o que a pessoa realmente pode fazer.
+
+> 🎥 **Vídeo tutorial · Convidar alguém e definir o que essa pessoa faz**
+>
+> Esta tela tem o mesmo vídeo curto (sem áudio, com legendas) que aparece em [Usuários](/configuracoes/usuarios/) — clique no ícone de vídeo, no canto direito do cabeçalho. Veja todos os vídeos disponíveis em [Vídeos tutoriais dentro do app](/primeiros-passos/#videos-tutoriais).
+
+## Conceitos
+
+> 📖 **Conceito · Cargo padrão × cargo personalizado**
+>
+> **Cargos padrão** são os 7 que já vêm na plataforma (Presidente, Tesoureiro, Diretor, Gestor de Centro de Custo, Coord. de projeto, Comissão Fiscal, Voluntário) — aparecem com a etiqueta **Padrão**. **Cargos personalizados** são os que a sua OSC cria — etiqueta **Personalizado**. A diferença prática está na edição (veja abaixo): cargo padrão tem um piso de permissões que não sai; cargo personalizado é totalmente editável.
+
+> 📖 **Conceito · Permissões essenciais e acréscimos**
+>
+> Cada cargo padrão tem um conjunto de **permissões essenciais** — o piso que define aquele papel e **não pode ser removido** (aparece travado, com a etiqueta "essencial"). O Presidente só pode **acrescentar** permissões sobre esse piso. Já um cargo personalizado não tem piso: todas as permissões são interruptores que você liga e desliga livremente.
+
+> 📖 **Conceito · Permissão efetiva**
+>
+> Uma pessoa pode ter **mais de um cargo** ao mesmo tempo. O que ela pode fazer é a **soma** das permissões de todos os cargos dela. É essa permissão somada que o sistema usa para liberar ou barrar cada ação.
+
+## As permissões
+
+As permissões são organizadas por área, com as operações que importam separadas:
+
+- **Movimentações** — Ver · Criar / editar · **Pagar (marcar como pago)** · Excluir / estornar · Importar lançamentos
+- **Reembolsos e pedidos de compra e pagamento** — Ver · **Solicitar pedido de compra e pagamento** · **Aprovar** · Pagar
+- **Contas financeiras** — **Ver saldo das contas**
+- **Orçamento** — **Aprovar orçamento anual**
+- **Relatórios e auditoria** — Ver relatórios · **Redigir nota explicativa do relatório** · Ver trilha de auditoria · Exportar dados (LGPD)
+- **Configurações** — Config. financeira (contas e categorias) · Config. da OSC · Gerir membros e cargos · **Gerir integrações e credenciais de API**
+
+### Config. financeira também controla criar categoria e centro de custo "no meio do caminho"
+{: #permissao-config-financeira }
+
+A permissão **Config. financeira** é a mesma que libera [Categorias e Centros de Custo](/configuracoes/categorias/) na tela de Configurações — inclusive a [importação por planilha](/configuracoes/categorias/#importar-categorias-e-centros-de-custo-por-planilha). Ela também é exigida nos dois atalhos que criam categoria ou centro de custo **sem passar por lá**:
+
+- criar categoria ou centro de custo **durante a [importação de lançamentos](/modulos/movimentacoes/#importar-lançamentos)**, ao resolver uma pendência de nome desconhecido;
+- criar categoria **durante a [conciliação de extrato](/modulos/movimentacoes/#conciliacao-bancaria-ofx)**, ao lançar uma transação nova do banco.
+
+> ✓ **Quem não tem a permissão continua importando e conciliando normalmente**
+>
+> Faltando essa permissão, a pessoa não vê o botão de criar categoria/centro de custo nesses dois atalhos (aparece desabilitado, com o motivo). Ela resolve escolhendo um cadastro **já existente**, ou — no caso da importação — deixando aquelas linhas de fora para reimportar depois de a categoria ser cadastrada por quem tem a permissão.
+
+### Ver saldo das contas controla o número, não a tela
+{: #permissao-ver-saldo }
+
+[![Permissão "Ver saldo das contas", na área Contas financeiras do editor de cargos](/assets/screenshots/config-cargos-ver-saldo.png)](/assets/screenshots/config-cargos-ver-saldo.png)
+*A área "Contas financeiras" no editor de cargos, com o interruptor "Ver saldo das contas"*
+
+A permissão **Ver saldo das contas**, na área "Contas financeiras", decide quem enxerga o **valor** do saldo — não quem acessa a tela. Quem não tem a permissão continua usando **Painel**, **Movimentações**, o formulário de **novo lançamento**, **Configurações → Contas Bancárias** e a aba **Situação** normalmente; só que, onde apareceria o número, lê uma frase avisando que não tem permissão para ver o saldo e a quem pedir.
+
+- Vale para **qualquer cargo, inclusive o Presidente e o Tesoureiro** — não é piso essencial de nenhum papel, nem mesmo dos dois que mais mexem com dinheiro. Se a sua OSC quiser que algum deles não veja saldo (por exemplo, um Presidente honorário que não cuida do dia a dia financeiro), o interruptor pode ficar desligado até para ele.
+- Em **todo cargo, padrão ou personalizado**, é um interruptor que o Presidente liga e desliga quando quiser.
+
+> 💡 **Por que isso importa**
+>
+> Nem toda OSC quer que todo mundo com acesso ao sistema veja quanto tem em caixa — um coordenador de projeto pode precisar lançar despesas e acompanhar pendências sem enxergar o saldo consolidado da organização inteira, por exemplo. Separar "usar as telas financeiras" de "ver o valor do saldo" deixa essa decisão de governança nas mãos de cada OSC, em vez de a plataforma impor um dos dois extremos.
+
+> ✓ **Nada muda se você não mexer em nada**
+>
+> A permissão vem **ligada** para todos os cargos que já existiam antes desta versão — ninguém perde acesso que já tinha por conta de uma migração. Se quiser restringir, é você quem desliga, cargo por cargo.
+
+### Aprovar orçamento anual é permissão própria
+{: #permissao-aprovar-orcamento }
+
+A permissão **Aprovar orçamento anual**, na área "Orçamento", define quem pode aprovar a proposta de orçamento da OSC em [Orçamento](/modulos/orcamento/) antes dela virar a versão vigente do ano. É um interruptor por cargo, do mesmo jeito que as demais permissões desta página.
+
+### Gerir integrações e credenciais de API
+{: #permissao-integracoes }
+
+A permissão **Gerir integrações e credenciais de API**, na área "Configurações", libera o cargo para cadastrar, alterar e revogar credenciais de integração da OSC (por exemplo, a chave usada por um sistema externo para consumir dados via API). Por envolver segredo de acesso, trate a concessão com o mesmo cuidado das demais permissões de configuração — ver "Delegar poderes de administrador", abaixo.
+
+### Pagar é uma permissão separada de criar e editar
+{: #permissao-pagar }
+
+**Registrar uma despesa** e **confirmar que o dinheiro saiu** são duas coisas diferentes — e agora são duas permissões diferentes. A permissão **Pagar (marcar como pago)**, em Movimentações, é o que autoriza:
+
+- marcar um lançamento como **pago** (pela lista ou pelo detalhe, inclusive em lote);
+- marcar uma **parcela de pedido de compra e pagamento** como paga;
+- **confirmar pagamentos pela conciliação de extrato bancário** — confirmar ali é uma forma de registrar que o dinheiro saiu, então pede a mesma permissão;
+- **alterar o valor de um lançamento vindo de pedido de compra e pagamento** — quem não tem a permissão de pagar acompanha o pedido, mas não altera o valor do lançamento gerado por ele (relevante sobretudo em pedido de **valor estimado**, quando o preço final é negociado depois da aprovação — ver [Pedidos de Compra e Pagamento → Quando o valor pago diverge do autorizado](/modulos/pedidos-pagamento/#valor-diverge-do-autorizado)).
+
+Ela também é o que define **quem enxerga os dados bancários completos** de quem recebe — veja [Contas Bancárias → Dados bancários de quem recebe](/configuracoes/contas/#dados-bancarios-de-quem-recebe).
+
+> ✓ **Nada muda se você não mexer em nada**
+>
+> Todo cargo que já podia pagar continua podendo. A separação só existe para quem **quiser** usá-la: nesse caso, entre no cargo e **desligue "Pagar"** em Movimentações. A pessoa continua registrando e editando lançamentos normalmente — só não confirma pagamentos.
+
+> 💡 **Por que isso importa · Quem registra não precisa ser quem libera**
+>
+> Em muitas OSCs, uma pessoa organiza as contas a pagar (digita, anexa nota, classifica) e **outra** tem a senha do banco e efetivamente transfere. Antes, dar acesso para registrar dava de quebra o poder de dar baixa em pagamentos. Com a permissão separada, você monta um cargo de "apoio administrativo" que lança tudo, sem que ele possa declarar pago algo que ninguém pagou. É a mesma lógica de segregação de funções que protege a Comissão Fiscal, aplicada ao caixa.
+
+### Quem pode solicitar pedido de compra e pagamento também é por cargo
+{: #permissao-solicitar-pedido }
+
+[![Permissão "Solicitar pedido de compra e pagamento" no editor de cargos](/assets/screenshots/config-cargos-solicitar-nota.png)](/assets/screenshots/config-cargos-solicitar-nota.png)
+*As permissões "Solicitar pedido de compra e pagamento" e "Redigir nota explicativa do relatório", no cargo Coord. de projeto*
+
+Antes, só dois cargos podiam **criar** pedidos de compra e pagamento, e a lista não alcançava cargos que a organização criasse. Agora, quem pode solicitar é definido pela permissão **Solicitar pedido de compra e pagamento**, na área "Reembolsos e pedidos de compra e pagamento" — e pode ser concedida a **qualquer cargo**, inclusive um que a sua OSC tenha criado do zero.
+
+- **Presidente** e **Tesoureiro** sempre podem solicitar, em qualquer organização — a permissão vem como essencial para os dois.
+- A **Comissão Fiscal** nunca pode — conflita com a independência de quem fiscaliza (ver "Comissão Fiscal: independência protegida", mais abaixo nesta página).
+- Para qualquer outro cargo, padrão ou personalizado, é um interruptor: o Presidente liga quando quiser que aquele cargo também solicite pagamentos.
+
+> 💡 **Por que isso importa**
+>
+> Antes desta versão, um Coordenador de Projeto ou um cargo próprio da sua OSC (um "Gerente de Núcleo", por exemplo) só conseguia pedir pagamento se a plataforma já tivesse previsto esse caminho. Agora a decisão é sua: se faz sentido para a governança da sua organização que aquele cargo compre e peça reembolso do fornecedor, basta ligar o interruptor — sem esperar por uma versão nova do sistema.
+
+> ✓ **Nada muda se você não mexer em nada**
+>
+> Quem já podia solicitar pedido de compra e pagamento continua podendo — a migração preservou as permissões existentes. Isso vale inclusive para quem chegava a essa permissão pelo caminho antigo, configurado em [Fluxo de Aprovações](/configuracoes/aprovacoes/).
+
+> ⚠️ **Atenção · Os dois caminhos por centro de custo/projeto continuam existindo à parte**
+>
+> Esta permissão libera o cargo para solicitar pedidos **sem restrição de área**. Gestor de centro de custo e coordenador de projeto continuam tendo, além dela, um caminho **próprio e mais restrito**: um ajuste em [Fluxo de Aprovações → Quem pode solicitar pedidos de compra e pagamento](/configuracoes/aprovacoes/#quem-pode-solicitar-pedidos-de-pagamento) que permite solicitar, mas **só** para o centro de custo ou o projeto sob a responsabilidade da pessoa. Os dois mecanismos coexistem: um é a permissão geral do cargo, o outro é o recorte por área.
+
+### Aprovar é a terceira forma de virar aprovador
+{: #permissao-aprovar }
+
+[![Interruptor "Aprovar" no bloco de Reembolsos e pedidos de compra e pagamento, no cargo Coord. de projeto](/assets/screenshots/config-cargos-aprovar.png)](/assets/screenshots/config-cargos-aprovar.png)
+*A permissão "Aprovar", na área "Reembolsos e pedidos de compra e pagamento" — desligada por padrão para cargos que não a têm como essencial*
+
+A permissão **Aprovar**, na área "Reembolsos e pedidos de compra e pagamento", é um **terceiro caminho** para votar em reembolsos e pedidos de compra e pagamento — ao lado dos dois já configurados em [Fluxo de Aprovações](/configuracoes/aprovacoes/#papeis-elegiveis-para-aprovar): papel listado ali e pessoa nomeada ali. Ligar esta permissão para um cargo dá a **qualquer pessoa com aquele cargo** o poder de aprovar, mesmo que o cargo não apareça na lista de papéis elegíveis da tela de Fluxo de Aprovações.
+
+- **Presidente** e **Tesoureiro** já têm a permissão como **essencial**, e ela não pode ser removida — é o piso desses dois cargos.
+- Para qualquer outro cargo, padrão ou personalizado, é um interruptor: o Presidente liga quando quiser que aquele cargo também aprove.
+- A **Comissão Fiscal** nunca tem esta permissão — conflita com a independência de quem fiscaliza (ver "Comissão Fiscal: independência protegida", mais abaixo).
+
+> ✓ **As três formas contam igual**
+>
+> Antes, quem chegava à condição de aprovador **só** por esta permissão de cargo — sem estar listado como papel ou nomeado individualmente em Fluxo de Aprovações — conseguia votar, mas a fila de "Aguardando aprovação" não aparecia para ele, e o Painel não o contava entre os aprovadores. Isso foi corrigido: hoje, papel elegível no fluxo, pessoa nomeada no fluxo e cargo com esta permissão dão exatamente a mesma experiência — fila visível, contagem no Painel, botões de aprovar e reprovar.
+
+> 💡 **Por que isso importa**
+>
+> Papel elegível e pessoa nomeada, ambos configurados em Fluxo de Aprovações, cobrem a maioria dos casos. Esta permissão serve para quando a sua OSC quer que **um cargo inteiro** aprove — inclusive um cargo personalizado que ela mesma criou — sem precisar voltar à tela de Fluxo de Aprovações toda vez que atribuir o cargo a alguém novo. Quem recebe o cargo já nasce apto a aprovar; quem perde o cargo, deixa de ser.
+
+### Redigir a nota explicativa da prestação de contas também é por cargo
+{: #permissao-nota-explicativa }
+
+A permissão **Redigir nota explicativa do relatório**, na área "Relatórios e auditoria", define quem pode escrever a [nota explicativa](/modulos/movimentacoes/#nota-explicativa) da prestação de contas — o texto livre que aparece no PDF, na seção "Notas Explicativas".
+
+- **Presidente** e **Tesoureiro** sempre podem redigir a nota, em qualquer organização.
+- A **Comissão Fiscal** não redige — ela **emite o relatório e lê a nota**, mas escrever é ato de quem presta contas, não de quem fiscaliza.
+- Para qualquer outro cargo, é um interruptor que o Presidente liga quando quiser.
+
+> ✓ **Nada muda se você não mexer em nada**
+>
+> Quem já escrevia a nota explicativa continua escrevendo. A permissão só existe para quem **quiser** abrir esse acesso a outro cargo — por exemplo, um Diretor Financeiro que redige o texto mas não é Presidente nem Tesoureiro.
+
+## Editar um cargo
+
+Clique no cargo na lista à esquerda; as permissões aparecem à direita.
+
+- Em **cargo personalizado**, cada permissão é um **interruptor** — ligue ou desligue à vontade.
+- Em **cargo padrão**, as **essenciais** ficam travadas; os demais aparecem como interruptores que o Presidente pode **acrescentar**.
+- Clique em **Salvar alterações** ao final. Em cargo padrão, salva só os acréscimos sobre o essencial.
+
+[![Cargo personalizado — permissões editáveis](/assets/screenshots/config-cargos-custom.png)](/assets/screenshots/config-cargos-custom.png)
+*Cargo personalizado: cada permissão é um interruptor (aqui, "Excluir / estornar" desligado)*
+
+> ⚠️ **Atenção · Delegar poderes de administrador**
+>
+> Ao ligar **Config. da OSC** ou **Gerir membros e cargos**, o sistema avisa que você está concedendo **poderes de administrador**: quem tiver esse cargo passa a ter o mesmo controle que um Presidente sobre aquela área. Conceda apenas a quem você confia para administrar a organização.
+
+## Comissão Fiscal: independência protegida
+
+A **Comissão Fiscal** existe para fiscalizar as finanças com independência. Por isso, as permissões que **conflitam com a fiscalização** — operar, aprovar ou pagar finanças, solicitar pedido de compra e pagamento, redigir a nota explicativa da prestação de contas e gerir configuração — ficam **bloqueadas** no cargo Comissão Fiscal, **mesmo para o Presidente**. Acréscimos inofensivos (como exportar dados, ver relatórios ou ler a nota explicativa) são permitidos, com aviso.
+
+A mesma regra vale na atribuição: se você tentar dar a uma pessoa da Comissão Fiscal um cargo que tem permissões conflitantes, o sistema **barra com explicação**.
+
+> 💡 **Por que isso importa · Segregação de funções**
+>
+> Quem opera o dinheiro não pode ser quem fiscaliza o dinheiro — é o princípio que dá credibilidade ao conselho fiscal e costuma estar no estatuto da OSC. O RIT360 Financeiro protege isso automaticamente, para que a fiscalização nunca acabe auditando os próprios atos.
+
+## Criar e clonar cargos
+
+[![Diálogo de criar cargo personalizado](/assets/screenshots/config-cargos-criar.png)](/assets/screenshots/config-cargos-criar.png)
+*Criar cargo: dê um nome e, opcionalmente, parta das permissões de um cargo existente*
+
+- **Criar cargo** — botão no fim da lista. Dê um nome e escolha **começar do zero** ou **clonar** as permissões de um cargo existente. Depois ajuste os interruptores e salve.
+- **Clonar** — disponível no cabeçalho de qualquer cargo: cria um personalizado já preenchido com as permissões daquele cargo, pronto para ajustar (ex.: clonar Tesoureiro e desligar "Excluir / estornar").
+
+## Excluir um cargo personalizado
+
+Cargos padrão não podem ser excluídos. Um cargo personalizado pode — **exceto se tiver membros**: nesse caso o sistema **bloqueia e mostra quem só tem aquele cargo**, para você reatribuir antes.
+
+## Atribuir cargos às pessoas
+
+A atribuição é feita em **Configurações → Usuários**: no menu de ações de cada pessoa, **Editar papéis** lista os cargos padrão **e** os personalizados; marque um ou vários (a pessoa acumula as permissões de todos).
+
+[![Editar papéis — cargos padrão e personalizados](/assets/screenshots/config-usuarios-papeis.png)](/assets/screenshots/config-usuarios-papeis.png)
+*Editar papéis: marque os cargos da pessoa (padrão e/ou personalizados)*
+
+## Renomear o rótulo de um cargo
+{: #renomear-o-rotulo-de-um-cargo }
+
+Você também pode trocar **como cada cargo é chamado** na sua OSC (onde o RIT360 Financeiro diz "Tesoureiro", a sua associação pode dizer "Diretor Financeiro") — **sem mudar nenhuma permissão**. O novo nome aparece **na hora** em toda a aplicação.
+
+No editor de cargos, cada cargo tem a ação **Editar nome**:
+
+- **Cargos padrão** — troque o nome de exibição pelo vocabulário da sua OSC (por exemplo, "Presidente" para "Diretor Presidente"). Sempre que quiser voltar atrás, a opção **Restaurar padrão** devolve o nome de fábrica.
+- **Cargos personalizados** — podem ser **renomeados** normalmente, como qualquer outro dado do cargo.
+
+[![Diálogo Editar nome do cargo](/assets/screenshots/config-cargos-editar-nome.png)](/assets/screenshots/config-cargos-editar-nome.png)
+*Editar o nome de um cargo padrão, com a opção "Restaurar padrão".*
+> ✓ **Dica · Renomear é só o rótulo**
+>
+> Trocar o nome do cargo não mexe em quem pode o quê — as permissões continuam exatamente as mesmas. É só a etiqueta que muda, para o sistema falar a língua da sua OSC.
+
+## Por onde seguir
+
+- **Configurações → Usuários** — para atribuir os cargos aos membros.
+- **[Papéis e Permissões](/papeis/)** — a referência do que cada papel padrão pode ver e fazer.

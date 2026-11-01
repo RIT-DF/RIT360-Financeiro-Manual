@@ -1,0 +1,36 @@
+name: Publicar versão de política legal
+
+# Dispara quando os documentos legais mudam no repositório publicado
+# (bussola-docs). Lê o frontmatter de cada documento e chama a Edge Function
+# publish_policy_version, que é idempotente por (type, version): se a versão
+# do frontmatter já foi publicada, nada muda. Para publicar uma versão nova,
+# basta bumpar `version` no frontmatter (e congelar o snapshot) — ver o
+# runbook das políticas legais.
+#
+# Segurança: nenhum input não-confiável (título/corpo de PR, mensagem de
+# commit, etc.) é interpolado em `run:`. O único segredo é exposto via `env`.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - privacidade.md
+      - termos.md
+      - legal/**
+
+# Evita publicações concorrentes pisando uma na outra.
+concurrency:
+  group: publish-policy
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Publicar versões legais
+        env:
+          POLICY_PUBLISH_TOKEN: ${{ secrets.POLICY_PUBLISH_TOKEN }}
+        run: python3 .github/scripts/publish-policy.py

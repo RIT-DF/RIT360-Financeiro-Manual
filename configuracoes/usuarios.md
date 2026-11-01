@@ -1,0 +1,265 @@
+---
+title: "Usuários"
+nav_order: 2
+parent: "Configurações da Organização"
+permalink: /configuracoes/usuarios/
+---
+
+> Disponível para **Presidente (admin)**.
+
+A página **Usuários** é onde você gerencia quem tem acesso à sua OSC dentro do RIT360 Financeiro — convidar novos membros, alterar papéis, suspender acessos.
+
+[![Configurações — Usuários](/assets/screenshots/manual-09b-config-usuarios.png)](/assets/screenshots/manual-09b-config-usuarios.png)
+*Configurações — Gerenciamento de usuários*
+
+> 💡 **Por que isso importa**
+>
+> A pessoa errada com permissão errada é o caminho mais curto para um problema sério em OSC. Acesso administrativo dado para alguém que não devia, papel de aprovador para quem não tem mandato, voluntário recém-saído que ainda tem acesso meses depois — todos os casos derivam de gestão de usuários frouxa. Esta página é o ponto onde você mantém **quem entra, quem sai e quem pode o quê**.
+
+> 🎥 **Vídeo tutorial · Convidar alguém e definir o que essa pessoa faz**
+>
+> Esta tela tem um vídeo curto (sem áudio, com legendas) sobre como adicionar pessoas e escolher o cargo de cada uma — clique no ícone de vídeo, no canto direito do cabeçalho. O mesmo vídeo também aparece em [Cargos e permissões](/configuracoes/cargos/). Veja todos os vídeos disponíveis em [Vídeos tutoriais dentro do app](/primeiros-passos/#videos-tutoriais).
+
+Listagem traz todos os membros da OSC com nome, e-mail, papel, status (ativo/pendente/inativo) e foto de perfil.
+
+## Adicionar usuário
+
+Clique em **+ Adicionar usuário**. Informe o **e-mail** e o **papel** desejado. A tela **responde na hora**, assim que o cadastro é salvo — o e-mail de convite com o link de primeiro acesso é enviado em segundo plano. O status do usuário fica como "Pendente" até ele aceitar. Se o envio do e-mail falhar, o registro da falha fica guardado e o convite pode ser **reenviado** normalmente (ver Ações por membro).
+
+> 📖 **Conceito · Convite vs acesso direto**
+>
+> O RIT360 Financeiro usa **convite por e-mail** como mecanismo de entrada, não cadastro aberto. Isso protege a OSC de spam, garante que a pessoa convidada confirma o acesso pelo próprio e-mail, e permite mensagem personalizada no convite. O convite tem prazo de validade — se expirar, o admin pode reenviar pelo mesmo fluxo.
+
+> 📖 **Conceito · Já dá para designar quem ainda não ativou o acesso**
+>
+> Um membro recém-cadastrado, que ainda não concluiu o primeiro acesso (não definiu a senha), **já pode ser escolhido** como **gestor de centro de custo**, **coordenador ou integrante de projeto** e **aprovador** (de reembolso, pedido de compra e pagamento, orçamento e projeto) — sem esperar ele entrar no sistema pela primeira vez. Nessas listas o nome aparece com a marca discreta **"· acesso pendente"**. A permissão para *agir* (aprovar, coordenar, operar) continua valendo **só depois** que a pessoa ativa o acesso.
+
+## Importar usuários em lote (planilha CSV ou Excel)
+
+[![Importar usuários — tela de upload](/assets/screenshots/manual-config-usuarios-importar.png)](/assets/screenshots/manual-config-usuarios-importar.png)
+*Importar usuários — instruções, download do template e área de upload*
+
+Para OSCs que estão migrando de outro sistema ou que precisam cadastrar muitos membros de uma vez, há a opção **Importar usuários** ao lado de "Adicionar usuário". O fluxo é o mesmo padrão do importador de movimentações.
+
+1. Clique em **Importar usuários** → abre uma tela dedicada.
+2. **Baixe o template** CSV. O arquivo já vem com o cabeçalho correto e algumas linhas de exemplo.
+3. Preencha sua planilha. Campos **obrigatórios**: nome completo, e-mail e papel. **Opcionais**: telefone, data de nascimento, CPF, RG.
+4. Faça **upload** do arquivo — em **CSV ou Excel (.xlsx)**, como preferir; o RIT360 Financeiro identifica o formato automaticamente pela extensão, sem nenhuma escolha extra na tela. O modelo para download continua sendo em CSV, mas você pode preencher e subir em Excel sem converter nada. O RIT360 Financeiro mostra uma **pré-visualização** com cada linha classificada por status:
+   - **Novo** — vai receber e-mail para definir a senha de acesso
+   - **Já cadastrado** — a pessoa já tem conta no RIT360 Financeiro (por exemplo, usa o sistema em outra OSC). Ela é **vinculada** à sua OSC e **conclui o acesso ela mesma, ao entrar** — a planilha não ativa o acesso de ninguém por você. Quem estava **inativo** na sua OSC volta a ficar ativo, como uma reativação
+   - **Vínculo ativo na OSC** — usuário que já é membro; perfil pode ser atualizado (campos vazios apenas)
+   - **Com erro** — linha que será pulada (motivo explícito ao lado)
+
+   [![Importar usuários — pré-visualização com linhas classificadas](/assets/screenshots/manual-config-usuarios-importar-preview.png)](/assets/screenshots/manual-config-usuarios-importar-preview.png)
+   *Pré-visualização — cada linha classificada por status (novo, já cadastrado, vínculo ativo, com erro)*
+
+> ⚠️ **Atenção · No Excel, formate CPF, RG e telefone como TEXTO antes de digitar**
+>
+> Se a coluna estiver no formato **Número** (o padrão do Excel para colunas novas), digitar um CPF como `012.345.678-00` ou um telefone com DDD `0121...` faz o Excel **apagar o zero à esquerda** — e não tem como o RIT360 Financeiro recuperar um dígito que já não está mais na planilha. Antes de preencher essas colunas, selecione-as e formate como **Texto** (botão direito → Formatar células → Texto, ou pela caixa de formato na barra superior). Datas de nascimento não têm esse problema — o Excel guarda a data corretamente e o RIT360 Financeiro interpreta certo na importação.
+
+5. Clique em **Importar**. A importação **começa a rodar em segundo plano** e a tela é liberada na hora — você não precisa esperar com o navegador aberto. Aparece a mensagem **"Importação iniciada — avisaremos quando concluir"** e você pode seguir usando o app normalmente.
+
+   [![Importação iniciada — processando em segundo plano](/assets/screenshots/manual-config-usuarios-importacao-iniciada.png)](/assets/screenshots/manual-config-usuarios-importacao-iniciada.png)
+   *Ao confirmar, a importação começa em segundo plano e a tela é liberada*
+
+> 📖 **Conceito · Por que a importação roda em segundo plano**
+>
+> Cadastrar muitos membros de uma vez (dezenas ou centenas) envolve criar cada acesso e disparar cada e-mail — o que leva tempo. Fazer tudo "na frente" travava a tela e, em planilhas grandes, chegava a **falhar por demora**. Agora o sistema recebe sua planilha, confirma na hora e faz o trabalho pesado por trás; ao terminar, ele te avisa. Você importa 5 ou 500 membros sem diferença na sua espera.
+
+### Aviso de conclusão
+
+Quando a importação termina, quem importou recebe um **e-mail e uma notificação** com o resumo: quantos foram convidados, quantos ficaram com **e-mail pendente**, quantos foram **vinculados**, quantos **perfis foram atualizados** e quantas linhas tiveram **erro**.
+
+[![E-mail de conclusão da importação com o resumo](/assets/screenshots/manual-config-usuarios-importacao-email.png)](/assets/screenshots/manual-config-usuarios-importacao-email.png)
+*E-mail de conclusão — resumo do que foi processado, criado, vinculado, atualizado e pulado*
+
+Se alguma linha deu erro, o aviso é **acionável**: ele lista o **número da linha**, o **nome ou e-mail** e o **motivo** (ex.: *"Linha 5 (joao@exemplo.org): CPF deve ter 11 dígitos"*), para você corrigir na planilha e reimportar **apenas as linhas que faltaram**. Por segurança, o aviso nunca traz CPF nem RG no corpo — esses dados ficam só no arquivo completo, protegido por login (ver Histórico abaixo).
+
+### Histórico de importações
+
+A tela de importação tem uma aba **Histórico** que lista todas as importações já feitas na sua OSC, com **data**, **quem importou**, **progresso**, **totais** e **status**:
+
+- **Na fila** — recebida, aguardando processamento
+- **Processando** — rodando em segundo plano
+- **Concluída** — terminou (com ou sem linhas puladas)
+- **Falhou** — foi interrompida (o aviso explica o que aconteceu)
+
+Em cada importação com erros, você pode **baixar a planilha completa das linhas que falharam** — com todos os motivos — para corrigir e reimportar só o que faltou. Esse arquivo fica disponível apenas aqui, atrás de login, porque pode conter CPF/RG.
+
+[![Importar usuários — aba Histórico com uma importação concluída](/assets/screenshots/manual-config-usuarios-importar-historico.png)](/assets/screenshots/manual-config-usuarios-importar-historico.png)
+*Aba Histórico — importações da OSC com data, solicitante, totais, status e download da planilha de erros*
+
+> 💡 **Se a planilha tiver um problema de formato**
+>
+> Se faltar uma coluna obrigatória (por exemplo, "papel") ou o arquivo passar do tamanho máximo, o sistema mostra **exatamente o que está errado** já no upload — não uma mensagem técnica genérica. Ajuste a planilha conforme a indicação e tente de novo.
+
+> 📖 **Conceito · Upsert seletivo**
+>
+> Quando o e-mail da planilha já existe na sua OSC, o RIT360 Financeiro **só preenche os campos que estão vazios** no perfil atual. Nenhum dado existente é substituído. Útil para migrações onde você importa dados de uma planilha mestre sem o risco de sobrescrever informações que o membro já cadastrou no próprio perfil.
+
+> 📖 **Conceito · Quem já tem conta entra como vinculado, não como ativo**
+>
+> Quando o e-mail da planilha pertence a alguém que **já tem conta** no RIT360 Financeiro, a importação **não cria outra conta** — ela **vincula** a pessoa à sua OSC com o papel da linha e envia um aviso por e-mail. O acesso só passa a valer quando a **própria pessoa entra** e conclui o acesso à sua organização. O administrador não ativa, por planilha, o acesso de uma conta que é de outra pessoa.
+>
+> Por que é assim: a conta é da pessoa, e ela pode participar de outras organizações. Exigir que ela mesma conclua o acesso garante que ninguém passa a atuar em uma OSC sem saber, e protege a conta dela de um engano de digitação na planilha.
+>
+> **Na prática:** você importa a Marina, que já usa o sistema em outra OSC. Na lista ela aparece como aguardando o acesso (**pendente**) até entrar; quando entrar e concluir, passa a **ativa**. Enquanto isso, ela já pode ser designada em listas como gestora ou aprovadora, mas só passa a agir depois de concluir o acesso. Duas exceções: quem estava **inativo** na sua OSC volta a ficar **ativo** direto, como numa reativação; e quem tinha sido **removido ou recusado** volta como vinculado, aguardando — como qualquer outra pessoa com conta.
+
+> ⚠️ **Atenção · Multi-papel não entra via planilha**
+>
+> Cada linha do CSV atribui exatamente um papel. Se o membro precisar acumular papéis (ex: Coordenador de Projeto + Comissão Fiscal), use o botão **Editar papéis** no menu de ações depois da importação. Isso é decisão pra evitar erros de digitação em CSV grande.
+
+> ⚠️ **Atenção · Dados de pagamento (PIX/conta) não vêm no CSV**
+>
+> Por segurança e simplicidade, a planilha não importa dados de PIX, banco ou conta. Cada membro preenche isso depois no próprio perfil, em **Configurações → Perfil** (acessível por qualquer usuário). Mantém esse dado fora da planilha que circula entre administradores.
+
+> ⚠️ **Atenção · Senha não vem no CSV**
+>
+> O fluxo é igual ao convite individual: para cada e-mail novo, o RIT360 Financeiro envia link de setup por e-mail. O usuário define a própria senha ao clicar no link. Admin nunca digita nem vê a senha de outro membro.
+
+## Acompanhar quem ainda não entrou
+
+Cadastrar alguém é só metade do caminho: a pessoa só passa a existir de fato no sistema quando conclui o primeiro acesso e define a própria senha. Enquanto isso não acontece, o vínculo dela fica como **"Aguardando setup"** — e a lista te mostra **há quanto tempo**.
+
+[![Lista de usuários com o tempo de espera e o selo "Sem resposta"](/assets/screenshots/manual-config-usuarios-aguardando.png)](/assets/screenshots/manual-config-usuarios-aguardando.png)
+*Na coluna de atividade, quem ainda não entrou aparece como "Aguardando há N dias"; passados 14 dias, ganha o selo "Sem resposta" e a linha fica destacada*
+
+- Na coluna de **última atividade**, quem ainda não concluiu o acesso aparece como **"Aguardando desde hoje"**, **"Aguardando há 1 dia"** ou **"Aguardando há N dias"** — em vez do antigo "Nunca acessou", que não dizia nada sobre o tempo.
+- Passados **14 dias**, a pessoa ganha o selo vermelho **"Sem resposta"** e a linha (ou o cartão, no celular) fica **destacada** na lista.
+
+### O resumo no topo da tela
+
+Quando existe pelo menos uma pessoa nessa situação, aparece um **resumo no topo da página** com a contagem — por exemplo: *"7 pessoas sem responder ao convite há mais de 14 dias. Os lembretes automáticos já se esgotaram."* — e o botão **Ver quem está sem resposta**, que **filtra a lista** só para essas pessoas.
+
+[![Resumo no topo com a contagem de quem não respondeu](/assets/screenshots/manual-config-usuarios-resumo-sem-resposta.png)](/assets/screenshots/manual-config-usuarios-resumo-sem-resposta.png)
+*Resumo no topo — contagem clicável que filtra a lista para quem não respondeu*
+
+Com o filtro ligado, aparece a marca **"Filtro: sem resposta"** e o botão **Remover filtro** para voltar à lista completa.
+
+> 📖 **Conceito · Por que a régua é de 14 dias**
+>
+> O RIT360 Financeiro **cobra sozinho** quem foi cadastrado e não entrou: manda lembretes automáticos **2, 7 e 14 dias** depois do cadastro (o terceiro já avisa que é o último). Enquanto o sistema ainda está tentando, a pendência é **só informação** — não faz sentido te chamar para agir sobre algo que já está sendo resolvido. Passados os 14 dias, **o automático acabou**: dali em diante, ou o administrador age (reenvia, corrige o e-mail, cancela o acesso), ou aquela pessoa simplesmente nunca vai entrar. É por isso que o destaque e o resumo só aparecem depois desse prazo. Ver [Primeiros passos](/primeiros-passos/) e o [FAQ](/faq/) para o lado de quem recebe os lembretes.
+
+> ⚠️ **Atenção · O que conta é o acesso a *esta* organização**
+>
+> Uma pessoa pode já usar o RIT360 Financeiro **em outra OSC** e mesmo assim aparecer aqui como aguardando — porque ela ainda não concluiu o acesso **na sua**. A régua olha a situação do vínculo com a sua organização, não a última vez que a pessoa entrou no sistema em algum lugar. Se olhasse o último acesso global, quem já é usuário em outra OSC nunca apareceria como pendente, e a pendência passaria batida.
+
+## Agir sobre várias pessoas de uma vez
+
+Quando a pendência é de 1 pessoa, o menu de ações da linha resolve. Quando são 30, você precisa de lote — e é para isso que serve a **seleção múltipla**.
+
+1. **Marque as pessoas** na caixinha à esquerda de cada linha (ou de cada cartão, no celular). Para pegar todo mundo que está na tela, use **"Selecionar os N filtrados"**, logo acima da lista — o número é exatamente quantas pessoas o filtro atual mostra.
+2. Aparece uma **barra de ações no rodapé** com a contagem ("12 pessoas selecionadas") e os botões de ação.
+3. Escolha a ação, **confira o resumo** e confirme.
+
+[![Barra de ações em lote com seleção ativa](/assets/screenshots/manual-config-usuarios-lote-barra.png)](/assets/screenshots/manual-config-usuarios-lote-barra.png)
+*Barra de ações em lote — a contagem de selecionados e, em cada botão, a quantas pessoas aquela ação se aplica*
+
+### Ações disponíveis e a quem cada uma se aplica
+
+| Ação | Vale para quem está… |
+|---|---|
+| **Reenviar e-mail de acesso** | aguardando o primeiro acesso |
+| **Cancelar acesso pendente** | aguardando o primeiro acesso |
+| **Desativar** | ativo |
+| **Reativar** | inativo |
+| **Remover da organização** | ativo ou inativo |
+
+Como a seleção pode misturar situações, **cada botão mostra a quantas pessoas aquela ação realmente se aplica** — por exemplo, *"Reenviar e-mail de acesso (12 de 30)"*. Ação que não alcança ninguém da seleção fica desabilitada.
+
+Na confirmação, o sistema repete a conta (*"12 de 30 selecionados serão afetados"*) e **lista nominalmente quem será ignorado, com o motivo** de cada um. Para **Remover da organização**, é obrigatório escrever um **motivo**, que vale para todas as pessoas do lote e fica registrado.
+
+### Enquanto executa: progresso e interrupção
+
+A ação é aplicada **uma pessoa de cada vez**, com uma barra de **progresso** ("8 de 12 processados") e o botão **Interromper**.
+
+> ⚠️ **Atenção · Interromper não desfaz**
+>
+> A operação em lote **não é "tudo ou nada"**. Se você interromper no meio, **quem já foi processado continua processado** — os 8 primeiros seguem desativados, removidos ou reenviados, conforme a ação. Interromper só impede que o sistema continue dali para frente. Se interrompeu por engano, confira o resultado antes de refazer.
+
+### O resultado, pessoa a pessoa
+
+Ao terminar, a tela mostra o placar (**Concluído**, **Recusado por regra**, **Falhou**, **Não aplicado**) e a **lista nome a nome** com o que aconteceu em cada caso:
+
+- **Concluído** — deu certo.
+- **Recusado por regra** — o sistema barrou por uma regra de proteção. O caso clássico: **não é possível remover ou desativar o último administrador ativo** da organização.
+- **Falhou** — algo deu errado naquela pessoa (o motivo aparece ao lado). As demais seguiram normalmente.
+- **Não aplicado** — a pessoa estava na seleção mas fora da situação exigida, ou caiu no freio de reenvio (abaixo).
+
+> 💡 **A seleção some quando você troca o filtro ou a busca**
+>
+> De propósito. Se a seleção sobrevivesse à troca de filtro, você poderia confirmar uma ação sobre pessoas que **não estão mais na sua frente** — o jeito mais fácil de desativar quem não devia. Selecione, aja, e só então mude o filtro.
+
+> 💡 **Reenvio em lote tem um freio curto**
+>
+> Se você acabou de reenviar o acesso para alguém, um novo clique **poucos minutos depois** aparece como **"Enviado agora há pouco"** em vez de disparar outro e-mail. É proteção contra o clique repetido por ansiedade — e não consome as tentativas da própria pessoa pelo "Esqueci a senha", que continuam liberadas.
+
+## Ações por membro
+
+Cada linha tem menu de ações que muda conforme o status:
+
+- **Editar papéis** — abre painel lateral com checkboxes para os papéis disponíveis (Presidente, Tesoureiro, Diretor, Coordenador de Projeto, Comissão Fiscal e Voluntário). Um usuário pode ter mais de um papel ao mesmo tempo — ver [Papéis e Permissões](/papeis/) para a regra de combinações.
+
+  [![Editar papéis — painel multi-select](/assets/screenshots/manual-config-usuarios-editar-papeis.png)](/assets/screenshots/manual-config-usuarios-editar-papeis.png)
+  *Editor de papéis — marque os papéis desejados; combinações proibidas ficam visualmente desabilitadas*
+
+- **Alterar e-mail de acesso** — o admin troca o e-mail de login de quem está **só na sua OSC** e com acesso ativo, ou corrige o e-mail de um convite que ainda não foi usado. Nos demais casos, a própria pessoa troca em Meu Perfil. Veja as regras logo abaixo.
+- **Desativar acesso** — bloqueia entrada sem excluir histórico
+- **Reativar acesso** — restaura entrada de quem estava desativado
+- **Cancelar acesso pendente** — remove o acesso de quem ainda não concluiu o primeiro login
+- **Reenviar e-mail de acesso** — re-dispara o e-mail de acesso (útil quando o destinatário não recebeu ou o link expirou)
+- **Remover da organização** — encerra o vínculo da pessoa com a OSC (exige motivo). O histórico do que ela fez é preservado; ver "Desativar ≠ excluir" abaixo
+
+As mesmas ações estão disponíveis **em lote**, para várias pessoas de uma vez — ver a seção "Agir sobre várias pessoas de uma vez", acima.
+
+## Alterar e-mail de acesso de outra pessoa
+
+[![Alterar e-mail de acesso — diálogo do admin](/assets/screenshots/manual-config-usuarios-alterar-email.png)](/assets/screenshots/manual-config-usuarios-alterar-email.png)
+*Diálogo "Alterar e-mail de acesso" — a troca fica registrada em auditoria*
+
+A troca feita pelo próprio usuário em **Meu Perfil** exige confirmação por link enviado ao novo endereço. A troca pelo admin em **Configurações → Usuários** não tem esse link — e justamente por isso tem **limites**: o e-mail de login é a chave da conta da pessoa, e quem controla o e-mail controla a conta. O sistema só deixa o admin fazer a troca quando a conta é, na prática, **só da sua OSC**.
+
+**Quando o admin pode trocar:**
+
+- **Pessoa que está apenas na sua organização e com acesso ativo.** É o caso de quem perdeu acesso ao próprio e-mail (conta antiga desativada, empresa trocou o domínio). A pessoa **recebe um aviso no endereço antigo**, informando a troca.
+- **Convite que nunca foi usado.** Se o e-mail do convite foi digitado errado e a pessoa ainda não entrou nenhuma vez, você corrige o endereço e o sistema **reenvia o e-mail de acesso** para o endereço novo. Nesse caso não há aviso ao endereço antigo, porque ele pode ser de um desconhecido.
+
+**Quando o sistema recusa:** em qualquer outra situação — inclusive, e principalmente, quando a pessoa **participa de outra organização**; também quando o acesso dela à sua OSC está inativo ou encerrado. A mensagem é:
+
+> *"Esta pessoa precisa alterar o próprio e-mail em Meu Perfil."*
+
+Isso não é defeito: o sistema está protegendo a conta da pessoa. Uma conta que serve a mais de uma OSC não pode ter o e-mail de login alterado por uma só delas, porque a mudança afetaria o acesso dela às outras e os dados que ela tem lá.
+
+1. No menu de ações da pessoa, clique em **Alterar e-mail de acesso**.
+2. Confira o **e-mail atual** exibido e informe o **novo e-mail**.
+3. Clique em **Alterar e-mail**.
+
+**Quando recebe a recusa:** peça à pessoa que abra **Meu Perfil → Ações de Conta → Alterar e-mail de acesso** (ver [Meu Perfil](/configuracoes/perfil/#como-trocar-o-e-mail-de-login)). Se ela já perdeu o acesso ao e-mail antigo e não consegue nem entrar, escreva para a equipe da RIT pelo botão **💬 Feedback** do app, explicando o caso — nesse cenário a troca é tratada por lá.
+
+> ⚠️ **Atenção · Sem confirmação da pessoa — confirme com ela antes**
+>
+> Nos casos em que o admin pode trocar, o e-mail muda assim que você clica em "Alterar e-mail". Use apenas quando tiver certeza do novo endereço; confirme com a própria pessoa antes, sempre que possível. Um endereço errado leva o acesso a quem não deveria. A ação fica registrada no audit log com autor, data e e-mails anterior/novo.
+
+> ⚠️ **Atenção · Mudança de papel deve ser deliberada**
+>
+> Promover alguém para Tesoureiro dá acesso à aprovação de despesas. Conversão entre papéis com poder financeiro deve passar pela diretoria, não ser ação unilateral do presidente. Em OSC com estatuto formal, pode até exigir ata de assembleia ou eleição. O sistema não bloqueia a mudança, mas registra tudo no audit log com data, autor e papéis anterior/novo.
+
+> ⚠️ **Atenção · Desativar ≠ excluir**
+>
+> Desativar bloqueia entrada mas **preserva todo o histórico** (lançamentos criados, aprovações dadas, comentários escritos). Para auditoria e prestação de contas, isso é essencial — você consegue mostrar quem fez o quê mesmo depois que a pessoa saiu. O RIT360 Financeiro não tem opção de "excluir usuário"; só "desativar" + histórico preservado. Quem deixou a OSC: desative.
+
+## Solicitações pendentes
+
+Em OSCs com **acesso público ao link de vínculo** ativado (em Configurações → Organização), pessoas externas podem pedir entrada espontaneamente. As solicitações pendentes aparecem em uma seção separada, com botão **Aprovar** ou **Rejeitar**. Aprovar gera o convite formal; rejeitar nega o acesso sem criar conta.
+
+## Foto de perfil dos membros
+
+A lista mostra a foto de cada membro (configurada por cada um no Meu Perfil). Caso a pessoa não tenha foto, aparece um avatar com as iniciais do nome.
+
+## Por onde seguir
+
+- **Papéis e Permissões** — para entender o que cada papel pode fazer antes de atribuir.
+- **Configurações → Fluxo de Aprovações** — para definir quais papéis aprovam e quem é aprovador individual.
+- **Configurações → Organização** — para controlar o acesso público de vínculo.
+- **[Meu Perfil](/configuracoes/perfil/)** — troca de e-mail self-service, com confirmação por link; use quando a própria pessoa tem acesso ao e-mail atual.
+- **[Primeiros passos](/primeiros-passos/)** e **[FAQ](/faq/)** — como é o primeiro acesso do outro lado, os lembretes automáticos e o caminho do "Esqueci a senha" que a própria pessoa pode usar sem depender de você.

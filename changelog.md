@@ -1,0 +1,4321 @@
+---
+title: "Novidades"
+nav_order: 12
+permalink: /changelog/
+---
+
+# Novidades — RIT360 Financeiro
+
+Todas as mudanças relevantes do projeto são documentadas aqui.
+Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:target="_blank" rel="noopener noreferrer"}.
+
+---
+
+## [1.136.2] — 2026-11-01
+
+### Modificado
+
+- Reforço de segurança: dados e rotinas internas ficam fechados para quem não tem acesso.
+- O administrador não ativa mais o acesso de outra pessoa nem troca o e-mail de quem precisa fazer isso pelo próprio perfil.
+
+## [1.136.1] — 2026-10-27
+
+### Corrigido
+
+- Comissão Fiscal: os lançamentos que o tesoureiro conciliou em Movimentações — inclusive quando a conciliação foi feita pelo extrato em papel e nenhum arquivo foi importado — passam a aparecer como "Conciliado manualmente" e contam como conformes no pilar Extrato bancário. Antes, todos apareciam como pendentes.
+- Comissão Fiscal: a lista "Extrato sem lançamento vinculado" deixa de mostrar as linhas que correspondem a um lançamento já conciliado. A tela, o Caderno exportado e o parecer em PDF agora mostram os mesmos números.
+
+### Modificado
+
+- Reembolsos e pedidos de pagamento: a tela de detalhe mostra o código do lançamento gerado no pagamento, igual ao da lista, com acesso direto ao lançamento.
+- Reembolsos e pedidos de pagamento: os botões Aprovar e Reprovar ficam no topo da tela de detalhe para quem pode decidir, sem precisar rolar até o fim da página. Quem pode aprovar não mudou.
+
+## [1.136.0] — 2026-10-23
+
+### Adicionado
+
+- Desconexão automática por inatividade após 2 horas sem uso, com aviso prévio aos 115 minutos (5 minutos antes) e opção de continuar conectado.
+- Sincronização de atividade entre abas abertas no navegador (nenhuma aba desloga enquanto o usuário estiver interagindo no sistema em outra aba).
+- Mensagem informativa na tela de entrada quando a sessão expirar por inatividade.
+
+## [1.135.0] — 2026-10-23
+
+### Adicionado
+
+- Botão de ajuda em vídeo no cabeçalho das páginas da Comissão Fiscal (listagem de períodos e espaço de trabalho do período).
+- Catálogo de vídeos expandido com dois novos tutoriais: "Como examinar e conferir as contas" e "Deliberação, votação e parecer oficial".
+
+## [1.134.1] — 2026-10-23
+
+### Corrigido
+
+- Na aba de demonstrativos contábeis da Comissão Fiscal, corrigida a consulta de listagem de documentos para carregar sem erro no banco de dados.
+- O estado vazio da aba de demonstrativos contábeis agora exibe botão de ação direto no corpo para os responsáveis pela anexação.
+- No menu lateral de Configurações, "Organização" permanece como primeiro item e "Comissão Fiscal" fica posicionada logo após "Cargos e permissões".
+
+## [1.134.0] — 2026-10-23
+
+### Adicionado
+
+- Nova aba "Demonstrativos Contábeis" no ambiente da Comissão Fiscal (/comissao-fiscal), permitindo que a tesouraria e a administração anexem os relatórios oficiais emitidos pela contabilidade externa (DRE, Balanço Patrimonial, Balancetes, DFC e Notas Explicativas) para exame dos conselheiros (#394).
+
+### Modificado
+
+- Na tela de conferência da Comissão Fiscal, os lançamentos agora são dispostos em linhas compactas com 3 colunas (identificação e status à esquerda, valor com destaque de cor ao centro e botões de ação à direita), reduzindo drasticamente o consumo de espaço vertical.
+- Visualização de documentos em 1 clique: o botão de anexo expande e carrega o arquivo imediatamente abaixo da linha do lançamento sem cliques adicionais.
+- Na aba de deliberação, o seletor entre gerar parecer do sistema ou anexar parecer externo passou a usar abas neutras, e o botão oficial de emissão agora só fica ativo após a conclusão dos votos exigidos pelo quórum.
+
+## [1.133.0] — 2026-10-23
+
+### Adicionado
+
+- Semáforo consolidado e filtro por exceção no topo da Comissão Fiscal: cartões com percentuais de conformidade nos 3 pilares e filtro para exibir rapidamente apenas os lançamentos com pendências ou divergências.
+- Visualização inline de comprovantes na tela de fiscalização com preview de PDFs e imagens na própria página sem forçar o download.
+- Ações em lote e ateste rápido: seleção múltipla por caixas de seleção para atestar despesas conformes em lote, além de botão global para atestar todas as despesas do período.
+- Exportação de dados do período em Caderno formatado em PDF e em planilha Excel (XLSX).
+- Possibilidade de anexar parecer externo emitido e assinado fora do sistema em PDF, com registro de hash de integridade e encerramento formal do período.
+- Notificações multicanal imediatas na abertura de períodos fiscais (e-mail, Telegram e push web) para os membros da comissão.
+
+### Modificado
+
+- As parametrizações da Comissão Fiscal foram migradas para a área oficial de Configurações da Organização (/configuracoes/comissao-fiscal), acompanhadas de textos de ajuda explicativos para prazos e quóruns.
+- A votação colegiada passou a ficar disponível imediatamente na aba de deliberação a qualquer momento enquanto o período estiver aberto.
+
+## [1.132.1] — 2026-10-23
+
+### Adicionado
+
+- Fluxo conversacional completo e flexível no bot do Telegram: possibilidade de informar ou selecionar categoria, projeto, centro de custo e dados de pagamento diretamente no chat com opções explícitas de pular qualquer etapa.
+- Reconhecimento inteligente de entidades: se o usuário já citar a categoria, projeto ou forma de pagamento na mensagem ou legenda inicial, o bot pré-preenche automaticamente sem repetir perguntas.
+- Suporte a documentos não reconhecidos inicialmente pela inteligência artificial (como planilhas ou fotos atípicas), permitindo ao usuário indicar o tipo e os valores essenciais pelo chat.
+- Ao confirmar no Telegram, o bot agora pode submeter a solicitação diretamente para a fila de aprovação da organização, preservando como rascunho com aviso explicativo apenas se houver alguma pendência bloqueante.
+
+## [1.132.0] — 2026-10-23
+
+### Adicionado
+
+- Módulo da Comissão Fiscal (/comissao-fiscal e Configurações > Comissão Fiscal): rito deliberativo e ambiente de trabalho próprio para os conselheiros fiscais da organização (#257).
+- Painel de conferência estruturado em 3 pilares de conformidade:
+  1. Comprovantes de despesa com identificação imediata de pendências (respeitando as regras de dispensa por categoria);
+  2. Inconsistências de conciliação bancária contra extratos OFX;
+  3. Conformidade orçamentária e finalidade estatutária em projetos e centros de custo.
+- Abertura de diligências: os membros fiscais podem abrir pedidos de esclarecimento com prazo diretamente para a tesouraria em lançamentos específicos, com respostas e novos comprovantes anexados no próprio sistema.
+- Votação colegiada com apuração automática de quórum (maioria simples, 2/3 ou unanimidade), modalidade de voto nominal ou anônimo, desempate e desfechos formais (aprovação, aprovação com ressalvas, reprovação ou recusa fundamentada de parecer).
+- Emissão oficial do Parecer Fiscal em PDF para apresentação em Assembleia Geral, amarrado à fotografia imutável das contas do período, com carimbo permanente de qualquer alteração extemporânea posterior.
+- Salvaguardas de governança e conflito de interesses: permissão `config.fiscal_council` atribuída ao administrador e excluída por padrão do tesoureiro e dos membros fiscais; tratamento explícito de silêncio (encerramento por decurso de prazo, sem aprovação tácita).
+
+## [1.131.2] — 2026-10-23
+
+### Modificado
+
+- No painel de Inteligência Artificial do Superadmin, a ordem de tentativa da cascata de provedores agora pode ser reordenada visualmente com botões Subir e Descer em cada cartão, eliminando a digitação manual de texto.
+- O campo de modelo de cada provedor de IA passou a ser selecionado por lista suspensa com opções curadas, indicação visual do modelo recomendado da casa e botão para restaurar o padrão com um toque, mantendo a opção de informar outro modelo manualmente.
+
+## [1.131.1] — 2026-10-23
+
+### Adicionado
+
+- Botão "Testar conexão" no painel de Inteligência Artificial do Superadmin para cada provedor configurado, medindo a latência da chamada em tempo real e apontando claramente eventuais erros de chave, saldo ou comunicação.
+- Configuração de modelo customizado por provedor de inteligência artificial cadastrado.
+
+### Modificado
+
+- A integração de Inteligência Artificial no Superadmin agora reflete o status "Ativo" assim que as chaves de API são configuradas, deixando de exibir o aviso "Em breve".
+
+## [1.131.0] — 2026-10-23
+
+### Adicionado
+
+- Envio de notas fiscais, cupons e boletos via bot do Telegram para abertura de solicitações financeiras. O bot aceita fotos e arquivos PDF de até 10 MB, extraindo valor, data, fornecedor e descrição com inteligência artificial multimodal em cascata (Gemini, Claude e OpenAI).
+- Confirmação obrigatória antes da gravação: o bot apresenta o resumo dos dados lidos com botões de confirmar ou cancelar. Ao confirmar, cria o rascunho de reembolso ou pedido de pagamento com o arquivo anexado e devolve o link de acesso no sistema web.
+
+## [1.130.2] — 2026-10-23
+
+### Corrigido
+
+- A conciliação bancária por extrato OFX agora reconhece lançamentos já quitados (receitas e despesas com status "pago") que ainda não haviam sido conciliados, casando-os automaticamente com as linhas do extrato pelo valor e pela data de pagamento. Ao confirmar, o sistema vincula a conferência sem duplicar o lançamento e sem tentar dar baixa redundante.
+- Na lista de prestações de contas geradas, uma prestação emitida no modo de período livre agora exibe o intervalo real de datas (ex.: "De 01/05/2026 a 30/06/2026") no título e no botão de baixar, em vez de mostrar "Acumulado de [ano]".
+
+## [1.130.1] — 2026-10-16
+
+### Corrigido
+
+- Na prestação de contas, lançamentos de categorias que dispensam comprovante deixam de aparecer como "sem comprovante" e passam a ser indicados por um aviso com o nome da categoria.
+
+## [1.130.0] — 2026-10-16
+
+### Adicionado
+
+- Categorias podem ser marcadas como "Dispensa comprovante" (em Configurações > Categorias, ao criar ou editar). Serve para lançamentos que não geram nota, recibo ou boleto, como tarifas bancárias e rendimentos, que só aparecem no extrato.
+- Reembolsos e pedidos de pagamento de categoria marcada podem ser enviados sem anexo.
+- Os modelos de categoria já trazem marcadas "Taxas bancárias", "Receita financeira" e "Rendimento da dotação (aplicações)".
+
+### Modificado
+
+- Na prestação de contas, transferências entre contas deixaram de ser cobradas de comprovante.
+- A tela de editar e reenviar um pedido de pagamento passou a avisar a falta de anexo antes de enviar.
+
+### Corrigido
+
+- O texto do aviso de estorno não sai mais com as frases coladas.
+
+<!-- destaque: Agora dá para marcar categorias que não exigem comprovante, como tarifas bancárias. -->
+
+## [1.129.0] — 2026-10-16
+
+### Modificado
+
+- Transferências feitas por engano agora podem ser estornadas. O estorno cria a transferência de volta, da conta de destino para a de origem, com as mesmas datas, e o saldo das duas contas volta ao que era.
+- Lançamento com data de pagamento no futuro passa a ser registrado como previsto, com vencimento nessa data, e a tela avisa antes de salvar. Quando o pagamento acontecer, é só marcar como pago. Vale para receitas, despesas, transferências, marcação como pago, pagamento de pedido e importação de planilha. "Hoje" segue o fuso horário configurado da organização.
+
+### Corrigido
+
+- A lista de movimentações não oferece mais uma ação que o sistema vai recusar, e o resumo das ações em lote diz por que cada item foi ignorado.
+- O aviso de estorno passou a dizer a data certa: o estorno usa as mesmas datas do lançamento original.
+- Trocar de organização logo depois de abrir o formulário também descarta o rascunho, e o aviso de descarte só aparece quando algo foi preenchido.
+
+## [1.128.0] — 2026-10-16
+
+### Modificado
+
+- Lançar despesa ficou mais claro. Quando o projeto não tem fonte de recursos para a despesa, aparece um aviso e o lançamento é salvo normalmente.
+- A lista de conferência do formulário agora mostra todo motivo que impede de salvar e diz o que fazer para resolver.
+
+### Corrigido
+
+- Trocar de organização com um formulário aberto descarta o rascunho e avisa. Nada preenchido numa organização aparece na outra.
+- O sistema recusa categoria, projeto ou centro de custo de outra organização, com uma mensagem clara.
+- Nas listas de pedidos e reembolsos, um cancelamento só aparece como retirado pelo solicitante quando foi ele mesmo quem cancelou.
+
+## [1.127.1] — 2026-10-15
+
+### Corrigido
+
+- Pedido de pagamento único que teve o pagamento estornado deixa de aparecer como pago e passa a constar como cancelado.
+- A tela do pedido só diz que o solicitante retirou o pedido quando foi ele mesmo quem o retirou. Nos outros casos, mostra apenas "Cancelado".
+- A confirmação de cancelamento agora concorda com a quantidade: "Será cancelada 1 ocorrência", no singular, quando for uma só.
+
+## [1.127.0] — 2026-10-15
+
+### Adicionado
+
+- Na tela do pedido de pagamento, o botão **Cancelar pedido** cancela de uma vez todas as ocorrências pendentes. Antes de confirmar, a tela mostra quantas ocorrências serão canceladas e quanto elas somam. O botão substitui o antigo "Cancelar série" e agora também vale para pedido de pagamento único.
+- Quando o pedido já tem pagamento registrado, o botão explica que é preciso estornar o pagamento primeiro.
+
+### Corrigido
+
+- Pedido de pagamento cujo pagamento foi estornado e que não tem mais nenhuma ocorrência a pagar passa a ser encerrado sozinho, em vez de continuar aparecendo como aprovado.
+
+## [1.126.5] — 2026-10-12
+
+### Corrigido
+
+- As folhas de comprovante com várias páginas na prestação de contas em PDF agora saem certas desde a montagem do documento. A correção anterior consertava o documento no fim; agora o problema deixou de ser criado.
+- O índice da prestação de contas ficou mais enxuto: saiu a frase "Este documento contém exatamente as seções listadas acima.", que repetia o que a lista logo acima já dizia. As seções e os números de página continuam os mesmos.
+
+## [1.126.4] — 2026-10-12
+
+### Corrigido
+
+- Na prestação de contas em PDF, as folhas que saíam em branco logo depois de comprovantes com várias páginas voltaram a mostrar o conteúdo: cabeçalho, comprovante e numeração das páginas. As folhas já existiam no documento, mas o leitor de PDF não conseguia exibi-las.
+
+## [1.126.3] — 2026-10-12
+
+### Corrigido
+
+- Na prestação de contas em PDF, todas as páginas dos arquivos anexados voltaram a entrar no documento.
+- No detalhe de uma receita ligada a um projeto, o bloco que mostra a origem do dinheiro passou a dizer de onde o dinheiro entrou, em vez de "quem pagou".
+- A seção Execução por Projeto da prestação de contas passou a obedecer à marcação própria dela.
+
+## [1.126.2] — 2026-10-12
+
+### Adicionado
+
+- Na tela de emissão da prestação de contas, a Execução por Projeto ganhou uma opção própria, separada da Execução por Centro de Custo. Quem desmarca centro de custo não perde mais, sem perceber, a apuração por projeto.
+
+### Corrigido
+
+- A regra que removia páginas vazias de dentro dos arquivos anexados (introduzida na 1.126.1) foi retirada, porque não resolvia as folhas em branco da prestação de contas.
+
+## [1.126.1] — 2026-10-12
+
+### Corrigido
+
+- Tentativa de eliminar as folhas em branco da prestação de contas em PDF removendo páginas vazias de dentro dos arquivos anexados. Não resolveu, e a regra foi retirada na versão seguinte.
+
+## [1.126.0] — 2026-10-12
+
+### Adicionado
+
+- Na prestação de contas em PDF, nova seção Execução por Projeto, ao lado da Execução por Centro de Custo.
+- O índice do documento passou a trazer o número da página de cada seção.
+
+### Corrigido
+
+- O documento inteiro passou a sair em A4. Antes, a maior parte das folhas saía em tamanho carta.
+- Cabeçalho com o logo da organização em todas as folhas, menos a capa.
+- Os dois gráficos do resultado do período passaram a sair lado a lado, e as três apurações (posição de caixa, centro de custo e projeto) na mesma folha.
+- O rótulo do tipo de conta (Corrente, Poupança, Cartão de crédito, Outro) passou a ser o mesmo que aparece na tela.
+- Arquivo anexado que não dá para imprimir (nota fiscal em XML, planilha) passou a ser citado junto da descrição do lançamento, em vez de ocupar uma folha própria.
+- Acabaram as folhas de capa de grupo de comprovantes, e o comprovante não invade mais o rodapé.
+- As páginas de um mesmo anexo passaram a sair todas no mesmo tamanho.
+
+## [1.125.0] — 2026-10-12
+
+### Corrigido
+
+- Na prestação de contas, o campo "Pago por" mostrava quem aprovou o pagamento, e não quem efetivamente pagou. Agora, no lançamento feito direto, aparece quem registrou o pagamento; no que veio de pedido de compra, o nome só aparece quando se sabe quem pagou, e nunca o do aprovador no lugar dele.
+
+## [1.124.2] — 2026-09-18
+
+### Alterado
+
+- Na lista de Projetos, o botão "Ordenar:" que ficava acima da tabela saiu. Agora a ordenação é feita clicando no título da coluna, com uma setinha ao lado — o mesmo jeito que já funciona na tela de Movimentações. Ordenam pelo cabeçalho: Nome, Tipo, Status, Criado em e Período; clicar de novo na mesma coluna inverte o sentido. Saúde não ordena, porque o indicador é calculado à parte.
+- A tabela de Projetos ganhou a coluna "Criado em", com a data de criação de cada projeto.
+- Tipo e Status seguem a ordem alfabética do texto em português mostrado na tela; Período ordena pela data de início do projeto. A ordem escolhida continua valendo ao compartilhar o endereço da tela, e no celular a lista em cartões segue a ordem em vigor.
+
+## [1.124.1] — 2026-09-18
+
+### Corrigido
+
+- Na solicitação de pagamento, aceitar uma sugestão de preenchimento agora limpa os dados de pagamento do fornecedor que já estivessem na tela (chave PIX, banco, agência, conta, titular e CPF do titular). Antes, o nome do fornecedor era trocado pelo da sugestão e os dados bancários de quem estava ali antes ficavam, o que podia levar a pagar a conta errada. O aviso abaixo da descrição agora diz que esses dados precisam ser informados de novo. O formulário de lançamento já se comportava assim; o de reembolso não muda.
+
+## [1.124.0] — 2026-09-18
+
+### Adicionado
+
+- Nos três formulários — lançamento, solicitação de pagamento e reembolso — digitar os primeiros 3 caracteres da descrição agora mostra registros parecidos que já foram lançados antes. No lançamento, a lista mostra registros parecidos já lançados na sua organização inteira; na solicitação de pagamento e no reembolso, ela respeita exatamente o que você já enxerga nessas telas — os seus próprios pedidos e, se você aprova, os que passam por você. No lançamento e na solicitação, a busca também encontra pelo nome de quem recebeu.
+- Escolhendo um registro da lista, o formulário vem preenchido: categoria, centro de custo, projeto, conta, forma de pagamento, nome de quem recebe, documento fiscal, etiquetas e observações. Valor e datas ficam em branco, para você preencher com o valor e a data certos desta vez.
+- Quando o registro escolhido tinha o custo repartido entre categorias ou centros de custo, a divisão é copiada com os valores zerados, e a tela avisa que falta distribuir o valor. Quando a divisão não pode ser copiada, aparece um aviso que não some sozinho.
+- Cada sugestão mostra quem recebeu, o último valor, a última data e quantas vezes aquele registro já foi lançado.
+- Dados protegidos de quem recebe o pagamento — chave PIX, banco, agência, conta e CPF — nunca são copiados pela sugestão. O nome continua sendo copiado.
+- Usar a lista de sugestões é sempre opcional: quem prefere digitar tudo continua digitando normalmente.
+
+<!-- destaque: Digitar os primeiros caracteres da descrição agora oferece registros parecidos e preenche o formulário inteiro — menos o valor. -->
+
+## [1.123.0] — 2026-09-18
+
+### Adicionado
+
+- O índice da prestação de contas passou a listar também a seção de despesas em aberto.
+
+### Corrigido
+
+- Os dados de quem recebe pagamento passaram a ser protegidos também no documento de movimentações, em PDF e em planilha — antes a proteção não alcançava esse documento.
+- Quando a proteção do favorecido está ligada e não sobra ninguém para mostrar de forma protegida, o documento deixa de ser entregue, em vez de sair sem a proteção.
+
+## [1.122.1] — 2026-09-18
+
+### Corrigido
+
+- A tela de entrada passou a explicar quando a sessão foi encerrada, em vez de mostrar um erro sem explicação.
+
+## [1.122.0] — 2026-09-18
+
+### Corrigido
+
+- A leitura de erro nas diferentes telas do sistema foi unificada: quando o servidor explica o motivo de uma recusa, esse motivo agora chega até a tela, em vez de aparecer só uma mensagem genérica de falha.
+
+## [1.121.0] — 2026-09-18
+
+### Adicionado
+
+- A seção "Pontos de atenção" voltou para a tela de Relatórios da organização, respeitando o período que você escolher ali. Ela tinha ficado restrita ao Painel, com janela fixa dos últimos 30 dias.
+- O aviso de novidades ganhou um intervalo mínimo de 7 dias entre uma aparição e outra, para não abrir a cada versão nova lançada em sequência.
+- As páginas de entrar, criar conta e conferir autenticidade de documento passaram a ter título próprio na aba do navegador, em vez de todas mostrarem o mesmo título.
+- A lista de Projetos passou a ter uma ordenação própria.
+
+## [1.120.0] — 2026-09-18
+
+### Adicionado
+
+- O envio de e-mail ganhou retentativa automática, um teto de quantos e-mails saem ao mesmo tempo, e limites configuráveis.
+
+### Corrigido
+
+- Uma falha no envio de e-mail passou a deixar rastro nos fluxos de recuperação de senha, conclusão de cadastro e troca de e-mail — antes podia falhar sem deixar sinal.
+
+## [1.119.0] — 2026-09-18
+
+### Adicionado
+
+- A prestação de contas passou a poder ser emitida por fonte de financiamento, com o total e a lista de movimentações saindo da mesma apuração.
+- Os documentos de prestação de contas ganharam uma seção "Despesas em aberto (não pagas)".
+- A tela de Relatórios passou a ser a porta de entrada para emitir a prestação de contas.
+
+### Alterado
+
+- Emitir prestação de contas passou a depender de uma permissão própria, separada da permissão de apenas visualizar relatórios. Quem só visualizava relatórios continua visualizando; a emissão agora é concedida à parte.
+
+<!-- destaque: A prestação de contas por financiador ganhou caminho próprio em Relatórios, e agora mostra também as despesas que ficaram em aberto. -->
+
+## [1.118.2] — 2026-09-14
+
+### Corrigido
+
+- Quem é aprovador de projetos passa a ver e abrir todos os projetos da organização, inclusive pelo link do e-mail de aprovação. Antes, era possível receber o pedido de aprovação sem conseguir abrir o projeto. Continua valendo só para visualizar: editar e movimentar projetos segue com as mesmas regras de antes.
+
+## [1.118.1] — 2026-09-14
+
+### Corrigido
+
+- O detalhe do lançamento voltou a mostrar a divisão do custo entre centros de custo, e a janela "Corrigir dados" já abre com essa divisão preenchida.
+- Reforçamos a proteção da rotina que grava essa divisão.
+
+## [1.118.0] — 2026-09-14
+
+### Adicionado
+
+- Um lançamento já pago agora pode ter o valor repartido entre várias categorias e o custo dividido entre centros de custo, pela correção "Corrigir dados" — com registro completo do que mudou.
+- A divisão do custo entre centros de custo passou a ser salva também na edição de lançamentos pendentes, e acompanha o estorno.
+- Na importação por planilha, a prévia diz onde cada categoria nova será criada.
+
+### Corrigido
+
+- Ao corrigir as categorias de um lançamento sem escolher a fonte manualmente, a rubrica do plano de trabalho passa a acompanhar as categorias novas.
+- A troca de categoria em lote passa a funcionar em lançamento pago que estava dividido — antes era recusada.
+- Quem é gestor só de alguns centros de custo deixou de conseguir, pela correção "Corrigir dados", mover o custo para um centro de custo que não gerencia.
+
+## [1.117.5] — 2026-09-14
+
+### Corrigido
+
+- Ao atribuir um projeto em lote, a mensagem de confirmação não anuncia mais um número antes de conferir os lançamentos — e avisa enquanto está conferindo. Quando algum lançamento não é aceito pelo projeto escolhido, a contagem final mostra só os que serão vinculados, com um único aviso de quantos ficaram de fora. Se a conferência não puder ser feita, o sistema avisa que não foi possível conferir.
+- Na importação por planilha, categorias escritas como "Grupo > Subcategoria" agora casam com as categorias que já existem, em vez de criar duplicadas — mesmo ao reimportar a própria planilha exportada pelo sistema. Nenhuma categoria nasce mais com " > " no nome: a subcategoria entra dentro do grupo certo, criando o grupo junto se ele também não existir. Quando o mesmo nome de categoria existe em mais de um grupo, a importação pergunta para qual grupo as linhas devem ir.
+- A importação de orçamento anual por planilha passou a reconhecer as categorias do mesmo jeito, sem se importar com acento ou maiúsculas.
+- Durações de vídeo de ajuda corrigidas, o vídeo do orçamento do projeto ganhou título e descrição novos, e entrou um vídeo novo explicando como dividir um lançamento entre várias categorias e centros de custo.
+
+## [1.117.4] — 2026-09-12
+
+### Corrigido
+
+- A consulta externa de resumo financeiro (usada por sistemas integrados, como o RFCC+) deixou de somar as contas de uso restrito no saldo disponível — agora mostra separado o valor disponível e o valor reservado.
+- O acesso aos comprovantes de pedidos de compra e de reembolsos passou a ser verificado de forma explícita, sem mudar quem tem acesso.
+- O aviso de categoria não permitida pelo projeto passou a ser o mesmo em todas as telas (lançamento manual, importação por planilha, conciliação de extrato e vínculo de lançamentos), explicando onde autorizar a categoria.
+
+## [1.117.3] — 2026-09-11
+
+### Corrigido
+
+- A lista de Projetos deixou de mostrar a barrinha de cor cinza ao lado do nome — ela não carregava informação nenhuma.
+- Na tela de Usuários, o campo de busca (por nome ou e-mail) deixou de ficar espremido entre os filtros de cargo e situação.
+- O cadastro de conta deixou de pedir o nome de um ícone — ninguém sabia preencher esse campo.
+
+## [1.117.2] — 2026-09-11
+
+### Adicionado
+
+- Na importação por planilha e na conciliação do extrato, agora é possível ver, antes de confirmar, em qual projeto e centro de custo cada lançamento vai entrar.
+- Na conciliação do extrato, dá para escolher o projeto de cada linha (ou "nenhum projeto") antes de confirmar. Se a categoria da linha não for aceita pelo projeto escolhido, você é avisado antes, e a linha não é criada.
+
+### Corrigido
+
+- Na planilha, um centro de custo inativo citado na importação deixou de gerar um cadastro repetido — o lançamento entra no centro de custo já existente.
+- No detalhe de uma receita ou de uma transferência, o cartão de "quem pagou este lançamento" passou a mostrar só a fonte, sem oferecer rubrica ou devolução (que só fazem sentido em despesa).
+
+## [1.117.1] — 2026-09-11
+
+### Adicionado
+
+- **Prestação de contas por fonte.** Na aba Financeiro do projeto, cada fonte de financiamento — ativa ou já encerrada — ganha o botão "Prestação de contas", com o período que você escolher. O documento é gerado em segundo plano (você recebe aviso quando estiver pronto) e fica disponível em Documentos como "Prestação de contas por fonte". Ele traz: resumo do período, os repasses recebidos, o plano de trabalho vigente com o gasto e a categoria de cada despesa em cada rubrica, o histórico completo do plano (versão original, aditivos e remanejamentos, com a justificativa e o documento de cada remanejamento), as despesas fora do plano de trabalho, as despesas ainda sem rubrica escolhida, as devoluções feitas ao financiador, os lançamentos do projeto sem fonte definida e o anexo com o "de → para" de categorias e rubricas.
+- Na lista de contas, uma conta exclusiva de um financiador agora mostra quais fontes ela atende, com atalho direto para a prestação de contas daquela fonte.
+- Um estorno passa a levar sempre a mesma fonte e a mesma rubrica do lançamento que ele desfaz.
+
+### Modificado
+
+- **Na barra de navegação do computador, o nome de cada seção deixou de ser cortado.** Quando a tela não é larga o suficiente para mostrar todas as seções por extenso, as que não cabem passam para um item "Mais", no final da barra.
+- Ajustes na janela "de qual dinheiro sai este lançamento" (fonte e rubrica): receita e transferência nunca levam rubrica; a sugestão é refeita sempre que você muda tipo, categoria, projeto, conta ou data do lançamento, e recomeça do zero ao usar "Salvar e fazer outro"; só fica marcada como escolha sua se você realmente mudar o que foi sugerido.
+- A data sugerida ao abrir os formulários de plano de trabalho e de remanejamento passa a ser a data de hoje no fuso da sua organização.
+- Na janela de plano de trabalho e de aditivo, a lista de categorias agora tem busca, e a janela passa a caber na tela mesmo com muitas rubricas ou muitas categorias, com rolagem por dentro e os botões sempre visíveis.
+- Na tela de "Lançamentos vinculados" (conciliação de extrato), a coluna Conta passou a aparecer.
+
+## [1.116.3] — 2026-09-11
+
+### Modificado
+
+- **Na barra de navegação do computador, a logo da sua organização passou para a esquerda, ao lado da logo do RIT360 Financeiro** — sem o nome escrito ao lado; passe o mouse sobre a logo para ver o nome completo, ou veja o nome curto quando a organização ainda não tem logo cadastrada. Se você participa de mais de uma organização, a logo também é o seletor para trocar entre elas.
+- Os botões de superadmin, de enviar feedback e de configurações passaram a ser ícones, posicionados antes da sua foto de perfil.
+
+## [1.116.2] — 2026-09-11
+
+<!-- destaque: A aba Financeiro do projeto mudou: agora você diz quem paga cada projeto e acompanha o plano de trabalho de cada financiador — e estourar uma rubrica não trava mais o pagamento. -->
+
+### Adicionado
+
+- **Nova pergunta na aba Financeiro do projeto: quem paga este projeto?** Cada projeto passa a ter uma lista de fontes — caixa geral da organização, receitas do próprio projeto (festa, bazar, doação) ou um financiador (edital, convênio, termo de fomento, patrocínio) — cada uma valendo por um período. Um financiador pode exigir conta bancária exclusiva para o dinheiro dele. Todo projeto existente já ganhou automaticamente a fonte correspondente à forma de financiamento que ele já tinha.
+- **Financiador ganha plano de trabalho.** Você cadastra os itens do plano com o nome que o financiador usa e o valor aprovado, e liga a eles as categorias que a sua organização já usa — o "de → para" que antes só existia na hora de montar a prestação de contas na mão. Um aditivo do financiador entra como uma nova versão aprovada, sem apagar a anterior; um remanejamento entre itens do mesmo plano pede justificativa (documento é opcional) e fica registrado com data. "Ver histórico" mostra a sequência completa: aprovado original, aditivos, remanejamentos, até o plano vigente hoje.
+- **Ao lançar ou pagar uma despesa, o sistema agora ajuda a dizer de qual fonte e de qual item do plano ela é** — perguntando só quando há dúvida real, e atribuindo sozinho quando só existe um caminho possível (por exemplo, quando a conta é exclusiva de uma fonte). Parcelas e lançamentos recorrentes herdam a escolha feita no lançamento que os originou.
+- Nas duas telas de lançamento, é possível marcar uma despesa como **devolução ao financiador**.
+- Encerrar uma fonte (quando o convênio termina) é simples: você só registra a data. Tudo o que já foi pago com aquele dinheiro continua visível e identificado como daquela fonte, para sempre.
+
+### Modificado
+
+- **Pagamento acima do valor aprovado de um item do plano não trava mais.** O pagamento acontece normalmente, com um aviso de que o valor passou do aprovado e pode ser questionado (glosado) pelo financiador na prestação de contas — sem impedir nada e sem virar pendência.
+- **Despesa numa categoria que não está em nenhum item do plano também não é mais recusada.** Ela é paga normalmente e fica marcada "fora do plano de trabalho", com um atalho para incluir a categoria num item, se for o caso.
+- Saiu da aba Financeiro o bloco antigo de "decomposição por categoria" e o interruptor "controlar gastos por fonte de recurso" — vocabulário confuso que quase ninguém usava. O total previsto do projeto continua editável, do mesmo jeito.
+- Projeto sem financiador continua simples: mostra só a lista de fontes e o total previsto/gasto/sobra, com uma frase explicando que o plano de trabalho aparece quando você acrescentar um financiador.
+
+## [1.115.0] — 2026-09-10
+
+### Adicionado
+
+- **Treze vídeos novos de ajuda entraram no sistema, e o botão de vídeo passou a existir em mais telas: criar e editar projeto, lições aprendidas, meu perfil, dados da organização e página pública.**
+- **No detalhe do projeto, os vídeos oferecidos mudam conforme a aba que você está vendo.**
+
+## [1.114.0] — 2026-09-10
+
+<!-- destaque: Mudar as categorias permitidas de um projeto agora vale na hora, sem esperar aprovação. -->
+
+### Modificado
+
+- **Mudar as categorias permitidas de um projeto agora vale na hora — sem esperar aprovação.** Tipo, datas e número de participantes continuam passando por aprovação, e a mensagem de salvar diz claramente o que já valeu e o que foi enviado.
+- Propostas antigas que só mudavam categorias aparecem como desnecessárias, com um botão para descartar.
+
+## [1.113.0] — 2026-09-10
+
+### Adicionado
+
+- **A mensagem de categoria não permitida agora leva direto para onde a lista de categorias do projeto é ajustada** — e, para quem não pode ajustá-la, diz a quem pedir.
+- Editar a identidade do projeto passou a ser possível de qualquer aba.
+
+### Modificado
+
+- A lista de categorias permitidas agora mostra sempre quantas estão marcadas, avisa quando você deixa vazio (todas passam a ser aceitas) e não deixa mais você achar que limpou tudo tendo limpado só parte.
+
+## [1.112.1] — 2026-09-10
+
+### Modificado
+
+- Melhoria interna de manutenção: as rotinas automáticas do sistema passaram a seguir um padrão único, o que reduz a chance de defeito ao criar rotinas novas. Nada muda no uso do sistema.
+
+## [1.112.0] — 2026-09-10
+
+### Corrigido
+
+- **Documento que ficava travado em "em preparo" para sempre agora é liberado sozinho.** Passada meia hora sem terminar, ele aparece como falho e a pessoa pode pedir o documento de novo — pelo mesmo caminho que os documentos falhos já oferecem. O motivo registrado diz que o preparo não terminou a tempo, diferente de uma falha de conteúdo.
+
+## [1.111.1] — 2026-09-10
+
+### Corrigido
+
+- **Os avisos de orçamento passaram a ficar registrados junto da linha do orçamento que os originou** — antes, o registro apontava para um identificador que não existia.
+- **A duração mostrada em cada vídeo de ajuda passou a ser a real**, medida no próprio arquivo — dez deles traziam uma estimativa.
+
+## [1.111.0] — 2026-09-10
+
+<!-- destaque: Os vídeos de ajuda dobraram: agora são vinte, e telas com mais de um vídeo deixam você escolher qual assistir. -->
+
+### Adicionado
+
+- **Os vídeos de ajuda passaram de dez para vinte.** Ganharam botão as telas de: lista de Movimentações, Importar lançamentos, detalhe do lançamento, Fluxo de Aprovações, pedidos de compra e pagamento, Orçamento e Documentos.
+- **Cada vídeo agora mostra quanto tempo dura, ao lado do título.**
+- **Quando uma tela tem mais de um vídeo, o botão abre uma lista para escolher** — com título, duração e uma frase sobre cada um. Dá para voltar à lista sem fechar a janela, e a dica do mouse avisa quantos vídeos existem.
+- Cada tela continua com um único botão de vídeo, no canto direito do cabeçalho.
+
+## [1.110.1] — 2026-09-10
+
+### Corrigido
+
+- **O botão de vídeo passou a ficar sempre no mesmo lugar: o último item à direita do cabeçalho, em todas as telas, inclusive no celular.** Antes ele caía em posições diferentes conforme a quantidade de botões de cada tela — agora fica sempre à mesma distância da borda. Ficou também um pouco maior e ganhou um respiro em relação ao botão vizinho, para se diferenciar das ações da tela.
+
+### Modificado
+
+- **A ação de desmarcar itens selecionados passou a se chamar "Desmarcar todas" em todo o sistema** — antes tinha três nomes diferentes em telas diferentes.
+
+## [1.110.0] — 2026-09-10
+
+<!-- destaque: As telas principais agora têm um botão de vídeo no cabeçalho: um tutorial curto de menos de um minuto, sem sair de onde você está. -->
+
+### Adicionado
+
+- **As telas principais ganharam um botão de vídeo no cabeçalho** — Painel, Contas bancárias, Categorias e centros de custo, Usuários, Cargos e permissões, Novo lançamento, Conciliação por extrato, Projetos, o detalhe do projeto (aba Financeiro), Relatórios e Reembolsos. Clicar abre um tutorial curto numa janela sobre a tela atual, sem perder o que já estava preenchido.
+- **Os vídeos não têm áudio** — a explicação vem em legendas na própria imagem, e a janela avisa isso antes de tocar.
+- O vídeo só é baixado quando você manda tocar; antes disso aparece a imagem de capa.
+- Se o vídeo não carregar, a janela explica o que houve e oferece "Tentar de novo", em vez de mostrar uma tela preta.
+
+## [1.109.1] — 2026-09-10
+
+### Corrigido
+
+- **Voltou a funcionar a definição da conta padrão da organização.** Marcar, trocar e desmarcar a conta padrão agora gravam de verdade, e só uma conta fica como padrão por vez. Voltaram a valer também: a marcação de conta que compõe o saldo disponível, a proteção do saldo inicial de contas que já têm lançamentos, e a exigência de permissão financeira para cadastrar contas. Se algo impedir o salvamento de uma conta, a tela agora avisa em vez de dizer que deu certo.
+
+## [1.109.0] — 2026-09-10
+
+<!-- destaque: No celular, contas bancárias e centros de custo agora aparecem em cartões: dá para selecionar vários e usar todas as ações sem sair da tela. -->
+
+### Modificado
+
+- **No celular, as telas de contas bancárias e de centros de custo deixaram de ser tabelas cortadas e passaram a aparecer como cartões, um por registro.** Dá para selecionar vários, usar as ações em lote e chegar a todas as ações de cada registro sem sair da tela. Em tela larga nada muda.
+
+Também nesta versão: limpeza interna de código que sobrou da entrega anterior, sem efeito visível.
+
+## [1.108.0] — 2026-09-10
+
+### Corrigido
+
+- **O comprovante anexado a um reembolso ou a um pedido de pagamento passou a abrir só para quem pode ver esse reembolso ou pedido** — quem pediu, quem aprova, quem tem permissão de ver reembolsos ou pedidos, e o superadministrador. Antes, qualquer pessoa da organização conseguia abrir o arquivo mesmo sem essa permissão, desde que conhecesse o endereço dele. Quem não pode abrir continua vendo que o anexo existe; ao tentar abrir, recebe uma frase explicando o motivo — nunca imagem quebrada nem erro técnico. Vale nas telas de lançamento, reembolso e pedido, e nos três jeitos de abrir o arquivo (baixar, ver imagem, ver PDF). Comprovante de lançamento comum, que não veio de reembolso nem de pedido, continua visível a toda a organização, como sempre foi.
+- **A recusa por "categoria não permitida pelo projeto" ganhou um atalho para o lugar onde se resolve** — direto para a aba de categorias permitidas do projeto —, nos pontos em que a mensagem fica na tela esperando uma ação. Onde ela aparece como aviso passageiro, o atalho não entra: ele levaria a pessoa embora e descartaria o que ela já tinha selecionado ou preenchido, então ali continua só o texto.
+
+Também nesta versão, duas correções sem efeito visível: a recusa por justificativa curta ao mudar a identidade de um projeto passou a usar o mesmo código de erro das outras recusas da mesma família; e a consulta que alimenta a tela de avisos que não saíram deixou de poder ser executada por quem não está autenticado (ela já negava os dados a esse visitante — a mudança fecha uma permissão mais larga do que precisava ser).
+
+## [1.107.0] — 2026-09-10
+
+### Adicionado
+
+- **Nova tela para superadministrador, "Avisos que não saíram"**, com filtro dos últimos 7, 30 ou 90 dias. O destinatário aparece sempre mascarado, e a tela distingue três situações: nenhuma falha no período, nenhuma falha desde sempre, e consulta que não respondeu — esta última nunca confundida com "está tudo certo".
+
+### Corrigido
+
+- **Falha ao enviar um aviso do sistema — uma notificação ou um e-mail — passa a ficar registrada de uma forma só**, em vez de cada rotina anotar do seu próprio jeito.
+- **Os pedidos de exportação e de anonimização dos próprios dados deixaram de perder a falha do aviso ao titular.** O pedido continua marcado como concluído — o trabalho de fato terminou, e em anonimização é irreversível —, mas a falha do aviso agora fica visível para ser resolvida.
+
+Também nesta versão: a falha ao acionar a sincronização com a loja virtual passou a ser registrada do mesmo jeito, mas de propósito não entra na lista de avisos que não saíram — ela não é um aviso a ninguém, e contá-la faria o total mentir.
+
+## [1.106.0] — 2026-09-10
+
+### Corrigido
+
+- **Corrigir um lançamento já pago passou a recusar a troca de projeto quando alguma categoria do lançamento não está entre as permitidas pelo projeto de destino**, com a mesma frase citando o nome da categoria.
+
+### Adicionado
+
+- **Toda mudança de identidade do projeto (nome, descrição, tipo, datas, categorias permitidas, público esperado) passou a exigir motivo com pelo menos 10 caracteres** — ao editar, ao propor mudança em projeto já aprovado, ao aprovar e ao recusar. E quem aprova vê o motivo informado dentro do próprio aviso de mudança pendente, antes de decidir.
+- **O formulário de novo projeto passou a guardar rascunho no aparelho**, inclusive o passo em que a pessoa parou. Ao voltar, aparece o aviso de recuperação com opção de descartar. O rascunho é apagado quando o projeto é criado ou quando a pessoa descarta.
+
+## [1.105.0] — 2026-09-09
+
+### Adicionado
+
+- **A janela de vincular lançamentos a um projeto ficou utilizável**: filtro por conta bancária, contagem de quantos lançamentos podem e quantos não podem ser vinculados, alternância para ver os que não podem (com as caixas desabilitadas), e o motivo escrito em cada linha em vez de escondido numa dica de mouse.
+- **Quando o projeto só aceita certas categorias e nenhum lançamento da lista está nelas, a tela explica isso e diz o caminho para autorizar a categoria.**
+- **Na tela de categorias permitidas do projeto, um contador mostra quantas categorias estão selecionadas.**
+
+### Corrigido
+
+- **A recusa por "categoria não permitida pelo projeto" passou a ser uma frase única, citando o nome da categoria, nos oito pontos do sistema onde ela pode aparecer** — antes variava de lugar para lugar, e em alguns mostrava um identificador interno em vez do nome.
+
+## [1.104.1] — 2026-09-09
+
+### Corrigido
+
+- Pequenos ajustes de texto e de estado de tela nas telas de atribuição de projeto em lote e de conta bancária, introduzidas na versão anterior.
+
+## [1.104.0] — 2026-09-09
+
+<!-- destaque: Agora dá para atribuir um projeto a vários lançamentos de uma vez, e cada conta pode já vir com projeto e centro de custo preenchidos. -->
+
+### Adicionado
+
+- **Atribuir projeto a vários lançamentos de uma vez, pela lista de Movimentações.** Antes de aplicar, a lista de tudo o que será alterado aparece para conferência, e a mudança exige uma justificativa.
+- **Cada conta bancária pode ter um projeto e um centro de custo padrão.** Ao lançar por essa conta, esses campos já vêm preenchidos — é um padrão, não uma trava: a pessoa pode trocar como quiser.
+- **Aviso quando o projeto escolhido para um lançamento está encerrado.**
+
+### Corrigido
+
+- **A conciliação por arquivo do banco passou a registrar como a conferência foi feita.** Antes esse registro ficava vazio, e a tela não deixava isso visível.
+
+## [1.103.1] — 2026-09-09
+
+### Corrigido
+
+- **Corrigida a largura de janelas do sistema** (como a de vincular lançamentos) que às vezes deixavam campo de busca, lista ou botão de confirmar cortados na lateral. A correção foi feita na peça usada por todas as janelas do produto, então vale em qualquer uma delas — não só na que apresentou o problema.
+
+## [1.103.0] — 2026-09-09
+
+### Corrigido
+
+- **A tela de categorias permitidas do projeto voltava a salvar.** Em alguns projetos, a lista de categorias permitidas guardava categorias que já haviam sido apagadas — elas não apareciam na tela, então não havia como desmarcá-las, e a tela nunca conseguia salvar. Essas categorias já removidas foram limpas dos projetos afetados, e apagar uma categoria agora já limpa automaticamente qualquer projeto que ainda a referenciasse — para o problema não voltar a acontecer.
+- **A mensagem de recusa passa a dizer qual categoria é o problema**, e por quê: se ela não existe mais, ou se pertence a outra organização — em vez da mensagem genérica anterior, que não dizia qual das categorias selecionadas era a culpada.
+
+### Adicionado
+
+- **Marcar todas e desmarcar todas**, na escolha de categorias permitidas do projeto. Com uma busca ativa, os botões passam a se chamar "Marcar todas as encontradas" e "Desmarcar as encontradas", deixando claro que valem só sobre o que a busca está mostrando.
+
+Também nesta versão: quando você é a única pessoa habilitada a aprovar projetos e aprova sua própria proposta, essa aprovação passa a ficar registrada no histórico de auditoria, do mesmo jeito que já acontece com reembolso e pedido de pagamento.
+
+## [1.102.1] — 2026-09-09
+
+### Corrigido
+
+- Pequenos ajustes internos de manutenção — na conciliação de extrato e no registro de avisos que não encontram ninguém para notificar —, sem efeito perceptível no dia a dia (#315, #316).
+- No painel do administrador da plataforma, o indicador de e-mails entregues pelo provedor reserva passa a mostrar também, separadamente, quantos e-mails não chegaram a ninguém (#309).
+
+## [1.102.0] — 2026-09-09
+
+### Adicionado
+
+- **Quando você é a única pessoa habilitada a aprovar projetos na sua organização, agora pode aprovar os próprios projetos** — na abertura, no encerramento e nas mudanças de identidade do projeto. Havendo outra pessoa habilitada a aprovar, a separação entre quem propõe e quem aprova continua valendo como antes. O ajuste "Permitir auto-aprovação", em Configurações → Aprovações, continua existindo e agora serve só para permitir a auto-aprovação mesmo havendo outros aprovadores.
+- **A tela do projeto aguardando aprovação passa a mostrar quem pode aprovar.** Se for você, a tela também aponta a ação.
+- **Quando não há ninguém que possa aprovar um projeto, a tela deixa de parecer uma espera comum** e leva direto a Configurações → Aprovações para resolver.
+- **Um aviso aparece ao enviar um projeto para aprovação, quando você é a única pessoa habilitada a aprovar** — para não ficar esperando uma conferência que só você mesmo pode fazer.
+
+### Corrigido
+
+- **Um pedido de aviso sem ninguém para notificar deixou de ser tratado como envio concluído com sucesso** — passa a ficar registrado como algo a resolver.
+
+## [1.101.1] — 2026-09-08
+
+### Corrigido
+
+- **Corrigida uma permissão da efetivação de transferência pela conciliação de extrato**, que aceitava também quem só tinha a permissão de pagar reembolso — uma permissão sem relação com transferência. Nenhum cargo configurado usava essa combinação, então não houve efeito para nenhuma organização.
+
+## [1.101.0] — 2026-09-08
+
+<!-- destaque: Transferência entre contas agora tem caminho próprio na conciliação de extrato. -->
+
+### Adicionado
+
+- **A conciliação de extrato bancário passa a reconhecer transferência entre contas da própria organização.** Antes, uma linha do extrato sem lançamento correspondente só podia virar receita, despesa, ou ser ignorada — o que inflava a receita ou a despesa quando o dinheiro só havia mudado de conta. Agora, no grupo "Novos", a linha pode ser marcada como transferência: no lugar da categoria, escolhe-se a conta do outro lado, e a origem e o destino são decididos pelo sinal do valor. O lançamento nasce só um, já efetivado na data da linha e já conferido, sem categoria e sem data de pagamento — e a linha do extrato fica marcada como resolvida, sem duplicar se o mesmo arquivo for importado de novo.
+- **Transferência já lançada no sistema passa a casar com a linha do extrato**, seja pela conta de origem ou pela conta de destino. Se a transferência ainda não tinha data efetiva, confirmar o casamento a efetiva na data da linha; se já estava efetivada e só faltava a conferência, o casamento apenas registra a conferência, sem alterar data nem contas. Transferência que já estava conferida aparece entre os "Já conciliados", explicando a que ela corresponde e qual é a conta do outro lado.
+- **Uma conferência já é suficiente para as duas contas envolvidas.** Conciliar pelo extrato de qualquer um dos dois lados de uma transferência deixa o lançamento conferido por inteiro — não é preciso repetir a conferência na outra conta.
+
+### Modificado
+
+- **Centro de custo, quando informado, passa a valer também para transferência**, inclusive na aplicação em lote do grupo "Novos" da conciliação.
+
+## [1.100.0] — 2026-09-05
+
+### Corrigido
+
+- **Qualquer pessoa com vínculo ativo na organização agora consegue criar um projeto.** Antes, quem não tinha um cargo específico preenchia o assistente inteiro e só descobria a recusa no fim, perdendo tudo o que havia digitado. Quem cria continua virando coordenador daquele projeto na hora.
+- **Quem não pode criar um projeto agora descobre isso ao chegar na tela**, com o motivo explicado — em vez de percorrer os três passos do assistente para ser recusado só no final.
+- **Se a criação falhar por outro motivo, nada do que foi preenchido se perde.** A mensagem de erro fica visível até você agir, e o formulário continua com os dados digitados.
+- **Abrir a edição de um projeto arquivado ou encerrado por um link salvo ou pelo histórico do navegador agora explica o motivo** e oferece o caminho para reabrir o projeto, em vez de não mostrar nada.
+
+### Modificado
+
+- **O botão de criar projeto passou a se chamar "Criar projeto"** (era "Criar como rascunho"), com uma frase explicando que o projeto nasce em planejamento e pode ser ajustado antes de ir para aprovação. A palavra "rascunho" saiu da interface de projetos.
+
+---
+
+## [1.99.0] — 2026-09-02
+
+### Modificado
+
+- **Nas telas de Contas Bancárias, Categorias e Centros de Custo, as ações de cada linha (editar, ativar/desativar, excluir e, em contas, definir/remover conta padrão) passaram a ser ícones com dica ao passar o mouse**, no lugar de botões com texto — antes, com quatro botões lado a lado, o texto aparecia cortado.
+- **O botão de excluir passou a aparecer em vermelho suave**, para se distinguir das demais ações antes do clique — também em Movimentações, que tinha o mesmo problema.
+- Em celular, os ícones ganharam área de toque maior. As setas de reordenar categorias foram igualadas em tamanho às novas ações.
+
+## [1.98.1] — 2026-09-01
+
+### Corrigido
+
+- **Na prestação de contas, o cargo ao lado do nome do aprovador foi removido.** Quando a pessoa tinha mais de um cargo, aparecia o de menor alcance, o que fazia o documento sugerir que um voluntário havia aprovado um pagamento.
+
+## [1.98.0] — 2026-09-01
+
+### Adicionado
+
+- **Na tela de Documentos, agora é possível excluir o arquivo de um documento** — por linha ou em lote, pela seleção que já existia. A confirmação em lote diz quantos serão apagados, e o resultado mostra item a item o que foi apagado, recusado ou falhou. O registro do documento continua guardado; o que sai é o arquivo.
+
+### Modificado
+
+- **Na conciliação por extrato, a categoria e o centro de custo escolhidos passaram a aparecer por inteiro, sem corte, no computador e no celular.**
+
+### Corrigido
+
+- **Na conciliação por extrato, falha ao consultar categorias ou centros de custo passou a avisar que a consulta falhou**, em vez de dizer que a escolha da pessoa era inválida.
+
+## [1.97.1] — 2026-09-01
+
+### Corrigido
+
+- **A tela de Documentos deixou de listar documentos cujo arquivo não existe mais.** Eles ocupavam a lista sem servir para nada — não abriam, não diziam quando nem por que o arquivo saiu. O registro continua guardado, e a tela de Prestações de Contas segue mostrando quando o arquivo foi removido e por quem.
+
+## [1.97.0] — 2026-09-01
+
+### Corrigido
+
+- **Na prestação de contas, os pagamentos originados de reembolso voltaram a mostrar quem autorizou** — todos os aprovadores, com decisão e data — além do solicitante e do destinatário corretos.
+- **Cada pagamento passou a ocupar bem menos espaço no documento.**
+
+## [1.96.0] — 2026-09-01
+
+### Adicionado
+
+- **Em Pedidos de compra e pagamento, agora é possível selecionar vários pedidos aprovados e marcá-los como pagos de uma vez**, informando conta e data uma única vez.
+- **Se um pedido falhar, os já pagos permanecem pagos** e o resultado aparece item a item.
+
+## [1.95.0] — 2026-09-01
+
+<!-- destaque: Ao conciliar o extrato do banco, agora você escolhe também o centro de custo — de uma linha ou de todas de uma vez. -->
+
+### Adicionado
+
+- **Na conciliação de extrato, a linha marcada para criar lançamento agora oferece centro de custo ao lado da categoria.**
+- **Um aplicador define o mesmo centro de custo para todas as linhas marcadas para criar de uma vez.**
+
+## [1.94.1] — 2026-09-01
+
+### Corrigido
+
+- **A prestação de contas e os extratos do relatório voltaram a funcionar.**
+- **A exclusão em lote e a troca de categoria em lote (usada pela edição de série recorrente) voltaram a funcionar.**
+
+## [1.94.0] — 2026-09-01
+
+### Adicionado
+
+- **Exclusão em lote de categorias, centros de custo e contas**, com seleção múltipla.
+- **Agora é possível excluir contas** — antes não era possível.
+
+## [1.93.0] — 2026-09-01
+
+### Adicionado
+
+- **Atribuição em lote de categoria e de centro de custo.** Na lista de Movimentações, selecione vários lançamentos e defina a mesma categoria — ou o mesmo centro de custo — para todos de uma vez, em vez de abrir um por um.
+
+### Corrigido
+
+- **O saldo do relatório passou a respeitar a conta escolhida.** Ao filtrar por uma conta, o cartão de saldo mostrava o consolidado de todas.
+
+## [1.92.0] — 2026-09-01
+
+### Modificado
+
+- **Na conciliação por extrato, a lista de categorias passou a aparecer organizada por grupo e a mostrar só as ativas.**
+
+### Corrigido
+
+- **Linha do extrato sem decisão deixou de ser pré-marcada como ignorada.** Quem não decide fica pendente e reaparece na próxima importação, em vez de ser descartada em silêncio.
+
+## [1.91.0] — 2026-09-01
+
+### Adicionado
+
+- **A organização ganhou um campo de nome curto/sigla nas configurações**, e é ele que passa a identificar a OSC no seletor do cabeçalho. Documentos continuam usando o nome completo.
+
+## [1.90.1] — 2026-09-01
+
+<!-- destaque: Agora dá para dividir o custo de um lançamento entre vários centros de custo, sem lançar duas vezes. -->
+
+### Adicionado
+
+- **Agora é possível dividir o custo de um lançamento entre vários centros de custo.** A responsabilidade continua com um único centro — quem aprova, paga e gerencia não muda.
+- **Orçamento anual (tela, fechamento e histórico), relatórios filtrados por centro de custo, extratos e prestação de contas passam a considerar a parte de cada centro.**
+- **A lista de movimentações mostra a marca "Custo dividido"** e, quando há filtro por centro, a parte daquele centro ao lado do valor cheio.
+- **Em Pontos de Atenção, o lançamento dividido aparece com o valor inteiro, marcado como dividido** — ali o que se avalia é a transação. Lançamento sem divisão continua exatamente como antes.
+
+## [1.89.0] — 2026-09-01
+
+### Corrigido
+
+- **Agora é possível desativar contas, categorias e centros de custo que já têm histórico.** Nada é apagado; os lançamentos existentes continuam como estão.
+- **Antes de confirmar, o aviso informa quantos lançamentos estão vinculados e, no caso de conta, quantos ainda estão pendentes.** Enquanto a contagem carrega, isso é dito; se falhar, também — nunca aparece "0" inventado.
+- **Lançamentos pendentes numa conta desativada continuam podendo ser pagos nela, inclusive na baixa em lote.** Apontar outra conta inativa recusa o item com o motivo à vista.
+- **Os filtros das listas passam a oferecer contas, categorias e centros de custo inativos que têm histórico, marcados como inativos.** O formulário de lançamento novo e as importações continuam oferecendo apenas ativos.
+- **Mensagens de erro do servidor passam a chegar à tela com o motivo real em 16 pontos do sistema.**
+
+A regra que impede desativar uma categoria com subcategorias ativas continua valendo — é hierarquia, não histórico.
+
+## [1.88.0] — 2026-09-01
+
+### Adicionado
+
+- **Reembolso aprovado agora pode ser marcado como pago direto na tela do reembolso**, por quem tem permissão de pagar reembolso.
+
+### Corrigido
+
+- **Na lista de Pedidos de pagamento, o botão de pagar passou a funcionar para pedidos aprovados.**
+- **Quando um pagamento em lote é recusado, a mensagem agora diz se faltou permissão ou se a categoria não está prevista no orçamento do projeto.**
+
+## [1.87.1] — 2026-09-01
+
+### Corrigido
+
+- **A opção de proteger o nome dos favorecidos passou a valer para o documento inteiro**, em todas as seções e também na planilha. Quem pediu, aprovou e pagou continua identificado.
+
+## [1.87.0] — 2026-09-01
+
+<!-- destaque: A prestação de contas agora mostra quem autorizou cada pagamento, e você escolhe o que entra no documento. -->
+
+### Adicionado
+
+- **Prestação de contas agora mostra quem pediu, quem aprovou e quem pagou cada pagamento do período.**
+- **Você escolhe quais seções entram no documento.**
+- **Novo recorte por projeto ou por centro de custo.**
+- **Novo período com datas livres**, além de mês e acumulado.
+- **Nova saída em planilha**, além do PDF — a planilha é editável e, por isso, não leva selo de autenticidade.
+
+## [1.86.1] — 2026-09-01
+
+### Corrigido
+
+- **Os links dos avisos (Painel e Pontos de atenção) agora abrem as movimentações já no período que gerou o alerta**, e não mais no período padrão da tela.
+- **Quando parte dos filtros de um link não pode ser aplicada, o aviso passa a ficar visível junto dos filtros até você dispensá-lo**, em vez de sumir sozinho.
+- **O nome da categoria filtrada por link agora mostra o caminho completo**, igual ao do seletor.
+
+## [1.86.0] — 2026-09-01
+
+### Adicionado
+
+- **Links de aviso agora abrem a lista de Movimentações já filtrada pela categoria, fornecedor ou período do aviso**, e existe um novo filtro por fornecedor na tela.
+
+### Corrigido
+
+- **O texto de ajuda dos anexos do formulário de feedback passou a listar os formatos realmente aceitos** (imagens, PDF, XML, ZIP, CSV, documentos do Office e do LibreOffice) e a avisar que SVG não é aceito.
+
+## [1.85.1] — 2026-09-01
+
+### Corrigido
+
+- **O nome de quem recebe passou a aparecer em todos os lançamentos vindos de reembolso.** Na versão anterior ele não aparecia em nenhum: o tipo de origem do lançamento era decidido em dois lugares, com regras diferentes, e o nome acabava descartado.
+- **O selo do orçamento anual agora diz "Vigente" ou "Anterior"**, em vez de mostrar o nome técnico da versão.
+
+## [1.85.0] — 2026-09-01
+
+<!-- destaque: Os dados bancários do reembolso agora vêm do seu perfil — confira os seus em Meu perfil. -->
+
+### Modificado
+
+- **O reembolso agora sempre paga quem pediu.** Os dados bancários (PIX ou dados de TED) deixaram de ser digitados no formulário de reembolso e passam a vir do seu perfil. Quem ainda não tem dados cadastrados preenche uma vez ali, e eles passam a valer também para os próximos reembolsos; para alterar depois, é em **Meu perfil**.
+- **O nome de quem recebe passou a aparecer no reembolso, no pedido de pagamento e no lançamento gerado**, inclusive quando o pagamento é por PIX.
+- **Pagar uma pessoa diferente de quem fez a despesa deixou de ser reembolso** — isso agora é pedido de compra e pagamento.
+
+## [1.84.0] — 2026-09-01
+
+### Corrigido
+
+- **A tela de Cargos e Permissões passou a mostrar duas permissões que já existiam e não apareciam ali**: "Aprovar orçamento anual" e "Gerir integrações e credenciais de API". Quem já tinha essas permissões concedidas não percebe diferença; agora dá para ver e ajustar quem tem cada uma.
+- Pequenos ajustes de texto na mesma tela: a permissão de orçamento ganhou grupo próprio, dois rótulos foram atualizados, e duas permissões que apareciam travadas no Presidente (mas nunca estiveram) deixaram de aparecer assim.
+
+## [1.83.1] — 2026-09-01
+
+### Corrigido
+
+- **Três telas passaram a dizer a coisa certa para quem não tem permissão de ver saldo**, em vez de sugerir que algo deu errado ou que não há dados: a aba Situação, o cartão do mês e a tela de contas agora distinguem "não tenho permissão" de "não há informação".
+- **O assistente de criação de conta passou a mostrar o nome comum do cargo** (ex.: "Gestor de centro de custo") em vez do nome técnico (`gestor_centro_custo`).
+- Pequenos ajustes de anexo: SVG deixou de ser aceito nos dois pontos de upload; HEIF, TIFF e ZIP do Windows passaram a ser aceitos também no download por link.
+
+## [1.83.0] — 2026-09-01
+
+### Adicionado
+
+- **Ver o saldo das contas agora é uma permissão**, atribuível por cargo em "Contas financeiras", nas telas de Cargos e Permissões. Pode ser desmarcada em qualquer cargo, inclusive Presidente. Quem administra uma organização nova já encontra essa permissão concedida a Presidente, Tesoureiro, Diretor e Comissão Fiscal. Ninguém que já usava o sistema perdeu acesso com esta mudança.
+- **As cinco telas que mostram saldo passaram a avisar quando falta essa permissão**, em vez de simplesmente não mostrar o número, e continuam úteis sem ele.
+
+### Modificado
+
+- **Conta de cartão de crédito deixou de contar no saldo disponível.**
+- **Os anexos de feedback passaram a aceitar mais formatos**: .docx, HEIC, GIF, ODT, ODS, PPTX, ODP, XML e ZIP.
+
+## [1.82.1] — 2026-08-30
+
+### Modificado
+
+- **A tela inicial agora se chama Saúde 360** (era "Painel" no menu), e as três abas dentro dela passaram a se chamar **Painel**, **Situação** e **Projeção** — cada uma nomeando o que entrega, com a mesma frase de apoio de antes: o que urge hoje, como estamos, para onde vamos.
+- **Atenção:** a aba que a versão anterior anunciou como "Saúde 360" agora se chama **"Situação"**. O nome Saúde 360 passou a ser o da tela inteira, porque descreve o conjunto das três perguntas e não apenas uma delas. Quem procurar a aba "Saúde 360" a encontra agora como "Situação".
+- Nada mudou no conteúdo: mesmos blocos, mesmos números, mesmos filtros, mesmo acesso. Endereços salvos continuam funcionando.
+
+## [1.82.0] — 2026-08-30
+
+### Adicionado
+
+- **Reembolso aprovado agora pode ser marcado como pago direto na tela de reembolsos**, na linha e em lote — antes era preciso ir até Movimentações e achar o lançamento correspondente. A ação pede data do pagamento e conta, como no fluxo de pedidos de pagamento, e aparece para quem tem permissão de pagar reembolso.
+- **Pagar vários reembolsos de uma vez mostra o resultado item a item**: o que foi pago, o que foi recusado por regra, o que ficou retido por rubrica orçamentária e o que falhou — sem esconder falha parcial atrás de um "pronto" genérico.
+
+### Segurança
+
+- **Marcar como pago o lançamento de um reembolso que ainda não foi aprovado deixou de transformá-lo em pago.** O pagamento não pula mais a etapa de aprovação.
+
+## [1.81.0] — 2026-08-30
+
+<!-- destaque: A tela inicial agora tem três abas — Painel, Saúde 360 e Previsão —, existe uma área de Documentos com tudo o que você já gerou, e o resultado do mês passou a contar só o que aconteceu de fato. -->
+
+### Modificado
+
+- **Relatórios deixou de ter abas** e virou uma página única, de cima a baixo — resultado do período, evolução do saldo, saldo por conta e receitas e despesas por categoria —, tudo obedecendo aos filtros e ao período escolhidos.
+- **Receitas e despesas, antes em abas separadas, agora aparecem lado a lado**: dá para comparar entrada e saída sem trocar de tela.
+- **A aba Atenção saiu dos Relatórios**: os pontos de atenção continuam no Painel, onde já eram mostrados. O "Ver todos" dos avisos do Painel agora abre a lista inteira ali mesmo, sem levar para outra tela.
+- **A Previsão virou a terceira aba da tela inicial**, ao lado do Painel e da Saúde 360, com todos os filtros que ela já tinha — inclusive o recorte por projeto. A tela inicial passa a responder três perguntas: o que urge hoje, como estamos, e para onde vamos.
+- **A prestação de contas ganhou botão próprio** na tela de Movimentações, em vez de ficar escondida dentro do menu "Exportar" como se fosse mais um formato de arquivo. Ao lado dele, um atalho para as prestações já geradas.
+
+## [1.80.1] — 2026-08-30
+
+### Corrigido
+
+- **O resumo do mês passa a mostrar separadamente o que venceu e não foi pago e o que venceu e não foi recebido.** Antes os dois viravam um número só, que somava coisas opostas.
+
+## [1.80.0] — 2026-08-30
+
+### Adicionado
+
+- **Nova aba "Saúde 360"** na tela inicial, ao lado do Painel: o Painel mostra o que urge hoje, a Saúde 360 mostra como a organização está.
+- **Quatro respostas na Saúde 360**: quanto do dinheiro está livre para usar (separado do que está carimbado para projeto ou destinação), quanto já está comprometido e ainda não saiu, por quanto tempo o caixa aguenta, e quais projetos estão fora do ritmo — inclusive os que estão sobrando prazo e dinheiro, não só os que gastam demais.
+
+### Modificado
+
+- **O resultado do mês no Painel passa a contar só o que aconteceu de fato** (o que foi pago e recebido), em vez de somar também o que estava pendente ou atrasado pelo vencimento. Com conta do mês em aberto, a despesa do mês cai e o resultado sobe; com receita prevista ainda não recebida, a receita cai e o resultado desce. O que venceu e não foi pago não some da tela: aparece à parte, abaixo do resultado.
+- **O saldo por conta deixa de incluir pagamentos marcados para uma data futura** — no Painel, em Movimentações, no formulário de novo lançamento e em Configurações › Contas. Os quatro passam a mostrar o mesmo saldo que a tela de Relatórios mostra para hoje.
+- **A previsão de caixa passa a se comportar igual em todos os lugares**: quando não há histórico suficiente, ela usa só o que já está agendado e diz que é isso que está mostrando, em vez de aparecer vazia.
+
+## [1.79.1] — 2026-08-30
+
+### Corrigido
+
+- **O texto da seleção na área de Documentos agora diz exatamente quantos documentos ela alcança.**
+- **A planilha de orçamento anual entregue nunca mais aparece na lista como falha.**
+
+## [1.79.0] — 2026-08-30
+
+### Adicionado
+
+- **Área "Documentos"**, nova no menu, onde você encontra e baixa de novo tudo o que já foi gerado: relatórios em PDF, prestações de contas, documentos de projeto e planilhas.
+- **Acompanhamento do que está sendo preparado**, sem precisar recarregar a página.
+- **Filtros por tipo de documento, período e quem pediu.**
+- **Baixar vários documentos de uma vez**, numa entrega única.
+- **Quatro planilhas passaram a ficar guardadas** e agora aparecem também na área de Documentos: lançamentos, relatório financeiro, orçamento anual e execução orçamentária. Antes elas sumiam ao fechar a aba; continuam baixando na hora, como sempre.
+
+### Observação
+
+- **Cada pessoa vê apenas os documentos que já alcançava pelo caminho de origem** — a área de Documentos não dá acesso novo a ninguém.
+
+## [1.78.6] — 2026-08-30
+
+Versão interna, sem mudança perceptível para quem usa o sistema. Restauramos doze verificações automáticas que haviam sido removidas por engano na versão anterior e que protegem a forma como o sistema separa contas de ativo das de passivo.
+
+## [1.78.5] — 2026-08-30
+
+### Modificado
+
+- **Ao cadastrar uma conta do tipo cartão de crédito, a opção "Compõe o saldo disponível" já vem desligada** — o saldo de um cartão é dívida a pagar ou crédito preso, não dinheiro disponível. Quem quiser pode ligar. Contas de cartão já cadastradas não mudaram.
+- **A importação de usuários por planilha passou a ler o cabeçalho da mesma forma que a importação por CSV**, para o mesmo arquivo não se comportar de um jeito num formato e de outro jeito no outro.
+
+## [1.78.4] — 2026-08-30
+
+### Modificado
+
+- **No pedido de compra e pagamento, os dados de pagamento do destinatário passaram a ser opcionais também ao editar e reenviar** — antes eram opcionais ao criar e obrigatórios ao reenviar, o que forçava a pessoa a inventar uma chave PIX só para conseguir mandar. No reembolso os dados continuam obrigatórios, porque ali quem pede é quem recebe.
+- **No reembolso, informar uma data de despesa que ainda não aconteceu agora mostra um aviso** com o caminho certo para quem precisa de aprovação antes de gastar — o pedido de compra e pagamento. É só aviso: quem precisar, segue normalmente.
+
+## [1.78.3] — 2026-08-30
+
+### Adicionado
+
+- **Enviar feedback agora também pelo celular**, no menu "Mais".
+
+### Modificado
+
+- **O aviso de feedback que chega à equipe passa a mostrar a tela de origem, a versão do app, o papel e o cargo de quem escreveu, e se o acesso foi por celular ou computador** — sem guardar identificadores de registros.
+- **Nomes de mês não aparecem mais em inglês** nas previsões de caixa.
+- **As filas de pagamento e os contadores passam a considerar exatamente a permissão que cada fluxo exige** — ajuste sobre a unificação da v1.78.2, que tinha deixado a fila de pedidos de pagamento usando a permissão de reembolso.
+
+## [1.78.2] — 2026-08-30
+
+### Corrigido
+
+- **O aviso de novidades não volta mais repetindo destaques já vistos**: depois de fechá-lo, só um destaque publicado depois disso pode trazê-lo de novo.
+- **A fila "Aguardando pagamento" de reembolsos agora aparece no Painel e nos contadores para as pessoas autorizadas a pagar**, e não apenas para quem tem o cargo de tesoureiro.
+
+### Modificado
+
+- **As duas filas de pagamento (pedidos e reembolsos) passam a usar o mesmo nome.**
+
+## [1.78.1] — 2026-08-30
+
+### Modificado
+
+- **Formulário de feedback: a opção de receber resposta agora nasce marcada.** É uma correção de rumo — a versão anterior tinha passado a opção a nascer desmarcada, e algumas pessoas deixavam de receber retorno só por esquecer de marcá-la. Quem não quiser resposta pode desmarcar antes de enviar.
+
+## [1.78.0] — 2026-08-30
+
+### Modificado
+
+- **Reprovar um pedido ou reembolso, gerar PDF, importar lançamentos, estornar e excluir ficaram mais rápidos**: o sistema passou a buscar de uma vez informações que antes buscava em várias etapas. Nenhuma regra de quem pode fazer o quê mudou.
+- **Importação de estrutura mais rápida em planilhas grandes**: categorias e centros de custo novos passam a ser criados de uma só vez, em vez de um por um.
+
+### Corrigido
+
+- **Detalhe do lançamento no celular**: os botões da barra de ações deixaram de ficar cortados fora da tela e agora quebram em mais de uma linha, todos com a mesma altura.
+- **Histórico de aprovações**: o link para o pedido passou a ficar embaixo do título, que não é mais partido no meio das palavras.
+
+## [1.77.0] — 2026-08-30
+
+### Corrigido
+
+- **As barras de ações em lote (Movimentações e Usuários) passaram a empilhar os botões no celular**, em vez de deixar os últimos fora da tela. Todas as ações continuam alcançáveis, com o motivo à mostra quando alguma está indisponível.
+- **Cabeçalhos de página e de card passaram a quebrar a linha quando o texto é longo**, em vez de espremer o título ou deixar o link vazar pela borda.
+- **Na confirmação de importação**, a explicação do que vai acontecer saiu de dentro do botão e ganhou linha própria, ficando legível por inteiro.
+
+## [1.76.0] — 2026-08-30
+
+### Modificado
+
+- **Importações e edições em lote muito mais rápidas**: a importação de orçamento anual, a importação de estrutura (categorias e centros de custo), a edição de série recorrente e a confirmação da conciliação de extrato passaram a gravar tudo de uma vez, em vez de uma linha por vez. Arquivos grandes terminam em uma fração do tempo anterior. O comportamento é o mesmo de sempre: o que está válido entra, o que foi recusado aparece na tela com o motivo.
+
+## [1.75.1] — 2026-08-29
+
+### Corrigido
+
+- **Sincronização com o WooCommerce e reprocessamento de categorias voltaram a funcionar**: a sincronização de pedidos, a de produtos e o reprocessamento de categorias paravam logo no início, antes de qualquer trabalho — defeito introduzido pela versão anterior e corrigido no mesmo dia.
+
+## [1.75.0] — 2026-08-29
+
+### Modificado
+
+- **App mais rápido em toda ação autenticada**: identificar quem está usando o sistema deixou de exigir uma consulta extra a cada ação. Operações que envolvem dinheiro, acesso e dados pessoais continuam com a checagem completa — nada muda em quem pode fazer o quê.
+- **Explicação da lista curta de centros de custo**: quem gerencia apenas alguns centros de custo agora vê, na tela, por que a lista aparece menor do que o total da organização — em novo e editar lançamento, novo e editar reembolso, e novo e editar pedido de pagamento.
+
+### Corrigido
+
+- **Remover e substituir comprovante de solicitação**: fechada uma falha que podia recusar a operação com um erro técnico, sem explicar o motivo.
+- **Formulário de feedback**: a opção de receber resposta agora nasce desmarcada.
+
+## [1.74.0] — 2026-08-29
+
+### Corrigido
+
+- **Comprovantes de reembolso e de pedido de pagamento agora só abrem para quem já pode ver a solicitação — ou o lançamento correspondente.** Quem enxerga a solicitação continua abrindo o anexo normalmente, e quem enxerga o lançamento gerado continua abrindo o comprovante propagado a ele; enviar e remover comprovante não mudaram.
+- **O logo da organização deixou de ser acessível por quem não está conectado ao sistema.**
+
+## [1.73.1] — 2026-08-29
+
+### Corrigido
+
+- **Ida automática para a fila de aprovação, na primeira carga da página**: ao abrir Pagamentos e Reembolsos, a tela decidia para onde levar antes de saber quantas solicitações esperavam por aprovação — a ida automática para a fila simplesmente não acontecia na primeira vez que a página carregava.
+
+## [1.73.0] — 2026-08-29
+
+### Modificado
+
+- **Aterrissagem direta na fila de aprovação**: quem tem solicitações esperando a própria aprovação, ao abrir Pagamentos e Reembolsos pelo menu, cai direto na fila certa — inclusive quando elas estão em Reembolsos. Cada aba passou a mostrar quantas solicitações aguardam a aprovação da pessoa.
+
+## [1.72.1] — 2026-08-29
+
+### Corrigido
+
+- **Aprovação e reprovação de pedido de compra e de pagamento**: voltaram a funcionar. A leitura dos votos da solicitação estava consultando os nomes de outra tabela e falhava em toda solicitação.
+
+## [1.72.0] — 2026-08-29
+
+### Corrigido
+
+- **Aprovação por cargo agora enxerga a fila**: quem recebe a permissão de aprovar através do cargo passa a ver a fila de aprovações, é contado no Painel e consegue abrir as solicitações. Antes, essa pessoa conseguia aprovar sem nunca ver a fila.
+
+### Adicionado
+
+- **Aviso quando ninguém pode aprovar**: a tela de configuração do fluxo de aprovação passou a avisar quando a configuração escolhida deixa nenhuma pessoa apta a aprovar.
+
+## [1.71.0] — 2026-08-29
+
+<!-- destaque: A fila de aprovações agora aparece assim que você abre Pagamentos e Reembolsos. -->
+
+### Corrigido
+
+- **A fila de aprovação não some mais sem explicação**: antes, quando o sistema não conseguia conferir se você podia aprovar, a tela simplesmente não mostrava a fila nem o botão de aprovar — parecia que não havia nada a aprovar. Agora ele avisa que não conseguiu conferir e oferece tentar de novo.
+- **Cards do Painel abrem a lista certa**: os cards do Painel passaram a abrir exatamente a mesma lista que contaram — o card de pedidos de pagamento levava para a lista errada.
+
+### Modificado
+
+- **Fila de aprovação já na abertura**: ao abrir Pagamentos e Reembolsos, quem tem solicitações esperando a própria aprovação já cai na fila, em vez de cair na lista geral.
+
+## [1.70.0] — 2026-08-29
+
+### Adicionado
+
+- **Diagnóstico dos testes de integração no painel da plataforma**: quando um teste de integração falha, agora aparece o motivo real da falha em vez de uma mensagem genérica. Cada teste executado fica registrado, e o painel de e-mail passou a mostrar quantas vezes o envio precisou usar o provedor reserva e quando foi a última vez.
+
+## [1.69.2] — 2026-08-29
+
+### Corrigido
+
+- **Preferências de notificação no celular**: a tela de canais de aviso, em Meu perfil, passou a se adaptar a telas estreitas. Cada tipo de aviso aparece como um bloco próprio, com os canais (E-mail, Push e Telegram) identificados pelo nome ao lado de cada botão — não é mais preciso girar o aparelho para alcançar a última coluna. No computador nada muda.
+
+## [1.69.1] — 2026-08-29
+
+### Corrigido
+
+- **Vínculo do Telegram**: corrigido um defeito que impedia qualquer pessoa de conectar a conta — gerar o link, concluir o vínculo e desvincular voltaram a funcionar.
+
+## [1.69.0] — 2026-08-29
+
+<!-- destaque: Agora dá para receber os avisos do sistema pelo Telegram — vincule sua conta em Meu perfil. -->
+
+### Adicionado
+
+- **Canal de avisos pelo Telegram**: passou a existir um terceiro canal de avisos, ao lado de e-mail e push. A pessoa vincula a conta em Meu perfil, por um link que abre a conversa com o bot, e escolhe evento a evento o que quer receber em cada canal. Ao vincular, os avisos que ela já recebe por e-mail passam a valer também no Telegram. Dá para desvincular a qualquer momento.
+
+## [1.68.0] — 2026-08-24
+
+### Modificado
+
+- **Aprovação de pedido de pagamento e reembolso mais rápida**: a tela responde em cerca de metade do tempo que levava antes. Nada mudou em quem pode aprovar, no quórum exigido ou nos avisos enviados.
+
+## [1.67.4] — 2026-08-24
+
+### Corrigido
+
+- **Documento anexado sem rótulo fixo**: a linha do documento passa a mostrar só tamanho e data, sem um rótulo de tipo escolhido pelo sistema — o documento pode ser boleto, nota fiscal, contrato ou planilha, e qualquer rótulo automático estaria errado em parte dos casos.
+- **Confirmação de remoção mais clara**: agora diz o efeito real de remover cada documento. Documento vindo de uma solicitação (pedido de pagamento ou reembolso) é desvinculado do lançamento e continua disponível na solicitação de origem; documento anexado diretamente ao lançamento é apagado por completo. Botão e texto mudam conforme o caso.
+- **Erro no console para quem não é superadministrador**: corrigido um erro 403 que aparecia no console do navegador para usuários sem esse papel, sem afetar o uso da tela.
+
+## [1.67.3] — 2026-08-24
+
+### Corrigido
+
+- **Botão de remover documento**: um documento vindo de uma solicitação havia perdido, por engano, o botão de remoção. Corrigido.
+
+## [1.67.2] — 2026-08-24
+
+### Corrigido
+
+- **Documento duplicado no lançamento**: documentos vindos de reembolso apareciam duas vezes no detalhe do lançamento. Cada documento passa a aparecer uma única vez.
+
+## [1.67.1] — 2026-08-24
+
+### Corrigido
+
+- **Importação de planilha de lançamentos travada na fila**: uma regressão da versão anterior fazia a importação confirmar o início do processamento e nunca concluir. Corrigida.
+- **Quatro funções internas com erro de tipo**: corrigidas.
+
+## [1.67.0] — 2026-08-24
+
+### Modificado
+
+- **Aprovar, recusar e outras ações deixam de esperar o aviso**: em cerca de vinte pontos do sistema — aprovar e recusar pagamento/reembolso, publicar política, encerrar organização, concluir cadastro, comentar em projeto, entre outros — a ação deixa de esperar o envio do e-mail ou da notificação para responder. Os mesmos avisos continuam saindo, logo em seguida.
+- **Falha no envio de aviso passa a ficar registrada**: quando um e-mail ou notificação não sai, isso passa a ficar registrado para conferência, em vez de simplesmente não acontecer sem ninguém perceber. Corrigidos também cinco casos em que o aviso podia se perder por completo, sem nenhum registro.
+
+
+
+### Corrigido
+
+- **Aviso de exclusão de conta**: o e-mail do pedido de exclusão de conta agora é enviado de forma confiável; se o envio falhar, a falha fica registrada para conferência.
+
+## [1.66.3] — 2026-08-24
+
+### Corrigido
+
+- **Aprovação de pagamento e reembolso mais rápida**: aprovar um pedido de pagamento ou um reembolso agora responde assim que a decisão é gravada, sem esperar o envio dos avisos por e-mail e push. Os mesmos avisos continuam saindo, logo em seguida; se algum não sair, fica registrado para conferência posterior.
+
+## [1.66.2] — 2026-08-24
+
+### Corrigido
+
+- **Centro de custo do pedido de pagamento**: o centro de custo informado no pedido de pagamento agora acompanha o lançamento gerado na aprovação, inclusive em pedidos parcelados e recorrentes. Com isso, esses gastos deixam de aparecer como "sem centro de custo" em relatórios e orçamento, e o gestor de centro de custo volta a ser reconhecido como aprovador quando a organização usa essa opção.
+
+## [1.66.1] — 2026-08-23
+
+### Corrigido
+
+- **Seis funções internas com referência a coluna ou tipo inexistente**: passaram a falhar sempre que usadas. Entre elas, a lista de lançamentos sem projeto vinculado — que nunca chegou a funcionar — e a verificação de campos faltantes no encerramento de projeto.
+- **Nova varredura interna**: passamos a checar as funções internas do banco em busca desse tipo de defeito antes de publicar uma mudança, para não deixar mais nenhuma quebrada em silêncio.
+
+## [1.66.0] — 2026-08-23
+
+<!-- destaque: Agora dá para escolher quais projetos aparecem na página pública de transparência — antes, apareciam todos. -->
+
+### Adicionado
+
+- **Escolha de projetos na página pública**: em Configurações → Transparência, o bloco Projetos passa a mostrar quantos projetos aparecem na página pública, com um botão para escolher quais.
+- **Tela de escolha**: busca por nome, filtro por situação, botão em cada projeto e ação em lote com seleção múltipla — pensada para organizações com dezenas de projetos.
+- **Padrão continua sendo mostrar tudo**: todos os projetos continuam aparecendo por padrão — a organização esconde o que não quer publicar. Projeto novo nasce aparecendo.
+- **Projeto em planejamento ou aguardando aprovação**: também pode ser escolhido antes da hora — ele ainda não aparece na página por causa da situação em que está, e a escolha passa a valer quando entrar em execução.
+- **Projeto cancelado ou arquivado**: não vai à página pública de jeito nenhum, e por isso não entra na tela de escolha. Desarquivar devolve o projeto à página exatamente como estava.
+- **Seção some quando tudo está escondido**: se a organização esconder todos os projetos, a seção simplesmente não aparece na página pública, em vez de sair vazia — e a tela de configuração avisa que o bloco está ligado e não vai sair nada (#145).
+
+## [1.65.1] — 2026-08-23
+
+### Corrigido
+
+- **Projeto arquivado deixa de gerar cobrança automática**: as rotinas diárias de tarefa atrasada, marco vencido e lembrete de atualização de status passam a ignorar projetos arquivados. Desarquivar volta a incluí-los. Falhas de leitura nessas rotinas passaram a ser registradas e reportadas como erro, em vez de passarem por uma varredura vazia.
+
+## [1.65.0] — 2026-08-23
+
+<!-- destaque: Projetos agora podem ser arquivados: eles saem da lista e dos formulários do dia a dia, sem perder nada do histórico. -->
+
+### Adicionado
+
+- **Arquivar e desarquivar projeto**: qualquer projeto pode ser arquivado e desarquivado. Arquivar não muda a situação do projeto (concluído, em execução etc.) — é uma marcação à parte, e desarquivar devolve tudo como estava. Arquivar um projeto ainda ativo mostra um aviso antes da confirmação.
+- **Lista de projetos com filtro de arquivados**: a lista passa a esconder os projetos arquivados por padrão, com um contador dizendo quantos estão escondidos e um atalho para vê-los.
+- **Botão de arquivar e ação em lote**: cada projeto da lista ganha um botão de arquivar, e a lista ganha seleção múltipla com ação de arquivar em lote — a confirmação diz quantos projetos serão afetados e o resultado separa concluídos, recusados e falhos.
+- **Projeto arquivado some dos formulários do dia a dia**: deixa de ser oferecido ao lançar despesa, pedir pagamento, pedir reembolso ou importar lançamentos por planilha; deixa de contar no menu e nos cartões do Painel; e não aparece na página pública de transparência.
+- **Projeto arquivado continua no que já aconteceu**: fechamento orçamentário do exercício, relatórios e filtros de histórico continuam considerando o projeto normalmente — o passado não muda porque alguém arquivou.
+- **Identificação congelada**: o nome e os dados de identificação de um projeto arquivado ficam congelados; para editar, é preciso desarquivar antes.
+- **Importação de lançamentos com aviso mais claro**: quando o projeto citado na planilha está arquivado ou encerrado, o aviso agora diz exatamente qual dos dois é (antes aparecia como projeto não encontrado).
+
+## [1.64.5] — 2026-08-23
+
+### Corrigido
+
+- **Descrição cortada ao importar lançamentos e usuários por planilha**: as importações de lançamentos e de usuários passam a ler planilhas do mesmo jeito que a importação de categorias. Textos entre aspas contendo ponto e vírgula (por exemplo, "Pagamento fornecedor; NF 1234") chegavam cortados pela metade, sem nenhum aviso — agora chegam inteiros. Linhas com colunas a mais que o cabeçalho passam a ser recusadas com explicação, e caem na lista de linhas recusadas disponível para download. Arquivos terminados em ponto e vírgula continuam importando normalmente (#195).
+
+## [1.64.4] — 2026-08-23
+
+### Corrigido
+
+- **Confirmação de ação em lote mencionando itens que não existiam**: ao remover ou abandonar tarefas em lote (tela de projeto) e ao concluir ou descartar feedbacks em lote (superadmin), a confirmação chegava a dizer "as demais 0 da seleção não serão tocadas" quando não havia nenhum item fora do escopo da ação. A frase só aparece agora quando há de fato algum item não afetado.
+- **Rodapé do texto institucional na prestação de contas**: quando a organização não tinha texto institucional cadastrado, o rodapé do campo dizia "Usando o texto cadastrado na organização" — contradizendo a própria dica do campo. Ele agora reflete o estado real: sem texto cadastrado, usando o texto cadastrado, ou texto alterado só para esta emissão (#202).
+
+## [1.64.3] — 2026-08-23
+
+### Corrigido
+
+- **Correção de lançamento pago não gravava a categoria**: desde o lançamento da funcionalidade (v1.62.0), mudar a categoria pela tela "Corrigir dados" não salvava — o formulário fechava sem aviso de erro, mas nada mudava, e o seletor de categoria abria em branco. Um lançamento dividido entre várias categorias deixa de oferecer essa opção no formulário (a categoria dele é ajustada na divisão em si); os demais campos — data de pagamento, conta bancária, centro de custo, projeto, descrição e favorecido — continuam corrigíveis normalmente. Uma falha inesperada agora mostra o motivo, em vez de uma mensagem genérica.
+
+## [1.64.2] — 2026-08-22
+
+### Corrigido
+
+- **Gráfico "Evolução do saldo" em branco em relatório de um único mês**: com o período reduzido a um mês, o gráfico de evolução do saldo saía sem nenhuma linha, mesmo com os dados presentes no anexo do documento. Períodos curtos agora mantêm o detalhe diário e ganham marcadores nos pontos. A escala do eixo vertical também passou a acompanhar a faixa de valores da evolução do saldo (em vez de sempre partir de zero), o que deixa a variação visível quando o saldo se move pouco em relação ao seu valor total — o documento avisa quando isso acontece. Os demais gráficos do relatório continuam com a escala partindo de zero.
+
+## [1.64.1] — 2026-08-22
+
+### Corrigido
+
+- **Logo da organização no relatório**: a capa do relatório financeiro caía no desenho com as iniciais mesmo quando a organização tinha logo cadastrado. A prestação de contas nunca teve esse problema.
+
+## [1.64.0] — 2026-08-22
+
+<!-- destaque: Os PDFs do módulo Relatórios agora têm o mesmo visual caprichado da prestação de contas — com gráficos e numeração de páginas. -->
+
+### Adicionado
+
+- **PDF dos relatórios gerado no servidor**: os PDFs de Visão Geral, Receitas, Despesas, Atenção e Previsão passam a usar o mesmo motor da prestação de contas — capa com identidade da organização, tabelas e tipografia consistentes. Como o documento agora é preparado no servidor, a exportação em PDF virou um pedido assíncrono: você é avisado quando o arquivo fica pronto. A exportação em Excel continua imediata, como sempre.
+- **Gráficos no PDF**: os mesmos gráficos que aparecem na tela agora saem também no documento exportado.
+- **Numeração de páginas** ("Página X de Y") nos dois documentos — relatórios e prestação de contas.
+- **Leitura mais clara**: receitas, despesas e resultado ganharam destaque próprio em vez de uma linha corrida de texto; a série diária de saldo virou anexo no fim do documento (com o gráfico permanecendo no corpo); as quebras de página passaram a respeitar o conteúdo, em vez de forçar página nova a cada seção.
+
+## [1.63.0] — 2026-08-22
+
+<!-- destaque: Tarefas de projeto, evidências de projeto e feedbacks do superadmin ganharam seleção múltipla e ação em lote. -->
+
+### Adicionado
+
+- **Tarefas de projeto**: seleção múltipla com concluir, reabrir, abandonar e remover em lote. Abandonar em lote pede um único motivo, aplicado a toda a seleção.
+- **Evidências de projeto**: seleção múltipla com remoção em lote.
+- **Superadmin · Feedbacks**: seleção múltipla com marcar como concluído e descartar em lote.
+
+Nas três telas, um item que não pode receber a ação aparece **recusado com o motivo**, nunca simplesmente omitido, e o resultado fica num painel que separa concluídos, recusados por regra e falhos.
+
+## [1.62.0] — 2026-08-22
+
+### Adicionado
+
+- **Correção de lançamento pago em um só lugar**: o botão "Corrigir dados" passa a cobrir também a conta bancária, além de data de pagamento, categoria, centro de custo, projeto, descrição e favorecido — sempre com justificativa obrigatória e registro em auditoria. Valor não é corrigível (estorne e lance de novo); transferência continua fora. Trocar a conta desfaz a conferência com o extrato daquele lançamento, que volta a poder ser conciliado.
+
+### Modificado
+
+- A coluna "Extrato" da lista de movimentações passou a se chamar **"Conferido"**.
+
+## [1.61.0] — 2026-08-22
+
+<!-- destaque: A prestação de contas ganhou um texto de abertura padronizado e um código de verificação que qualquer pessoa pode conferir sem login. -->
+
+### Adicionado
+
+- **Texto institucional de abertura**: a organização cadastra, nas configurações, um texto padronizado de apresentação (quem é a organização, moeda, base de elaboração) que passa a abrir as notas explicativas da prestação de contas em toda emissão, sem precisar redigitar. Pode ser ajustado na hora da emissão sem alterar o texto guardado nas configurações.
+- **Verificação de autenticidade**: a prestação de contas passa a levar um código digitável e um QR Code. Quem recebe o documento confere, numa página pública sem login, a organização, o período, a data de emissão e a situação do documento — sem valores e sem baixar o PDF.
+
+## [1.60.1] — 2026-08-22
+
+### Corrigido
+
+- Correção técnica interna, sem efeito no uso do sistema.
+
+## [1.60.0] — 2026-08-22
+
+<!-- destaque: Agora dá para ver quais lançamentos já foram conferidos com o extrato, conciliar manualmente e corrigir a categoria de um pagamento já registrado. -->
+
+### Adicionado
+
+- **Conciliação bancária visível**: coluna "Extrato" na lista de movimentações, com selo para o lançamento já conferido com o extrato. O detalhe do lançamento mostra se foi conciliado, quando e como (importação de extrato ou marcação manual, com quem marcou). Filtro por conciliado / não conciliado, e a informação também nas exportações em PDF e Excel.
+- **Conciliação manual, individual e em lote**: quem tem a permissão "Criar / editar" pode marcar lançamentos que movimentaram dinheiro como conciliados, um a um ou vários de uma vez pela lista. Desfazer só é possível para marcação manual — a que veio da importação de extrato não é desfeita por aqui.
+- **Correção de lançamento já pago**: quem tem a permissão "Criar / editar" agora pode corrigir data de pagamento, categoria, centro de custo, projeto, descrição e favorecido de um pagamento já registrado, com justificativa obrigatória e registro em auditoria. Valor e conta bancária continuam não editáveis — para esses casos, o caminho é estornar e relançar. Antes de confirmar, a tela avisa se o lançamento está no período de uma prestação de contas já emitida e se já foi conferido com o extrato.
+
+### Corrigido
+
+- O cabeçalho da coluna Valor, na lista de movimentações, estava alinhado à esquerda enquanto os números ficavam à direita. Corrigido no componente de cabeçalho compartilhado.
+
+## [1.59.3] — 2026-08-21
+
+### Modificado
+
+- **O campo de competência agora avisa, onde é preenchido e onde é exibido, que serve apenas como informação** — o período dos relatórios continua sendo definido pela data de pagamento.
+- **Na integração com o WooCommerce (configuração manual), o botão que busca as categorias da loja passou para antes da tabela de mapeamento**, com orientação de que a busca vem primeiro e o mapeamento depois.
+
+## [1.59.2] — 2026-08-21
+
+### Corrigido
+
+- **A importação de categorias financeiras e centros de custo não corta mais texto entre aspas que contém ponto e vírgula.** Um valor como "CNPJ filial; consolida no balanço" antes entrava pela metade, em silêncio. Linhas com mais colunas que o cabeçalho agora aparecem na prévia como recusadas, com o motivo, em vez de perderem texto sem aviso.
+
+## [1.59.1] — 2026-08-21
+
+### Corrigido
+
+- **O campo `realized` da API externa de resumo financeiro passou a trazer somente o que foi efetivamente pago**, coincidindo com o realizado da prestação de contas do mesmo período. Antes incluía lançamentos previstos (pendentes e atrasados), contrariando o próprio nome. O valor devolvido pode ficar menor que antes. A especificação em `openapi/` foi atualizada (versão 1.1.0 da spec).
+
+## [1.59.0] — 2026-08-21
+
+### Modificado
+
+- **O saldo das contas passou a considerar os estornos do mesmo jeito que o extrato bancário**: quando o dinheiro sai e depois volta, as duas movimentações aparecem, cada uma na sua data. Contas com estorno podem exibir saldo diferente do anterior.
+- **Transferências entre contas da própria organização deixaram de ser contadas como valor realizado** — continuam afetando o saldo das contas.
+
+## [1.58.0] — 2026-08-21
+
+### Corrigido
+
+- **A importação de pedidos da loja passa a dividir o valor entre as categorias financeiras de cada produto do pedido, em vez de jogar o total inteiro na categoria do primeiro produto.** Frete, desconto e taxas são rateados proporcionalmente entre as categorias, e a soma sempre fecha com o total do pedido. Quando o pedido tem produtos de mais de uma categoria, o lançamento agora nasce dividido — do mesmo jeito que já é possível dividir um lançamento à mão.
+- **A ordem em que a loja devolve as categorias de um produto deixou de decidir qual categoria vale.** No mapeamento manual, quem decide é a ordem das linhas na tela de configuração (que ganhou setas para subir e descer); no automático, o desempate passou a ser alfabético.
+
+### Adicionado
+
+- **Nova opção para reprocessar lançamentos já importados da loja**, na tela de importação de Movimentações. Antes de aplicar, mostra o que mudaria em cada lançamento, sem gravar nada — só depois de conferir é que se confirma. Exige permissão de gerenciar lançamentos.
+
+> ⚠️ O reprocessamento reclassifica pelas categorias que os produtos têm **hoje** na loja, que podem não ser as mesmas da época da compra. Se o período já entrou em prestação de contas, reprocesse com essa ressalva em mente.
+
+## [1.57.0] — 2026-08-21
+
+### Modificado
+
+- **A regra que limita de quais contas uma despesa de projeto pode sair passa a valer também no servidor, lançamento a lançamento.** Ao baixar vários lançamentos de uma vez, os que não podem sair da conta escolhida agora voltam **recusados com o motivo**, em vez de serem pagos — e essa recusa aparece separada da retenção por estouro de rubrica. Ao selecionar lançamentos de projetos diferentes para baixa em lote, a tela avisa que a conferência será feita um a um.
+
+## [1.56.1] — 2026-08-21
+
+### Corrigido
+
+- **Reforço no isolamento entre organizações:** documentos financeiros ficam ainda mais presos à organização a que pertencem, e informações de controle interno passam a ser visíveis apenas para a administração da plataforma. Nada muda no uso do dia a dia.
+
+## [1.56.0] — 2026-08-21
+
+### Modificado
+
+- **O sistema não pergunta mais como o projeto é financiado.** O financeiro do projeto passa a mostrar sempre as receitas: havendo receita lançada, os valores; não havendo, zero. Uma informação a menos para preencher no cadastro, e nada some da tela de quem já tinha receita no projeto.
+
+## [1.55.0] — 2026-08-21
+
+### Adicionado
+
+- **Pagar acima do previsto na rubrica do projeto passa a reter o pagamento, em vez de simplesmente recusá-lo.** Em conta comum, quem tem alçada de aprovação na organização pode autorizar a diferença, com um motivo — o mesmo fluxo já usado para excedente de pedido de compra. **Em conta de recurso restrito (convênio, emenda, fundo carimbado), não há autorização interna**: o caminho é corrigir a despesa ou registrar o remanejamento com a autorização de quem repassou o recurso. Nenhum limiar percentual de tolerância vale para conta restrita. Um pagamento retido nunca aparece como pago.
+
+## [1.54.2] — 2026-08-21
+
+### Modificado
+
+- **A trava de fonte de recurso passou a valer também ao dar baixa em um lançamento e ao pagar um pedido de compra**, inclusive quando fazem parte de uma série recorrente. Antes, ela só era aplicada na criação e na edição do lançamento.
+
+## [1.54.1] — 2026-08-21
+
+### Corrigido
+
+- **Reforçada a segurança da consulta de saldos por conta**, garantindo que cada pessoa só veja informação das organizações a que tem acesso.
+
+## [1.54.0] — 2026-08-21
+
+### Adicionado
+
+- **O orçamento do projeto ganhou a conta bancária como dimensão.** Cada rubrica passa a ser "conta + categoria + valor", e a mesma categoria pode ter linhas em contas diferentes — por exemplo, material de construção pago em parte pela emenda e em parte pelo caixa da organização, cada parte com seu próprio teto.
+- **Valor em branco na rubrica passa a significar "permitido, sem teto"** — diferente de zero (nada pode ser gasto) e de rubrica inexistente (categoria fora do orçamento).
+- **Novo interruptor no projeto: "controlar gastos por fonte de recurso"**, desligado por padrão. Projeto que não liga continua funcionando exatamente como antes, sem tela nova nem trava. O interruptor não liga enquanto houver rubrica sem conta definida.
+- **Com o controle ligado, a tela de pagamento só oferece as contas com rubrica prevista para aquela categoria** — e, quando nenhuma cobre, explica o motivo em vez de mostrar uma lista vazia.
+- **Nova visão de execução por fonte**, por conta e por rubrica: quanto foi previsto, quanto já foi aplicado e quanto resta, sinalizando gasto sem rubrica prevista.
+- **Remanejamento entre rubricas do projeto**, que só se registra apontando para um documento anexado ao projeto (aditivo, ofício ou anuência do órgão).
+
+## [1.53.1] — 2026-08-21
+
+### Corrigido
+
+- **Lançamentos e pagamentos passaram a recusar conta bancária de outra organização**, e conta bancária inativa deixou de poder ser escolhida ao criar um pagamento novo.
+
+## [1.53.0] — 2026-08-21
+
+### Adicionado
+
+- **Contas de recurso carimbado (convênio, emenda, fundo restrito) agora podem ficar de fora do saldo disponível da organização.** A opção fica no cadastro da conta e vem ligada por padrão. Quando alguma conta é desmarcada, o total consolidado avisa quanto ficou de fora — e o saldo da conta, os lançamentos, a conciliação e os relatórios continuam iguais.
+
+## [1.52.0] — 2026-08-21
+
+### Adicionado
+
+- **O tipo de projeto ganhou a opção "Programa"** — uma linha de atendimento ou serviço que se repete, com metas e público, diferente de evento, obra e campanha. Programas contam agora com marcos e riscos sugeridos próprios, como os demais tipos.
+
+### Modificado
+
+- **O formulário de criação de projeto perdeu um passo.** A etapa "Coordenador e equipe" só mostrava o nome de quem estava criando e avisava que dava para convidar gente depois — não havia nenhuma escolha a fazer ali. A gestão de equipe continua funcionando normalmente no detalhe do projeto, depois de criado.
+
+## [1.51.2] — 2026-08-21
+
+### Corrigido
+
+- **No primeiro acesso ("Concluir cadastro"), quando o cadastro é recusado, a tela agora mostra o motivo real** — por exemplo, senha recusada aparece no próprio campo de senha, com a explicação de qual regra falhou; link expirado leva à tela de reenvio; link já usado avisa para fazer login. Antes, qualquer recusa aparecia só como "Erro inesperado. Tente novamente em instantes.".
+- **Falha no login com Google deixa de resultar em tela silenciosa.** Antes, um erro na volta do Google não aparecia em lugar nenhum; agora a mensagem de erro é exibida.
+
+## [1.51.1] — 2026-08-21
+
+### Modificado
+
+- **O aviso de aprovação pendente agora informa quando o valor do pedido é uma estimativa** e será confirmado na compra.
+
+## [1.51.0] — 2026-08-21
+
+### Adicionado
+
+- **O módulo passou a se chamar "Pedidos de compra e pagamento"** (antes "Pedidos de pagamento"), porque agora ele serve aos dois casos.
+- **Ao criar um pedido, escolhe-se entre "Valor fechado — é o que vai ser pago" e "Valor estimado — a confirmar na compra".** O valor estimado serve para quando a compra ainda vai ser negociada: anexam-se os orçamentos e pede-se a autorização com base na estimativa. Quem aprova vê que o valor é estimado.
+- **O valor que foi autorizado passa a ser guardado separadamente do valor efetivamente pago**, e o pedido mostra os dois lado a lado quando diferem.
+- **Cada organização define, em Configurações → Fluxo de Aprovações, o limiar de reaprovação (%):** quanto o valor efetivo pode passar do autorizado sem precisar de nova autorização. Padrão de 10%.
+- **Quando o valor passa desse limite, o pagamento fica retido.** Quem tem permissão de aprovar pode **autorizar a diferença** ali mesmo, informando o motivo, ou pedir que outro aprovador decida. Quem pode pagar mas não aprova tem um botão para **pedir autorização do valor excedente**. Em pedidos parcelados, o limite vale sobre o total.
+
+### Modificado
+
+- **Alterar o valor de um lançamento vindo de pedido passou a exigir a permissão de pagar.**
+
+## [1.50.0] — 2026-08-21
+
+### Adicionado
+
+- **Importar categorias e centros de custo por planilha, em Configurações, ao lado de "Aplicar template".** A tela mostra uma prévia antes de gravar: o que será criado, o que será atualizado e o que não pode entrar, com o motivo. A planilha pode vir fora de ordem — o sistema monta os grupos sozinho. Há modelos para baixar, um para categorias e outro para centros de custo.
+- **Dá para criar uma categoria sem sair da conciliação de extrato bancário.** Ao decidir lançar uma transação, é possível criar a categoria ali mesmo, e ela já fica escolhida na linha.
+
+### Modificado
+
+- **Na importação de lançamentos, quando a planilha traz uma categoria que não existe, agora há uma terceira saída além de criar e de mapear: deixar essas linhas de fora.** Elas podem ser trazidas depois, reenviando a mesma planilha com a categoria já cadastrada — sem repetir o que já entrou.
+- **Criar categoria ou centro de custo durante a importação de lançamentos passou a exigir também a permissão de configuração financeira**, a mesma já exigida para criá-los pela tela de Configurações. Quem não tem essa permissão continua importando normalmente e resolve as pendências escolhendo um cadastro existente ou deixando as linhas de fora.
+
+---
+
+## [1.49.1] — 2026-08-21
+
+### Modificado
+
+- **Ao criar ou editar um projeto, a opção de financiamento passou a dizer de onde vem o dinheiro.** Agora é "Tem receita própria (captada para este projeto)" — a outra opção segue "Custeado pelo caixa geral da organização". Nada muda nos projetos já cadastrados.
+
+---
+
+## [1.49.0] — 2026-08-21
+
+### Adicionado
+
+- **Quem enviou um reembolso ou um pedido de pagamento e ainda está aguardando aprovação agora pode retirar a solicitação.** Antes não havia essa saída: só era possível excluir enquanto estava em rascunho, e depois de enviada a única forma de encerrar era pedir a alguém que reprovasse — o que ficava registrado como reprovação, e não como desistência. Ao retirar: a solicitação fica como cancelada, as aprovações já dadas são descartadas, e quem estava na fila de aprovação é avisado. A solicitação retirada pode ser enviada de novo, inclusive sem alterar nada. Só o próprio solicitante pode retirar — nem administrador nem tesoureiro retiram solicitação de outra pessoa.
+
+---
+
+## [1.48.0] — 2026-08-20
+
+### Adicionado
+
+- **Ao abrir um lançamento que veio de um reembolso ou de um pedido de pagamento, agora aparece quem solicitou.** Antes só apareciam os dados bancários, sem nome. O bloco de dados de pagamento por PIX também passou a mostrar o titular, quando essa informação existe.
+
+---
+
+## [1.47.0] — 2026-08-20
+
+### Adicionado
+
+- **Prestações de contas, Pedidos de pagamento e Reembolsos ganharam seleção de vários itens ao mesmo tempo.** Em Prestações de contas dá para excluir vários registros de uma vez; em Pedidos de pagamento e Reembolsos dá para aprovar vários de uma vez. Antes de confirmar uma aprovação em lote, o sistema informa quantas solicitações e qual o valor total. O resultado é apresentado item por item — quem foi aprovado, quem foi recusado e por quê. Reprovar continua sendo feito um de cada vez, porque cada reprovação exige um motivo próprio.
+
+### Modificado
+
+- **As telas de Prestações de contas, Pedidos de pagamento e Reembolsos passaram a carregar os registros por página, em vez de trazer todo o histórico da organização de uma vez.** A diferença aparece em organizações com muitos registros. Os filtros continuam funcionando sobre o conjunto inteiro, não só sobre a página aberta.
+
+---
+
+## [1.46.1] — 2026-08-20
+
+### Modificado
+
+- **Importar extrato bancário (OFX) passa a exigir a mesma permissão já exigida para importar planilha.** As duas formas de importar lançamentos agora seguem a mesma regra definida pela organização.
+- **O selo "Transferência" ganhou um ponto colorido**, para não se confundir com o status "Pendente" na mesma linha.
+
+### Corrigido
+
+- **Planilhas e documentos de escritório anexados a um lançamento deixavam de aparecer como "comprovante indisponível" no PDF da prestação de contas, por causa do tamanho do arquivo.** Esses arquivos nunca puderam ser exibidos dentro do PDF, e agora o relatório informa corretamente que o arquivo está disponível no lançamento. O aviso de indisponível fica reservado para quando o arquivo realmente não pôde ser lido.
+
+---
+
+## [1.46.0] — 2026-08-20
+
+### Modificado
+
+- **Cada organização passa a escolher, por cargo, quem pode solicitar pedido de pagamento.** Antes a escolha era limitada a dois cargos e não alcançava cargos criados pela própria organização. Agora a permissão é concedida no editor de cargos e vale para qualquer cargo — inclusive Diretor, Coordenador ou cargos próprios da organização. Presidente e Tesoureiro continuam podendo solicitar em todas as organizações. A Comissão Fiscal não solicita.
+
+### Corrigido
+
+- **Organizações que ainda não tinham essa configuração deixavam de ter qualquer pessoa autorizada a solicitar pedido de pagamento.** Isso foi corrigido.
+
+---
+
+## [1.45.1] — 2026-08-20
+
+### Modificado
+
+- **Quem pode escrever a nota explicativa da prestação de contas passou a ser definido por cargo.** Antes estava fixo em Presidente e Tesoureiro; agora a organização concede essa permissão no editor de cargos, inclusive a cargos que ela mesma criou. Quem já escrevia continua escrevendo. A Comissão Fiscal segue emitindo o relatório e lendo a nota, sem redigir.
+
+---
+
+## [1.45.0] — 2026-08-20
+
+### Adicionado
+
+- **A prestação de contas ganhou uma nota explicativa.** Quem emite o relatório passa a poder escrever um texto livre de observações sobre aquele período, sem precisar anexar arquivo nenhum. O texto é recuperado e pode ser editado ao gerar o relatório do mesmo período de novo, e aparece no PDF numa seção própria, chamada "Notas Explicativas".
+- **Agora também dá para emitir a prestação de contas pela tela de Relatórios**, escolhendo um período novo. Antes só era possível pelo menu Exportar da tela de Movimentações — esse caminho continua funcionando. Os documentos complementares, que já existiam, seguem iguais.
+
+---
+
+## [1.44.1] — 2026-08-17
+
+### Adicionado
+
+- **Lançamentos de transferência agora aparecem identificados na lista de Movimentações.** Antes, só dava para saber que um lançamento era uma transferência entre contas abrindo os detalhes dele. Agora um selo "Transferência" aparece ao lado do título — na tabela do computador, nos cartões do celular e também no bloco de movimentações vinculadas da tela de Projetos. Receitas e despesas continuam exibidas como antes.
+
+---
+
+## [1.44.0] — 2026-08-16
+
+### Modificado
+
+- **Ajuste interno na API externa de integração.** Quatro tipos de falha de infraestrutura (fora do controle de quem consome a API) passaram a ficar registrados no relato de uso, com uma marca própria que os distingue de credencial recusada e de parâmetro inválido. Sem efeito visível no uso do dia a dia.
+
+---
+
+## [1.43.1] — 2026-08-15
+
+### Modificado
+
+- **Ajuste interno de auditoria nos lembretes de acesso.** Toda execução da rotina de lembretes — inclusive quando ela para por tempo, por limite de rodadas ou por falha ao ler a fila — passou a deixar registro. Sem efeito visível no uso do dia a dia.
+
+---
+
+## [1.43.0] — 2026-08-15
+
+### Corrigido
+
+- **Quem ainda não criou senha agora recebe o lembrete de acesso no mesmo dia, mesmo quando muita gente é cadastrada de uma vez.** Antes, ao cadastrar um número grande de pessoas, o envio dos lembretes podia ser interrompido no meio: parte das pessoas recebia, parte ficava só para o dia seguinte, sem nenhum aviso de que isso tinha acontecido. Agora a rotina envia em levas, dentro do tempo disponível, e retoma sozinha até avisar todo mundo que está pendente.
+- **Se o disparo diário dos lembretes falhar, uma segunda tentativa entra em ação dentro de uma janela de horário**, para reduzir o risco de um dia inteiro passar sem ninguém ser avisado.
+
+---
+
+## [1.42.0] — 2026-08-15
+
+### Corrigido
+
+- **Na revisão de uma importação de lançamentos, o aviso de "nenhum ZIP foi enviado" não aparece mais quando um ZIP de comprovantes está anexado na tela.** O aviso contradizia o que o usuário acabara de fazer; agora ele só aparece quando realmente não há ZIP escolhido, com um texto mais claro.
+- **Os comprovantes de um reembolso ou pedido de pagamento agora aparecem também no lançamento financeiro gerado.** Antes, esses lançamentos não mostravam o indicador de anexo na lista de Movimentações, mesmo tendo documentos — e a prestação de contas chegava a imprimir "Comprovante indisponível". Agora o indicador aparece e o comprovante entra na prestação de contas.
+- **18 lançamentos já existentes, que tinham perdido o indicador de anexo pelo mesmo motivo, foram corrigidos.**
+
+### Melhorado
+
+- **Anexar ou remover um documento pela tela do lançamento agora atualiza a lista de Movimentações na hora**, sem precisar recarregar a página.
+
+---
+
+## [1.41.1] — 2026-08-15
+
+### Corrigido
+
+- **A tela de conferência agora avisa quando o arquivo já foi importado antes.** Esse aviso aparecia ao escolher o arquivo e sumia na etapa seguinte, onde o botão prometia importar lançamentos mesmo quando nenhum seria criado. Agora o aviso acompanha até a confirmação, e o botão diz o que realmente vai acontecer.
+- **Corrigido o texto que dizia que acentos não importam ao procurar o comprovante no ZIP.** Acento faz parte do nome do arquivo e precisa ser igual ao que está escrito na planilha; o texto agora explica a regra corretamente.
+- Ajuste de redação no aviso de comprovantes que ficaram sem arquivo.
+
+---
+
+## [1.41.0] — 2026-08-15
+
+### Adicionado
+
+- **Agora dá para enviar os comprovantes junto com a planilha, num arquivo ZIP.** Antes, a coluna `comprovante` só aceitava endereços da internet — quem tinha os comprovantes no próprio computador precisava anexar um por um, depois de importar. Agora basta escrever o nome do arquivo na planilha e enviar um ZIP com os comprovantes.
+- **A mesma coluna aceita os dois formatos.** Valor que começa com `http` continua sendo tratado como link; qualquer outro valor é procurado como nome de arquivo dentro do ZIP. Dá para misturar os dois na mesma linha.
+- **Comprovante que não for encontrado não trava a importação:** o lançamento é criado normalmente e o sistema informa, **pelo nome**, quais arquivos não foram localizados — além de listar os arquivos do ZIP que nenhuma linha citou.
+- **Corrigir é simples:** ajuste o nome do arquivo, refaça o ZIP e envie de novo a mesma planilha com o ZIP novo. O sistema anexa apenas o que faltava e não cria nenhum lançamento repetido.
+- **A confirmação da importação passou a dizer em qual organização os lançamentos vão entrar**, para evitar importar na organização errada por engano.
+
+### Corrigido
+
+- **Nome de arquivo com espaço deixou de ser dividido em pedaços.** A separação de vários comprovantes na mesma linha usava o espaço como separador, o que quebrava nomes como `Nota Fiscal (NF).pdf`. Agora os separadores são vírgula, ponto-e-vírgula e barra vertical.
+
+---
+
+## [1.40.1] — 2026-08-15
+
+### Corrigido
+
+- **Quem importa uma planilha agora recebe um aviso quando a importação termina, falha ou termina com linhas recusadas.** Antes, quem saía da tela de importação não ficava sabendo do resultado.
+
+### Segurança
+
+- **O processamento das importações em segundo plano passou a exigir credencial interna do sistema**, reforçando o controle de acesso a essa rotina.
+
+---
+
+## [1.40.0] — 2026-08-15
+
+### Adicionado
+
+- **A importação de lançamentos por planilha agora roda em segundo plano.** Antes, planilhas grandes (acima de cerca de 300 linhas) podiam travar no meio da importação: parte dos lançamentos já tinha entrado, e reimportar o mesmo arquivo duplicava tudo o que já havia sido importado. Agora a tela responde na hora, o usuário pode sair, e a importação continua sendo processada aos poucos.
+- **Reenviar o mesmo arquivo de uma importação interrompida continua de onde parou, sem duplicar o que já entrou.**
+- **Nova aba "Histórico" na tela de importação**, mostrando o andamento (quantas linhas de quantas já foram processadas), o resultado final e um relatório para baixar com as linhas recusadas.
+- **Limite de 5.000 linhas por arquivo**, com aviso claro pedindo para dividir a planilha em partes menores quando esse limite é ultrapassado.
+
+---
+
+## [1.39.1] — 2026-08-14
+
+### Corrigido
+
+- **Corrigido o texto exibido nos campos protegidos de dados bancários, na tela de edição.** Antes, aparecia uma frase dizendo que o usuário não tinha permissão para ver aquele dado — mesmo para quem tinha permissão. Agora o texto explica que o dado está guardado com segurança, aparece parcialmente na tela, e só é alterado se um valor novo for digitado no campo.
+
+---
+
+## [1.39.0] — 2026-08-14
+
+### Corrigido
+
+- **O centro de custo informado num pedido de pagamento agora chega até o lançamento financeiro gerado quando o pedido é aprovado.** Antes, esse gasto aparecia como "sem centro de custo" nos relatórios e no orçamento, mesmo quando o centro de custo tinha sido informado corretamente no pedido.
+- **13 pagamentos de uma organização, que haviam perdido o centro de custo por esse motivo, foram corrigidos retroativamente.** Os relatórios de julho e agosto dessa organização já refletem a classificação correta.
+
+### Adicionado
+
+- **Quem faz a gestão financeira agora pode corrigir o centro de custo de um pedido de pagamento ou reembolso depois de enviado**, informando o motivo da correção, que fica registrado.
+- **A correção atualiza também os lançamentos financeiros já criados a partir daquele pedido**, inclusive os que já foram pagos.
+- **A correção do centro de custo nunca aprova nem reprova a solicitação sozinha.** Quando ela muda quem está apto a aprovar aquele pedido, os votos de aprovação que só valiam pelo centro de custo antigo deixam de contar, e essas pessoas são avisadas para decidir de novo.
+
+---
+
+## [1.38.2] — 2026-08-14
+
+### Adicionado
+
+- **Agora dá para excluir uma solicitação salva como rascunho** — vale para pedido de pagamento e para reembolso, e é o próprio solicitante quem pode excluir.
+- **A confirmação mostra o nome da solicitação, o valor e quantos anexos serão apagados junto**, e avisa que os dados bancários guardados também serão removidos.
+- **A exclusão é definitiva:** apaga a solicitação, os anexos, os arquivos e os dados bancários guardados. Não é possível desfazer.
+
+---
+
+## [1.38.1] — 2026-08-14
+
+### Corrigido
+
+- **Corrigida a edição de despesas por transferência com CPF do titular preenchido.** Desde que os dados bancários passaram a ficar protegidos, a tela de edição não reconhecia esse valor protegido e o recusava como se tivesse sido digitado errado, mostrando "CPF do titular inválido" mesmo para quem só queria mudar o título ou outro dado sem mexer no CPF. Agora a edição salva normalmente, e o dado protegido continua guardado como estava.
+- **Os campos protegidos (chave Pix, banco, agência, conta, CPF do titular) aparecem bloqueados na edição, com indicação de que estão protegidos**, e um botão para substituir o valor por um novo — com opção de desfazer antes de salvar.
+- **Esvaziar um dado protegido agora pede confirmação explícita**, porque a remoção é definitiva.
+- **Ao editar um lançamento recorrente aplicando a mudança a toda a série, os dados de pagamento deixaram de ser propagados** — cada lançamento mantém os seus, já que o favorecido pode ser diferente em cada um.
+- **Ao editar um lançamento recorrente para toda a série, os dados bancários deixaram de ser copiados para os demais lançamentos** — cada um mantém os seus próprios dados de pagamento.
+
+---
+
+## [1.38.0] — 2026-08-14
+
+### Adicionado
+
+- **Agora dá para adicionar várias pessoas de uma vez à equipe de um projeto.** Selecione todas de uma vez e escolha um único papel para o grupo — para atribuir papéis diferentes, faça a operação em duas vezes.
+- **Se alguma pessoa não puder entrar, as demais entram normalmente.** O sistema mostra, pessoa por pessoa, quem entrou na equipe e por que alguma eventualmente não entrou.
+
+---
+
+## [1.37.0] — 2026-08-14
+
+### Adicionado
+
+- **Cada projeto agora declara como é financiado.** Ao criar ou editar um projeto, escolha entre "custeado pelo caixa geral da organização" e "tem recursos próprios".
+- **Projetos com recursos próprios mostram as receitas no financeiro do projeto**; os custeados pelo caixa geral mostram só as despesas.
+- **Se aparecer uma receita vinculada a um projeto declarado sem recursos próprios, o sistema mostra os valores normalmente e avisa para revisar a configuração** — o dado real tem prioridade sobre a declaração.
+- **Os projetos que já existiam foram classificados automaticamente**, de acordo com o que já tinham. Nada muda de aparência para quem não mexer em nada.
+
+---
+
+## [1.36.2] — 2026-08-14
+
+### Corrigido
+
+- **O financeiro do projeto agora atualiza na hora ao vincular, trocar ou remover o projeto de um lançamento, pela tela de Movimentações.** Antes, era preciso recarregar a página ou esperar cerca de um minuto para o valor aparecer, o que dava a impressão de que a vinculação não tinha funcionado.
+- **Vale também para o campo de projeto no detalhe de reembolsos e de pedidos de pagamento.**
+
+---
+
+## [1.36.1] — 2026-08-14
+
+### Corrigido
+
+- **Correção interna no registro de uso da API de integração.** Antes, uma tentativa de acesso recusada por credencial (chave revogada, segredo errado ou chamada sem credencial) não deixava nenhum registro — só o uso legítimo era registrado. Agora toda tentativa fica registrada, e quando a credencial é reconhecida o registro indica qual foi. Nada muda para quem usa a API: os mesmos códigos e as mesmas respostas de sempre.
+
+---
+
+## [1.36.0] — 2026-08-14
+
+### Adicionado
+
+- **A organização agora pode liberar, para um sistema parceiro, a leitura do próprio resumo financeiro** — sem dar acesso à plataforma e sem criar usuário para ninguém de fora.
+- **A credencial de acesso é gerada e revogada pela própria OSC**, em [Configurações → Integrações](/configuracoes/integracoes/). Não depende do suporte da RIT.
+- **Nenhum dado individual é exposto:** o sistema parceiro só recebe totais — receitas, despesas, resultado e composição por categoria ou projeto. Lançamento, contraparte, dados bancários e comprovantes continuam fora do alcance dessa integração, como já acontece na Página Pública.
+
+---
+
+## [1.35.0] — 2026-08-11
+
+### Segurança
+
+- **Os dados bancários de quem recebe um pagamento passam a ser guardados protegidos.** CPF do titular, chave Pix, banco, agência e conta ficam cifrados — quem consultar a base de dados por fora do aplicativo não encontra mais esses números.
+- **Quem tem permissão para pagar continua vendo tudo, como sempre viu**, na mesma tela e no mesmo lugar: no lançamento, no pedido de pagamento e no reembolso.
+- **Quem não tem permissão para pagar passa a ver apenas os últimos dígitos**, o suficiente para conferir de qual conta se trata, sem expor o número inteiro.
+- **Nada se perde e nada precisa ser reconfigurado.** Os dados existentes foram convertidos, as telas continuam iguais e nenhuma configuração precisa ser revista.
+- **Quem só edita um registro não destrói o que não pode ver.** Alterar a descrição ou o valor de um lançamento sem mexer nos dados bancários preserva os dados originais intactos, mesmo para quem os vê mascarados.
+- **A exportação de dados da organização segue a mesma regra:** leva os dados bancários completos só para quem teria direito de vê-los na tela.
+
+---
+
+## [1.34.0] — 2026-08-11
+
+### Adicionado
+
+- **Agora existe uma permissão própria para pagar, separada da de criar e editar lançamentos.** Ela vale para marcar um lançamento como pago e para marcar uma parcela de pedido de pagamento como paga.
+- **Nada muda para quem não mexer nos cargos.** Todo cargo que já podia pagar continua podendo, sem precisar reconfigurar nada.
+- **Quem quiser separar quem registra despesas de quem libera dinheiro já pode.** Basta ir em Cargos e permissões e tirar a permissão de pagar do cargo desejado — a pessoa continua registrando e editando lançamentos normalmente, mas não confirma pagamentos.
+- **A regra também vale para a conciliação do extrato bancário.** Confirmar um pagamento por ali é uma forma de registrar que o dinheiro saiu, então exige a mesma permissão.
+
+---
+
+## [1.33.1] — 2026-08-11
+
+### Segurança
+
+- **Quem pede a exclusão dos próprios dados passa a ter apagados também os dados bancários informados em reembolsos já pagos:** CPF do titular, chave Pix, banco, agência e conta.
+- **Os reembolsos continuam no histórico da organização**, com valor, descrição, datas, comprovantes e aprovações — nada da prestação de contas se perde.
+- **Reembolsos ainda não pagos mantêm os dados bancários**, para que a organização consiga concluir a transferência. Esses dados são apagados depois, pelo prazo normal de descarte.
+
+---
+
+## [1.33.0] — 2026-08-11
+
+### Adicionado
+
+- **Os dados bancários de quem recebe um pagamento passam a ser apagados automaticamente depois de um prazo**, contado a partir da conclusão do pagamento. Vale para lançamentos, pedidos de pagamento e reembolsos.
+- **Cada organização escolhe o prazo** em Configurações › Contas Bancárias, entre 30, 90, 180 e 365 dias. O padrão é 90 dias — quem não mexer em nada se comporta como 90 dias.
+- **Antes de salvar, a tela mostra quantos registros já estariam vencidos** com o prazo escolhido.
+- **O que é apagado:** CPF do titular, chave Pix, banco, agência, conta e dígito. **O que permanece:** valor, descrição, datas, categoria, centro de custo, projeto, anexos, situação e o nome de quem recebeu. O histórico contábil e a prestação de contas não se perdem.
+- **Ao abrir um registro cujos dados já foram apagados, a tela explica o que aconteceu** — os dados bancários foram removidos por já terem cumprido sua finalidade. Não é erro.
+
+### Observações de uso
+
+- **Pagamentos ainda não concluídos nunca são tocados**, por mais antigos que sejam — esses dados ainda vão ser usados.
+- **Por que a mudança:** esses dados existem para fazer a transferência e, cumprida essa finalidade, não precisam continuar guardados — sobretudo porque quem recebe muitas vezes não tem conta no sistema para pedir a remoção por conta própria.
+
+---
+
+## [1.32.1] — 2026-08-11
+
+### Segurança
+
+- **Os dados bancários de quem recebe um pagamento saíram do histórico de alterações.** CPF, chave Pix, banco, agência e conta do favorecido não são mais guardados no histórico de lançamentos, pedidos de pagamento e reembolsos. Esses dados servem para fazer a transferência — não precisam ficar registrados a cada alteração.
+- **O histórico continua completo no que importa para conferência:** ele segue mostrando que os dados de pagamento foram alterados, por quem e quando, e o nome do favorecido continua visível.
+- **Os registros antigos também foram limpos**, sem que nenhuma linha do histórico se perdesse.
+- **Nada muda nas telas.** Os dados bancários continuam aparecendo normalmente no lançamento, no pedido de pagamento e no reembolso.
+
+---
+
+## [1.32.0] — 2026-08-11
+
+### Adicionado
+
+- **Contato de proteção de dados da organização.** Nas configurações da organização passa a existir um campo opcional para informar um e-mail — e, se quiser, o nome da pessoa responsável — para assuntos de dados pessoais. Serve para quem teve dados cadastrados pela organização (fornecedores, prestadores, participantes de projeto, beneficiários) pedir acesso, correção ou exclusão; essas pessoas normalmente não têm conta no sistema.
+- **Quando preenchido, esse contato aparece na página pública de transparência da organização.** Por isso, prefira um e-mail institucional — a tela avisa antes de salvar. Se não preencher, nada muda e nada aparece.
+- **Não é o mesmo campo que o e-mail institucional da organização.**
+
+---
+
+## [1.31.0] — 2026-08-10
+
+### Adicionado
+
+- **A organização pode exigir mais de duas aprovações.** O número de aprovações necessárias para um pedido de pagamento ou reembolso aceitava apenas 1 ou 2. Agora vai de 1 até a quantidade de pessoas aptas a aprovar na própria organização — a mesma régua já usada para as reprovações. Quem não mexer na configuração não tem nenhuma mudança.
+
+---
+
+## [1.30.0] — 2026-08-10
+
+### Adicionado
+
+- **Prestações de contas com mais opções.** Cada documento da lista passa a ter três ações: baixar, gerar de novo e apagar o arquivo.
+- **Gerar de novo ficou sempre disponível.** O documento é montado com os dados de hoje, e o arquivo que já existe não é substituído.
+- **Apagar remove só o arquivo.** O registro de que aquela prestação foi gerada, quando e por quem continua na lista, e o documento pode ser gerado outra vez. Antes de apagar, a confirmação mostra exatamente qual documento foi escolhido — período, data e hora da geração e quem gerou —, útil quando há várias prestações do mesmo mês.
+- **A lista também passou a mostrar a hora da geração e o intervalo de datas coberto por cada documento.**
+
+---
+
+## [1.29.0] — 2026-08-10
+
+### Adicionado
+
+- **Nada muda para quem não configurar: por padrão, uma reprovação continua barrando o pedido, exatamente como antes.** As novidades abaixo só entram em ação se a organização decidir exigir mais de uma reprovação.
+- **A organização passa a escolher quantas reprovações são necessárias para barrar um pedido de pagamento ou reembolso.** Antes, uma única reprovação encerrava a solicitação na hora, mesmo havendo outras pessoas aptas a votar. Agora, na configuração do fluxo de aprovação, dá para exigir mais de uma — até o número de pessoas aptas a aprovar na própria organização. O padrão continua sendo uma.
+- **Enquanto o número exigido não é alcançado, a solicitação continua aguardando aprovação** e as demais pessoas seguem podendo votar. As telas do pedido e do reembolso mostram quantas reprovações já existem e quantas faltam. O solicitante só é avisado quando houver decisão definitiva — não recebe aviso de reprovação enquanto a solicitação ainda está viva.
+- **O voto é definitivo** e a tela avisa isso antes de confirmar, tanto para aprovar quanto para reprovar.
+- **Se o pedido chegar a um ponto em que não há mais como reunir as aprovações necessárias** — porque não restam pessoas suficientes sem voto —, ele é encerrado como reprovado, em vez de ficar parado para sempre. O caminho de corrigir e reenviar continua o mesmo.
+- **Quando houver mais de uma reprovação, o motivo apresentado ao solicitante reúne os motivos de todos os votos contrários.**
+
+---
+
+## [1.28.0] — 2026-08-10
+
+### Adicionado
+
+- **Nada muda até a sua organização escolher um prazo: por padrão, nenhum documento é descartado.** As novidades abaixo só entram em ação depois que alguém definir, nas Configurações, por quanto tempo a organização quer guardar os documentos de prestação de contas.
+- **Prazo de guarda para os documentos de prestação de contas.** Em Configurações → Relatórios, a organização passa a poder definir por quanto tempo guarda os PDFs de prestação de contas: sem descarte (padrão), 1, 2, 3, 5 ou 10 anos. Antes de salvar, a tela mostra quantos documentos já estariam vencidos por aquele prazo e quantos vencem nos próximos 30 dias.
+- **Uma nova página com o histórico de prestações de contas, em Relatórios.** Antes, o único acesso a esses documentos era o link enviado por e-mail. Agora a organização vê a lista completa — com período, data de geração e situação — e pode baixar. Documento cujo arquivo foi descartado aparece identificado como tal, com a data do descarte, e oferece gerar de novo, com o aviso de que o novo documento reflete os dados atuais e não é uma cópia do que foi entregue na época.
+- **Aviso por e-mail antes de qualquer descarte.** Quando um prazo estiver configurado, o sistema avisa com 30 dias de antecedência, listando o que será descartado e permitindo baixar antes. Se o prazo for alterado, o aviso anterior perde a validade e a contagem recomeça — nenhum documento é descartado antes do que foi comunicado. O registro da prestação nunca é apagado: ele permanece na lista, indicando que o arquivo foi descartado.
+
+---
+
+## [1.27.2] — 2026-08-10
+
+### Corrigido
+
+- **Endurecimento das proteções de segurança do aplicativo.** Sem efeito visível no uso do dia a dia.
+
+---
+
+## [1.27.1] — 2026-08-10
+
+### Corrigido
+
+- **O resumo do mês no Painel deixou de somar valores que não representam dinheiro que entrou ou saiu.** Lançamentos **cancelados** e o **par de estorno** (quando um lançamento é estornado, o sistema cria um lançamento contrário para anulá-lo — os dois somam zero) estavam sendo contados e inflavam o total: um resumo de mês podia exibir receita e despesa que não existiram. Agora esses valores ficam de fora.
+- **O resumo do mês passou a usar o mesmo critério de data das demais telas.** Um lançamento **já pago** entra pelo mês do **pagamento**; um lançamento **ainda em aberto** entra pelo mês do **vencimento**. O bloco continua mostrando o mês inteiro — o que já aconteceu e o que ainda vai acontecer —, mas cada lançamento é atribuído ao mês certo.
+
+---
+
+## [1.27.0] — 2026-08-10
+
+### Modificado
+
+- **O período da tela de Movimentações passou a seguir a data em que o dinheiro se moveu.** Antes, o recorte usava sempre a data de vencimento. Agora, um lançamento **já pago** entra pelo mês do **pagamento**; um lançamento **ainda em aberto** continua entrando pelo mês do **vencimento**. O motivo é que o sistema trabalha em regime de caixa: uma conta com vencimento em julho, paga em agosto, aparecia em julho — e era somada ao bloco "Realizado" de julho, atribuindo àquele mês um dinheiro que só saiu em agosto. Agora ela aparece em agosto, no mês em que o pagamento aconteceu. **O que você precisa saber:** um mês já conferido pode mudar se uma conta dele for paga com atraso — ela sai do mês de vencimento e passa para o mês do pagamento. Em compensação, os totais de Movimentações e os de Relatórios passam a bater para o mesmo período, o que antes não acontecia.
+- **As exportações em PDF e Excel passaram a informar, no cabeçalho, qual critério de período foi usado.**
+
+---
+
+## [1.26.8] — 2026-08-10
+
+### Corrigido
+
+- **Os cartões de resumo de Pedidos de pagamento e de Reembolsos voltaram a bater com a lista.** Os números do topo da tela contavam de um jeito e a lista mostrava de outro — dava para ver "1 aprovado aguardando pagamento" e, ao clicar, abrir uma lista vazia. Agora cada recorte usa a data do próprio evento que ele representa: o que foi **solicitado no período** conta pela data da solicitação, o que foi **pago no período** conta pela data do pagamento, e as filas de pendências mostram o total pendente, sem corte por período — com esse aviso no próprio cartão. O número do cartão é sempre igual à quantidade de itens da lista que ele abre.
+
+---
+
+## [1.26.7] — 2026-08-10
+
+### Corrigido
+
+- **Cancelar o último lançamento de um pedido de pagamento não deixa mais a solicitação presa.** Antes, o pedido continuava em "aprovado, aguardando pagamento", esperando um pagamento que não podia mais acontecer. Agora, quando o pedido (ou o reembolso) fica sem nenhum lançamento ativo, ele é encerrado junto — e nunca é encerrado se alguma parcela já tiver sido paga.
+- **A confirmação avisa antes de encerrar a solicitação inteira.** Ao cancelar o último lançamento ativo de um pedido ou de um reembolso, a tela informa que a solicitação será encerrada junto e que a ação não tem volta.
+- **Pedido sem lançamento ativo não oferece mais o botão de confirmar pagamento.** A ação não teria como funcionar; se a confirmação for tentada mesmo assim, a recusa vem com o motivo em texto legível.
+
+---
+
+## [1.26.6] — 2026-08-10
+
+### Corrigido
+
+- **Voltou a ser possível cancelar lançamento de pedido de pagamento ou de reembolso que ainda não tem conta financeira definida.** Nesses casos a conta só é escolhida na hora de pagar, mas a tentativa de cancelar falhava e a tela dizia apenas que o lançamento havia sido "ignorado". Agora o cancelamento funciona normalmente; a exigência de informar a conta continua valendo para lançamento já pago.
+- **As telas de lançamentos passaram a distinguir três resultados diferentes numa ação em lote: concluído, recusado por regra e falhou.** Antes, qualquer falha — sessão expirada, erro do sistema — era contada como "ignorado", que é a palavra usada para "não era elegível", e ficava impossível saber o que tinha acontecido. Agora o motivo real chega à tela.
+
+---
+
+## [1.26.5] — 2026-08-08
+
+### Corrigido
+
+- **O tempo de espera de quem foi readicionado à organização passou a contar do momento certo.** Quando alguém é removido e depois readicionado, o sistema reaproveita o registro anterior para preservar o histórico — mas a tela de Usuários e os lembretes automáticos ainda contavam o tempo de espera a partir da entrada original, e não do momento em que a nova pendência começou. Na tela, a pessoa readicionada hoje podia aparecer como "aguardando há vários dias" e até receber o destaque de "sem resposta" logo de cara, acusando-a de ignorar lembretes que nunca haviam sido enviados. Nos lembretes, o efeito era mais sério: um registro antigo readicionado hoje era lido como pendência anterior à criação da régua e ficava **fora de toda a série de lembretes** — a pessoa não receberia nenhum. Agora a contagem começa quando a pendência começa, nos dois lugares.
+- **Quem está apenas desativado voltou a poder ser gerenciado na equipe do projeto.** A identificação de membro desativado na equipe de projeto tinha vindo no mesmo formato de quem já saiu da organização, o que também removia o seletor de papel e o botão de remover. Só que desativar é reversível: agora o membro desativado aparece identificado como tal **e** mantém os controles de gerenciamento. Quem saiu da organização continua apenas identificado, sem controles.
+
+---
+
+## [1.26.2] a [1.26.4] — 2026-08-08
+
+### Corrigido
+
+- **Manutenção interna dos arquivos sem uso e das rotinas automáticas.** A rotina que remove arquivos que ficaram no armazenamento sem nenhum registro associado voltou a funcionar de fato — e passou a reconhecer corretamente os documentos que devem ser preservados, como o relatório de encerramento de projeto. As rotinas automáticas também deixaram de relatar sucesso quando não conseguem concluir o trabalho: agora informam claramente o que falhou. Sem efeito visível no uso do dia a dia.
+
+---
+
+## [1.26.1] — 2026-08-08
+
+### Corrigido
+
+- **Quem já usa o sistema em outra organização voltou a aparecer como acesso pendente onde ainda não entrou.** Na tela de Usuários, quem tinha acesso concluído em uma organização deixava de ser mostrado como pendente em outra organização onde o primeiro acesso ainda não havia sido concluído — o administrador dessa segunda organização não via a pendência, mesmo com a pessoa recebendo normalmente os lembretes por e-mail. Corrigido: a pendência agora é sempre a da organização que está sendo vista.
+
+---
+
+## [1.26.0] — 2026-08-08
+
+### Adicionado
+
+- **A tela de Usuários mostra quem está aguardando o primeiro acesso e há quanto tempo.** Cada pessoa que ainda não criou a senha aparece com o tempo de espera ("aguardando há N dias"). Passados 14 dias — quando os lembretes automáticos já se esgotaram e só o administrador pode resolver —, a pessoa ganha um destaque de "sem resposta". No topo da tela, um resumo clicável leva direto para a lista de quem está nessa situação.
+- **Ações em lote na tela de Usuários.** É possível selecionar várias pessoas (ou todas as que estão no filtro atual) e aplicar de uma vez: reenviar o acesso, cancelar um acesso pendente, desativar, reativar ou remover da organização. Cada ação só vale para quem está na situação compatível — antes de confirmar, o sistema informa quantas pessoas serão afetadas e quantas serão ignoradas, e por quê. Durante a execução aparece o andamento ("12 de 52"), com a opção de interromper, e ao final um resumo pessoa a pessoa separando o que deu certo, o que foi recusado por regra e o que falhou. Reenviar o acesso em lote não consome o limite de "Esqueci a senha" da própria pessoa.
+
+---
+
+## [1.25.5] — 2026-08-07
+
+### Modificado
+
+- **Quem sai da organização continua aparecendo na equipe dos projetos de que participou.** A participação em um projeto é registro histórico: quando a pessoa deixa a organização, ela permanece listada na equipe, agora identificada como **ex-membro**, com o nome dela no lugar do rótulo genérico "Usuário". Ex-membros não podem receber novas atribuições, mas o histórico de quem trabalhou no projeto não se perde — vale inclusive para quem saiu antes desta versão.
+
+---
+
+## [1.25.4] — 2026-08-07
+
+### Modificado
+
+- **Ajuste interno de segurança nas mudanças de situação de usuário.** Reforço na proteção que garante que a situação de um usuário na organização só possa ser alterada pelo caminho oficial do sistema. Sem efeito visível no uso do dia a dia.
+
+---
+
+## [1.25.3] — 2026-08-07
+
+### Corrigido
+
+- **Os avisos automáticos de orçamento voltaram a ser enviados.** A rotina que acompanha o consumo do orçamento anual e avisa por e-mail quando uma linha se aproxima ou ultrapassa o limite não estava chegando ao destinatário. Corrigido e comprovado ponta a ponta: o aviso é disparado, o e-mail chega e não se repete no mesmo mês para a mesma linha.
+
+---
+
+## [1.25.2] — 2026-08-07
+
+### Modificado
+
+- **Correção no acionamento das rotinas automáticas.** Ajuste interno na forma como o sistema dispara as rotinas que geram os avisos de orçamento e a limpeza de arquivos sem uso. Sem efeito visível no uso do dia a dia.
+
+---
+
+## [1.25.1] — 2026-08-07
+
+### Modificado
+
+- **Ajuste no primeiro disparo dos lembretes de acesso pendente.** Refinamento de alcance do aviso para quem já estava com o acesso pendente antes de a funcionalidade existir. Sem efeito visível no uso do dia a dia.
+
+---
+
+## [1.25.0] — 2026-08-07
+
+### Adicionado
+
+- **Lembrete automático de acesso pendente.** Quem é cadastrado por um administrador e ainda não criou a senha passa a receber lembretes automáticos por e-mail, sempre com um link novo e válido: 2, 7 e 14 dias depois do cadastro. São três no total — o último avisa que é o último e lembra que a pessoa sempre pode pedir um novo acesso sozinha, pela opção "Esqueci a senha" na tela de login. Ninguém recebe mais de um lembrete por dia, mesmo participando de várias organizações, e quem já concluiu o acesso deixa de receber.
+
+---
+
+## [1.24.9] a [1.24.10] — 2026-08-07
+
+### Corrigido
+
+- **Ajustes finais no novo caminho de entrada.** Quem entrava pelo Google usando um link de acesso já aberto antes podia ver "Link inválido" mesmo estando com o acesso concluído — e, na segunda tentativa, entrava normalmente. Corrigido: quando o acesso já está concluído, o link antigo simplesmente deixa de atrapalhar e a pessoa segue direto para o sistema. Também corrigido o destino logo depois de concluir o acesso: em alguns casos a tela abria antes de a organização aparecer na barra do topo (mostrando "Sem OSC"), exigindo recarregar a página. Agora a organização já aparece de primeira, e o aceite da Política de Privacidade e dos Termos de Uso continua sendo pedido normalmente em todos os caminhos de entrada.
+
+---
+
+## [1.24.8] — 2026-08-07
+
+### Corrigido
+
+- **O aviso por e-mail de um novo feedback vinha com a mensagem cortada.** Mensagens mais longas eram interrompidas por reticências, sem indicação de que havia mais texto — quem lia o aviso podia responder sem conhecer o pedido inteiro. Corrigido: o e-mail agora traz a mensagem completa. A mensagem sempre esteve inteira na tela de feedbacks; o corte acontecia só no aviso por e-mail.
+
+---
+
+## [1.24.7] — 2026-08-07
+
+### Modificado
+
+- **"Esqueci a senha" passou a resolver também quem nunca criou uma senha.** Antes, quem tinha sido cadastrado por um administrador e perdeu (ou nunca recebeu) o e-mail de acesso não tinha como se desbloquear sozinho: precisava pedir a alguém da organização para reenviar o convite. Agora a mesma opção **Esqueci a senha**, na tela de login, resolve os dois casos — o sistema identifica a situação e envia o link certo: de redefinição de senha, para quem já tem acesso concluído, ou de primeiro acesso, para quem ainda não concluiu. Por segurança, a mensagem na tela é sempre a mesma, exista ou não uma conta para aquele e-mail.
+- **Entrar com o Google conclui o primeiro acesso na hora.** Quem foi cadastrado por um administrador e escolhe **Continuar com Google** com o mesmo e-mail já entra na organização, sem precisar do link do e-mail. O aceite da Política de Privacidade e dos Termos de Uso continua sendo pedido normalmente.
+- **A tela de login orienta quem ainda não criou senha.** Ao errar a senha, além do aviso comum, aparece a orientação de usar "Esqueci a senha" para receber o link de primeiro acesso — junto de um atalho para essa opção.
+
+### Corrigido
+
+- **Ninguém mais é levado para "criar uma organização" por engano.** Quem foi cadastrado por um administrador, entrou no sistema e ainda não concluiu o primeiro acesso via a tela de criação de organização, como se não pertencesse a nenhuma OSC — situação sem saída e confusa. Agora essa pessoa vê uma tela explicando o que falta, com um botão para receber um novo link de primeiro acesso no próprio e-mail. Vale também para quem já estava preso nessa situação.
+
+---
+
+## [1.24.6] — 2026-08-07
+
+### Corrigido
+
+- **Ajuste fino na correção anterior: desativar temporariamente uma pessoa não apaga mais suas atribuições.** A correção da versão anterior também removia a gestão de centro de custo e a designação de aprovador quando alguém era desativado — uma ação pensada para ser reversível ("Desativar" tem "Reativar" ao lado). Corrigido: agora essas atribuições só são removidas quando o vínculo da pessoa com a organização é encerrado de forma definitiva (saída, reprovação de acesso), nunca numa desativação temporária. Nenhuma organização tinha sido afetada por esse comportamento até aqui.
+
+---
+
+## [1.24.5] — 2026-08-07
+
+### Corrigido
+
+- **Centro de custo travava quando o gestor saía da organização e era recadastrado.** Ao encerrar o vínculo de um gestor de centro de custo e cadastrar a pessoa novamente com outro e-mail, o centro de custo ficava com um gestor "fantasma": a lista mostrava apenas "Usuário" no lugar do nome, o formulário de edição indicava "1 selecionado" sem mostrar quem era nem permitir desmarcar, e salvar sempre resultava em "Erro ao salvar" — sem saída pela interface. Corrigido: essas atribuições fantasmas foram limpas nas organizações afetadas, e a plataforma agora remove automaticamente a gestão de centro de custo (e a designação de aprovador nomeado) sempre que o vínculo de alguém com a organização é encerrado em definitivo, evitando que o problema volte a acontecer. A mesma situação foi corrigida também para aprovadores nomeados individualmente nas configurações de aprovação.
+
+---
+
+## [1.24.4] — 2026-08-05
+
+### Corrigido
+
+- **Não era possível anexar ou remover comprovante num reembolso ou pedido de pagamento rejeitado.** Ao tentar incluir um documento novo (a correção mais comum depois de uma reprovação — "faltou a nota fiscal") ou remover um existente durante o reenvio, a alteração não era salva, e o sistema ainda avisava "nenhuma alteração detectada", mesmo a pessoa tendo acabado de mexer no anexo. Corrigido — anexar ou remover comprovante agora funciona nos dois tipos de pedido, e já conta como alteração suficiente para reenviar. Se a gravação do anexo falhar por qualquer outro motivo, a pessoa agora vê um aviso claro em vez de a falha passar despercebida.
+
+---
+
+## [1.24.3] — 2026-08-05
+
+### Corrigido
+
+- **Reembolso reprovado podia ser reenviado sem nenhuma correção.** Bastava reabrir "Editar e reenviar" e enviar de novo, sem mudar nada, para o pedido voltar a aguardar aprovação — o que fazia os aprovadores votarem de novo à toa. Corrigido: agora o reenvio só é aceito se algo realmente mudou (incluindo troca de comprovante); sem alteração, aparece a mensagem "Nenhuma alteração detectada. Corrija a solicitação antes de reenviar." e o pedido continua rejeitado. Pedido de pagamento passou a ter a mesma verificação, que nunca tinha existido nele.
+
+---
+
+## [1.24.2] — 2026-08-05
+
+### Corrigido
+
+- **Reembolso rejeitado não podia ser corrigido e reenviado.** A tela oferecia "Editar e reenviar", o formulário abria e aceitava alterações, mas ao enviar aparecia apenas "Falha ao reenviar.", e o pedido ficava travado nesse estado sem saída pela interface. Corrigido — reembolso rejeitado agora pode ser editado e reenviado normalmente, igual ao que já acontecia com pedido de pagamento. Mensagens de falha no reenvio também ficaram mais específicas, em vez do aviso genérico anterior.
+
+---
+
+## [1.24.1] — 2026-08-05
+
+### Corrigido
+
+- **O atalho para "Novidades" levava a uma página que não existia.** O número da versão no rodapé, o item "Novidades" no menu do usuário e o item equivalente no "Mais" do celular abriam um endereço errado, mostrando uma página de erro em vez das novidades da versão. Corrigido — todos agora abrem a página correta.
+
+---
+
+## [1.24.0] — 2026-08-05
+
+### Adicionado
+
+- **Novidades da versão.** O número da versão no rodapé agora leva direto para esta página de Novidades, e ela também aparece no menu do usuário (e no "Mais", no celular). Quando existir uma versão publicada que você ainda não viu, um pequeno sinal discreto indica isso — sem interromper o que você está fazendo. De vez em quando, uma novidade mais importante (que muda algo na sua rotina) aparece também num aviso único, que some depois de você ler.
+
+---
+
+## [1.23.3] — 2026-08-05
+
+### Corrigido
+
+- **Valores em reais nos avisos do Painel voltaram ao formato brasileiro.** As mensagens das regras de pontos de atenção e os textos de calibração automática às vezes mostravam um número como "R$ 2,500.00" (formato americano) em vez de "R$ 2.500,00". Corrigido — todo valor em reais nesses textos agora usa sempre ponto de milhar e vírgula decimal.
+
+---
+
+## [1.23.2] — 2026-08-05
+
+### Corrigido
+
+- **Período personalizado em Relatórios não excluía mais o último dia por engano.** Um link de relatório com data de início e fim escolhidas manualmente podia mostrar um dia a menos em cada ponta do período — efeito mais visível ao abrir um link compartilhado, um favorito salvo, ou o **"Ver todos"** dos avisos do Painel, que às vezes deixava de fora o dia de hoje. Corrigido para sempre considerar o dia completo, do início ao fim.
+
+---
+
+## [1.23.1] — 2026-08-04
+
+### Corrigido
+
+- **O selo de atenção alta no topo do Painel agora conta certo.** O selo que aparece quando existe algum aviso de severidade alta contava só os avisos exibidos no bloco (no máximo 4); um dia com mais avisos que isso podia deixar o selo silencioso mesmo havendo algo importante fora da lista visível. Agora ele considera todos os avisos do período, mostrados ou não.
+
+---
+
+## [1.23.0] — 2026-08-04
+
+<!-- destaque: O Painel foi reorganizado: contas e resumo do mês no topo, gráfico de fluxo de caixa dos últimos 6 meses, pendências em três colunas e os pontos de atenção fechando a tela. -->
+
+### Modificado
+
+- **O Painel foi reorganizado para contar a história do mês em ordem, de cima para baixo.** Nenhuma informação foi adicionada ou removida — a mudança é só de organização e apresentação.
+  - No **cabeçalho**, um selo chama atenção quando há algum aviso importante em aberto, com um link direto para o bloco de avisos mais abaixo.
+  - Logo abaixo, as **contas** aparecem em modo compacto (uma linha por conta, com o total líquido sempre visível no rodapé, e rolagem interna quando há muitas contas) ao lado de um cartão único de **"Este mês"**, com o resultado do período em destaque.
+  - Em seguida, um **gráfico de fluxo de caixa dos últimos 6 meses**, mostrando a evolução de receitas e despesas mês a mês.
+  - Depois, três colunas resumindo **Pedidos de pagamento**, **Reembolsos** e **Projetos**.
+  - Por fim, os **pontos de atenção**, fechando a tela.
+
+---
+
+## [1.22.1] — 2026-08-04
+
+### Corrigido
+
+- **A janela de "últimos 30 dias" dos avisos do Painel podia mudar de um dia para o outro sem motivo aparente**, principalmente à noite — corrigido para sempre usar o dia do calendário local.
+- **Os links de aviso de categoria e de fornecedor voltaram a levar direto para os lançamentos correspondentes** em Movimentações, já filtrados — vinham caindo num link genérico para a lista inteira.
+- O link **"Ver todos"** do bloco de avisos passou a abrir sempre o mesmo recorte de 30 dias mostrado no Painel.
+- O rodapé do bloco de avisos agora avisa, para quem pode ajustar, que os avisos são configuráveis em Configurações.
+
+---
+
+## [1.22.0] — 2026-08-04
+
+### Adicionado
+
+- **O Painel ganhou um bloco de avisos**, reunindo em um só lugar os alertas mais relevantes da organização nos últimos 30 dias — visível para quem tem permissão de ver relatórios.
+  - As regras de pontos de atenção que já existiam na aba **Atenção** de Relatórios passaram a aparecer também aqui, sempre olhando para os últimos 30 dias (a aba Atenção continua respeitando o período que você escolher lá).
+  - **Nova regra: Déficit projetado.** Avisa quando a organização corre o risco de ficar com saldo negativo dentro dos próximos meses (padrão: 6 meses, ajustável entre 3, 6 e 12 em Configurações). Há dois níveis: um aviso mais grave quando **lançamentos já agendados** por si só levariam o saldo a negativo, e um aviso mais brando quando isso só acontece ao somar uma **estimativa** baseada no histórico recente — a mensagem sempre deixa claro qual dos dois é o caso.
+  - O bloco mostra até 4 avisos de cada vez, com um link **"Ver todos"** para a lista completa.
+  - Quem administra a configuração financeira da organização pode desligar cada aviso individualmente, em Configurações — o ajuste vale para toda a organização, não só para quem o desliga.
+
+---
+
+## [1.21.3] a [1.21.4] — 2026-08-04
+
+### Corrigido
+
+- **Entrar com o Google no primeiro acesso agora funciona.** Quem era adicionado por um administrador recebia o e-mail de convite, clicava no link, chegava na tela de primeiro acesso e escolhia **entrar com o Google** — e era devolvido à tela de login, sem nenhuma mensagem explicando o que tinha acontecido. Na prática, só dava para concluir o primeiro acesso **criando uma senha antes**; depois disso o Google passava a funcionar normalmente.
+  - Agora o primeiro acesso **é retomado sozinho** quando você volta do Google: o convite é concluído e você entra direto no aplicativo, sem precisar criar senha antes.
+  - A retomada só acontece se a conta do Google usada for **a mesma para quem o convite foi enviado**. Se você abrir o link de convite de outra pessoa no seu navegador, nada é aproveitado — o convite é descartado e você segue na sua própria conta.
+  - A tela de primeiro acesso também ganhou saídas visíveis: **continuar para o aplicativo** e **sair desta conta**, para quem chegar ali sem querer.
+
+- **Ao adicionar um usuário, a mensagem de erro agora diz o que realmente aconteceu.** Tentar cadastrar um e-mail que já é membro da organização devolvia "Não foi possível adicionar o usuário agora. Tente novamente em instantes." — texto que sugeria uma instabilidade passageira e convidava a tentar de novo, quando o motivo era permanente e tentar de novo nunca resolveria. Agora aparece **"Este e-mail já é membro da organização."**, e o mesmo vale para os avisos de permissão insuficiente e de organização não encontrada.
+  - A mesma correção alcança outras telas que dependiam dessas mensagens: **membros** (visão de superadministrador), **aprovar** e **recusar** solicitação de vínculo, o menu de ações de um membro, a criação de conta sem organização e o assistente de cadastro.
+
+---
+
+## [1.21.0] a [1.21.2] — 2026-08-03
+
+### Modificado
+
+- **A tela de Movimentações abre mostrando os lançamentos.** Antes era preciso rolar quase uma tela inteira de resumo antes de ver a primeira linha da tabela. O bloco de resumo foi reorganizado em dois cartões lado a lado — **Contas** à esquerda, **Resumo do período** à direita — e a primeira linha da tabela passou a aparecer bem mais acima.
+  - As contas agora aparecem em **um cartão só, uma linha por conta**, com ativos e passivos separados por um subtítulo discreto. A **lupa do Caça-diferenças continua em cada conta**, como antes.
+  - Quando a organização tem muitas contas, a lista **rola por dentro do cartão** em vez de empurrar a tabela para baixo — o resumo mantém a mesma altura tendo a OSC 4 ou 20 contas. O total consolidado (**Líquido**) fica fixo no rodapé do cartão, sempre visível.
+  - A busca por texto e os filtros passaram a dividir a mesma linha em telas amplas. Em celular, continuam empilhados.
+
+- **Os números do período agora separam o que já aconteceu do que ainda vai acontecer.** Este é o ajuste mais importante da entrega, e **muda o número que você via**: até aqui, "Receitas" e "Despesas" somavam num único valor os lançamentos já pagos **junto com** os pendentes e atrasados, sem avisar. Numa organização real, isso exibia R$ 59.900,00 como "Receitas" quando o que havia efetivamente entrado era R$ 28.750,00.
+  - Agora o cartão mostra uma pequena tabela com duas colunas: **Realizado** (lançamentos já pagos) e **Previsto** (pendentes e atrasados). O **Resultado** aparece apenas no realizado — resultado previsto seria especulação.
+  - Lançamentos estornados e cancelados continuam fora dos dois números, como já eram.
+  - **Por que os números desta tela podem não bater com os Relatórios:** o filtro de período de Movimentações recorta os lançamentos pela **data de vencimento** (é o que a tabela abaixo mostra), enquanto os Relatórios apuram pela **data de pagamento**. Um lançamento que vence em 30 de junho e é pago em 2 de julho aparece em junho aqui e conta em julho lá. Isso é proposital, e o cartão agora traz um aviso permanente informando o critério — o número do cartão sempre corresponde exatamente às linhas listadas logo abaixo dele.
+
+### Adicionado
+
+- **Novo recorte de período: "Ano até a data atual".** Cobre de 1º de janeiro até **hoje**, diferente de "Ano atual", que vai até 31 de dezembro e mistura lançamentos futuros no mesmo número. Disponível em **Movimentações** e em **Relatórios** (nos Relatórios, a comparação com o período anterior usa a janela de mesma duração imediatamente anterior). O período padrão das telas continua sendo **Mês atual**.
+
+### Corrigido
+
+- **Conta com saldo negativo agora fica em vermelho.** Uma conta comum (banco, caixa) que ficasse com saldo negativo aparecia com a mesma cor de uma conta positiva — só contas de passivo em dívida eram destacadas. Agora qualquer saldo negativo é sinalizado em vermelho, em **Movimentações, Painel e Relatórios**, para que a mesma conta não tenha cores diferentes em telas diferentes. Saldos positivos seguem sem cor (só o que exige atenção se destaca), e passivo com saldo a favor ("crédito") continua neutro, porque não é dívida.
+
+## [1.20.0] a [1.20.8] — 2026-08-03
+
+### Adicionado
+
+- **Página pública de transparência da OSC.** A organização agora pode publicar um endereço aberto, sem login, para mostrar à sociedade, a financiadores e a editais o que arrecadou e no que aplicou. A configuração fica em **Configurações → Página pública** e só aparece para quem já administra as configurações da OSC.
+  - **Nasce fechada.** Nenhuma organização tem página pública até ligar, e **todos os blocos de conteúdo começam desligados**. Publicar sem ligar nada mostra apenas o cabeçalho com o nome da OSC.
+  - **Quatro blocos, você escolhe quais.** *Quem somos* (nome, logo, missão e, se quiser, CNPJ, cidade, site e contato), *Panorama do período* (receitas, despesas e resultado), *De onde vem / para onde vai* (receitas por origem e despesas por categoria) e *Projetos* (nome, objetivo, situação e, se quiser, período e valores). Cada bloco ligado tem um único ajuste: **Resumido** ou **Detalhado**.
+  - **Endereço próprio, com QR code.** Você define o final do endereço, copia o link com um clique e baixa um QR code para mural, relatório impresso e redes. Também dá para **pré-visualizar** a página exatamente como o público vai vê-la, antes de publicar, e **despublicar** a qualquer momento com um clique — sem perder as escolhas de blocos.
+  - **Aparecer no Google é opcional** e vem desligado.
+  - **A página nunca mostra o mês em andamento.** O visitante escolhe entre recortes fixos: exercício corrente até o último mês fechado, últimos 12 meses fechados ou um exercício anterior inteiro. Não há intervalo personalizado — proposital, para que ninguém consiga estreitar o recorte até deduzir um lançamento específico.
+  - **O que a página nunca mostra, em nenhuma combinação:** lançamento individual, nome de pessoa, comprovantes e anexos, o relatório de prestação de contas, dados bancários, **saldo das contas**, CPF, RG, e-mail pessoal ou telefone, e nenhuma das telas internas de gestão (atenção, previsão, orçamento, conciliação, aprovações). Isso é garantido pelo sistema — não existe opção para ligar.
+  - **Dá para embutir a página no site da OSC** (inclusive em site feito em WordPress), e ela foi feita para ler bem no celular, já que o link costuma circular por WhatsApp.
+  - Toda mudança na configuração da página (publicar, despublicar, trocar o endereço, ligar/desligar bloco) fica registrada na auditoria, com quem fez e quando.
+
+### Corrigido
+
+- **Estornos deixaram de distorcer os números dos Relatórios.** Quando um lançamento era estornado, o sistema descartava o lançamento original mas **contava a devolução como se fosse uma nova receita** — então estornar uma despesa de R$ 420,00 inflava as receitas do período em R$ 420,00, e categorias de despesa chegavam a aparecer no gráfico de receitas. Agora o estorno é **neutro na apuração do período**: as duas pontas (o lançamento estornado e a devolução) ficam de fora dos totais de receitas, despesas e resultado.
+  - **Atenção — os números podem mudar em relação ao que você via antes.** Se a sua organização já registrou estornos, os totais de receitas (e, dependendo do caso, de despesas) de períodos passados podem aparecer **menores** do que apareciam. Os valores anteriores é que estavam errados; os de agora refletem o que de fato entrou e saiu.
+  - **O saldo das contas segue outra regra, de propósito.** No saldo e na conciliação, as duas pontas **continuam contando**, cada uma na sua data de pagamento — porque o dinheiro realmente saiu da conta e voltou depois. É assim que o saldo do sistema continua acompanhando o extrato do banco, inclusive no intervalo entre a saída e a devolução.
+  - A correção vale para toda a plataforma: Relatórios (visão geral, composição por categoria, extrato, previsão, alertas), painéis de projeto, orçamento anual e a nova página pública.
+
+## [1.19.2] — 2026-08-03
+
+### Corrigido
+
+- **Caixas de confirmação e de digitação agora seguem o visual do sistema.** Em quatro pontos do app (clonar um cargo, informar o motivo ao rejeitar uma solicitação ou uma revisão de orçamento, e remover um anexo de tarefa) essas caixas apareciam com o visual padrão do navegador em vez do padrão do RIT360 Financeiro. Agora todas usam o mesmo modal do restante do sistema — sem mudança no que cada uma faz, só na aparência.
+
+## [1.19.1] — 2026-08-03
+
+### Corrigido
+
+- **Status "Atrasado" agora se atualiza sozinho, todo dia.** Um lançamento pendente que vencia sem que ninguém marcasse como pago continuava aparecendo como "Pendente" até a próxima vez que alguém mexesse nele — mesmo já estando vencido há dias. Agora uma rotina diária confere os lançamentos pendentes vencidos e atualiza o status para **Atrasado** automaticamente, sem precisar de nenhuma ação manual. Vale para receitas e despesas.
+
+## [1.19.0] — 2026-08-02
+
+### Adicionado
+
+- **Código da movimentação nas listas de Pagamentos e Reembolsos.** Cada solicitação de pagamento ou reembolso passa a mostrar, abaixo da descrição, o código curto do lançamento financeiro gerado por ela (o mesmo formato já usado em Movimentações) — facilita localizar o lançamento correspondente sem precisar abrir o detalhe. Fica em branco enquanto a solicitação ainda não tem lançamento vinculado (rascunho, aguardando aprovação, rejeitada ou cancelada).
+- **Filtro de período nas listas de Pagamentos e Reembolsos.** As duas telas ganharam o mesmo filtro de período de Movimentações (mês atual, mês anterior, trimestre, semestre, ano, personalizado). Por padrão, mostram o **mês atual**. O filtro se aplica apenas às abas de histórico (aprovado e pago) — as abas que ainda precisam da sua atenção (aguardando aprovação, rascunho, rejeitado) continuam mostrando **tudo**, sem filtro de data, para nunca esconder algo que precisa ser resolvido. Sua última escolha de período fica lembrada para a próxima vez que você abrir cada tela.
+
+## [1.18.2] — 2026-07-29
+
+### Corrigido
+
+- **Usuário importado em lote ou adicionado manualmente agora recebe as permissões do papel escolhido.** Membros criados por importação de planilha ou pelo botão "Adicionar usuário" podiam ativar a conta sem nenhuma permissão, mesmo com um papel importante marcado (ex.: tesoureiro, administrador) — a pessoa entrava no sistema e não conseguia fazer quase nada. Corrigido: os dois fluxos agora concedem as permissões do papel corretamente desde a criação. Contas já criadas com esse problema foram regularizadas automaticamente.
+
+## [1.18.1] — 2026-07-29
+
+### Modificado
+
+- **Ajuste interno na gravação de papéis de usuário**, sem mudança perceptível na tela — preparação para a correção acima.
+
+## [1.18.0] — 2026-07-29
+
+### Corrigido
+
+- **Cargo personalizado agora vale em todo o sistema.** Quando o presidente da OSC criava um cargo personalizado (Configurações → Cargos e Permissões) e o atribuía a alguém, a lista de membros continuava mostrando "Voluntário" e a pessoa só recebia as permissões nas telas de Movimentações — em reembolsos, pedidos de pagamento, configurações, relatórios e demais áreas, o cargo personalizado não tinha efeito algum. Agora um cargo personalizado concede as permissões marcadas em **todo** o sistema, e a lista de membros passa a mostrar o nome real do cargo (e permite filtrar por ele). O editor de cargos ganhou também um grupo de permissões de **Projetos**.
+
+## [1.17.3] — 2026-07-27
+
+### Corrigido
+
+- **Importação de usuários em lote agora grava corretamente CPF e RG.** Ao importar uma lista de usuários (CSV ou XLSX), o CPF e o RG informados na planilha deixavam de ser salvos no cadastro, sem aviso de erro. Agora são gravados normalmente e, no caso raro de uma linha específica não conseguir salvar esses dados, o resumo da importação avisa qual usuário precisa ter o CPF/RG conferido manualmente.
+
+## [1.17.2] — 2026-07-27
+
+### Adicionado
+
+- **Importação de usuários em lote também aceita planilha XLSX.** Em Configurações → Usuários → Importar, além do CSV já existente, agora dá para enviar uma planilha Excel (.xlsx) com a lista de usuários. O sistema lê a primeira aba, usando a primeira linha como cabeçalho — a pré-visualização e a conferência dos dados funcionam do mesmo jeito para os dois formatos. O modelo em CSV continua disponível para quem preferir.
+
+## [1.17.1] — 2026-07-27
+
+### Adicionado
+
+- **Anexar documentos de escritório como comprovante.** Além de imagem, PDF, XML e ZIP, agora dá para anexar arquivos do Word, Excel, PowerPoint e dos formatos equivalentes do LibreOffice/OpenOffice (.docx, .xlsx, .pptx, .odt, .ods, .odp) como comprovante de um lançamento — tanto ao anexar manualmente quanto quando o comprovante é baixado automaticamente a partir de um link. Arquivos executáveis continuam bloqueados.
+
+### Melhorado
+
+- **PDF da prestação de contas mostra que o comprovante existe, mesmo quando não pode ser exibido na página.** Comprovantes em formatos que não dá para mostrar como imagem dentro do PDF (como os documentos de escritório citados acima) passam a aparecer com uma nota indicando que o arquivo está disponível no lançamento, em vez da mensagem "Comprovante indisponível" — que agora fica reservada apenas para os casos em que o comprovante realmente não pôde ser recuperado.
+
+## [1.17.0] — 2026-07-27
+
+### Adicionado
+
+- **Checklist "Primeiros passos" no Painel.** Quem administra a OSC vê, no topo do Painel, um card que orienta a configuração inicial — cadastrar uma conta bancária, adicionar a equipe e lançar o primeiro movimento — com cada item se marcando sozinho conforme é concluído, além de atalhos para revisar os dados da OSC e as categorias/centros de custo. O card desaparece automaticamente quando os passos principais terminam, e pode ser dispensado a qualquer momento. Detalhes em [Painel](/modulos/painel/#checklist-primeiros-passos-para-quem-administra-a-osc).
+
+## [1.16.0] — 2026-07-27
+
+### Adicionado
+
+- **Tour de boas-vindas.** No primeiro acesso, um tour rápido aponta as principais áreas do sistema — inclusive itens que costumam passar despercebidos, como o botão de Feedback e o Meu Perfil no menu do avatar — terminando com um link para este manual. Pode ser pulado a qualquer momento e revisto depois pelo item **Rever tutorial** (menu do avatar no computador; menu **Mais** no celular). Funciona em celular e computador. Detalhes em [Primeiros Passos](/primeiros-passos/#tour-de-boas-vindas).
+
+## [1.15.3] — 2026-07-27
+
+### Adicionado
+
+- **Resumo mais completo ao final da importação de lançamentos por CSV.** O aviso que chega quando a importação termina agora traz um resumo com o número de lançamentos criados, ignorados ou com erro, e comprovantes anexados. Quando algum comprovante não pôde ser baixado, o aviso também lista quais lançamentos ficaram sem o comprovante (com título, data e o motivo), para facilitar encontrá-los e anexar manualmente — até 15 itens listados, com um contador do restante quando houver mais.
+
+## [1.15.2] — 2026-07-27
+
+### Adicionado
+
+- **Inscrição estadual e municipal nos dados da organização.** Em Configurações → Organização, agora dá para informar a Inscrição Estadual e a Inscrição Municipal da OSC. Os dois campos são opcionais e aceitam qualquer texto (inclusive "ISENTO"), já que o formato varia conforme o estado e o município.
+
+## [1.15.0] — 2026-07-27
+
+### Adicionado
+
+- **Troca de e-mail de login.** Agora dá para alterar o e-mail usado para entrar no sistema:
+  - **Pelo seu perfil:** informe o novo e-mail e confirme pelo link enviado a esse endereço — o acesso só passa a ser o novo depois da confirmação. Enquanto isso, dá para cancelar, e o e-mail antigo recebe um aviso. (Funciona também para quem entra com o Google.)
+  - **Pelo administrador:** um administrador da organização pode corrigir o e-mail de acesso de um membro — útil para resgatar quem não recebeu o e-mail por causa de um endereço digitado errado — pela ação "Alterar e-mail de acesso" na lista de usuários.
+
+## [1.14.3] — 2026-07-26
+
+### Adicionado
+
+- **Baixar o PDF do relatório de encerramento mesmo depois de o projeto encerrar.** Antes, o botão para gerar o PDF de encerramento só existia enquanto o projeto estava na janela de encerramento; assim que ele era **concluído ou cancelado**, o botão sumia. Agora, em projetos já encerrados (com encerramento finalizado), presidente, tesoureiro e coordenadores do projeto conseguem baixar o **PDF de encerramento** direto das abas **Encerramento** e **Relatório** — no mesmo fluxo em segundo plano dos demais relatórios.
+
+### Melhorado
+
+- **Nomes de arquivo mais legíveis nos PDFs.** Os arquivos de relatório de **Movimentações** e de **relatório de projeto** passam a ser salvos e baixados com um nome que referencia o conteúdo (período, projeto e data) — por exemplo, `encerramento-<projeto>-<data>.pdf` — em vez de um código interno. Assim fica fácil reconhecer cada documento na pasta de downloads.
+
+---
+
+## [1.14.0] — 2026-07-26
+
+### Adicionado
+
+- **Solicitação de pagamento por gestor de centro de custo e por coordenador de projeto — restrita ao seu domínio.** Nas configurações de fluxo de aprovação de pagamentos e reembolsos, a organização pode permitir que o **gestor de centro de custo** solicite pagamentos **apenas do seu centro de custo**, e que o **coordenador de projeto** solicite **apenas do seu projeto**. Presidente e Tesoureiro seguem podendo solicitar sem restrição. Cada permissão é ligada por organização, conforme o estatuto.
+
+### Modificado
+
+- **Coordenador de projeto agora é restrito ao seu projeto ao solicitar pagamentos.** Antes, um coordenador podia solicitar pagamento para qualquer projeto; passa a criar pedidos **somente para os projetos que coordena**. Organizações que já permitiam o coordenador solicitar continuam permitindo — agora com esse escopo.
+
+---
+
+## [1.13.10] — 2026-07-26
+
+### Melhorado
+
+- **Exportações de PDF não travam mais a tela.** Ao exportar o PDF de **Movimentações** ou gerar o **relatório de projeto** (parcial ou de encerramento), o sistema agora responde na hora e monta o documento em segundo plano. Você acompanha numa página própria e o download começa sozinho quando o arquivo fica pronto — e ainda recebe o link por e-mail. Assim dá para fechar a aba e voltar depois, sem ficar esperando a geração terminar. (A prestação de contas já funcionava assim; agora os demais relatórios seguem o mesmo padrão.)
+
+---
+
+## [1.13.9] — 2026-07-26
+
+### Adicionado
+
+- **Gestor de centro de custo pode aprovar (opcional, por organização).** Nas configurações de fluxo de aprovação de pagamentos e reembolsos, a organização passa a poder permitir que o gestor de um centro de custo aprove os pagamentos e reembolsos **do seu próprio centro de custo**. Começa **desligado** — cada organização ativa conforme seu estatuto. Quando ligado, o gestor soma-se aos aprovadores já definidos (não substitui o número de aprovações nem os papéis).
+
+---
+
+## [1.13.8] — 2026-07-26
+
+### Adicionado
+
+- **Renomear cargos pela tela.** Em **Configurações → Cargos e permissões**, agora dá para **editar o nome de qualquer cargo** direto na interface (antes só era possível nos bastidores). Nos cargos padrão você troca o nome de exibição para o vocabulário da sua OSC — por exemplo, "Presidente" para "Diretor Presidente" — com a opção de **restaurar o nome de fábrica**. Cargos personalizados podem ser **renomeados** normalmente. A mudança aparece na hora em toda a plataforma, e não altera nenhuma permissão.
+
+---
+
+## [1.13.7] — 2026-07-26
+
+### Melhorado
+
+- **Menos espera após cada atualização do sistema.** Reorganizamos como o app é empacotado: as partes que raramente mudam (as bibliotecas de base) agora ficam separadas do código que atualizamos com frequência. Assim, quando publicamos uma novidade, o navegador só rebaixa a parte que de fato mudou — o resto continua reaproveitado do que já estava carregado, deixando a abertura mais rápida logo depois de cada atualização.
+
+---
+
+## [1.13.5] — 2026-07-26
+
+### Melhorado
+
+- **Abertura do sistema mais rápida.** Ao entrar, o app deixou de repetir consultas iguais e de fazê-las em fila — as informações de conta, organização e preferências agora carregam de uma vez e em paralelo. O resultado é uma tela inicial que aparece mais rápido, sem mudança nenhuma no que você vê ou em como troca de organização.
+
+---
+
+## [1.13.4] — 2026-07-26
+
+### Corrigido
+
+- **"Resumo do mês corrente" agora reflete de fato o mês.** O card do Painel vinha somando **todo o histórico** da organização por causa de uma falha no filtro de período; passou a considerar corretamente **apenas o mês corrente**. Os valores de Receitas, Despesas e Saldo do mês podem parecer menores do que antes — agora estão certos.
+
+### Melhorado
+
+- **Painel mais leve para carregar.** O resumo do mês passou a ser calculado no servidor (em vez de baixar toda a lista de movimentos para somar na tela), reduzindo o tempo de carregamento do Painel.
+
+---
+
+## [1.13.3] — 2026-07-26
+
+### Melhorado
+
+- **Enviar feedback e cadastrar usuário ficaram instantâneos.** As duas ações agora **respondem na hora**, assim que o essencial é salvo — o restante (avisar a equipe sobre o novo feedback; enviar o e-mail de acesso ao novo usuário) acontece em segundo plano, sem prender você na tela. Se o e-mail de acesso falhar, o registro da falha continua guardado e é possível reenviar normalmente.
+
+---
+
+## [1.13.2] — 2026-07-26
+
+### Melhorado
+
+- **Troca de telas mais fluida.** Ao navegar entre os menus (Painel, Movimentações, Projetos e demais), as telas visitadas há pouco reaproveitam os dados já carregados em vez de reconstruir tudo do zero — a navegação fica mais rápida e sem o "pisca". As informações continuam se atualizando normalmente após qualquer ação (criar, editar, aprovar, excluir).
+
+---
+
+## [1.13.1] — 2026-07-26
+
+### Melhorado
+
+- **Campo de telefone mais consistente, com seletor de país.** Onde você digita telefone (seu perfil, dados da organização e cadastros), o campo agora tem uma **máscara única e uniforme** e um **seletor de país** — com **Brasil já selecionado por padrão**, e a opção de escolher outro país quando precisar. Ao abrir um cadastro salvo, o país é reconhecido automaticamente pelo número. Números brasileiros seguem no formato de sempre `(DDD) 9XXXX-XXXX`.
+
+---
+
+## [1.12.4] — 2026-07-26
+
+### Melhorado
+
+- **Campo de documento aceita RG ou RNE.** No seu perfil, o campo agora se chama **"RG / RNE"** e deixa claro que estrangeiros podem informar o **RNE** (Registro Nacional de Estrangeiro) no mesmo lugar.
+- **Aviso de permissão de administrador mais elegante.** Ao conceder, em Cargos e Permissões, uma permissão que equivale a poder de administrador, o aviso de confirmação agora aparece como um diálogo do próprio sistema (no lugar do pop-up padrão do navegador), com Confirmar/Cancelar.
+
+---
+
+## [1.12.2] — 2026-07-26
+
+### Adicionado
+
+- **Gestor(es) à vista na lista de Centros de custo.** A aba "Centros de custo" (em Configurações → Categorias e centros de custo) ganhou uma coluna **"Gestor(es)"**, mostrando de relance quem responde por cada centro — sem precisar abrir "Editar". Centros sem responsável aparecem com "—"; havendo mais de um, o primeiro nome é exibido com um "+N" (a lista completa aparece ao passar o mouse).
+
+---
+
+## [1.12.1] — 2026-07-26
+
+### Corrigido
+
+- **Já dá para designar quem ainda não definiu a senha.** Um membro recém-cadastrado, que ainda não concluiu o primeiro acesso, agora pode ser escolhido como **gestor de centro de custo**, **coordenador ou integrante de projeto** e **aprovador** (de reembolso, pedido de pagamento, orçamento e projeto) — sem precisar esperar ele entrar no sistema pela primeira vez. O nome aparece nas listas com a marca discreta **"· acesso pendente"**. A permissão para *agir* (aprovar, coordenar) continua valendo só depois que a pessoa ativa o acesso.
+
+---
+
+## [1.12.0] — 2026-07-26
+
+### Adicionado
+
+- **Novos filtros de Movimentações, combináveis e mais poderosos.** As abas deram lugar a **filtros por marcadores (chips)**: dá para filtrar por **tipo, conta, categoria, status, projeto e centro de custo** ao mesmo tempo, escolhendo **vários valores** em cada um e podendo **incluir** ou **excluir** ("mostrar tudo, exceto…"). Some-se a isso uma **busca livre** por texto (descrição, beneficiário, conta, categoria, valor ou data). No celular, os filtros abrem em um painel próprio e a tela nunca rola para o lado.
+- **Estornos e cancelados ocultos por padrão na conferência.** A visão de Movimentações passa a **esconder automaticamente** os lançamentos estornados (o par inteiro) e os cancelados, para facilitar a conferência contra o extrato — com um botão **"Mostrar estornados e cancelados"** quando você quiser vê-los, e a contagem indicando quantos estão ocultos.
+- **Exportação fiel ao que está na tela.** As exportações em Excel e PDF passam a refletir exatamente os filtros ativos — o que você vê é o que exporta.
+
+---
+
+## [1.11.0] — 2026-07-26
+
+### Adicionado
+
+- **Importação de usuários em lote agora roda em segundo plano.** Ao confirmar a importação de uma planilha de membros, o RIT360 Financeiro **inicia o processamento e libera a tela na hora** — nada de esperar com o navegador travado. Você recebe a mensagem "Importação iniciada — avisaremos quando concluir" e segue usando o app. Planilhas grandes (dezenas ou centenas de membros), que antes falhavam por demora, agora concluem com tranquilidade.
+- **Aviso por e-mail e notificação ao concluir a importação.** Quando o processamento termina, quem importou recebe um **e-mail e uma notificação** com o resumo: quantos foram convidados, quantos ficaram com e-mail pendente, quantos foram vinculados, quantos perfis foram atualizados e quantas linhas tiveram erro. Havendo linhas com erro, o aviso é **acionável** — lista o número da linha, o nome/e-mail e o motivo, para você corrigir e reenviar só o que faltou (sem expor CPF/RG por segurança).
+- **Aba "Histórico" na tela de importação de usuários.** Uma aba nova mostra as importações já feitas na sua OSC, com **data, quem importou, progresso, totais e status** (na fila, processando, concluída ou falhou). Em cada importação você pode **baixar a planilha completa das linhas com erro** para corrigir e reimportar.
+
+### Corrigido
+
+- **Mensagem de erro clara na importação.** Quando a planilha tem algum problema (por exemplo, falta uma coluna obrigatória como "papel"), o sistema agora mostra **exatamente o que está errado** em vez da mensagem técnica genérica que aparecia antes.
+- **Membros já cadastrados são reconhecidos mesmo em OSCs grandes.** Ao importar uma planilha com pessoas que já têm conta, o RIT360 Financeiro agora as identifica corretamente — para **vincular** ou **atualizar o perfil** — em vez de tentar recriá-las. Antes, em organizações com muitos usuários, parte dos já cadastrados era tratada como nova por engano; o mesmo problema também afetava o "Esqueci minha senha", que agora encontra o usuário corretamente.
+- **Aprovação de orçamento mais clara e confiável.** Quem **envia** um orçamento para aprovação não vê mais os botões de aprovar/rejeitar da própria versão quando há outros responsáveis — no lugar aparece "Aguardando aprovação de outro responsável" (você não pode aprovar o próprio pedido). E a **aprovação pelos demais responsáveis voltou a funcionar** normalmente, incluindo aprovadores designados; a Comissão Fiscal continua apenas acompanhando, sem aprovar.
+
+---
+
+## [1.10.0] — 2026-07-26
+
+### Adicionado
+
+- **Fechamento do orçamento: reconciliação e encerramento do exercício.** No fim do ano, o orçamento agora mostra uma **reconciliação** que junta as três origens do realizado — **planejado** (o que caiu nos centros de custo e categorias orçados), **projetos** (o que pertence a projetos, pela regra "projeto vence") e **não alocado** (movimentações fora do que foi orçado) — e fecha a conta batendo com o total movimentado no ano. Quando o ano está fechado, o botão **Encerrar o exercício** congela o orçamento definitivamente e o guarda como histórico para consulta.
+- **Orçamento em planilha: exportar e importar em XLSX.** Dá para levar o orçamento para uma planilha (Excel, Google Sheets) para trabalhar offline ou montar em conjunto na reunião da diretoria, e depois **importar de volta** para oficializar no sistema.
+- **Relatório de execução do orçamento (PDF e Excel).** Um relatório do previsto × realizado do ano, exportável em **PDF** (para anexar à prestação de contas ou enviar a financiadores) e em **Excel** (para análise).
+- **Prestação de contas com "Execução por Centro de Custo".** A prestação de contas da OSC ganhou uma seção nova que mostra, para cada área, o previsto, o realizado e o quanto do previsto já foi consumido — o previsto × realizado do orçamento agora dentro do relatório oficial.
+
+---
+
+## [1.9.0] — 2026-07-26
+
+### Adicionado
+
+- **Acompanhamento do orçamento: previsto × realizado com semáforo de saúde.** Depois de aprovado, o orçamento vira painel: para cada centro de custo e categoria você vê o previsto para o ano, o realizado até agora e um **semáforo** — verde (dentro), amarelo (passou de 80% do previsto) e vermelho (estourou os 100%). A diretoria enxerga de relance onde está o aperto, sem abrir linha por linha.
+- **Ciclo de aprovação e revisão do orçamento.** O orçamento agora passa por **rascunho → em aprovação → aprovado**; ao ser aprovado, vira o **baseline** congelado contra o qual o acompanhamento é feito. Revisar um orçamento aprovado **exige um motivo** (registrado na auditoria); ajustes acima de um **limiar** configurável voltam para aprovação, e ajustes pequenos são aplicados direto.
+- **Aba "Orçamento" no Fluxo de Aprovações.** Em **Configurações → Fluxo de Aprovações**, uma aba nova define quem aprova o orçamento, o quórum, o **limiar de revisão** e a partir de quais percentuais o sistema alerta.
+- **Alertas automáticos de execução.** Quando um centro de custo ou categoria passa de **80%** ou de **100%** do previsto, o sistema avisa automaticamente o **gestor do centro de custo** e o **tesoureiro** — você não precisa ficar olhando o painel todo dia.
+
+### Melhorado
+
+- **Regra "projeto vence" para não contar gasto duas vezes.** Um gasto vinculado a um projeto conta no **orçamento do projeto** e não infla o realizado do centro de custo — cada "balde" reflete só o que é dele, e a soma não engana.
+
+---
+
+## [1.8.0] — 2026-07-26
+
+### Adicionado
+
+- **Novo módulo: Orçamento anual da OSC.** Agora dá para planejar o ano inteiro — quanto a OSC pretende arrecadar e gastar — organizado por **centro de custo** e por **categoria**. É bússola, não cadeado: o orçamento **alerta, não bloqueia**, e não é um ERP — é planejamento financeiro anual.
+- **Elaborar receitas e despesas previstas.** Você escolhe o **ano**, lança cada linha com um **valor anual**, e o sistema **distribui automaticamente nos 12 meses** — com a opção de **ajustar mês a mês** quando o gasto se concentra num período (o evento de setembro, a taxa anual de março). Cada centro de custo pode ter uma **linha de contingência** (a reserva para imprevistos daquela área).
+- **Resultado previsto do ano.** Enquanto você monta o orçamento, o sistema mostra o **resultado previsto** — superávit (sobra) ou déficit (falta) planejado — comparando o total de receitas com o total de despesas previstas.
+- **Gerar o orçamento automaticamente a partir do histórico.** Quando a OSC já tem **pelo menos dois anos** de movimentações, o módulo monta um rascunho do orçamento baseado no que de fato arrecadou e gastou nos anos anteriores — você recebe uma base realista e só ajusta o que muda.
+
+---
+
+## [1.7.0] — 2026-07-25
+
+### Adicionado
+
+- **Novo cargo: Gestor de Centro de Custo.** Agora dá para dar a alguém a responsabilidade sobre **uma área específica** da OSC — uma filial, uma coordenação, um núcleo — sem abrir o financeiro inteiro para essa pessoa. Quem tem esse cargo pode **criar e editar** os lançamentos do(s) centro(s) de custo sob sua responsabilidade e **ver** as movimentações e relatórios recortados àquela área. Não pode excluir/estornar, importar, aprovar reembolsos ou pedidos, nem mexer nas configurações. O rótulo do cargo pode ser renomeado pela sua OSC (ex.: "Responsável de Filial"). Presidente e Tesoureiro continuam enxergando todos os centros de custo.
+- **Responsáveis por centro de custo.** Em **Configurações → Categorias → Centros de custo**, ao criar ou editar um centro de custo, você define **quem responde por ele** marcando os membros na seção "Responsáveis pelo centro de custo". Atribuir alguém aqui só libera o acesso se a pessoa também tiver o cargo **Gestor de Centro de Custo** — as duas coisas trabalham juntas.
+- **Centro de custo no Pedido de Pagamento.** O formulário de novo pedido de pagamento ganhou um campo **Centro de custo** (opcional, lista só os centros de custo ativos). Vincular o pedido a uma área desde a origem faz o lançamento já nascer com o centro de custo certo quando o pedido é aprovado.
+
+### Melhorado
+
+- **Corrigir o centro de custo e a categoria de um lançamento já pago.** Presidente e Tesoureiro podem reclassificar um lançamento pago — ajustar o **centro de custo** e a **categoria** — informando um **motivo**, que fica registrado na trilha de auditoria. A correção não altera o valor nem o status do lançamento: é só a classificação gerencial que muda, sem precisar estornar.
+
+---
+
+## [1.6.2] — 2026-07-16
+
+### Corrigido
+
+- **E-mails ajustados.** Corrigimos textos que ainda traziam o nome antigo (em assuntos como boas-vindas e redefinição de senha), o **rodapé** dos e-mails (logo do RIT360 Financeiro maior e clicável, com links para o sistema e para a RIT) e a **altura do botão**, que aparecia desproporcional. Os PDFs de prestação de contas e de encerramento de projeto também passaram a mostrar o nome atualizado.
+
+---
+
+## [1.6.0] — 2026-07-15
+
+### Adicionado
+
+- **Caça-diferenças: encontre a divergência entre o seu saldo e o do banco.** Em **Movimentações**, cada card de saldo por conta ganhou um ícone de **lupa**. Ao abri-lo, você informa o **saldo do extrato do banco** e a **data**, e o app calcula a diferença contra o saldo registrado e sugere **hipóteses ranqueadas** de onde pode estar o furo — lançamento duplicado, um lançamento que explica exatamente a diferença, lançamento na conta errada, combinação de dois, valor quase-igual, ou "faltante" (algo no extrato ainda não registrado). Nos casos seguros há **ações de 1 clique** (excluir a duplicata, mover para a conta certa), e a diferença é recalculada na hora. É o complemento "pelo número" da conciliação por extrato OFX, para quando você só tem o saldo final do banco.
+- **Agora dá para corrigir a conta de um lançamento já registrado.** Ao editar um lançamento, trocar a **conta** passou a ser salvo corretamente (antes a mudança era ignorada).
+
+---
+
+## [1.5.0] — 2026-07-14
+
+### Melhorado
+
+- **Campo de CNPJ aceita o novo formato da Receita Federal.** A partir de julho de 2026, novos CNPJs podem conter **letras e números** (ex.: `12.ABC.345/01DE-35`). O cadastro da organização agora aceita e valida esse novo formato — inclusive conferindo o dígito verificador — e continua aceitando normalmente todos os CNPJs numéricos existentes. O CNPJ passa a aparecer sempre **formatado com a máscara padrão** nas telas e nos relatórios em PDF (prestação de contas), mesmo os que antes apareciam sem pontuação.
+
+---
+
+## [1.3.3] — 2026-07-08
+
+### Adicionado
+
+- **Corrigir os dados de pagamento de um lançamento já pago.** Responsáveis financeiros agora podem ajustar a **data de pagamento** e a **conta** de um lançamento pago, direto na tela do lançamento, sem precisar estornar — útil quando o que foi registrado ficou diferente do extrato bancário. Ao salvar, é pedido um breve **motivo** (guardado para controle) e, se você trocar a conta, os **saldos são recalculados** automaticamente.
+
+---
+
+## [1.3.2] — 2026-07-08
+
+### Melhorado
+
+- **Seus dados não se perdem ao sair da tela.** Ao preencher um novo **reembolso**, **lançamento** ou **pedido de pagamento**, o que você digita fica salvo automaticamente no seu dispositivo. Se você sair da tela (por exemplo, para escolher um arquivo para anexar) ou o navegador recarregar a página, ao voltar os campos continuam preenchidos, com um aviso de **"rascunho recuperado"**.
+
+---
+
+## [1.3.1] — 2026-07-08
+
+### Melhorado
+
+- **Gestão de feedbacks mais ágil (equipe RIT).** No painel de feedbacks, as ações de cada item passaram a ficar acessíveis diretamente na linha (responder, editar, mudar status e mais), os filtros ficaram lado a lado, e criar uma tarefa a partir de um feedback deixou de abrir uma aba automaticamente.
+
+---
+
+## [1.3.0] — 2026-07-08
+
+### Adicionado
+
+- **Feedback repaginado.** Ao enviar um feedback, agora você pode **anexar arquivos** (prints, planilhas, documentos), escolher o novo tipo **Depoimento** e autorizar (ou não) que a RIT entre em **contato** com você. Um aviso no topo lembra do **Manual do Usuário** — muitas dúvidas já têm resposta lá. Ao enviar, também coletamos automaticamente algumas informações técnicas **não pessoais** (como a versão do app e o navegador) que ajudam a equipe a resolver mais rápido.
+
+---
+
+## [1.2.1] — 2026-07-07
+
+### Adicionado
+
+- **Código curto por lançamento.** Cada lançamento passa a ter um **código curto e legível** (formato `XXXX-XXXX`, ex.: `4805-DF37`), visível no **detalhe** (com botão de copiar), na **lista de Movimentações** e nas **exportações** (Excel e PDF) — para você identificar e citar uma transação específica com facilidade.
+
+---
+
+## [1.2.0] — 2026-07-07
+
+### Adicionado
+
+- **Logo da OSC nos e-mails e nos relatórios.** A logo da sua organização passa a aparecer no **cabeçalho dos e-mails** de notificação e nos **PDFs** (movimentações e prestação de contas), reforçando a identidade da OSC; quando não há logo cadastrada, o e-mail usa a marca do Bússola. O upload de logo agora aceita **qualquer proporção** e também arquivos **SVG** (convertidos automaticamente), e a logo aparece inteira (sem corte) no topo do aplicativo.
+
+### Corrigido
+
+- **Troca de logo imediata.** Ao trocar a logo da organização, a nova imagem passa a aparecer na hora — antes, a anterior podia continuar sendo exibida por alguns minutos.
+
+---
+
+## [1.1.3] — 2026-07-07
+
+### Melhorado
+
+- **Aviso de reembolso pago também ao pagar pela lista.** Quando um reembolso é marcado como pago pela lista de Movimentações, o solicitante agora recebe o e-mail de confirmação — antes, só o pagamento pelo detalhe do reembolso avisava. O e-mail traz valor, descrição, data e o **destino do pagamento** (chave PIX ou conta, parcialmente ocultos) para o voluntário conferir onde o valor caiu.
+
+---
+
+## [1.1.2] — 2026-07-07
+
+### Corrigido
+
+- **Pagamento de pedido pela lista de Movimentações.** Ao marcar como pago, pela lista de Movimentações, um lançamento vindo de um pedido de pagamento, o pedido passa a ser atualizado para **pago** automaticamente — como já acontecia com os reembolsos —, evitando que ele ficasse preso em "aguardando pagamento".
+
+---
+
+## [1.1.1] — 2026-07-07
+
+### Melhorado
+
+- **Mais clareza nas aprovações.** O card antes chamado "Aguardando minha aprovação" passou a se chamar **"Aguardando aprovação"** — ele mostra os itens da fila de aprovação, não necessariamente os que dependem só de você. E o detalhe de um reembolso ou pedido agora mostra o **progresso da aprovação** (por exemplo, "1 de 2 aprovações · falta 1"), deixando claro quantas aprovações ainda faltam.
+
+---
+
+## [1.1.0] — 2026-07-07
+
+### Adicionado
+
+- **Data de pagamento solicitada no pedido de pagamento.** Ao criar um pedido de pagamento do tipo único, é possível informar (opcionalmente) uma **data de pagamento solicitada** — o prazo em que o fornecedor espera receber. Ela aparece como referência no detalhe do pedido, ajudando o tesoureiro a se organizar na hora de pagar.
+
+---
+
+## [1.0.1] — 2026-07-07
+
+### Corrigido
+
+- **Envio de feedback.** O envio de feedback pela tela voltou a funcionar para todos os usuários (antes, o envio falhava para quem não era administrador).
+
+---
+
+## [1.0.0] — 2026-07-07
+
+**Marco 1.0.0 — primeira versão estável da Bússola Financeira.** Todos os módulos do MVP estão em produção e validados: acesso e organização, financeiro (movimentações, contas, categorias, conciliação), reembolsos, pedidos de pagamento, projetos e prestação de contas. Esta versão consolida os ajustes feitos ao longo da série 0.43.
+
+### Adicionado
+
+- **Mural do projeto com eventos financeiros.** Um lançamento vinculado a um projeto passa a aparecer no mural do projeto conforme sua vida acontece — vinculado (previsto), pagamento registrado e estornado — de forma que toda a equipe do projeto acompanha as movimentações financeiras ligadas a ele, com o valor visível.
+
+### Corrigido
+
+- **Prestação de contas — 1ª página do comprovante em PDF na folha da descrição.** Quando um lançamento tem um comprovante em PDF, a primeira página do anexo agora aparece **na mesma folha da descrição, em tamanho grande**, aproveitando o espaço logo abaixo do texto; as páginas seguintes do anexo continuam em tamanho cheio. Os códigos de barras e QR dos comprovantes seguem legíveis.
+- **E-mails de notificação.** O logo voltou a aparecer no topo dos e-mails e o botão de ação passou a abrir o endereço correto do sistema.
+- **Uso em celular.** Botões e ações com área de toque maior e mais confortável, e telas ajustadas para não exigir rolagem horizontal em aparelhos pequenos.
+- **Lista de movimentações mais fluida.** A lista de lançamentos ficou mais leve e rápida mesmo com muitos itens.
+- **Validação de CPF em transferências.** Ao informar dados de transferência bancária, um CPF inválido passa a ser bloqueado no momento de salvar, e a edição reabre sem falso alerta de CPF inválido.
+
+---
+
+## [0.43.0] — 2026-07-07
+
+### Adicionado
+
+- **Dados de pagamento direto no lançamento de despesa.** Ao criar ou editar uma despesa em Movimentações, a **forma de pagamento** passou a ficar visível no formulário e agora abre os campos do destinatário conforme a escolha: **PIX** pede o tipo e a chave; **Transferência bancária** pede banco, agência, conta e titular; **Boleto** e as demais formas não pedem campos extras. Esses dados aparecem depois no card **"Dados de pagamento"** do detalhe do lançamento, para quem tem permissão de vê-los. Assim o tesoureiro registra a chave PIX / dados bancários também em despesas lançadas à mão, e não só nas que vêm de reembolso ou pedido de pagamento.
+
+---
+
+## [0.42.0] — 2026-07-07
+
+### Adicionado
+
+- **Cartão de crédito como passivo.** Agora é possível cadastrar uma conta do tipo **Cartão de crédito**. Diferente de uma conta comum, o cartão representa uma **dívida**: o saldo consolidado passou a mostrar **Ativos** e **Passivos** em seções separadas, com o **Líquido** sendo o que sobra depois de descontar o que se deve. Uma compra no cartão é lançada como despesa na conta do cartão, e o **pagamento da fatura** é uma transferência da conta bancária para o cartão, que reduz a dívida. Organizações que não usam cartão de crédito não veem nenhuma diferença.
+
+---
+
+## [0.41.8] — 2026-07-06
+
+### Adicionado
+
+- **Detalhe do lançamento mais completo.** Ao abrir um lançamento em Movimentações, agora aparecem os campos que estavam preenchidos mas não eram exibidos (forma de pagamento, referência bancária, documento fiscal, tags, observações). E, para lançamentos gerados a partir de um **reembolso** ou **pedido de pagamento**, um card **"Dados de pagamento"** mostra a chave PIX / dados bancários do beneficiário — para o tesoureiro efetivar o pagamento sem precisar abrir a solicitação de origem. Esses dados de pagamento aparecem apenas para quem já pode vê-los (tesoureiro, aprovadores e administradores).
+
+---
+
+## [0.41.7] — 2026-07-06
+
+### Corrigido
+
+- **Botão "Rejeitar" deixou de aparecer para quem não pode decidir.** Nas telas de detalhe de reembolso e de pedido de pagamento, o botão de rejeitar passou a seguir exatamente a mesma regra do botão de aprovar: o próprio solicitante (havendo outros aprovadores suficientes) não vê mais "Rejeitar" na própria solicitação — vê apenas "Aguardando decisão dos aprovadores". Quando o solicitante é o único que pode concluir a aprovação, ele continua vendo as ações normalmente.
+
+---
+
+## [0.41.6] — 2026-07-06
+
+### Adicionado
+
+- **Histórico de aprovações agora aparece também no lançamento.** Ao abrir, pela tela de Movimentações, um lançamento que nasceu de um reembolso ou de um pedido de pagamento, o Bússola passa a mostrar o **histórico de aprovações** completo (quem aprovou, com papel e data), além de um link em destaque para abrir a solicitação de origem. A seção "Auditoria" do lançamento continua como estava.
+
+---
+
+## [0.41.4] — 2026-07-06
+
+### Corrigido
+
+- **Aprovador indicado por nome volta a ver e aprovar pedidos de pagamento.** Um aprovador adicionado ao fluxo pela lista de **usuários** (e não por papel) não conseguia ver os pedidos de pagamento que deveria aprovar — o contador acusava um pedido, mas a lista aparecia vazia. Agora ele enxerga o pedido, o histórico e os anexos, e consegue aprovar normalmente — como já acontecia com os reembolsos.
+
+---
+
+## [0.41.3] — 2026-07-06
+
+### Corrigido
+
+- **Mensagens claras ao aprovar ou rejeitar.** Quando uma aprovação ou rejeição não podia ser concluída (por exemplo, quando alguém já havia registrado a própria decisão), a tela mostrava um erro técnico. Agora aparece uma mensagem clara — como "Você já registrou sua decisão nesta solicitação. Aguardando os demais aprovadores." Além disso, ao registrar uma aprovação que ainda não fecha o total exigido, o Bússola avisa **quantas aprovações faltam**, e o botão de aprovar deixa de aparecer para quem já votou.
+
+---
+
+## [0.41.2] — 2026-07-06
+
+### Corrigido
+
+- **"Mês atual" volta a mostrar o mês inteiro.** Na tela de Movimentações, o atalho de período "Mês atual" exibia os lançamentos apenas até a data de hoje, escondendo os previstos para o restante do mês. Agora ele cobre o mês de calendário completo (do dia 1 ao último dia). Os atalhos "Trimestre atual", "Semestre atual" e "Ano atual" receberam o mesmo ajuste — este último deixou de ser "até a data" e passou a cobrir o ano inteiro.
+
+---
+
+## [0.41.1] — 2026-07-06
+
+### Corrigido
+
+- **Ninguém aprova a própria solicitação quando há aprovadores suficientes.** Na aprovação de reembolsos e pedidos de pagamento, o solicitante não pode mais aprovar a própria solicitação enquanto houver outros aprovadores em número suficiente para atingir o total de aprovações exigido pela organização — e deixa de receber o e-mail pedindo para aprovar o próprio pedido. A regra passou a valer para todos, sem exceção. (O solicitante só decide a própria solicitação no caso em que é o único que pode concluí-la.)
+- **Contador "Aguardando minha aprovação" mais preciso.** Na tela de Pedidos de Pagamento, esse contador deixou de somar os reembolsos pendentes — passa a refletir apenas os pedidos de pagamento, batendo com a lista exibida.
+
+---
+
+## [0.41.0] — 2026-07-01
+
+### Adicionado
+
+- **Templates de categorias para mais tipos de organização.** Além do modelo de Grupo Escoteiro, agora há conjuntos de categorias prontos para **Associação, Instituto, Fundação, ONG, Coletivo e Cooperativa**. Ao configurar as categorias da sua OSC, escolha o modelo do seu tipo de organização para começar com uma estrutura de receitas e despesas já organizada — e personalize à vontade depois. Quem prefere começar do zero pode continuar criando as categorias manualmente.
+- **Tipos de organização unificados no cadastro.** A lista de tipos de OSC ficou consistente em todas as telas de criação de organização: Grupo Escoteiro, Associação, Instituto, Fundação, ONG, Coletivo, Cooperativa e Outro.
+
+---
+
+## [0.40.4] — 2026-07-01
+
+### Adicionado
+
+- **Lançamentos estornados e cancelados agora aparecem riscados.** Na tela de Movimentações e nas exportações em PDF e Excel, um lançamento estornado (o original e o lançamento contrário que o compensa) ou cancelado passa a aparecer com o texto e o valor riscados, além do rótulo de status já existente — fica mais fácil identificar de relance que aquele valor não representa uma receita ou despesa real do período.
+
+---
+
+## [0.40.2] — 2026-07-01
+
+### Corrigido
+
+- **Saldo consolidado da conta podia ficar incorreto quando havia lançamentos estornados.** Ao estornar um lançamento, o par (o lançamento original e o seu contrário de compensação) não estava se anulando corretamente no cálculo do saldo da conta, do saldo por conta nos relatórios e da evolução de saldo — o valor do estorno ficava sobrando ou faltando no total. Corrigido: agora o par se anula por completo, e o saldo exibido volta a bater com o extrato bancário.
+
+---
+
+## [0.40.1] — 2026-06-30
+
+### Corrigido
+
+- **Lançamento estornado não oferece mais "Excluir".** O botão de excluir deixou de aparecer para lançamentos já estornados (na lista, na ação em lote e no detalhe) — antes ele aparecia, mas a exclusão não acontecia, já que o estorno precisa ser preservado na prestação de contas. Lançamentos pendentes e cancelados continuam podendo ser excluídos normalmente.
+
+---
+
+## [0.40.0] — 2026-06-30
+
+### Adicionado
+
+- **Escolha das colunas ao exportar.** Ao clicar em **Exportar → PDF** ou **Exportar → Excel**, o Bússola agora abre um seletor para você marcar **quais colunas** quer no relatório. Oito colunas vêm marcadas por padrão (Vencimento, Pagamento, Pagador/Beneficiário, Lançamento, Conta, Categoria, Status e Valor) e você pode acrescentar **Tipo**, **Forma de pagamento**, **Observações** e **Nº de anexos**. A escolha fica **lembrada** para a próxima exportação, separada por organização.
+
+---
+
+## [0.39.5] — 2026-06-30
+
+### Modificado
+
+- **Estorno passa a herdar a data do lançamento original.** Ao estornar um lançamento, o lançamento contrário gerado agora usa as **mesmas datas** (vencimento, pagamento e competência) do lançamento estornado, em vez da data de hoje. Assim o original e o estorno se anulam **no mesmo período**, e os relatórios por mês fecham corretamente. (O registro de *quando* o estorno foi feito continua preservado na linha do tempo.)
+
+---
+
+## [0.39.4] — 2026-06-30
+
+### Corrigido
+
+- **Exportar PDF mostrava a data de hoje na coluna Vencimento.** Em alguns casos — especialmente lançamentos com datas retroativas — o PDF exportado trazia a data de hoje no lugar da data informada. Corrigido: o PDF agora mostra a data correta de cada lançamento, igual à tela.
+
+---
+
+## [0.39.0] — 2026-06-22
+
+### Adicionado
+
+- **Cargos e permissões personalizáveis.** Em **Configurações → Cargos e permissões**, o Presidente vai além dos 6 cargos padrão: pode **criar cargos novos** (do zero ou clonando um existente) e **ajustar as permissões** com controle fino — por exemplo, um "Tesoureiro sem exclusão" que registra lançamentos mas não pode excluí-los. Os cargos são atribuídos às pessoas (com acúmulo) na aba **Usuários**.
+- **Permissões essenciais protegidas.** Cada cargo padrão tem um conjunto de permissões essenciais que não pode ser removido — o Presidente apenas acrescenta sobre elas. A **Comissão Fiscal** mantém a independência: permissões que conflitam com a fiscalização (operar, aprovar ou pagar finanças) ficam bloqueadas, preservando a segregação de funções.
+- **Avisos de governança.** Conceder poderes de administrador a um cargo exibe um aviso claro; tentar excluir um cargo em uso mostra quem seria afetado; e o sistema impede deixar a organização sem um administrador.
+
+---
+
+## [0.38.0] — 2026-06-21
+
+### Adicionado
+
+- **Conta padrão.** Em **Configurações → Contas** você pode marcar uma conta como padrão da organização. Ela já vem selecionada ao criar um novo lançamento, agilizando o registro.
+- **Cards de conta coloridos.** Os cards de saldo por conta (Painel, Movimentações e Relatórios) passam a exibir a **cor** definida para cada conta, ficando fácil distinguir uma da outra; o card consolidado ganhou destaque próprio.
+
+### Modificado
+
+- **Tela de novo lançamento mais clara.** **Beneficiário/Pagador** e **Tipo de documento fiscal** agora aparecem direto no formulário (antes ficavam escondidos em "Mais opções"); o campo **"Título" passou a se chamar "Descrição"**. Em **transferências**, os campos que não se aplicam ficam ocultos.
+- **Máscaras padronizadas.** Os campos de **CNPJ, CPF e telefone** passaram a seguir a máscara correta em todo o sistema. O **CNPJ** agora aceita o novo formato **alfanumérico** da Receita Federal.
+
+### Corrigido
+
+- **Gestão de membros pelo administrador da plataforma** voltou a funcionar ao adicionar usuários a uma organização pelo painel administrativo.
+
+---
+
+## [0.37.0] — 2026-06-21
+
+### Adicionado
+
+- **Baixar meus dados (LGPD).** Em **Meu Perfil**, você pode pedir uma cópia dos seus dados pessoais — perfil, preferências, consentimentos, vínculos com organizações e referências dos registros que você criou. O arquivo é gerado em segundo plano e chega por e-mail, com link de download válido por 7 dias.
+- **Excluir minha conta (LGPD).** Você pode solicitar a exclusão da sua conta pelo **Meu Perfil**. A conta entra em uma carência de 30 dias, sem acesso, e ao fim do prazo seus dados pessoais são anonimizados de forma irreversível. Registros financeiros e de auditoria são mantidos por obrigação legal, sem identificação pessoal. Para reativar dentro do prazo, basta falar com o Encarregado de Dados (DPO).
+- **Exportar dados da organização.** Administradores podem baixar, em **Configurações → Organização**, um pacote com todos os dados da OSC — movimentações, reembolsos, pedidos de pagamento, membros, categorias e centros de custo e configurações — em planilha Excel, junto dos anexos. Entregue por e-mail com link de download.
+- **Encerramento de organização.** Administradores podem encerrar a OSC. Durante 30 dias os dados seguem disponíveis para leitura e exportação, mas nenhuma alteração é permitida; ao fim do prazo, os dados são eliminados ou anonimizados conforme a Política de Privacidade — os registros financeiros e de auditoria são retidos por obrigação legal, sem identificação pessoal.
+
+---
+
+## [0.36.2] — 2026-06-21
+
+### Adicionado
+
+- **Contador de projetos ativos no menu.** O item **Projetos** passou a exibir um indicador (como já acontece com Pagamentos e Reembolsos) com a quantidade de projetos ativos visíveis para você.
+
+### Modificado
+
+- **Aba "Categorias e Centros de Custo".** A aba de Configurações que antes se chamava apenas "Categorias" passou a indicar também os **Centros de Custo**, que sempre estiveram nela — agora ficam fáceis de encontrar.
+
+---
+
+## [0.36.1] — 2026-06-21
+
+### Corrigido
+
+- **Pequenos ajustes de texto na interface e nos e-mails.** Padronização de termos e correções de concordância — incluindo o texto de aceite dos **Termos de Uso**.
+
+---
+
+## [0.36.0] — 2026-06-21
+
+### Adicionado
+
+- **Anexos em ZIP são descompactados automaticamente.** Ao anexar um arquivo `.zip` a um lançamento (ou recebê-lo por link no comprovante), o sistema extrai os documentos de dentro e os anexa individualmente ao lançamento — assim cada arquivo aparece na prestação de contas, no detalhe do lançamento e nos downloads. Antes, o conteúdo de um ZIP não era exibido no relatório.
+
+---
+
+## [0.35.3] — 2026-06-21
+
+### Adicionado
+
+- **Importação por CSV agora aceita o centro de custo.** A planilha de importação de lançamentos ganhou a coluna `centro_de_custo`. Quando o nome informado ainda não existe, o sistema oferece, na própria tela de revisão, **criar** o centro de custo, **vincular** a um existente ou **importar sem** — antes de confirmar.
+
+---
+
+## [0.35.2] — 2026-06-21
+
+### Modificado
+
+- **A sincronização do WooCommerce conclui sozinha, em qualquer volume.** Importações grandes de pedidos agora se completam com um **único disparo**: o sistema processa os pedidos em etapas automáticas, em segundo plano, até o fim — sem você precisar repetir a ação.
+
+### Corrigido
+
+- **Lançamentos vindos do WooCommerce voltam ao sincronizar.** Se um lançamento de origem WooCommerce for removido, a próxima sincronização o recria a partir do pedido — ele deixa de "sumir para sempre".
+
+---
+
+## [0.35.1] — 2026-06-21
+
+### Modificado
+
+- **Sincronização do WooCommerce em segundo plano.** A importação de pedidos do WooCommerce passou a rodar em segundo plano: a tela responde na hora ("sincronização iniciada"), você acompanha o andamento pelo histórico e recebe um aviso quando conclui — em vez de a tela ficar travada esperando o processamento.
+
+### Corrigido
+
+- **Pedidos de valor zero não geram mais erro.** Pedidos do WooCommerce com total R$ 0,00 (gratuitos ou totalmente reembolsados) passam a ser **ignorados** na sincronização, em vez de aparecerem como erro.
+
+---
+
+## [0.35.0] — 2026-06-20
+
+### Adicionado
+
+- **Conciliação bancária por extrato (OFX).** Nova tela de **Conciliação**: você importa o extrato do banco em formato OFX e o sistema **casa cada transação com os lançamentos pendentes** (por valor e proximidade de data), pré-marcando os que batem e deixando os parecidos para sua conferência. Ao confirmar, os lançamentos conciliados são marcados como **pagos** e ficam vinculados ao extrato. As transações **sem correspondência** podem virar lançamentos novos, com a categoria que você escolher. **Reimportar o mesmo extrato não duplica nada.**
+
+---
+
+## [0.34.0] — 2026-06-20
+
+### Adicionado
+
+- **Importação de movimentações: anexe comprovantes por link.** Na planilha de importação (CSV), uma coluna nova permite informar o **link do comprovante**; ao importar, o sistema **baixa o arquivo e anexa ao lançamento** automaticamente. Vários links na mesma célula (separados por vírgula, barra vertical ou espaço) anexam vários comprovantes. Os lançamentos são criados **na hora** e os comprovantes são baixados **em segundo plano** — você recebe um aviso quando terminam, e qualquer link que não baixar fica registrado na **observação** do lançamento.
+
+---
+
+## [0.33.1] — 2026-06-17
+
+### Modificado
+
+- **Ao vincular sua conta a uma nova organização, você já entra direto nela.** Antes, quem aceitava um convite para uma segunda organização caía na organização anterior e precisava trocar manualmente — agora o acesso abre já na organização recém-vinculada.
+- **E-mail de boas-vindas reescrito.** Ficou mais acolhedor, apresenta o propósito do Bússola e traz um link para o manual do usuário — sem prometer recursos que dependem do seu papel na organização.
+- **Botões dos e-mails mais proporcionais**, com o texto centralizado.
+
+### Corrigido
+
+- **Mensagens mais claras ao vincular uma conta existente.** Em vez de um "erro inesperado" genérico, a tela passa a explicar o que aconteceu (por exemplo, quando o login é de uma conta diferente da convidada).
+- **Correção de texto no aceite:** agora lê "Li e aceito **os** Termos de Uso".
+
+---
+
+## [0.33.0] — 2026-06-17
+
+### Adicionado
+
+- **Quem já tem conta entra mais rápido em uma nova organização.** Ao ser convidado para outra organização, se você já tem cadastro no Bússola, a tela reconhece isso e pede apenas que você **entre** (com sua senha ou pelo Google) para **vincular** a nova organização ao seu acesso — sem refazer o cadastro e sem reaceitar as políticas que você já aceitou. Quem é realmente novo segue com o cadastro completo, como antes.
+
+---
+
+## [0.32.0] — 2026-06-16
+
+### Adicionado
+
+- **Documentos legais versionados, com re-aceite quando necessário.** A Política de Privacidade e os Termos de Uso agora são versionados: cada versão tem um endereço próprio e permanente (por exemplo, `docs.bf.rit.org.br/privacidade/1.0/`), e o aceite de cada pessoa fica registrado apontando exatamente para a versão que ela leu. Quando publicamos uma versão nova que exige novo consentimento, no próximo acesso aparece uma tela pedindo a leitura e o aceite dos documentos atualizados — com um resumo do **"o que mudou"** em cada um. O uso da plataforma só é liberado após o aceite.
+
+### Modificado
+
+- **Aceite de Política e Termos em conjunto.** No cadastro e no primeiro acesso, a aceitação passou a cobrir **os dois** documentos (Política de Privacidade e Termos de Uso), cada um com seu link e sua confirmação — antes a tela destacava apenas a Política.
+
+### Corrigido
+
+- **Notificações de aprovação de projeto voltaram a funcionar.** Ao enviar um projeto para aprovação, todos os aprovadores — inclusive o próprio solicitante, quando ele também é aprovador — voltam a receber o aviso por e-mail.
+- **Entrar numa segunda organização não gera mais erro.** Quem já tinha conta e era convidado para outra OSC podia ver "link inválido" ao concluir o acesso. O registro de consentimento ficou idempotente e o fluxo conclui normalmente.
+
+---
+
+## [0.31.3] — 2026-06-15
+
+### Segurança
+
+- **Reforço de controle de acesso.** Algumas ações sensíveis passaram a exigir o papel adequado: a exclusão de arquivos de evidência de projeto ficou restrita ao **coordenador do projeto** (ou a quem anexou o arquivo, por tempo limitado); os **pedidos integrados do WooCommerce** só podem ser criados ou alterados por papéis financeiros (Presidente, Tesoureiro); e configurações internas de auditoria ficaram restritas à administração da plataforma. A visualização das informações segue como antes — o reforço vale para quem pode alterá-las.
+
+---
+
+## [0.31.2] — 2026-06-15
+
+### Modificado
+
+- **Ajustes internos na geração da prestação de contas** para maior robustez, sem mudança no comportamento para quem usa.
+
+---
+
+## [0.31.1] — 2026-06-15
+
+### Melhorado
+
+- **Nomes de cargo personalizados também no PDF e nos e-mails.** Quando a organização renomeia um cargo (em **Configurações → Cargos**), o nome escolhido agora aparece também no **PDF da prestação de contas** (Termo de Encerramento) e nos **e-mails** da plataforma — antes valia só dentro do sistema.
+
+---
+
+## [0.31.0] — 2026-06-15
+
+### Adicionado
+
+- **Cargos com nomes personalizados por organização.** Em **Configurações → Cargos**, cada organização pode renomear os cargos (Presidente, Tesoureiro, Diretor, Coord. de projeto, Comissão Fiscal, Voluntário) para a nomenclatura que usa no dia a dia — **sem alterar as permissões**. O nome escolhido passa a aparecer em toda a aplicação para aquela organização (lista de usuários, filtros, equipe de projeto, etc.).
+
+---
+
+## [0.30.4] — 2026-06-15
+
+### Corrigido
+
+- **Acesso a Relatórios por papel.** O papel **Diretor** deixa de exibir a área de **Relatórios** — que não estava disponível para esse papel —, alinhando o que aparece na tela ao que o sistema de fato libera e evitando mensagens de erro.
+
+---
+
+## [0.30.3] — 2026-06-15
+
+### Melhorado
+
+- **Logo oficial nos e-mails.** O cabeçalho dos e-mails da plataforma passa a exibir a **logo oficial do Bússola** (no lugar de um selo de texto), reforçando a identidade visual em todos os avisos e mensagens.
+
+---
+
+## [0.30.2] — 2026-06-15
+
+### Melhorado
+
+- **Edição de projeto em tela própria.** A edição dos dados do projeto (nome, descrição, tipo, datas, categorias) agora abre em **página inteira**, em vez de uma janela sobreposta — mais confortável no computador e no celular. Todo o comportamento continua igual (validações, avisos e o fluxo de reaprovação para projetos já aprovados).
+
+---
+
+## [0.30.1] — 2026-06-15
+
+### Adicionado
+
+- **Documentos complementares na prestação de contas.** Ao gerar o relatório, agora é possível **anexar documentos adicionais** — como extrato bancário, parecer da comissão fiscal ou notas explicativas —, cada um com **título e descrição**. Os documentos ficam **guardados por período**: ao gerar o mesmo período novamente, reaparecem prontos para usar (e podem ser removidos ou complementados). No PDF, entram **no final, depois dos comprovantes**, cada um precedido de uma folha de identificação.
+
+---
+
+## [0.29.0] — 2026-06-15
+
+### Melhorado
+
+- **Prestação de contas mais clara e completa.** No relatório em PDF:
+  - O **Demonstrativo Analítico** passa a separar **Receitas**, **Despesas** e **Transferências** em seções próprias, com os valores coloridos e sinalizados (receitas em positivo, despesas em negativo) — no mesmo padrão do Extrato por Conta, facilitando a leitura.
+  - As **transferências entre contas** agora aparecem no analítico, indicando com clareza a **conta de origem** e a **conta de destino**.
+  - Os **comprovantes** deixam de ser só das despesas: o relatório passa a anexar também os comprovantes de **receitas** e de **transferências**, organizados em seções separadas.
+
+---
+
+## [0.28.7] — 2026-06-15
+
+### Corrigido
+
+- **Anexos com acento no nome.** Voltou a funcionar anexar arquivos cujo nome tem **acentos ou caracteres especiais** (ex.: `comprovante março.pdf`) nas movimentações — tanto no formulário do lançamento quanto na aba **Documentos** da tela de detalhe. O nome original do arquivo é preservado.
+
+### Melhorado
+
+- **Prestação de contas com autenticação eletrônica.** No PDF, o **Termo de Encerramento** deixa de trazer linha para assinatura manuscrita: passa a exibir **cargo e nome** de Presidente e Tesoureiro e um bloco de **autenticação eletrônica** com a data e hora de geração e um **código de verificação** único, derivado do conteúdo do documento.
+
+---
+
+## [0.28.4] — 2026-06-15
+
+### Melhorado
+
+- **E-mails do Bússola com a identidade visual da plataforma e mais pessoais.** Os avisos por e-mail — incluindo o de prestação de contas pronta — passam a chegar no visual do Bússola e começam com uma saudação pelo seu nome.
+- **Aviso de prestação de contas pronta mais informativo.** Quando o relatório fica pronto, o e-mail traz um **resumo do período** (receitas, despesas e resultado) e deixa claro, em destaque, que o documento é **gerado automaticamente, apenas para acompanhamento, sem valor contábil ou fiscal**.
+
+---
+
+## [0.28.1] — 2026-06-15
+
+### Corrigido
+
+- **Atualização do app mais direta.** Mudamos a forma como o app carrega novas versões: a tela principal passa a vir sempre da internet (não de uma cópia guardada no dispositivo). Assim, quando aparece o aviso de **nova versão** e você clica em **Atualizar**, o app recarrega já na versão mais recente — sem ficar preso em "Atualizando…".
+
+---
+
+## [0.28.0] — 2026-06-15
+
+Chegou a **Prestação de Contas** em PDF — o documento completo do período, pronto para apresentar à diretoria, ao conselho ou à assembleia.
+
+### Adicionado
+
+- **Relatório de Prestação de Contas (PDF).** Em **Movimentações → Exportar → Prestação de contas**, escolha um **mês** específico ou o **acumulado do ano** e gere um documento no padrão do Bússola com: termo de abertura, demonstração de receitas e despesas com **gráficos**, demonstrativo analítico (lançamento a lançamento), posição de caixa por conta, extrato por conta e os **comprovantes das despesas anexados** ao final — tudo num único arquivo, em regime de caixa.
+- **Geração em segundo plano, sem espera.** Você clica em "Gerar" e continua trabalhando normalmente; quando o PDF fica pronto, o **link chega no seu e-mail**. Se algo falhar, você é avisado por e-mail e por notificação no app.
+- **Qualquer período já fechado.** Dá para gerar de meses anteriores e de anos anteriores (com dados); o mês corrente, ainda incompleto, fica de fora.
+- **Acesso restrito.** Disponível para a diretoria/tesouraria e a comissão fiscal da organização.
+
+---
+
+## [0.27.0] — 2026-06-14
+
+Agora dá para editar um projeto depois de criado — com aprovação para o que é sensível e avisos para as pessoas certas.
+
+### Adicionado
+
+- **Editar os dados do projeto após a criação.** Pelo botão **Editar** no resumo do projeto, dá para ajustar nome, descrição, tipo, datas de início/fim e as categorias permitidas (e, em eventos, o número de participantes esperados) — antes esses campos ficavam travados depois que o projeto era criado.
+- **Aprovação para mudanças em projeto já aprovado, sem travar o trabalho.** Em um projeto já em execução, ajustes de **nome e descrição** valem na hora; mudanças que afetam prazo ou escopo (datas, categorias permitidas, tipo) ficam **aguardando reaprovação**: o projeto continua rodando com os valores atuais e um aviso mostra a alteração proposta (de → para). Quem aprova pode **aprovar** (passa a valer) ou **rejeitar** com um motivo; quem propôs pode **cancelar**.
+- **Avisos antes de salvar.** Ao remover uma categoria que já tem lançamentos, ao encurtar as datas de modo a deixar lançamentos fora do período, ou ao trocar o tipo de um projeto que já tem dados específicos, o sistema avisa de forma clara — nada é apagado, e você confirma antes de seguir.
+- **Notificações do ciclo de aprovação de projeto.** As pessoas certas passam a ser avisadas quando há um pedido de aprovação de abertura, quando a abertura é aprovada, quando uma alteração precisa de reaprovação e quando algo é rejeitado — pelos canais que cada uma escolher nas preferências de notificação do perfil.
+
+---
+
+## [0.26.7] — 2026-06-12
+
+### Corrigido
+
+- **Atualização do app mais confiável.** Ao aparecer o aviso de nova versão e você clicar em **Atualizar**, o app agora carrega a versão nova de verdade — antes, em alguns casos (sobretudo no aplicativo instalado no celular), ele acabava voltando para a versão anterior ou ficava preso em "Atualizando…". A atualização acontece sem desconectar você nem perder o que estava preenchendo.
+
+---
+
+## [0.26.3] — 2026-06-12
+
+A importação por planilha passa a aceitar transferências e vínculo com projetos.
+
+### Adicionado
+
+- **Transferências entre contas na importação.** A planilha ganhou a coluna **conta de destino**: ao usar o tipo `transferencia`, o lançamento entra como uma transferência interna (origem → destino, sem afetar o saldo total) — sem precisar de categoria.
+- **Vínculo de lançamento a projeto na importação.** Nova coluna **projeto**: informe o nome de um projeto aberto e o lançamento já entra vinculado a ele. Se o nome não existir (ou o projeto estiver fechado), o lançamento é importado mesmo assim, sem o vínculo, com um aviso na linha.
+- O template para download foi atualizado com as colunas novas e exemplos.
+
+### Melhorado
+
+- **Respeito às categorias permitidas do projeto.** Se um projeto restringe as categorias que aceita, a importação avisa (e não importa) as linhas cuja categoria não é permitida naquele projeto, deixando claro o motivo no resultado.
+
+---
+
+## [0.26.2] — 2026-06-12
+
+Importar lançamentos de planilha ficou bem mais fácil — e mais seguro.
+
+### Melhorado
+
+- **Reconhece contas e categorias mesmo com diferenças de acento ou maiúsculas.** "alimentaçao" passa a casar com "Alimentação", "banco alfa" com "Banco Alfa" — sem virar erro.
+- **Resolva o que falta na própria tela de importação.** Quando uma categoria do arquivo ainda não existe, você pode **criá-la na hora** (ou apontar para uma já existente), sem precisar cadastrar tudo antes. Uma tela de pendências mostra o que resolver e só libera a importação quando estiver tudo certo.
+- **Conta que ainda não existe não trava a importação.** Você escolhe deixar essas linhas de fora; ao final, o Bússola avisa exatamente quantas ficaram e de qual conta, para você cadastrá-la (com o saldo de abertura) e importar essas linhas depois.
+- **Resumo final claro** ao concluir: quantos lançamentos entraram, quantos ficaram de fora e quantos foram ignorados por erro.
+
+### Corrigido
+
+- **Valores da planilha lidos corretamente.** Importações passam a interpretar o valor em reais no formato brasileiro (vírgula como decimal), evitando casos em que o valor era multiplicado por engano. Valores ambíguos agora apontam erro na linha em vez de importar um número errado.
+
+---
+
+## [0.26.1] — 2026-06-12
+
+O e-mail de redefinição de senha agora chega em português e com a identidade do Bússola.
+
+### Melhorado
+
+- **E-mail de redefinição de senha:** o link de "Esqueci a senha" passa a chegar em **português**, com o visual do Bússola, em vez do modelo padrão em inglês. O fluxo continua o mesmo — você pede o link, define a nova senha e entra com ela.
+
+---
+
+## [0.26.0] — 2026-06-11
+
+Recuperação de senha por e-mail no login.
+
+### Adicionado
+
+- **"Esqueci a senha":** a tela de login passa a ter a opção **Esqueci a senha** — você informa o e-mail e recebe um link para definir uma nova senha, com as mesmas regras de senha forte do cadastro. Por segurança, a confirmação é sempre neutra (não revela se o e-mail tem conta). Quem entra pelo Google continua usando **Continuar com Google**.
+
+---
+
+## [0.25.4] — 2026-06-11
+
+Mensagem mais clara ao vincular uma movimentação a um projeto.
+
+### Corrigido
+
+- **Vínculo de projeto na movimentação:** quando a organização não tem projetos abertos, o campo "Projeto" do lançamento passa a informar claramente que não há projetos a vincular, em vez de exibir "Em breve" — que dava a impressão equivocada de que a funcionalidade ainda não existia. Para organizações com projetos, o campo já funcionava normalmente.
+
+---
+
+## [0.25.3] — 2026-06-11
+
+Ajuste visual no cadastro de movimentação pelo celular.
+
+### Corrigido
+
+- **Botões de tipo no celular:** na tela de novo lançamento, os botões Receita / Despesa / Transferência passam a exibir um ícone e a caber corretamente em telas pequenas, sem o texto de "Transferência" sair do lugar.
+
+---
+
+## [0.25.2] — 2026-06-11
+
+A tela de Lições Aprendidas fica mais compacta e fácil de percorrer.
+
+### Melhorado
+
+- **Lições Aprendidas em lista:** o acervo passa a ser exibido como tabela (no computador) e linhas compactas (no celular), no lugar dos cards — mais lições visíveis de uma vez, mantendo a categoria, o texto integral, o projeto e a data, além da busca e dos filtros.
+
+---
+
+## [0.25.1] — 2026-06-11
+
+Orientações e exemplos ajudam a preencher melhor a avaliação de encerramento de projetos.
+
+### Melhorado
+
+- **Orientação no encerramento de projetos:** cada campo de texto da avaliação de encerramento — objetivos, critérios de sucesso, engajamento, imprevistos, pontos altos, pontos a melhorar, lição mais importante e recomendação — passa a mostrar uma orientação curta e um exemplo, ajudando a coordenação a registrar aprendizados mais úteis para a organização (e que alimentam o acervo de Lições Aprendidas).
+
+---
+
+## [0.25.0] — 2026-06-11
+
+Nova tela de Lições Aprendidas reúne, em um só lugar, os aprendizados de todos os projetos encerrados da organização.
+
+### Adicionado
+
+- **Lições Aprendidas da organização:** uma nova tela, dentro de Projetos, reúne as lições e boas práticas registradas no encerramento de todos os projetos da organização — acessível a qualquer membro. Dá para filtrar por tipo de projeto e por categoria (boa prática, lição, ponto a melhorar, recomendação) e buscar pelo texto.
+- **Sugestão de lições ao criar um projeto:** ao escolher o tipo de projeto no começo da criação, o sistema mostra quantas lições já existem para projetos daquele tipo e oferece um atalho para consultá-las — ajudando a aproveitar a experiência de projetos anteriores.
+
+---
+
+## [0.24.7] — 2026-06-11
+
+Rotinas automáticas de projetos e a sincronização diária voltam a rodar nos horários programados.
+
+### Corrigido
+
+- **Avisos e rotinas automáticas:** os lembretes e avisos automáticos de projetos (atualização de status, tarefas e marcos atrasados) e a sincronização diária com a loja (WooCommerce) passam a ser executados de forma confiável nos horários programados.
+
+---
+
+## [0.24.5] — 2026-06-11
+
+Valores financeiros se ajustam melhor à tela no celular.
+
+### Melhorado
+
+- **Números dos cards financeiros no celular:** em telas pequenas, os valores nos cards — saldos por conta, totais de movimentações, indicadores do painel e os resumos de Reembolsos e Pedidos de pagamento — passam a usar um tamanho de fonte que se ajusta à largura do card, evitando que valores altos "saiam" do card. No computador a aparência continua a mesma.
+
+---
+
+## [0.24.3] — 2026-06-11
+
+A Tesouraria passa a acessar a calibração de Relatórios nas Configurações.
+
+### Corrigido
+
+- **Tesoureiro acessa "Relatórios" nas Configurações:** o item "Relatórios" (calibração das regras de atenção dos relatórios) agora aparece e funciona também para a Tesouraria, e não só para a Presidência — alinhando esse acesso ao que já vale para as demais configurações financeiras (Contas e Categorias).
+
+---
+
+## [0.24.2] — 2026-06-11
+
+O saldo inicial de uma conta passa a ficar protegido depois que ela já tem lançamentos.
+
+### Corrigido
+
+- **Saldo inicial protegido após o primeiro lançamento:** ao editar uma conta que já possui lançamentos, o campo "Saldo inicial" fica bloqueado, evitando que uma alteração acidental distorça o saldo atual exibido. Os demais dados da conta continuam editáveis normalmente. Caso seja realmente necessário corrigir o saldo inicial nesse caso, isso pode ser feito pela Presidência.
+
+---
+
+## [0.24.1] — 2026-06-11
+
+Digitação de valores em reais agora é igual em todo o sistema, com formatação automática.
+
+### Melhorado
+
+- **Campos de valor com formatação automática:** ao digitar qualquer valor em reais — em Movimentações, Reembolsos, Pedidos de pagamento, Parcelas, Contas e Projetos — o campo já mostra o número formatado enquanto você digita (por exemplo, `1.500,00`), do mesmo jeito em todas as telas.
+
+### Corrigido
+
+- **Orçamento de projeto não salva mais zerado por engano:** ao informar um valor com separador de milhar (como `1.500,00`), o orçamento passa a ser gravado com o valor correto, em vez de ser salvo como R$ 0 sem aviso. O mesmo cuidado vale agora para os campos de valor de Reembolsos e Pedidos de pagamento.
+
+---
+
+## [0.24.0] — 2026-06-11
+
+Reforço de segurança no cadastro feito por conta própria.
+
+### Adicionado
+
+- **Confirmação de e-mail no cadastro:** ao criar a própria conta (link "Criar agora" na tela de login), você recebe um **código de 6 dígitos por e-mail** e o informa para concluir o cadastro — com opção de reenviar o código. Quem já tem conta é levado direto ao **login**, em vez de criar outra.
+
+### Segurança
+
+- Reforço no fluxo de criação de conta: a definição de senha agora exige a confirmação do e-mail por código.
+
+---
+
+## [0.23.1] — 2026-06-11
+
+Correções de exibição e de permissões identificadas em testes por papel.
+
+### Corrigido
+
+- **Diretor agora apenas consulta as Movimentações**: para o papel Diretor, deixaram de aparecer os botões de operação (lançar, importar, editar, cancelar, estornar, excluir, marcar como pago) na lista e no detalhe, e também a edição do projeto vinculado a um lançamento. O papel é de supervisão, somente leitura.
+- **Menu "Mais" no celular**: a opção de Configurações passa a aparecer somente para quem tem acesso às configurações, e leva cada perfil à seção permitida (antes era exibida também para perfis sem acesso).
+- **Painel — seção Projetos**: voltou a carregar corretamente para perfis operacionais (como o Voluntário), que antes viam a seção falhar ao abrir o Painel.
+
+---
+
+## [0.23.0] — 2026-06-10
+
+Uniformização das permissões por papel: o papel "Dirigente" passa a se chamar "Diretor", o Tesoureiro ganha a gestão de cadastros e há reforços internos de controle de acesso.
+
+### Alterado
+
+- **Papel "Diretor"** (antes "Dirigente"): renomeado para um termo mais usual em OSCs. Passa a ser um papel de **supervisão, somente leitura** — vê Movimentações, Relatórios e Projetos para acompanhamento, sem operar (não lança nem aprova).
+
+### Melhorado
+
+- **Tesoureiro gerencia cadastros**: o Tesoureiro passa a poder criar e editar Contas Bancárias e Categorias diretamente (antes restrito ao Presidente).
+- **Reforços internos de segurança e de controle de acesso por papel**, sem mudança no uso do dia a dia.
+
+---
+
+## [0.22.1] — 2026-06-10
+
+Lote de correções e reforços após uma auditoria de qualidade: datas corretas nas exportações, app mais rápido de abrir e mais privacidade em dispositivos compartilhados.
+
+### Corrigido
+
+- **Datas corretas nas exportações e no parcelamento**: planilhas de movimentações, relatórios em PDF e o resumo ao criar um parcelamento passaram a mostrar a data exata (antes, em alguns casos, apareciam um dia antes).
+- **Aviso ao remover anexos**: se a remoção de um comprovante de reembolso falhar, agora aparece um aviso, em vez de falhar sem explicação.
+- **Lembretes e sincronizações automáticas** (lembretes de projeto e sincronização do catálogo WooCommerce) passam a rodar corretamente nos horários programados.
+
+### Melhorado
+
+- **Abertura mais rápida**: o app passou a carregar telas e recursos de exportação sob demanda, deixando a primeira abertura mais leve — especialmente no celular.
+- **Privacidade em dispositivos compartilhados**: ao sair da conta, os comprovantes visualizados deixam de ficar guardados no navegador.
+- **Reforços internos de segurança e controle de acesso**, sem mudança no uso do dia a dia.
+- **Card de compartilhamento próprio**: ao compartilhar o link do app, o card passa a exibir a imagem e a identidade do Bússola.
+
+---
+
+## [0.22.0] — 2026-06-10
+
+Melhorias de usabilidade nos projetos: ações mais diretas, layout da execução em colunas e um novo filtro por data no mural.
+
+### Adicionado
+
+- **Filtro por data no mural do projeto**: na aba Execução, o mural de comunicação ganhou um filtro por período (Últimos 7 dias, Últimos 30 dias, Este mês ou um intervalo personalizado), que combina com o filtro por tipo (eventos, comentários, status updates).
+
+### Melhorado
+
+- **Botões de ação diretos nos blocos do projeto**: as ações dos itens (editar, remover e ações específicas como "marcar marco como atingido" ou "marcar risco como materializado") agora aparecem como botões diretos no item, em vez de escondidas atrás de um menu de três pontos — nos blocos de Marcos, Riscos, Stakeholders, Tarefas, Evidências e Mural.
+- **Aba Execução em duas colunas (desktop)**: Tarefas ocupa a coluna principal à esquerda e Comunicação + Evidências ficam à direita, reduzindo a rolagem. No celular, continua em seções recolhíveis.
+- **Logo clicável**: clicar no logo do Bússola no topo leva você de volta ao Painel.
+- **Ações de tarefa mais claras**: em tarefas já concluídas ou abandonadas, agora aparece apenas "Reabrir" (além de Editar e Remover), em vez de vários botões redundantes. Mover uma tarefa entre qualquer status continua possível arrastando no quadro ou pela edição.
+
+---
+
+## [0.21.0] — 2026-06-10
+
+Correções de acabamento logo após a estreia do módulo de Projetos, mais um novo filtro por período na lista de projetos.
+
+### Adicionado
+
+- **Filtro por período na lista de projetos**: filtre os projetos por mês, trimestre, ano ou por um intervalo de datas personalizado. O filtro mostra os projetos cujo período acontece — mesmo que parcialmente — dentro do intervalo escolhido, e combina com os filtros de status, tipo, saúde e busca.
+
+### Corrigido
+
+- **Produtos do WooCommerce nos projetos**: o bloco de produtos no financeiro do projeto voltou a carregar e a listar corretamente os produtos sincronizados da loja.
+- **Sincronização do catálogo WooCommerce**: a data da última sincronização do catálogo agora permanece visível ao recarregar a página ou navegar entre telas.
+- **Aceite da Política de Privacidade**: corrigido um caso em que o aceite podia ser registrado mais de uma vez e gerar um aviso no carregamento inicial do app.
+- **Troca de organização**: ao trocar de OSC enquanto visualizava o detalhe de uma movimentação, reembolso, pedido de pagamento ou projeto, o app agora abre automaticamente a lista correta da nova organização — sem precisar recarregar a página.
+
+### Melhorado
+
+- **Produtos do WooCommerce no projeto**: o bloco de produtos passou a aparecer na visão geral do financeiro do projeto (antes ficava só dentro de "Calcular taxa"), tornando mais simples associar produtos da loja ao projeto.
+
+---
+
+## [0.20.0] — 2026-06-10
+
+Estreia do **módulo de Projetos** — o maior incremento da plataforma até aqui. Agora a OSC planeja, executa, acompanha e encerra seus projetos dentro do Bússola, com financeiro vinculado, indicador de saúde e relatório de encerramento.
+
+### Adicionado
+
+- **Módulo de Projetos** (novo item no menu): crie e gerencie os projetos da OSC, cada um com seu coordenador e equipe. Cada pessoa tem um papel dentro do projeto e o acesso respeita esse papel. Os projetos passam por um ciclo de vida — da criação ao encerramento —, com uma etapa de **aprovação configurável** pela OSC.
+- **Criação guiada por assistente**: um passo a passo de 4 etapas (tipo e identidade · período · financeiro · coordenador) cria o projeto com as informações certas, adaptando-se ao tipo escolhido (Projeto, Evento ou Voluntário).
+- **Planejamento**: defina o **escopo**, monte a **equipe**, registre o **orçamento** previsto por categoria, planeje **marcos**, mapeie **riscos** (probabilidade × impacto) e cadastre **partes interessadas**.
+- **Execução**:
+  - **Tarefas** em lista e em quadro **Kanban**, com responsável, prazo e vínculo a marcos.
+  - **Mural de comunicação**: linha do tempo dos acontecimentos do projeto + comentários com menção a pessoas (`@`).
+  - **Status updates** do coordenador, com lembrete automático quando o projeto fica muito tempo sem atualização.
+  - **Evidências** (arquivos e vídeos) anexáveis ao projeto.
+- **Financeiro do projeto**:
+  - **Movimentações vinculadas** ao projeto, com visão de previsto × realizado.
+  - **Registrar despesa** do projeto abrindo um reembolso ou pedido de pagamento já vinculado, que segue o fluxo normal de aprovação da OSC.
+  - **Produtos do WooCommerce por projeto**: vincule produtos da loja a um projeto para que as vendas entrem como receita dele.
+  - **Calculadora de taxa de evento**: simule a taxa por participante considerando custos, fundo de reserva, isentos, voluntários e a regra de pagamento; adote uma taxa oficial ou marque o evento como gratuito.
+- **Acompanhamento**:
+  - **Indicador de saúde** (semáforo verde / amarelo / vermelho) por projeto — na lista e em um card no **Painel**.
+  - **Filtro por projeto nos Relatórios** e uma aba de **Relatório** dentro do próprio projeto.
+- **Encerramento do projeto**: assistente de avaliação (objetivos, critérios, engajamento), **relatório de encerramento** completo, exportação em **PDF**, registro de **lições aprendidas** e a opção de gerar um **relatório parcial** antes da finalização.
+
+### Melhorado
+
+- **Painel reorganizado**: a ordem das seções ficou mais coerente (resumo financeiro do mês → pendências de pagamento → projetos); **Pedidos de Pagamento** e **Reembolsos** agora aparecem lado a lado, cada um em um card único com suas pendências como linhas clicáveis; e cada seção ganhou um ícone e um detalhe de cor para facilitar a leitura.
+- **Lista de Projetos em tabela no computador**: no desktop a lista abre em formato de tabela (como os demais módulos), mantendo os cards no celular.
+- **Severidade de risco**: o card de cada risco passa a mostrar uma severidade calculada (probabilidade × impacto), ajudando a priorizar o que merece atenção.
+- **Pendências visíveis no financeiro do projeto**: reembolsos e pedidos ainda não aprovados aparecem em uma seção "Aguardando aprovação", evitando solicitar o mesmo pagamento duas vezes.
+
+### Corrigido
+
+- **Concordância de gênero na matriz de risco**: os níveis de **Impacto** agora aparecem no masculino (Alto / Médio / Baixo), enquanto a Probabilidade permanece no feminino.
+
+---
+
+## [0.19.4] — 2026-05-22
+
+Bump consolidado de 8 entregas focadas em **consistência visual em mobile/PWA**, **navegação inferior** e **estabilidade do ciclo de atualização do app**.
+
+### Adicionado
+
+- **Relatórios na barra inferior do app em mobile** (BK-219): a barra inferior agora tem 5 itens fixos — **Painel · Movim. · Pag./Reemb. · Relatórios · Mais**. O botão `+` central, que era circular e prometia abrir um novo lançamento mas não funcionava, foi removido. As ações de criar lançamento, reembolso e pedido continuam no botão **Novo** do header de cada lista.
+- **Manual, Privacidade e Termos no menu "Mais"** (BK-222): em mobile (onde o rodapé fica oculto pra dar espaço à barra inferior), o sheet aberto pelo botão **Mais** agora inclui links diretos para **Manual do Usuário**, **Política de Privacidade** e **Termos de Uso** — sempre acessíveis na palma da mão.
+
+### Corrigido
+
+- **Campo de valor em Reembolsos e Pedidos de Pagamento se comportava diferente de Movimentações** (BK-218): nas telas de Reembolsos e Pedidos, ao digitar `100` o campo exibia `R$ 1,00` (tratava cada dígito como centavo). Em Movimentações o mesmo `100` virava `R$ 100,00`. Foi corrigido. Agora todos os campos de valor do app se comportam igual: digitar números resulta no valor inteiro; centavos só são incluídos se você usar vírgula explicitamente (ex.: `100,50` → `R$ 100,50`). Cobre Reembolso novo/editar, Pedido novo/editar (modos único, recorrente e parcelado).
+- **Calibração automática de pontos de atenção falhava com erro técnico** (BK-224): em **Configurações → Regras de pontos de atenção**, clicar em **Calibrar pelo histórico** (disponível pra OSCs com 6+ meses de movimentação) disparava um erro técnico e o fluxo não completava. Foi corrigido. A calibração agora roda até o fim e propõe os novos limites pra cada regra com base no histórico real da OSC.
+- **App em mobile precisava limpar dados do navegador a cada nova versão** (BK-212 — 2ª iteração): o aviso "Nova versão disponível" aparecia, mas tocar em **Atualizar** não tinha efeito e o app continuava na versão antiga — a única forma de subir era ir nas configurações do Chrome, excluir todos os dados de site e refazer login. Foi corrigido. Agora tocar em **Atualizar** mostra rapidamente o aviso "Atualizando..." e recarrega o app já na versão nova, em mobile e desktop.
+
+### Melhorado
+
+- **Botões do header das listas em mobile** (BK-220, BK-223): nas telas de Reembolsos, Pedidos de Pagamento, Configurações (Contas, Categorias, Usuários, Relatórios), Superadmin (Organizações) e empty states, os botões de ação no topo agora exibem só ícones em mobile (em vez de texto longo que quebrava o layout em telas pequenas), com toque confortável e descrição acessível pra leitor de tela. Em desktop continua ícone + texto, como antes. A página de Configurações de Usuários ganhou outra simplificação no mobile: o bloco flutuante na parte de baixo da tela foi removido — os mesmos botões agora ficam só no topo, sem duplicação.
+- **Tabs internas de Configurações em mobile** (BK-221): as tabs **Organização**, **Usuários**, **Contas Bancárias**, **Categorias**, **Fluxo de Aprovações** e **Relatórios** passaram a exibir só ícone em mobile (antes alguns rótulos longos como "Contas Bancárias" quebravam em duas linhas e bagunçavam o layout). Em desktop continuam com ícone + texto.
+
+### Observações de uso
+
+- **Esta é a primeira release onde o ciclo de atualização do app funciona automaticamente em mobile e desktop.** Quem está em v0.19.3 vai receber o aviso "Nova versão disponível" e, ao tocar em **Atualizar**, o app subirá pra v0.19.4 sem precisar de hard refresh nem limpar cache. Daqui pra frente, esse passo é automático em toda nova versão.
+
+---
+
+## [0.19.3] — 2026-05-21
+
+### Adicionado
+
+- **Superadministradores avisados em tempo real quando você envia um feedback** (BK-217): ao usar o botão **Feedback** no topo do app, todos os superadmins ativos recebem aviso imediato pelos canais que tiverem habilitado em **Meu Perfil → Notificações** (e-mail por padrão; push se o Bússola estiver instalado como app). Resposta administrativa fica muito mais ágil — antes, dependia do superadmin abrir a tela de feedbacks pra ver o que tinha de novo.
+
+### Observações de uso
+
+- A configuração desse aviso fica em **Meu Perfil → Notificações → seção Feedback → linha "Quando um usuário envia novo feedback"**. A linha aparece apenas para superadministradores. Defaults: e-mail e push ligados; WhatsApp e Telegram desligados (canais menos comuns para uso administrativo).
+
+---
+
+## [0.19.2] — 2026-05-21
+
+Bump consolidado de 6 entregas pós-piloto: 3 correções de bugs reportados pelos testadores, 2 melhorias de navegação e 1 nova funcionalidade administrativa.
+
+### Adicionado
+
+- **Resposta ao usuário quando seu feedback é resolvido** (BK-215): em **Superadmin → Feedbacks**, ao marcar um feedback como **Resolvido**, abre uma tela onde o administrador pode escrever uma mensagem opcional pro usuário que reportou. Se escolher enviar, a mensagem chega ao usuário pelo canal que ele tem habilitado em **Meu Perfil → Notificações** (e-mail por padrão). Se preferir só resolver sem enviar nada, basta o botão **Marcar como resolvido sem enviar**. A mensagem fica guardada na linha do feedback (ícone de envelope ao lado do status) pra histórico e revisão.
+- **Cards de saldos por conta na aba Movimentações** (BK-211): a página de Movimentações agora exibe, acima da lista de lançamentos, os cards com o saldo de cada conta (Consolidado + uma card por conta operacional ativa) — o mesmo bloco que já existia no Painel e em Relatórios. Saldos atualizam ao vivo, independente dos filtros que você aplicar na lista.
+- **Cards de aprovação clicáveis em Pedidos e Reembolsos** (BK-213): os 4 cards no topo das listas de **Pedidos de Pagamento** e **Reembolsos** ("Aguardando minha aprovação", "Aprovados aguardando pagamento", "Solicitado no período", "Pago no período") agora são clicáveis — clicar leva direto à sub-aba filtrada pelo status correspondente. Antes eram puramente informativos.
+
+### Corrigido
+
+- **Saldos no Painel não atualizavam após transferência entre contas** (BK-210): ao registrar uma transferência marcada como já efetivada (Data de pagamento preenchida no formulário), os cards de saldo do Painel, da página de Contas e do dropdown de seleção continuavam mostrando os valores antigos — só atualizavam após hard refresh (Ctrl+Shift+R) ou nova sessão. Foi corrigido. Agora qualquer transferência marcada como paga reflete imediatamente nos saldos em todas as telas. Transferências antigas que estavam contabilizadas errado também foram corrigidas retroativamente — o saldo total consolidado da OSC foi preservado (transferências não criam nem destroem dinheiro, só redistribuem entre as contas).
+- **Reprovação de pedidos de pagamento dava erro e não era registrada** (BK-214): ao tentar reprovar um pedido aguardando aprovação, o sistema retornava o erro técnico "Edge Function returned a non-2xx status code" e a reprovação não era registrada — o pedido ficava preso em "aguardando" sem possibilidade de avançar. Foi corrigido. Aprovadores agora conseguem reprovar com motivo e o pedido vai pra status "Rejeitado" normalmente, com a entrada visível no histórico de aprovações com a cor e o rótulo certos. Reprovação de reembolsos continuava funcionando — apenas o fluxo de pedidos estava afetado.
+- **Atualizações do app em desktop exigiam hard refresh em cada página** (BK-212): em navegador comum (não-PWA instalado), o aviso "Nova versão disponível" só aparecia depois de o tesoureiro fechar e reabrir a aba — quem deixava o Bússola aberto o dia inteiro nunca via o aviso e continuava na versão antiga. Foi corrigido. Agora o app verifica versão nova a cada minuto, quando você volta o foco pra aba do Bússola, e quando reconecta após perder rede. Quando você toca em **Atualizar**, todas as abas abertas se atualizam juntas.
+
+### Observações de uso
+
+- **Bootstrap chato (uma vez só):** quem está em v0.19.1 ainda precisa fazer um último hard refresh manual (Ctrl+Shift+R) para subir para v0.19.2 — depois disso o ciclo automático de atualização (BK-212) passa a valer e nenhum hard refresh será mais necessário.
+- Esta release fecha a fila de bugs e melhorias reportados pelos testadores na fase de pré-teste.
+
+---
+
+## [0.19.1] — 2026-05-21
+
+Versão dedicada à **estabilização da experiência no celular** e à correção de um bug crítico que estava impedindo as atualizações do app de chegarem aos usuários. Os 6 ajustes desta versão não trazem funcionalidade nova — refinam o que já existia para deixar o Bússola pronto para uso diário no smartphone.
+
+### Corrigido
+
+- **Atualizações do app agora chegam direito ao celular**: nas versões anteriores, quando uma nova versão era publicada e o aviso "Nova versão disponível" aparecia no celular, tocar em **Atualizar** não trocava de versão — só funcionava após limpar manualmente os dados do navegador (Configurações do Chrome → Privacidade e segurança → Limpar dados). Foi corrigido. A partir desta versão, tocar em "Atualizar" recarrega o app na versão nova automaticamente. **Importante:** este fix só passa a valer **a partir desta versão (v0.19.1)** — quem está em v0.19.0 ou anterior precisa, uma última vez, fazer aquele procedimento manual de limpar dados pra subir para v0.19.1 e ganhar o comportamento correto dali em diante.
+- **Filtros de status em Reembolsos**: tocar em "Rascunho", "Aguardando aprovação", "Aprovado", "Rejeitado" ou "Pago" dentro da aba **Reembolsos** estava levando o usuário pra aba **Pedidos de Pagamento**. Agora o filtro funciona dentro da própria aba Reembolsos.
+- **Cabeçalho de Movimentações no celular**: os botões "Exportar / Importar Lançamentos / Novo lançamento" no topo da página vazavam ligeiramente para fora da tela. Foram ajustados para caber certinho.
+
+### Modificado
+
+- **Listas de Pedidos e Reembolsos no celular agora aparecem como cartões**: em vez da tabela com colunas que precisavam de rolagem lateral, cada solicitação vira um cartão vertical com todos os campos visíveis sem precisar rolar — mesmo padrão que **Movimentações** já tinha desde a v0.18.0. Em desktop, a tabela tradicional continua sendo usada.
+- **Formulários de Nova Solicitação otimizados para celular**: nos formulários de **Novo Reembolso** e **Novo Pedido de Pagamento** (e nos modos de edição), a barra de ações ("Cancelar / Salvar rascunho / Enviar para aprovação") agora aparece em um rodapé fixo na parte de baixo da tela do celular, ao alcance do polegar — padrão familiar de apps nativos. Os campos também ganham mais espaço horizontal: em vez de 3 colunas apertadas (Categoria / Projeto / Centro de custo), passam a empilhar em coluna única no celular. Em desktop o visual continua exatamente como antes.
+- **Rodapé do app oculto no celular**: a barra de rodapé (versão do app + links de Política / Termos / Manual) só aparece em telas grandes. No celular, esses links continuam disponíveis pelo menu **Mais** da barra inferior.
+
+### Observações de uso
+
+- Esta versão é resultado de uma varredura sistemática pós-PWA: testamos as 12 rotas principais do app em viewport de 375px (smartphones pequenos como iPhone SE) para garantir zero conteúdo cortado e fluxo de toque consistente.
+- Quem usa o Bússola só no desktop não vai notar mudança nenhuma — todas as alterações desta versão são especificamente para refinar a experiência no celular.
+- Próximas versões voltam o foco para novas funcionalidades (em particular, aceite combinado da Política de Privacidade e Termos de Uso).
+
+---
+
+## [0.19.0] — 2026-05-20
+
+Esta versão adiciona um novo canal de notificações: **push direto no celular ou no navegador**. Você passa a receber avisos do Bússola mesmo com o app fechado, como em qualquer aplicativo de banco — ao tocar no aviso, abre direto na tela relevante (reembolso aprovado, pedido pendente de seu voto, etc.). Push é o 4º canal da matriz de preferências, ao lado de E-mail, WhatsApp e Telegram.
+
+### Adicionado
+
+- **Push como 4º canal na matriz de notificações** (BK-199): a tabela de preferências em **Meu Perfil → Notificações** ganha uma coluna **Push** ao lado de E-mail, WhatsApp e Telegram. Cada par (evento × canal) continua sendo um toggle independente — você decide por qual caminho quer ser avisado de cada tipo de evento. Default vem com tudo ligado; você silencia o que não quer.
+- **Ativação por dispositivo** (BK-199): um interruptor mestre **"Ativar push neste dispositivo"** acima da matriz controla se este celular/computador específico recebe push. Pode ativar no celular pessoal e desativar no do trabalho sem afetar a configuração da sua conta — cada dispositivo é independente.
+- **Avisos chegam mesmo com o app fechado** (BK-199): a integração com os serviços nativos de notificação dos sistemas (Google no Android, Apple no iOS) faz o aviso chegar como o de WhatsApp ou e-mail — não depende de você estar com o Bússola aberto.
+- **Toque no aviso abre a tela correspondente** (BK-199): tocar em "Reembolso aprovado" abre direto no detalhe daquele reembolso; tocar em "Pedido pendente de aprovação" abre direto no detalhe do pedido — sem navegar por menu.
+
+### Observações de uso
+
+- **Android (Chrome / Edge / outro navegador moderno):** funciona direto, sem precisar instalar. Apenas autorize quando o navegador perguntar.
+- **iOS (Safari):** push só funciona se o Bússola estiver **instalado como app** na tela de início (toque em **Compartilhar → Adicionar à Tela de Início**). Sem isso o iOS não permite push, e o interruptor fica desabilitado com instrução. Veja **[Instalar como app](/instalar-como-app/)** se ainda não fez.
+- **Desktop (Chrome / Firefox / Edge):** funciona como no celular. Útil para receber avisos quando você está com outro aplicativo em primeiro plano.
+- **Múltiplas OSCs:** quem participa de mais de uma OSC recebe push de eventos de todas elas. A OSC aparece no corpo do aviso para identificação da origem.
+- **Privacidade:** o endpoint do seu dispositivo é armazenado da mesma forma que os outros dados de contato (número de WhatsApp, ID do Telegram). Você pode desativar a qualquer momento no master switch ou pedir exclusão completa pelo fluxo LGPD em **Ações de Conta**.
+
+---
+
+## [0.18.0] — 2026-05-20
+
+Release consolidando duas frentes: a **captura de documentos pela câmera no celular** (BK-200, principal novidade) e um pacote de **estabilização mobile + polimentos** que vinha acumulando desde a entrega do PWA (v0.17.0). O salto de versão de v0.17.2 direto para v0.18.0 (sem v0.17.3 intermediária) reflete essa consolidação — todas as melhorias chegam juntas ao usuário.
+
+### Adicionado
+- **Capturar documento com a câmera do celular** (BK-200): em **Nova Movimentação**, **Novo Reembolso** e **Novo Pedido de Pagamento** (e nas variantes de edição de Reembolso/Pedido), o celular agora exibe um botão **Tirar foto** ao lado de **Anexar arquivo**. Tocar abre a câmera traseira direto; após capturar, você vê a foto em tamanho grande e decide entre **Refazer** ou **Confirmar**. Caso de uso primário: tesoureiro registra a despesa de campo (gasolina, material, lanche) no momento do gasto, sem precisar abrir a câmera do celular, salvar na galeria e depois selecionar.
+- **Anexar comprovante em lançamentos diretos** (BK-200): até a versão anterior, só Reembolsos e Pedidos de Pagamento permitiam anexar nota fiscal/recibo/boleto. Agora **Movimentação** também aceita anexo (opcional — lançamento sem comprovante continua válido). O comprovante aparece na página de detalhe do lançamento e fica disponível para auditoria. Em modo recorrente/parcelado a seção fica oculta na criação da série e ganha uma nota explicativa: você anexa depois acessando cada lançamento individualmente.
+- **Troca de organização (OSC) no celular** (BK-201, originalmente em v0.17.2 — refinamento incremental aqui): no painel **Mais** da barra inferior, o bloco da OSC ativa permanece sólido e funcional.
+
+### Modificado
+- **Vocabulário uniformizado em todos os formulários financeiros** (BK-200): a seção de anexos passa a se chamar **DOCUMENTOS** em todos os 6 formulários (Reembolso novo/editar, Pedido novo/editar, Movimentação novo/editar). Texto auxiliar único — "Nota fiscal, recibo, boleto, orçamento, contrato ou outro documento". Mensagem de erro padronizada — "Inclua ao menos um documento." (substitui "Inclua ao menos um comprovante.").
+- **Tipos de arquivo aceitos restritos a imagens, PDF, XML (NFe) e ZIP** (BK-200): o seletor nativo do dispositivo passa a esconder tipos fora dessa lista, reduzindo upload de arquivos inválidos.
+- **Fotos da câmera são reduzidas automaticamente** antes do upload (BK-200): legibilidade preservada para humano (e para extração automática futura via IA), com economia significativa de armazenamento da OSC — cada foto chega ao servidor com 200-500 KB em vez dos 5-10 MB típicos de smartphone moderno.
+- **Botão de submit muda conforme o modo no Novo Lançamento** (carona BK-200): "Salvar lançamento" em modo Único; "Criar série" em modo Recorrente/Parcelado. Comunica melhor o que vai acontecer.
+
+### Corrigido
+- **Inconsistência visual de obrigatoriedade no Pedido de Pagamento** (BK-200): a label "DOCUMENTOS" passa a exibir o asterisco vermelho de campo obrigatório, alinhando com Reembolso (a regra no servidor já era a mesma — só a UI não comunicava).
+- **App no celular agora rola normalmente ao arrastar com o dedo** (BK-193): em Android Chrome e iOS Safari, a tela não rolava por toque — o conteúdo ficava cortado e o usuário precisava esticar/zoom para chegar no rodapé. A altura fixa que travava o documento foi substituída por altura mínima, liberando o browser a criar a área scrollável virtual. Em desktop continua funcionando como antes.
+- **Tabela de Movimentações em celular agora exibe os lançamentos como cartões** (BK-194): a tabela de 9 colunas era cortada em viewport mobile (só 2 colunas visíveis em 322px). Agora, em telas menores que 1024px, cada lançamento aparece como um cartão com todos os campos visíveis sem rolagem horizontal — padrão familiar de apps financeiros (Nubank, Conta Azul). Em telas maiores, a tabela tradicional continua sendo usada.
+- **Scrollbar horizontal indesejada no body em mobile** (BK-195): em `/pagamentos`, `/reembolsos`, `/movimentacoes` e `/relatorios`, a página inteira oferecia rolagem horizontal de até 342px em mobile, dando sensação de "tela quebrada". Corrigido globalmente; containers de tabs ficam responsáveis por sua própria rolagem horizontal quando precisarem. Resta uma regressão residual de 47px em `/movimentacoes` mascarada pelo fix global — rastreada em BK-202 para tratamento futuro.
+- **Sino de notificações sem funcionalidade removido da barra superior** (BK-174): o ícone de sino próximo ao avatar não estava ligado a nenhum fluxo de notificações no app — clicar não fazia nada. Foi removido para não passar expectativa errada ao usuário. Quando a feature de notificações no app for implementada, o sino volta junto.
+- **Filtro de Fornecedor removido da barra de Relatórios** (BK-176): decisão de produto — no contexto de prestação de contas e visão gerencial agregada, Tipo, Conta, Categoria e Centro de custo já cobrem o essencial. Filtro permanece intacto em `/movimentacoes` e demais telas.
+- **Meses em português em todo o módulo Relatórios** (BK-177): alerta de meses negativos na aba Previsão exibia "Atenção: saldo projetado negativo em May/2026" em vez de "Maio/2026". Todos os pontos de formatação de mês no módulo (alerta de Previsão, gráficos, tabelas, cabeçalho) passaram a usar o português.
+- **Importação de movimentações via CSV agora aceita seis formatos de data** (BK-171): planilhas brasileiras (com data em `dd/mm/aaaa` ou `dd-mm-aaaa`) eram rejeitadas pelo importador, que aceitava apenas ISO. Agora o parser reconhece automaticamente `aaaa-mm-dd`, `aaaa/mm/dd`, `dd-mm-aaaa`, `dd/mm/aaaa`, `dd-mm-aa`, `dd/mm/aa` e converte internamente antes de salvar.
+
+### Observações de uso
+- Validação E2E foi feita via Playwright em produção em 2026-05-20: dois botões em mobile, dropzone preservada em desktop, captura por câmera com preview, compressão, modos Único/Recorrente/Parcelado da Movimentação. Teste manual com upload de CSV em formato brasileiro ainda recomendado pelo administrador antes de migrar planilhas antigas em larga escala.
+- Câmera é exclusiva do celular — em desktop o botão "Tirar foto" não aparece (webcam frontal de laptop não serve para fotografar comprovante apoiado na mesa).
+- Modos Recorrente e Parcelado de **Novo Lançamento** ocultam a seção de anexo na criação da série; uma nota explicativa orienta o usuário a anexar individualmente em cada lançamento após salvar.
+
+---
+
+## [0.17.2] — 2026-05-19
+
+### Corrigido
+- **Abas de Movimentações no celular voltaram a ser acessíveis** (BK-197): as abas iniciais (**Todas** e **Receitas**) ficavam invisíveis à esquerda e o usuário não conseguia rolar a barra de abas para alcançá-las — só era possível rolar para a direita para ver as últimas. Agora a rolagem funciona em ambas as direções nas abas de **Movimentações**, **Pagamentos e Reembolsos**, **Relatórios** e demais telas que usam abas em mobile (8 telas mapeadas e corrigidas via componente compartilhado).
+- **Rótulo "Pag./Reemb." na navegação do celular** (BK-198): a barra inferior do app instalado mostrava só "Reemb." no terceiro botão, ocultando que o módulo cobre também Pedidos de Pagamento. Agora aparece **Pag./Reemb.** e leva para `/pagamentos` (a tela raiz do módulo).
+
+### Adicionado
+- **Troca de organização (OSC) agora disponível no celular** (BK-201): no celular, usuários com acesso a mais de uma OSC (superadmin, voluntários cross-OSC, contadores) não tinham como trocar de organização — o seletor existia só no cabeçalho desktop, escondido em mobile. Agora, no painel **Mais** (barra inferior), aparece no topo um bloco com a **OSC ativa** (logo + nome). Quando há múltiplas OSCs, tocar nesse bloco expande a lista de organizações disponíveis dentro do próprio painel; tocar em uma delas troca de OSC e fecha o painel. Se o usuário tem só uma OSC, o bloco aparece apenas como informação ("você está na OSC X").
+
+---
+
+## [0.17.1] — 2026-05-19
+
+### Corrigido
+- **Filtros de Relatórios voltaram a funcionar** (BK-183): os filtros **Conta**, **Categoria** e **Centro de custo** estavam exibindo botões vazios e não filtravam nada (só **Tipo** funcionava). Agora todos os filtros listam as opções com nome legível e aplicam o filtro corretamente em todas as abas (Visão Geral, Receitas, Despesas, Atenção, Previsão).
+- **Menu "Mais" no celular não cai mais em 404** (BK-187): ao tocar em **Mais** na barra inferior do app instalado no celular, agora abre um painel deslizante com **Pagamentos e Reembolsos**, **Projetos**, **Relatórios**, **Configurações da organização**, **Meu perfil** e **Sair** — em vez de mostrar página de erro.
+- **Banner de instalação não bloqueia mais a navegação no celular** (BK-188): o banner "Instale o Bússola como app" subiu para acima da barra de navegação inferior. Tesoureiros agora conseguem usar a navegação livremente mesmo com o banner visível.
+- **Banner de instalação só aparece no celular** (BK-186): em computadores desktop, o banner sumiu — Chrome/Edge já têm o ícone "Instalar" próprio na barra de endereços, então o banner era redundante e ocupava espaço.
+- **Página de erro 404 agora em português** (BK-189): ao acessar uma rota inexistente, o Bússola exibe **"Página não encontrada"** com a identidade visual da marca (logo, paleta teal, fonte Exo 2) em vez do texto genérico "Oops! Page not found" em inglês.
+- **Atualizações voltam ao modelo de aviso** (BK-185): a v0.17.0 saiu com modo de auto-atualização forçada (necessário para destravar quem ficou com a versão quebrada do dia anterior). A v0.17.1 retoma o comportamento padrão — você vê uma notificação "Nova versão disponível" e decide quando aplicar.
+
+### Em validação (Android)
+- **Bússola virou app instalável de verdade no Android** (BK-191): instalar o Bússola pelo Chrome Android agora cria um aplicativo standalone com ícone próprio (não mais um simples atalho que abre dentro do Chrome). **Validado em produção em 2026-05-19.** Veja como instalar em [Instalar como aplicativo](/instalar-como-app/).
+
+---
+
+## [0.17.0] — 2026-05-19
+
+### Adicionado
+- **Bússola instalável como aplicativo no celular** (BK-179): Android Chrome agora oferece **Instalar aplicativo** no menu de três pontos. No iPhone, **Compartilhar → Adicionar à Tela de Início** instala o Bússola como app de verdade. No desktop (Chrome/Edge), aparece um ícone de **Instalar** na barra de endereços. App instalado abre em janela própria, sem barra do navegador, com splash em Verde Teal e ícone próprio da marca.
+- **Logo oficial em todas as telas** (BK-179): símbolo + nome **BÚSSOLA** lado a lado substituem a pseudo-logo de texto improvisada que aparecia no cabeçalho, na tela de login e no painel de autenticação. Mesmo símbolo é usado como ícone do app quando instalado no celular.
+- **Manual público com logo oficial** (BK-179): cabeçalho da documentação (`bussola-docs`) passa a exibir **RIT** + **Bússola Financeira** lado a lado.
+
+### Alterado
+- **Fonte Exo 2 self-hostada** (BK-179): tipografia oficial do design system agora é servida pelo próprio domínio do Bússola, sem depender mais do Google Fonts. Resultados: carregamento mais rápido, funciona em redes que bloqueiam CDN externa, e nenhum dado de IP do usuário vai para a infraestrutura do Google (privacy-by-design).
+- **Atualização sob seu controle** (BK-179): quando uma nova versão do Bússola for publicada, você verá uma notificação discreta perguntando se quer atualizar agora ou depois — em vez de o app trocar de versão sem aviso enquanto você usa.
+
+---
+
+## [0.16.1] — 2026-05-19
+
+### Corrigido
+- **Relatórios: filtro "Todos" agora exibe os dados completos** (BK-180): ao escolher o preset **Todos** na Visão Geral de `/relatorios`, o Resultado do Período, Evolução do Saldo, Saldos por Conta e Top 5 receitas/despesas voltam a exibir todos os valores reais do histórico da OSC, em vez de zerar tudo como se não houvesse movimentações. As demais abas (Receitas, Despesas, Atenção, Previsão) seguem a mesma lógica.
+
+---
+
+## [0.16.0] — 2026-05-19
+
+### Adicionado
+- **Importação de usuários em lote por CSV** (BK-178): nova opção **Importar usuários** em **Configurações → Usuários**, ao lado de "Adicionar usuário". Admin pode trazer dezenas ou centenas de membros de uma vez a partir de uma planilha CSV — útil para OSCs migrando de outro sistema ou cadastrando todo o quadro associativo de uma vez.
+- **Template CSV pré-formatado** (BK-178): botão "Baixar template" entrega um arquivo com cabeçalho e exemplos. Campos obrigatórios: nome completo, e-mail e papel. Opcionais: telefone, WhatsApp, Telegram, data de nascimento, CPF e RG.
+- **Pré-visualização com classificação por status** (BK-178): após upload, o Bússola mostra cada linha como **novo** (vai receber convite), **já cadastrado** (cria vínculo direto), **vínculo ativo na OSC** (atualiza só campos vazios do perfil), ou **com erro** (será pulada, com motivo explícito). Botão "Importar" só fica ativo se houver linhas válidas.
+- **Convite por e-mail mantido para novos cadastros** (BK-178): cada e-mail novo recebe o mesmo template de convite usado quando o admin cadastra individualmente. Senha continua sendo definida pelo próprio usuário no link de setup — admin nunca vê nem digita senha alheia.
+- **Upsert seletivo de perfil** (BK-178): para e-mails já cadastrados, o Bússola preenche apenas os campos do perfil que estão vazios. Nenhum dado existente é substituído. Útil para enriquecer cadastros sem risco de sobrescrever dados que o membro já cadastrou no próprio perfil.
+- **CPF e RG via Vault** (BK-178): se a planilha incluir CPF/RG, esses dados vão para o cofre seguro (Vault) do Supabase, com a mesma proteção que o cadastro individual recebe. Nunca persistem em coluna clara.
+- **Resumo final por categoria** (BK-178): ao concluir, o Bússola mostra contagens por tipo (convites enviados, convites com e-mail pendente quando o envio falhou, vínculos novos, perfis atualizados, linhas com erro). Linhas com erro ficam disponíveis para download em CSV separado com coluna de motivo, facilitando correção.
+
+### Observações de uso
+- Multi-papel não entra via planilha — cada linha atribui exatamente 1 papel. Para acumular papéis, usar **Editar papéis** no menu de ações do membro após importar.
+- Dados de pagamento (PIX/banco/conta) **não entram** na planilha por decisão de segurança e simplicidade. Cada membro preenche no próprio perfil.
+
+## [0.15.0] — 2026-05-19
+
+### Adicionado
+- **Módulo de Relatórios** (BK-070, Onda 5): novo item "Relatórios" na barra superior, restrito a **Presidente, Tesoureiro e Comissão Fiscal**. Consolida toda a informação financeira da OSC em análises gerenciais navegáveis em **cinco abas**: Visão Geral, Receitas, Despesas, Atenção e Previsão. Voluntários e Coordenadores de Projeto não acessam no momento.
+- **Visão Geral** (BK-070): resultado do período em destaque (receitas menos despesas pagas), gráfico de evolução do saldo, cards com saldo de cada conta na **data final do período** (não "hoje" — coerência com prestação de contas histórica), top 5 receitas e top 5 despesas por categoria com link para a aba detalhada.
+- **Receitas e Despesas** (BK-070): gráfico por categoria + tabela detalhada com todas as categorias e percentual do total; quando há mais de 10 categorias, linha "Outros" agregada com expansão inline. Clique em qualquer linha abre `/movimentacoes` filtrado pela categoria + período.
+- **Aba Atenção** (BK-070): lista anomalias detectadas no período por **cinco regras configuráveis** — despesa única concentrada, categoria com pico, fornecedor novo com alto valor, categoria zerada que voltou, queda de receita. Cada anomalia tem severidade (leve/moderada/alta) e link de ação contextual. Badge na aba mostra a contagem total.
+- **Aba Previsão** (BK-070): forecast híbrido de fluxo de caixa para os próximos 3, 6 ou 12 meses combinando lançamentos já cadastrados (pendentes, ocorrências futuras de séries recorrentes, parcelas futuras de pedidos aprovados — "agendados") com extrapolação por média móvel de 6 meses por categoria ("estimados"). Mês corrente entra como primeiro mês projetado com marcador "em curso". Cada célula traz badge de origem (agendado/estimado). Drilldown mostra a composição. Alerta destacado quando há mês com saldo projetado negativo.
+- **Comparativo com período anterior** (BK-070): toggle no cabeçalho ativa comparação em todas as abas onde faz sentido (Visão Geral, Receitas, Despesas). Granularidade automática: mês completo compara com mês anterior completo; mês em andamento ou intervalo customizado compara com janela de mesma duração imediatamente antes.
+- **Configuração das regras de atenção** (BK-070): nova seção em **Configurações → Relatórios** (restrita ao Presidente). Cards editáveis com toggle on/off, threshold em campo numérico com unidade clara, link "Restaurar padrão" individual e link "Restaurar todas as regras ao padrão".
+- **Calibrar pelo histórico** (BK-070): botão na tela de configuração de regras (habilitado a partir de 6 meses de movimentação registrada) que dispara análise estatística do histórico da OSC e sugere thresholds personalizados para cada uma das cinco regras, com nível de confiança (alta/média/baixa) e justificativa em linguagem natural. Admin pode aceitar todas, editar individualmente antes de salvar, ou cancelar. Aplicação atômica em transação única.
+- **Exportação dos relatórios** (BK-070): botão Exportar com três opções — PDF da aba ativa, PDF completo (todas as cinco abas + sumário) e Excel multi-sheet. Cabeçalho identificador padrão em todos os formatos: nome da OSC, escopo, período, filtros aplicados, estado do comparativo, data/hora de geração. Receitas/despesas exportadas trazem todas as categorias (não só top 10).
+- **Filtros e período compartilhados entre abas** (BK-070): conta, categoria, fornecedor, tipo, centro de custo — todos multi-select. Período com presets (mês, trimestre, semestre, ano) + intervalo customizado. Default: último mês fechado. Estado completo persistido em query params da URL — link compartilhável reconstrói o recorte.
+
+### Corrigido
+- **Bloco "Resultado do período" zerado** (BK-173): bloco hero da aba Visão Geral exibia R$ 0,00 enquanto os demais blocos da mesma tela (gráfico, saldos por conta, top 5) mostravam dados reais. RPC `report_overview` foi corrigida para alinhar lógica de filtros com as demais RPCs do módulo.
+
+### Observações de uso
+- Cálculo dos relatórios é **regime de caixa**: considera apenas movimentações com status **pago**, agregadas pela data de pagamento. A aba Previsão é exceção — lançamentos pendentes futuros entram como "agendados".
+- Relatórios são leitura pura — gerar um relatório não altera nenhum dado financeiro.
+- PDF da primeira versão usa **tabelas e blocos textuais** — sem reprodução de gráficos visuais. Reprodução visual em PDF entra em versão futura.
+
+## [0.14.0] — 2026-05-19
+
+### Adicionado
+- **Múltiplos papéis por usuário em uma mesma OSC** (BK-166): um membro agora pode acumular papéis no mesmo vínculo — por exemplo, ser **Coordenador de Projeto** e **Comissão Fiscal** ao mesmo tempo. As capacidades se somam: o usuário faz tudo que qualquer um dos seus papéis permite. Útil em OSCs pequenas onde a mesma pessoa cumpre mais de uma função.
+- **Editor de papéis dedicado** (BK-166): em Configurações → Usuários, o menu de ações ganhou o item **"Editar papéis"** que abre um painel lateral com checkboxes para os 6 papéis disponíveis. Marcar/desmarcar é livre, com **uma restrição visível**: Comissão Fiscal não pode ser combinada com Presidente nem Tesoureiro (conflito de interesse — o fiscal não pode fiscalizar a si mesmo). O sistema desabilita visualmente as opções incompatíveis e mostra mensagem explicativa.
+- **Confirmações sensíveis preservadas** (BK-166): adicionar ou remover o papel de Presidente continua exibindo o diálogo de confirmação ("Promover a administrador" / "Remover privilégios de administrador") antes de salvar. Outras mudanças de papel salvam direto.
+- **Lista de membros com todas as pills de papel** (BK-166): a tabela e os cards de membros agora exibem **todas as pills de papel** lado a lado, na ordem hierárquica (Presidente → Tesoureiro → Dirigente → Coordenador de Projeto → Comissão Fiscal → Voluntário). A visão do superadmin recebeu a mesma atualização para manter consistência.
+
+### Observações de uso
+- Invariante "último administrador ativo" preservada: o sistema continua bloqueando a remoção do papel de Presidente do último admin ativo da OSC.
+- O fluxo de **convite** de novos membros não muda — convite continua atribuindo um único papel (default: Voluntário); papéis adicionais são atribuídos depois via edição do membro.
+
+## [0.13.1] — 2026-05-19
+
+### Adicionado
+- **Papel "Comissão Fiscal"** como 5º papel disponível (BK-165): novo papel destinado a membros eleitos da comissão fiscal estatutária da OSC. Capacidades: leitura ampla de todas as movimentações, reembolsos, pedidos de pagamento e log de auditoria. **Não opera, não aprova e não solicita pedidos de pagamento** — pode solicitar reembolso próprio, como qualquer outro membro. Configurações da OSC ficam inacessíveis (mesma regra de Coordenador/Voluntário).
+- **Filtros de papel em Configurações → Fluxo de Aprovações** (BK-165): seletor de papéis aprovadores **não exibe** Comissão Fiscal como opção. Tentativas de configurar via API direta são rejeitadas pelo backend com erro explícito.
+- **Defesa em profundidade** (BK-165): bloqueio de mutações financeiras por Comissão Fiscal aplicado em três camadas — guard de rota, ocultação de botão na UI e validação no backend. Mesmo que algum passo falhe, os demais continuam protegendo.
+
+### Corrigido
+- **Regressão na ST-165.2** (BK-170): Comissão Fiscal aparecia indevidamente como opção de **solicitante de pedido de pagamento** em Configurações → Fluxo de Aprovações. Corrigido — apenas Presidente, Tesoureiro e Coordenador de Projeto solicitam pedidos de pagamento.
+
+## [0.13.0] — 2026-05-18
+
+### Adicionado
+- **Integração com WooCommerce** (BK-149): o Bússola agora sincroniza automaticamente os pedidos pagos da loja online da sua OSC como receitas em Movimentações. Cada pedido `completed` vira um lançamento financeiro com data, valor, cliente, método de pagamento e categoria — sem intervenção manual.
+- **Configuração da integração** (BK-149): nova seção "WooCommerce" em **Configurações → Organização**. Admin informa URL da loja, Consumer Key e Consumer Secret (com instruções passo a passo de como gerar no admin do WooCommerce, sem suposições), escolhe a frequência da sincronização (diária / semanal / mensal / desligada), a conta financeira destino, a data de corte para o backfill inicial e o modo de mapeamento de categorias (automático com categoria-mãe ou manual explícito).
+- **Sincronização automática diária** (BK-149): todas as OSCs com integração ativa têm seus pedidos sincronizados automaticamente todo dia às 06:00 (horário de Brasília). A frequência efetiva por OSC respeita a configuração escolhida — uma OSC em "Semanal" só roda nas segundas; em "Mensal" só no dia 1; em "Desligada" pula completamente.
+- **Importação manual sob demanda** (BK-149): além do cron automático, a página **Movimentações → Importar Lançamentos** (renomeada de "Importar CSV") agora tem duas fontes — CSV (existente) e WooCommerce (nova). Na aba WooCommerce, o admin escolhe o período (Desde a última sincronização / Últimos 7 dias / Últimos 30 dias / Personalizado com 2 datas) e clica "Importar agora".
+- **Estorno automático em refunds** (BK-149): se um pedido importado pelo Bússola virar `refunded` ou `cancelled` no WooCommerce depois, a próxima sincronização cria automaticamente um lançamento contrário (padrão de estorno do BK-156) e ambos os lançamentos passam a exibir o badge "Estornado". A OSC não precisa fazer nada manualmente — a reconciliação contábil acontece sozinha.
+- **Badge "WooCommerce" na lista de movimentações** (BK-149): lançamentos importados da loja online ganham um badge clicável ao lado do título. Clicar abre o pedido original no admin do WooCommerce em nova aba (útil para conferir o pedido completo, falar com o cliente, etc.).
+- **Mapeamento inteligente de categorias** (BK-149): no modo automático, o Bússola lê as categorias dos produtos da loja e cria sub-categorias correspondentes sob a categoria-mãe escolhida (ex: "Loja Online" → "Camisetas", "Livros", "Doações"). Renomeação manual prevalece em sincronizações futuras — o Bússola não sobrescreve o nome que a OSC ajustou. No modo manual, o admin mapeia explicitamente cada categoria do WooCommerce para uma categoria contábil do Bússola.
+- **Detalhe rico no lançamento** (BK-149): cada movimento importado traz nas observações a lista dos itens comprados, o método de pagamento, o status no WooCommerce, dados do cliente e um link direto para abrir o pedido no admin da loja.
+- **Histórico de sincronizações** (BK-149): nova área dentro da configuração da integração mostra as últimas 20 execuções (data, modo, totais de novos/estornados/erros, status). Útil para diagnosticar problemas e acompanhar a saúde da integração.
+- **Notificação de falha** (BK-149): se uma sincronização falhar por credenciais inválidas, loja fora do ar ou outro erro grave, os administradores da OSC recebem notificação imediatamente (pelos canais habilitados na matriz de notificações do perfil).
+
+### Observações de uso
+- Sem alteração nos fluxos existentes de Reembolsos, Pedidos de Pagamento, Movimentações manuais ou CSV — a integração WooCommerce é totalmente aditiva.
+- Pendente para versões futuras: webhook em tempo real (hoje sync é cron + manual), split por método de pagamento, cálculo automático de taxa do gateway, reconciliação com extrato bancário e múltiplas lojas por OSC.
+
+## [0.12.0] — 2026-05-18
+
+### Adicionado
+- **Perfil do usuário em rota própria** (BK-154 + BK-139): a tela de perfil foi separada de Configurações e ganhou rota standalone `/perfil`, acessível a qualquer usuário autenticado pelo item "Meu perfil" no menu do avatar. Quatro boxes consolidados — **Identificação** (foto, nome completo, telefone, data de nascimento, CPF, RG), **Dados para Reembolso**, **Notificações** e **Ações de Conta** — cada um com seu próprio botão de salvar interno (exceto Ações de Conta, com botões por ação).
+- **Configurações da organização via ícone de engrenagem na TopNav** (BK-139): o item de texto "Configurações" da TopNav foi substituído por um ícone de engrenagem próximo ao sino de notificações, visível apenas para administradores e tesoureiros (e superadmin). Libera espaço horizontal na barra e torna explícito que Configurações é restrita por papel.
+- **Sub-nav de Configurações reorganizada** (BK-154): nova ordem e nomenclatura — Organização → Usuários → **Contas Bancárias** (renomeada de "Contas") → Categorias → **Fluxo de Aprovações** (renomeada de "Pagamentos e Reembolsos"). A URL antiga `/configuracoes/reembolsos` passa a ser `/configuracoes/aprovacoes`. A sub-nav filtra itens pelo papel: tesoureiro vê 3 (Contas Bancárias, Categorias, Fluxo de Aprovações); admin/superadmin veem todos os 5.
+- **Matriz granular de preferências de notificação por usuário** (BK-154): novo bloco na seção "Notificações" do perfil com matriz de 10 eventos × 3 canais (e-mail, WhatsApp, Telegram). Eventos cobertos: 5 de reembolso (submetido, aprovação parcial, aprovado, rejeitado, pago) e 5 de pedidos de pagamento (mesmos estados). Default: tudo ligado. Quando o usuário não tem WhatsApp ou Telegram cadastrado, a coluna correspondente aparece desabilitada visualmente com orientação para cadastrar o contato. As notificações disparadas por reembolsos e pedidos de pagamento agora respeitam estritamente essas preferências — silenciam exatamente os pares `(evento, canal)` desligados pelo usuário.
+- **Redirects automáticos preservando query params**: bookmarks e links antigos `/configuracoes/perfil?qs` redirecionam para `/perfil?qs`, e `/configuracoes/reembolsos?qs` para `/configuracoes/aprovacoes?qs` — query string e fragmento são preservados.
+
+### Corrigido
+- **Race condition no guard de Configurações** (descoberto em QA pós-implementação): acessar qualquer subrota de `/configuracoes/*` por URL direta (refresh, bookmark, link colado no navegador) bloqueava admin e tesoureiro com toast "Acesso restrito" mesmo tendo permissão. O guard agora aguarda o carregamento dos papéis do usuário antes de avaliar — array vazio durante loading não dispara mais redirect indevido.
+- **Falha silenciosa ao salvar Notificações com WhatsApp vazio** (descoberto em QA pós-implementação): salvar a seção Notificações sem número de WhatsApp cadastrado falhava silenciosamente no servidor (a matriz salvava, a chamada de contato dava erro 400 invisível ao usuário). A função de preferências passou a tratar valor nulo como remoção da chave; o formulário só envia a chamada de contato quando o valor de fato muda.
+
+## [0.11.0] — 2026-05-18
+
+### Adicionado
+- **Pedidos de pagamento recorrentes** (BK-155): agora é possível solicitar pagamentos que se repetem ao longo do tempo (ex: conta de energia, internet, mensalidade). Ao criar uma solicitação, o usuário escolhe entre três tipos — único, recorrente ou parcelado — e configura a frequência (mensal, semanal, quinzenal, bimestral, trimestral, semestral, anual) e a duração (data final, quantidade de ocorrências ou indefinido até cancelar). A aprovação cria a série inteira e o tesoureiro paga ocorrência a ocorrência via Movimentações.
+- **Pedidos de pagamento parcelados** (BK-155): solicitação parcelada (ex: compra em 6×) com aprovação única; cada parcela vira um lançamento pendente com data e valor ajustáveis individualmente no momento da criação. Útil para compras de equipamentos ou contratos divididos em prestações.
+- **Movimentações recorrentes com duração indefinida** (BK-155): admin e tesoureiro agora podem criar lançamentos recorrentes diretos sem precisar definir data final ou quantidade — opção "Indefinido até cancelar" no fim da série. Gera lote inicial de 12 ocorrências; renovação manual fica como tech debt explícito.
+- **Detalhe do pedido recorrente/parcelado com seção "Ocorrências"** (BK-155): lista todas as ocorrências geradas com data prevista, valor estimado, valor real, status individual, conta e data de pagamento. Cada linha tem ações contextuais (Marcar como paga, Ver movimento, Cancelar esta ocorrência) conforme status e papel do usuário.
+- **Cancelamento de série com 3 escopos** (BK-155): admin e tesoureiro podem cancelar uma ocorrência específica, todas as ocorrências futuras a partir de uma data, ou a série inteira. Ocorrências já pagas não podem ser canceladas (apenas estornadas via Movimentações).
+- **Link cruzado entre lançamentos e pedidos** (BK-155): o detalhe de uma movimentação que veio de um pedido de pagamento aprovado exibe link "Ver pedido de pagamento" para navegação direta ao detalhe da solicitação original.
+- **Lista de Pagamentos type-aware** (BK-155): cada linha exibe indicador discreto do tipo (Recorrente · mensal, Parcelado · 6×) e a coluna de valor mostra a representação adequada (R$ X/mês · est. R$ Y para recorrente; R$ X/parcela · total R$ Y para parcelado).
+- **Paleta semântica de badges de status** (parte de BK-155): badges de status passaram a usar cores semânticas distintas — teal sólido para pago/aprovado, laranja para pendente/aguardando, vermelho para atrasado/rejeitado, roxo para estornado, cinza para cancelado/rascunho. Facilita leitura rápida das listagens.
+
+### Corrigido
+- **Anexos obrigatórios para envio de pedido** (BK-155): submeter um pedido de pagamento para aprovação sem nenhum comprovante anexado passa a ser bloqueado, com mensagem clara. Salvar como rascunho continua sem essa exigência. Validação reforçada tanto no formulário quanto na função de servidor.
+- **Solicitante não vê mais Aprovar/Reprovar no próprio pedido** (BK-155): no detalhe e na lista de pedidos, o autor da solicitação não vê mais os botões de aprovação ou reprovação na própria solicitação — comportamento alinhado com o já existente em Reembolsos.
+
+## [0.10.8] — 2026-05-18
+
+### Adicionado
+- **Histórico de auditoria na página de detalhe do lançamento** (BK-161): a página de detalhe em `/movimentacoes` foi reorganizada em duas colunas — conteúdo principal à esquerda e um card "Auditoria" à direita com a timeline de eventos do lançamento (quem criou, marcou como pago, estornou, cancelou, etc.), com nome do responsável e data/hora de cada ação. Em mobile as colunas empilham verticalmente. A seção "Criado em / Criado por" anterior foi removida — a informação agora aparece na timeline. Lançamentos sem eventos registrados exibem mensagem de fallback.
+
+## [0.10.7] — 2026-05-18
+
+### Adicionado
+- **Contagem de itens nas abas de `/reembolsos`** (BK-097, conclusão): abas de `/reembolsos` passam a exibir contagem entre parênteses, completando a implementação iniciada na v0.10.6. A query passou a carregar todos os reembolsos da OSC de uma vez; filtragem por aba e contagens são derivadas client-side via `useMemo`. O recorte por papel do usuário continua transparente via RLS.
+
+## [0.10.6] — 2026-05-18
+
+### Adicionado
+- **Contagem de itens nas abas de listagem** (BK-097, parcial): as abas de status em `/movimentacoes`, `/pagamentos` e `/superadmin/organizacoes` passam a exibir o total de itens entre parênteses ao lado do rótulo — ex: "Pendente (5)", "Pago (30)". As contagens são derivadas dos dados já carregados no cliente, sem queries adicionais. Em `/movimentacoes` a contagem considera os filtros de período e busca ativos.
+
+### Corrigido
+- **Tipo de organização exibido como snake_case em `/superadmin/organizacoes`** (BK-097): a coluna Tipo agora exibe labels legíveis (`grupo_escoteiro` → "Grupo Escoteiro", `associacao` → "Associação", etc.) com fallback para titlecase em valores desconhecidos.
+
+## [0.10.5] — 2026-05-18
+
+### Adicionado
+- **Flag de auditoria para auto-aprovações** (BK-105): quando o solicitante aprova o próprio pedido por ser o único aprovador elegível — situação permitida pelo sistema — as EFs `approve_reimbursement` e `approve_purchase_order` passam a gravar uma linha adicional no `audit_log` com `metadata.self_approved = true`. Aprovações normais seguem sem essa marca. Facilita a revisão pela comissão fiscal sem necessidade de cruzar manualmente os dados de solicitante e aprovador.
+
+## [0.10.4] — 2026-05-18
+
+### Corrigido
+- **Auto-aprovação em pedidos de pagamento** (BK-127): confirmado que a EF `approve_purchase_order` já valida a elegibilidade antes de qualquer gravação no banco — a auto-aprovação é bloqueada quando existem outros aprovadores elegíveis, e permitida quando o solicitante é o único. Comportamento idêntico ao módulo de reembolsos. Nenhuma alteração de código necessária; bump de versão para registrar a validação.
+- **Link "Meu perfil" no menu do avatar** (BK-162): o menu dropdown do avatar no menu superior agora exibe "Meu perfil" (navega para Configurações → Perfil) além de "Sair".
+- **Título da aba de workflow de aprovação** (BK-147): rótulo corrigido de "Workflow de aprovação de reembolsos" para "Fluxo de aprovação de pagamentos e reembolsos", refletindo que a aba controla o fluxo de ambos os módulos.
+- **Fotos de usuários na lista de Configurações → Usuários** (BK-163): avatares na listagem de membros passam a exibir a foto cadastrada; iniciais continuam como fallback quando não há foto. Mesma correção já aplicada ao avatar do menu superior na v0.10.1.
+
+## [0.10.3] — 2026-05-18
+
+### Adicionado
+- **Atalhos de período no filtro de Movimentações** (BK-145): além de escolher datas customizadas, o filtro agora oferece atalhos contábeis em um clique — Mês atual, Mês anterior, Trimestre atual, Trimestre anterior, Semestre atual, Ano atual (YTD), Ano anterior, Personalizado e Todos. Cálculo baseado em trimestres e semestres calendário (T1: jan-mar, T2: abr-jun, etc.). Selecionar um atalho preenche as datas automaticamente; editar manualmente as datas troca o filtro para "Personalizado".
+
+### Modificado
+- **Filtro de Movimentações abre por padrão em "Mês atual"** em vez de "Todos" — visão operacional do dia a dia é mais comum no fluxo do tesoureiro.
+
+## [0.10.2] — 2026-05-18
+
+### Corrigido
+- **Badge "Estornado" volta a aparecer também no lançamento contrário** (BK-160, regressão da v0.10.1): a release anterior introduziu o badge no lançamento original mas a regra de detecção não cobria o lançamento contrário gerado pelo estorno; agora ambos exibem o badge corretamente.
+
+## [0.10.1] — 2026-05-18
+
+Primeira release versionada após a transição de `v0.10 (beta)` para semver puro. Consolida correções de UX no módulo de Movimentações, melhorias no menu superior, publicação dos documentos legais e do manual em domínio próprio, e a primeira preparação do fluxo Google em `/setup` para auto-conclusão (validação E2E pendente). A partir desta versão, marcadores como "(beta)" não fazem mais parte da string da versão.
+
+### Adicionado
+- **Avatar do usuário no menu superior** (BK-141): a foto cadastrada em Configurações → Perfil agora aparece no avatar do menu superior em qualquer cenário em que a tela de perfil também exibe a foto; ao trocar a foto, o menu superior atualiza imediatamente sem precisar de F5. Iniciais continuam como fallback quando não há foto.
+- **Badge "Recorrente" em lançamentos recorrentes** (BK-158): movimentos pertencentes a uma série recorrente não-parcelada passam a exibir um badge "Recorrente" ao lado do título, em `/movimentacoes` (lista e detalhe). Visibilidade rápida do contexto sem precisar abrir o detalhe.
+- **Manual do Usuário publicado** (BK-137): novo manual público em `https://docs.bf.rit.org.br/` cobrindo primeiros passos, movimentações, reembolsos, pagamentos, configurações da OSC, papéis e FAQ. Link no rodapé da aplicação.
+- **Política de Privacidade e Termos de Uso publicados** (BK-094): documentos legais publicados em `https://docs.bf.rit.org.br/privacidade/` e `/termos/`. Links discretos no rodapé da aplicação.
+- **Documentação em domínio próprio** (BK-153): substituído o domínio padrão do GitHub Pages por `docs.bf.rit.org.br` (Cloudflare DNS + custom domain + HTTPS ativo). Links de Política, Termos e Manual no rodapé já apontam para o novo domínio.
+
+### Corrigido
+- **Troca de OSC pelo seletor agora atualiza a tela automaticamente** (BK-151): selecionar outra OSC no menu superior recarrega imediatamente todas as páginas (painel, movimentações, reembolsos, pagamentos, configurações) sem precisar de F5. Antes, a página atual mantinha os dados da OSC anterior até refresh manual.
+- **Badge "Parcela X de N" voltou a aparecer** (BK-157): em lançamentos parcelados, o badge "Parcela X de N" deixou de ser exibido em algum refactor recente; foi restaurado. Causa raiz: a fonte de dados parou de expor a informação da série parcelada.
+- **Badge "Estornado" agora aparece em ambos os lançamentos** (BK-156): ao estornar um pagamento, tanto o lançamento original quanto o contrário (gerado pelo estorno) passam a exibir o badge "Estornado". Antes só o contrário recebia o badge, dando a falsa impressão de que o original ainda estava "pago" sem indicação. O status no banco do lançamento original permanece "pago" — só a visualização ganha o badge adicional.
+- **"Continuar com Google" em `/setup` redireciona corretamente para o painel** (BK-144): no fluxo de configuração inicial via convite, o usuário que escolhia "Continuar com Google" voltava para o formulário de senha em vez de seguir para o painel; agora o cadastro é concluído automaticamente com o nome e a foto do perfil Google e o usuário entra direto no painel. **Validação E2E com convite real pendente em BK-152 antes de declarar verificado.**
+- **Link "Manual do Usuário" no rodapé** apontava para `/manual` (404); corrigido para apontar para a raiz do site de docs.
+
+### Modificado
+- **Formato da string da versão**: passou de `v0.10 (beta)` para `v0.10.1`. Padronizado em semver puro (MAJOR.MINOR.PATCH); marcadores como "(beta)" não fazem mais parte da string da versão exibida no rodapé e nos feedbacks. A natureza piloto/beta do projeto passa a ser sinalizada (quando necessário) fora da string da versão.
+
+---
+
+### Adicionado (Documentação pública — 2026-05-15)
+- **Site de documentação multi-página** em `https://rit-df.github.io/bussola-docs/`: substituído o manual em página única por site Jekyll com navegação por abas (Início, Primeiros Passos, Módulos, Configurações, Papéis, FAQ, Changelog, Legal); cada módulo e aba de configurações tem página dedicada
+- **Sub-navegação por seção**: pills de navegação abaixo do título em todas as páginas de Módulos, Configurações e Legal, permitindo navegar entre páginas da seção sem sair da tela
+- **Screenshots de configurações** sem dados pessoais: Organização, Contas, Categorias, Fluxo de Aprovação — imagens capturadas com dados fictícios; abas Perfil e Usuários sem screenshot (dados reais visíveis)
+
+### Corrigido (Documentação pública — 2026-05-15)
+- **Links absolutos quebrados no GitHub Pages**: 10 links com caminhos absolutos (`/configuracoes/perfil/` etc.) geravam 404; convertidos para caminhos relativos em 8 arquivos
+- **Screenshot de perfil com dados pessoais reais**: `manual-09-config-perfil.png` continha telefone, e-mail e CPF reais; arquivo removido e referência eliminada da página de perfil
+
+### Adicionado (Onda 4 — Pedidos de Pagamento)
+- **Módulo de Pedidos de Pagamento**: novo módulo completo para solicitação formal de pagamentos a fornecedores e prestadores externos, com fluxo de aprovação configurável e lançamento automático em `financial_movements`; tabelas `purchase_orders`, `purchase_order_approvals`, `purchase_order_attachments`; EFs `submit_purchase_order`, `reject_purchase_order`, `approve_purchase_order`, `pay_purchase_order`; `movement_origin` estendido com valor `purchase_order`
+- **Página `/pagamentos` unificada**: abas "Pedidos de pagamento" e "Reembolsos" (aba de reembolsos reutiliza componente existente sem alteração); sub-abas por status (Todos / Rascunho / Aguardando aprovação / Aprovado / Rejeitado / Pago); cards-resumo condicionais ao papel (aprovador, tesoureiro, todos); coluna Ações com botões Aprovar / Reprovar condicionais ao papel e status; ícone "Marcar como pago" não aparece na lista — pagamento é confirmado via `/movimentacoes` (igual a Reembolsos)
+- **"Boleto" como forma de pagamento** (pós-lançamento Onda 4): formulário de criação e edição inline do pedido oferecem três opções — PIX, TED, Boleto; selecionar Boleto não exibe campos extras (o arquivo é anexado na seção Documentos); `vendor_payment_info` grava `{ method: 'boleto' }` sem campos adicionais
+- **Redirect `/reembolsos`**: rota redireciona automaticamente para `/pagamentos?tab=reembolsos`; links existentes e rotas `/reembolsos/novo` e `/reembolsos/:id` permanecem funcionais
+- **Formulário `/pagamentos/novo`**: criação e edição de rascunho com CRUD direto via Supabase client; carregamento de rascunho via `?id=` na URL; campos PIX/TED do fornecedor (sem pré-população do perfil do usuário); uploader com prefixo `purchase-orders/`; botões "Salvar rascunho" e "Enviar para aprovação" com validação por campo
+- **Página `/pagamentos/:id`**: detalhe completo com 4 zonas (header, dados, documentos, timeline + ações); preview inline de imagens (thumbnails clicáveis, fallback) e PDF (iframe lazy); ações condicionais — "Editar e reenviar" (solicitante), "Aprovar" / "Reprovar" (aprovador elegível); dados PIX/TED do fornecedor ocultos para voluntários; seção de anexos denominada "Documentos"
+- **TopNav**: item "Reembolsos" renomeado para "Pagamentos e Reembolsos"; badge soma pedidos de pagamento aguardando + reembolsos aguardando (ambos os módulos); RPC `count_pending_purchase_orders_for_user` criada
+- **Configurações**: aba "Reembolsos" renomeada para "Pagamentos e Reembolsos"; nova subseção "Quem pode solicitar pagamentos" com checkboxes por papel (persiste em `reimbursement_workflow.allowed_requester_roles`; default: Presidente, Tesoureiro, Coordenador de Projeto)
+- **Painel**: nova seção "Pedidos de pagamento" com cards condicionais ao papel (aguardando aprovação, aprovados aguardando pagamento, solicitado por mim)
+
+### Adicionado
+- **"Continuar com Google" em `/setup`**: usuários convidados podem concluir o primeiro acesso autenticando via Google OAuth em vez de definir senha; botão visível e habilitado somente após aceite da política de privacidade; `setup_token` e versão da política preservados em `sessionStorage` através do redirect OAuth; `complete_setup` valida `claims.sub === uo.user_id` para garantir que a conta Google corresponde ao convite; campo "Nome completo" pré-populado com o nome do perfil Google (editável); campos de senha ocultados no fluxo Google
+- **Upsert de `full_name` em `user_profile` ao concluir setup**: `complete_setup` agora grava `user_profile.full_name` em ambos os fluxos (senha e Google) após transição bem-sucedida; fechou lacuna pré-existente onde o nome era salvo apenas em `auth.user_metadata`
+- **Canal de feedback de usuários — chip no TopNav**: botão/badge laranja "💬 Feedback" no TopNav, visível para todos os papéis autenticados; abre o `FeedbackModal` ao ser clicado
+- **`FeedbackModal`**: modal com grade 2×2 de tiles de categoria (🐛 Bug / 💡 Sugestão / 👍 Elogio / ❓ Outro), textarea de mensagem livre, rodapé com identidade do usuário ("Enviado como [nome] · [e-mail]") e insert direto em `user_feedback` via Supabase client (RLS); toast de confirmação ao enviar; campos limpos ao reabrir
+- **Tabela `user_feedback`**: armazena feedbacks com `user_id`, `organization_id`, `category`, `message`, `resolved` (default `false`), `resolved_at`; RLS: INSERT para qualquer autenticado com `user_id = auth.uid()`; SELECT e UPDATE restritos ao superadmin
+- **Página `/superadmin/feedbacks`**: tabela com colunas Data, Categoria (badge colorido), Mensagem, Usuário (nome + e-mail), OSC, Resolvido; ordenação automática (não-resolvidos mais novos primeiro, resolvidos ao final); checkbox "Resolvido" executa UPDATE + re-fetch; linha resolvida fica tachada e com opacidade reduzida; contador de itens pendentes no topo
+- **Seção "Alterar senha" em `/configuracoes/perfil`**: campos "Nova senha" e "Confirmar nova senha", botão "Alterar senha"; chama `supabase.auth.updateUser({ password })`; erro `weak_password` (HIBP) exibido inline abaixo do campo; sucesso limpa os campos e exibe toast de confirmação
+- **Orientação de criação de senha** em `/setup` e em `/configuracoes/perfil`: texto estático "Use ao menos 8 caracteres combinando letras maiúsculas, minúsculas, números e símbolos. Evite senhas comuns." abaixo do campo de senha; substituído por erro inline quando há falha de validação
+- **Seção "Dados para reembolso" em `/configuracoes/perfil`**: seletor PIX ou TED, campos condicionais (tipo de chave + valor para PIX; banco/agência/conta para TED), todos opcionais, botão de salvar próprio desabilitado quando não há alteração; lê e grava em `user_profile.default_payment_info` (JSONB) via `useUpdateProfile`; formato compatível com `paymentFromProfile` no formulário de reembolso — prefill automático funciona sem alteração adicional
+
+### Corrigido (pós-lançamento Onda 4 — 2026-05-15)
+- **EF `approve_purchase_order` retornava HTTP 500 em toda tentativa de aprovação** (BK-132): a CHECK constraint `fm_account_required_unless_pending_reimbursement` em `financial_movements` só permitia `account_id = NULL` para `origin = 'reimbursement'`; pedidos de pagamento aprovados (origin `purchase_order`) sem conta definida violavam a constraint ao criar o movimento financeiro; corrigido via migration que estendeu a constraint para também aceitar `purchase_order` pendente sem `account_id` — mesmo comportamento já permitido para reembolsos; a EF já passava todos os campos corretamente (prompt #134)
+- **Card "AGUARDANDO MINHA APROVAÇÃO" exibia `[object Object][object Object]`** (BK-129): renderização incorreta do retorno da RPC `count_pending_purchase_orders_for_user` no componente de card; corrigido para extrair corretamente o campo numérico (prompt #131)
+- **Layout do formulário de pedido de pagamento divergia do formulário de reembolso** (BK-133): DESCRIÇÃO aparecia como textarea grande no topo, antes de DATA DA DESPESA e VALOR; reordenado para DATA DA DESPESA + VALOR no topo, DESTINATÁRIO, DESCRIÇÃO (campo de linha única), CATEGORIA/PROJETO/CENTRO DE CUSTO, DADOS DE PAGAMENTO, OBSERVAÇÕES, DOCUMENTOS — igual ao padrão de `/reembolsos/novo` (prompt #135)
+
+### Modificado (pós-lançamento Onda 4 — 2026-05-15)
+- **Rótulo da seção de anexos em pedidos de pagamento**: "COMPROVANTES / NF" substituído por "Documentos" em todos os contextos do módulo (formulário de criação, formulário de edição inline, página de detalhe) — mesma terminologia de Reembolsos (prompt #133)
+- **Fluxo de confirmação de pagamento de pedidos**: botão "Confirmar pagamento" removido da coluna AÇÕES da lista `/pagamentos`; o tesoureiro confirma o pagamento diretamente na movimentação financeira gerada em `/movimentacoes` (ícone "Marcar como pago"), igual ao fluxo de Reembolsos; a EF `pay_purchase_order` permanece deployada mas sem ponto de entrada no frontend atual (prompt #133)
+
+### Corrigido
+- **Botões "Aprovar"/"Reprovar" não apareciam para aprovadores elegíveis na lista de reembolsos** (BK-123): query do workflow de aprovação (`wfQ`, `organization_settings?key=eq.reimbursement_workflow`) não disparava na `ReembolsosListPage` por problema de timing do React Query — `enabled: !!activeOrganizationId` nunca transitava para `true` a tempo; corrigido para aguardar o `activeOrganizationId` antes de executar o fetch; `isEligibleApprover` agora calcula sobre os dados reais da OSC em vez do `EMPTY_WORKFLOW` padrão; regra de auto-aprovação (não ver botões no próprio reembolso) preservada (prompt #119)
+- **Badge de reembolsos pendentes na TopNav não atualizava após aprovação/rejeição** (BK-125): mutations de aprovação e rejeição não invalidavam a query que alimenta o badge; corrigido para invalidar também essa query ao concluir cada mutation com sucesso (prompt #122)
+- **Dialog "Reprovar solicitação" — botão habilitado sem motivo** (BK-124): o botão "Confirmar reprovação" estava habilitado mesmo com o campo "Motivo" vazio; corrigido para desabilitar enquanto o campo estiver vazio ou só com espaços (prompt #121)
+- **Datas exibidas com 1 dia a menos** (BK-121): `formatDate()` em `shared/lib/format.ts` convertia strings ISO date-only (`"YYYY-MM-DD"`) via `new Date(value)`, que o JavaScript interpreta como UTC midnight; em UTC-3, isso recuava a exibição para o dia anterior. Corrigido detectando o padrão `YYYY-MM-DD` e construindo o `Date` com componentes locais (sem conversão de timezone). Afetava: coluna "Data da despesa" em `/reembolsos`, detalhe do reembolso (`/reembolsos/:id`) e campos Vencimento/Pagamento/Competência em `/movimentacoes/:id`. A lista de movimentações não era afetada (usava `parseISO` do date-fns) (prompt #120)
+- **E-mail de convite não chegava ao usuário convidado**: `add_user_to_organization` chamava `send_email` com `Authorization: Bearer SERVICE_ROLE_KEY`; após migração do Supabase para chaves `sb_secret_*` (não-JWT), o gateway rejeitava com 401 antes do código rodar — invitation era criada mas `email_send_log` ficava vazio; corrigido com autenticação Bearer correta + try/catch que grava `failed_all` em `email_send_log` em caso de qualquer falha de chamada
+- **`send_email` rejeita chamadas sem JWT**: `verify_jwt = false` declarado explicitamente em `config.toml` para `send_email` e `complete_setup`; autenticação manual aceita Bearer == `SUPABASE_SERVICE_ROLE_KEY` (server-to-server) ou JWT com `app_metadata.is_superadmin = true` (página de teste)
+- **Cancelar convite retornava "Não foi possível aplicar a alteração"**: transição `active_pending_setup → removed` estava ausente dos pares válidos na função SQL `_valid_uo_transition`; adicionada via migration; handler do `MemberActionsMenu` agora também marca `invitations.status = revoked` após a transição
+- **Botão "Reenviar e-mail de convite" não era clicável**: condição de `disabled` ausente ou incorreta no `MemberActionsMenu` para membros em `active_pending_setup`; corrigido com `disabled={busy}` explícito durante a chamada; `resend_setup_token` usa o mesmo helper `invokeSendEmail` de `add_user_to_organization` com try/catch + `logEmailAttempt('failed_all')` para rastreabilidade em `email_send_log`
+- **`complete_setup` retornava "Erro inesperado" para senha rejeitada pelo HIBP**: EF mascarava o `error_code` real do Supabase Auth como 500 genérico; agora propaga o `error_code` original (incluindo `weak_password` com status 422 e mensagem em pt-BR); demais erros do GoTrue também passam adiante o `error_code` real
+- **Nome preenchido no setup não era salvo**: `complete_setup` não executava `UPDATE user_profile SET full_name` após a transição; corrigido para gravar o nome enviado no payload
+- **Nome não persistia em `/configuracoes/perfil`** (toast de sucesso mas campo voltava vazio ao recarregar): `UPDATE` em `user_profile` retornava 0 linhas — linha ausente ou RLS bloqueando silenciosamente; corrigido com upsert e/ou ajuste de policy
+- **Tela em branco em `/configuracoes/reembolsos`** após 1-2 segundos de exibição: violação das Rules of Hooks — `useMemo` e `memberById` estavam declarados após early returns no `ConfiguracoesReembolsosPage`, causando contagem diferente de hooks entre renders e desmonte da árvore pelo React; corrigido movendo todos os hooks para antes de qualquer `return` condicional
+- **Tela em branco em `/reembolsos/:id`** ao navegar via SPA (funcionava com F5): efeito cascata do bug anterior — o estado degradado do React contaminava navegações subsequentes na mesma sessão; resolvido com a correção do bug de Rules of Hooks acima
+
+---
+
+### Adicionado (Onda 2 — melhorias pós-lançamento)
+- **Botão "Salvar e fazer outro"** no formulário de novo lançamento (`/movimentacoes/novo`): salva e reinicia o formulário mantendo tipo e conta — sem redirecionar para a lista; útil para lançamentos em sequência (prompt 69)
+- **Indicação de filtros ativos** abaixo dos cards de totais: quando qualquer filtro está ativo (`isDefault = false`), exibe linha discreta "Filtrado por: [rótulos]" concatenados com " · "; desaparece ao limpar filtros (prompt 70)
+- **Ordenação por coluna** na tabela de movimentações: Vencimento, Valor, Status e Conta ordenáveis com ciclo ASC → DESC → sem ordenação; indicador de direção no header ativo; ordenação client-side preservada ao trocar aba ou filtro (prompt 71)
+- **EF `delete_movements`**: substitui `bulk_update_movements` com `p_action: 'delete'` para exclusão de lançamentos; coleta `storage_path` de `financial_movement_attachments`, remove arquivos do bucket `movement-attachments` (falha individual não aborta), deleta lançamentos por CASCADE; retorna `{ ok, deleted, storage_cleaned }`; validação de ownership e limite de 500 IDs por chamada (prompt 72)
+- **Coluna "Pagamento"** na tabela de movimentações, entre "Vencimento" e "Lançamento": exibe `payment_date` formatada; "—" quando não pago; ordenável com nulos por último no ASC (prompt 73)
+- **Ordenação por Categoria** na tabela de movimentações: ordena pelo nome da primeira categoria; splits com múltiplas categorias usam a primeira como critério (prompt 73)
+- **Ícones de ação por linha** na tabela de movimentações: coluna "Ações" ao final da tabela (após Valor), sempre visível sem hover; ícone de lápis (editar) em todas as linhas; ícone contextual por status — cancelar (`pendente`/`atrasado`), estorno (`pago`/`efetivado`), lixeira (`cancelado`/`estornado`); clicar abre o mesmo fluxo de confirmação existente (prompt 74)
+
+### Corrigido
+- `canDelete()` em `movementActions.ts` expandido para incluir `cancelado` e `estornado` — lançamentos finalizados podem ser excluídos (prompt 75)
+- Texto do dialog de confirmação de exclusão em lote corrigido: não menciona mais restrição de status (herdado da RPC antiga) (prompt 75)
+- Botão "Excluir" na tela de detalhe (`/movimentacoes/:id`) movido para fora do bloco condicional `!finalized`, tornando-o visível e habilitado para lançamentos `cancelado` e `estornado` (prompt 77)
+- Tooltip do botão "Excluir" para lançamentos `pago` atualizado para mensagem coerente com a nova lógica de elegibilidade (prompt 77)
+
+### Modificado
+- **Exportação Excel**: pacote `xlsx` (SheetJS, abandonado, vulnerabilidades Prototype Pollution + ReDoS) substituído por `exceljs` (mantido ativamente); comportamento idêntico — mesmo arquivo, colunas e formatação (prompt 76)
+- **Ícone de olho (visualizar)** removido das linhas da tabela de movimentações — redundante com o clique na linha; mantido apenas o lápis (editar) (prompt 74)
+- **Exclusão de lançamentos** (individual e em lote) migrada da RPC `bulk_update_movements` para a EF `delete_movements`; `bulk_update_movements` continua sendo usada exclusivamente para `mark_paid` (prompt 72)
+
+---
+
+## [v0.9.11] — 2026-05-14 · `onda3-st9.11-configuracoes-reembolsos`
+
+### Adicionado
+- **Aba "Reembolsos" em `/configuracoes`** (admin-only): seletor de aprovações necessárias (1 ou 2), checkboxes de papéis elegíveis (Dirigente, Tesoureiro), busca de pessoas específicas como aprovadores independente de papel, lista consolidada "Quem pode aprovar" com origem indicada (papel/pessoa), alerta âmbar quando nenhum aprovador configurado
+- Botão Salvar habilitado apenas quando há alteração (`isDirty`) e ao menos um aprovador; mensagem inline "Selecione ao menos um papel ou uma pessoa aprovadora" quando inválido
+- Persistência via `set_organization_settings_bulk` com chave `reimbursement_workflow`; leitura via `read_organization_settings` com query própria e filtro client-side
+
+---
+
+## [v0.9.10] — 2026-05-14 · `onda3-st9.10-painel-badge`
+
+### Adicionado
+- **Seção "Reembolsos" no `/painel`**: até 3 cards condicionais por papel — "Meus reembolsos pendentes" (rascunhos + rejeitados), "Aguardando minha aprovação" (aprovadores elegíveis) e "Aguardando pagamento" (tesoureiros); cada card clicável navega para `/reembolsos?tab=<status>`
+- **Badge real no TopNav**: exibe contagem com prioridade aprovador→tesoureiro→voluntário; oculto quando a contagem relevante = 0
+- **RPC `count_pending_reimbursements_for_user(p_org_id)`** (SECURITY DEFINER): retorna `{ volunteer_pending, approver_pending, treasurer_pending }` para o caller autenticado; lê `reimbursement_workflow` para determinar elegibilidade do aprovador
+- **Hook `useReimbursementsCounts`** compartilhado entre `/painel` e TopNav (`staleTime: 30s`); elimina chamada dupla à RPC
+
+---
+
+## [v0.9.9] — 2026-05-14 · `onda3-st9.9-edicao-inline-rejeicao`
+
+### Adicionado
+- **Edição inline após rejeição** em `/reembolsos/:id`: botão "Editar e reenviar" habilitado para requester quando status = `rejeitado`; expande `EditAndResubmitForm` inline com motivo da rejeição em destaque, campos pré-populados do reembolso e gestão de comprovantes sem ensureDraft
+- Sequência de salvamento: `update_reimbursement` → `submit_reimbursement`; em sucesso, página recarrega em `aguardando_aprovacao`
+- Botão "Cancelar" recolhe sem salvar; `EditAndResubmitForm` isolado em `Card` próprio abaixo do grid
+
+---
+
+## [v0.9.8] — 2026-05-14 · `onda3-st9.8-preview-comprovantes`
+
+### Adicionado
+- **Preview inline de comprovantes** em `/reembolsos/:id`: thumbnails automáticos para imagens (clicáveis para ampliar, fallback textual), botão lazy "Visualizar/Ocultar PDF" com iframe; outros tipos mantêm apenas download
+- **Botão "Editar rascunho"** (correção de gap — prompt 85b): em `/reembolsos/:id` com status = `rascunho`, requester navega para `/reembolsos/novo?id=<uuid>`; formulário carrega dados existentes, reutiliza o mesmo ID para uploads e salvamentos
+
+---
+
+## [v0.9.7] — 2026-05-14 · `onda3-st9.7-pay-reimbursement`
+
+### Adicionado
+- **EF `pay_reimbursement`**: tesoureiro confirma pagamento; cria `financial_movement` com `origin = 'reimbursement'`; salva `paid_movement_id` no reembolso (link reverso); rollback best-effort do movimento em caso de falha posterior; notifica solicitante via `send_notification`
+- **Ação "Confirmar pagamento"** em `/reembolsos/:id`: select de conta financeira + data de pagamento; coordenado com Aprovar/Rejeitar; invalida caches de `financial-movements` e `account-balances`
+
+---
+
+## [v0.9.6] — 2026-05-14 · `onda3-st9.6-approve-reimbursement`
+
+### Adicionado
+- **EF `approve_reimbursement`**: voto duplo retorna 409; suporta quorum parcial (notifica aprovadores restantes) e quorum final (notifica solicitante + tesoureiros); voto prévio do mesmo aprovador bloqueia com 409 distinto
+- **Ação "Aprovar"** em `/reembolsos/:id`: comentário opcional, detecção de voto prévio desabilita botão, toasts diferenciados para aprovação parcial e final
+
+---
+
+## [v0.9.5] — 2026-05-14 · `onda3-st9.5-detalhe-rejeicao`
+
+### Adicionado
+- **Página `/reembolsos/:id`**: 4 zonas — header (status, solicitante, valor), dados (campos + dados de pagamento condicionais por papel), comprovantes e timeline + ações
+- **EF `reject_reimbursement`**: registra motivo em `reimbursement_approvals`, transiciona para `rejeitado`, notifica solicitante; motivo obrigatório
+- **`lib/eligibility.ts`**: helper reutilizável com `isApprover(roles, userId, workflow)` e `canSeePayment` — única fonte da verdade para elegibilidade na UI (reutilizado em ST-9.6, ST-9.7, ST-9.10 e ST-9.11)
+- Dados de pagamento PIX/TED ocultos para voluntários; visíveis apenas para aprovadores elegíveis e tesoureiro
+
+---
+
+## [v0.9.4] — 2026-05-14 · `onda3-st9.4-formulario-submit`
+
+### Adicionado
+- **Formulário `/reembolsos/novo`**: data, valor, descrição, categoria, projeto, centro de custo, observações, método de pagamento PIX/TED com campos condicionais; dados pré-populados do perfil com checkbox "Salvar como padrão"; uploader com auto-create de registro rascunho
+- **RPCs `create_reimbursement` / `update_reimbursement`** (SECURITY INVOKER): criação e edição de reembolsos com validação de organização
+- **EF `submit_reimbursement`**: valida diff vs. snapshot da rejeição anterior, limpa `reimbursement_approvals` da rodada, transiciona para `aguardando_aprovacao`, notifica aprovadores elegíveis
+- 3 storage policies para prefixo `reimbursements/{org_id}/{reimbursement_id}/` no bucket `movement-attachments`
+
+### Corrigido
+- Rotas `/reembolsos`, `/reembolsos/novo` e `/reembolsos/:id` ausentes do `App.tsx` após ST-9.3 — registradas via prompt de continuação 81c
+
+---
+
+## [v0.9.3] — 2026-05-14 · `onda3-st9.3-rotas-lista`
+
+### Adicionado
+- **Listagem `/reembolsos`**: 6 tabs por status (todos, rascunho, aguardando_aprovacao, aprovado, rejeitado, pago) persistidas via `?tab=`; coluna "Solicitante" condicional ao papel; item "Reembolsos" com badge no TopNav (placeholder — badge real na ST-9.10)
+- Rotas `/reembolsos`, `/reembolsos/novo` e `/reembolsos/:id` registradas em `App.tsx`
+
+---
+
+## [v0.9.2] — 2026-05-14 · `onda3-st9.2-send-notification`
+
+### Adicionado
+- **EF `send_notification`** (infraestrutura global reutilizável por todos os módulos): e-mail ativo via `nodemailer@6.9.14`/STARTTLS reutilizando `_shared/smtp.ts`; push/Telegram/WhatsApp como stubs; despacho paralelo por destinatário e canal; `audit_log` por par (destinatário, canal); HTTP 200 exceto 400 de validação de input
+- Interface: `{ organization_id, event_type, recipients: [{ user_id, channels? }], payload: { title, body, link?, data? } }`
+- Default quando `notification_preferences` ausente: todos os canais habilitados; skip silencioso quando preferência é false ou dado de contato ausente no perfil
+
+---
+
+## [v0.9.1] — 2026-05-14 · `onda3-st9.1-schema-base`
+
+### Adicionado
+- **Schema base de reembolsos**: enum `reimbursement_status` (rascunho → aguardando_aprovacao → aprovado → rejeitado → pago); tabelas `reimbursements`, `reimbursement_approvals`, `reimbursement_attachments` com triggers `updated_at` e auditoria (reuso das funções existentes); RLS role-aware (voluntário vê apenas os próprios; dirigente/tesoureiro/admin/comissão veem todos da OSC)
+- **Chave `reimbursement_workflow`** em `organization_settings` (padrão EAV): `{ required_approvals, allowed_approver_roles, allowed_approver_user_ids }`; padrão `{ required_approvals: 1, allowed_approver_roles: ["dirigente"], allowed_approver_user_ids: [] }`
+- Campo `default_payment_info` (JSONB) em `user_profile` para dados de pagamento padrão do usuário: `{ payment_method, pix_key_type, pix_key, bank_name, bank_agency, bank_account }`; UI adicionada em `/configuracoes/perfil` na correção pós-Onda 3
+
+---
+
+## [v0.8.18] — 2026-05-13 · `onda2-st8.18-cancelamento`
+
+### Adicionado
+- **Cancelamento de lançamentos**: status `cancelado` suportado pelo trigger `_fm_set_defaults_and_status`; colunas `cancelled_at`, `cancelled_by`, `cancelled_reason` em `financial_movements`; índice parcial em `organization_id WHERE cancelled_at IS NOT NULL`
+- **EF `cancel_movement`**: suporta três escopos — `this` (lançamento isolado), `this_and_future` (a partir da posição na série), `all` (toda a série recorrente); filtra apenas elegíveis (`pendente` ou `atrasado`) e retorna `{ cancelled_count, skipped_count }` sem erro para os ignorados; motivo obrigatório
+- **Modal de cancelamento** em `/movimentacoes/:id`: campo de justificativa obrigatório, seleção de escopo para séries/parcelamentos, exibição de erro inline quando EF recusa
+- **Card de auditoria de cancelamento** na tela de detalhe: exibe data, motivo e nome do responsável (resolvido via `get_user_display_names`)
+- **Aba "Cancelados"** na lista de movimentações: tab dedicada com filtro de status `cancelado`; lançamentos cancelados excluídos dos totais das demais abas
+- **RPC `get_user_display_names(UUID[])`**: SECURITY DEFINER com verificação de co-membership por organização; retorna `{ id, display_name }` preferindo `full_name` do perfil, depois `email`, depois `—`; usada para resolver `cancelled_by` e `reversed_by` na tela de detalhe
+- **Hook `useUserDisplayNames`**: chamada única com array de IDs deduplicados, `staleTime` de 5 min, evita N+1
+
+### Adicionado (habilitação contextual de ações — ST-8.18.1)
+- **Helper `movementActions.ts`**: única fonte da verdade para elegibilidade de ações por status — `canDelete`, `canCancel`, `canReverse`, `canMarkPaid`; `disabledReason(action, status)` para tooltips individuais; `bulkEligibility(rows, action)` para ações em lote
+- **Matriz de elegibilidade aplicada** em `MovimentoDetailPage` e `BulkActionsBar`: botões Excluir, Cancelar, Estornar e Marcar como pago ficam visíveis mas desabilitados quando a ação não é permitida para o status atual; tooltip explicativo ao passar o cursor; lançamentos `cancelado`/`estornado` não exibem nenhuma ação
+- **Regra de lote**: cada botão de ação em lote só habilita se TODOS os selecionados forem elegíveis; tooltip contextual quando desabilitado por seleção mista
+- **Botão "Estornar" em lote**: adicionado à `BulkActionsBar`; abre modal com motivo obrigatório; chama `reverse_movement` por ID via `Promise.all`
+
+### Corrigido
+- `computeTotals` excluía status `estornado` do cálculo mas não `cancelado` — corrigido para ambos
+- `filtersToPayload` não tratava a tab `canceladas` — adicionado override de status análogo ao de `estornadas`
+
+---
+
+## [v0.8.17] — 2026-05-13 · `onda2-st8.17-exportacao`
+
+### Adicionado
+- **Botão "Exportar"** na barra de ações da lista com dropdown "Exportar PDF" e "Exportar Excel"; aplica os filtros ativos no momento da exportação
+- **Exportação PDF**: EF `export_movements_pdf` chama Gotenberg com HTML renderizado no servidor; inclui cabeçalho (nome da OSC + período + filtros), tabela completa e rodapé com totais; download automático no browser
+- **Exportação Excel**: geração client-side via `lib/exportExcel.ts`; colunas Vencimento, Pagamento, Título, Tipo, Status, Conta, Categoria(s), Valor (R$, numérico), Fornecedor, Observações; `derivePeriodLabel` para nome do arquivo (inicialmente SheetJS; migrado para `exceljs` em prompt 76)
+- **`lib/periodLabel.ts`**: função `derivePeriodLabel` que infere rótulo legível a partir dos filtros de período ativos (ex: "maio-2026")
+
+### Corrigido
+- EF `export_movements_pdf` chamava `list_financial_movements` via service_role, que retorna `auth.uid() = NULL` internamente — corrigido para usar padrão `callerClient` das demais EFs que dependem de `auth.uid()`
+
+---
+
+## [v0.8.16] — 2026-05-13 · `onda2-st8.16-parcelamentos`
+
+### Adicionado
+- **Modo "Parcelado" no toggle 3-vias** do formulário de novo lançamento: número de parcelas (2–120), frequência, data da 1ª parcela
+- **Tabela de parcelas** editável: datas calculadas pela frequência; valor por parcela editável com validação de soma em tempo real; diferença de centavos alocada na última parcela; linha de soma com indicador vermelho/verde; botão Salvar desabilitado enquanto soma divergir
+- **Modal de confirmação**: resumo com count e intervalo de datas antes de criar
+- **EF `create_installment_series`**: cria `recurring_series` com `is_installment = TRUE`; cria N `financial_movements` com `origin = 'installment'`, `series_position` e `total_amount` individual; valida que `SUM(installment_amounts) === total_amount` quando editado manualmente (tolerância de centavos); rollback total em caso de erro
+- **Edição de parcelamentos via `update_recurring_series`**: escopo `all`/`this_and_future` preserva `total_amount` individual por parcela (sem achatar em valor único)
+
+---
+
+## [v0.8.15] — 2026-05-13 · `onda2-st8.15-acoes-em-lote`
+
+### Adicionado
+- **Seleção múltipla na lista de movimentações**: checkbox por linha + checkbox de seleção geral no header (com estado indeterminate); seleção limpa ao trocar de tab, filtro ou organização
+- **Barra de ações em lote**: aparece quando ≥ 1 lançamento selecionado; exibe contador "N lançamentos selecionados", botão "Limpar seleção", "Marcar como pago" e "Excluir"
+- **Ação "Marcar como pago"**: define `payment_date = hoje` nos selecionados com status `pendente` ou `atrasado`; ignora os demais com aviso no toast (ex.: "3 marcados como pagos. 1 ignorado.")
+- **Ação "Excluir"**: confirmação destrutiva com count; exclui apenas `pendente` ou `atrasado`; toast com counts de excluídos e ignorados
+- **RPC `bulk_update_movements(p_org_id, p_ids, p_action)`**: executa em transação única; valida membership e `organization_id` por linha; ação `mark_paid` ou `delete`; retorna `{ updated, ignored }`; `REVOKE ALL` + `GRANT EXECUTE TO authenticated`
+
+> **Limitação conhecida:** bulk delete remove registros de `financial_movement_attachments` via CASCADE mas não exclui os arquivos do bucket `movement-attachments` (RPCs não têm acesso ao Storage). Arquivos órfãos serão endereçados em manutenção futura.
+
+---
+
+## [v0.8.13b] — 2026-05-13 · `onda2-melhorias-documentos`
+
+### Adicionado
+- **Indicador de documentos na lista** (`/movimentacoes`): ícone de clipe (paperclip) discreto na linha do lançamento quando `attachment_count > 0`; lançamentos sem documentos não exibem nada; campo `attachment_count` adicionado à RPC `list_financial_movements` via subquery `COUNT(*) FROM financial_movement_attachments`
+
+### Modificado
+- **Formatos de upload ampliados**: zona de upload aceita qualquer formato exceto executáveis e scripts (`.exe`, `.bat`, `.cmd`, `.msi`, `.sh`, `.ps1`, `.vbs`, `.jar` e similares); limite de 10 MB mantido; mensagem de erro inline "Tipo de arquivo não permitido por segurança." para formatos bloqueados
+- **Renomeação "Comprovantes" → "Documentos"**: título do card, estado vazio, mensagem de carregamento e toasts em `MovimentoDetailPage`
+
+### Corrigido
+- **Lista de movimentações vazia após adição do `attachment_count`**: `list_financial_movements` usava `row_to_jsonb(x)` que falha com tipos anônimos de subquery em PostgreSQL; substituído por `to_jsonb(x)` (compatível com qualquer tipo, incluindo anônimos)
+
+---
+
+## [v0.8.13] — 2026-05-13 · `onda2-st8.13-comprovantes`
+
+### Adicionado
+- **Card "Documentos"** funcional em `/movimentacoes/:id`: lista de anexos com nome do arquivo, tamanho formatado e data de envio; botão "Baixar" (URL assinada temporária do Storage) e botão "Remover" (com confirmação inline que exclui do banco e do bucket)
+- **Zona de upload** drag-and-drop e clicável: limite de 10 MB; validação de formato e tamanho com mensagem de erro inline; spinner durante envio; upload para bucket `movement-attachments` no caminho `{org_id}/{movement_id}/{filename}` com sufixo numérico em caso de colisão de nome; registro em `financial_movement_attachments` e atualização da lista sem reload
+- Substituição do stub "Nenhum documento anexado" pelo componente funcional; comportamento idêntico para lançamentos de qualquer status
+
+---
+
+## [v0.8.12b] — 2026-05-13 · `onda2-st8.12b-bugfixes-recorrencia`
+
+### Corrigido
+- **Substituição de categorias em série**: `replaceCategories` fazia DELETE + INSERT em duas transações separadas; o trigger DEFERRED `validate_split_sum` disparava no commit do DELETE (sum=0) antes do INSERT reinserir as linhas — erro `split_sum_mismatch`. Solução: nova RPC `replace_movement_categories_bulk` que executa DELETE + INSERT atomicamente em uma única função PL/pgSQL.
+- **Data de vencimento em edição de série**: `scope='all'` e `scope='this_and_future'` aplicavam o valor absoluto de `due_date` a todos os lançamentos, achatando a distribuição temporal. Solução: cálculo de delta em dias entre a data informada e a `due_date` do lançamento de referência, aplicado individualmente por linha; `payment_date` preservada.
+
+---
+
+## [v0.8.12] — 2026-05-13 · `onda2-st8.12-edicao-recorrencia`
+
+### Adicionado
+- **Rota `/movimentacoes/:id/editar`** com `EditarMovimentoPage` e `EditarMovimentoFormPage`
+- Formulário de edição pré-preenchido via `get_financial_movement`; reutiliza `CategoriesSplitTable` e helpers de opções do formulário de criação; sem toggle de tipo nem bloco de recorrência
+- Guard de status: se o movimento carregado não for 'pendente' ou 'atrasado', redireciona imediatamente para `/movimentacoes/:id` com toast "Este lançamento não pode ser editado."
+- Banner discreto no topo indicando o escopo da edição ('apenas este lançamento', 'este e os próximos', 'toda a série')
+- Modal de escopo em `MovimentoDetailPage`: RadioGroup com 3 opções ('Apenas este lançamento', 'Este e os próximos', 'Toda a série'), padrão `this`; lançamentos sem `recurring_series_id` navegam direto sem modal
+- **EF `update_recurring_series`**: operação atômica para os 3 escopos — `this` aplica dados e desvincula da série em uma única transação; `this_and_future` cria nova `recurring_series` com os movimentos afetados reposicionados; `all` atualiza `template_jsonb` e todos os movimentos da série; a mutation do frontend usa sempre a EF para todos os escopos
+
+---
+
+## [v0.8.11] — 2026-05-13 · `onda2-st8.11-recorrencias`
+
+### Adicionado
+- Toggle 3-vias (Único / Parcelado stub / Recorrente) no formulário de novo lançamento
+- Bloco de configuração de recorrência: frequência (diária, semanal, quinzenal, mensal, bimestral, trimestral, semestral, anual), data de início, modo de término (por nº de ocorrências ou data-fim)
+- Preview dinâmico das próximas datas no bloco de recorrência
+- Modal de confirmação antes de salvar série recorrente, com resumo do que será criado
+- **EF `create_recurring_series`**: cria `recurring_series` + N `financial_movements` com datas calculadas em UTC; rollback em 3 camadas em caso de erro; suporte a `is_installment` e `total_installment_amount`
+
+---
+
+## [v0.8.10] — 2026-05-13 · `onda2-st8.10-estorno`
+
+### Adicionado
+- Modal de estorno em `/movimentacoes/:id` com campo de motivo obrigatório, gate no botão "Confirmar" e exibição de erro inline
+- Defesa contra estorno de transferências (bloqueio via validação na EF)
+- **EF `reverse_movement`**: validações (não estornado, não transferência), insert do movimento inverso com `origin='reversal'` e `status='pago'`, cópia dos splits, atualização do original com `reversed_at` / `reversed_by_movement_id` / `reversed_reason`, rollback manual em caso de erro; erros 403 e 422 mapeados corretamente
+
+---
+
+## [v0.8.9] — 2026-05-13 · `onda2-st8.9-detalhe-lancamento`
+
+### Adicionado
+- **`/movimentacoes/:id`** (detalhe do lançamento): header com tipo, status, título e valor; seções condicionais para split com percentuais, info de recorrência, estorno bidirecional e comprovantes placeholder
+- Seção de auditoria com datas de criação, atualização e campos de origem
+- Botões contextuais por status: "Editar" visível para 'pendente'/'atrasado'; "Estornar" visível para 'pago' não estornado
+
+---
+
+## [v0.8.8] — 2026-05-13 · `onda2-st8.8-split-categorias`
+
+### Adicionado
+- Toggle "Distribuir valor entre categorias" no formulário de novo lançamento
+- Tabela de split com linhas editáveis de categoria + valor; validação de soma com tolerância de 0,005; gate do botão "Salvar" enquanto soma inválida
+- Pré-população automática ao ligar o toggle (distribuição igualitária pelas categorias existentes) e limpeza ao desligar
+
+---
+
+## [v0.8.7] — 2026-05-13 · `onda2-st8.7-novo-lancamento` + hotfixes de RPC
+
+### Corrigido
+- **`row_to_jsonb` → `to_jsonb`** em 4 RPCs da Onda 2: `list_financial_movements`, `get_financial_movement`, `get_account_balances`, `create_financial_movement` — PostgreSQL rejeitava `row_to_jsonb(record)` quando usado com alias de subquery; substituído por `to_jsonb` que aceita `record` anônimo (via migration)
+- **Payload de categorias em `create_financial_movement`**: formulário enviava `category_id` como campo top-level; corrigido para `categories: [{ category_id, amount }]` conforme a RPC exige
+- **Toast de erro genérico**: adicionado log completo do erro Supabase (`code`, `message`, `details`) antes de exibir toast, para facilitar diagnóstico futuro
+
+---
+
+## [v0.8.7] — 2026-05-13 · `onda2-st8.7-novo-lancamento`
+
+### Adicionado
+- **`/movimentacoes/novo`** (formulário básico de criação de lançamento)
+- Toggle de tipo (Receita/Despesa/Transferência) com cores funcionais; adapta campos dinamicamente: exibe/oculta Categoria e Conta de destino conforme tipo selecionado
+- Campos principais: título, data de vencimento, data de pagamento (opcional), valor total com máscara BRL, select de conta com saldo atual (`get_account_balances`), select de categoria com `full_path` (`list_categories`)
+- Campos de contexto: Projeto (desabilitado "Em breve" quando vazio), Centro de custo (`list_cost_centers`)
+- Seção colapsável "Mais opções": forma de pagamento, beneficiário/pagador, referência bancária, documento fiscal, tags, observações — inputs sempre montados para preservar estado RHF
+- Sidebar reativa com resumo dinâmico (badge de tipo, título, valor, conta, categoria, vencimento) e checklist de preenchimento via `useWatch`
+- Validações inline: valor > 0, categoria obrigatória para receita/despesa, contas distintas para transferência; botão "Salvar" desabilitado enquanto inválido
+- Submissão via `create_financial_movement`; sucesso invalida cache `['movements', orgId]` e navega para `/movimentacoes`
+- Schema Zod discriminado por tipo; `buildCreatePayload` converte datas para ISO e campos vazios para `null`
+
+---
+
+## [v0.8.6] — 2026-05-13 · `onda2-st8.6-lista-movimentacoes`
+
+### Adicionado
+- **`/movimentacoes`** (lista completa): substituição do stub pela lista funcional
+- Filtros-chip persistidos em `sessionStorage` por orgId: Período (padrão: mês corrente), Conta, Categoria (com `full_path`), Status — cada chip com X individual e botão "Limpar filtros"
+- 5 tabs por tipo: Todas, Receitas, Despesas, Transferências, Estornadas; tab "Estornadas" desabilita chip de Status e força `status: 'estornado'` no payload
+- Tabela com colunas: Vencimento, Lançamento (título + meta), Conta, Categoria (`full_path` ou "N categorias"), Status (badge colorido), Valor (cor por tipo)
+- Hover na linha: ícones Eye e Pencil navegam para `/movimentacoes/:id`; linha inteira clicável para o mesmo destino
+- Linha de totais calculada client-side: receitas, despesas, saldo do período (ou total único para tabs Transferências/Estornadas); saldo colorido por sinal
+- Skeleton de 8 linhas e estado vazio com botão "Limpar filtros"
+- Hook `useMovementFilters` + `useMovementsList` (TanStack Query); helpers `filtersToPayload`, `movementLabels`, `computeTotals`
+
+---
+
+## [v0.8.5] — 2026-05-13 · `onda2-st8.5-configuracoes-categorias`
+
+### Adicionado
+- **`/configuracoes/categorias`** (acesso admin): 3 tabs — Receitas, Despesas (árvore 2 níveis com indentação), Centros de custo (lista plana)
+- Reordenamento via botões ▲/▼ com persistência de `display_order` via `upsert_category` em `Promise.all`
+- Slideover criar/editar categoria: kind travado ao da tab ativa na criação; texto fixo na edição; select de pai limitado a raízes do mesmo kind; desabilitado em categorias que já têm filhos
+- Slideover criar/editar centro de custo: nome + descrição, via `upsert_cost_center`
+- Diálogos de ativar/desativar para categorias e centros de custo, com toast de erro descritivo da RPC
+- **Modal "Aplicar template"**: lista templates via `list_category_templates`, preview de categorias por kind, aplicação via `apply_category_template` com toast de contagem; segunda aplicação exibe "Nenhuma categoria nova" (comportamento idempotente)
+- Aba "Categorias" na sidebar do `ConfiguracoesLayout` (admin-only, ícone Tag)
+- Helpers puros `buildCategoryTree` e `swapDisplayOrder`
+
+---
+
+## [v0.8.4] — 2026-05-13 · `onda2-st8.4-configuracoes-contas`
+
+### Adicionado
+- **`/configuracoes/contas`** (acesso admin): lista de contas com saldo atual via VIEW `account_current_balance`, badge de status, opacidade reduzida em contas inativas, estado vazio
+- **Slideover de criar/editar conta**: campos obrigatórios (nome, tipo, saldo inicial, data de abertura) + seções colapsáveis "Dados bancários" e "Personalização" (cor, ícone); salva via `upsert_financial_account`
+- **Diálogo de ativar/desativar**: confirmação antes de agir; erro da RPC exibido como toast descritivo; usa `toggle_account_status`
+- Aba "Contas" adicionada à sidebar do `ConfiguracoesLayout` (visível apenas para admins, ícone Wallet)
+- `accountTypeLabels.ts` com mapa enum→label PT para os 7 tipos de conta
+
+---
+
+## [v0.8.3] — 2026-05-13 · `onda2-st8.3-painel-rotas`
+
+### Adicionado
+- **`PainelPage`** funcional: bloco de saldos por conta (VIEW `account_current_balance`, apenas contas ativas, saldo total no rodapé, estado vazio com link para `/configuracoes/contas`) + bloco de KPIs do mês corrente via RPC `list_financial_movements` (receitas, despesas, saldo do mês com cor por sinal)
+- **`RequireAuth`** em `src/features/auth/components/`: wrapper de rota que verifica sessão via `useAuth()`, exibe spinner durante carregamento e redireciona para `/login` se não autenticado
+- **4 rotas stub** registradas em `App.tsx` sob `RequireAuth`: `/movimentacoes`, `/movimentacoes/novo`, `/movimentacoes/importar`, `/movimentacoes/:id`
+- Skeleton nos blocos do painel durante carregamento de dados
+
+---
+
+## [v0.8.2] — 2026-05-13 · `onda2-st8.2-schema-movimentacoes`
+
+### Adicionado
+- **Enums**: `movement_type` (receita, despesa, transferencia), `movement_origin` (manual, recurring, installment, contribution), `movement_status` (pendente, pago, atrasado, estornado, efetivado)
+- **Tabela `recurring_series`**: RLS canônica, suporte a parcelamentos via `is_installment BOOLEAN` + `total_installment_amount`
+- **Tabela `financial_movements`**: FK para `financial_accounts`, `recurring_series`, `projects`, `vendors`; coluna `status` controlada por trigger `BEFORE INSERT OR UPDATE` (não GENERATED STORED — `CURRENT_DATE` não é IMMUTABLE no PostgreSQL); campo `transfer_peer_id` para par de transferência
+- **Tabela `financial_movement_categories`** (split): trigger DEFERRED `validate_split_sum` garante que soma das linhas = total do movimento no COMMIT; constraint impede split em transferências
+- **Tabela `movement_attachments`**: registro de comprovantes com `storage_path`
+- **Bucket `movement-attachments`** (privado): path `{org_id}/{movement_id}/{filename}`
+- **VIEW `account_current_balance`**: `initial_balance + receitas pagas - despesas pagas + transferências efetivadas recebidas - transferências efetivadas enviadas`
+- **5 RPCs**: `list_financial_movements` (filtros: type, status, period_start/end, account_id, category_id), `get_financial_movement` (lançamento completo com split e anexos), `create_financial_movement` (com array de categories para split), `update_financial_movement`, `get_account_balances` (lê `account_current_balance`)
+
+### Técnico
+- GENERATED STORED para `status` descartado: trigger BEFORE INSERT OR UPDATE garante os 5 estados corretamente e mantém o índice `(organization_id, status)` populado com todos os valores (inclusive `atrasado`)
+- Trigger DEFERRED `validate_split_sum` dispara ao COMMIT, não no INSERT — permite inserir linhas de split em múltiplos statements dentro da mesma transação
+- Isolamento de snapshot de CTE: INSERTs em CTEs não são visíveis a SELECTs na mesma instrução — validações foram feitas em statements separados
+
+---
+
+## [v0.8.1] — 2026-05-13 · `onda2-st8.1-schema-base`
+
+### Adicionado
+- **Schema base da Onda 2 (financeiro)**: tabelas `projects` (stub para FK futura), `vendors`, `vendor_ratings`, `financial_accounts`, `categories`, `cost_centers`, `category_templates` — todas com RLS canônica e audit trigger
+- **Enums**: `account_type` (7 valores) e `category_kind` (receita, despesa)
+- **VIEW `categories_with_path`** com `security_invoker = true`: retorna `full_path` no formato "Pai > Filho" para uso em autocomplete e listagens
+- **12 RPCs de CRUD**: `list/upsert/toggle_status` para contas financeiras, categorias e centros de custo; `list_category_templates`; `apply_category_template` (idempotente — duas passadas: pais → filhos)
+- **Seed "Padrão Grupo Escoteiro 2026"** em `category_templates`: 35 categorias (14 receitas + 21 despesas) prontas para aplicação via RPC
+- **Função `_set_updated_at()`** criada localmente na migration (não existia função genérica global no projeto)
+- **Pattern `to_regclass`** nas RPCs de toggle_status: checagem de movimentações associadas ativada automaticamente quando `financial_movements` for criada na ST-8.2, sem alterar as RPCs
+
+### Processo
+- Adicionada regra ao `CLAUDE.md`: aprovação de plano do Lovable com ressalvas exige prompt escrito (`NNb-...-aprovacao.md`) — ressalva nunca pode ficar apenas no chat
+
+---
+
+## [v0.7.6] — 2026-05-12 · `config-plataforma-st7.6-perfil-notificacoes`
+
+### Adicionado
+- **Seção "Notificações"** em `/configuracoes/perfil`, independente do formulário principal (salva em `user_preferences` via `set_setting` com `p_level: "user"`)
+- Campo WhatsApp: editável, formato E.164, validação inline, pré-preenchido com valor salvo
+- Campo Telegram: read-only, exibe "Vinculado" / "Não vinculado" com base em `contact.telegram_chat_id`, instrução para vincular via @BussolaBot
+- Nota de rodapé explicando escopo global das preferências
+
+---
+
+## [v0.7.5] — 2026-05-12 · `config-plataforma-st7.5-org-tabs`
+
+### Adicionado
+- **3 novas seções de integração** ao final de `/configuracoes/organizacao` (acesso admin da OSC)
+  - **Google Drive**: JSON da conta de serviço (secret, não sobrescreve Vault quando em branco), ID da pasta de exportação e de importação
+  - **WhatsApp Business**: Phone Number ID + token de acesso (secret, não sobrescreve quando em branco)
+  - **Telegram por OSC**: Chat ID do grupo/canal
+- Stubs funcionais: formulários salvam via `set_organization_settings_bulk`, backend ativo pendente
+- Cada seção exibe nota "Esta integração ainda não está ativa..."
+
+---
+
+## [v0.7.4] — 2026-05-12 · `config-plataforma-st7.4-gotenberg-stubs`
+
+### Adicionado
+- **`GotenbergIntegrationPanel`**: URL, timeout (UI em segundos, salvo em ms), header de autenticação (secret), botão "Testar geração" com resultado inline (tempo em ms ou erro)
+- **4 stubs funcionais** em `/superadmin/configuracoes`: Telegram, n8n, LLM/IA e S3/R2 — formulários com Salvar operacional, badge "Em breve" na sidebar
+- `_stubShared.tsx`: `<StubNote>` e `<Field>` compartilhados entre os stubs
+
+### Corrigido
+- `storage.s3.access_key` era retornado como valor em claro pela RPC `read_platform_config_for_admin`; corrigido para `access_key_is_set: boolean` (Vault, nunca expõe o valor)
+- `usePlatformConfig`: tipo `s3.access_key: string | null` atualizado para `access_key_is_set: boolean`
+- Timeout do Gotenberg: UI exibia e recebia valor em segundos mas EF espera milissegundos; conversão explícita adicionada
+
+---
+
+## [v0.7.3] — 2026-05-12 · `config-plataforma-st7.3-email`
+
+### Adicionado
+- **`PlatformSettingsPage`** funcional em `/superadmin/configuracoes`: layout 2 colunas (sidebar + painel), hook `usePlatformConfig` (chama `read_platform_config_for_admin`), roteamento por integração selecionada
+- **`IntegrationSidebar`** com badges de status por integração (ativo / config / erro / em breve)
+- **`EmailIntegrationPanel`** com 3 subcards independentes: SMTP primário (6 campos + teste inline), Resend (API key + from), Padrões de e-mail (DPO, reply-to, fallback toggle)
+- `IntegrationStatusBadge` + `computeStatus` + `formatRelativeTime`
+- Botão "Testar envio" no subcard SMTP com resultado inline (✓ / ✗ + tempo em ms)
+
+### Corrigido
+- Bug crítico em `send_email/index.ts`: `SmtpConfig.secure` é `boolean` mas o banco armazenava `security: string`; `loadSmtpConfig` agora mapeia `security === 'SSL/TLS'` → `secure: true`
+
+---
+
+## [v0.7.2] — 2026-05-12 · `config-plataforma-st7.2-superadmin-layout`
+
+### Adicionado
+- **`SuperadminLayout`**: sidebar teal-dark, navegação `/superadmin/configuracoes`, `/superadmin/organizacoes`, `/superadmin/usuarios`
+- **`SuperadminRoute`**: guard de acesso via RPC `read_platform_config_for_admin` como proxy de verificação de superadmin
+- Hook `useIsSuperadmin` em `src/hooks/` (evita dependência invertida shared→features)
+- Badge ⚡ no `TopNav` para superadmins
+- Rotas `/superadmin/*` em `App.tsx`; páginas `/organizacoes` e `/usuarios` com `<ComingSoonPage>`
+
+---
+
+## [v0.7.1] — 2026-05-12 · `config-plataforma-st7.1-backend`
+
+### Adicionado
+- RPC `read_platform_config_for_admin` (VOLATILE, SECURITY DEFINER): retorna todas as configurações de plataforma com `is_set: boolean` para secrets (nunca expõe o valor)
+- Template `test` no `send_email` para botão de teste de SMTP
+- Edge Function `test_gotenberg`: dispara geração de PDF de teste e retorna `{ ok, ms }`
+
+---
+
+## [v0.6.7] — 2026-05-11 · `onda1-st6.7-gate-politica`
+
+### Adicionado
+- **Gate de aceite de política**: `RootRedirect` consulta `current_policy` + `user_consent`; redireciona para `/aceitar-politica` quando necessário (fail-open se RPC falhar)
+- `AceitarPoliticaPage`: layout split teal/branco, reutiliza `<PolicyConsent>` e `<AuthBrandPanel>`, insert em `user_consent` com user_agent, redirect para `/` após aceite
+
+---
+
+## [v0.6.6] — 2026-05-11 · `onda1-st6.6-config-organizacao`
+
+### Adicionado
+- **`/configuracoes/organizacao`** completo (acesso admin): dados básicos da OSC (nome, CNPJ, contato, endereço, redes sociais), logo (bucket `organization-logos`, resize 512×512), configurações operacionais (moeda, timezone, ano fiscal), toggle de solicitações públicas (`accepts_public_signup`), permissões do papel Público
+- RPC `set_organization_settings_bulk` para salvar múltiplas chaves de `organization_settings` em uma única chamada
+- RPCs `read_organization_settings`, `update_organization_basic`, `update_organization_logo_path`
+- Componente `OrgLogoUploader` (separado do `AvatarUploader` de perfil)
+
+---
+
+## [v0.6.5] — 2026-05-11 · `onda1-st6.5-usuarios-admin`
+
+### Adicionado
+- **`/configuracoes/usuarios`** completo (acesso admin): listagem de membros com filtros, busca e paginação client-side (cap 500); `AddUserDrawer` disparando EF `add_user_to_organization`; `MemberActionsMenu` com todas as transições válidas da máquina de estado (alterar papel, desativar, reativar, remover, cancelar convite, reenviar setup)
+- `MemberAvatar` com signed URL (TTL 1h)
+- `useIsActiveOrgAdmin` com fast-path JWT para superadmin
+- `ConfiguracoesLayout` com sidebar adaptativa (aba "Usuários" visível apenas para admins)
+- RPC `list_pending_org_requests` unificando `pending_organization_links` e `user_organization` pendentes, com identidade real via COALESCE
+
+### Corrigido
+- GRANT em `transition_user_organization_status` (estava REVOKE'd de `authenticated` desde ST-1)
+- Nome nulo na listagem (COALESCE com `auth.users.raw_user_meta_data->>'full_name'`)
+- Avatar no `TopNav` passou a ler `avatar_storage_path` de `user_profile`
+
+---
+
+## [v0.6.4] — 2026-05-08 · `onda1-st6.4-perfil`
+
+### Adicionado
+- **`/configuracoes/perfil`**: Identificação (nome + avatar), Contato (telefone E.164), Dados sensíveis (data de nascimento, CPF e RG cifrados no Vault), Ações (logout global + instruções LGPD)
+- Tabela `user_profile` 1:1 com `auth.users`, RLS, trigger de auditoria com `audit_excluded_columns` para campos do Vault
+- RPCs `set_user_profile_sensitive` + `get_user_profile_decrypted` (SECURITY DEFINER, Vault)
+- Bucket `user-avatars` privado (2 MB, jpg/png/webp), `<AvatarUploader>` autônomo (resize 512×512 JPEG)
+- `<ConfirmDialog>` em `shared/components/feedback/`
+- `docs/lgpd-data-inventory.md`: 23 campos catalogados com base legal, prazo de retenção e mecanismo de anonimização
+
+---
+
+## [v0.6.3] — 2026-05-05 · `onda1-st6.3-setup-token`
+
+### Adicionado
+- **`/setup?token=...`** funcional: FSM com 10 estados (loading → ready → submitting → 4 terminais), validação Zod com react-hook-form, layout split idêntico ao `/login`
+- `SetupPage` com tratamento diferenciado por `reason` retornado por `validate_setup_token`
+- EF `dev_seed_setup_token` com duplo guard (`APP_ENV=dev` + service-role) para QA local
+- Script `bin/seed-setup-token.sh` com listagem interativa de OSCs e indução dos 9 cenários da FSM
+
+---
+
+## [v0.6.2] — 2026-05-05 · `onda1-st6.2-criar-conta`
+
+### Adicionado
+- **`/criar-conta`** em dois modos: wizard anônimo de 3 passos (email → decisões → completar) e `LoggedNoOrgView` para usuário autenticado sem OSC
+- EF `create_organization` com `createOrganizationWithSlug` (sufixo `-2`, `-3`...)
+- `list_public_organizations()` SECURITY DEFINER
+- Tradutor pt-BR de erros em `onboarding-errors.ts`
+
+### Corrigido (OPSEC sweep — ADR-004)
+- Removidos `details: err.message` em 27 pontos de 8 Edge Functions (ST-6.2 + retroativos em ST-4 e ST-5 + `send_email`) — zero vazamento de mensagem interna em respostas 500
+
+---
+
+## [v0.6.1] — 2026-05-05 · `onda1-st6.1-login-redirects`
+
+### Adicionado
+- **`/login`**: email/senha + Google OAuth, `RootRedirect` com 3 branches
+- `useAuth` (combina `getSession` + `onAuthStateChange`), `useActiveOrganization`
+- `OrgSwitcher` com selo de iniciais, dropdown de avatar com logout
+
+---
+
+## [v0.5.0] — 2026-05-05 · `onda1-st5-self-signup-and-links`
+
+### Adicionado
+- EFs `start_self_signup`, `complete_self_signup`, `request_organization_link`, `approve_organization_link`, `reject_organization_link`
+- UPDATE atômico para evitar race em approve/reject
+- `_shared/onboarding_common.ts` para reuso entre EFs
+
+---
+
+## [v0.4.1] — 2026-05-05 · `onda1-st4-onboarding-direct-with-resend`
+
+### Adicionado
+- EFs `add_user_to_organization`, `validate_setup_token`, `complete_setup`, `resend_setup_token`, `request_setup_resend`
+- Schemas Zod, helpers compartilhados, configuração de `verify_jwt` por EF
+
+---
+
+## [v0.3.0] — 2026-05-05 · `onda1-st3-send-email-with-secrets`
+
+### Adicionado
+- Edge Function `send_email`: SMTP primário + Resend fallback, 6 templates, tabela `email_send_log`
+- Integração com Vault via `set_setting`/`get_setting` com cifragem real (substituto de pgsodium)
+
+---
+
+## [v0.2.0] — 2026-05-05 · `onda1-st2-settings-policies`
+
+### Adicionado
+- 7 tabelas: `platform_settings`, `organization_settings`, `user_preferences`, `policies`, `user_consent`, `invitations`, `pending_organization_links`
+- Auditoria com redação condicional para secrets
+- Função `current_policy(type)`, `custom_access_token_hook` (não-ativável em Lovable Cloud — TODO operacional)
+
+---
+
+## [v0.1.0] — 2026-05-05 · `onda1-st1-schema-base`
+
+### Adicionado
+- Schema base PostgreSQL com RLS multi-tenant: funções `is_member_of`, `has_role_in`, `current_user_is_superadmin`
+- Máquina de estado de `user_organization` com guard trigger (7 estados)
+- `audit_log` + trigger genérico reutilizável
+- Hardening: `search_path` fixo, `REVOKE EXECUTE` nas funções sensíveis
+
+---
+
+*Última atualização: 2026-05-21 · estabilização mobile pós-BK-199 (v0.19.1) — 6 ajustes mobile (cards de listas, formulários, filtros de Reembolsos, footer, overflow, atualização do PWA).*
