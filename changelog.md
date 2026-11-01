@@ -11,6 +11,18 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.136.4] — 2026-11-01
+
+### Corrigido
+
+- Corrigimos as listas de pedidos de pagamento e de reembolsos, que ficaram indisponíveis por um período curto.
+
+## [1.136.3] — 2026-11-01
+
+### Modificado
+
+- Reforço de segurança nos dados de pagamento.
+
 ## [1.136.2] — 2026-11-01
 
 ### Modificado
