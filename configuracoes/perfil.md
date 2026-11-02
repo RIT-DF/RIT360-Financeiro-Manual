@@ -97,9 +97,9 @@ Pode **desvincular** quando quiser, pelo mesmo cartão. Desvincular **apaga o co
 >
 > Se você demorar para tocar em Iniciar, o bot avisa que o código venceu — não é erro, e a tela de perfil permite gerar quantos links precisar. Cada link vale **uma vez só**: depois de usado (ou vencido), gere outro.
 
-> ⚠️ **Atenção · O bot não responde perguntas**
+> ⚠️ **Atenção · O bot não é canal de suporte**
 >
-> O **@rit360financeiro_bot** só entrega avisos — ele não é um canal de suporte e não interpreta mensagens que você mandar para ele. Dúvida ou problema se resolve dentro do próprio RIT360 Financeiro, não pelo Telegram.
+> O **@rit360financeiro_bot** entrega avisos e atende o **[Assistente com IA](/modulos/assistente/)**: perguntas sobre os dados da OSC, dúvidas de uso e preparo de registros a partir de frase ou comprovante, dentro das suas permissões. Ele não é um canal de suporte: problema ou sugestão vai pelo botão **Enviar feedback** dentro do RIT360 Financeiro.
 
 > 📖 **Conceito · Vincular não liga tudo automaticamente para sempre**
 >
