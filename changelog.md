@@ -11,6 +11,18 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.144.1] — 2026-11-02
+
+### Modificado
+
+- A exigência do código passou a valer também no servidor.
+
+## [1.144.0] — 2026-11-02
+
+### Modificado
+
+- A área de superadmin pede o código do aplicativo, ou um código de recuperação, a cada nova sessão. Se não for possível conferir o acesso, a tela avisa e oferece Tentar de novo, sem liberar nada.
+
 ## [1.143.0] — 2026-11-02
 
 ### Modificado

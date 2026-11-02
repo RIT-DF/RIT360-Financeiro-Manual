@@ -94,7 +94,7 @@ Quando a importação termina, quem importou recebe um **e-mail e uma notificaç
 [![E-mail de conclusão da importação com o resumo](/assets/screenshots/manual-config-usuarios-importacao-email.png)](/assets/screenshots/manual-config-usuarios-importacao-email.png)
 *E-mail de conclusão — resumo do que foi processado, criado, vinculado, atualizado e pulado*
 
-Se alguma linha deu erro, o aviso é **acionável**: ele lista o **número da linha**, o **nome ou e-mail** e o **motivo** (ex.: *"Linha 5 (joao@exemplo.org): CPF deve ter 11 dígitos"*), para você corrigir na planilha e reimportar **apenas as linhas que faltaram**. Linhas que entraram **com ressalva** (por exemplo, um dado que a planilha não pôde alterar — veja abaixo) aparecem num bloco de **Avisos**, com o motivo. Por segurança, o aviso nunca traz CPF nem RG no corpo — esses dados ficam só no arquivo completo, protegido por login (ver Histórico abaixo).
+Se alguma linha deu erro, o aviso é **acionável**: ele lista o **número da linha**, o **nome ou e-mail** e o **motivo** (ex.: *"Linha 5 (joao@exemplo.org): CPF deve ter 11 dígitos"*), para você corrigir na planilha e reimportar **apenas as linhas que faltaram**. Linhas que entraram **com ressalva** (por exemplo, um dado que a planilha não pôde alterar — veja abaixo) aparecem num bloco de **Avisos**, com o motivo. Por segurança, nem o aviso nem a planilha de erros trazem **CPF ou RG**: para corrigir uma linha, o número da linha e o motivo bastam, e os documentos continuam na sua planilha original.
 
 ### Histórico de importações
 
@@ -105,7 +105,7 @@ A tela de importação tem uma aba **Histórico** que lista todas as importaçõ
 - **Concluída** — terminou (com ou sem linhas puladas)
 - **Falhou** — foi interrompida (o aviso explica o que aconteceu)
 
-Em cada importação com erros, você pode **baixar a planilha completa das linhas que falharam** — com todos os motivos — para corrigir e reimportar só o que faltou. Esse arquivo fica disponível apenas aqui, atrás de login, porque pode conter CPF/RG.
+Em cada importação com erros, você pode **baixar a planilha das linhas que falharam** — com nome, e-mail, papel, telefone, data de nascimento e o **motivo** de cada erro, **sem as colunas CPF e RG** — para corrigir e reimportar só o que faltou. Como a planilha de erros não traz CPF nem RG, **você precisa copiar esses dois dados da sua planilha original** ao corrigir e reenviar uma linha. Mesmo sem esses dois documentos, o arquivo tem dados pessoais (nome, e-mail, telefone, data de nascimento): fica disponível apenas aqui, atrás de login, e não deve ser guardado nem encaminhado.
 
 [![Importar usuários — aba Histórico com uma importação concluída](/assets/screenshots/manual-config-usuarios-importar-historico.png)](/assets/screenshots/manual-config-usuarios-importar-historico.png)
 *Aba Histórico — importações da OSC com data, solicitante, totais, status e download da planilha de erros*

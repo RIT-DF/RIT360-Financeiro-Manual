@@ -120,7 +120,7 @@ Antes de confirmar, a barra já mostra **quantas solicitações** e **o valor to
 
 Reembolso aprovado pode ser marcado como pago **direto na aba "Aprovado"** — na linha, ou em lote — sem precisar ir até Movimentações procurar o lançamento correspondente. A ação pede a **data do pagamento** e a **conta** de onde o dinheiro saiu, do mesmo jeito que já funciona para pedidos de compra e pagamento. Só vê o botão de pagar quem tem a [permissão de pagar](/configuracoes/cargos/#permissao-pagar) — a mesma que já era exigida pelo caminho antigo, via Movimentações, que **continua funcionando** igual.
 
-Pagar vários de uma vez segue o mesmo padrão do lote de aprovação: marque os reembolsos aprovados que já confirmou o pagamento, informe data e conta, e confirme. O resultado volta **item por item** — o que foi pago, o que foi **recusado por regra** (sem permissão de pagar, ou conta inativa diferente da do lançamento) e o que **falhou** —, nunca um "pronto" genérico escondendo uma falha parcial no meio do lote. Reembolso de projeto com financiador pode sair pago com aviso de fonte ou item do plano de trabalho pendentes de escolha — ver [Projetos → De qual fonte e de qual item sai cada despesa](/modulos/projetos/#de-qual-fonte-e-item).
+Pagar vários de uma vez segue o mesmo padrão do lote de aprovação: marque os reembolsos aprovados que já confirmou o pagamento, informe data e conta, e confirme. O resultado volta **item por item** — o que foi pago, o que foi **recusado por regra** (sem permissão de pagar, conta inativa diferente da do lançamento, ou [você pediu ou aprovou aquele reembolso e outra pessoa pode pagá-lo](#quem-pediu-ou-aprovou-nao-paga)) e o que **falhou** —, nunca um "pronto" genérico escondendo uma falha parcial no meio do lote. Reembolso de projeto com financiador pode sair pago com aviso de fonte ou item do plano de trabalho pendentes de escolha — ver [Projetos → De qual fonte e de qual item sai cada despesa](/modulos/projetos/#de-qual-fonte-e-item).
 
 > 💡 **Por que isso importa**
 >
@@ -156,6 +156,10 @@ Ao clicar em **Excluir rascunho**, a confirmação mostra qual solicitação ser
 > 💡 **Por que isso importa**
 >
 > A timeline de aprovações é mais que registro contábil. É **proteção institucional**: meses depois, se alguém questionar "quem aprovou esse reembolso de R$ 800 do diretor?", a resposta está lá — quem votou, em qual data, com qual comentário. Em OSC com mudança rotativa de diretoria (eleição anual, troca de tesoureiro), esse registro é a diferença entre passagem de bastão tranquila e arenas de acusação.
+
+> 📖 **Conceito · Voto dado antes de uma mudança deixa de contar**
+>
+> Se o **valor** ou os **dados de pagamento** do reembolso mudam depois de alguém ter aprovado, aquela aprovação **não vale mais** e o aprovador precisa votar de novo. A regra é a mesma dos [Pedidos de Compra e Pagamento](/modulos/pedidos-pagamento/#aguardando-aprovação), onde o histórico de aprovações marca o voto com o selo **"Voto anterior à alteração"**. Por que importa: quem aprovou R$ 150 de combustível não aprovou R$ 1.500.
 
 ### Retirar uma solicitação enviada {#retirar-solicitacao}
 
@@ -236,6 +240,12 @@ Há três caminhos para confirmar o pagamento, e todos levam ao mesmo lugar: pag
 >
 > Se o reembolso já foi enviado — inclusive aprovado ou pago — e o centro de custo ficou errado, quem faz a gestão financeira da OSC corrige direto no detalhe do reembolso, ao lado do campo **Centro de custo**, botão **Corrigir**. A tela mostra antes o que será alterado (a solicitação e quantos lançamentos gerados por ela) e pede um motivo, que fica na trilha de auditoria. A correção alcança os lançamentos já criados, inclusive os pagos. O mesmo mecanismo vale para pedidos de compra e pagamento — ver [Pedidos de Compra e Pagamento → Corrigir o centro de custo depois do envio](/modulos/pedidos-pagamento/#corrigir-o-centro-de-custo-depois-do-envio).
 
+### Quem pediu ou aprovou não paga o reembolso {#quem-pediu-ou-aprovou-nao-paga}
+
+A regra é a mesma dos pedidos de compra e pagamento: **quem solicitou ou aprovou um reembolso não confirma o pagamento dele quando existe outra pessoa habilitada a pagar**. Quem aprova não deve ser quem entrega o dinheiro — e, num reembolso, quem pede é a própria pessoa que vai receber. Ver a explicação completa e o exemplo em [Pedidos de Compra e Pagamento → Quem pediu ou aprovou não paga o próprio pedido](/modulos/pedidos-pagamento/#quem-pediu-ou-aprovou-nao-paga).
+
+Na prática, em qualquer dos caminhos de pagamento (detalhe, fila ou Movimentações), a tentativa é recusada com *"Você pediu ou aprovou este pedido, e outra pessoa da organização pode pagá-lo. Peça a ela que registre o pagamento."* e **nada é gravado**. Na fila e no lote, a recusa aparece **item por item**, com o nome do reembolso. Se você é a única pessoa com a permissão de pagar, o pagamento passa e fica registrado, e os administradores são avisados.
+
 ### Pago
 
 Quando o tesoureiro marca a movimentação financeira correspondente como paga, o reembolso aqui muda automaticamente para **Pago** (💙). O solicitante recebe notificação pelos canais que configurou no perfil. Ciclo encerrado.
@@ -260,13 +270,17 @@ Clique em **+ Nova solicitação** para abrir o formulário.
 
 ### Envio rápido de comprovantes via Bot do Telegram
 
-Além de preencher o formulário manualmente na tela, você pode fotografar ou encaminhar o comprovante diretamente para o **Bot do RIT360 no Telegram** (`@rit360_bot`):
+Além de preencher o formulário manualmente na tela, você pode fotografar ou encaminhar o comprovante diretamente para o **Bot do RIT360 no Telegram** (`@rit360financeiro_bot`):
 
 1. **Vincule seu Telegram:** Inicie uma conversa com o bot e confirme o código de acesso enviado para o seu e-mail de membro da OSC.
 2. **Envie o recibo ou cupom:** Basta tirar uma foto do cupom fiscal, recibo ou enviar o arquivo PDF na conversa.
 3. **Extração inteligente com IA:** A inteligência artificial da plataforma faz a leitura imediata da imagem, identificando data, valor e fornecedor/estabelecimento.
 4. **Confirmação e criação de rascunho:** O bot mostra o resumo lido para a sua confirmação. Confirmado, um **Rascunho de Reembolso** é criado imediatamente no sistema, já com a imagem do comprovante anexada e os campos pré-preenchidos.
 5. **Revisão:** Basta acessar o RIT360 Financeiro na aba **Rascunho**, conferir os detalhes e clicar em **Enviar para aprovação**.
+
+> ⚠️ **Atenção · O bot só cria reembolso para quem pode criar reembolso no aplicativo**
+>
+> A conferência é a mesma da tela: se o seu cargo não permite criar reembolso na organização, o bot **não cria nada** e responde *"Você não tem permissão para criar este pedido nesta organização."* Se ele responder *"Não consegui conferir sua permissão agora. Nada foi criado — tente de novo em instantes ou abra pelo aplicativo."*, a conferência falhou, não a sua permissão; tente de novo mais tarde.
 
 
 **Campos obrigatórios:**

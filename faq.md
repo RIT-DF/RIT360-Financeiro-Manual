@@ -35,7 +35,9 @@ Essa opção resolve os **dois** casos, e o sistema identifica sozinho qual é o
 
 Por segurança, a confirmação na tela é sempre a mesma, exista ou não uma conta para aquele e-mail (não revelamos quais e-mails têm cadastro). Por isso o e-mail que chega pode ser de um tipo ou de outro — basta seguir o que ele pede. Se não houver conta para aquele endereço, nada chega. Se não receber, confira a caixa de spam e o endereço digitado; há um **limite de pedidos por hora** (cerca de 3 para o mesmo e-mail), e passando dele a tela continua mostrando a mesma confirmação, mas **não envia mais nada** — então evite clicar várias vezes seguidas e, se esgotar, espere cerca de uma hora.
 
-Se você cadastrou via Google no primeiro acesso, use **Continuar com Google** em vez de senha — contas só-Google não têm senha para redefinir.
+Se você cadastrou via Google no primeiro acesso, use **Continuar com Google** em vez de senha — conta só-Google não tem senha para trocar. Se quiser passar a ter uma senha, use **Esqueci minha senha** na tela de entrada: o link recebido permite criá-la.
+
+**O que acontece ao redefinir:** a nova senha **desconecta todos os aparelhos**, inclusive o que você usa; entre de novo com a senha nova. A redefinição **não muda a verificação em duas etapas** da conta, se houver uma.
 
 ### Não consigo concluir meu cadastro. A senha é sempre recusada.
 
@@ -95,6 +97,15 @@ Sim. Em **Meu Perfil → Ações de Conta → Encerrar todas as sessões**. Úti
 
 ## Navegação e papéis
 
+
+### Por que o sistema pede minha senha atual para trocar a senha ou o e-mail?
+
+Porque trocar senha ou e-mail é o que alguém faria para **tomar a sua conta**. Se bastasse estar com a sessão aberta, quem usasse seu computador por um minuto poderia trancar você para fora. Por isso, ao **trocar a senha**, você digita a senha atual, e ao concluir **os outros aparelhos são desconectados** (*"Senha alterada. Os outros aparelhos foram desconectados."*). Ao **trocar o e-mail de acesso**, o sistema também pede a senha atual; se você só entra pelo Google, pede um **código enviado ao seu e-mail atual**. Passo a passo em [Meu Perfil](/configuracoes/perfil/#como-trocar-a-senha).
+
+### Digitei a senha atual errada e agora aparece "Aguarde 15 minutos". O que faço?
+
+Cinco senhas erradas bloqueiam, por **15 minutos**, a troca de senha e a troca de e-mail da conta (*"Muitas tentativas de senha. Aguarde 15 minutos e tente de novo."*). Não há como pular a espera. Se o problema é que você não lembra a senha, em vez de tentar mais, saia e use **Esqueci minha senha** na tela de entrada.
+
 ### Onde encontro Configurações? Não vejo nenhum item no menu.
 
 Configurações da organização está no **ícone de engrenagem** no canto superior direito da TopNav (entre o Feedback e o menu do avatar). O ícone só aparece para usuários com papel **Admin (Presidente)** ou **Tesoureiro** — voluntários e coordenadores não veem porque não têm acesso às configurações da OSC.
@@ -127,7 +138,7 @@ Depende do status. Se o lançamento está **Pendente** ou **Atrasado**, clique e
 
 ### Qual a diferença entre Cancelar e Excluir uma movimentação?
 
-**Cancelar** mantém o lançamento no histórico com status "Cancelado" — útil para rastreabilidade ("essa despesa estava prevista mas não aconteceu"). **Excluir** apaga o lançamento de vez. O RIT360 Financeiro só permite excluir movimentações que já foram canceladas ou estornadas, justamente para evitar perda acidental. Para auditoria limpa, prefira sempre **cancelar** a excluir.
+**Cancelar** mantém o lançamento no histórico com status "Cancelado" — útil para rastreabilidade ("essa despesa estava prevista mas não aconteceu"). **Excluir** apaga o lançamento de vez. O RIT360 Financeiro só permite excluir movimentações que já foram canceladas ou estornadas, justamente para evitar perda acidental. Para auditoria limpa, prefira sempre **cancelar** a excluir. Ao excluir, a janela traz o campo **Motivo da exclusão (opcional)**, que fica no histórico junto com o seu nome.
 
 ### Sumiu o botão "Marcar como pago". Por quê?
 
@@ -152,6 +163,14 @@ Sim. A planilha de importação tem a coluna `centro_de_custo` (opcional). Se o 
 ### Anexei um arquivo ZIP a um lançamento. Os documentos de dentro aparecem na prestação de contas?
 
 Sim. O RIT360 Financeiro **descompacta o ZIP automaticamente** e anexa cada arquivo de dentro como um anexo individual do lançamento — o pacote dá lugar aos arquivos, que passam a aparecer na pré-visualização e a entrar na prestação de contas. Vale também quando o comprovante chega por **link** na importação por CSV. Arquivos que não dá para exibir num PDF (planilhas, textos) ficam anexados, mas não aparecem no corpo do relatório.
+
+### O sistema recusou meu comprovante com "Tipo de arquivo não aceito". O que posso anexar?
+
+Aceitamos imagens (exceto **SVG**), PDF, **XML** (inclusive o XML da nota fiscal), ZIP, CSV e documentos do Office ou LibreOffice. **Páginas da internet (HTML)** e imagens **SVG** são recusadas, porque podem carregar programas escondidos e não servem como prova de despesa. Se o comprovante é uma página salva do banco ou de uma loja, imprima como **PDF** ou tire uma captura de tela em PNG ou JPG. Detalhes em [Movimentações → Quais arquivos você pode anexar](/modulos/movimentacoes/#anexos-e-comprovantes).
+
+### Anexei um ZIP e faltam arquivos dentro do lançamento. Por quê?
+
+O ZIP é aberto dentro de limites de segurança: até **200 arquivos**, nenhum com mais de **25 MB** depois de aberto, e **100 MB** no total. O que passa dos limites fica de fora, e ZIP dentro de ZIP não é aberto. Divida o pacote em partes menores ou anexe os arquivos grandes separadamente.
 
 ### Em que mês cada lançamento entra, em Movimentações e nos Relatórios?
 
@@ -266,6 +285,18 @@ O documento existiu, mas o arquivo não está mais acessível para download — 
 ### Por quanto tempo os PDFs de prestação de contas ficam guardados?
 
 **Para sempre, por padrão — nada é descartado.** Se a sua organização tiver política de retenção, o Presidente pode definir um prazo em **Configurações → Relatórios**: 1, 2, 3, 5 ou 10 anos, contados do fim do período coberto pelo documento. Com prazo configurado, o sistema **avisa por e-mail 30 dias antes** de qualquer descarte, listando o que vai sair e permitindo baixar antes; se o prazo mudar, o aviso perde a validade e a contagem recomeça. O registro da prestação nunca é apagado.
+
+### O botão "Confirmar pagamento" está desabilitado e diz que outra pessoa pode pagar. Por quê?
+
+Porque quem **pediu ou aprovou** um pedido não confirma o pagamento dele quando existe **outra pessoa** com a permissão de pagar — assim, quem pede, quem autoriza e quem paga não são a mesma pessoa. A tela diz: *"Você pediu ou aprovou este pedido, e outra pessoa da organização pode pagá-lo. Peça a ela que registre o pagamento."* Se você é a **única** pessoa habilitada a pagar, o pagamento passa e fica registrado, e os administradores são avisados. Em pedido parcelado ou recorrente, a regra vale parcela por parcela. Ver [Pedidos → Quem pediu ou aprovou não paga o próprio pedido](/modulos/pedidos-pagamento/#quem-pediu-ou-aprovou-nao-paga).
+
+### O pedido já tinha uma aprovação, mas ela aparece com o selo "Voto anterior à alteração". O que é?
+
+Alguém mudou o **valor** ou os **dados de pagamento** do pedido depois daquela aprovação. O voto antigo **não conta mais** para o quórum: aprovou-se uma coisa, e o pedido agora é outra. O aprovador precisa votar de novo. Ver [Pedidos → Voto dado antes de uma mudança deixa de contar](/modulos/pedidos-pagamento/#aguardando-aprovação).
+
+### Mandei o comprovante para o bot do Telegram e ele respondeu que não tenho permissão. E agora?
+
+O bot só cria reembolso ou pedido para quem **pode criar** esse tipo de solicitação no aplicativo, com a mesma conferência da tela. A resposta é *"Você não tem permissão para criar este pedido nesta organização."* Peça a quem administra a OSC para revisar o seu cargo em [Cargos e permissões](/configuracoes/cargos/). Se a resposta for *"Não consegui conferir sua permissão agora"*, nada foi criado por falha da conferência: tente de novo em instantes.
 
 ### Por que não consigo reenviar meu pedido rejeitado?
 
@@ -501,6 +532,22 @@ Nas [Novidades](/changelog/) deste manual. Toda nova versão lançada é registr
 ### Quero entender melhor um conceito que aparece no RIT360 Financeiro (fluxo de caixa, regime de caixa, estorno...). Onde leio?
 
 Cada módulo deste manual tem uma seção **Conceitos essenciais** que cobre os termos relevantes em linguagem simples. Movimentações cobre regime de caixa e estorno; Reembolsos cobre quórum e auto-aprovação; Pedidos cobre recorrente vs parcelado.
+
+### Posso anexar o parecer da Comissão Fiscal feito fora do sistema antes da votação?
+
+Não. O parecer externo (PDF assinado em reunião) só pode ser anexado **depois da deliberação da comissão**, e o sistema guarda a impressão digital do arquivo para provar que ele **não mudou** desde o envio. Antes disso, o botão fica indisponível, com a explicação de quantos votos faltam. Ver [Comissão Fiscal → Emissão do parecer final](/modulos/comissao-fiscal/#emissão-do-parecer-final).
+
+### Meu voto na Comissão Fiscal é anônimo. Alguém consegue saber como votei?
+
+Na modalidade **Anônima**, os demais membros não veem como você votou, e só o placar é exibido após a emissão. Mas o sistema guarda a ligação entre você e o seu voto em registro separado, e, com **poucos membros ou com unanimidade, dá para deduzir o voto**. Se o resultado é 3 a 0, todos sabem como todos votaram.
+
+### Tentei baixar vários documentos e o sistema recusou. Por quê?
+
+O pacote de documentos pode ter no máximo **200 MB** (e 50 documentos por vez). Acima disso é recusado, com a mensagem de quantos MB a seleção soma. Baixe em levas menores. O pacote gerado é apagado após **1 hora**; peça de novo se precisar.
+
+### O link da minha exportação de dados não abre mais. O que aconteceu?
+
+O link da exportação (dos seus dados ou da organização) vale **7 dias**. Quando vence, o arquivo é **apagado**. Peça uma nova exportação pelo mesmo botão em Meu Perfil ou em Configurações → Organização.
 
 ### Um fornecedor (ou participante de projeto) quer ver, corrigir ou apagar os dados dele. Quem responde?
 

@@ -60,6 +60,10 @@ Marque a caixa de cada documento, ou use **Selecionar os N documentos exibidos**
 >
 > Se a seleção incluir um documento **Em preparo** ou que **Falhou**, ele fica de fora do lote — o download em lote entrega só o que está **Pronto**, e avisa quantos documentos ficaram fora por esse motivo. Não é falha silenciosa: a contagem do que foi entregue e do que ficou de fora aparece separada.
 
+> ⚠️ **Atenção · O pacote tem limite de tamanho e prazo para ser baixado**
+>
+> Os documentos escolhidos viram **um único pacote ZIP**, de até **200 MB** somados. Se a seleção passar disso, o pacote é **recusado**, com a explicação *"Os documentos escolhidos somam N MB. O pacote pode ter no máximo 200 MB: selecione menos documentos."* — nada é gerado, e a solução é baixar em duas ou mais levas, com menos documentos em cada. O pedido aceita até **50 documentos** por vez. Depois de gerado, o pacote **é apagado do sistema após 1 hora**; o link de download vale apenas alguns minutos. Baixe na hora: se o link vencer, é só pedir o lote de novo — nenhum documento original é perdido, só a cópia temporária do pacote.
+
 ## Excluir o arquivo de um documento {#excluir-arquivo}
 
 Desde a v1.98.0, quem tem permissão pode apagar o **arquivo** de um documento direto na área de Documentos — por linha, ou em lote pela mesma seleção usada para baixar.

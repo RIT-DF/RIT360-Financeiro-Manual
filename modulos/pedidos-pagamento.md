@@ -91,7 +91,7 @@ No **celular**, os cards de resumo ficam em grade de 2 colunas e a lista de pedi
 
 Na aba **Aprovado**, marque o checkbox de cada pedido que você já conferiu e vai pagar. No rodapé, o botão **"Marcar como pago (N)"** abre um diálogo em que você informa **a conta** e **a data do pagamento** uma única vez — em vez de repetir os dois campos pedido por pedido.
 
-Cada pedido é pago **separadamente**: se um falhar no meio do lote, os que já foram pagos **continuam pagos**, e você pode interromper a qualquer momento sem perder o que já foi feito. Ao final, o resultado vem **item por item** — pago, recusado por regra (sem permissão de pagar, ou conta inativa diferente da do lançamento), com o motivo, ou falhou, também com o motivo. Pedido de projeto com financiador pode ainda sair pago com aviso de fonte ou item do plano de trabalho pendentes de escolha — ver [Projetos → De qual fonte e de qual item sai cada despesa](/modulos/projetos/#de-qual-fonte-e-item).
+Cada pedido é pago **separadamente**: se um falhar no meio do lote, os que já foram pagos **continuam pagos**, e você pode interromper a qualquer momento sem perder o que já foi feito. Ao final, o resultado vem **item por item** — pago, recusado por regra (sem permissão de pagar, conta inativa diferente da do lançamento, ou [você pediu ou aprovou aquele pedido e outra pessoa pode pagá-lo](#quem-pediu-ou-aprovou-nao-paga)), com o nome do lançamento e o motivo, ou falhou, também com o motivo. Pedido de projeto com financiador pode ainda sair pago com aviso de fonte ou item do plano de trabalho pendentes de escolha — ver [Projetos → De qual fonte e de qual item sai cada despesa](/modulos/projetos/#de-qual-fonte-e-item).
 
 Funciona do mesmo jeito que já funciona para reembolsos — ver [Reembolsos → Pagar reembolso aprovado pela fila](/modulos/reembolsos/#pagar-pela-fila).
 
@@ -144,6 +144,12 @@ Ao clicar em **Excluir rascunho**, a confirmação mostra qual solicitação ser
 - **Histórico de aprovações**: timeline de todos os votos, com o **progresso do quórum** (ex.: "1 de 2 aprovações · falta 1") enquanto o pedido aguarda aprovação
 - **Ações**: ✓ Aprovar / ✕ Reprovar (somente para aprovadores; nunca para o próprio solicitante) · **Retirar solicitação** (somente para quem enviou — ver abaixo)
 
+> 📖 **Conceito · Voto dado antes de uma mudança deixa de contar**
+>
+> Se o **valor** do pedido ou os **dados de pagamento** (chave PIX, conta, boleto) mudam depois de alguém ter aprovado, essa aprovação **não conta mais**. No histórico de aprovações, o voto aparece com o selo laranja **"Voto anterior à alteração"** e a explicação *"O valor ou os dados de pagamento mudaram depois deste voto, então ele não conta para a aprovação."* — e o progresso do quórum (ex.: "1 de 2 aprovações · falta 1") deixa de somá-lo. O aprovador precisa votar de novo, agora sobre o que está valendo.
+>
+> **Por que isso importa:** quem aprovou R$ 800 para um fornecedor não aprovou R$ 8.000, nem um pagamento para outra conta. Sem essa regra, bastaria alterar o pedido depois da aprovação e o voto antigo "carregaria" a mudança. O selo mostra, sem mistério, por que um pedido que parecia aprovado voltou a pedir votos.
+
 Pedidos recorrentes mostram aqui uma seção **Ocorrências** com a lista de cada ocorrência prevista, seu status individual e ações específicas (marcar como pago, cancelar essa ocorrência, ver movimento gerado).
 
 ### Retirar uma solicitação enviada
@@ -187,6 +193,32 @@ Se o pedido não vai mais ser pago — a compra foi desfeita, o fornecedor desis
 > ⚠️ **Atenção · Os dados bancários do destinatário têm prazo**
 >
 > No detalhe do pedido, **quem tem permissão de pagar vê os dados bancários por inteiro**; os demais veem apenas os últimos dígitos (o nome do destinatário fica visível para todos). E, passado o prazo que a OSC definiu, **esses dados são apagados automaticamente** depois que o pagamento é concluído — o pedido continua no histórico com valor, descrição, datas, anexos e o nome de quem recebeu. Ver [Contas Bancárias → Dados bancários de quem recebe](/configuracoes/contas/#dados-bancarios-de-quem-recebe).
+
+### Quem pediu ou aprovou não paga o próprio pedido {#quem-pediu-ou-aprovou-nao-paga}
+
+> 💡 **Por que isso importa**
+>
+> Num controle financeiro saudável, quem pede o dinheiro, quem autoriza e quem paga não são a mesma pessoa. Se uma só pessoa fizesse as três coisas, ninguém conferiria ninguém. Por isso, **quem solicitou ou aprovou um pedido não pode confirmar o pagamento dele quando existe outra pessoa habilitada a pagar** (alguém com a permissão de pagar).
+
+**O que você vê.** No detalhe de um pedido aprovado, se você pediu ou aprovou aquele pedido e há outra pessoa que pode pagar, o botão **Confirmar pagamento** fica **desabilitado**, com a explicação logo abaixo: *"Você pediu ou aprovou este pedido, e outra pessoa da organização pode pagá-lo. Peça a ela que registre o pagamento."* A mesma recusa vale em qualquer outro caminho de pagamento (lista, lote, Movimentações). Nada é gravado.
+
+**Se você é a única pessoa habilitada.** Em OSC pequena, pode acontecer de só uma pessoa ter a permissão de pagar. Nesse caso o pagamento **passa**: aparece o aviso *"Você participou deste pedido e é a única pessoa habilitada a pagá-lo. O pagamento fica registrado e os administradores são avisados."* A pessoa paga, o registro mostra que a mesma pessoa participou das etapas, e os administradores recebem um aviso. Não é bloqueio: é transparência.
+
+**Pedido parcelado ou recorrente.** Cada parcela (ou ocorrência) é um pagamento próprio, e a regra vale **uma por uma**: pague cada parcela no menu **⋯** da linha, em **Ocorrências**, opção **Marcar como paga**. Quem pediu ou aprovou o pedido não paga nenhuma das parcelas se houver outra pessoa habilitada.
+
+**Exemplo:** Rafael, coordenador, pede o pagamento de R$ 3.600 ao instrutor de oficina, em três parcelas. A diretora Ana aprova. Quem tem a permissão de pagar são Ana, o tesoureiro Paulo e a presidente Lúcia. Ana aprovou, então não paga; Paulo e Lúcia pagam cada parcela, no vencimento.
+
+> ✓ **Dica · Combine quem paga antes de pedir**
+>
+> Se na sua OSC só uma pessoa paga, e ela costuma também aprovar, o pagamento passa, mas fica sinalizado aos administradores. Para evitar o aviso a cada pedido, dê a permissão de pagar a uma segunda pessoa de confiança, em [Cargos e permissões](/configuracoes/cargos/#permissao-pagar).
+
+**Quando dá errado**
+
+| O que a tela diz | O que significa | O que fazer |
+|---|---|---|
+| *"Você pediu ou aprovou este pedido, e outra pessoa da organização pode pagá-lo. Peça a ela que registre o pagamento."* | Você participou do pedido e há outra pessoa habilitada. | Peça a ela que confirme o pagamento. |
+| *"Você não tem permissão para pagar este pedido."* | O seu cargo não tem a permissão de pagar. | Peça a quem administra a OSC. |
+| *"Não foi possível conferir quem pode pagar este pedido. Recarregue a página."* | A conferência falhou, e o sistema, na dúvida, não deixa pagar. | Recarregue a página. |
 
 ### Quando o valor pago diverge do autorizado
 {: #valor-diverge-do-autorizado }
@@ -315,12 +347,16 @@ Clique em **+ Nova solicitação** para abrir o formulário.
 
 ### Envio rápido de faturas e boletos via Bot do Telegram
 
-Assim como nos reembolsos, você pode cadastrar um novo pedido de pagamento enviando o documento diretamente para o **Bot do RIT360 no Telegram** (`@rit360_bot`):
+Assim como nos reembolsos, você pode cadastrar um novo pedido de pagamento enviando o documento diretamente para o **Bot do RIT360 no Telegram** (`@rit360financeiro_bot`):
 
 1. **Envie a foto ou arquivo:** Encaminhe o boleto bancário, a fatura em PDF ou a foto da nota fiscal do fornecedor na conversa com o bot.
 2. **Extração inteligente com IA:** O sistema extrai automaticamente o valor, a data de vencimento e os dados do favorecido/fornecedor (inclusive linha digitável quando identificada).
 3. **Confirmação e criação de rascunho:** Após sua conferência rápida pelo chat, o bot salva um **Rascunho de Pedido de Compra e Pagamento** com o anexo pronto.
 4. **Envio:** Basta abrir a aba **Rascunho** no sistema, escolher o centro de custo ou categoria se necessário, e clicar em **Enviar para aprovação**.
+
+> ⚠️ **Atenção · O bot só cria pedido para quem pode criar pedido no aplicativo**
+>
+> A conferência é a mesma da tela: se o seu cargo não permite criar um Pedido de Compra e Pagamento na organização (ou naquele centro de custo ou projeto), o bot **não cria nada** e responde *"Você não tem permissão para criar este pedido nesta organização."* Se ele responder *"Não consegui conferir sua permissão agora. Nada foi criado — tente de novo em instantes ou abra pelo aplicativo."*, a conferência falhou — não é falta de permissão; tente de novo mais tarde.
 
 
 ### Condição do valor

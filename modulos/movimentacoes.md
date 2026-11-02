@@ -214,6 +214,12 @@ Cada linha tem ícones de ação que mudam conforme o status:
 >
 > **Cancelar** marca o lançamento como anulado mas mantém o histórico — útil quando algo registrado não vai mais acontecer (evento desmarcado, fornecedor desistiu) e você quer rastreabilidade. **Excluir** apaga o lançamento de vez. O RIT360 Financeiro só permite excluir lançamentos já **cancelados**, justamente para evitar perda acidental; **estornos são preservados** (não podem ser excluídos) para manter a prestação de contas íntegra. Para auditoria limpa, prefira sempre **cancelar** a excluir.
 
+**Ao excluir, diga por quê.** Tanto na exclusão de um lançamento (no detalhe) quanto na exclusão em lote, a janela de confirmação traz o campo **Motivo da exclusão (opcional)** — até 500 caracteres, com o exemplo *"lançamento duplicado"*. O motivo fica registrado no histórico de alterações, junto com o **seu nome**: o histórico passa a mostrar quem fez cada operação. O campo não é obrigatório, mas vale preencher: meses depois, quando a comissão fiscal ou o auditor perguntar por que um lançamento sumiu, a resposta está lá.
+
+> ⚠️ **Atenção · Excluir não tem volta**
+>
+> A janela avisa *"Esta ação não pode ser desfeita."* O motivo explica o que aconteceu, mas não recupera o lançamento. Na dúvida entre cancelar e excluir, cancele.
+
 > 📖 **Conceito · Registrar não é o mesmo que pagar**
 >
 > **Marcar como pago** exige a permissão de **pagar**, que é separada da de criar e editar. Quem registra lançamentos mas não tem essa permissão simplesmente **não vê** a ação de marcar como pago — nem na linha, nem no detalhe, nem na seleção em lote, nem na conciliação de extrato. Isso permite que uma pessoa organize as contas a pagar e outra confirme a saída do dinheiro. Quem ajusta isso é o Presidente, em [Cargos e permissões](/configuracoes/cargos/#permissao-pagar); por padrão, quem já podia pagar continua podendo.
@@ -225,6 +231,24 @@ Cada linha tem ícones de ação que mudam conforme o status:
 ### Seleção em lote
 
 Marque o checkbox no início das linhas para selecionar várias movimentações. A barra de ações em lote aparece no rodapé com as opções **Marcar como pago** (para quem tem permissão de pagar), **Marcar como conciliado** (para quem tem a permissão Criar / editar — ver **[Conciliação manual](#conciliacao-manual)**, abaixo), **Atribuir categoria**, **Atribuir centro de custo**, **Atribuir projeto** e **Excluir**.
+
+#### Marcar como pago em lote: cada recusa aparece com nome e motivo {#baixa-em-lote-recusas}
+
+Ao marcar vários lançamentos como pagos de uma vez, alguns podem não passar. Em vez de um aviso único e genérico, o sistema mostra **uma mensagem por lançamento recusado**, começando pelo **nome do lançamento** e seguida do motivo. Os demais lançamentos da seleção **são pagos normalmente** — uma recusa não trava o lote.
+
+**Exemplo:** você seleciona 12 lançamentos e confirma. Onze são pagos. O décimo segundo, *"Reembolso — combustível do bazar"*, aparece assim: *"Reembolso — combustível do bazar: Você pediu ou aprovou este pedido, e outra pessoa da organização pode pagá-lo. Peça a ela que registre o pagamento."*
+
+Os motivos que aparecem lançamento a lançamento:
+
+| Mensagem | O que significa | O que fazer |
+|---|---|---|
+| *"Você pediu ou aprovou este pedido, e outra pessoa da organização pode pagá-lo. Peça a ela que registre o pagamento."* | Quem pediu ou aprovou um pedido não confirma o pagamento dele quando existe outra pessoa habilitada a pagar. | Peça a outra pessoa com a permissão de pagar. Ver [Pedidos de Compra e Pagamento → Quem pediu ou aprovou não paga o próprio pedido](/modulos/pedidos-pagamento/#quem-pediu-ou-aprovou-nao-paga). |
+| *"Não foi possível conferir quem pode pagar este lançamento. Ele não foi pago; tente de novo."* | A conferência falhou. Na dúvida, o sistema não paga. | Tente de novo em instantes. |
+| *"Não foi possível identificar quem está pagando. Ele não foi pago; entre de novo e tente outra vez."* | A sessão não permitiu identificar você. | Saia, entre de novo e repita. |
+| *"Você não tem permissão para pagar este lançamento."* | O seu cargo não tem a permissão de pagar. | Peça a quem administra a OSC, ver [Cargos e permissões](/configuracoes/cargos/#permissao-pagar). |
+| *"A conta escolhida está inativa e não é a conta deste lançamento."* | A conta de saída está desativada. | Escolha uma conta ativa. |
+
+Lançamento recusado **não foi alterado**: continua pendente (ou atrasado) e pode ser pago depois.
 
 #### Atribuir projeto a vários lançamentos de uma vez
 {: #atribuir-projeto-em-lote }
@@ -441,7 +465,15 @@ Você pode anexar arquivos (comprovantes, notas fiscais, contratos) ao lançamen
 >
 > Além de **imagens** e **PDF**, o RIT360 Financeiro aceita **XML de NFe**, **ZIP** e agora também **documentos de escritório**: Word (`.docx`), Excel (`.xlsx`), PowerPoint (`.pptx`) e os formatos equivalentes do OpenDocument (`.odt`, `.ods`, `.odp`) — úteis para anexar, por exemplo, uma planilha de prestação de contas de um fornecedor ou um recibo em Word. Vale tanto para o anexo manual quanto para o comprovante que chega por **link** na importação de lançamentos (ver "Importar lançamentos" abaixo). Por segurança, **arquivos executáveis continuam bloqueados** e não podem ser anexados.
 
+> ⚠️ **Atenção · Página da internet (HTML) e imagem SVG não são aceitas**
+>
+> Arquivos de **página da internet** (HTML) e imagens **SVG** são recusados como comprovante, mesmo sendo "imagem" ou "texto" na aparência: esses formatos podem carregar programas escondidos e não servem como prova de despesa. A tela avisa *"Tipo de arquivo não aceito. Use imagem, PDF, XML, ZIP, CSV, documentos do Office ou planilhas."* Se o comprovante veio como página (comum em recibos de banco salvos pelo navegador), imprima-a como **PDF** ou tire uma captura de tela em **PNG** ou **JPG**. Já o **XML de nota fiscal** continua aceito normalmente.
+
 **Anexou um arquivo ZIP?** O RIT360 Financeiro **descompacta o pacote automaticamente** e anexa cada documento de dentro como um anexo individual do lançamento — o ZIP some da lista, dando lugar aos arquivos. Assim, cada comprovante que estava no pacote ganha pré-visualização (quando é imagem ou PDF) e **entra na prestação de contas**. A expansão roda em segundo plano, em segundos, e vale também quando o comprovante chega por **link** na importação por CSV.
+
+> ⚠️ **Atenção · O pacote ZIP tem limites**
+>
+> Para proteger o sistema, um ZIP anexado é aberto dentro destes tetos: até **200 arquivos**, nenhum deles com mais de **25 MB** depois de aberto, e no máximo **100 MB** somados. ZIP dentro de ZIP não é aberto, arquivos de tipo bloqueado (como executáveis) são deixados de fora, e um pacote cujo conteúdo cresce de forma desproporcional ao tamanho comprimido (mais de 100 vezes) é tratado como suspeito e recusado. O que ultrapassa um teto **fica de fora**; o restante entra. Se um comprovante importante sumiu do lançamento, divida o pacote em dois ZIPs menores, ou anexe os arquivos grandes separadamente.
 
 > 💡 **Documentos de escritório na prestação de contas**
 >

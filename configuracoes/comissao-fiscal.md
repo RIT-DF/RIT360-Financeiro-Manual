@@ -55,8 +55,14 @@ Quando a votação empata (comum em conselhos com número par de votantes ou em 
 2. **Voto de Minerva (Voto de Qualidade)**: O Presidente da Comissão Fiscal detém o voto decisivo para desempatar o julgamento.
 
 ### Modalidade de Voto
-- **Voto Nominal (Identificado)**: Cada voto, justificativa e ressalva é associado nominalmente ao conselheiro no parecer final e no caderno de fiscalização. Altamente recomendado para transparência perante doadores e órgãos de auditoria.
-- **Voto Colegiado (Consolidado)**: O sistema registra os votos individuais internamente para cômputo do quórum, mas o documento emitido apresenta a decisão como deliberação única do órgão colegiado.
+Em **Modalidade do voto**, a Comissão escolhe entre duas formas. A tela explica cada uma logo abaixo do campo:
+
+- **Nominal**: *"cada voto aparece com o nome de quem votou."* Voto, justificativa e ressalva ficam ligados ao conselheiro no parecer e no caderno de fiscalização. Altamente recomendado para transparência perante doadores e órgãos de auditoria.
+- **Anônimo**: *"os votos aparecem sem nome; só o placar é exibido após a emissão."* Os demais membros não veem como você votou. Atenção: o anonimato tem limite. O sistema guarda a ligação entre cada conselheiro e o seu voto, em registro separado, sem ligação visível na tela; e, **com poucos membros ou com unanimidade, dá para deduzir o voto** de cada um. Se a comissão tem três membros e o resultado é 3 a 0, todos sabem como todos votaram.
+
+> ⚠️ **Atenção · A modalidade vale para os períodos abertos depois da mudança**
+>
+> Ao salvar, a tela avisa *"Configuração fiscal salva. Os períodos já abertos mantêm suas regras."* Mudar de Nominal para Anônimo (ou o contrário) não altera um período que já está em análise.
 
 ---
 

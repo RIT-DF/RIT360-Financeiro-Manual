@@ -136,16 +136,55 @@ Você pode **baixar uma cópia dos seus dados pessoais** no RIT360 Financeiro a 
 *Box "Meus dados (LGPD)" para baixar seus dados, e box "Ações de conta"*
 
 - Clique em **Baixar meus dados**. O pacote é um arquivo **JSON** com seu perfil, preferências, consentimentos, vínculos com organizações e as referências dos registros que você criou.
-- A geração roda **em segundo plano**. Você recebe um **e-mail com o link de download** (válido por **7 dias**) assim que o pacote fica pronto. O último pedido fica listado na seção, pronto para baixar enquanto o link estiver válido.
+- A geração roda **em segundo plano**. Você recebe um **e-mail com o link de download** (válido por **7 dias**) assim que o pacote fica pronto. O último pedido fica listado na seção, pronto para baixar enquanto o link estiver válido. **Quando o link vence (7 dias), o arquivo é apagado do sistema**: se o prazo passou, peça uma nova cópia.
 
 ## Ações de Conta
 
 Ações administrativas sobre sua própria conta, cada uma com botão independente:
 
-- **Alterar senha** — campos de nova senha e confirmação; clique em "Alterar senha" para confirmar. Senha forte (8+ caracteres, mix de letras, números e símbolos) é exigida.
-- **Alterar e-mail de acesso** — troca o e-mail com o qual você entra no sistema (self-service). Veja o passo a passo logo abaixo.
+- **Alterar senha** — pede a **senha atual**, a nova senha e a confirmação; ao concluir, **os outros aparelhos são desconectados**. Senha forte (8+ caracteres, mix de letras, números e símbolos) é exigida. Veja o passo a passo logo abaixo.
+- **Alterar e-mail de acesso** — troca o e-mail com o qual você entra no sistema (self-service). Pede a **senha atual** — ou, se você só entra pelo Google, um **código enviado ao seu e-mail atual**. Veja o passo a passo logo abaixo.
 - **Encerrar todas as sessões** — desconecta sua conta de todos os dispositivos onde está logada. Útil se você perdeu acesso a um celular ou suspeita de uso indevido.
 - **Excluir minha conta (LGPD)** — exerce o **direito ao esquecimento**. Ao confirmar, sua conta entra em uma **carência de 30 dias**; passado o prazo, seus dados pessoais (nome, e-mail, telefone, CPF, RG, avatar) são **anonimizados de forma irreversível**. Por obrigação legal, **registros financeiros e de auditoria são retidos por 5 anos sem identificação pessoal**.
+
+### Como trocar a senha {#como-trocar-a-senha}
+
+> 💡 **Por que isso importa**
+>
+> Trocar a senha é o que você faz quando suspeita que alguém a conhece. Por isso o sistema pede a senha atual antes: sem essa conferência, quem encontrasse o seu navegador aberto num computador compartilhado poderia trancá-lo para fora da própria conta. E, depois da troca, desconecta os outros aparelhos — quem estivesse usando a senha antiga perde o acesso na hora.
+
+1. Em **Ações de Conta**, no bloco **Alterar senha**, digite a **Senha atual**.
+2. Digite a **Nova senha** e repita no campo **Confirmar nova senha**.
+3. Clique em **Alterar senha**.
+4. Aparece o aviso *"Senha alterada. Os outros aparelhos foram desconectados."* O aparelho que você está usando continua conectado; celulares e outros computadores precisam entrar de novo com a senha nova.
+
+**Exemplo:** a tesoureira Marina perdeu o celular num evento da OSC. Do computador do escritório, ela troca a senha em Meu Perfil. O celular perdido é desconectado no mesmo instante e, mesmo que alguém o encontre desbloqueado, não consegue mais abrir o sistema.
+
+> ⚠️ **Atenção · Cinco senhas erradas bloqueiam a conferência por 15 minutos**
+>
+> Errar a senha atual cinco vezes bloqueia, por **15 minutos**, a troca de senha e a troca de e-mail da sua conta. A tela avisa *"Muitas tentativas de senha. Aguarde 15 minutos e tente de novo."* Esperar é o único caminho — insistir antes não adianta. Se você não lembra a senha atual, não fique tentando: saia e use **Esqueci minha senha** na tela de entrada.
+
+> ✓ **Dica · Se aparecer "Senha alterada, mas não conseguimos desconectar os outros aparelhos"**
+>
+> A senha mudou, mas a desconexão dos outros aparelhos não foi concluída. Use o botão **Encerrar sessões**, logo abaixo, para terminar o serviço.
+
+**Quando dá errado**
+
+| O que a tela diz | O que significa | O que fazer |
+|---|---|---|
+| *"Informe sua senha atual."* | O campo da senha atual está vazio. | Preencha a senha que você usa hoje para entrar. |
+| *"Senha atual incorreta. Tente novamente."* | A senha digitada não confere. | Confira maiúsculas e minúsculas. Lembre que são cinco tentativas. |
+| *"Muitas tentativas de senha. Aguarde 15 minutos e tente de novo."* | O limite de cinco erros foi atingido. | Aguarde 15 minutos. |
+| *"A nova senha deve ter ao menos 8 caracteres."* / *"As senhas não coincidem."* | A nova senha é curta, ou a confirmação não é igual. | Corrija e repita. |
+| *"Senha muito fraca. Escolha outra com pelo menos 8 caracteres, combinando letras, números e símbolos."* | A senha é comum ou já apareceu em vazamentos. | Escolha uma senha que você não usa em outro lugar. |
+
+> 📖 **Conceito · Quem só entra pelo Google não tem senha para trocar**
+>
+> Se você sempre entrou com **Continuar com Google**, o bloco **Alterar senha** mostra: *"Você entra pelo Google e ainda não tem senha. Para criar uma, saia e use "Esqueci minha senha" na tela de entrada."* Faz sentido: não existe senha para conferir nem para trocar. Se quiser passar a entrar também com e-mail e senha, saia do sistema e peça o link em **Esqueci minha senha**; o link permite definir a senha.
+
+> 📖 **Conceito · Redefinir a senha pelo "Esqueci minha senha"**
+>
+> Redefinir a senha pelo link recebido por e-mail **desconecta todos os aparelhos**, inclusive o que você está usando — você entra de novo com a senha nova. A redefinição **não muda o segundo fator** (a verificação em duas etapas) da conta: ele continua como estava.
 
 ### Como trocar o e-mail de login
 
@@ -155,10 +194,11 @@ Ações administrativas sobre sua própria conta, cada uma com botão independen
 É com esse e-mail que você entra no RIT360 Financeiro — diferente do e-mail de contato, do e-mail para reembolso ou de qualquer outro dado do perfil.
 
 1. Em **Ações de Conta**, no bloco **Alterar e-mail de acesso**, digite o **novo e-mail** e **confirme** repetindo no segundo campo.
-2. Clique em **Enviar link de confirmação**.
-3. A tela mostra a mesma confirmação em qualquer caso: *"Enviamos uma mensagem para [novo e-mail]. Se o endereço puder ser usado, ela traz o link de confirmação; a troca só vale depois do clique."*
-4. Abra a caixa de entrada do **novo endereço** e clique no link recebido. Ele vale por **1 hora** e **uma única vez**. **Só depois desse clique** o e-mail de login realmente muda — até lá, você continua entrando com o e-mail atual normalmente.
-5. O **e-mail antigo** recebe um aviso informando que a troca foi solicitada, como camada extra de segurança caso você não tenha sido quem pediu.
+2. Confirme que é você: digite sua **Senha atual**. Se você só entra pelo Google, use o caminho do código, explicado mais abaixo.
+3. Clique em **Enviar link de confirmação**.
+4. A tela mostra a mesma confirmação em qualquer caso: *"Enviamos uma mensagem para [novo e-mail]. Se o endereço puder ser usado, ela traz o link de confirmação; a troca só vale depois do clique."*
+5. Abra a caixa de entrada do **novo endereço** e clique no link recebido. Ele vale por **1 hora** e **uma única vez**. **Só depois desse clique** o e-mail de login realmente muda — até lá, você continua entrando com o e-mail atual normalmente.
+6. O **e-mail antigo** recebe um aviso informando que a troca foi solicitada, como camada extra de segurança caso você não tenha sido quem pediu.
 
 > 📖 **Conceito · Por que a tela não diz se o endereço está livre**
 >
@@ -166,7 +206,7 @@ Ações administrativas sobre sua própria conta, cada uma com botão independen
 
 > ⚠️ **Se o link não chegar ao novo endereço**
 >
-> Confira a caixa de spam e confirme que digitou o endereço certo. Se, mesmo assim, nada chegar, o endereço pode já pertencer a outra conta — use outro endereço. Há um limite de **3 pedidos por hora**: passando dele, a tela avisa *"Você já pediu a troca algumas vezes agora há pouco. Tente de novo em uma hora."* — pedir de novo antes disso não adianta, e cada novo pedido invalida o link do anterior.
+> Confira a caixa de spam e confirme que digitou o endereço certo. Se, mesmo assim, nada chegar, o endereço pode já pertencer a outra conta — use outro endereço. Se a tela disser *"Senha atual incorreta. Tente novamente."* ou *"Muitas tentativas de senha. Aguarde 15 minutos e tente de novo."*, o problema é a conferência da senha, não o endereço — veja [Como trocar a senha](#como-trocar-a-senha). Há um limite de **3 pedidos por hora**: passando dele, a tela avisa *"Você já pediu a troca algumas vezes agora há pouco. Tente de novo em uma hora."* — pedir de novo antes disso não adianta, e cada novo pedido invalida o link do anterior.
 
 Enquanto a confirmação está pendente, é possível **cancelar o pedido** e manter o e-mail atual — não é preciso esperar o link expirar.
 
@@ -178,9 +218,9 @@ Enquanto a confirmação está pendente, é possível **cancelar o pedido** e ma
 >
 > Se a confirmação fosse no e-mail atual, alguém com acesso à sua sessão (mas não à sua caixa de entrada) poderia trocar seu e-mail de login sem você perceber. Exigir o clique no **novo** endereço garante que só quem realmente tem acesso a essa caixa de entrada consegue efetivar a troca.
 
-> ✓ **Funciona com login pelo Google**
+> ✓ **Entra só pelo Google? A confirmação é por código**
 >
-> Se você entra no RIT360 Financeiro pela sua conta Google, o fluxo é o mesmo — sem pedir senha atual (você não tem uma senha cadastrada no sistema nesse caso). Depois de confirmar, o login passa a ser feito pelo novo e-mail.
+> Quem não tem senha no sistema não vê o campo **Senha atual**. Em vez dele, clique em **Enviar código**: o RIT360 Financeiro manda um código de 6 dígitos para o **seu e-mail atual**. Digite-o em **Código recebido** e clique em **Confirmar código**; só então o botão **Enviar link de confirmação** é liberado. O código vale por **10 minutos** e serve para um único pedido, nesta sessão. Se errar, a tela mostra *"Código incorreto. Restam N tentativa(s)."*; o código tem cinco tentativas, e há um limite de três envios em 15 minutos (*"Você já pediu vários códigos. Tente de novo em N min."*). Se o código vencer (*"Este código venceu. Peça um novo."*), peça outro com **Enviar outro código**. Depois de confirmar o link, o login passa a ser feito pelo novo e-mail.
 
 ### Como excluir a conta
 
@@ -192,6 +232,10 @@ Por ser uma ação séria, a confirmação pede duas coisas: **sua senha atual**
 > ⚠️ **Atenção · Encerrar sessões te desconecta também**
 >
 > "Encerrar todas as sessões" inclui o navegador atual. Você vai precisar fazer login de novo. Útil principalmente em situação de risco (perdeu celular, suspeita de acesso indevido). Em uso normal, não há motivo para usar.
+
+> ℹ️ **Área "Segurança" não faz parte do Meu Perfil comum**
+>
+> Hoje a área **Segurança** (verificação em duas etapas) aparece apenas para o administrador da plataforma RIT. Se você é tesoureiro, coordenador ou outro papel de uma OSC, não a verá em Meu Perfil, e isso é o esperado — não há nada a configurar.
 
 ## Por onde seguir
 

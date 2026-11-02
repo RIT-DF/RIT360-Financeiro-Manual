@@ -156,7 +156,7 @@ No fim da página, a seção **Exportação de dados da organização (LGPD)** p
 
 - Clique em **Exportar dados da organização**. O pacote é um **ZIP** com uma planilha **Excel** (movimentações, reembolsos, pedidos de compra e pagamento, membros, categorias, centros de custo e configurações) mais **todos os anexos e comprovantes**.
 - A geração roda **em segundo plano**. Você recebe um **e-mail com o link de download** (válido por **7 dias**) assim que o pacote fica pronto. O link só pode ser baixado por administradores da OSC.
-- O último pacote gerado fica listado na própria seção, com a data e um botão para baixar enquanto o link estiver válido.
+- O último pacote gerado fica listado na própria seção, com a data e um botão para baixar enquanto o link estiver válido. **Quando o link vence (7 dias), o arquivo é apagado do sistema** — não adianta guardar o e-mail para depois: se o prazo passou, peça uma nova exportação.
 
 > 💡 **Por que isso importa**
 >

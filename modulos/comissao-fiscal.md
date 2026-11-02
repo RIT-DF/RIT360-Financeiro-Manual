@@ -207,10 +207,17 @@ O sistema calcula em tempo real o quórum estatutário (Maioria Simples, Maioria
 Aprovada a deliberação, há duas modalidades de formalização do documento:
 
 1. **Emissão Direta pelo RIT360 (Recomendado)**:
-   - O sistema compila o cabeçalho oficial da OSC, os dados do exercício, o extrato do semáforo dos 3 pilares, a lista de diligências saneadas, as ressalvas remanescentes, os votos nominais de cada conselheiro e a conclusão final.
+   - O sistema compila o cabeçalho oficial da OSC, os dados do exercício, o extrato do semáforo dos 3 pilares, a lista de diligências saneadas, as ressalvas remanescentes, os votos (com o nome de cada conselheiro na modalidade Nominal; só o placar na Anônima) e a conclusão final.
    - O parecer é gerado em formato PDF assinado eletronicamente com carimbo de data/hora e **código verificador de integridade SHA-256**, permitindo que qualquer pessoa confirme a autenticidade do documento escaneando o QR Code ou digitando o hash no site oficial.
-2. **Anexo de Parecer Físico / Externo**:
-   - Se o estatuto da sua entidade exigir que a comissão assine fisicamente uma via em papel durante a reunião presencial prévia à Assembleia, você pode gerar a ata em cartório, colher as assinaturas de punho e fazer o **upload do PDF digitalizado** na própria tela para arquivamento definitivo.
+2. **Anexo de Parecer Físico / Externo** (aba **Anexar parecer externo**):
+   - Use quando a comissão deliberou em reunião e assinou a ata ou o parecer **fora do sistema** — por exemplo, uma via em papel assinada na reunião prévia à Assembleia. Digitalize e anexe o **PDF** (até **20 MB**), escolhendo o **desfecho das contas**, e clique em **Anexar parecer e concluir o período**.
+   - **O parecer externo só pode ser anexado depois da deliberação da comissão.** Enquanto os votos necessários não forem registrados, o botão fica indisponível, com a explicação *"O parecer externo também depende da deliberação da comissão: N de N votos necessários registrados… Anexe o arquivo depois que a votação terminar."* O motivo: um documento externo não pode substituir a votação; ele só formaliza o que a comissão já decidiu.
+   - No envio, o sistema calcula a **impressão digital do arquivo (SHA-256)** e a guarda. Depois, ao conferir o parecer, ele confere se o arquivo guardado **não mudou desde o envio**. O PDF fica guardado de forma protegida e **não pode ser substituído depois**. Por isso, confira o arquivo antes de anexar: errar o arquivo não tem como corrigir pela mesma tela.
+   - No histórico do período, o parecer aparece marcado como **"Emitido fora do sistema"**, com o botão **Baixar parecer externo preservado** e o código SHA-256.
+
+> 💡 **Voto anônimo e parecer**
+>
+> Quando a modalidade do voto é **Anônimo**, a tela de deliberação avisa: *"Os demais membros não veem como você votou. O sistema guarda a ligação entre você e o seu voto, em registro separado, sem ligação visível na tela. Com poucos membros ou com unanimidade, dá para deduzir o voto."* Nessa modalidade, os votos aparecem sem nome e só o placar é exibido após a emissão. Veja a escolha da modalidade em [Configurações → Comissão Fiscal](/configuracoes/comissao-fiscal/).
 
 ### Exportação do Caderno de Fiscalização
 No canto superior direito, clique em **"Caderno de Fiscalização"**:
