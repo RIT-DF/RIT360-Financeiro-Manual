@@ -21,8 +21,13 @@ A página **Organização** centraliza os dados da sua OSC e as **integrações*
 [![Identidade da OSC — Nome, CNPJ, Inscrição Estadual e Municipal](/assets/screenshots/config-organizacao-identidade.png)](/assets/screenshots/config-organizacao-identidade.png)
 *Identidade da OSC — Inscrição Estadual e Inscrição Municipal ficam ao lado do CNPJ*
 
-- **Nome** — a razão social. É este nome que aparece em documentos, e-mails e na página pública
-- **Nome curto** (opcional) — nome fantasia ou sigla pela qual a organização é conhecida (ex.: "RFCC Brasília"). Aparece só na **navegação do sistema** — cabeçalho, seletor de organização e menu do celular —, para caber e ser lido de relance. **Não substitui a razão social**: documentos, e-mails e a página pública continuam usando o Nome. Em branco, a navegação também mostra a razão social — nada muda.
+- **Nome** — a razão social, com até 160 caracteres. É este nome que aparece em documentos, e-mails e na página pública
+- **Nome curto** (opcional) — nome fantasia ou sigla pela qual a organização é conhecida (ex.: "RFCC Brasília"), com até 60 caracteres. Aparece só na **navegação do sistema** — cabeçalho, seletor de organização e menu do celular —, para caber e ser lido de relance. **Não substitui a razão social**: documentos, e-mails e a página pública continuam usando o Nome. Em branco, a navegação também mostra a razão social — nada muda.
+
+> ⚠️ **Atenção · Nome e nome curto não aceitam endereço de site**
+>
+> Nem o **Nome** nem o **Nome curto** podem conter endereço de site ou de e-mail (como `www.minhaosc.org` ou `contato@minhaosc.org`): o campo responde *"Este campo não aceita endereço de site."* e a alteração não é salva. Esses nomes são reproduzidos em e-mails e avisos enviados a outras pessoas, e um endereço ali serviria para levar o leitor a um link que não é da organização. O endereço do site tem o seu campo próprio (**Site**, logo abaixo). Abreviações comuns, como "Ltda.ME", "Sta." e "Dr.", continuam aceitas, e nomes já gravados antes dessa regra não foram alterados.
+
 - **CNPJ** — formatado automaticamente conforme você digita. Aceita tanto o CNPJ numérico tradicional quanto o novo **CNPJ alfanumérico** (que passa a valer a partir de julho/2026)
 - **Inscrição Estadual** — campo opcional, de preenchimento livre. Se a OSC não tem inscrição estadual, digite **"ISENTO"**
 - **Inscrição Municipal** — campo opcional, de preenchimento livre
@@ -56,6 +61,10 @@ Upload da logo da OSC (JPG, PNG, WebP ou **SVG**, até 2 MB). A imagem é aceita
 ## Acesso público
 
 - **Aceitar solicitações públicas de vínculo** — quando ativado, qualquer pessoa com o link público da OSC pode pedir vínculo (a OSC ainda precisa aprovar). Desligado por default.
+
+> ℹ️ **Organização em análise não recebe pedidos**
+>
+> Se a organização foi aberta pelo próprio cadastro e ainda **está em análise pela equipe da RIT**, ela não aparece na lista que quem se cadastra consulta para pedir entrada, e os pedidos de vínculo são recusados com *"Esta organização está em análise pela equipe da RIT. Convites e pedidos de vínculo ficam disponíveis depois da aprovação."* Convidar e importar pessoas, publicar a [página pública](/configuracoes/pagina-publica/) e criar [credenciais de integração](/configuracoes/integracoes/) ficam indisponíveis pelo mesmo motivo. A aprovação (ou não) chega por e-mail para quem abriu a organização — veja [Primeiros Passos da Organização](/primeiros-passos/organizacao/#organizacao-em-analise).
 
 > ⚠️ **Atenção · Acesso público é compartilhamento controlado**
 >

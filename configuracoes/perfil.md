@@ -18,7 +18,7 @@ A página tem cinco boxes consolidados: **Identificação**, **Dados para Reembo
 ## Identificação
 
 - **Foto de perfil** — JPG, PNG ou WebP, até 2 MB. A imagem é redimensionada para 512×512 antes do envio.
-- **Nome completo** — como aparece em audit logs, aprovações, registros.
+- **Nome completo** — como aparece em audit logs, aprovações, registros, até 120 caracteres. Não aceita endereço de site ou de e-mail (o campo responde *"Este campo não aceita endereço de site."*): o seu nome é exibido para colegas e reproduzido em e-mails e avisos, então só texto de nome é aceito. Se o seu nome já estava gravado antes dessa regra, ele não é alterado.
 - **Telefone** — o campo tem um **seletor de país** ao lado, com **Brasil já selecionado por padrão**; escolha outro país quando precisar. A máscara é única e uniforme — números brasileiros seguem o formato de sempre `(DDD) 9XXXX-XXXX` — e, ao abrir um cadastro salvo, o país é **reconhecido automaticamente** pelo número.
 - **Data de nascimento** — opcional.
 - **CPF** e **RG / RNE** — opcionais; o **CPF** é formatado automaticamente (`000.000.000-00`). O campo de documento se chama **"RG / RNE"** porque quem é estrangeiro pode informar o **RNE** (Registro Nacional de Estrangeiro) no mesmo lugar. Armazenados **cifrados em repouso** (chave de criptografia gerenciada separadamente do banco). Usados apenas para emissão de comprovantes quando exigido por lei.
@@ -156,8 +156,17 @@ Ações administrativas sobre sua própria conta, cada uma com botão independen
 
 1. Em **Ações de Conta**, no bloco **Alterar e-mail de acesso**, digite o **novo e-mail** e **confirme** repetindo no segundo campo.
 2. Clique em **Enviar link de confirmação**.
-3. Abra a caixa de entrada do **novo endereço** e clique no link recebido. **Só depois desse clique** o e-mail de login realmente muda — até lá, você continua entrando com o e-mail atual normalmente.
-4. O **e-mail antigo** recebe um aviso informando que a troca foi solicitada, como camada extra de segurança caso você não tenha sido quem pediu.
+3. A tela mostra a mesma confirmação em qualquer caso: *"Enviamos uma mensagem para [novo e-mail]. Se o endereço puder ser usado, ela traz o link de confirmação; a troca só vale depois do clique."*
+4. Abra a caixa de entrada do **novo endereço** e clique no link recebido. Ele vale por **1 hora** e **uma única vez**. **Só depois desse clique** o e-mail de login realmente muda — até lá, você continua entrando com o e-mail atual normalmente.
+5. O **e-mail antigo** recebe um aviso informando que a troca foi solicitada, como camada extra de segurança caso você não tenha sido quem pediu.
+
+> 📖 **Conceito · Por que a tela não diz se o endereço está livre**
+>
+> A resposta é igual para um endereço livre e para um endereço que **já pertence a outra conta**. Se a tela avisasse "este e-mail já tem cadastro", qualquer pessoa logada poderia usar esse campo para descobrir quem usa o sistema. Quando o endereço já está em uso, a troca **não é feita**, e quem recebe uma mensagem é o **próprio endereço pedido**, avisando que alguém tentou usá-lo e que nada mudou na conta dele — a mensagem vai para o dono daquela caixa de entrada, não para você.
+
+> ⚠️ **Se o link não chegar ao novo endereço**
+>
+> Confira a caixa de spam e confirme que digitou o endereço certo. Se, mesmo assim, nada chegar, o endereço pode já pertencer a outra conta — use outro endereço. Há um limite de **3 pedidos por hora**: passando dele, a tela avisa *"Você já pediu a troca algumas vezes agora há pouco. Tente de novo em uma hora."* — pedir de novo antes disso não adianta, e cada novo pedido invalida o link do anterior.
 
 Enquanto a confirmação está pendente, é possível **cancelar o pedido** e manter o e-mail atual — não é preciso esperar o link expirar.
 

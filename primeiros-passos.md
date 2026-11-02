@@ -11,7 +11,7 @@ Bem-vindo ao **RIT360 Financeiro**. Esta página te leva do "primeiro e-mail de 
 
 > 💡 **Acabou de criar a organização?**
 >
-> Se você é quem **criou ou assumiu a OSC**, há um roteiro próprio para preparar a organização (dados, contas, categorias, fluxo de aprovação e usuários) antes de começar a operar: veja **[Primeiros Passos da Organização](/primeiros-passos/organizacao/)**.
+> Se você é quem **criou ou assumiu a OSC**, há um roteiro próprio para preparar a organização (dados, contas, categorias, fluxo de aprovação e usuários) antes de começar a operar: veja **[Primeiros Passos da Organização](/primeiros-passos/organizacao/)**. Se a organização foi aberta pelo próprio cadastro, ela passa por uma **análise da equipe da RIT** antes de poder convidar pessoas — [entenda como funciona](/primeiros-passos/organizacao/#organizacao-em-analise).
 
 [![Tela de login](/assets/screenshots/manual-00-login.png)](/assets/screenshots/manual-00-login.png)
 *Tela de login do RIT360 Financeiro*
@@ -22,7 +22,7 @@ Bem-vindo ao **RIT360 Financeiro**. Esta página te leva do "primeiro e-mail de 
 
 ## Como funciona o acesso
 
-A entrada no RIT360 Financeiro é **controlada pela organização**, não por cadastro aberto. Isso garante que sua OSC mantém controle de quem entra. Quando o administrador (geralmente o presidente da OSC) **cadastra você**, sua conta já é criada e você recebe um **e-mail de acesso** com um link para definir sua senha e concluir a configuração.
+A entrada no RIT360 Financeiro é **controlada pela organização**, não por cadastro aberto. Isso garante que sua OSC mantém controle de quem entra. Quando o administrador (geralmente o presidente da OSC) **cadastra você**, sua conta já é criada e você recebe um **e-mail de acesso** com um link para definir sua senha e concluir a configuração. (Se você **já tinha conta** — por usar outra OSC —, não há senha a definir: você recebe um e-mail pedindo que entre e responda se reconhece a inclusão. Veja [Quando uma organização inclui você](#quando-uma-organizacao-inclui-voce).)
 
 > 📖 **Conceito · Múltiplas organizações na mesma conta**
 >
@@ -42,16 +42,16 @@ Após o primeiro acesso, você cai direto na **Saúde 360** da sua organização
 >
 > A tela mostra o motivo **direto no campo de senha** — você não precisa adivinhar o que faltou. O caso mais comum não é "senha fraca": é uma senha **longa, com letras, números e símbolos**, mas que já apareceu em vazamentos de dados conhecidos de outros serviços. Nesse caso o sistema recusa mesmo ela cumprindo todos os requisitos visíveis. **Escolha uma senha que você não usa em nenhum outro site ou aplicativo** — é a forma mais simples de evitar essa recusa, e o motivo pelo qual reaproveitar senha é sempre desaconselhável.
 
-> 💡 **Atalho · entrar direto com o Google**
+> 💡 **Atalho · entrar com o Google**
 >
-> Se você tem conta Google **no mesmo e-mail com que foi cadastrado**, não precisa do link: basta clicar em **Continuar com Google** na tela de login. Seu acesso à organização é concluído na hora — o e-mail foi indicado pelo administrador e o Google comprova que ele é seu. O aceite da Política de Privacidade e dos Termos de Uso continua sendo pedido normalmente.
+> Se você tem conta Google **no mesmo e-mail com que foi cadastrado**, não precisa do link: basta clicar em **Continuar com Google** na tela de login. O Google comprova que o e-mail é seu, mas **não decide por você**: antes de liberar o acesso, a tela pergunta se você reconhece a inclusão naquela organização — veja [Quando uma organização inclui você](#quando-uma-organizacao-inclui-voce), logo abaixo. Depois de responder **Confirmar**, o aceite da Política de Privacidade e dos Termos de Uso continua sendo pedido normalmente.
 
 > 🔑 **O link deu erro?**
 >
 > Depende do que aconteceu com ele:
 >
 > - **Expirou** (passou de 7 dias) — a tela avisa e já oferece um botão para receber um **link novo** na hora, sem precisar sair dali.
-> - **Já foi usado** — a tela informa que sua conta **já está configurada** e leva direto para o login. Normalmente é sinal de que você já concluiu esse passo antes (às vezes num outro dispositivo ou aba).
+> - **Já foi usado** — a tela informa que sua conta **já está configurada** e leva direto para o login. Normalmente é sinal de que você já concluiu esse passo antes (às vezes num outro dispositivo ou aba). Os links enviados por e-mail valem **uma única vez**, mesmo que sejam abertos ao mesmo tempo em duas telas — o segundo a chegar encontra o link já usado.
 >
 > Nos dois casos, você também pode resolver sozinho pelo **Esqueci a senha** na tela de login: informe o e-mail com que foi cadastrado, e o sistema identifica a situação e envia o link certo — de primeiro acesso ou de redefinição, conforme o seu caso.
 
@@ -59,25 +59,62 @@ Após o primeiro acesso, você cai direto na **Saúde 360** da sua organização
 >
 > Se você foi cadastrado e não concluiu o primeiro acesso, o RIT360 Financeiro envia **lembretes automáticos** — **2, 7 e 14 dias** depois do cadastro, três no total. Cada lembrete traz um **link novo e válido**, então basta usar o mais recente; o terceiro avisa que é o **último**. Depois disso ninguém fica te cobrando — mas o caminho do "Esqueci a senha" continua disponível a qualquer momento, e o administrador pode reenviar o e-mail quando você pedir.
 
+## Quando uma organização inclui você {#quando-uma-organizacao-inclui-voce}
+
+Este caso é para quem **já usa o RIT360 Financeiro** — por exemplo, porque participa de outra OSC — e agora foi incluído por uma organização nova (pelo cadastro de um administrador ou por planilha). Quem **nunca usou** o sistema não passa por aqui: segue o [primeiro acesso](#primeiro-acesso-via-e-mail-de-acesso) de sempre, com o link para definir a senha.
+
+> 💡 **Por que isso importa**
+>
+> A sua conta é sua e vale para todas as organizações em que você está. Se bastasse alguém digitar o seu e-mail para você passar a fazer parte de uma OSC, um engano de digitação — ou má-fé — colocaria você, sem saber, numa organização que não é a sua, com acesso a dados e com nome em listas e tarefas. Por isso a inclusão só vale **depois que você mesmo responde**.
+
+Ao entrar, você vê o aviso **"A organização *[nome]* incluiu você como *[papel]*."** com dois botões. Em quem entra pela tela de login e ainda não tem nenhuma organização ativa, esse aviso ocupa a tela inteira ("Uma organização incluiu você"); em quem já tem outras organizações, ele aparece como uma faixa no topo, e você pode **Ocultar** a faixa e responder depois. Quem acessa pelo link de primeiro acesso com uma conta que já existe encontra o botão **Não reconheço** ao lado de **Vincular e entrar**.
+
+1. Leia o nome da organização e o papel. É quem você esperava?
+2. Se sim, clique em **Confirmar**. A organização entra na sua lista e você passa a trocar entre elas pelo seletor do topo.
+3. Se não, clique em **Não reconheço** e confirme em **Sim, não reconheço**.
+
+O e-mail que avisa da inclusão chega com o mesmo pedido: entre com a sua conta de sempre e responda.
+
+> ⚠️ **Atenção · "Não reconheço" tem consequências**
+>
+> - Você **não terá acesso** àquela organização.
+> - Ela **não poderá incluir você de novo por 30 dias**. Passado esse prazo, uma nova inclusão volta a pedir a sua resposta.
+> - Você deixa de receber avisos dessa organização.
+>
+> Se clicou por engano, peça a um administrador dela que inclua você de novo depois de 30 dias — ou, em caso urgente, escreva para a equipe da RIT pelo botão **💬 Feedback**.
+
+**Enquanto você não responde:** o seu acesso às outras organizações não muda, e a organização que incluiu você **não vê o seu nome, a sua foto nem a data do seu último acesso** — vê só o seu **e-mail** e o papel, com a indicação **"Aguardando confirmação"**. Você também não aparece com o nome do cadastro em tarefas e no histórico de projetos (aparece o e-mail), e não recebe menções nem avisos de projeto dessa organização. Depois do **Confirmar**, tudo isso passa a valer normalmente.
+
+> 📖 **Conceito · Por que a pergunta aparece mesmo entrando pelo Google**
+>
+> O Google comprova que o e-mail é seu, mas não que você quer fazer parte daquela organização. Por isso o botão **Continuar com Google** também leva à pergunta — o acesso nunca é concluído em silêncio.
+
 ## Criar conta por conta própria
 
 Além desse caminho, é possível iniciar uma conta por conta própria pelo link **"Criar agora"** na tela de login (por exemplo, para propor o cadastro da sua OSC ou pedir vínculo a uma organização existente). Nesse caminho, antes de definir a senha:
 
 1. Informe seu **e-mail**.
-2. No passo **"Confirme seu e-mail"**, clique para enviar o **código de 6 dígitos** que chega na sua caixa de entrada e digite-o (há botão para **reenviar**, com uma breve espera entre envios). Confira a caixa de spam se não chegar.
-3. Defina **nome** e **senha**, aceite a **Política de Privacidade** e os **Termos de Uso** e conclua.
+2. O sistema **envia uma mensagem para esse e-mail** — e a tela responde da mesma forma para qualquer endereço. O que chega depende do seu caso:
+   - **E-mail novo, ou com convite de uma organização:** a mensagem traz um **código de 6 dígitos**. Digite-o no campo **Código** e clique em **Continuar**. O código vale por 30 minutos e só funciona uma vez.
+   - **E-mail que já tem conta:** a mensagem **explica como entrar** (com os atalhos para o login e para "Esqueci a senha") e não traz código. Não é preciso criar outra conta.
+3. Se a mensagem não chegar, confira a caixa de spam e use **Reenviar mensagem** (há uma breve espera entre os envios).
+4. Com o código aceito, defina **nome** e **senha**, aceite a **Política de Privacidade** e os **Termos de Uso** e conclua.
 
-> 🔒 **Por que o código?**
+> 🔒 **Por que o código — e por que a tela não diz se você já tem conta?**
 >
-> A confirmação por e-mail garante que só quem realmente controla aquele endereço cria a conta e define a senha. **Se você já tem conta**, o sistema te direciona para o **login** em vez de criar outra — use "Esqueci a senha" se precisar.
+> A confirmação por e-mail garante que só quem realmente controla aquele endereço cria a conta e define a senha. E a tela responde igual para qualquer endereço de propósito: se ela dissesse "este e-mail já tem cadastro", qualquer pessoa poderia testar endereços para descobrir quem usa o sistema. A informação só chega a quem tem acesso àquela caixa de entrada.
+
+> ⚠️ **Se você pediu várias vezes e parou de receber**
+>
+> Há um limite de pedidos por hora para o mesmo e-mail (poucos, de propósito). Passado o limite, a tela continua mostrando a mesma confirmação, mas **nenhuma mensagem nova é enviada**. Espere cerca de uma hora e peça de novo; use primeiro o código mais recente que chegou — só o último código vale.
 
 ## Entrar na plataforma depois disso
 
 Na tela de login você pode:
 
-- **Continuar com Google** — mais rápido, sem digitar senha; serve tanto para quem já usa o sistema quanto para concluir o primeiro acesso, desde que seja o mesmo e-mail com que você foi cadastrado
+- **Continuar com Google** — mais rápido, sem digitar senha; serve tanto para quem já usa o sistema quanto para concluir o primeiro acesso, desde que seja o mesmo e-mail com que você foi cadastrado. Se uma organização incluiu você e você ainda não respondeu, a tela pergunta antes de liberar o acesso ([Quando uma organização inclui você](#quando-uma-organizacao-inclui-voce))
 - **E-mail e senha** — credenciais definidas no primeiro acesso
-- **Esqueci a senha** — porta única para recuperar o acesso: informe o e-mail e você recebe o link certo para o seu caso — de **redefinição de senha**, se já usa o sistema, ou de **primeiro acesso**, se ainda não chegou a criar uma senha
+- **Esqueci a senha** — porta única para recuperar o acesso: informe o e-mail e você recebe o link certo para o seu caso — de **redefinição de senha**, se já usa o sistema, ou de **primeiro acesso**, se ainda não chegou a criar uma senha. A tela responde **sempre do mesmo jeito**, tenha o e-mail conta ou não (para não revelar quem usa o sistema); se não houver conta para aquele endereço, simplesmente nada chega. Há um limite de pedidos por hora — passando dele, espere cerca de uma hora
 
 Acesse em: [financeiro.rit360.org.br](https://financeiro.rit360.org.br){:target="_blank" rel="noopener noreferrer"}
 

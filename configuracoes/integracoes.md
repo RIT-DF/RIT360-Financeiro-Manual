@@ -15,9 +15,18 @@ A tela **Integrações** permite que a sua OSC libere, para um **sistema parceir
 
 ## Como gerar uma credencial
 
-1. Em **Configurações → Integrações**, clique em **Gerar nova credencial**.
-2. Dê um nome que identifique o uso (ex.: "Site institucional", "Painel do conselho").
-3. A credencial aparece **uma única vez**, na hora da criação.
+1. Em **Configurações → Integrações**, clique em **Gerar credencial**.
+2. No campo **Sistema parceiro**, dê um nome que identifique o uso (ex.: "Site institucional", "Painel do conselho").
+3. Escolha a **Validade**: **Sem validade**, **30 dias**, **90 dias**, **6 meses** ou **1 ano**. Depois da validade, a credencial para de funcionar sozinha e o sistema parceiro deixa de receber os dados.
+4. Clique em **Gerar**. A credencial aparece **uma única vez**, na hora da criação.
+
+> 💡 **Por que escolher uma validade**
+>
+> Credencial sem validade funciona até alguém lembrar de revogá-la — e, na prática, ninguém lembra: o voluntário que configurou o site sai, o contrato com o parceiro termina, e a chave continua aberta por anos. Com validade, o esquecimento se corrige sozinho: no dia marcado o acesso se fecha. Use **Sem validade** só para integrações permanentes e conhecidas; para um parceiro temporário, um projeto com prazo ou um teste, escolha 30 ou 90 dias.
+
+> ⚠️ **Atenção · Organização em análise não gera credencial**
+>
+> Se a sua organização foi aberta pelo próprio cadastro e ainda **está em análise pela equipe da RIT**, a criação de credenciais fica indisponível (a tela pode mostrar apenas "Não foi possível concluir a operação"). Passa a funcionar depois da aprovação — veja [Primeiros Passos da Organização](/primeiros-passos/organizacao/#organizacao-em-analise).
 
 > ⚠️ **Atenção · A credencial não pode ser recuperada depois**
 >
@@ -29,14 +38,23 @@ Na lista de credenciais, escolha **Revogar** na credencial que não deve mais fu
 
 Revogue sempre que: a integração deixar de ser usada, houver suspeita de vazamento, ou a pessoa/empresa responsável pelo sistema parceiro mudar.
 
+## Quando a credencial vence
+
+Uma credencial com validade **deixa de funcionar sozinha** no fim do prazo: na lista ela passa a **Vencida**, e o sistema parceiro recebe a recusa de credencial (resposta `401`, com `error_code` `expired_credential`). Não há "renovar": como na revogação, o caminho é **gerar uma credencial nova** e colocar o valor novo no sistema parceiro.
+
+> ⚠️ **Atenção · Anote a data de vencimento**
+>
+> O vencimento não avisa ninguém: o primeiro sinal costuma ser o parceiro reclamando que "os números sumiram do site". Anote a data na hora de gerar e crie o hábito de trocar a credencial **uma semana antes**: gere a nova, atualize o parceiro, confira que está funcionando e só então deixe a antiga vencer (ou revogue-a). A coluna **Validade** da lista mostra a data de cada uma.
+
 ## O que a lista mostra
 
 Para cada credencial gerada, a tela mostra:
 
-- **Nome** dado na criação
-- **Data de criação**
-- **Último uso** (quando a credencial foi usada pela última vez para consultar dados)
-- **Situação** (ativa ou revogada)
+- **Sistema** — o nome dado na criação (com o início do código, para você reconhecer qual é qual)
+- **Criada em** — a data de criação
+- **Último uso** — quando a credencial foi usada pela última vez para consultar dados ("Nunca usada" se ainda não foi)
+- **Validade** — a data de vencimento, ou "Sem validade"
+- **Situação** — **Ativa**, **Revogada** ou **Vencida**
 
 ## Trate como senha
 
@@ -98,49 +116,6 @@ curl -H "Authorization: Bearer rit_3b95e9fe_..." \
 ```json
 {
   "organization_id": "c121b5a6-...",
-  "organization_name": "Minha OSC",
-  "period": {
-    "from": "2026-07-01",
-    "to": "2026-07-31"
-  },
-  "summary": {
-    "total_income": 15000.00,
-    "total_expense": 8200.00,
-    "net_result": 6800.00
-  }
-}
-```
-
----
-
-## Provedores de Inteligência Artificial (Superadmin)
-
-> Disponível para quem tem papel de **Superadministrador da Plataforma** na rota `/superadmin/configuracoes`.
-
-O RIT360 Financeiro utiliza inteligência artificial multimodal de ponta para leitura e extração automática de dados de comprovantes, notas fiscais e recibos enviados pelos usuários (por exemplo, via bot do Telegram).
-
-[![Configuração de Provedores de Inteligência Artificial em cascata no Desktop](/assets/screenshots/config-ia-cascade-desktop.png)](/assets/screenshots/config-ia-cascade-desktop.png)
-*Configurações da Plataforma: Cascata de IA com reordenação de prioridade, seleção assistida de modelos e teste de latência*
-
-[![Configuração de Provedores de Inteligência Artificial no Celular](/assets/screenshots/config-ia-cascade-mobile.png)](/assets/screenshots/config-ia-cascade-mobile.png)
-*Ajuste de provedores e modelos no celular*
-
-### Cascata e redundância inteligente
-
-Para garantir disponibilidade contínua e tolerância a falhas, os provedores operam em **cascata ordenada**:
-1. **Google Gemini** (Gemini 2.5 Flash, Gemini 1.5 Pro)
-2. **Anthropic Claude** (Claude 3.5 Sonnet, Claude 3.5 Haiku)
-3. **OpenAI** (GPT-4o, GPT-4o-mini)
-
-Se a chamada ao primeiro provedor da fila atingir limite de cota, timeout ou indisponibilidade temporária, o sistema chaveia automaticamente para o próximo provedor ativo da sequência, sem interromper a experiência do usuário final.
-
-### Como configurar e testar
-
-1. **Ativação e Chave de API:** Ative o toggle do provedor e informe a chave de API correspondente. As chaves são armazenadas com segurança no cofre de segredos da plataforma.
-2. **Teste de conexão:** Clique em **Testar** para validar a chave em tempo real. O sistema exibe o status de resposta e a **latência em milissegundos** medida pela Edge Function (`test_ai_provider`).
-3. **Seleção assistida de modelos:** Após o teste bem-sucedido, o seletor lista os modelos compatíveis e ativos daquele provedor, com o modelo recomendado pré-selecionado (e identificação clara do recomendado para facilitar o retorno futuro).
-4. **Reordenação visual:** Utilize as setas de subida e descida (**↑** e **↓**) para reordenar a prioridade da cascata visualmente, eliminando digitação manual de índices.
-
   "period": { "from": "2026-07-01", "to": "2026-07-31" },
   "currency": "BRL",
   "balance": { "total": 82643.47, "available": 61210.30, "restricted": 21433.17 },
@@ -175,7 +150,7 @@ O orçamento do RIT360 Financeiro é **anual**. O campo `budget` traz um item pa
 | Código | Significado |
 |---|---|
 | `200` | Sucesso |
-| `401` | Credencial ausente, inválida ou revogada |
+| `401` | Credencial ausente, inválida, revogada ou vencida (`error_code`: `invalid_credential`, `revoked_credential` ou `expired_credential`) |
 | `403` | Escopo insuficiente para a operação pedida |
 | `422` | Período ou `group_by` inválido |
 | `429` | Limite de requisições excedido (ver `Retry-After`) |
@@ -208,6 +183,36 @@ Assim como a Página Pública, esta API trabalha **só com totais**. Ela nunca d
 - Anexos ou comprovantes
 
 Isso não é uma limitação temporária — é a garantia que permite a qualquer OSC liberar essa integração sem avaliar risco de exposição de dado pessoal caso a caso.
+
+---
+
+## Provedores de Inteligência Artificial (Superadmin)
+
+> Disponível para quem tem papel de **Superadministrador da Plataforma** na rota `/superadmin/configuracoes`.
+
+O RIT360 Financeiro utiliza inteligência artificial multimodal de ponta para leitura e extração automática de dados de comprovantes, notas fiscais e recibos enviados pelos usuários (por exemplo, via bot do Telegram).
+
+[![Configuração de Provedores de Inteligência Artificial em cascata no Desktop](/assets/screenshots/config-ia-cascade-desktop.png)](/assets/screenshots/config-ia-cascade-desktop.png)
+*Configurações da Plataforma: Cascata de IA com reordenação de prioridade, seleção assistida de modelos e teste de latência*
+
+[![Configuração de Provedores de Inteligência Artificial no Celular](/assets/screenshots/config-ia-cascade-mobile.png)](/assets/screenshots/config-ia-cascade-mobile.png)
+*Ajuste de provedores e modelos no celular*
+
+### Cascata e redundância inteligente
+
+Para garantir disponibilidade contínua e tolerância a falhas, os provedores operam em **cascata ordenada**:
+1. **Google Gemini** (Gemini 2.5 Flash, Gemini 1.5 Pro)
+2. **Anthropic Claude** (Claude 3.5 Sonnet, Claude 3.5 Haiku)
+3. **OpenAI** (GPT-4o, GPT-4o-mini)
+
+Se a chamada ao primeiro provedor da fila atingir limite de cota, timeout ou indisponibilidade temporária, o sistema chaveia automaticamente para o próximo provedor ativo da sequência, sem interromper a experiência do usuário final.
+
+### Como configurar e testar
+
+1. **Ativação e Chave de API:** Ative o toggle do provedor e informe a chave de API correspondente. As chaves são armazenadas com segurança no cofre de segredos da plataforma.
+2. **Teste de conexão:** Clique em **Testar** para validar a chave em tempo real. O sistema exibe o status de resposta e a **latência em milissegundos** medida pela Edge Function (`test_ai_provider`).
+3. **Seleção assistida de modelos:** Após o teste bem-sucedido, o seletor lista os modelos compatíveis e ativos daquele provedor, com o modelo recomendado pré-selecionado (e identificação clara do recomendado para facilitar o retorno futuro).
+4. **Reordenação visual:** Utilize as setas de subida e descida (**↑** e **↓**) para reordenar a prioridade da cascata visualmente, eliminando digitação manual de índices.
 
 ## Por onde seguir
 

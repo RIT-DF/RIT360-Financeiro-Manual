@@ -10,13 +10,15 @@ Respostas para dúvidas comuns. Se a sua pergunta não está aqui, use o botão 
 
 ### Não recebi o e-mail para acessar. O que faço?
 
-Quando o administrador da sua organização adiciona você, **sua conta já é criada** — não existe uma etapa de "aceitar convite". Você recebe um e-mail para **definir sua senha** (o link vale por 7 dias) e, a partir daí, entra normalmente. Se preferir, pode entrar direto com **Continuar com Google**, desde que use o mesmo e-mail com que foi cadastrado.
+Quando o administrador da sua organização adiciona você e **você nunca usou o sistema**, **sua conta já é criada** — não existe uma etapa de "aceitar convite". Você recebe um e-mail para **definir sua senha** (o link vale por 7 dias) e, a partir daí, entra normalmente. Se preferir, pode entrar direto com **Continuar com Google**, desde que use o mesmo e-mail com que foi cadastrado.
+
+Se você **já tem conta** (por usar outra organização), o e-mail é outro: ele pede que você entre com a sua conta de sempre e **responda se reconhece a inclusão** — veja a pergunta "Apareceu um aviso dizendo que uma organização incluiu você" mais abaixo.
 
 Se o e-mail não chegou, confira a caixa de spam/lixo eletrônico primeiro — ele sai de um domínio institucional e às vezes cai lá.
 
-Você não depende de ninguém para se desbloquear: na tela de login, clique em **Esqueci a senha** e informe o e-mail com que foi cadastrado. Como você ainda não concluiu o primeiro acesso, o sistema envia um **novo link de primeiro acesso** (não um link de redefinição de senha). Se preferir, o administrador também pode reenviá-lo em **Configurações → Usuários → ações da sua linha → Reenviar e-mail**.
+Você não depende de ninguém para se desbloquear: na tela de login, clique em **Esqueci a senha** e informe o e-mail com que foi cadastrado. Como você ainda não concluiu o primeiro acesso, o sistema envia um **novo link de primeiro acesso** (não um link de redefinição de senha). Se preferir, o administrador também pode reenviá-lo em **Configurações → Usuários → ações da sua linha → Reenviar e-mail** (o sistema só permite **um reenvio a cada 10 minutos** para a mesma pessoa; se ele tentar antes, vê o aviso de que um e-mail já foi enviado há pouco).
 
-Outra saída, se você tem conta Google no mesmo e-mail: clique em **Continuar com Google** na tela de login. O acesso à organização é concluído na hora, sem precisar do link.
+Outra saída, se você tem conta Google no mesmo e-mail: clique em **Continuar com Google** na tela de login. Sem precisar do link, o sistema pergunta se você reconhece a inclusão na organização; ao clicar em **Confirmar**, o acesso é concluído.
 
 Se mesmo assim você deixar para depois, o sistema **lembra sozinho**: chegam lembretes automáticos **2, 7 e 14 dias** após o cadastro (três no total, sendo o último anunciado como tal), cada um com um **link novo** — use sempre o mais recente.
 
@@ -31,7 +33,7 @@ Essa opção resolve os **dois** casos, e o sistema identifica sozinho qual é o
 - **Você já usa o sistema e esqueceu a senha** → chega um link para definir uma nova senha. Ele **vale por 1 hora e só pode ser usado uma vez**. Ao definir a nova senha, você volta para a tela de login e entra com ela.
 - **Você foi cadastrado por um administrador e nunca criou senha** → chega um **novo link de primeiro acesso** (vale por 7 dias), para concluir o cadastro.
 
-Por segurança, a confirmação na tela é sempre a mesma, exista ou não uma conta para aquele e-mail (não revelamos quais e-mails têm cadastro). Por isso o e-mail que chega pode ser de um tipo ou de outro — basta seguir o que ele pede. Se não receber, confira a caixa de spam; há um limite de **3 pedidos por hora** para o mesmo e-mail, então evite clicar várias vezes seguidas.
+Por segurança, a confirmação na tela é sempre a mesma, exista ou não uma conta para aquele e-mail (não revelamos quais e-mails têm cadastro). Por isso o e-mail que chega pode ser de um tipo ou de outro — basta seguir o que ele pede. Se não houver conta para aquele endereço, nada chega. Se não receber, confira a caixa de spam e o endereço digitado; há um **limite de pedidos por hora** (cerca de 3 para o mesmo e-mail), e passando dele a tela continua mostrando a mesma confirmação, mas **não envia mais nada** — então evite clicar várias vezes seguidas e, se esgotar, espere cerca de uma hora.
 
 Se você cadastrou via Google no primeiro acesso, use **Continuar com Google** em vez de senha — contas só-Google não têm senha para redefinir.
 
@@ -57,7 +59,35 @@ Se você usa o RIT360 Financeiro em **mais de uma organização**, só você pod
 
 ### Já uso o sistema em outra OSC e fui incluído em uma nova por planilha. Por que não estou ativo?
 
-Quando o administrador importa a equipe por planilha, quem **já tem conta** é apenas **vinculado** à nova organização: você precisa **entrar e concluir o acesso** você mesmo — o administrador não ativa o acesso de outra pessoa. Entre normalmente (e-mail e senha, ou **Continuar com Google** com o mesmo e-mail) e escolha a nova organização no seletor do topo. Se a linha não aparece, confira se o e-mail da planilha é o mesmo da sua conta.
+Quando o administrador importa a equipe por planilha, quem **já tem conta** é apenas **incluído** na nova organização: você precisa **entrar e confirmar a inclusão** você mesmo — o administrador não ativa o acesso de outra pessoa. Entre normalmente (e-mail e senha, ou **Continuar com Google** com o mesmo e-mail) e responda **Confirmar** no aviso "A organização *[nome]* incluiu você como *[papel]*". Depois, escolha a nova organização no seletor do topo. Se o aviso não aparece, confira se o e-mail da planilha é o mesmo da sua conta.
+
+### Apareceu um aviso dizendo que uma organização incluiu você. O que faço?
+
+É o pedido de confirmação de quem já usa o sistema: uma organização cadastrou o seu e-mail e quer saber se você a reconhece. Leia o nome da organização e o papel. Se é quem você esperava, clique em **Confirmar** e ela passa a aparecer no seletor de organização. Se não reconhece, clique em **Não reconheço**: você não terá acesso a ela e ela não poderá incluir você de novo por 30 dias. Enquanto você não responde, nada muda no seu acesso às outras organizações, e a organização que incluiu você vê apenas o seu e-mail. Passo a passo em [Quando uma organização inclui você](/primeiros-passos/#quando-uma-organizacao-inclui-voce).
+
+### Cliquei em "Não reconheço" sem querer. Dá para voltar atrás?
+
+Não pela tela. A organização só pode incluir você de novo depois de **30 dias**. Se for urgente, peça ao administrador dela para falar com a equipe da RIT pelo botão **💬 Feedback**, explicando o caso — a equipe consegue liberar a inclusão antes do prazo.
+
+### Abri minha organização pelo cadastro, mas não consigo convidar ninguém. Por quê?
+
+Organizações abertas pelo próprio cadastro ficam **em análise pela equipe da RIT**. Enquanto a análise não termina, você usa o sistema normalmente, mas não convida nem importa pessoas, não reenvia acessos, não recebe pedidos de vínculo, não publica a página pública e não cria credencial de integração. A tela de Usuários mostra *"Sua organização está em análise pela equipe da RIT. Convites ficam disponíveis depois da aprovação."* A decisão chega por e-mail; depois da aprovação tudo isso passa a funcionar. Veja [Primeiros Passos da Organização](/primeiros-passos/organizacao/#organizacao-em-analise).
+
+### Recebi "Você já tem uma organização em análise". Posso abrir outra?
+
+Não, não enquanto a primeira não tiver decisão: cada conta só pode ter **uma** organização em análise por vez. Aguarde o e-mail com a decisão. Se errou algum dado da primeira, corrija-o em Configurações → Organização.
+
+### O campo recusa meu texto com "Este campo não aceita endereço de site." Por quê?
+
+Nomes de pessoa, nomes de organização (inclusive o nome curto), nomes de cargo e motivos de recusa não podem conter endereço de site ou de e-mail — como `www.exemplo.org` ou `contato@exemplo.org`. Esses textos aparecem em e-mails e avisos para outras pessoas, e um link ali poderia levar alguém a um endereço que não é da organização. Escreva só o nome (ou o motivo, em palavras); o endereço do site da organização tem campo próprio em Configurações → Organização. Abreviações comuns, como "Dr.", "Sta." ou "Ltda.ME", são aceitas.
+
+### Importei uma planilha, mas o telefone (ou o nome, CPF, RG) de uma pessoa não mudou. Por quê?
+
+Esses dados pertencem ao **cadastro da pessoa**, que vale para todas as organizações em que ela está. Quando a pessoa **já entrou no sistema** ou **participa de outra organização**, a planilha só consegue **preencher o que está vazio**; um valor já preenchido não é trocado, e a linha entra com o aviso *"Só a própria pessoa pode alterar este dado."* Célula vazia na planilha também nunca apaga nada. Peça à pessoa que atualize em [Meu Perfil](/configuracoes/perfil/). Detalhes em [Usuários](/configuracoes/usuarios/#importar-usuarios-em-lote).
+
+### A tela recusou minha planilha de pessoas com uma mensagem de limite. O que é?
+
+Há três tetos: **2.000 linhas por envio**, **2 importações em andamento** ao mesmo tempo e **2.000 pessoas por dia** por organização. Divida planilhas grandes em partes e, se atingiu o teto do dia, envie o restante em outro dia. Veja [Limites da planilha](/configuracoes/usuarios/#importar-usuarios-em-lote).
 
 ### Posso encerrar minhas sessões em outros dispositivos?
 
@@ -479,6 +509,10 @@ Depende de **quem decide sobre aquele dado**. Se foi a **sua organização** que
 ### Posso integrar o RIT360 Financeiro com outro sistema?
 
 Sim. Em [Configurações → Integrações](/configuracoes/integracoes/), gere uma credencial e libere para um sistema parceiro (site institucional, painel do conselho, ferramenta interna) consultar o **resumo financeiro** da sua OSC por API — só totais, sem dado individual e sem dar acesso à plataforma. É diferente da [Página Pública](/configuracoes/pagina-publica/): ali é leitura humana e aberta a qualquer visitante; aqui é um canal técnico, autenticado, para outro sistema.
+
+### A credencial de integração parou de funcionar sozinha. O que aconteceu?
+
+Se, ao gerar a credencial, você escolheu uma **validade** (30 dias, 90 dias, 6 meses ou 1 ano), ela **venceu**: na lista de [Configurações → Integrações](/configuracoes/integracoes/) a situação aparece como **Vencida** e o sistema parceiro passa a receber recusa. Não há como renová-la — gere uma credencial nova e atualize o sistema parceiro com o valor novo. Credenciais **sem validade** continuam valendo até serem revogadas.
 
 ### Posso usar o RIT360 Financeiro se não sou de OSC?
 

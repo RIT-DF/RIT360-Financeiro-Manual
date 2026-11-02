@@ -15,6 +15,43 @@ Você acabou de **criar ou assumir uma organização** no RIT360 Financeiro. Ant
 >
 > Se você é admin, parte deste roteiro já aparece sozinha no **Painel**, num card **"Primeiros passos"** que marca sozinho os itens conforme você conclui (conta bancária, equipe, primeiro movimento) e traz atalhos para revisar dados da OSC e categorias. O card some quando os passos principais terminam, e pode ser dispensado a qualquer momento. Veja em [Saúde 360 → Checklist "Primeiros passos"](/modulos/painel/#checklist-primeiros-passos-para-quem-administra-a-osc).
 
+## Se você abriu a organização pelo próprio cadastro: ela fica "em análise" {#organizacao-em-analise}
+
+Quem cria uma organização pelo cadastro (o caminho **"Criar agora"**, na tela de login) entra e **usa o sistema normalmente** — mas a organização fica **em análise pela equipe da RIT** até a decisão. Organizações abertas pela própria equipe da RIT e as que já existiam **não mudam**: a análise vale só para as novas.
+
+> 💡 **Por que isso existe**
+>
+> Uma organização é o ponto de partida para alcançar gente de fora: enviar convites por e-mail, receber pedidos de entrada, mostrar números numa página aberta ao público. Antes de liberar isso, a equipe da RIT confere a abertura. É uma proteção para todos que usam o sistema — inclusive para as pessoas que você convidará, que só recebem e-mail de organizações já analisadas.
+
+**O que você consegue fazer enquanto a análise não termina:** tudo o que é interno da organização — preencher os dados, cadastrar contas bancárias, categorias e fluxo de aprovações, lançar e importar movimentações, gerar relatórios.
+
+**O que fica indisponível até a aprovação:**
+
+- convidar pessoas (**+ Adicionar usuário**) e importar pessoas por planilha;
+- reenviar e-mail de acesso;
+- receber pedidos de vínculo — a organização ainda **não aparece na lista** que quem se cadastra consulta para pedir entrada;
+- publicar a [página pública](/configuracoes/pagina-publica/);
+- criar [credencial de integração](/configuracoes/integracoes/).
+
+Na tela **Configurações → Usuários**, os botões de adicionar e importar ficam desabilitados, com o aviso: *"Sua organização está em análise pela equipe da RIT. Convites ficam disponíveis depois da aprovação."* As demais telas podem mostrar esse mesmo texto, ou uma mensagem genérica de "não foi possível", quando você tenta publicar a página ou gerar uma credencial — o motivo é o mesmo.
+
+**Quando a decisão sai**, você recebe um **e-mail** (no endereço da conta que abriu a organização):
+
+- **Aprovada** — convites, importação de pessoas, página pública e integrações passam a funcionar.
+- **Não aprovada** — a organização é encerrada. O e-mail explica isso e pede que você responda a ele se acreditar que houve engano.
+
+> ⚠️ **Atenção · Uma organização em análise por conta**
+>
+> Cada conta só pode ter **uma** organização em análise por vez. Se tentar abrir outra antes da decisão, a tela avisa: *"Você já tem uma organização em análise pela equipe da RIT. Aguarde a decisão antes de abrir outra."* Abrir várias não acelera nada. Se errou o nome ou os dados da primeira, corrija-os em [Configurações → Organização](/configuracoes/organizacao/) em vez de abrir uma nova.
+
+> ✓ **Dica · Aproveite a espera**
+>
+> Os passos 1 a 4 da ordem recomendada abaixo (dados, contas, categorias e fluxo de aprovações) não dependem da análise. Deixe-os prontos; quando a aprovação chegar, só falta convidar a equipe.
+
+> ℹ️ **Se alguém tentar pedir vínculo à sua organização**
+>
+> Quem tenta pedir entrada numa organização ainda em análise vê: *"Esta organização está em análise pela equipe da RIT. Convites e pedidos de vínculo ficam disponíveis depois da aprovação."* Peça que a pessoa tente de novo depois do e-mail de aprovação.
+
 ## A ordem recomendada
 
 1. **Dados da organização** — identidade da OSC.
@@ -71,7 +108,11 @@ Diga quem autoriza a saída de dinheiro: o **quórum** (1 ou 2 votos) e **quais 
 
 ## 5. Convide os usuários e atribua papéis
 
-Agora chame a equipe. Cadastre cada pessoa, defina o **papel** dela (Presidente, Tesoureiro, Diretor, Coordenador, Voluntário, Comissão Fiscal) e envie o convite — o acesso só vale após o aceite. Para muita gente de uma vez, use a **importação por CSV**.
+Agora chame a equipe. Cadastre cada pessoa, defina o **papel** dela (Presidente, Tesoureiro, Diretor, Coordenador, Voluntário, Comissão Fiscal) e envie o convite — o acesso só vale após o aceite. Para muita gente de uma vez, use a **importação por planilha** (até 2.000 linhas por envio).
+
+> ⚠️ **Atenção · Organização em análise não convida**
+>
+> Se a sua organização foi aberta pelo próprio cadastro e ainda não foi aprovada, os botões de convidar e importar ficam desabilitados. Veja [acima](#organizacao-em-analise) o que fazer enquanto isso.
 
 → **Configurações → Usuários**. Detalhes em [Usuários](/configuracoes/usuarios/) e em [Papéis e Permissões](/papeis/).
 
@@ -92,7 +133,7 @@ Se a OSC vende ou recebe doações por uma loja **WooCommerce**, conecte-a para 
 Com a base pronta, traga o histórico:
 
 - **Movimentações** — em **Movimentações → Importar Lançamentos**, suba o CSV do seu histórico (o RIT360 Financeiro valida linha a linha antes de criar). Veja [Movimentações](/modulos/movimentacoes/).
-- **Usuários em lote** — se ainda não cadastrou a equipe, **Configurações → Usuários → Importar** aceita uma planilha com pré-visualização classificada por status. Quem **já tem conta** no sistema (por usar outra OSC) entra como **vinculado** e conclui o acesso ao entrar — a planilha não ativa o acesso de ninguém por você, então essas pessoas aparecem como pendentes até o primeiro acesso.
+- **Usuários em lote** — se ainda não cadastrou a equipe, **Configurações → Usuários → Importar** aceita uma planilha com pré-visualização classificada por status. Quem **já tem conta** no sistema (por usar outra OSC) entra como **vinculado** e precisa **confirmar a inclusão** ao entrar — a planilha não ativa o acesso de ninguém por você, então essas pessoas aparecem como "Aguardando confirmação" até responderem. Cada envio aceita até 2.000 linhas e cada organização pode importar até 2.000 pessoas por dia; detalhes em [Usuários](/configuracoes/usuarios/#importar-usuários-em-lote-planilha-csv-ou-excel).
 
 > ✓ **Pronto para operar**
 >

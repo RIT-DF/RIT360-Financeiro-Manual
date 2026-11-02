@@ -33,6 +33,10 @@ O interruptor **Publicar / Despublicar página pública**, no topo da tela, é a
 
 **Despublicar é imediato e não apaga nada.** Se você precisar tirar a página do ar para revisar alguma coisa, desligue a chave: as escolhas de blocos, período e missão continuam salvas, e religar devolve tudo exatamente como estava.
 
+> ⚠️ **Atenção · Organização em análise não publica**
+>
+> Se a organização foi aberta pelo próprio cadastro e ainda **está em análise pela equipe da RIT**, o interruptor **Publicar** não funciona: ao tentar, a tela recusa a alteração (a mensagem fala em convites, mas o motivo é a análise: *"Sua organização está em análise pela equipe da RIT. Convites ficam disponíveis depois da aprovação."*). Você pode preparar tudo — endereço, missão, blocos —, e publicar assim que a aprovação chegar por e-mail. Veja [Primeiros Passos da Organização](/primeiros-passos/organizacao/#organizacao-em-analise).
+
 > ✓ **Dica · Comece pequeno e amplie depois**
 >
 > Não tente publicar tudo na primeira semana. Um bom começo é ligar só **Quem somos** (identidade) e **Panorama do período** (receitas, despesas, resultado). Isso já entrega o essencial e é seguro. Depois de rodar um mês, com as categorias revisadas (ver abaixo), ligue **De onde vem, para onde vai**. **Projetos** entra quando a OSC quiser mostrar as iniciativas em andamento. Transparência é caminho, não interruptor único.

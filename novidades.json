@@ -1,6 +1,38 @@
 {
   "versoes": [
     {
+      "versao": "1.139.1",
+      "data": "2026-11-02",
+      "destaque": false
+    },
+    {
+      "versao": "1.139.0",
+      "data": "2026-11-02",
+      "destaque": false
+    },
+    {
+      "versao": "1.138.1",
+      "data": "2026-11-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.138.0",
+      "data": "2026-11-01",
+      "destaque": true,
+      "resumo": "Quando uma organização incluir você e você já usar o RIT360 Financeiro, você confirma ou recusa a inclusão."
+    },
+    {
+      "versao": "1.137.1",
+      "data": "2026-11-01",
+      "destaque": false
+    },
+    {
+      "versao": "1.137.0",
+      "data": "2026-11-01",
+      "destaque": true,
+      "resumo": "Organizações abertas pelo próprio cadastro agora passam por análise da equipe da RIT antes de poder convidar pessoas."
+    },
+    {
       "versao": "1.136.4",
       "data": "2026-11-01",
       "destaque": false

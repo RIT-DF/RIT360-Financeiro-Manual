@@ -223,6 +223,10 @@ No editor de cargos, cada cargo tem a ação **Editar nome**:
 >
 > Trocar o nome do cargo não mexe em quem pode o quê — as permissões continuam exatamente as mesmas. É só a etiqueta que muda, para o sistema falar a língua da sua OSC.
 
+> ⚠️ **Atenção · O novo nome de um cargo padrão não aceita endereço de site**
+>
+> O nome que você dá a um cargo padrão aparece em e-mails e avisos enviados a outras pessoas, por isso não pode conter endereço de site ou de e-mail (como `www.exemplo.org` ou `contato@exemplo.org`). Se tentar, o campo responde *"Este campo não aceita endereço de site."* e nada é salvo. Use só o nome da função, com até 40 caracteres — por exemplo, "Diretor Financeiro". Nomes que já estavam gravados antes dessa regra não foram alterados.
+
 ## Por onde seguir
 
 - **Configurações → Usuários** — para atribuir os cargos aos membros.

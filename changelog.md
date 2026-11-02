@@ -11,6 +11,75 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.139.1] — 2026-11-02
+
+### Corrigido
+
+- Corrigimos o limite de pedidos repetidos de acesso e recuperação de senha, que não estava contando como deveria.
+- As respostas de recuperação de senha, reenvio de acesso e código de cadastro agora levam o mesmo tempo para qualquer endereço, exista ou não uma conta.
+
+## [1.139.0] — 2026-11-02
+
+### Modificado
+
+- Cadastro, recuperação de senha e troca de e-mail não revelam mais se um endereço tem conta no sistema. A resposta é a mesma para qualquer endereço. Quem já tem conta recebe um e-mail avisando e indicando como entrar ou recuperar a senha.
+- Limites mais firmes para pedidos repetidos de código de cadastro, recuperação de senha e reenvio de acesso. O reenvio do acesso de uma pessoa por um administrador só pode ser feito uma vez a cada 10 minutos.
+- Links e códigos enviados por e-mail (cadastro, recuperação de senha e troca de e-mail) só funcionam uma vez, mesmo que sejam abertos ao mesmo tempo em duas telas.
+- A planilha de pessoas aceita até 2.000 linhas por envio. Acima disso, divida em partes.
+- Credenciais de integração podem ter data de validade, definida na criação. Depois dessa data, a credencial deixa de funcionar. Sem data, continua valendo como antes.
+- Rotina diária apaga pedidos de acesso, códigos e links vencidos e registros antigos de uso das integrações.
+
+## [1.138.1] — 2026-11-01
+
+### Modificado
+
+- Em tarefas e no histórico do projeto, quem ainda não confirmou a inclusão na organização aparece pelo e-mail, e não pelo nome do cadastro.
+- A gravação de CPF ou RG por planilha passa a registrar quem a fez.
+
+## [1.138.0] — 2026-11-01
+
+<!-- destaque: Quando uma organização incluir você e você já usar o RIT360 Financeiro, você confirma ou recusa a inclusão. -->
+
+### Adicionado
+
+- Quando uma organização inclui você e você já usa o RIT360 Financeiro, aparece uma janela perguntando se você reconhece a inclusão, com os botões Confirmar e Não reconheço. Você pode fechar a janela e decidir depois; um aviso no cabeçalho lembra enquanto não houver resposta.
+- Até você confirmar, seu acesso não muda e a organização não vê o seu nome, a sua foto nem a data do seu último acesso: só o e-mail e o papel, com a indicação "Aguardando confirmação". Também não envia menções nem avisos de projeto.
+- Quem escolhe Não reconheço deixa de receber avisos dessa organização, e ela não pode incluir a mesma pessoa de novo por 30 dias. A organização vê que a pessoa não confirmou a inclusão.
+- Para quem acessa pelo link de primeiro acesso com uma conta que já existe, a tela também oferece Não reconheço ao lado de Vincular e entrar.
+
+### Modificado
+
+- Entrar com a conta Google deixa de ativar o vínculo com uma organização sem perguntar.
+- O e-mail enviado pela planilha a quem já tem conta agora pede para entrar e responder à inclusão. O relatório da planilha mostra "aguardando a confirmação da pessoa".
+- Os dados de cadastro (CPF, RG, telefone e data de nascimento) não podem ser apagados nem trocados por planilha de uma organização quando a pessoa já usa o sistema ou participa de outra organização. Campo vazio na planilha não apaga nada.
+
+## [1.137.1] — 2026-11-01
+
+### Corrigido
+
+- O filtro que recusa endereço de site em nomes e motivos ficou mais firme: recusa o endereço colado a pontuação, com porta ou parâmetros, de domínios curtos e com pontos de outras escritas. Abreviações comuns, como "Dr.", "Sta.", "Ltda.ME" e "M.Sc.", continuam aceitas.
+- Um nome com endereço de site não aparece mais em e-mails enviados a outras pessoas.
+- Quem abriu uma organização não pode mais alterar o registro de quem a abriu.
+
+## [1.137.0] — 2026-11-01
+
+<!-- destaque: Organizações abertas pelo próprio cadastro agora passam por análise da equipe da RIT antes de poder convidar pessoas. -->
+
+### Adicionado
+
+- Organizações abertas pelo próprio cadastro passam por análise da equipe da RIT. Enquanto a análise não termina, a organização funciona normalmente para quem a abriu, mas não convida nem importa pessoas, não reenvia acessos, não recebe pedidos de vínculo, não aparece na lista pública, não publica página pública nem cria credencial de integração. A tela de usuários explica: "Sua organização está em análise pela equipe da RIT. Convites ficam disponíveis depois da aprovação."
+- A equipe da RIT aprova ou recusa a organização na tela de Organizações, aba "Em análise". Quem abriu recebe um e-mail com o resultado. Cada conta pode ter só uma organização em análise por vez.
+
+### Modificado
+
+- Nomes de organização, de pessoa, rótulos de cargo e motivos de recusa não aceitam endereço de site. A mensagem é "Este campo não aceita endereço de site." Nomes já gravados não foram alterados.
+- A tela de Organizações da equipe da RIT passa a mostrar também as organizações em encerramento.
+- Organizações abertas pela equipe da RIT e as que já existem não mudam.
+
+### Corrigido
+
+- E-mails e avisos que recebem títulos ou textos com certos símbolos passam a exibi-los corretamente.
+
 ## [1.136.4] — 2026-11-01
 
 ### Corrigido
