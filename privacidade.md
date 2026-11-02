@@ -3,16 +3,16 @@ title: "Privacidade"
 nav_order: 1
 parent: "Termos e Privacidade"
 permalink: /privacidade/
-version: "1.5"
-change_summary: "Detalhamos o que acontece com o CPF, os dados bancários e a chave PIX de quem recebe um pagamento pela plataforma (fornecedores, prestadores e beneficiários pessoa física): esses três dados ficam cifrados, do mesmo jeito que o seu próprio CPF e RG, e são descartados automaticamente algum tempo depois de o pagamento ser concluído — prazo que a organização escolhe (30, 90, 180 ou 365 dias; 90 dias quando ela não escolhe). O nome do destinatário não é descartado, porque quem aprova e presta contas precisa continuar sabendo para quem o pagamento foi feito. Acrescentamos a linha correspondente na tabela de prazos de guarda. Também passamos a informar que, quando você envia um feedback pelo aplicativo, o conteúdo e a sua identificação são registrados em uma ferramenta de acompanhamento de terceiro (GitHub), sediada nos Estados Unidos, em repositório privado — acrescentamos esse serviço à lista de subprocessadores."
+version: "1.6"
+change_summary: "Atualizamos esta Política por causa das novas regras de segurança da plataforma. Explicamos como o CPF e o RG são guardados e quem pode informá-los antes de você entrar na plataforma. Informamos que registramos as tentativas de acesso e de segundo fator, com um resumo irreversível do endereço IP e do navegador, para limitar tentativas e detectar abuso. Descrevemos o assistente por Telegram: o comprovante que você envia é lido por um provedor de inteligência artificial, e você confere o resultado antes de confirmar. Acrescentamos à lista de subprocessadores o Telegram e os provedores de inteligência artificial Google (Gemini), OpenAI e Anthropic. Incluímos na tabela de prazos de guarda os dados temporários da plataforma e definimos o prazo dos documentos de prestação de contas: 10 anos, que a organização pode alterar, inclusive para guardar sem prazo de descarte. Por fim, a organização recusada na análise segue os mesmos prazos das encerradas."
 requires_reconsent: true
 ---
 
 # Política de Privacidade — RIT360 Financeiro
 
 <!-- Data de vigência: ajustar se a publicação ocorrer em outro dia. -->
-**Vigência:** 18 de setembro de 2026
-**Versão:** 1.5
+**Vigência:** 2 de novembro de 2026
+**Versão:** 1.6
 
 ---
 
@@ -79,12 +79,15 @@ Nas três últimas situações, a pessoa **não tem conta na plataforma** e seus
 | Papel/função na OSC | Controle de acesso e permissões | Execução de contrato (Art. 7º, V) |
 | Dados bancários e chave PIX | Processamento de solicitações de reembolso | Execução de contrato (Art. 7º, V) |
 | Registros de acesso e atividade | Segurança e rastreabilidade | Legítimo interesse (Art. 7º, IX) |
+| Tentativas de acesso e de segundo fator, com resumo irreversível do endereço IP e do navegador | Limitar tentativas e detectar abuso | Legítimo interesse (Art. 7º, IX) |
 | Dados do dispositivo, quando você ativa notificações | Entrega das notificações no seu aparelho | Execução de contrato (Art. 7º, V) |
 | Feedbacks enviados | Melhoria contínua do produto | Legítimo interesse (Art. 7º, IX) |
 
-**Seu CPF e seu RG são guardados cifrados**, em um cofre de segredos separado do restante do banco de dados. Nem quem administra a organização enxerga esses valores no banco — eles só são revelados para você, no seu próprio perfil.
+**Seu CPF e seu RG são guardados cifrados**, em um cofre de segredos separado do restante do banco de dados. Quem administra a organização não enxerga esses valores: eles só são revelados a você, no seu próprio perfil. Enquanto você ainda não entrou na plataforma, quem administra a organização pode informar ou corrigir esses dados ao cadastrar você. Depois que você entra, ou se você também pertence a outra organização, só você pode alterá-los.
 
 **Quando você envia um feedback pela tela de feedback**, o conteúdo da mensagem e a sua identificação — nome, e-mail, organização, papel e cargo — são registrados em uma ferramenta de acompanhamento de tarefas, para que o pedido seja tratado pela nossa equipe.
+
+**Assistente por Telegram.** Se você vincular sua conta ao Telegram e enviar um comprovante ao assistente, o arquivo e o texto da sua mensagem são enviados a um provedor de inteligência artificial, que extrai os dados para preparar o lançamento. Você confere o resultado antes de confirmar. O comprovante pode conter dados de outras pessoas: envie apenas o que a sua organização autoriza.
 
 ### 3.2 Dados de destinatários de pagamentos (não usuários)
 
@@ -126,7 +129,7 @@ Os dados são usados exclusivamente para as finalidades abaixo. Nos dados que a 
 
 - Prover as funcionalidades da plataforma (gestão financeira, aprovação de reembolsos e pedidos, gestão de projetos, controle de acesso)
 - Enviar notificações operacionais relacionadas às atividades da OSC
-- Garantir a segurança e integridade das informações
+- Garantir a segurança e a integridade das informações, o que inclui limitar tentativas de acesso, registrar quem fez cada ação e detectar uso abusivo
 - Cumprir obrigações legais, contábeis e fiscais
 - Publicar a página de transparência, quando a organização escolher ativá-la (seção 5)
 - Melhorar continuamente a plataforma com base nos feedbacks recebidos
@@ -187,8 +190,12 @@ Para operar a plataforma, utilizamos os seguintes serviços de terceiros. Alguns
 | **Google Drive** | Armazenamento de documentos (quando ativado pela OSC) | Estados Unidos |
 | **WooCommerce** | Importação de pedidos da loja virtual (quando ativada pela OSC) | Definida pela organização |
 | **GitHub** | Registro e acompanhamento dos feedbacks enviados pelos usuários (repositório privado) | Estados Unidos |
+| **Telegram** (quando você vincula sua conta) | Envio de notificações e recebimento de mensagens ao assistente. Recebe o identificador da conversa, e o título, o texto e o link de cada aviso | A confirmar pelo encarregado (empresa Telegram FZ-LLC) |
+| **Google (Gemini)**, **OpenAI** e **Anthropic** (quando você usa o assistente por Telegram) | Leitura de comprovantes enviados ao assistente. Um é usado como alternativa quando outro falha | Estados Unidos |
 
 Google Drive e WooCommerce são recursos opcionais, ativados a critério de cada OSC. A ativação implica a aceitação da política de privacidade do respectivo fornecedor.
+
+Telegram e os provedores de inteligência artificial só recebem dados de quem vincula a conta e usa esses recursos.
 
 ---
 
@@ -209,11 +216,20 @@ Os prazos abaixo são os que a plataforma aplica. Nos dados que a organização 
 | Logs de auditoria | 5 anos após o encerramento da OSC na plataforma |
 | Dados de perfil e acesso dos membros | Eliminados ou anonimizados em até 90 dias após o encerramento da OSC |
 | CPF, dados bancários e chave PIX de destinatários de pagamento | 30, 90, 180 ou 365 dias após a conclusão do pagamento, conforme a organização configurar (90 dias quando não configurado) — o nome do destinatário não é descartado |
-| Documentos de prestação de contas gerados pela plataforma | **Prazo em definição** — ver a nota abaixo |
+| Documentos de prestação de contas gerados pela plataforma | 10 anos depois de gerados, prazo que a lei das parcerias com o poder público (Lei 13.019/2014, art. 68) exige para os documentos da prestação de contas. A organização pode configurar outro prazo, inclusive guardar os documentos sem prazo de descarte (a plataforma oferece a opção "Guardar para sempre"), e recebe aviso 30 dias antes do descarte |
+| Planilha de importação de pessoas | Conteúdo apagado 7 dias depois de concluída a importação |
+| Pedidos pendentes do assistente por Telegram | Apagados no dia seguinte ao vencimento |
+| Exportação de dados | Arquivo apagado quando o link vence |
+| Pacote de arquivos de prestação de contas | Apagado 1 hora depois de gerado |
+| Códigos de cadastro e links de acesso | Apagados 1 dia depois de vencer |
+| Pedidos de troca de senha e de e-mail | Apagados 1 dia depois de vencer, ou 30 dias depois de usados |
+| Registro de uso de integrações | 180 dias |
+| Tentativas de acesso e de segundo fator | 6 meses, como os registros de acesso do Marco Civil da Internet (art. 15) |
+| Códigos de vínculo do Telegram | Apagados 1 dia depois de vencer |
+| Convites não aceitos | Apagados 30 dias depois de vencer |
+| Registro das mensagens já processadas pelo assistente | 30 dias |
 
 Após os prazos acima, os dados são eliminados de forma segura ou anonimizados de modo irreversível.
-
-**Nota sobre os documentos de prestação de contas:** os PDFs consolidados que a plataforma gera ainda **não têm prazo de descarte definido** e permanecem armazenados enquanto o relatório existir. Estamos definindo esse prazo e atualizaremos esta política quando ele estiver estabelecido. Registramos isso aqui em vez de omitir, porque é uma informação que você tem o direito de saber.
 
 ### 8.1 Quando você exclui a sua conta
 
@@ -222,6 +238,8 @@ Ao solicitar a exclusão da sua conta pela plataforma, ela entra em uma **carên
 ### 8.2 Quando a organização é encerrada
 
 Quando uma OSC encerra suas atividades na plataforma, novas alterações são bloqueadas imediatamente e abre-se uma **janela de 30 dias** para exportação de todos os dados. Encerrado o prazo, **identificadores e anexos são apagados** e os **dados pessoais dos membros são anonimizados**. Por obrigação legal, os **registros financeiros e a trilha de auditoria são mantidos sem identificação pessoal**, e o **CNPJ da organização é retido**.
+
+A organização recusada na análise segue o mesmo caminho e os mesmos prazos das organizações encerradas.
 
 ---
 

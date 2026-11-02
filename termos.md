@@ -3,24 +3,21 @@ title: "Termos de Uso"
 nav_order: 2
 parent: "Termos e Privacidade"
 permalink: /termos/
-version: "1.3"
-change_summary: "Passamos a dizer nestes Termos quem responde por cada dado. Nos dados que a organização cadastra e gerencia na plataforma, quem decide é ela, e a RIT trata esses dados por conta dela, como operadora. Nos dados de conta e de funcionamento da plataforma — login e autenticação, registro do aceite, segurança e auditoria —, quem decide é a RIT. O detalhamento de cada tipo de dado continua na Política de Privacidade, que é parte integrante destes Termos. Também corrigimos a parte de planos e preços: os Termos não citam mais um valor de assinatura, porque não há valor definido. A organização sem vínculo formal com a RIT passa a ser orientada a entrar em contato pelo formulário em rit360.org.br/interesse para acertar as condições de uso; se houver contrapartida financeira acordada, continuam valendo o pagamento antecipado e a suspensão do acesso por inadimplência acima de 30 dias."
+version: "1.4"
+change_summary: "Atualizamos estes Termos por causa das novas regras de segurança da plataforma. O aceite passa a ser individual, de cada pessoa, e quem abre uma organização declara que tem poderes para representá-la. A abertura de uma organização passa por análise da RIT, e, durante a análise, a plataforma não envia comunicações a pessoas de fora dela. Incluir uma pessoa na organização depende da confirmação dela, e a organização só pode incluir quem autorizou. Quem administra a plataforma pela RIT deve usar o segundo fator de autenticação, que é opcional e recomendado para administradores de organização. Também ficou proibido usar nomes de organização, convites e outros campos para enviar mensagens a terceiros, e incluir pessoas sem autorização ou se passar por organização que não se representa."
 requires_reconsent: true
 ---
 
 # Termos de Uso — RIT360 Financeiro
 
-**Vigência:** 11 de agosto de 2026
-**Versão:** 1.3
+**Vigência:** 2 de novembro de 2026
+**Versão:** 1.4
 
 ---
 
 ## 1. Aceitação
 
-O uso da plataforma **RIT360 Financeiro** está condicionado à aceitação destes Termos de Uso. A aceitação ocorre em dois momentos distintos:
-
-1. **Pela organização (OSC):** o representante responsável pelo cadastro da organização aceita estes Termos em nome da OSC no momento do onboarding institucional. Ao aceitar, a OSC declara ter capacidade legal para firmar este acordo.
-2. **Por cada usuário individualmente:** toda pessoa que cria uma conta na plataforma aceita estes Termos ao concluir o cadastro. O aceite individual não substitui o aceite institucional da OSC.
+O uso da plataforma depende do aceite individual destes Termos por cada pessoa, registrado na própria conta. Quem abre uma organização na plataforma declara, ao aceitar, que tem poderes para representá-la, e esse aceite vincula a organização a estes Termos.
 
 Se você não concorda com estes Termos, não utilize a plataforma.
 
@@ -69,6 +66,12 @@ A organização que utiliza o RIT360 Financeiro se compromete a:
 - Informar seus colaboradores, fornecedores e prestadores de serviço cadastrados sobre o tratamento de dados realizado pela plataforma, conforme previsto na [Política de Privacidade](/privacidade/).
 - Manter a confidencialidade das credenciais de acesso e responder por acessos não autorizados decorrentes de negligência na sua guarda.
 
+A abertura de uma organização passa por análise da RIT. Durante a análise, a organização pode ser usada, mas a plataforma não envia comunicações a pessoas de fora dela. A RIT pode recusar a abertura; a organização recusada é encerrada, e seus dados seguem as regras de encerramento da Política de Privacidade.
+
+Incluir uma pessoa na organização depende da confirmação dela: o acesso só começa quando a própria pessoa aceita o vínculo, e ela pode recusar.
+
+A organização deve incluir apenas pessoas que autorizaram essa inclusão.
+
 ---
 
 ## 6. Obrigações dos usuários individuais
@@ -81,6 +84,8 @@ Cada usuário da plataforma se compromete a:
 - Não tentar acessar dados de outras organizações ou de usuários sem autorização.
 - Respeitar as permissões atribuídas pelo administrador da OSC.
 
+Quem administra a plataforma pela RIT deve usar o segundo fator de autenticação. Para administradores de organização, ele é opcional e recomendado.
+
 ---
 
 ## 7. Uso proibido
@@ -91,6 +96,8 @@ Cada usuário da plataforma se compromete a:
 - Realização de engenharia reversa, cópia, reprodução ou redistribuição do código ou da interface da plataforma.
 - Tentativas de acesso não autorizado a sistemas, contas ou dados de outras organizações.
 - Sobrecarga intencional da infraestrutura da plataforma (ataques de negação de serviço ou similares).
+- Usar nomes de organização, convites ou outros campos da plataforma para enviar mensagens, endereços ou anúncios a terceiros.
+- Incluir pessoas sem autorização, ou se passar por organização que não representa.
 - Qualquer finalidade que viole a legislação brasileira aplicável.
 
 ---
