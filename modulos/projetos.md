@@ -725,9 +725,9 @@ Ter plano de trabalho **não liga** a restrição de [categorias permitidas](#es
 Ao lançar ou pagar uma despesa do projeto, o RIT360 Financeiro decide **fonte** e **item do plano** sozinho quando não há dúvida, pergunta quando há, e avisa (sem travar) quando falta informação:
 
 - **Fonte com conta exclusiva** — automático: a despesa saiu daquela conta, então é daquela fonte.
-- **Mais de uma fonte possível** (nenhuma com conta exclusiva, ou mais de uma cabendo) — o lançamento pergunta, no bloco **"De qual dinheiro sai este lançamento"**, sugerindo a mais provável.
+- **Mais de uma fonte possível** (nenhuma com conta exclusiva, ou mais de uma cabendo) — o lançamento pergunta, no bloco **"De qual dinheiro sai este lançamento"**. O seletor abre em **Escolher fonte**, sem nenhuma opção marcada: a escolha é sua.
 - **Categoria associada a um item só** — automático.
-- **Categoria associada a mais de um item, ou fonte com itens sem categoria** — o lançamento pergunta o item, sugerindo o provável.
+- **Categoria associada a mais de um item, ou fonte com itens sem categoria** — o lançamento pergunta o item (o seletor abre em **Escolher rubrica**, sem sugestão).
 - **Categoria não associada a nenhum item** — a despesa é paga e marcada [fora do plano de trabalho](#plano-de-trabalho), sem perguntar (não há o que escolher).
 
 [![Bloco "De qual dinheiro sai este lançamento" no novo lançamento: seletor de Fonte, seletor de Rubrica do plano de trabalho e o aviso de que o valor passa do aprovado](/assets/screenshots/manual-projetos-fontes-07-de-qual-dinheiro-desktop.png)](/assets/screenshots/manual-projetos-fontes-07-de-qual-dinheiro-desktop.png)
