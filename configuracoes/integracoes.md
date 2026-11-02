@@ -190,7 +190,7 @@ Isso não é uma limitação temporária — é a garantia que permite a qualque
 
 > Disponível para quem tem papel de **Superadministrador da Plataforma** na rota `/superadmin/configuracoes`.
 
-O RIT360 Financeiro utiliza inteligência artificial multimodal de ponta para leitura e extração automática de dados de comprovantes, notas fiscais e recibos enviados pelos usuários (por exemplo, via bot do Telegram).
+O RIT360 Financeiro utiliza inteligência artificial multimodal de ponta para leitura e extração automática de dados de comprovantes, notas fiscais e recibos enviados pelos usuários, e para o [Assistente](/modulos/assistente/), que responde perguntas e prepara registros no sistema e pelo Telegram.
 
 [![Configuração de Provedores de Inteligência Artificial em cascata no Desktop](/assets/screenshots/config-ia-cascade-desktop.png)](/assets/screenshots/config-ia-cascade-desktop.png)
 *Configurações da Plataforma: Cascata de IA com reordenação de prioridade, seleção assistida de modelos e teste de latência*
