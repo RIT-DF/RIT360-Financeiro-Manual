@@ -11,6 +11,22 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.153.1] — 2026-11-02
+
+### Corrigido
+
+- Corrigimos a falha que deixava a tela em branco ao receber a resposta do assistente. Se o painel do assistente tiver algum problema, agora só ele mostra um aviso e o restante do sistema continua funcionando.
+
+## [1.153.0] — 2026-11-02
+
+<!-- destaque: Agora você pode conversar com o assistente dentro do sistema, pelo botão no topo da tela. -->
+
+### Adicionado
+
+- Agora dá para conversar com o assistente dentro do sistema, pelo botão no topo da tela. Ele responde perguntas como "qual o saldo das contas?" dentro do que você já pode ver e tira dúvidas de uso com base no manual, sempre com o link da página.
+- Para registrar um reembolso, pedido de pagamento ou lançamento, por frase ou por foto do comprovante, ele abre o formulário já preenchido para você conferir e salvar.
+- O administrador da organização vê o uso do mês separado por Telegram e aplicativo. O botão só aparece quando o assistente está ligado na organização.
+
 ## [1.152.0] — 2026-11-02
 
 ### Adicionado

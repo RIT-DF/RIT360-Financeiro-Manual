@@ -1,6 +1,17 @@
 {
   "versoes": [
     {
+      "versao": "1.153.1",
+      "data": "2026-11-02",
+      "destaque": false
+    },
+    {
+      "versao": "1.153.0",
+      "data": "2026-11-02",
+      "destaque": true,
+      "resumo": "Agora você pode conversar com o assistente dentro do sistema, pelo botão no topo da tela."
+    },
+    {
       "versao": "1.152.0",
       "data": "2026-11-02",
       "destaque": false
