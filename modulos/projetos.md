@@ -708,7 +708,8 @@ Uma despesa cuja categoria **não está associada a nenhum item** do plano vigen
 
 Se uma despesa faz um item **passar do valor aprovado**, o pagamento acontece normalmente — o RIT360 Financeiro **nunca retém nem recusa** um pagamento por isso. O que aparece é um aviso, no item e no lançamento, de que o valor está acima do aprovado e que o **financiador pode glosar** a despesa. O atalho para **Remanejar** fica à mão, junto do aviso.
 
-<!-- CAPTURA PENDENTE: item do plano de trabalho com gasto acima do aprovado — aviso "Já foi gasto mais do que o previsto nesta rubrica..." e o botão Remanejar. Rota /projetos/{id}?aba=financeiro, no Instituto Exemplo (projeto Oficina de Artesanato), desktop. Precisa de uma despesa que passe do aprovado de uma rubrica. Arquivo esperado: manual-projetos-fontes-04-acima-do-plano.png. Não deu em 02/11/2026: nenhum projeto da OSC Alpha tem financiador com plano de trabalho, e montar o cenário exige gravar fonte, plano e despesa na base. -->
+[![Item do plano de trabalho com gasto acima do aprovado: valor em destaque, aviso de possível glosa e o botão Remanejar ao lado dos demais](/assets/screenshots/manual-projetos-fontes-04-acima-do-plano.png)](/assets/screenshots/manual-projetos-fontes-04-acima-do-plano.png)
+*Item do plano com gasto acima do aprovado — "R$ 1.200,00 de R$ 1.000,00", o aviso de risco de glosa e o atalho **Remanejar***
 
 > ⚠️ **Por que o sistema não trava o pagamento acima da rubrica**
 >
@@ -729,8 +730,8 @@ Ao lançar ou pagar uma despesa do projeto, o RIT360 Financeiro decide **fonte**
 - **Categoria associada a mais de um item, ou fonte com itens sem categoria** — o lançamento pergunta o item, sugerindo o provável.
 - **Categoria não associada a nenhum item** — a despesa é paga e marcada [fora do plano de trabalho](#plano-de-trabalho), sem perguntar (não há o que escolher).
 
-<!-- CAPTURA PENDENTE: bloco "De qual dinheiro sai este lançamento" no formulário de novo lançamento (ou edição), mostrando os seletores de Fonte e de Rubrica do plano de trabalho quando há mais de uma opção, e o aviso de risco de glosa. Rota /movimentacoes/novo com um projeto de financiador com plano de trabalho e mais de uma fonte/item possível, viewport desktop e mobile.
-Tentativa registrada em 11/09/2026 (sessão de captura do manual): montei, no Instituto Exemplo, um projeto (Oficina de Artesanato) com DUAS fontes sem conta exclusiva (Caixa geral e o financiador "Instituto Parceiro Educacional"), cada uma com um item de plano de trabalho usando a MESMA categoria ("Material de escritório"), para forçar a ambiguidade que o texto acima descreve. Mesmo assim, o formulário de novo lançamento só mostrou a caixa "Esta despesa é uma devolução ao financiador", sem os seletores de Fonte/Rubrica — e a chamada de rede `resolve_movement_funding` sempre voltou com uma fonte e um item já decididos, sem pedir confirmação. Não decidido se é um caso que o sistema realmente resolve sozinho por alguma regra de desempate não documentada aqui, ou se a tela do seletor não está implementada neste cenário. Quem retomar: comece conferindo o código-fonte da resolução (RPC `resolve_movement_funding`) antes de tentar mais combinações de dados de teste.  Não deu em 02/11/2026: o bloco só aparece em projeto com financiador e plano de trabalho, e nenhum projeto da OSC Alpha tem isso (testei os seis projetos no formulário). -->
+[![Bloco "De qual dinheiro sai este lançamento" no novo lançamento: seletor de Fonte, seletor de Rubrica do plano de trabalho e o aviso de que o valor passa do aprovado](/assets/screenshots/manual-projetos-fontes-07-de-qual-dinheiro-desktop.png)](/assets/screenshots/manual-projetos-fontes-07-de-qual-dinheiro-desktop.png)
+*"De qual dinheiro sai este lançamento" — com duas fontes possíveis, o lançamento pergunta a fonte e, depois dela, a rubrica; se o valor passa do aprovado, o aviso de glosa aparece na hora*
 
 **Parcelas e recorrências herdam a escolha** feita no lançamento — todas as ocorrências criadas junto passam a valer para a mesma fonte e item, exceto as que caem fora do período de validade da fonte escolhida.
 
