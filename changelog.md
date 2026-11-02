@@ -11,6 +11,65 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.151.0] — 2026-11-02
+
+### Modificado
+
+- Quem tem um novo aceite pendente da Política de Privacidade ou dos Termos de Uso agora aceita antes de usar qualquer tela, e volta para a página que estava abrindo. Se não for possível conferir se há aceite pendente, a tela avisa e oferece tentar de novo, em vez de liberar o uso.
+- O coordenador de projeto vê só o que é dos seus projetos: sem os saldos da organização e, nos lançamentos que pode vincular a um projeto, sem a identificação de quem pagou ou recebeu (aparecem valor, data e categoria). Vincular continua funcionando como antes. A mudança vale para o cargo padrão; cargos personalizados não mudam.
+- O caderno da Comissão Fiscal em PDF ganhou logo e nome da organização, cores para receita, despesa e transferência e para a situação de conciliação (com legenda), tabelas mais legíveis, sem datas e tipos quebrados em duas linhas, e páginas numeradas. O conteúdo e as contas não mudam.
+
+### Corrigido
+
+- A conferência de quem pode aprovar voltou a funcionar, inclusive na aba de pedidos de pagamento aprovados.
+
+## [1.150.1] — 2026-11-02
+
+### Corrigido
+
+- No Telegram, a opção "Já está pago" só aparece para quem pode registrar pagamento. Para as demais pessoas, o lançamento segue como "A pagar" desde a etapa de escolha, em vez de só ser recusado no fim.
+- Em Configurações, Contas bancárias, a conta que já tem histórico deixa de oferecer "Excluir definitivamente" e passa a oferecer "Desativar conta".
+
+## [1.150.0] — 2026-11-02
+
+<!-- destaque: Preencha reembolso, pedido de pagamento e lançamento a partir da foto ou do PDF do comprovante. -->
+
+### Adicionado
+
+- Agora dá para preencher reembolso, pedido de pagamento e lançamento a partir da foto ou do PDF do comprovante. Toque em "Preencher a partir do arquivo" e confira os campos: o que veio do documento fica marcado, e nada que você já digitou é trocado sem você escolher.
+- Pelo Telegram, quem pode lançar já consegue mandar o comprovante dizendo "lança isso". O assistente pergunta o que faltar, pede a confirmação e anexa o arquivo ao lançamento criado.
+
+## [1.149.0] — 2026-11-02
+
+### Modificado
+
+- Agora você escolhe separadamente se o gestor de centro de custo aprova reembolsos e se aprova pedidos de pagamento, e vê quantas pessoas podem aprovar em cada caso.
+- Na lista e no detalhe do pedido de pagamento, o aviso de que você pode aprovar sem outro aprovador disponível passa a considerar a regra dos pedidos de pagamento, e não a dos reembolsos.
+
+## [1.148.0] — 2026-11-02
+
+<!-- destaque: Importe o extrato do seu banco do jeito que ele vem e confira as colunas antes de importar. -->
+
+### Adicionado
+
+- Agora dá para importar o extrato do seu banco do jeito que ele é baixado, separado por vírgula, ponto e vírgula ou tabulação. A tela mostra as colunas do arquivo, sugere o que é cada uma e lembra suas escolhas para a próxima vez que chegar um arquivo com as mesmas colunas. O modelo da casa continua entrando direto, sem passo extra.
+
+### Modificado
+
+- Quando a importação não puder seguir, você vê o motivo de verdade, e a mensagem "tente novamente" só aparece quando tentar de novo pode resolver.
+- O saldo inicial de uma conta pode ser negativo.
+
+### Corrigido
+
+- Transferências com efetivação marcada para um dia agora contam exatamente nesse dia: uma efetivação para amanhã continua prevista até lá.
+
+## [1.147.1] — 2026-11-02
+
+### Corrigido
+
+- O botão de fechar das janelas deixa de ficar por cima do título e da descrição, inclusive em tela estreita.
+- Na tela de Orçamento, a seta ao lado de uma categoria sem valor previsto agora abre uma orientação ("Defina o valor previsto da categoria para distribuí-lo por mês."), em vez de girar sem mostrar nada.
+
 ## [1.147.0] — 2026-11-02
 
 ### Modificado
