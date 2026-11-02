@@ -11,6 +11,17 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.146.0] — 2026-11-02
+
+### Adicionado
+
+- Vincular a um projeto um lançamento que já está pago passa a pedir um motivo, que fica registrado. Vale para o diálogo de vincular lançamentos ao projeto e para o vínculo retroativo dos produtos da loja virtual: a tela avisa quantos dos itens selecionados já estão pagos e só confirma com o motivo. Lançamento ainda não pago continua sendo vinculado sem motivo, e o vínculo em lote segue valendo por inteiro ou não vale.
+
+### Modificado
+
+- O coordenador de projeto vê apenas os lançamentos dos projetos que coordena e pode abrir o detalhe deles. O menu Movimentações deixa de aparecer para esse cargo; saldos e orçamento continuam como antes. A mudança vale para o cargo padrão, nas organizações que já existem e nas novas; cargos personalizados não mudam.
+- O convite para a organização explica o que acontece para quem já tem conta (entra e confirma o vínculo) e para quem ainda não tem (define a senha ou entra com o Google). O texto vale para o aviso ao incluir a pessoa e para o e-mail "Definir meu acesso".
+
 ## [1.145.1] — 2026-11-02
 
 ### Modificado
