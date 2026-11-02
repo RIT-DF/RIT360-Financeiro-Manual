@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: RIT360 Financeiro — API de resumo financeiro
-  version: "1.0.0"
+  version: "1.1.0"
   description: |
     Leitura de indicadores financeiros AGREGADOS de uma organização, para
     consumo por sistemas parceiros.
@@ -142,14 +142,29 @@ components:
         currency: { type: string, enum: [BRL] }
         balance:
           type: object
-          description: Saldo das contas — apenas realizado, sem valores previstos.
-          required: [total]
+          description: >-
+            Saldo das contas NA DATA DE HOJE — apenas realizado, sem valores
+            previstos. Não depende do período `from`/`to` pedido: `from` e `to`
+            recortam somente `realized` e `breakdown`.
+            `total` soma todas as contas ativas. `available` exclui as contas
+            marcadas como de uso restrito (convênio, emenda, fundo);
+            `restricted` é exatamente o que ficou de fora, e
+            `total = available + restricted`.
+          required: [total, available, restricted]
           properties:
             total: { type: number }
+            available: { type: number }
+            restricted: { type: number }
         realized:
           type: object
-          description: Movimentação realizada no período.
+          description: >-
+            Realizado no período: apenas lançamentos efetivamente pagos, pela
+            data de pagamento. Não inclui previstos (pendentes ou atrasados),
+            cancelados nem estornados, e transferências entre contas próprias
+            também ficam de fora. É o mesmo conjunto da prestação de contas do
+            mesmo recorte.
           required: [receitas, despesas, resultado]
+
           properties:
             receitas: { type: number }
             despesas: { type: number }
