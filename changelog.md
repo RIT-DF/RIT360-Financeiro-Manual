@@ -11,6 +11,26 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.153.4] — 2026-11-02
+
+### Corrigido
+
+- No Telegram, o assistente volta a lembrar a organização da conversa em andamento, sem perguntar de novo a cada mensagem.
+
+## [1.153.3] — 2026-11-02
+
+### Corrigido
+
+- O aviso de que a despesa fica sem fonte no acompanhamento do projeto agora some quando você escolhe a fonte.
+- A lista de categorias da rubrica, no plano de trabalho do financiador, virou uma coluna alinhada, mais fácil de marcar.
+- No Telegram, a pergunta passou a ser "De qual organização?" e, quando você cita o nome da organização na mensagem, o assistente já usa ela e avisa qual foi.
+
+## [1.153.2] — 2026-11-02
+
+### Corrigido
+
+- O bloco "Auditoria" do lançamento agora só aparece para quem tem permissão de vê-lo. Quando a consulta falha, aparece uma mensagem de erro em vez do aviso de histórico vazio.
+
 ## [1.153.1] — 2026-11-02
 
 ### Corrigido
