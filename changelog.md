@@ -11,6 +11,56 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.143.0] — 2026-11-02
+
+### Modificado
+
+- Conferências mais rígidas em arquivos compactados, em endereços de loja virtual e em fotos de perfil.
+- Planilhas enviadas por você passam a ser lidas por uma biblioteca mais segura, com os mesmos formatos e as mesmas mensagens de antes.
+- O parecer externo da Comissão Fiscal só pode ser registrado depois da deliberação da comissão. O sistema confere que o arquivo guardado não mudou desde o envio.
+- O relatório de erros da importação de pessoas não traz mais CPF nem RG.
+- O motivo também pode ser informado ao excluir um único lançamento, como já era na exclusão em lote.
+- Organização em análise: as telas de integrações e a página pública agora explicam que a organização está em análise, em vez de mostrar um erro genérico.
+- O pacote de documentos acima de 200 MB é recusado, com uma explicação.
+
+## [1.142.0] — 2026-11-02
+
+### Adicionado
+
+- Na baixa em lote de lançamentos, cada recusa aparece com o nome do lançamento e o motivo.
+- A exclusão de lançamentos pode trazer o motivo.
+- No pedido de pagamento, aparece o aviso de que um voto foi dado antes de o valor mudar e, por isso, não vale mais.
+
+### Modificado
+
+- O botão de pagar mostra o motivo antes de você tentar, quando o pagamento não pode ser feito por você.
+- Pelo Telegram, só cria pedido quem pode criar no aplicativo.
+- Erros da loja virtual aparecem pedido por pedido, sem esconder os demais.
+
+## [1.141.0] — 2026-11-02
+
+### Corrigido
+
+- Aprovações feitas ao mesmo tempo não geram mais lançamento duplicado.
+- Quando a aprovação falha no meio do caminho, o pedido volta a aguardar decisão em vez de ficar aprovado sem lançamento.
+- Voto dado antes de uma mudança de valor não conta mais na aprovação.
+
+### Modificado
+
+- Quem aprovou um pedido não pode pagá-lo quando outra pessoa pode. Se for a única pessoa habilitada, o pagamento é feito e fica registrado, com aviso aos administradores.
+- O histórico de alterações dos lançamentos passa a mostrar quem fez cada operação.
+
+## [1.140.0] — 2026-11-02
+
+### Adicionado
+
+- O administrador da plataforma pode ativar a verificação em duas etapas em Meu perfil, com aplicativo autenticador e códigos de recuperação.
+
+### Modificado
+
+- Trocar a senha ou o e-mail passa a pedir a senha atual.
+- Trocar ou redefinir a senha desconecta os outros aparelhos.
+
 ## [1.139.1] — 2026-11-02
 
 ### Corrigido
