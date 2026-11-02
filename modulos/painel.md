@@ -73,6 +73,10 @@ O card **Este mês** mostra o **resultado do que já aconteceu de fato** — rec
 
 O que venceu e ainda não foi resolvido não some da tela — aparece **à parte**, logo abaixo do resultado, com as duas pontas separadas: quanto **venceu e não foi pago** e quanto **venceu e não foi recebido**. Antes da v1.80.1 os dois números viravam um só, somando coisas opostas (uma despesa em aberto e uma receita em aberto se cancelavam parcialmente no mesmo total); agora cada ponta aparece com o próprio valor.
 
+> 🔒 **Privacidade · O resumo do mês não aparece para todo cargo**
+>
+> O card **Este mês** soma o financeiro da OSC inteira, então só aparece para quem tem permissão de **ver lançamentos ou relatórios**. Um **voluntário**, ou qualquer cargo sem essas permissões, não vê o resumo do mês — o Painel dele mostra o que é dele (pendências e solicitações). Já os saldos seguem a regra própria: quem tem **Ver saldo das contas** continua vendo os saldos completos, mesmo sem ver o resumo do mês.
+
 > 💡 **Por que isso importa**
 >
 > Um resultado que mistura o que já aconteceu com o que só está previsto engana: uma conta de luz que ainda não venceu não deveria "piorar" o resultado do mês antes da hora, e uma doação só prometida não deveria "melhorá-lo" antes de cair na conta. Separando realizado de pendente, o card responde exatamente "como fechou o mês até agora" — e a informação sobre o que está atrasado continua visível, só que sem embaralhar com o resultado.

@@ -11,6 +11,30 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.145.1] — 2026-11-02
+
+### Modificado
+
+- Excluir um lançamento agora exige o motivo, em todas as telas em que a exclusão é possível.
+
+### Corrigido
+
+- Quando uma consulta falha, a tela deixa de mostrar passos como pendentes nos Primeiros passos e de mostrar "sem histórico" na prestação de contas. Em vez disso, avisa que não foi possível carregar.
+
+## [1.145.0] — 2026-11-02
+
+### Adicionado
+
+- Ao mudar o projeto de um item já pago (lançamento, pedido de pagamento ou reembolso), a tela pede o motivo, que fica registrado.
+
+### Modificado
+
+- Documentos de um lançamento já pago só podem ser incluídos ou removidos por quem pode pagar ou gerir lançamentos.
+- O resumo do mês no painel aparece só para quem pode ver lançamentos ou relatórios.
+- Quem não tem permissão para ver lançamentos deixa de ver os de outras pessoas e passa a ver apenas os dos seus projetos, centros de custo e pedidos. Os saldos continuam aparecendo para quem tem essa permissão.
+- Na configuração do fluxo de orçamento, cada pessoa altera só a parte que lhe cabe; o restante aparece bloqueado, com o motivo.
+- Quem sai da organização perde, na hora, o acesso aos projetos e às aprovações.
+
 ## [1.144.1] — 2026-11-02
 
 ### Modificado

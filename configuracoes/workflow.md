@@ -95,6 +95,10 @@ Você pode indicar como aprovador até um **membro recém-cadastrado que ainda n
 >
 > A regra de "papéis aprovadores" cobre 95% dos casos da maioria das OSCs. **Pessoas específicas** são o mecanismo de exceção — use com parcimônia. Lista de aprovadores individuais com 8 nomes é sintoma de governança confusa: ou simplifique para papéis bem definidos, ou ajuste papéis no Cadastro de Usuários para cobrir esses casos.
 
+> ⚠️ **Atenção · Aprovador com acesso desativado não vota — mas a designação não se perde**
+>
+> Quem está com o **acesso desativado** não aprova nada, mesmo que continue na lista de pessoas nomeadas, e **não entra na contagem** de "pessoas aptas a aprovar". A designação fica guardada: **reativando o acesso** em [Configurações → Usuários](/configuracoes/usuarios/), a pessoa volta a votar sem precisar ser nomeada de novo. Já quem foi **removido da organização** perde tudo — se for incluído outra vez mais tarde, entra como alguém novo e precisa ser nomeado de novo. Antes de desativar um aprovador, confira se a OSC continua com gente suficiente para o quórum.
+
 ## Gestor de centro de custo como aprovador
 
 Além dos papéis e das pessoas específicas, a OSC pode permitir que o **gestor de um centro de custo** aprove os pagamentos e reembolsos **do próprio centro de custo que ele gerencia**. O ajuste fica no bloco **Quem pode aprovar** e começa **desligado** — cada OSC liga conforme o seu estatuto.
@@ -180,6 +184,10 @@ A aba **Orçamento** define as regras de governança do [orçamento anual](/modu
 - **Permitir auto-aprovação** — quando ligado, quem enviou o orçamento pode aprová-lo **apenas se for o único aprovador elegível** da OSC (mesma lógica conservadora dos demais fluxos: a auto-aprovação fica registrada na auditoria como `self_approved`).
 - **Limiar de revisão** — o tamanho de mudança a partir do qual uma revisão do orçamento aprovado **volta para aprovação** em vez de ser aplicada direto. Ajustes abaixo do limiar entram na hora; acima dele, exigem novo "sim" da diretoria. Toda revisão, grande ou pequena, exige um **motivo** registrado na auditoria.
 - **Alertas de execução** — a partir de quais percentuais do previsto o sistema avisa (padrão: **80%** e **100%**) e para quem (gestor do centro de custo e tesoureiro).
+
+> ⚠️ **Atenção · Parte bloqueada na tela quer dizer falta de permissão**
+>
+> Nesta aba, cada parte da configuração que o **seu cargo não tem permissão de alterar** aparece **bloqueada**, com o motivo escrito ao lado — em vez de deixar você mexer e só recusar na hora de salvar. Se você precisa alterar uma parte bloqueada (por exemplo, quem aprova o orçamento), peça ao Presidente ou a quem tem o cargo com essa permissão; ver [Cargos e permissões](/configuracoes/cargos/).
 
 > 💡 **Por que isso importa**
 >

@@ -55,6 +55,8 @@ Visão rápida do que cada papel pode fazer. **✓** = pode operar · **👁** =
 
 > 💡 **Confirmar pagamento** aparece como linha própria porque é uma **permissão separada** de lançar/editar: dá para montar um cargo que registra despesas mas não dá baixa em pagamentos. Nos papéis padrão, quem lança também paga — a separação só acontece se a OSC quiser, em [Cargos e permissões](/configuracoes/cargos/#permissao-pagar). Essa mesma permissão define quem vê os **dados bancários completos** de quem recebe.
 
+> 🔒 **Voluntário e cargos sem permissão de ver lançamentos ou relatórios** não enxergam o financeiro da OSC inteira: veem só os lançamentos dos **seus projetos**, dos **centros de custo** pelos quais respondem e dos **pedidos** que fizeram, e **não veem o resumo do mês** do Painel. Quem tem a permissão **Ver saldo das contas** continua vendo os saldos completos mesmo assim — ver [Movimentações](/modulos/movimentacoes/) e [Painel](/modulos/painel/).
+
 > 💡 O **Gestor de Centro de Custo** não aparece nesse quadro porque o acesso dele não é da OSC inteira, e sim **recortado ao(s) centro(s) de custo sob sua responsabilidade** — ver a seção "Gestor de Centro de Custo", abaixo.
 
 ## Gestor de Centro de Custo

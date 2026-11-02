@@ -301,6 +301,10 @@ Isso não é defeito: o sistema está protegendo a conta da pessoa. Uma conta qu
 >
 > Desativar bloqueia entrada mas **preserva todo o histórico** (lançamentos criados, aprovações dadas, comentários escritos). Para auditoria e prestação de contas, isso é essencial — você consegue mostrar quem fez o quê mesmo depois que a pessoa saiu. O RIT360 Financeiro não tem opção de "excluir usuário"; só "desativar" + histórico preservado. Quem deixou a OSC: desative.
 
+> ⚠️ **Atenção · Desativar suspende os poderes; remover apaga o vínculo**
+>
+> Pessoa **desativada** não tem poder nenhum em **projetos** nem em **aprovações** enquanto estiver assim: não coordena, não é responsável por nada, não vota. Mas as designações ficam guardadas, e **ao reativar** a pessoa volta exatamente ao que era — coordenadora do mesmo projeto, aprovadora como antes. Já **remover da organização** é definitivo para esses vínculos: a pessoa perde tudo, e, se for incluída de novo no futuro, **não recupera os projetos antigos** — cada vínculo precisa ser refeito. O histórico do que ela fez continua preservado nos dois casos. Na dúvida entre as duas, e se há chance de a pessoa voltar (licença, afastamento temporário), **desative**.
+
 ## Solicitações pendentes
 
 Em OSCs com **acesso público ao link de vínculo** ativado (em Configurações → Organização), pessoas externas podem pedir entrada espontaneamente. As solicitações pendentes aparecem em uma seção separada, com botão **Aprovar** ou **Rejeitar**. Aprovar gera o convite formal; rejeitar nega o acesso sem criar conta. **Rejeitar** pede um **motivo**, que não aceita endereço de site ou de e-mail (a tela responde *"Este campo não aceita endereço de site."*) — escreva em palavras, sem colar o link.

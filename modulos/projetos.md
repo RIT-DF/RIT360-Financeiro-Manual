@@ -330,9 +330,13 @@ Essa participação passa a ser **só registro**: não dá mais para mudar o pap
 
 O histórico, porém, continua consultável: quem saiu **permanece no filtro de responsáveis** das tarefas, para você conseguir ver o que aquela pessoa tocou enquanto esteve no projeto.
 
+> ⚠️ **Atenção · Voltar à organização não devolve os projetos antigos**
+>
+> Quem foi removido da organização perde todos os poderes que tinha. Se a pessoa for incluída outra vez no futuro, ela **não recupera** a coordenação nem a participação nos projetos de antes — a linha de ex-membro continua como registro, e é preciso adicioná-la de novo à equipe de cada projeto em que ela deve atuar. Se a saída é só uma pausa (licença, afastamento), prefira **desativar** o acesso: aí o retorno é automático.
+
 ### E quem só está com o acesso desativado?
 
-É uma situação diferente, e a equipe agora **mostra a diferença**: quem continua vinculado à OSC mas está com o **acesso desativado** aparece com o selo **"Desativado"** ao lado do papel no projeto — não com o selo de ex-membro. Enquanto estiver assim, o papel dessa pessoa no projeto **não é editável pela tela**.
+É uma situação diferente, e a equipe agora **mostra a diferença**: quem continua vinculado à OSC mas está com o **acesso desativado** aparece com o selo **"Desativado"** ao lado do papel no projeto — não com o selo de ex-membro. Enquanto estiver assim, o papel dessa pessoa no projeto **não é editável pela tela** — e ela **não tem poder nenhum** no projeto nem nas aprovações: não coordena, não pede pagamento em nome do projeto, não vota. O papel fica guardado, e **ao reativar o acesso ela volta a ser a coordenadora (ou o que era) do mesmo projeto**, sem precisar ser adicionada de novo.
 
 A distinção importa na hora de entender por que alguém sumiu do projeto no dia a dia: **desativado** é reversível (basta reativar o acesso em Configurações → Usuários e a pessoa volta a atuar); **ex-membro** é definitivo — a pessoa saiu da organização e a participação virou só registro.
 
@@ -790,7 +794,7 @@ Cada encerramento alimenta um **acervo de Lições Aprendidas** da OSC, acessív
 - **Ciclo de vida** — a sequência de status do projeto (Em planejamento → Aguardando aprovação → Em execução → Aguardando encerramento → Concluído; além de Pausado e Cancelado).
 - **Coordenador do projeto** — papel no projeto que conduz o planejamento, as tarefas e as solicitações financeiras.
 - **Ex-membro da organização** — pessoa que saiu da OSC e permanece na equipe do projeto apenas como registro histórico: não recebe novas atribuições e não pode ser editada nem removida da equipe.
-- **Desativado** — pessoa que continua vinculada à OSC, mas com o acesso suspenso. Aparece na equipe com esse selo; volta a atuar assim que o acesso é reativado.
+- **Desativado** — pessoa que continua vinculada à OSC, mas com o acesso suspenso. Aparece na equipe com esse selo; não tem poder em projetos nem em aprovações enquanto durar, e volta a atuar, com as mesmas designações, assim que o acesso é reativado.
 - **Saúde** — semáforo (Saudável/Atenção/Crítico) que resume Prazo, Orçamento e Riscos.
 - **Marco** — entrega ou etapa com data prevista.
 - **Severidade do risco** — Probabilidade × Impacto, para priorizar riscos.

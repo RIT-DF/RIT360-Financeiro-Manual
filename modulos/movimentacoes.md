@@ -110,6 +110,12 @@ Para ordenar a lista no celular, use o seletor **"Ordenar por"** logo acima dos 
 
 Ao abrir a tela, ela já vem filtrada pelo **mês corrente** — o que você está operando agora. Para ver períodos anteriores ou outros recortes, use o filtro de período.
 
+> 🔒 **Privacidade · Sem a permissão de ver, você enxerga só o que é seu**
+>
+> Quem tem a permissão de **ver lançamentos** (ou de **ver relatórios**) enxerga o financeiro da OSC inteira. Um **voluntário**, ou qualquer cargo sem nenhuma das duas, **não vê a lista completa**: aparecem só os lançamentos dos **projetos** em que ele participa, dos **centros de custo** pelos quais responde e dos **pedidos** (reembolsos e pedidos de compra e pagamento) que ele fez. Se você é voluntário e não encontra um lançamento que um colega comentou, em geral é isso — ele não pertence a nada seu. Precisa enxergar mais? Peça ao Presidente para ajustar o seu cargo em [Cargos e permissões](/configuracoes/cargos/).
+>
+> Ver o **valor do saldo** das contas é outra permissão, independente: quem tem **Ver saldo das contas** continua vendo os saldos completos, mesmo sem ver todos os lançamentos.
+
 ### Filtros e período contábil
 
 O período segue sendo o recorte principal:
@@ -214,7 +220,11 @@ Cada linha tem ícones de ação que mudam conforme o status:
 >
 > **Cancelar** marca o lançamento como anulado mas mantém o histórico — útil quando algo registrado não vai mais acontecer (evento desmarcado, fornecedor desistiu) e você quer rastreabilidade. **Excluir** apaga o lançamento de vez. O RIT360 Financeiro só permite excluir lançamentos já **cancelados**, justamente para evitar perda acidental; **estornos são preservados** (não podem ser excluídos) para manter a prestação de contas íntegra. Para auditoria limpa, prefira sempre **cancelar** a excluir.
 
-**Ao excluir, diga por quê.** Tanto na exclusão de um lançamento (no detalhe) quanto na exclusão em lote, a janela de confirmação traz o campo **Motivo da exclusão (opcional)** — até 500 caracteres, com o exemplo *"lançamento duplicado"*. O motivo fica registrado no histórico de alterações, junto com o **seu nome**: o histórico passa a mostrar quem fez cada operação. O campo não é obrigatório, mas vale preencher: meses depois, quando a comissão fiscal ou o auditor perguntar por que um lançamento sumiu, a resposta está lá.
+**Ao excluir, o motivo é obrigatório.** Tanto na exclusão de um lançamento (no detalhe) quanto na exclusão em lote, a janela de confirmação traz o campo **Motivo da exclusão** — até 500 caracteres, com o exemplo *"lançamento duplicado"*. Sem preencher, o botão de confirmar não libera. O motivo fica registrado no histórico de alterações, junto com o **seu nome**: o histórico mostra quem fez cada operação e por quê. A exigência existe porque, meses depois, quando a comissão fiscal ou o auditor perguntar por que um lançamento sumiu, a resposta precisa estar lá — e excluir não tem volta.
+
+> ✓ **Dica · Escreva o motivo para quem vai ler daqui a um ano**
+>
+> "Duplicado do lançamento de 12/03, mesma nota fiscal" explica; "erro" não. Na exclusão em lote, o motivo vale para todos os lançamentos da seleção — se forem causas diferentes, exclua em lotes separados.
 
 > ⚠️ **Atenção · Excluir não tem volta**
 >
@@ -453,6 +463,10 @@ A barra lateral direita também controla a repetição do lançamento:
 
 Você pode anexar arquivos (comprovantes, notas fiscais, contratos) ao lançamento. Anexo é **opcional** — lançamento sem comprovante continua válido — mas é fortemente recomendado para qualquer movimentação que tenha origem em compra, serviço contratado ou pagamento de terceiro. PDFs e imagens ganham pré-visualização inline na página de detalhe.
 
+> ⚠️ **Atenção · Lançamento já pago: nem todo mundo mexe nos documentos**
+>
+> Enquanto o lançamento está pendente, quem o registra anexa e remove comprovantes normalmente. **Depois de pago**, o comprovante passa a fazer parte da prova de que o dinheiro saiu, e por isso só **quem pode pagar** ou **quem pode criar e editar lançamentos** inclui ou remove documentos nele. Quem não tem nenhuma das duas permissões ainda vê o documento, mas não encontra a opção de anexar nem de excluir. Esqueceu um comprovante e não consegue anexar? Peça a quem cuida do financeiro — normalmente o Tesoureiro.
+
 **Em mobile**, a seção **DOCUMENTOS** exibe dois botões: **Tirar foto** (abre a câmera traseira do celular direto, com preview **Refazer** ou **Confirmar** antes de subir) e **Anexar arquivo**. O RIT360 Financeiro reduz a foto automaticamente antes do upload — fica leve mesmo em conexão móvel ruim, sem perder a legibilidade do cupom para auditoria humana ou para extração automática futura via IA.
 
 **Em desktop**, a seção mostra uma área para arrastar arquivos ou clicar para selecionar — o botão "Tirar foto" não aparece nesse contexto (webcam de laptop não serve para fotografar comprovante apoiado na mesa).
@@ -554,7 +568,7 @@ Para estornar: vá no detalhe do lançamento → botão **Estornar** → informe
 [![Corrigir dados de um lançamento pago](/assets/screenshots/mov-editar-cc-categoria-01.png)](/assets/screenshots/mov-editar-cc-categoria-01.png)
 *Corrigir dados — ajuste data de pagamento, conta bancária, categoria (ou a divisão entre categorias), centro de custo (ou a divisão entre centros de custo), projeto, descrição e/ou favorecido, e informe o motivo*
 
-**Quem pode:** exige a permissão **Criar / editar**, em Movimentações. Ver [Cargos e permissões](/configuracoes/cargos/).
+**Quem pode:** exige a permissão **Criar / editar**, em Movimentações. Ver [Cargos e permissões](/configuracoes/cargos/). Para **trocar o projeto** de um lançamento já pago, a regra é mais estrita (ver a caixa "Trocar o projeto de um lançamento pago", mais abaixo).
 
 Para corrigir:
 
@@ -583,6 +597,12 @@ Para corrigir:
 > 📖 **Conceito · Reclassificar não é remexer o dinheiro — mas trocar a conta é**
 >
 > Mudar a **categoria**, o **centro de custo**, o **projeto**, a **descrição** ou o **favorecido** de um lançamento pago muda só a **classificação gerencial** — os saldos das contas não mudam. Já mudar a **conta bancária** move o valor de fato entre os saldos das duas contas envolvidas, na data do pagamento — é o que corrige um erro de digitação (marcou a conta errada na hora de pagar) sem o custo de estornar e relançar. Como qualquer correção sobre lançamento pago, o **motivo** fica guardado na trilha de auditoria — quem prestar contas depois vê o que foi corrigido e por quê.
+
+> ⚠️ **Atenção · Trocar o projeto de um lançamento pago exige permissão e motivo**
+>
+> Mudar o projeto de um lançamento **já pago** muda os números de dois projetos de uma vez — e pode alterar uma prestação de contas que alguém já usou. Por isso só quem tem a permissão **Criar / editar**, em Movimentações, consegue fazer a troca, e o **motivo** precisa ter pelo menos **10 caracteres** (ex.: "Despesa da oficina de março, lançada por engano no projeto Biblioteca"). Motivo curto demais bloqueia o botão de confirmar.
+>
+> **Quem apenas lançou a despesa** (o autor), sem essa permissão, só muda o projeto **antes de ela ser paga**. Depois do pagamento, a troca precisa ser feita por quem tem a permissão — peça a ela. A mesma regra vale para **Atribuir projeto** em lote, quando a seleção inclui lançamento pago.
 
 > ⚠️ **Atenção · Trocar o projeto pode ser recusado pela categoria do lançamento**
 >
