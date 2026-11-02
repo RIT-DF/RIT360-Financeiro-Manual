@@ -3,16 +3,16 @@ title: "Privacidade"
 nav_order: 1
 parent: "Termos e Privacidade"
 permalink: /privacidade/
-version: "1.6"
-change_summary: "Atualizamos esta Política por causa das novas regras de segurança da plataforma. Explicamos como o CPF e o RG são guardados e quem pode informá-los antes de você entrar na plataforma. Informamos que registramos as tentativas de acesso e de segundo fator, com um resumo irreversível do endereço IP e do navegador, para limitar tentativas e detectar abuso. Descrevemos o assistente por Telegram: o comprovante que você envia é lido por um provedor de inteligência artificial, e você confere o resultado antes de confirmar. Acrescentamos à lista de subprocessadores o Telegram e os provedores de inteligência artificial Google (Gemini), OpenAI e Anthropic. Incluímos na tabela de prazos de guarda os dados temporários da plataforma e definimos o prazo dos documentos de prestação de contas: 10 anos, que a organização pode alterar, inclusive para guardar sem prazo de descarte. Por fim, a organização recusada na análise segue os mesmos prazos das encerradas."
-requires_reconsent: true
+version: "1.7"
+change_summary: "Esclarecemos que a leitura de comprovantes por inteligência artificial também acontece quando você usa o botão \"Preencher a partir do arquivo\" nas telas de reembolso, pedido de pagamento e lançamento, e não só pelo assistente do Telegram. Os provedores, a finalidade e a conferência antes de gravar continuam os mesmos. Incluímos o prazo de guarda do resultado dessa leitura: 24 horas."
+requires_reconsent: false
 ---
 
 # Política de Privacidade — RIT360 Financeiro
 
 <!-- Data de vigência: ajustar se a publicação ocorrer em outro dia. -->
 **Vigência:** 2 de novembro de 2026
-**Versão:** 1.6
+**Versão:** 1.7
 
 ---
 
@@ -87,7 +87,7 @@ Nas três últimas situações, a pessoa **não tem conta na plataforma** e seus
 
 **Quando você envia um feedback pela tela de feedback**, o conteúdo da mensagem e a sua identificação — nome, e-mail, organização, papel e cargo — são registrados em uma ferramenta de acompanhamento de tarefas, para que o pedido seja tratado pela nossa equipe.
 
-**Assistente por Telegram.** Se você vincular sua conta ao Telegram e enviar um comprovante ao assistente, o arquivo e o texto da sua mensagem são enviados a um provedor de inteligência artificial, que extrai os dados para preparar o lançamento. Você confere o resultado antes de confirmar. O comprovante pode conter dados de outras pessoas: envie apenas o que a sua organização autoriza.
+**Leitura de comprovantes por inteligência artificial.** Quando você envia um comprovante ao assistente por Telegram, ou usa o botão "Preencher a partir do arquivo" nas telas de reembolso, pedido de pagamento e lançamento, o arquivo (e, no Telegram, o texto da sua mensagem) é enviado a um provedor de inteligência artificial, que extrai valor, data, fornecedor e descrição para preparar o registro. Nada é gravado sem você conferir e confirmar. O resultado da leitura fica guardado por 24 horas, para não repetir a leitura do mesmo arquivo. O comprovante pode conter dados de outras pessoas: envie apenas o que a sua organização autoriza.
 
 ### 3.2 Dados de destinatários de pagamentos (não usuários)
 
@@ -191,11 +191,11 @@ Para operar a plataforma, utilizamos os seguintes serviços de terceiros. Alguns
 | **WooCommerce** | Importação de pedidos da loja virtual (quando ativada pela OSC) | Definida pela organização |
 | **GitHub** | Registro e acompanhamento dos feedbacks enviados pelos usuários (repositório privado) | Estados Unidos |
 | **Telegram** (quando você vincula sua conta) | Envio de notificações e recebimento de mensagens ao assistente. Recebe o identificador da conversa, e o título, o texto e o link de cada aviso | Emirados Árabes Unidos (Telegram FZ-LLC), com servidores em vários países |
-| **Google (Gemini)**, **OpenAI** e **Anthropic** (quando você usa o assistente por Telegram) | Leitura de comprovantes enviados ao assistente. Um é usado como alternativa quando outro falha | Estados Unidos |
+| **Google (Gemini)**, **OpenAI** e **Anthropic** (quando você usa o assistente por Telegram ou o botão "Preencher a partir do arquivo") | Leitura de comprovantes enviados por você. Um é usado como alternativa quando outro falha | Estados Unidos |
 
 Google Drive e WooCommerce são recursos opcionais, ativados a critério de cada OSC. A ativação implica a aceitação da política de privacidade do respectivo fornecedor.
 
-Telegram e os provedores de inteligência artificial só recebem dados de quem vincula a conta e usa esses recursos.
+O Telegram só recebe dados de quem vincula a conta. Os provedores de inteligência artificial só recebem os comprovantes que você pede para ler.
 
 ---
 
@@ -228,6 +228,7 @@ Os prazos abaixo são os que a plataforma aplica. Nos dados que a organização 
 | Códigos de vínculo do Telegram | Apagados 1 dia depois de vencer |
 | Convites não aceitos | Apagados 30 dias depois de vencer |
 | Registro das mensagens já processadas pelo assistente | 30 dias |
+| Resultado da leitura de comprovantes por inteligência artificial | 24 horas |
 
 Após os prazos acima, os dados são eliminados de forma segura ou anonimizados de modo irreversível.
 

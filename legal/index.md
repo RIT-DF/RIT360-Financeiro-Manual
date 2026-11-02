@@ -11,7 +11,7 @@ Documentos legais do RIT360 Financeiro, operado pela RIT — Rede de Inovação 
 
 | Documento | Versão vigente |
 |---|---|
-| [Política de Privacidade](/privacidade/) | 1.6 |
+| [Política de Privacidade](/privacidade/) | 1.7 |
 | [Termos de Uso](/termos/) | 1.4 |
 
 Versões anteriores permanecem acessíveis por URL própria e imutável para fins de auditoria de consentimento.
