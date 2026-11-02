@@ -3,8 +3,8 @@ title: "Privacidade"
 nav_order: 1
 parent: "Termos e Privacidade"
 permalink: /privacidade/
-version: "1.7"
-change_summary: "Esclarecemos que a leitura de comprovantes por inteligência artificial também acontece quando você usa o botão \"Preencher a partir do arquivo\" nas telas de reembolso, pedido de pagamento e lançamento, e não só pelo assistente do Telegram. Os provedores, a finalidade e a conferência antes de gravar continuam os mesmos. Incluímos o prazo de guarda do resultado dessa leitura: 24 horas."
+version: "1.8"
+change_summary: "Incluímos o assistente com inteligência artificial, agora também dentro do sistema: o que é enviado ao provedor (o texto que você escreve e, se anexar, o arquivo), que nada é gravado sem a sua conferência, que as últimas trocas da conversa ficam guardadas por até 15 minutos sem uso, e que cada pedido gera um registro de uso sem o conteúdo da conversa, guardado por 12 meses."
 requires_reconsent: false
 ---
 
@@ -12,7 +12,7 @@ requires_reconsent: false
 
 <!-- Data de vigência: ajustar se a publicação ocorrer em outro dia. -->
 **Vigência:** 2 de novembro de 2026
-**Versão:** 1.7
+**Versão:** 1.8
 
 ---
 
@@ -88,6 +88,8 @@ Nas três últimas situações, a pessoa **não tem conta na plataforma** e seus
 **Quando você envia um feedback pela tela de feedback**, o conteúdo da mensagem e a sua identificação — nome, e-mail, organização, papel e cargo — são registrados em uma ferramenta de acompanhamento de tarefas, para que o pedido seja tratado pela nossa equipe.
 
 **Leitura de comprovantes por inteligência artificial.** Quando você envia um comprovante ao assistente por Telegram, ou usa o botão "Preencher a partir do arquivo" nas telas de reembolso, pedido de pagamento e lançamento, o arquivo (e, no Telegram, o texto da sua mensagem) é enviado a um provedor de inteligência artificial, que extrai valor, data, fornecedor e descrição para preparar o registro. Nada é gravado sem você conferir e confirmar. O resultado da leitura fica guardado por 24 horas, para não repetir a leitura do mesmo arquivo. O comprovante pode conter dados de outras pessoas: envie apenas o que a sua organização autoriza.
+
+**Assistente com inteligência artificial.** Quando você conversa com o assistente, dentro do sistema ou pelo Telegram, o texto que você escreve (e o arquivo, se você anexar) é enviado a um provedor de inteligência artificial, que identifica o que você está pedindo. As respostas sobre a sua organização (saldos, vencimentos, pedidos, projetos) são montadas pela plataforma com as mesmas permissões que você tem nas telas; nas dúvidas de uso, o provedor recebe também trechos do manual público. Nada é gravado sem você conferir: no sistema, o assistente abre o formulário já preenchido para você salvar. As últimas trocas da conversa ficam guardadas por até 15 minutos sem uso, só para o assistente entender a continuação, e são apagadas em até 1 hora depois disso. Cada pedido gera um registro de uso — quem pediu, quando, por qual canal, de que tipo e com qual resultado — **sem o texto da conversa nem o conteúdo de arquivos**, para a organização acompanhar a cota mensal. O assistente pode ser desligado por organização.
 
 ### 3.2 Dados de destinatários de pagamentos (não usuários)
 
@@ -191,11 +193,11 @@ Para operar a plataforma, utilizamos os seguintes serviços de terceiros. Alguns
 | **WooCommerce** | Importação de pedidos da loja virtual (quando ativada pela OSC) | Definida pela organização |
 | **GitHub** | Registro e acompanhamento dos feedbacks enviados pelos usuários (repositório privado) | Estados Unidos |
 | **Telegram** (quando você vincula sua conta) | Envio de notificações e recebimento de mensagens ao assistente. Recebe o identificador da conversa, e o título, o texto e o link de cada aviso | Emirados Árabes Unidos (Telegram FZ-LLC), com servidores em vários países |
-| **Google (Gemini)**, **OpenAI** e **Anthropic** (quando você usa o assistente por Telegram ou o botão "Preencher a partir do arquivo") | Leitura de comprovantes enviados por você. Um é usado como alternativa quando outro falha | Estados Unidos |
+| **Google (Gemini)**, **OpenAI** e **Anthropic** (quando você usa o assistente, no sistema ou pelo Telegram, ou o botão "Preencher a partir do arquivo") | Leitura de comprovantes enviados por você e interpretação das mensagens que você escreve ao assistente. Um é usado como alternativa quando outro falha | Estados Unidos |
 
 Google Drive e WooCommerce são recursos opcionais, ativados a critério de cada OSC. A ativação implica a aceitação da política de privacidade do respectivo fornecedor.
 
-O Telegram só recebe dados de quem vincula a conta. Os provedores de inteligência artificial só recebem os comprovantes que você pede para ler.
+O Telegram só recebe dados de quem vincula a conta. Os provedores de inteligência artificial só recebem os comprovantes que você pede para ler e as mensagens que você escreve ao assistente.
 
 ---
 
@@ -229,6 +231,8 @@ Os prazos abaixo são os que a plataforma aplica. Nos dados que a organização 
 | Convites não aceitos | Apagados 30 dias depois de vencer |
 | Registro das mensagens já processadas pelo assistente | 30 dias |
 | Resultado da leitura de comprovantes por inteligência artificial | 24 horas |
+| Últimas trocas da conversa com o assistente | Até 15 minutos sem uso; apagadas em até 1 hora depois disso |
+| Registro de uso do assistente (sem o texto da conversa nem o conteúdo de arquivos) | 12 meses |
 
 Após os prazos acima, os dados são eliminados de forma segura ou anonimizados de modo irreversível.
 
