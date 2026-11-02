@@ -11,6 +11,32 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.152.0] — 2026-11-02
+
+### Adicionado
+
+- O assistente do Telegram agora responde perguntas como "quais os saldos?", "o que vence esta semana?" ou "como está o projeto X?", sempre dentro do que você já pode ver no sistema.
+- Ele também abre reembolsos, pedidos de pagamento e lançamentos a partir de uma frase, sempre pedindo a sua confirmação antes de gravar.
+- Cada organização tem uma cota mensal de uso do assistente, e o administrador acompanha o consumo nas configurações. A leitura de comprovantes ("Preencher a partir do arquivo" e envio pelo Telegram) passa a contar na mesma cota.
+
+## [1.151.3] — 2026-11-02
+
+### Corrigido
+
+- Ao enviar um pedido de pagamento para aprovação com o documento obrigatório em branco, a tela agora aponta o campo e diz o que falta, em vez de não fazer nada. O mesmo aviso vale no envio de reembolso.
+
+## [1.151.2] — 2026-11-02
+
+### Corrigido
+
+- Quando uma nova versão da Política de Privacidade ou dos Termos de Uso é publicada sem exigir novo aceite, quem ainda não tinha aceitado a versão anterior que exigia continua com o aceite pendente. A página de aceite mostra a versão em vigor, e aceitá-la resolve a pendência.
+
+## [1.151.1] — 2026-11-02
+
+### Corrigido
+
+- A página de aceite da Política de Privacidade e dos Termos de Uso, e a tela que avisa quando não foi possível conferir os aceites, agora têm o botão "Sair". Quem preferir não aceitar pode encerrar a sessão, e a página explica como pedir a exclusão da conta.
+
 ## [1.151.0] — 2026-11-02
 
 ### Modificado
