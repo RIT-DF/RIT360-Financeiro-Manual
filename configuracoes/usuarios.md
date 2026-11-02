@@ -80,7 +80,7 @@ Para OSCs que estão migrando de outro sistema ou que precisam cadastrar muitos 
 
 > ⚠️ **Atenção · No Excel, formate CPF, RG e telefone como TEXTO antes de digitar**
 >
-> Se a coluna estiver no formato **Número** (o padrão do Excel para colunas novas), digitar um CPF como `012.345.678-00` ou um telefone com DDD `0121...` faz o Excel **apagar o zero à esquerda** — e não tem como o RIT360 Financeiro recuperar um dígito que já não está mais na planilha. Antes de preencher essas colunas, selecione-as e formate como **Texto** (botão direito → Formatar células → Texto, ou pela caixa de formato na barra superior). Datas de nascimento não têm esse problema — o Excel guarda a data corretamente e o RIT360 Financeiro interpreta certo na importação.
+> Se a coluna estiver no formato **Número** (o padrão do Excel para colunas novas), digitar um CPF como `001.234.567-00` ou um telefone com DDD `0121...` faz o Excel **apagar o zero à esquerda** — e não tem como o RIT360 Financeiro recuperar um dígito que já não está mais na planilha. Antes de preencher essas colunas, selecione-as e formate como **Texto** (botão direito → Formatar células → Texto, ou pela caixa de formato na barra superior). Datas de nascimento não têm esse problema — o Excel guarda a data corretamente e o RIT360 Financeiro interpreta certo na importação.
 
 > ⚠️ **Atenção · Limites da planilha**
 >

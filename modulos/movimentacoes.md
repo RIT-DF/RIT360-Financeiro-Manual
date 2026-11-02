@@ -391,6 +391,36 @@ Clique em **+ Novo lançamento** no topo da lista. O formulário abre em **pági
 - **Valor total**
 - **Conta** — qual conta financeira movimenta. Já vem **pré-selecionada com a [conta padrão](/configuracoes/contas/#conta-padrão)** da OSC; troque se for outra. O saldo de cada conta aparece junto no seletor — para quem tem a permissão [Ver saldo das contas](/configuracoes/cargos/#permissao-ver-saldo); sem ela, o seletor funciona igual, só sem mostrar o valor
 
+#### Sugestão a partir do histórico {#sugestao-do-historico}
+
+Lançar todo mês a mesma conta de luz, o mesmo aluguel ou a mesma papelaria é preencher de novo conta, categoria e projeto. Por isso o campo **Descrição** **oferece lançamentos anteriores da sua organização** enquanto você digita.
+
+[![Lista de sugestões abaixo do campo Descrição no novo lançamento: um lançamento anterior que começa com "Papel", com valor e data em letra pequena](/assets/screenshots/mov-sugestao-descricao-desktop.png)](/assets/screenshots/mov-sugestao-descricao-desktop.png)
+*Ao digitar "Papel" na descrição, a lista mostra o lançamento anterior parecido, com o valor e a data*
+
+1. No formulário, comece a digitar a **Descrição**.
+2. Se existir lançamento parecido, a lista aparece abaixo do campo, com o valor e a data de cada um.
+3. Clique no que serve. A descrição, a **conta**, a **categoria** e o **projeto** do lançamento anterior entram no formulário, e aparece o aviso **"Campos preenchidos a partir de um lançamento anterior. Confira e informe o valor."**
+4. Informe o **valor** (ele nunca vem da sugestão), confira as datas e salve.
+
+[![Formulário depois de escolher a sugestão: descrição, conta, categoria e projeto preenchidos, o aviso "Campos preenchidos a partir de um lançamento anterior" e o valor ainda em branco, com o checklist à direita acusando a falta do valor](/assets/screenshots/mov-sugestao-aplicada-desktop.png)](/assets/screenshots/mov-sugestao-aplicada-desktop.png)
+*Depois de escolher a sugestão: o valor continua em branco, e o checklist da direita avisa que falta*
+
+**Atenção ao que a sugestão deixa para você:** o **valor** e as **datas**. A data de vencimento do formulário continua sendo a de hoje, e a data de pagamento continua vazia — o novo lançamento **não** nasce marcado como pago. E dados de pagamento do favorecido, como chave PIX ou conta bancária, **nunca vêm da sugestão**: confira e informe de novo, a cada lançamento.
+
+**Se não quiser usar a sugestão:** ignore a lista e continue digitando. O formulário só muda se você clicar numa sugestão, e o que você já tinha digitado em outros campos (como o valor) continua lá; muda o texto da própria descrição, que passa a ser o da sugestão. Nada é gravado até você salvar.
+
+> ⚠️ **Atenção · Conta e categoria vêm junto — troque se este lançamento for de outra conta**
+>
+> Aceitar a sugestão escolhe a conta do lançamento antigo. Se este pagamento saiu de outra conta, o saldo errado será mexido e a conciliação com o extrato vai acusar a diferença. Confira o campo **Conta** antes de salvar.
+
+#### Preencher a partir do arquivo {#preencher-a-partir-do-arquivo}
+
+[![Trecho do formulário de novo lançamento com o botão "Preencher a partir do arquivo", a orientação para anexar a foto ou o PDF do comprovante e a área de anexos logo abaixo](/assets/screenshots/mov-preencher-do-arquivo-desktop.png)](/assets/screenshots/mov-preencher-do-arquivo-desktop.png)
+*O botão fica acima da área de anexos*
+
+Perto dos anexos há o botão **Preencher a partir do arquivo**, com a orientação *"Anexe a foto ou o PDF do comprovante para usar a leitura."* Depois de anexar o comprovante, ele lê o documento e propõe os campos; o que veio do documento fica **marcado**, e **nada que você já digitou é trocado sem você escolher**. A leitura é feita por inteligência artificial de terceiros (ver [Privacidade](/privacidade/)) — **confira valor, data e favorecido** antes de salvar.
+
 #### Conta com projeto e centro de custo padrão
 {: #conta-com-projeto-e-centro-de-custo-padrao }
 

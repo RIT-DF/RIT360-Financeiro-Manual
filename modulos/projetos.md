@@ -418,12 +418,6 @@ O Financeiro mostra o dinheiro do projeto sem tirar nada do caixa geral da OSC:
 ### Vincular lançamentos existentes
 {: #vincular-lançamentos-existentes }
 
-[![Janela "Vincular lançamentos existentes", com o filtro por conta, a faixa "N pode ser vinculado; M têm categoria fora das permitidas" e a lista de não elegíveis expandida, com a caixa desabilitada e o motivo em laranja](/assets/screenshots/manual-projetos-vincular-lancamentos-desktop.png)](/assets/screenshots/manual-projetos-vincular-lancamentos-desktop.png)
-*Vincular lançamentos existentes — os não elegíveis aparecem com o motivo, mas não podem ser marcados*
-
-[![A mesma janela no celular](/assets/screenshots/manual-projetos-vincular-lancamentos-mobile.png)](/assets/screenshots/manual-projetos-vincular-lancamentos-mobile.png)
-*A mesma janela, no celular*
-
 Ao clicar em **Vincular lançamentos existentes**, a janela lista as movimentações da organização que **ainda não têm projeto** — com busca por título ou contraparte e um **filtro por conta bancária**, útil quando a OSC segrega uma conta por projeto (ver [Conta com projeto e centro de custo padrão](/modulos/movimentacoes/#conta-com-projeto-e-centro-de-custo-padrao), em Movimentações) e você quer vincular só o que passou por aquela conta.
 
 A janela **conta**, o tempo todo, quantos lançamentos da lista **podem** e quantos **não podem** ser vinculados — a mesma regra de [Quando uma categoria não é aceita pelo projeto](#quando-uma-categoria-nao-e-aceita-pelo-projeto), acima: um projeto com categorias permitidas só aceita lançamento cuja categoria esteja na lista. Por padrão, a lista mostra só os elegíveis; um botão **"Mostrar os N não elegíveis"** traz os demais para conferência, com a caixa de seleção **desabilitada** em cada um — dá para ver por que ficaram de fora, mas não para marcá-los sem resolver o motivo primeiro.
@@ -445,7 +439,13 @@ A janela **conta**, o tempo todo, quantos lançamentos da lista **podem** e quan
 ### Quando algum lançamento já está pago
 {: #vincular-lancamento-ja-pago }
 
-Se, entre os lançamentos que você selecionou, **algum já estiver pago**, a janela avisa **quantos** — por exemplo, *"2 dos 5 selecionados já estão pagos"* (ou *"Os 3 lançamentos selecionados já estão pagos"*, quando são todos) — e abre um campo **de motivo**, obrigatório, com **pelo menos 10 caracteres**. Enquanto o motivo não tiver 10 caracteres (espaços no começo e no fim não contam), o botão de confirmar fica desabilitado; e, sem motivo, **nada é vinculado** — nem os pendentes da mesma seleção, porque o lote é aceito ou recusado inteiro. O motivo fica **registrado no histórico**. Selecionando só lançamentos pendentes ou atrasados, o campo nem aparece.
+[![Janela "Vincular lançamentos existentes" com três lançamentos já pagos selecionados: o aviso laranja "Os 3 lançamentos selecionados já estão pagos", o campo do motivo preenchido e o botão "Vincular 3 lançamentos" habilitado](/assets/screenshots/manual-projetos-vincular-lancamentos-desktop.png)](/assets/screenshots/manual-projetos-vincular-lancamentos-desktop.png)
+*Com lançamentos já pagos na seleção, a janela abre o campo do motivo, obrigatório — aqui já preenchido, com o botão de confirmar liberado*
+
+[![A mesma janela no celular, com o aviso dos lançamentos já pagos e o campo do motivo no alto da lista](/assets/screenshots/manual-projetos-vincular-lancamentos-mobile.png)](/assets/screenshots/manual-projetos-vincular-lancamentos-mobile.png)
+*A mesma janela, no celular*
+
+Se, entre os lançamentos que você selecionou, **algum já estiver pago**, a janela avisa **quantos** — por exemplo, *"2 dos 5 selecionados já estão pagos"* (ou *"Os 3 lançamentos selecionados já estão pagos"*, quando são todos) — e abre um campo **de motivo**, obrigatório, com **pelo menos 10 caracteres** (a própria tela diz *"Mínimo de 10 letras."*). Enquanto o motivo não tiver 10 caracteres (espaços no começo e no fim não contam), o botão de confirmar fica desabilitado; e, sem motivo, **nada é vinculado** — nem os pendentes da mesma seleção, porque o lote é aceito ou recusado inteiro. O motivo fica **registrado no histórico**. Selecionando só lançamentos pendentes ou atrasados, o campo nem aparece.
 
 O mesmo vale para o **vínculo retroativo das vendas do WooCommerce**: quando você associa um produto da loja ao projeto e a tela pergunta **"Vincular vendas passadas?"**, a janela mostra, do mesmo jeito, quantas das vendas encontradas já estão pagas e pede o motivo — seja você vincular todas ou só as **a partir de uma data**. Como as vendas da loja entram no RIT360 Financeiro já pagas, na prática o motivo costuma ser exigido nesse caminho.
 
@@ -460,6 +460,39 @@ O mesmo vale para o **vínculo retroativo das vendas do WooCommerce**: quando vo
 > ⚠️ **Atenção · Se aparecer "Motivo obrigatório"**
 >
 > A mensagem *"Há lançamento já pago. Escreva o motivo do vínculo (mínimo 10 letras). Nada foi vinculado."* significa exatamente isso: nada foi alterado. Escreva o motivo (10 caracteres ou mais) e confirme de novo.
+
+### Produtos da loja (WooCommerce) no projeto {#produtos-woocommerce}
+
+Quando a organização vende pela loja virtual — camisetas do grupo, inscrições, doações —, as vendas entram no RIT360 Financeiro como lançamentos já pagos. O bloco de **produtos do WooCommerce** na visão geral do Financeiro do projeto serve para dizer **qual produto da loja pertence a este projeto**, de modo que as vendas dele entrem como **receita do projeto** e não como receita solta da organização. Sem isso, o dinheiro da campanha aparece no caixa geral e o relatório do projeto fica sem a receita que ele mesmo gerou.
+
+> 📖 **Conceito · Só aparece com a loja conectada**
+>
+> O bloco depende da integração com a loja: em **Configurações → Organização → WooCommerce**, a integração precisa estar **ativa** e o **catálogo de produtos** precisa ter sido sincronizado (botão **Sincronizar produtos do WooCommerce**, que mostra a data da última sincronização). Essa sincronização só traz a lista de produtos — não cria lançamentos nem altera pedidos. Com a integração desativada, o bloco não aparece no projeto.
+
+**Associar um produto ao projeto**
+
+1. Abra o projeto e vá à aba **Financeiro**; o bloco de produtos do WooCommerce fica na **Visão geral**.
+2. Escolha, entre os produtos sincronizados da loja, o que pertence a este projeto.
+3. Ao associar, a tela pergunta **"Vincular vendas passadas?"**:
+   - **Não** — nenhuma venda antiga é atribuída ao projeto; a pergunta é só sobre as vendas que **já aconteceram**.
+   - **Sim** — você escolhe se vincula **todas** as vendas já importadas desse produto ou **só as a partir de uma data**; as vendas encontradas são atribuídas ao projeto de uma vez.
+4. Se, entre as vendas encontradas, **alguma já estiver paga** — e as vendas da loja entram no sistema já pagas, então na prática é o caso comum —, a janela avisa quantas e **pede o motivo** do vínculo (obrigatório, mínimo de 10 caracteres, fica registrado no histórico). Sem o motivo, nada é vinculado. É a mesma regra de [Quando algum lançamento já está pago](#vincular-lancamento-ja-pago).
+
+<!-- CAPTURA PENDENTE: bloco "Produtos do WooCommerce" na visão geral do Financeiro de um projeto, e a pergunta "Vincular vendas passadas?" com o aviso de vendas já pagas e o campo do motivo. Rota /projetos/{id}?aba=financeiro, desktop e mobile. Não deu para capturar em 02/11/2026: na OSC Alpha a integração com a loja está desativada (Configurações → Organização → WooCommerce), e por isso o bloco não aparece em nenhum projeto; ligá-la exige credenciais da loja e grava configuração. Arquivos esperados: manual-projetos-produtos-woocommerce-desktop.png, manual-projetos-produtos-woocommerce-vendas-passadas-desktop.png -->
+
+> ⚠️ **Atenção · "Vincular vendas passadas" muda os totais do projeto**
+>
+> As vendas antigas passam a contar como receita **deste** projeto: o saldo, a receita realizada e o relatório de acompanhamento dele mudam na hora. Vincule a partir de uma **data** quando o produto da loja existia antes do projeto (um produto reaproveitado de uma campanha anterior, por exemplo) — assim as vendas da campanha passada não entram na prestação de contas da atual. Ao escolher "todas", confira antes se todas as vendas daquele produto de fato pertencem ao projeto.
+
+> ✓ **Dica · O motivo é o que o auditor vai ler**
+>
+> Escreva o motivo como quem explica para a comissão fiscal: *"Vendas de camisetas de 2026, arrecadadas para o projeto desde o primeiro lote"* diz mais do que *"ajuste"*. O motivo fica no histórico dos lançamentos vinculados.
+
+**Quando dá errado**
+
+- **O produto que você procura não está na lista:** o catálogo não foi sincronizado desde que o produto foi criado na loja. Em **Configurações → Organização → WooCommerce**, use **Sincronizar produtos do WooCommerce**.
+- **O botão de confirmar não habilita:** o motivo ainda tem menos de 10 caracteres (espaços no começo e no fim não contam).
+- **Nada foi vinculado depois de recusar o motivo:** o lote é aceito ou recusado inteiro; refaça a operação com o motivo preenchido.
 
 ### Calculadora de taxa de evento (projetos do tipo Evento)
 
@@ -675,7 +708,7 @@ Uma despesa cuja categoria **não está associada a nenhum item** do plano vigen
 
 Se uma despesa faz um item **passar do valor aprovado**, o pagamento acontece normalmente — o RIT360 Financeiro **nunca retém nem recusa** um pagamento por isso. O que aparece é um aviso, no item e no lançamento, de que o valor está acima do aprovado e que o **financiador pode glosar** a despesa. O atalho para **Remanejar** fica à mão, junto do aviso.
 
-<!-- CAPTURA PENDENTE: item do plano de trabalho com gasto acima do aprovado — aviso "Já foi gasto mais do que o previsto nesta rubrica..." e o botão Remanejar. Rota /projetos/{id}?aba=financeiro, no Instituto Exemplo (projeto Oficina de Artesanato), desktop. Precisa de uma despesa que passe do aprovado de uma rubrica. Arquivo esperado: manual-projetos-fontes-04-acima-do-plano.png -->
+<!-- CAPTURA PENDENTE: item do plano de trabalho com gasto acima do aprovado — aviso "Já foi gasto mais do que o previsto nesta rubrica..." e o botão Remanejar. Rota /projetos/{id}?aba=financeiro, no Instituto Exemplo (projeto Oficina de Artesanato), desktop. Precisa de uma despesa que passe do aprovado de uma rubrica. Arquivo esperado: manual-projetos-fontes-04-acima-do-plano.png. Não deu em 02/11/2026: nenhum projeto da OSC Alpha tem financiador com plano de trabalho, e montar o cenário exige gravar fonte, plano e despesa na base. -->
 
 > ⚠️ **Por que o sistema não trava o pagamento acima da rubrica**
 >
@@ -697,7 +730,7 @@ Ao lançar ou pagar uma despesa do projeto, o RIT360 Financeiro decide **fonte**
 - **Categoria não associada a nenhum item** — a despesa é paga e marcada [fora do plano de trabalho](#plano-de-trabalho), sem perguntar (não há o que escolher).
 
 <!-- CAPTURA PENDENTE: bloco "De qual dinheiro sai este lançamento" no formulário de novo lançamento (ou edição), mostrando os seletores de Fonte e de Rubrica do plano de trabalho quando há mais de uma opção, e o aviso de risco de glosa. Rota /movimentacoes/novo com um projeto de financiador com plano de trabalho e mais de uma fonte/item possível, viewport desktop e mobile.
-Tentativa registrada em 11/09/2026 (sessão de captura do manual): montei, no Instituto Exemplo, um projeto (Oficina de Artesanato) com DUAS fontes sem conta exclusiva (Caixa geral e o financiador "Instituto Parceiro Educacional"), cada uma com um item de plano de trabalho usando a MESMA categoria ("Material de escritório"), para forçar a ambiguidade que o texto acima descreve. Mesmo assim, o formulário de novo lançamento só mostrou a caixa "Esta despesa é uma devolução ao financiador", sem os seletores de Fonte/Rubrica — e a chamada de rede `resolve_movement_funding` sempre voltou com uma fonte e um item já decididos, sem pedir confirmação. Não decidido se é um caso que o sistema realmente resolve sozinho por alguma regra de desempate não documentada aqui, ou se a tela do seletor não está implementada neste cenário. Quem retomar: comece conferindo o código-fonte da resolução (RPC `resolve_movement_funding`) antes de tentar mais combinações de dados de teste. -->
+Tentativa registrada em 11/09/2026 (sessão de captura do manual): montei, no Instituto Exemplo, um projeto (Oficina de Artesanato) com DUAS fontes sem conta exclusiva (Caixa geral e o financiador "Instituto Parceiro Educacional"), cada uma com um item de plano de trabalho usando a MESMA categoria ("Material de escritório"), para forçar a ambiguidade que o texto acima descreve. Mesmo assim, o formulário de novo lançamento só mostrou a caixa "Esta despesa é uma devolução ao financiador", sem os seletores de Fonte/Rubrica — e a chamada de rede `resolve_movement_funding` sempre voltou com uma fonte e um item já decididos, sem pedir confirmação. Não decidido se é um caso que o sistema realmente resolve sozinho por alguma regra de desempate não documentada aqui, ou se a tela do seletor não está implementada neste cenário. Quem retomar: comece conferindo o código-fonte da resolução (RPC `resolve_movement_funding`) antes de tentar mais combinações de dados de teste.  Não deu em 02/11/2026: o bloco só aparece em projeto com financiador e plano de trabalho, e nenhum projeto da OSC Alpha tem isso (testei os seis projetos no formulário). -->
 
 **Parcelas e recorrências herdam a escolha** feita no lançamento — todas as ocorrências criadas junto passam a valer para a mesma fonte e item, exceto as que caem fora do período de validade da fonte escolhida.
 

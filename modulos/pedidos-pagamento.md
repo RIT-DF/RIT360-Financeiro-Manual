@@ -345,6 +345,41 @@ Ocorrências já pagas não podem ser canceladas (preservação de auditoria) �
 
 Clique em **+ Nova solicitação** para abrir o formulário.
 
+### Sugestão a partir do histórico {#sugestao-do-historico}
+
+Pagar o mesmo fornecedor pelo mesmo tipo de serviço (manutenção, material de limpeza, internet) é digitar de novo destinatário e classificação a cada pedido. Por isso o formulário **oferece pedidos anteriores da sua organização** enquanto você digita a descrição.
+
+[![Lista de sugestões abaixo do campo Descrição: um pedido anterior que começa com "troca", com o destinatário, o valor e a data em letra pequena](/assets/screenshots/pedido-sugestao-historico-desktop.png)](/assets/screenshots/pedido-sugestao-historico-desktop.png)
+*Ao digitar o começo da descrição, a lista mostra pedidos anteriores parecidos: destinatário, valor e data de cada um*
+
+1. Comece a digitar a **Descrição**.
+2. Se existir pedido parecido, uma lista aparece abaixo do campo, mostrando a descrição e, em letra pequena, o **destinatário**, o **valor** e a **data da despesa** do pedido antigo.
+3. Clique no que serve. O formulário se preenche e aparece o aviso **"Campos preenchidos a partir de uma solicitação anterior. Confira e informe o valor e as datas. Os dados de pagamento do fornecedor foram limpos e precisam ser informados de novo."**
+4. Informe valor, datas, **dados de pagamento do destinatário** e documentos, e envie normalmente.
+
+[![Formulário depois de escolher a sugestão: destinatário, descrição e categoria preenchidos; valor e datas em branco; bloco "Dados de pagamento do destinatário" sem nenhuma forma de pagamento escolhida](/assets/screenshots/pedido-sugestao-aplicada-desktop.png)](/assets/screenshots/pedido-sugestao-aplicada-desktop.png)
+*Depois de escolher a sugestão: o bloco de dados de pagamento volta vazio, de propósito*
+
+- **Preenche:** destinatário, descrição e a classificação do pedido anterior (categoria, projeto e centro de custo, quando ele tinha).
+- **Não preenche:** valor, data da despesa, data de pagamento solicitada e documentos. Cada pedido é uma compra nova, com valor e nota novos.
+- **Dados de pagamento do destinatário: nunca vêm da sugestão.** O bloco aparece **vazio**, sem forma de pagamento escolhida, e você precisa informar PIX, TED ou boleto de novo. Isso é de propósito: o fornecedor muda de conta, e um dado bancário copiado de um pedido antigo é a forma mais comum de pagar na conta errada.
+- **O que você já tinha digitado** em outros campos continua lá; muda o texto da descrição, que passa a ser o da sugestão.
+
+**Se não quiser usar a sugestão:** ignore a lista e continue digitando. O formulário só muda se você clicar numa sugestão, e nada é gravado até você usar **Salvar rascunho** ou **Enviar para aprovação**.
+
+> ⚠️ **Atenção · Confira o destinatário e a conta, sempre**
+>
+> A sugestão pode trazer o destinatário certo com a conta errada na sua cabeça. Antes de enviar, confira se os dados de pagamento que você digitou são os do **pedido de agora**. Erro nesses dados significa transferência para destino errado — e o pagamento, depois de feito, só volta por estorno junto ao banco.
+
+**Quando dá errado**
+
+- **A lista não aparece:** não há pedido parecido na organização, ou o começo da descrição está diferente do que foi registrado antes. Preencha à mão.
+- **Escolhi a sugestão errada:** corrija destinatário, descrição e classificação — nenhum dado foi enviado.
+
+### Preencher a partir do arquivo {#preencher-a-partir-do-arquivo}
+
+Perto do fim do formulário há o botão **Preencher a partir do arquivo**, com a orientação *"Anexe a foto ou o PDF do comprovante para usar a leitura."* Depois de anexar o boleto, a nota ou o recibo, o botão lê o documento e propõe os campos; o que veio do documento fica **marcado**, e **nada que você já digitou é trocado sem você escolher**. A leitura é feita por inteligência artificial de terceiros (ver [Privacidade](/privacidade/)). Se a leitura propuser **dados de pagamento** (PIX, conta, código de barras), confira cada um contra o documento: um dígito lido errado paga a conta errada.
+
 ### Envio rápido de faturas e boletos via Bot do Telegram
 
 Assim como nos reembolsos, você pode cadastrar um novo pedido de pagamento enviando o documento diretamente para o **Bot do RIT360 no Telegram** (`@rit360financeiro_bot`):

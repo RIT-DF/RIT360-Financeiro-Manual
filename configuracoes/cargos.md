@@ -26,6 +26,10 @@ A página **Cargos e permissões** vai além dos 7 cargos padrão da plataforma:
 >
 > **Cargos padrão** são os 7 que já vêm na plataforma (Presidente, Tesoureiro, Diretor, Gestor de Centro de Custo, Coord. de projeto, Comissão Fiscal, Voluntário) — aparecem com a etiqueta **Padrão**. **Cargos personalizados** são os que a sua OSC cria — etiqueta **Personalizado**. A diferença prática está na edição (veja abaixo): cargo padrão tem um piso de permissões que não sai; cargo personalizado é totalmente editável.
 
+> ℹ️ **O cargo padrão Coord. de projeto só enxerga os lançamentos dos próprios projetos**
+>
+> Quem tem o cargo padrão **Coord. de projeto** vê apenas os lançamentos dos projetos que coordena — e abre o detalhe deles a partir do projeto. O menu **Movimentações** não aparece para esse cargo; saldos e orçamento seguem como antes. A regra vale para as organizações que já existiam e para as novas. **Cargos personalizados não mudam**: se você criou um cargo para coordenadores com acesso a Movimentações, ele continua como estava. Ver [O que o Coordenador de Projeto enxerga](/papeis/#o-que-o-coordenador-enxerga).
+
 > 📖 **Conceito · Permissões essenciais e acréscimos**
 >
 > Cada cargo padrão tem um conjunto de **permissões essenciais** — o piso que define aquele papel e **não pode ser removido** (aparece travado, com a etiqueta "essencial"). O Presidente só pode **acrescentar** permissões sobre esse piso. Já um cargo personalizado não tem piso: todas as permissões são interruptores que você liga e desliga livremente.

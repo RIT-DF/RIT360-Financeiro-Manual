@@ -268,6 +268,52 @@ Marcar como pago exige a permissão de **pagar**, separada da de criar e editar 
 
 Clique em **+ Nova solicitação** para abrir o formulário.
 
+### Sugestão a partir do histórico {#sugestao-do-historico}
+
+Pedir o mesmo tipo de reembolso todo mês (o lanche da reunião, a papelaria da secretaria) é repetir sempre os mesmos campos. Por isso o formulário **oferece reembolsos anteriores da sua organização** enquanto você digita a descrição — para você aproveitar o que já foi classificado uma vez, em vez de classificar de novo.
+
+[![Lista de sugestões abaixo do campo Descrição, com dois reembolsos anteriores que começam com "Material"; cada um mostra o valor e a data em letra pequena](/assets/screenshots/reembolso-sugestao-historico-desktop.png)](/assets/screenshots/reembolso-sugestao-historico-desktop.png)
+*Ao digitar "Material" no campo Descrição, a lista mostra reembolsos anteriores parecidos, com o valor e a data de cada um*
+
+1. No formulário de nova solicitação, comece a digitar a **Descrição**.
+2. Se a organização já teve algum reembolso parecido, uma lista aparece logo abaixo do campo. Cada item mostra a descrição e, em letra pequena, o valor e a data daquele reembolso.
+3. Clique no que serve. O formulário se preenche e aparece, abaixo da descrição, o aviso **"Campos preenchidos a partir de um reembolso anterior. Confira e informe o valor e a data."**
+4. Informe o **valor** e a **data da despesa**, anexe o **comprovante** e envie normalmente.
+
+[![Formulário depois de escolher uma sugestão: a descrição preenchida, o aviso "Campos preenchidos a partir de um reembolso anterior" e os campos Data da despesa e Valor ainda em branco](/assets/screenshots/reembolso-sugestao-aplicada-desktop.png)](/assets/screenshots/reembolso-sugestao-aplicada-desktop.png)
+*Depois de escolher a sugestão: a descrição e a classificação vêm do reembolso anterior; valor e data continuam por sua conta*
+
+**O que a sugestão preenche e o que ela deixa para você**
+
+- **Preenche:** a descrição e a classificação do reembolso anterior (categoria, projeto e centro de custo, quando ele tinha).
+- **Não preenche:** o **valor**, a **data da despesa** e o **comprovante**. Cada reembolso é uma despesa nova, com nota nova — copiar valor e data de outra despesa seria a forma mais fácil de pedir o dinheiro errado.
+- **Dados de pagamento:** nunca vêm da sugestão. No reembolso eles já saem do seu perfil (ver [Para onde vai o dinheiro](#dados-de-pagamento-vem-do-perfil)), então não há o que herdar de reembolso de outra pessoa.
+- **O que você já tinha digitado** em outros campos (por exemplo, o valor) **continua lá**. O que muda é o texto da própria descrição, que passa a ser o da sugestão escolhida.
+
+**Se não quiser usar a sugestão:** ignore a lista e continue digitando — o formulário só muda se você clicar numa sugestão. Nada é gravado enquanto você não clicar em **Salvar rascunho** ou **Enviar para aprovação**; se escolheu a sugestão errada, é só corrigir os campos.
+
+> ⚠️ **Atenção · Sugestão não é conferência**
+>
+> A classificação que veio do reembolso anterior pode já não valer: o projeto pode ter sido encerrado, ou a despesa de agora é de outro centro de custo. Quem aprova olha a classificação que você enviou, não a do reembolso antigo — e um reembolso classificado errado só costuma ser percebido na hora de fechar o relatório do projeto. Leia **Categoria**, **Projeto** e **Centro de custo** antes de enviar.
+
+> ✓ **Dica · Use a lista para manter o mesmo nome**
+>
+> Quando você escolhe a descrição que já existe em vez de digitar uma parecida, o relatório agrupa os gastos iguais sob o mesmo nome. "Lanche reunião" e "Lanche da reunião" viram dois itens diferentes na hora de somar.
+
+**Quando dá errado**
+
+- **A lista não aparece:** ainda não há reembolso parecido na sua organização, ou o começo da descrição está muito diferente do que foi registrado antes. É só preencher à mão.
+- **Escolhi a sugestão errada:** corrija a descrição e os campos de classificação; nenhum dado foi enviado.
+
+### Preencher a partir do arquivo {#preencher-a-partir-do-arquivo}
+
+[![Trecho do formulário com o botão "Preencher a partir do arquivo" e o texto "Anexe a foto ou o PDF do comprovante para usar a leitura."](/assets/screenshots/manual-06d-novo-reembolso.png)](/assets/screenshots/manual-06d-novo-reembolso.png)
+*O botão fica abaixo das observações, acima da área de documentos*
+
+Perto do fim do formulário há o botão **Preencher a partir do arquivo**, com a orientação *"Anexe a foto ou o PDF do comprovante para usar a leitura."* Ele só serve depois que você anexa o comprovante: o sistema lê a foto ou o PDF e propõe os campos do formulário. O que veio do documento fica **marcado**, e **nada que você já digitou é trocado sem você escolher**.
+
+A leitura do comprovante é feita por inteligência artificial de terceiros; o que é enviado e para quem está em [Privacidade](/privacidade/). Como em qualquer preenchimento automático, **confira valor, data e descrição** antes de enviar: o sistema lê o documento, mas quem responde pelo pedido é você.
+
 ### Envio rápido de comprovantes via Bot do Telegram
 
 Além de preencher o formulário manualmente na tela, você pode fotografar ou encaminhar o comprovante diretamente para o **Bot do RIT360 no Telegram** (`@rit360financeiro_bot`):

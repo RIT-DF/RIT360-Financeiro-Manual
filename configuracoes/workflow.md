@@ -103,6 +103,16 @@ Você pode indicar como aprovador até um **membro recém-cadastrado que ainda n
 
 Além dos papéis e das pessoas específicas, a OSC pode permitir que o **gestor de um centro de custo** aprove os pagamentos e reembolsos **do próprio centro de custo que ele gerencia**. O ajuste fica no bloco **Quem pode aprovar** e começa **desligado** — cada OSC liga conforme o seu estatuto.
 
+São **dois interruptores independentes**, um para cada tipo de item:
+
+- **"Permitir que o gestor de centro de custo aprove reembolsos do seu próprio centro de custo"**
+- **"Permitir que o gestor de centro de custo aprove pedidos de pagamento do seu próprio centro de custo"**
+
+Você pode ligar um e deixar o outro desligado — por exemplo, deixar o gestor aprovar os reembolsos pequenos da área, mas manter os pedidos de compra e pagamento só com a diretoria. Abaixo de cada interruptor, a tela mostra quantas pessoas ficam aptas a aprovar **com a escolha atual** ("Com esta escolha, 3 pessoa(s) ficam aptas a aprovar reembolsos."), que é a conferência de que o ajuste fez o efeito que você queria.
+
+[![Bloco "Quem pode aprovar", com os dois interruptores do gestor de centro de custo (reembolsos e pedidos de pagamento) desligados, abaixo de cada um a contagem de pessoas aptas, e o bloco "Quem pode solicitar pagamentos" logo abaixo](/assets/screenshots/config-aprovacoes-gestor-cc-interruptores.png)](/assets/screenshots/config-aprovacoes-gestor-cc-interruptores.png)
+*Os dois interruptores do gestor de centro de custo, ambos desligados — o padrão. Mais abaixo, os de "Quem pode solicitar pagamentos"*
+
 Quando ligado, o gestor **soma-se** aos aprovadores já definidos (papéis + pessoas): ele passa a contar como aprovador elegível **apenas** para os itens do centro de custo sob sua responsabilidade, e **não** altera o número de aprovações exigidas nem os papéis configurados.
 
 > ✓ **Dica · Ligue só se o estatuto delegar ao gestor de CC**
