@@ -190,7 +190,7 @@ Para operar a plataforma, utilizamos os seguintes serviços de terceiros. Alguns
 | **Google Drive** | Armazenamento de documentos (quando ativado pela OSC) | Estados Unidos |
 | **WooCommerce** | Importação de pedidos da loja virtual (quando ativada pela OSC) | Definida pela organização |
 | **GitHub** | Registro e acompanhamento dos feedbacks enviados pelos usuários (repositório privado) | Estados Unidos |
-| **Telegram** (quando você vincula sua conta) | Envio de notificações e recebimento de mensagens ao assistente. Recebe o identificador da conversa, e o título, o texto e o link de cada aviso | A confirmar pelo encarregado (empresa Telegram FZ-LLC) |
+| **Telegram** (quando você vincula sua conta) | Envio de notificações e recebimento de mensagens ao assistente. Recebe o identificador da conversa, e o título, o texto e o link de cada aviso | Emirados Árabes Unidos (Telegram FZ-LLC), com servidores em vários países |
 | **Google (Gemini)**, **OpenAI** e **Anthropic** (quando você usa o assistente por Telegram) | Leitura de comprovantes enviados ao assistente. Um é usado como alternativa quando outro falha | Estados Unidos |
 
 Google Drive e WooCommerce são recursos opcionais, ativados a critério de cada OSC. A ativação implica a aceitação da política de privacidade do respectivo fornecedor.
