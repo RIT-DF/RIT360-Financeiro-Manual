@@ -16,9 +16,9 @@ O RIT360 Financeiro tem **sete papéis** que um usuário pode ocupar dentro de u
 |---|---|---|
 | **Presidente** (admin) | ✓ Sim | Tudo: configurações da OSC, gerenciamento de usuários, aprovações, lançamentos, conta bancária, categorias |
 | **Tesoureiro** | ✓ Sim | Lançar movimentações, aprovar reembolsos e pedidos, confirmar pagamentos, configurar contas bancárias e categorias |
-| **Diretor** | — | Membro da diretoria com **visão ampla de supervisão**: vê movimentações, relatórios e projetos para acompanhar, mas **não opera** (não lança, não aprova). Pode solicitar reembolso próprio |
+| **Diretor** | — | Membro da diretoria com **visão ampla de supervisão**: vê movimentações, reembolsos, a trilha de auditoria e os projetos para acompanhar, mas **não opera** (não lança, não aprova). Pode solicitar reembolso próprio |
 | **Gestor de Centro de Custo** | — | Cuida das movimentações **do(s) centro(s) de custo sob sua responsabilidade**: pode **criar e editar** lançamentos daquele CC e vê movimentações e relatórios recortados a ele. Não exclui/estorna, não importa, não aprova, não configura |
-| **Coordenador de Projeto** | — | Solicitar reembolsos e pedidos de compra e pagamento, ver movimentações |
+| **Coordenador de Projeto** | — | Solicitar reembolsos e pedidos de compra e pagamento, ver as movimentações da OSC (todas, não só as do projeto dele) e o orçamento. Não acessa Relatórios por padrão |
 | **Voluntário** | — | Solicitar reembolsos (apenas os próprios), ver a Saúde 360 |
 | **Comissão Fiscal** | — | Fiscalizar contas no módulo [Comissão Fiscal](/modulos/comissao-fiscal/): confere comprovantes, conciliação e finalidade estatutária, formula diligências e emite parecer colegiado. Lê movimentações e relatórios sem operar, pagar ou aprovar. Pode solicitar reembolso próprio |
 
@@ -31,7 +31,8 @@ Visão rápida do que cada papel pode fazer. **✓** = pode operar · **👁** =
 
 | O que pode fazer | Presidente | Tesoureiro | Diretor | Comissão Fiscal | Coordenador | Voluntário |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| Ver o financeiro (movimentações, relatórios) | ✓ | ✓ | 👁 | 👁 | 👁 | — |
+| Ver as movimentações | ✓ | ✓ | 👁 | 👁 | 👁 | —² |
+| Ver os Relatórios | ✓ | ✓ | — | 👁 | — | — |
 | Lançar / editar / estornar movimentação | ✓ | ✓ | — | — | — | — |
 | Confirmar pagamento (marcar como pago) | ✓ | ✓ | — | — | — | — |
 | Cadastrar contas bancárias e categorias | ✓ | ✓ | — | — | — | — |
@@ -43,13 +44,15 @@ Visão rápida do que cada papel pode fazer. **✓** = pode operar · **👁** =
 | Solicitar o **próprio** reembolso | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | Coordenar um projeto (do qual é coordenador) | ✓ | ✓ | — | — | ✓ | — |
 | Arquivar / desarquivar projeto | ✓ | ✓ | — | — | ✓¹ | — |
-| Ver o orçamento anual (previsto × realizado) | ✓ | ✓ | 👁 | 👁 | 👁 | — |
+| Ver o orçamento anual (previsto × realizado) | ✓ | ✓ | 👁 | 👁 | 👁 | 👁 |
 | Elaborar / gerenciar o orçamento | ✓ | ✓ | — | — | — | — |
 | Aprovar o orçamento (`budget.approve`) | conforme o fluxo | conforme o fluxo | — | — | conforme o fluxo | — |
 
 > "Conforme o fluxo" = depende do que a OSC configurou em Fluxo de Aprovações (padrão: Presidente e Tesoureiro). Diretor e Comissão Fiscal **nunca** são aprovadores.
 >
 > ¹ O Coordenador de Projeto só arquiva/desarquiva **o(s) projeto(s) que coordena** — não qualquer projeto da OSC. E o que habilita isso não é o papel na organização: qualquer pessoa registrada como coordenadora de um projeto pode arquivá-lo, mesmo que o papel dela na OSC seja outro (ex: um voluntário coordenando um evento). Ver [Projetos → Quem pode arquivar e desarquivar](/modulos/projetos/#arquivar-projeto).
+
+> ² O Voluntário vê só o recorte dele: lançamentos dos **seus projetos**, dos centros de custo pelos quais responde e dos pedidos que fez — veja o aviso sobre cargos sem permissão de ver lançamentos, mais abaixo.
 
 > ⚠️ Este quadro reflete a **configuração padrão** dos papéis. Permissões são configuráveis por organização, em [Configurações → Cargos e permissões](/configuracoes/cargos/) — uma OSC que tenha ajustado os cargos pode ter um quadro diferente deste.
 
@@ -96,7 +99,7 @@ O **rótulo** desse cargo pode ser renomeado pela OSC (por exemplo, "Responsáve
 
 - **Voluntários** não podem solicitar pedidos de compra e pagamento (só reembolsos). Pedido de compra e pagamento envolve dispor de dinheiro da OSC; reembolso é só ressarcimento.
 - **Voluntários** não veem dados de pagamento (PIX/TED/conta) de outros membros nos reembolsos. Só veem os próprios dados.
-- **Diretor** é um papel de **supervisão, somente leitura**: enxerga movimentações, relatórios, projetos e a trilha de auditoria para acompanhar a OSC, mas **não opera** — não lança, não aprova, não configura. Pode solicitar o próprio reembolso, como qualquer membro. **Não acessa Configurações da OSC.**
+- **Diretor** é um papel de **supervisão, somente leitura**: enxerga movimentações, reembolsos, projetos e a trilha de auditoria para acompanhar a OSC, mas **não opera** — não lança, não aprova, não configura. Pode solicitar o próprio reembolso, como qualquer membro. **Não acessa Configurações da OSC.**
 - **Comissão Fiscal** atua no módulo dedicado [Comissão Fiscal](/modulos/comissao-fiscal/). Tem leitura ampla de todos os dados financeiros mas não realiza nenhuma operação cotidiana (não lança, não paga, não aprova reembolsos ou pedidos de compra). Sua atuação concentra-se em atestar conformidade de comprovantes, conferir conciliação bancária, verificar finalidade estatutária, formular diligências e emitir o parecer oficial colegiado. Pode solicitar reembolso próprio (mesma regra dos demais membros). **Não acessa Configurações da OSC** — o papel é de fiscalização, separado da gestão.
 - **Configurações da Organização** se divide por papel:
   - **Presidente**: acessa tudo (dados da OSC, usuários, papéis, contas bancárias, categorias, fluxo de aprovações, relatórios e parâmetros da [Comissão Fiscal](/configuracoes/comissao-fiscal/)).
@@ -146,6 +149,10 @@ Apenas o **Presidente** pode alterar papéis. Acesse [Configurações → Usuár
 OSC pequena geralmente opera com 3 papéis: Presidente, Tesoureiro, Voluntário. **Coordenador de Projeto** entra quando a OSC tem **projetos específicos com responsável próprio** que precisa pedir pagamentos sem ser tesoureiro nem voluntário comum — coordenador de campanha, líder de evento, gestor de iniciativa pontual.
 
 Use coordenador quando: a pessoa não opera o financeiro consolidado, mas pede saídas para o projeto dela; precisa ver movimentações da OSC mas não autoriza outros pedidos.
+
+> ⚠️ **Atenção · O Coordenador de Projeto vê todas as movimentações, não só as do projeto**
+>
+> Pelo cargo padrão, quem é Coordenador de Projeto **lê a lista de movimentações da OSC inteira**, e não apenas os lançamentos ligados ao projeto que coordena. Se a sua OSC prefere um acesso mais restrito, a saída é um **cargo próprio** sem a permissão de ver movimentações, em [Configurações → Cargos e permissões](/configuracoes/cargos/): quem não tem essa permissão passa a ver só o que é dos seus projetos, dos seus centros de custo e dos pedidos que fez. Já os **Relatórios** não fazem parte do cargo padrão de Coordenador.
 
 ## Por onde seguir
 

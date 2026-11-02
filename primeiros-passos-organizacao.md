@@ -25,6 +25,8 @@ Quem cria uma organização pelo cadastro (o caminho **"Criar agora"**, na tela 
 
 **O que você consegue fazer enquanto a análise não termina:** tudo o que é interno da organização — preencher os dados, cadastrar contas bancárias, categorias e fluxo de aprovações, lançar e importar movimentações, gerar relatórios.
 
+Em resumo: **a organização funciona por dentro, e nada sai dela para quem está de fora**. Enquanto a análise não termina, o sistema não envia convite, não manda e-mail de acesso, não recebe pedido de entrada de desconhecidos e não abre nenhuma porta pública. Por isso você pode preparar tudo com calma, sem risco de disparar mensagem a alguém por engano.
+
 **O que fica indisponível até a aprovação:**
 
 - convidar pessoas (**+ Adicionar usuário**) e importar pessoas por planilha;
@@ -108,7 +110,7 @@ Diga quem autoriza a saída de dinheiro: o **quórum** (1 ou 2 votos) e **quais 
 
 ## 5. Convide os usuários e atribua papéis
 
-Agora chame a equipe. Cadastre cada pessoa, defina o **papel** dela (Presidente, Tesoureiro, Diretor, Coordenador, Voluntário, Comissão Fiscal) e envie o convite — o acesso só vale após o aceite. Para muita gente de uma vez, use a **importação por planilha** (até 2.000 linhas por envio).
+Agora chame a equipe. Cadastre cada pessoa, defina o **papel** dela (Presidente, Tesoureiro, Diretor, Coordenador, Voluntário, Comissão Fiscal) e envie o convite. O acesso só vale depois que a **própria pessoa** conclui: quem nunca usou o sistema define a senha pelo link do e-mail; quem já tem conta (por usar outra OSC) entra e responde **Confirmar** ao aviso de inclusão. Para muita gente de uma vez, use a **importação por planilha** (até 2.000 linhas por envio).
 
 > ⚠️ **Atenção · Organização em análise não convida**
 >

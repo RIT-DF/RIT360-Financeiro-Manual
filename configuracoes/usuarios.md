@@ -24,12 +24,18 @@ Listagem traz todos os membros da OSC com nome, e-mail, papel, status (ativo/pen
 
 ## Adicionar usuário
 
-Clique em **+ Adicionar usuário**. Informe o **e-mail** e o **papel** desejado. A tela **responde na hora**, assim que o cadastro é salvo — o e-mail é enviado em segundo plano. O status do usuário fica como "Pendente" até ele aceitar. Se o envio do e-mail falhar, o registro da falha fica guardado e o convite pode ser **reenviado** normalmente (ver Ações por membro).
+Clique em **+ Adicionar usuário**. Informe o **nome completo**, o **e-mail** e o **papel** desejado — ao escolher **Presidente**, a tela avisa que a pessoa terá acesso total à organização. A tela **responde na hora**, assim que o cadastro é salvo — o e-mail é enviado em segundo plano. O status do usuário fica como "Pendente" até ele aceitar. Se o envio do e-mail falhar, o registro da falha fica guardado e o convite pode ser **reenviado** normalmente (ver Ações por membro).
 
 O e-mail que a pessoa recebe depende de ela já usar o sistema ou não:
 
 - **Pessoa nova** (nunca usou o RIT360 Financeiro): recebe o e-mail com o link de primeiro acesso, para definir a senha.
 - **Pessoa que já tem conta** (por usar outra OSC): recebe um e-mail pedindo que entre com a conta de sempre e **responda se reconhece a inclusão**. Até responder, ela aparece na sua lista como **"Aguardando confirmação"** — veja [Quem já usa o sistema](#aguardando-confirmacao).
+
+> ⚠️ **Se a tela recusar o cadastro**
+>
+> - *"Este e-mail já é membro da organização."* — a pessoa já está na lista, ativa, aguardando o primeiro acesso ou **inativa**. Procure o nome ou o e-mail na lista: se ela está **inativa**, use **Reativar acesso**; se ainda não entrou, use **Reenviar e-mail de acesso**. Cadastrar de novo não resolve.
+> - *"Esta pessoa recusou o convite recentemente."* — ela respondeu **Não reconheço** há menos de 30 dias (veja o aviso abaixo).
+> - *"Sua organização está em análise pela equipe da RIT. Convites ficam disponíveis depois da aprovação."* — veja o aviso a seguir.
 
 > ⚠️ **Atenção · Organização em análise não convida**
 >
@@ -299,7 +305,7 @@ Isso não é defeito: o sistema está protegendo a conta da pessoa. Uma conta qu
 
 > ⚠️ **Atenção · Desativar ≠ excluir**
 >
-> Desativar bloqueia entrada mas **preserva todo o histórico** (lançamentos criados, aprovações dadas, comentários escritos). Para auditoria e prestação de contas, isso é essencial — você consegue mostrar quem fez o quê mesmo depois que a pessoa saiu. O RIT360 Financeiro não tem opção de "excluir usuário"; só "desativar" + histórico preservado. Quem deixou a OSC: desative.
+> Desativar bloqueia entrada mas **preserva todo o histórico** (lançamentos criados, aprovações dadas, comentários escritos). Para auditoria e prestação de contas, isso é essencial — você consegue mostrar quem fez o quê mesmo depois que a pessoa saiu. O RIT360 Financeiro não tem opção de "excluir usuário": o histórico fica sempre. O que você escolhe é o **tamanho da saída** — **desativar**, para quem pode voltar (licença, afastamento), ou **remover da organização**, para quem deixou a OSC de vez. A diferença está no quadro logo abaixo.
 
 > ⚠️ **Atenção · Desativar suspende os poderes; remover apaga o vínculo**
 >
@@ -307,7 +313,7 @@ Isso não é defeito: o sistema está protegendo a conta da pessoa. Uma conta qu
 
 ## Solicitações pendentes
 
-Em OSCs com **acesso público ao link de vínculo** ativado (em Configurações → Organização), pessoas externas podem pedir entrada espontaneamente. As solicitações pendentes aparecem em uma seção separada, com botão **Aprovar** ou **Rejeitar**. Aprovar gera o convite formal; rejeitar nega o acesso sem criar conta. **Rejeitar** pede um **motivo**, que não aceita endereço de site ou de e-mail (a tela responde *"Este campo não aceita endereço de site."*) — escreva em palavras, sem colar o link.
+Em OSCs com **acesso público ao link de vínculo** ativado (em Configurações → Organização), pessoas externas podem pedir entrada espontaneamente. As solicitações pendentes aparecem em uma seção separada, com botão **Aprovar** ou **Rejeitar**. **Aprovar** abre um painel em que você escolhe o **papel** da pessoa; ao confirmar, ela passa a ter acesso **na hora** e recebe um e-mail avisando — não há segunda confirmação dela, porque foi ela mesma quem pediu. **Rejeitar** nega o acesso sem criar conta, e a pessoa recebe um e-mail com o motivo que você escreveu. **Rejeitar** pede um **motivo**, que não aceita endereço de site ou de e-mail (a tela responde *"Este campo não aceita endereço de site."*) — escreva em palavras, sem colar o link.
 
 Organização **em análise** pela equipe da RIT não recebe pedidos de vínculo, nem aprova os que já estivessem na fila — fica tudo parado até a aprovação ([como funciona](/primeiros-passos/organizacao/#organizacao-em-analise)).
 

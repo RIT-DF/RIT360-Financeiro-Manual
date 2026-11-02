@@ -67,13 +67,20 @@ Este caso é para quem **já usa o RIT360 Financeiro** — por exemplo, porque p
 >
 > A sua conta é sua e vale para todas as organizações em que você está. Se bastasse alguém digitar o seu e-mail para você passar a fazer parte de uma OSC, um engano de digitação — ou má-fé — colocaria você, sem saber, numa organização que não é a sua, com acesso a dados e com nome em listas e tarefas. Por isso a inclusão só vale **depois que você mesmo responde**.
 
-Ao entrar, você vê o aviso **"A organização *[nome]* incluiu você como *[papel]*."** com dois botões. Em quem entra pela tela de login e ainda não tem nenhuma organização ativa, esse aviso ocupa a tela inteira ("Uma organização incluiu você"); em quem já tem outras organizações, ele aparece como uma faixa no topo, e você pode **Ocultar** a faixa e responder depois. Quem acessa pelo link de primeiro acesso com uma conta que já existe encontra o botão **Não reconheço** ao lado de **Vincular e entrar**.
+Ao entrar, você vê o aviso **"A organização *[nome]* incluiu você como *[papel]*."** com dois botões. Em quem entra pela tela de login e ainda não tem nenhuma organização ativa, esse aviso ocupa a tela inteira ("Uma organização incluiu você"); em quem já tem outras organizações, ele aparece como uma faixa no topo, e você pode **Ocultar** a faixa e responder depois — o botão passa a se chamar **Responder** e reabre os cartões. A faixa **volta em toda tela** até você responder. Quem acessa pelo link do e-mail de acesso, com uma conta que já existe, encontra o botão **Não reconheço** ao lado de **Vincular e entrar** — clicar em **Vincular e entrar** vale como **Confirmar**.
 
 1. Leia o nome da organização e o papel. É quem você esperava?
 2. Se sim, clique em **Confirmar**. A organização entra na sua lista e você passa a trocar entre elas pelo seletor do topo.
 3. Se não, clique em **Não reconheço** e confirme em **Sim, não reconheço**.
 
 O e-mail que avisa da inclusão chega com o mesmo pedido: entre com a sua conta de sempre e responda.
+
+> 🔑 **Quando dá errado**
+>
+> - **Você abriu o link do e-mail e a tela diz *"Entrar para vincular"*:** você ainda não estava conectado. Digite a senha da sua conta (o e-mail aparece preenchido e não muda) e siga.
+> - **A tela diz *"Trocar de conta para vincular"*:** você está conectado com **outra** conta. Clique em **Sair** e entre com o e-mail para o qual a inclusão foi feita — o link não funciona para uma conta diferente.
+> - **A faixa avisa *"Não foi possível conferir se alguma organização incluiu você e aguarda sua resposta."*:** foi uma falha momentânea na conferência. Clique em **Tentar de novo**. Isso não quer dizer que não há inclusão pendente — só que o sistema não conseguiu olhar agora.
+> - **A tela diz *"Esta inclusão já foi respondida"* ou *"não existe mais"*:** outra aba ou outro aparelho já respondeu, ou a organização cancelou a inclusão. Atualize a página.
 
 > ⚠️ **Atenção · "Não reconheço" tem consequências**
 >
@@ -103,6 +110,12 @@ Além desse caminho, é possível iniciar uma conta por conta própria pelo link
 > 🔒 **Por que o código — e por que a tela não diz se você já tem conta?**
 >
 > A confirmação por e-mail garante que só quem realmente controla aquele endereço cria a conta e define a senha. E a tela responde igual para qualquer endereço de propósito: se ela dissesse "este e-mail já tem cadastro", qualquer pessoa poderia testar endereços para descobrir quem usa o sistema. A informação só chega a quem tem acesso àquela caixa de entrada.
+
+> ⚠️ **Se a tela recusar o código**
+>
+> - *"Código incorreto ou não mais válido. Confira os dígitos ou peça um novo código."* — o número digitado não confere com o último código enviado, ou o código já foi usado. Cada código aceita **poucas tentativas**; depois delas, peça um novo com **Reenviar mensagem** (há uma breve espera entre os envios) e use só o que chegar por último.
+> - *"Este código expirou. Peça um novo código para continuar."* — passaram os 30 minutos. Peça outro.
+> - *"Você já tem uma conta com este e-mail. Faça login para continuar."* — não há o que criar: entre pelo login, ou use **Esqueci a senha**.
 
 > ⚠️ **Se você pediu várias vezes e parou de receber**
 >
@@ -274,7 +287,7 @@ A explicação detalhada de papéis e permissões está em [Papéis e Permissõe
 
 - **Presidente (admin)** — tudo: configurações, usuários, aprovações, lançamentos
 - **Tesoureiro** — lançamentos, aprovações, confirmação de pagamentos, cadastro de contas e categorias
-- **Diretor** — supervisão de diretoria: vê movimentações, relatórios e projetos sem operar nem aprovar; pode solicitar reembolso próprio
+- **Diretor** — supervisão de diretoria: vê movimentações, reembolsos, trilha de auditoria e projetos sem operar nem aprovar; pode solicitar reembolso próprio
 - **Coordenador de Projeto** — solicitar pagamentos e reembolsos, ver movimentações
 - **Voluntário** — solicitar os próprios reembolsos, ver a Saúde 360
 - **Comissão Fiscal** — leitura ampla de todos os dados financeiros (movimentações, reembolsos, pedidos, auditoria) sem operar nem aprovar; pode solicitar reembolso próprio
