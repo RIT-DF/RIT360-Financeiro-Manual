@@ -28,8 +28,14 @@ Clique em **+ Adicionar usuário**. Informe o **nome completo**, o **e-mail** e 
 
 O e-mail que a pessoa recebe depende de ela já usar o sistema ou não:
 
-- **Pessoa nova** (nunca usou o RIT360 Financeiro): recebe o e-mail com o link de primeiro acesso, para definir a senha.
-- **Pessoa que já tem conta** (por usar outra OSC): recebe um e-mail pedindo que entre com a conta de sempre e **responda se reconhece a inclusão**. Até responder, ela aparece na sua lista como **"Aguardando confirmação"** — veja [Quem já usa o sistema](#aguardando-confirmacao).
+- **Pessoa nova** (nunca usou o RIT360 Financeiro): recebe o e-mail com o link de primeiro acesso. Ali ela **define a senha** ou, se preferir, **entra com a conta Google**.
+- **Pessoa que já tem conta** (por usar outra OSC): recebe um e-mail pedindo que **entre com a conta de sempre** — não precisa criar outra senha — e **confirme o vínculo**, respondendo se reconhece a inclusão. Até responder, ela aparece na sua lista como **"Aguardando confirmação"** — veja [Quem já usa o sistema](#aguardando-confirmacao).
+
+O mesmo texto aparece no aviso da própria tela **Adicionar usuário** ("quem ainda não tem conta define a senha, ou entra com Google; quem já tem conta entra com ela e confirma o vínculo"), antes de você salvar. Quem já tem conta não precisa criar senha nova: entra com o acesso que já usa.
+
+> ✓ **Dica · Avise a pessoa de qual dos dois caminhos esperar**
+>
+> Antes de cadastrar, pergunte se ela já usa o RIT360 Financeiro em outra OSC (muito comum com contador, assessor e coordenador que atende mais de uma organização). Quem já tem conta e estranha o e-mail pode ignorá-lo — e o vínculo fica parado em **"Aguardando confirmação"**. Uma mensagem sua, avisando que o e-mail vai pedir só para entrar e confirmar, evita o convite esquecido.
 
 > ⚠️ **Se a tela recusar o cadastro**
 >

@@ -18,7 +18,7 @@ O RIT360 Financeiro tem **sete papéis** que um usuário pode ocupar dentro de u
 | **Tesoureiro** | ✓ Sim | Lançar movimentações, aprovar reembolsos e pedidos, confirmar pagamentos, configurar contas bancárias e categorias |
 | **Diretor** | — | Membro da diretoria com **visão ampla de supervisão**: vê movimentações, reembolsos, a trilha de auditoria e os projetos para acompanhar, mas **não opera** (não lança, não aprova). Pode solicitar reembolso próprio |
 | **Gestor de Centro de Custo** | — | Cuida das movimentações **do(s) centro(s) de custo sob sua responsabilidade**: pode **criar e editar** lançamentos daquele CC e vê movimentações e relatórios recortados a ele. Não exclui/estorna, não importa, não aprova, não configura |
-| **Coordenador de Projeto** | — | Solicitar reembolsos e pedidos de compra e pagamento, ver as movimentações da OSC (todas, não só as do projeto dele) e o orçamento. Não acessa Relatórios por padrão |
+| **Coordenador de Projeto** | — | Solicitar reembolsos e pedidos de compra e pagamento, ver **só os lançamentos dos projetos que coordena** (e abrir o detalhe deles a partir do projeto) e o orçamento. Não vê o menu Movimentações nem os lançamentos do resto da OSC, e não acessa Relatórios por padrão |
 | **Voluntário** | — | Solicitar reembolsos (apenas os próprios), ver a Saúde 360 |
 | **Comissão Fiscal** | — | Fiscalizar contas no módulo [Comissão Fiscal](/modulos/comissao-fiscal/): confere comprovantes, conciliação e finalidade estatutária, formula diligências e emite parecer colegiado. Lê movimentações e relatórios sem operar, pagar ou aprovar. Pode solicitar reembolso próprio |
 
@@ -31,7 +31,7 @@ Visão rápida do que cada papel pode fazer. **✓** = pode operar · **👁** =
 
 | O que pode fazer | Presidente | Tesoureiro | Diretor | Comissão Fiscal | Coordenador | Voluntário |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| Ver as movimentações | ✓ | ✓ | 👁 | 👁 | 👁 | —² |
+| Ver as movimentações | ✓ | ✓ | 👁 | 👁 | 👁³ | —² |
 | Ver os Relatórios | ✓ | ✓ | — | 👁 | — | — |
 | Lançar / editar / estornar movimentação | ✓ | ✓ | — | — | — | — |
 | Confirmar pagamento (marcar como pago) | ✓ | ✓ | — | — | — | — |
@@ -52,7 +52,9 @@ Visão rápida do que cada papel pode fazer. **✓** = pode operar · **👁** =
 >
 > ¹ O Coordenador de Projeto só arquiva/desarquiva **o(s) projeto(s) que coordena** — não qualquer projeto da OSC. E o que habilita isso não é o papel na organização: qualquer pessoa registrada como coordenadora de um projeto pode arquivá-lo, mesmo que o papel dela na OSC seja outro (ex: um voluntário coordenando um evento). Ver [Projetos → Quem pode arquivar e desarquivar](/modulos/projetos/#arquivar-projeto).
 
-> ² O Voluntário vê só o recorte dele: lançamentos dos **seus projetos**, dos centros de custo pelos quais responde e dos pedidos que fez — veja o aviso sobre cargos sem permissão de ver lançamentos, mais abaixo.
+> ² O Voluntário vê só o recorte dele: lançamentos dos **seus projetos**, dos centros de custo pelos quais responde e dos pedidos que fez — veja o aviso sobre o recorte de lançamentos, mais abaixo.
+>
+> ³ O Coordenador de Projeto vê **só os lançamentos dos projetos que coordena**, e a partir do próprio projeto — não há o menu Movimentações para ele. Detalhes em [O que o Coordenador de Projeto enxerga](#o-que-o-coordenador-enxerga), mais abaixo.
 
 > ⚠️ Este quadro reflete a **configuração padrão** dos papéis. Permissões são configuráveis por organização, em [Configurações → Cargos e permissões](/configuracoes/cargos/) — uma OSC que tenha ajustado os cargos pode ter um quadro diferente deste.
 
@@ -148,11 +150,20 @@ Apenas o **Presidente** pode alterar papéis. Acesse [Configurações → Usuár
 
 OSC pequena geralmente opera com 3 papéis: Presidente, Tesoureiro, Voluntário. **Coordenador de Projeto** entra quando a OSC tem **projetos específicos com responsável próprio** que precisa pedir pagamentos sem ser tesoureiro nem voluntário comum — coordenador de campanha, líder de evento, gestor de iniciativa pontual.
 
-Use coordenador quando: a pessoa não opera o financeiro consolidado, mas pede saídas para o projeto dela; precisa ver movimentações da OSC mas não autoriza outros pedidos.
+Use coordenador quando: a pessoa não opera o financeiro consolidado, mas pede saídas para o projeto dela e precisa acompanhar o que já foi lançado nele; não autoriza outros pedidos e não precisa ver o caixa do resto da OSC.
 
-> ⚠️ **Atenção · O Coordenador de Projeto vê todas as movimentações, não só as do projeto**
+> 📖 **Conceito · O que o Coordenador de Projeto enxerga**
 >
-> Pelo cargo padrão, quem é Coordenador de Projeto **lê a lista de movimentações da OSC inteira**, e não apenas os lançamentos ligados ao projeto que coordena. Se a sua OSC prefere um acesso mais restrito, a saída é um **cargo próprio** sem a permissão de ver movimentações, em [Configurações → Cargos e permissões](/configuracoes/cargos/): quem não tem essa permissão passa a ver só o que é dos seus projetos, dos seus centros de custo e dos pedidos que fez. Já os **Relatórios** não fazem parte do cargo padrão de Coordenador.
+> Desde a versão 1.146.0, o cargo padrão de Coordenador de Projeto vê **somente os lançamentos dos projetos que coordena** — e abre o detalhe de cada um a partir do próprio projeto, na aba **Financeiro**. O menu **Movimentações** não aparece para ele, e os lançamentos do resto da OSC (salários, aluguel, receitas de outros projetos) ficam fora do alcance. Continuam disponíveis para ele os **saldos das contas** e o **orçamento**; e, na tela de [vincular lançamentos existentes](/modulos/projetos/#vincular-lançamentos-existentes), ele ainda enxerga a lista de lançamentos **sem projeto**, que é justamente de onde escolhe o que atribuir ao seu.
+>
+> **Por que mudou:** quem coordena um projeto precisa saber quanto o projeto gastou, não quanto a OSC paga de aluguel. Antes, o cargo padrão lia a lista inteira de movimentações, e a OSC que queria o recorte tinha de criar um cargo próprio. Agora o recorte é o padrão, e quem precisa de visão ampla recebe outro papel (Tesoureiro, Diretor ou um cargo próprio).
+{: #o-que-o-coordenador-enxerga }
+
+> ⚠️ **Atenção · "Sumiu o menu Movimentações" não é defeito**
+>
+> Se um coordenador que usava a lista geral de movimentações relata que ela desapareceu, é a mudança acima, e não falta de permissão a corrigir. Para ele continuar acompanhando o que importa, aponte o caminho: **Projetos → o projeto dele → Financeiro → Lançamentos vinculados**. Se a função dele exige mesmo a visão ampla (por exemplo, ele também ajuda no caixa), dê a ele **mais um papel** — Tesoureiro ou Diretor — em vez de abrir mão do recorte para todos os coordenadores.
+>
+> Os **Relatórios** continuam fora do cargo padrão de Coordenador. A OSC que quiser um recorte diferente (mais ou menos amplo) cria um **cargo próprio** em [Configurações → Cargos e permissões](/configuracoes/cargos/).
 
 ## Por onde seguir
 

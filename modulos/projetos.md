@@ -440,7 +440,26 @@ A janela **conta**, o tempo todo, quantos lançamentos da lista **podem** e quan
 >
 > Numa OSC com muitas contas e vários projetos rodando ao mesmo tempo, filtrar por conta antes de selecionar reduz o risco de vincular ao projeto errado um lançamento de outra iniciativa que só coincide de estar sem projeto ainda.
 
-**Quem pode:** vincular lançamentos exige o papel de **Coordenador do projeto** (ver **Conceitos essenciais**, acima). Projeto **concluído ou cancelado** não recebe novos vínculos por aqui, do mesmo jeito que não recebe pelo [Corrigir dados de um lançamento pago](/modulos/movimentacoes/#corrigir-os-dados-de-um-lançamento-pago) nem pela [atribuição em lote](/modulos/movimentacoes/#atribuir-projeto-em-lote).
+**Quem pode:** vincular lançamentos exige o papel de **Coordenador do projeto** (ver **Conceitos essenciais**, acima). O coordenador enxerga aqui a lista de lançamentos **sem projeto** mesmo sem ter o menu Movimentações — é daí que ele escolhe o que atribuir ao seu projeto; depois de vinculados, esses lançamentos passam a aparecer em **Lançamentos vinculados** e ele abre o detalhe de cada um a partir dali (ver [O que o Coordenador de Projeto enxerga](/papeis/#o-que-o-coordenador-enxerga)). Projeto **concluído ou cancelado** não recebe novos vínculos por aqui, do mesmo jeito que não recebe pelo [Corrigir dados de um lançamento pago](/modulos/movimentacoes/#corrigir-os-dados-de-um-lançamento-pago) nem pela [atribuição em lote](/modulos/movimentacoes/#atribuir-projeto-em-lote).
+
+### Quando algum lançamento já está pago
+{: #vincular-lancamento-ja-pago }
+
+Se, entre os lançamentos que você selecionou, **algum já estiver pago**, a janela avisa **quantos** — por exemplo, *"2 dos 5 selecionados já estão pagos"* (ou *"Os 3 lançamentos selecionados já estão pagos"*, quando são todos) — e abre um campo **de motivo**, obrigatório, com **pelo menos 10 caracteres**. Enquanto o motivo não tiver 10 caracteres (espaços no começo e no fim não contam), o botão de confirmar fica desabilitado; e, sem motivo, **nada é vinculado** — nem os pendentes da mesma seleção, porque o lote é aceito ou recusado inteiro. O motivo fica **registrado no histórico**. Selecionando só lançamentos pendentes ou atrasados, o campo nem aparece.
+
+O mesmo vale para o **vínculo retroativo das vendas do WooCommerce**: quando você associa um produto da loja ao projeto e a tela pergunta **"Vincular vendas passadas?"**, a janela mostra, do mesmo jeito, quantas das vendas encontradas já estão pagas e pede o motivo — seja você vincular todas ou só as **a partir de uma data**. Como as vendas da loja entram no RIT360 Financeiro já pagas, na prática o motivo costuma ser exigido nesse caminho.
+
+> 💡 **Por que isso importa**
+>
+> Lançamento pago já entrou no caixa e, muitas vezes, nos relatórios de um período. Vinculá-lo a um projeto muda o que esse projeto mostra como gasto ou arrecadado, e os números que você já apresentou deixam de bater com o que o sistema mostra hoje. Pedir o motivo obriga a pensar antes e deixa, para quem auditar depois, a razão escrita por quem decidiu.
+
+> ✓ **Dica · Escreva o motivo para quem vai ler daqui a um ano**
+>
+> "Venda das camisetas do evento, lançada antes de o projeto existir" ajuda; "ajuste" não. O motivo é o que explica, na trilha, por que a receita mudou de projeto depois de paga. Se os lançamentos têm razões diferentes, faça um vínculo para cada grupo, cada um com o seu motivo.
+
+> ⚠️ **Atenção · Se aparecer "Motivo obrigatório"**
+>
+> A mensagem *"Há lançamento já pago. Escreva o motivo do vínculo (mínimo 10 letras). Nada foi vinculado."* significa exatamente isso: nada foi alterado. Escreva o motivo (10 caracteres ou mais) e confirme de novo.
 
 ### Calculadora de taxa de evento (projetos do tipo Evento)
 
