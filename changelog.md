@@ -11,6 +11,20 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.147.0] — 2026-11-02
+
+### Modificado
+
+- A configuração de IA mostra os modelos que cada provedor realmente oferece, com um recomendado para ler comprovantes. Sem modelo escolhido, o assistente do Telegram usa o recomendado automaticamente e continua funcionando quando o provedor aposenta modelos antigos.
+- O teste de conexão diz qual modelo testou e separa chave recusada de modelo indisponível.
+
+## [1.146.1] — 2026-11-02
+
+### Modificado
+
+- Os documentos de prestação de contas passam a ser guardados por 10 anos a partir da geração, como pede a Lei 13.019/2014, quando a organização não escolheu outro prazo. "Guardar para sempre" continua disponível.
+- Códigos de verificação, convites vencidos e registros técnicos antigos passam a ser apagados nos prazos informados na Política de Privacidade.
+
 ## [1.146.0] — 2026-11-02
 
 ### Adicionado
