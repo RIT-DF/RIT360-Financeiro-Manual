@@ -11,6 +11,18 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.153.6] — 2026-11-05
+
+### Corrigido
+
+- Quem entra no sistema — por senha, pelo Google ou por um link de convite — não corre mais o risco de ser desconectado por causa do horário de uma sessão antiga. O convite de uma organização também volta a abrir normalmente mesmo em um navegador que já foi usado antes.
+
+## [1.153.5] — 2026-11-05
+
+### Corrigido
+
+- Quem volta ao sistema depois de mais de 2 horas parado agora é levado direto à tela de entrada, antes de qualquer tela abrir. Com isso, um aceite de Política ou Termos nunca mais é registrado numa sessão que já deveria estar encerrada.
+
 ## [1.153.4] — 2026-11-02
 
 ### Corrigido
