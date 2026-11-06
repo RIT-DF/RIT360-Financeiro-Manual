@@ -246,13 +246,12 @@ Marque o checkbox no início das linhas para selecionar várias movimentações.
 
 Ao marcar vários lançamentos como pagos de uma vez, alguns podem não passar. Em vez de um aviso único e genérico, o sistema mostra **uma mensagem por lançamento recusado**, começando pelo **nome do lançamento** e seguida do motivo. Os demais lançamentos da seleção **são pagos normalmente** — uma recusa não trava o lote.
 
-**Exemplo:** você seleciona 12 lançamentos e confirma. Onze são pagos. O décimo segundo, *"Reembolso — combustível do bazar"*, aparece assim: *"Reembolso — combustível do bazar: Você pediu ou aprovou este pedido, e outra pessoa da organização pode pagá-lo. Peça a ela que registre o pagamento."*
+**Exemplo:** você seleciona 12 lançamentos e confirma. Onze são pagos. O décimo segundo, *"Reembolso — combustível do bazar"*, aparece assim: *"Reembolso — combustível do bazar: Você não tem permissão para pagar este lançamento."*
 
 Os motivos que aparecem lançamento a lançamento:
 
 | Mensagem | O que significa | O que fazer |
 |---|---|---|
-| *"Você pediu ou aprovou este pedido, e outra pessoa da organização pode pagá-lo. Peça a ela que registre o pagamento."* | Quem pediu ou aprovou um pedido não confirma o pagamento dele quando existe outra pessoa habilitada a pagar. | Peça a outra pessoa com a permissão de pagar. Ver [Pedidos de Compra e Pagamento → Quem pediu ou aprovou não paga o próprio pedido](/modulos/pedidos-pagamento/#quem-pediu-ou-aprovou-nao-paga). |
 | *"Não foi possível conferir quem pode pagar este lançamento. Ele não foi pago; tente de novo."* | A conferência falhou. Na dúvida, o sistema não paga. | Tente de novo em instantes. |
 | *"Não foi possível identificar quem está pagando. Ele não foi pago; entre de novo e tente outra vez."* | A sessão não permitiu identificar você. | Saia, entre de novo e repita. |
 | *"Você não tem permissão para pagar este lançamento."* | O seu cargo não tem a permissão de pagar. | Peça a quem administra a OSC, ver [Cargos e permissões](/configuracoes/cargos/#permissao-pagar). |

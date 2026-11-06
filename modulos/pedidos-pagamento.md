@@ -91,7 +91,7 @@ No **celular**, os cards de resumo ficam em grade de 2 colunas e a lista de pedi
 
 Na aba **Aprovado**, marque o checkbox de cada pedido que você já conferiu e vai pagar. No rodapé, o botão **"Marcar como pago (N)"** abre um diálogo em que você informa **a conta** e **a data do pagamento** uma única vez — em vez de repetir os dois campos pedido por pedido.
 
-Cada pedido é pago **separadamente**: se um falhar no meio do lote, os que já foram pagos **continuam pagos**, e você pode interromper a qualquer momento sem perder o que já foi feito. Ao final, o resultado vem **item por item** — pago, recusado por regra (sem permissão de pagar, conta inativa diferente da do lançamento, ou [você pediu ou aprovou aquele pedido e outra pessoa pode pagá-lo](#quem-pediu-ou-aprovou-nao-paga)), com o nome do lançamento e o motivo, ou falhou, também com o motivo. Pedido de projeto com financiador pode ainda sair pago com aviso de fonte ou item do plano de trabalho pendentes de escolha — ver [Projetos → De qual fonte e de qual item sai cada despesa](/modulos/projetos/#de-qual-fonte-e-item).
+Cada pedido é pago **separadamente**: se um falhar no meio do lote, os que já foram pagos **continuam pagos**, e você pode interromper a qualquer momento sem perder o que já foi feito. Ao final, o resultado vem **item por item** — pago, recusado por regra (sem permissão de pagar, conta inativa diferente da do lançamento), com o nome do lançamento e o motivo, ou falhou, também com o motivo. Pedido de projeto com financiador pode ainda sair pago com aviso de fonte ou item do plano de trabalho pendentes de escolha — ver [Projetos → De qual fonte e de qual item sai cada despesa](/modulos/projetos/#de-qual-fonte-e-item).
 
 Funciona do mesmo jeito que já funciona para reembolsos — ver [Reembolsos → Pagar reembolso aprovado pela fila](/modulos/reembolsos/#pagar-pela-fila).
 
@@ -194,29 +194,26 @@ Se o pedido não vai mais ser pago — a compra foi desfeita, o fornecedor desis
 >
 > No detalhe do pedido, **quem tem permissão de pagar vê os dados bancários por inteiro**; os demais veem apenas os últimos dígitos (o nome do destinatário fica visível para todos). E, passado o prazo que a OSC definiu, **esses dados são apagados automaticamente** depois que o pagamento é concluído — o pedido continua no histórico com valor, descrição, datas, anexos e o nome de quem recebeu. Ver [Contas Bancárias → Dados bancários de quem recebe](/configuracoes/contas/#dados-bancarios-de-quem-recebe).
 
-### Quem pediu ou aprovou não paga o próprio pedido {#quem-pediu-ou-aprovou-nao-paga}
+### Quem pediu ou aprovou também pode pagar {#quem-pediu-ou-aprovou-pode-pagar}
 
 > 💡 **Por que isso importa**
 >
-> Num controle financeiro saudável, quem pede o dinheiro, quem autoriza e quem paga não são a mesma pessoa. Se uma só pessoa fizesse as três coisas, ninguém conferiria ninguém. Por isso, **quem solicitou ou aprovou um pedido não pode confirmar o pagamento dele quando existe outra pessoa habilitada a pagar** (alguém com a permissão de pagar).
+> A separação que protege a OSC está na **aprovação**: ninguém aprova o próprio pedido, a não ser que seja a única pessoa habilitada a aprovar. O pagamento é o registro de que o dinheiro saiu, e ele cabe a quem tem a permissão de pagar. Por isso, quem pediu ou aprovou um pedido aprovado pode registrar o pagamento, desde que tenha essa permissão.
 
-**O que você vê.** No detalhe de um pedido aprovado, se você pediu ou aprovou aquele pedido e há outra pessoa que pode pagar, o botão **Confirmar pagamento** fica **desabilitado**, com a explicação logo abaixo: *"Você pediu ou aprovou este pedido, e outra pessoa da organização pode pagá-lo. Peça a ela que registre o pagamento."* A mesma recusa vale em qualquer outro caminho de pagamento (lista, lote, Movimentações). Nada é gravado.
+**O que você vê.** No detalhe de um pedido aprovado, se você tem a permissão de pagar, o botão **Confirmar pagamento** fica disponível, mesmo que você tenha pedido ou aprovado aquele pedido. O pagamento fica registrado com o seu nome, como qualquer outro. Vale do mesmo jeito na lista, no lote e em Movimentações.
 
-**Se você é a única pessoa habilitada.** Em OSC pequena, pode acontecer de só uma pessoa ter a permissão de pagar. Nesse caso o pagamento **passa**: aparece o aviso *"Você participou deste pedido e é a única pessoa habilitada a pagá-lo. O pagamento fica registrado e os administradores são avisados."* A pessoa paga, o registro mostra que a mesma pessoa participou das etapas, e os administradores recebem um aviso. Não é bloqueio: é transparência.
+**Pedido parcelado ou recorrente.** Cada parcela (ou ocorrência) é um pagamento próprio: pague cada parcela no menu **⋯** da linha, em **Ocorrências**, opção **Marcar como paga**. Quem tem a permissão de pagar paga cada uma, inclusive quem pediu ou aprovou o pedido.
 
-**Pedido parcelado ou recorrente.** Cada parcela (ou ocorrência) é um pagamento próprio, e a regra vale **uma por uma**: pague cada parcela no menu **⋯** da linha, em **Ocorrências**, opção **Marcar como paga**. Quem pediu ou aprovou o pedido não paga nenhuma das parcelas se houver outra pessoa habilitada.
+**Exemplo:** Rafael, coordenador, pede o pagamento de R$ 3.600 ao instrutor de oficina, em três parcelas. A diretora Ana aprova. Quem tem a permissão de pagar são Ana, o tesoureiro Paulo e a presidente Lúcia. Ana aprovou e tem a permissão, então pode pagar as parcelas; se ela não estiver disponível no vencimento, Paulo ou Lúcia pagam.
 
-**Exemplo:** Rafael, coordenador, pede o pagamento de R$ 3.600 ao instrutor de oficina, em três parcelas. A diretora Ana aprova. Quem tem a permissão de pagar são Ana, o tesoureiro Paulo e a presidente Lúcia. Ana aprovou, então não paga; Paulo e Lúcia pagam cada parcela, no vencimento.
-
-> ✓ **Dica · Combine quem paga antes de pedir**
+> ✓ **Dica · Tenha mais de uma pessoa para pagar**
 >
-> Se na sua OSC só uma pessoa paga, e ela costuma também aprovar, o pagamento passa, mas fica sinalizado aos administradores. Para evitar o aviso a cada pedido, dê a permissão de pagar a uma segunda pessoa de confiança, em [Cargos e permissões](/configuracoes/cargos/#permissao-pagar).
+> Se na sua OSC só uma pessoa tem a permissão de pagar, ela cobre todos os pagamentos. Para cobrir ausências, dê a permissão a uma segunda pessoa de confiança, em [Cargos e permissões](/configuracoes/cargos/#permissao-pagar).
 
 **Quando dá errado**
 
 | O que a tela diz | O que significa | O que fazer |
 |---|---|---|
-| *"Você pediu ou aprovou este pedido, e outra pessoa da organização pode pagá-lo. Peça a ela que registre o pagamento."* | Você participou do pedido e há outra pessoa habilitada. | Peça a ela que confirme o pagamento. |
 | *"Você não tem permissão para pagar este pedido."* | O seu cargo não tem a permissão de pagar. | Peça a quem administra a OSC. |
 | *"Não foi possível conferir quem pode pagar este pedido. Recarregue a página."* | A conferência falhou, e o sistema, na dúvida, não deixa pagar. | Recarregue a página. |
 

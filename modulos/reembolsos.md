@@ -120,7 +120,7 @@ Antes de confirmar, a barra já mostra **quantas solicitações** e **o valor to
 
 Reembolso aprovado pode ser marcado como pago **direto na aba "Aprovado"** — na linha, ou em lote — sem precisar ir até Movimentações procurar o lançamento correspondente. A ação pede a **data do pagamento** e a **conta** de onde o dinheiro saiu, do mesmo jeito que já funciona para pedidos de compra e pagamento. Só vê o botão de pagar quem tem a [permissão de pagar](/configuracoes/cargos/#permissao-pagar) — a mesma que já era exigida pelo caminho antigo, via Movimentações, que **continua funcionando** igual.
 
-Pagar vários de uma vez segue o mesmo padrão do lote de aprovação: marque os reembolsos aprovados que já confirmou o pagamento, informe data e conta, e confirme. O resultado volta **item por item** — o que foi pago, o que foi **recusado por regra** (sem permissão de pagar, conta inativa diferente da do lançamento, ou [você pediu ou aprovou aquele reembolso e outra pessoa pode pagá-lo](#quem-pediu-ou-aprovou-nao-paga)) e o que **falhou** —, nunca um "pronto" genérico escondendo uma falha parcial no meio do lote. Reembolso de projeto com financiador pode sair pago com aviso de fonte ou item do plano de trabalho pendentes de escolha — ver [Projetos → De qual fonte e de qual item sai cada despesa](/modulos/projetos/#de-qual-fonte-e-item).
+Pagar vários de uma vez segue o mesmo padrão do lote de aprovação: marque os reembolsos aprovados que já confirmou o pagamento, informe data e conta, e confirme. O resultado volta **item por item** — o que foi pago, o que foi **recusado por regra** (sem permissão de pagar, conta inativa diferente da do lançamento) e o que **falhou** —, nunca um "pronto" genérico escondendo uma falha parcial no meio do lote. Reembolso de projeto com financiador pode sair pago com aviso de fonte ou item do plano de trabalho pendentes de escolha — ver [Projetos → De qual fonte e de qual item sai cada despesa](/modulos/projetos/#de-qual-fonte-e-item).
 
 > 💡 **Por que isso importa**
 >
@@ -240,11 +240,11 @@ Há três caminhos para confirmar o pagamento, e todos levam ao mesmo lugar: pag
 >
 > Se o reembolso já foi enviado — inclusive aprovado ou pago — e o centro de custo ficou errado, quem faz a gestão financeira da OSC corrige direto no detalhe do reembolso, ao lado do campo **Centro de custo**, botão **Corrigir**. A tela mostra antes o que será alterado (a solicitação e quantos lançamentos gerados por ela) e pede um motivo, que fica na trilha de auditoria. A correção alcança os lançamentos já criados, inclusive os pagos. O mesmo mecanismo vale para pedidos de compra e pagamento — ver [Pedidos de Compra e Pagamento → Corrigir o centro de custo depois do envio](/modulos/pedidos-pagamento/#corrigir-o-centro-de-custo-depois-do-envio).
 
-### Quem pediu ou aprovou não paga o reembolso {#quem-pediu-ou-aprovou-nao-paga}
+### Quem pediu ou aprovou também pode pagar o reembolso {#quem-pediu-ou-aprovou-pode-pagar}
 
-A regra é a mesma dos pedidos de compra e pagamento: **quem solicitou ou aprovou um reembolso não confirma o pagamento dele quando existe outra pessoa habilitada a pagar**. Quem aprova não deve ser quem entrega o dinheiro — e, num reembolso, quem pede é a própria pessoa que vai receber. Ver a explicação completa e o exemplo em [Pedidos de Compra e Pagamento → Quem pediu ou aprovou não paga o próprio pedido](/modulos/pedidos-pagamento/#quem-pediu-ou-aprovou-nao-paga).
+A regra de aprovação não muda: ninguém aprova o próprio reembolso, a não ser que seja a única pessoa habilitada a aprovar. Depois de aprovado, o pagamento depende só da permissão de pagar: quem pediu ou aprovou pode registrar o pagamento, desde que tenha essa permissão. Ver a explicação completa e o exemplo em [Pedidos de Compra e Pagamento → Quem pediu ou aprovou também pode pagar](/modulos/pedidos-pagamento/#quem-pediu-ou-aprovou-pode-pagar).
 
-Na prática, em qualquer dos caminhos de pagamento (detalhe, fila ou Movimentações), a tentativa é recusada com *"Você pediu ou aprovou este pedido, e outra pessoa da organização pode pagá-lo. Peça a ela que registre o pagamento."* e **nada é gravado**. Na fila e no lote, a recusa aparece **item por item**, com o nome do reembolso. Se você é a única pessoa com a permissão de pagar, o pagamento passa e fica registrado, e os administradores são avisados.
+Na prática, em qualquer caminho de pagamento (detalhe, fila ou Movimentações), o pagamento passa se você tem a permissão de pagar, e fica registrado com o seu nome. Sem essa permissão, a tentativa é recusada com *"Você não tem permissão para pagar este lançamento."* e nada é gravado. Na fila e no lote, o resultado aparece item por item, com o nome do reembolso.
 
 ### Pago
 

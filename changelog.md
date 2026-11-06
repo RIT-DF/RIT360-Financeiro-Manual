@@ -11,6 +11,16 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.153.7] — 2026-11-06
+
+### Modificado
+
+- Quem tem permissão para pagar agora pode registrar o pagamento de um pedido ou reembolso já aprovado, mesmo que tenha feito o pedido ou participado da aprovação. A conferência na aprovação continua a mesma.
+
+### Corrigido
+
+- Quem cria conta pela página de cadastro também começa com a sessão limpa, como já acontece na tela de entrada e no convite.
+
 ## [1.153.6] — 2026-11-05
 
 ### Corrigido

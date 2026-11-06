@@ -286,9 +286,9 @@ O documento existiu, mas o arquivo não está mais acessível para download — 
 
 **Para sempre, por padrão — nada é descartado.** Se a sua organização tiver política de retenção, o Presidente pode definir um prazo em **Configurações → Relatórios**: 1, 2, 3, 5 ou 10 anos, contados do fim do período coberto pelo documento. Com prazo configurado, o sistema **avisa por e-mail 30 dias antes** de qualquer descarte, listando o que vai sair e permitindo baixar antes; se o prazo mudar, o aviso perde a validade e a contagem recomeça. O registro da prestação nunca é apagado.
 
-### O botão "Confirmar pagamento" está desabilitado e diz que outra pessoa pode pagar. Por quê?
+### Eu pedi (ou aprovei) um pedido. Posso confirmar o pagamento dele?
 
-Porque quem **pediu ou aprovou** um pedido não confirma o pagamento dele quando existe **outra pessoa** com a permissão de pagar — assim, quem pede, quem autoriza e quem paga não são a mesma pessoa. A tela diz: *"Você pediu ou aprovou este pedido, e outra pessoa da organização pode pagá-lo. Peça a ela que registre o pagamento."* Se você é a **única** pessoa habilitada a pagar, o pagamento passa e fica registrado, e os administradores são avisados. Em pedido parcelado ou recorrente, a regra vale parcela por parcela. Ver [Pedidos → Quem pediu ou aprovou não paga o próprio pedido](/modulos/pedidos-pagamento/#quem-pediu-ou-aprovou-nao-paga).
+Pode, se a sua conta tem a permissão de pagar. A separação de quem pede e de quem aprova está na **aprovação**: quem pediu ou aprovou não aprova sozinho o próprio pedido, a não ser que seja a única pessoa habilitada a aprovar. Depois de aprovado, o pagamento é só o registro de que o dinheiro saiu, e quem tem a permissão de pagar pode registrá-lo, mesmo tendo participado do pedido. Se a sua conta não tem essa permissão, o botão não aparece. Em pedido parcelado ou recorrente, a regra vale parcela por parcela. Ver [Pedidos → Quem pediu ou aprovou também pode pagar](/modulos/pedidos-pagamento/#quem-pediu-ou-aprovou-pode-pagar).
 
 ### O pedido já tinha uma aprovação, mas ela aparece com o selo "Voto anterior à alteração". O que é?
 
