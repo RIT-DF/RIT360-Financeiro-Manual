@@ -118,7 +118,7 @@ Em vez de começar da folha em branco, a tela do Orçamento tem um assistente qu
    - **Três perguntas abertas**, para o que ficou de fora.
 
    Toda pergunta pode ser pulada. Se a organização orça por **centro de custo**, as despesas são informadas por centro.
-5. Revise a proposta em cinco blocos: **receitas**, **obrigatórias**, **projetos**, **desejáveis** e **resumo**.
+5. Revise a proposta em cinco blocos: **receitas**, **obrigatórias**, **projetos**, **desejáveis** e **resumo**. Em cada linha dá para mudar o **valor anual** direto: os meses se ajustam mantendo a proporção entre eles, e o resumo recalcula na hora. Para acertar um mês específico, use **Editar meses**. Depois de aplicar, as linhas continuam editáveis no rascunho, inclusive mês a mês, até o orçamento ser enviado para aprovação.
 6. Escolha como aplicar ao rascunho e confirme.
 
 **Como a proposta se fecha.** Cada despesa é classificada como **essencial**, **importante** ou **desejável**. Só receita **garantida** e **provável** conta no total; receita **incerta** fica à parte. Se as despesas não cabem no que entra, a proposta mostra quanto falta e o que sairia: primeiro as **desejáveis**, depois as **importantes**. Despesa **essencial** nunca é cortada automaticamente.

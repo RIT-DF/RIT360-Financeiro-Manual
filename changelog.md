@@ -11,6 +11,17 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.155.5] — 2026-11-12
+
+### Corrigido
+
+- Se a sua sessão tiver sido encerrada em outro aparelho, o app agora percebe ao abrir e leva você à tela de entrada com um aviso. Antes, ele podia ficar carregando sem parar.
+- Se não for possível conferir suas permissões, o Orçamento avisa e oferece "Tentar de novo", em vez de dizer que seu cargo não tem acesso.
+
+### Modificado
+
+- Na revisão do assistente do orçamento, dá para mudar direto o valor do ano de cada linha. Os meses se ajustam na mesma proporção.
+
 ## [1.155.4] — 2026-11-12
 
 ### Corrigido
