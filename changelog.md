@@ -11,6 +11,12 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.154.1] — 2026-11-12
+
+### Modificado
+
+- No assistente do Orçamento, as receitas encontradas no histórico agora aparecem na etapa "O que entra" para você confirmar: se continuam, e com que certeza, ou se não continuam. Uma receita que terminou não entra mais no orçamento do ano seguinte sem ninguém perceber; enquanto não houver resposta, ela conta como provável e aparece marcada "a confirmar".
+
 ## [1.154.0] — 2026-11-12
 
 <!-- destaque: Novo assistente que monta o orçamento do ano com você, a partir de perguntas simples. -->

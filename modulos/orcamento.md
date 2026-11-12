@@ -91,7 +91,7 @@ Em vez de começar da folha em branco, a tela do Orçamento tem um assistente qu
 2. Ele lê os lançamentos dos **últimos 12 meses** e diz quantos meses encontrou com movimentação. Lançamentos ligados a **projetos** ficam de fora dessa leitura.
 3. Se alguma categoria tem histórico incompleto, ele pergunta **uma vez** por categoria o que fazer com os meses sem dado: **repetir a média** nesses meses, **informar outro valor por mês** ou **deixar como estimativa**. Se a mesma resposta vale para todas, use **aplicar a todas**.
 4. Responde as perguntas, nesta ordem:
-   - **O que entra**: valor, meses e certeza (**garantida**, **provável** ou **incerta**).
+   - **O que entra**: primeiro, as receitas encontradas no histórico, uma a uma. Para cada uma, diga se **continua** (e com que certeza: **garantida**, **provável** ou **incerta**) ou se **não continua**; dá para dar a mesma resposta a todas. Receita que não continua sai da proposta. Receita sem resposta entra como **provável** e aparece marcada **a confirmar**. Depois, informe as fontes novas ou corrija valores: quanto, em quais meses e com que certeza.
    - **O que é obrigatório pagar**.
    - **Projetos comprometidos**.
    - **O que seria bom ter**.
