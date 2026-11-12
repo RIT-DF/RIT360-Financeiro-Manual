@@ -11,6 +11,12 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.156.1] — 2026-11-12
+
+### Corrigido
+
+- No Orçamento anual, os campos de valor do ano e de cada mês não perdem mais o foco a cada dígito. O valor é salvo uma vez, quando você sai do campo ou aperta Enter.
+
 ## [1.156.0] — 2026-11-12
 
 <!-- destaque: O Orçamento anual mudou: agora tem abas Receitas, Despesas e Resumo e mostra só as linhas que você preencheu. -->
