@@ -7,7 +7,7 @@ task: gerir-orcamento-anual
 role: [presidente, tesoureiro, gestor-centro-custo]
 routes: [/orcamento]
 screenshots: [orcamento-elaboracao, orcamento-previsto-realizado, orcamento-reconciliacao]
-source_docs: [PRODUCT.md#orcamento, changelog v1.154.0]
+source_docs: [PRODUCT.md#orcamento, changelog v1.154.0, changelog v1.155.0]
 last_verified: 2026-07-26
 status: publicado
 ---
@@ -68,6 +68,25 @@ Para montar um orçamento:
 > 💡 **Distribuir por 12 e ajustar depois**
 >
 > Comece sempre pelo valor anual — é mais fácil pensar "vamos gastar uns R$ 24.000 no ano com o aluguel" do que preencher 12 campos. O sistema divide em R$ 2.000/mês. Só então você ajusta os meses que fogem do padrão: o 13º do funcionário em dezembro, a taxa anual que cai em março, o gasto do evento em setembro. O resto pode ficar na média.
+
+### Verba do ano em valor único
+{: #verba-do-ano-valor-unico }
+
+Para um centro de custo que não precisa de detalhe, dá para definir **uma verba do ano só**, sem escolher categoria nem mês. Na área do centro, no campo **Verba do ano (valor único)**, informe o valor e salve. Zerar o valor remove a verba.
+
+Quem pode elaborar o orçamento daquele centro grava a verba, e só enquanto a versão está em **rascunho** e o ano está aberto.
+
+> ✓ **Dica · Quando a verba única basta**
+>
+> Serve para uma área que não precisa de controle por categoria nem por mês — um núcleo, uma seção, uma unidade com um valor combinado para o ano. Se a área passar a precisar de detalhe, você detalha depois, com as regras abaixo.
+
+Algumas regras para a verba única:
+
+- **Vale só depois da aprovação**, como as demais linhas do orçamento. Uma revisão do orçamento copia a verba junto com as linhas.
+- **Um centro usa verba única ou linhas detalhadas, nunca os dois.** Se o centro tem verba única e você decide detalhar por categoria e mês (botão **Detalhar por categoria e mês**), a tela avisa antes que a verba passará a ser a soma das linhas e que o valor único deixa de valer naquela versão. Enquanto você não preencher nenhuma linha, a verba continua como está.
+- **Conta uma vez só nos totais.** O total da organização, o fechamento e o relatório de execução somam a verba do centro uma única vez.
+- **Não aparece mês a mês.** A verba única vale para o ano inteiro e não entra na visão do previsto mês a mês.
+- **Na planilha**, há uma aba própria, **Verba sem categoria**. A importação de volta não lê essa aba: a verba única é definida na tela do Orçamento.
 
 ### Gerar automaticamente a partir do histórico
 
@@ -149,9 +168,22 @@ Depois de aprovado, o orçamento vira painel de acompanhamento. Para cada **cent
 
 O semáforo deixa a diretoria enxergar de relance onde está o aperto, sem abrir linha por linha — e agir a tempo, não no fim do ano.
 
-> 📖 **Conceito · A regra "projeto vence"**
+Para acompanhar uma área específica, use a tela [Minha área](/modulos/minha-area/): ela junta, para um centro de custo e um ano, a verba, o gasto, o comprometido e o saldo.
+
+> 📖 **Conceito · De que centro de custo é o gasto de um projeto**
 >
-> Uma mesma despesa pode pertencer a dois "baldes" ao mesmo tempo: o **centro de custo** (a área da OSC que a executou) e o **projeto** (a iniciativa que a motivou). Para não contar o mesmo gasto duas vezes e não inflar artificialmente o centro de custo, o RIT360 Financeiro aplica a regra **"projeto vence"**: quando um gasto está vinculado a um projeto, ele conta no **orçamento do projeto**, e **não** entra no realizado do centro de custo. Na prática: o dinheiro que a área gastou "por causa de um projeto" aparece na conta do projeto (que tem orçamento próprio), e o centro de custo fica com o que gastou no seu dia a dia comum. Assim cada balde reflete só o que é dele, e a soma não engana.
+> Um gasto pode ter um **centro de custo** (a área que responde por ele) e estar ligado a um **projeto** (a iniciativa que o motivou). Para decidir em qual área ele conta no orçamento, o que vale é **a fonte do dinheiro escolhida em cada lançamento** — caixa geral da organização, receitas do próprio projeto (festa, bazar, doação) ou financiador (edital, convênio, termo de fomento, patrocínio):
+>
+> - **Lançamento sem projeto** — conta no centro de custo do lançamento, como sempre.
+> - **Lançamento de projeto com fonte de caixa geral** — conta no **centro de custo do lançamento** (ou nos centros, se o custo foi repartido). Sem centro de custo, vai para **Não alocado**. Assim, o orçamento de cada área reflete o dinheiro que ela de fato usou.
+> - **Lançamento de projeto com fonte de financiador ou de receitas próprias** — fica no **orçamento do projeto**, fora do centro de custo.
+> - **Lançamento de projeto sem fonte escolhida** — se o projeto só tem fonte de caixa geral, ou não tem fonte nenhuma, conta no centro de custo, como um lançamento sem projeto (sem centro de custo, vai para **Não alocado**). Se o projeto tem financiador ou receitas próprias, fica no orçamento do projeto.
+>
+> Um projeto **misto** (parte com caixa geral, parte com convênio, por exemplo) é separado **lançamento a lançamento**: cada gasto segue a fonte que ele tem. Cada lançamento conta em **um lugar só**, e o total da organização não muda — o que muda é em qual área o gasto aparece. A mesma regra vale para os alertas, para o histórico do orçamento e para o assistente do orçamento.
+>
+> 💡 **Dica · O que decide é a fonte do lançamento**
+>
+> Não é o projeto, sozinho, que decide. Se um gasto de convênio aparecer na sua área, confira a **fonte escolhida no lançamento**: com caixa geral, ele conta aqui; com o financiador, ele sai desta área e aparece no orçamento do projeto.
 
 ## Aprovar e revisar
 
@@ -176,6 +208,7 @@ A vida muda ao longo do ano, e às vezes o orçamento precisa mudar junto — en
 - Toda revisão **exige um motivo**, que fica registrado na trilha de auditoria. Não dá para mexer no baseline sem dizer por quê.
 - Ajustes **pequenos** (abaixo de um limiar configurável pela OSC) são aplicados direto.
 - Ajustes **acima do limiar** voltam para **aprovação** — a diretoria precisa concordar de novo antes de o novo número valer.
+- Uma revisão **copia as verbas de valor único** junto com as linhas do orçamento (ver [Verba do ano em valor único](#verba-do-ano-valor-unico)).
 
 > 📖 **Conceito · O limiar de revisão**
 >
@@ -188,9 +221,9 @@ A vida muda ao longo do ano, e às vezes o orçamento precisa mudar junto — en
 
 No fim do ano, o orçamento tem uma visão de **reconciliação** que junta as três origens do que foi realizado:
 
-- **Planejado** — o realizado que caiu nos centros de custo e categorias que você orçou.
-- **Projetos** — o realizado que pertence a projetos (lembrando a regra "projeto vence": esse gasto conta aqui, não no centro de custo).
-- **Não alocado** — movimentações que aconteceram fora do que foi orçado, sem centro de custo ou categoria previstos.
+- **Planejado** — o realizado que caiu nos centros de custo e categorias que você orçou. Inclui o gasto dos lançamentos de projeto pagos com caixa geral, pelo centro de custo de cada lançamento.
+- **Projetos com financiador ou receitas próprias** — o realizado dos lançamentos pagos com financiador ou receitas do próprio projeto, que têm orçamento próprio e não passam pelo centro de custo.
+- **Não alocado** — movimentações que aconteceram fora do que foi orçado, sem centro de custo ou categoria previstos (inclusive o gasto de projeto pago com caixa geral que ficou sem centro de custo).
 
 A reconciliação fecha a conta: mostra que a soma das partes bate com o total de fato movimentado no ano, sem sobra nem furo.
 
@@ -204,7 +237,7 @@ Quando o ano acaba e a prestação de contas está pronta, você usa **Encerrar 
 
 O módulo conversa com planilhas e relatórios para caber no fluxo que a sua OSC já usa:
 
-- **Exportar e importar em XLSX** — leve o orçamento para uma planilha (Excel, Google Sheets) para trabalhar offline, discutir com a diretoria ou preparar em conjunto, e depois **importe de volta**. Útil para OSCs que montam o orçamento em reunião, na planilha, antes de oficializar no sistema.
+- **Exportar e importar em XLSX** — leve o orçamento para uma planilha (Excel, Google Sheets) para trabalhar offline, discutir com a diretoria ou preparar em conjunto, e depois **importe de volta**. Útil para OSCs que montam o orçamento em reunião, na planilha, antes de oficializar no sistema. A verba de valor único vem numa aba própria, **Verba sem categoria**, que a importação não lê (ver [Verba do ano em valor único](#verba-do-ano-valor-unico)).
 - **Relatório de execução** — um relatório do previsto × realizado do ano, exportável em **PDF** (para anexar à prestação de contas ou enviar a financiadores) e em **Excel** (para análise).
 - **Execução por Centro de Custo na prestação de contas** — a prestação de contas da OSC ganhou uma seção **"Execução por Centro de Custo"**, mostrando, para cada área, o previsto, o realizado e o quanto foi consumido. Ver [Relatórios → Exportação](/modulos/relatorios/#exportação).
 
@@ -219,6 +252,10 @@ Os avisos vão para o **gestor do centro de custo** (quem responde por aquela á
 
 > 💡 As preferências de canal (e-mail, no app) desses avisos seguem as configurações de notificação de cada pessoa, em [Meu Perfil](/configuracoes/perfil/).
 
+> ⚠️ **Atenção · A verba de valor único ainda não entra nos avisos por e-mail**
+>
+> Os avisos de 80% e 100% por e-mail ainda não consideram a verba definida em valor único. Para um centro com verba única, acompanhe o limite na tela [Minha área](/modulos/minha-area/), que mostra o aviso perto do limite e ao passar dele.
+
 ## Quem pode o quê
 
 O acesso ao orçamento acompanha os papéis financeiros da OSC:
@@ -227,8 +264,10 @@ O acesso ao orçamento acompanha os papéis financeiros da OSC:
 |---|---|
 | **Presidente** | Elabora, revisa, aprova e encerra — tudo, em todos os centros de custo |
 | **Tesoureiro** | Elabora e revisa — tudo, em todos os centros de custo |
-| **Gestor de Centro de Custo** | Elabora e acompanha **apenas o(s) seu(s) centro(s) de custo** |
+| **Gestor de Centro de Custo** | Elabora e acompanha **apenas o(s) seu(s) centro(s) de custo**, inclusive a verba de valor único deles |
 | **Diretor, Comissão Fiscal, Coordenador, Voluntário** | **Veem** o orçamento (dentro do seu nível de acesso ao financeiro), mas não elaboram |
+
+A tela [Minha área](/modulos/minha-area/) aparece para quem responde por algum centro de custo e para quem tem permissão de ver o orçamento. Quem vê o orçamento enxerga todos os centros; o Gestor de Centro de Custo, só os seus.
 
 - **Ver** o orçamento é amplo: todos com acesso ao financeiro enxergam o previsto × realizado, cada um dentro do recorte que já têm (o Gestor de Centro de Custo vê o seu CC; os demais, conforme o seu papel).
 - **Elaborar e gerenciar** cabe a quem opera o financeiro: Presidente e Tesoureiro no consolidado; o Gestor de Centro de Custo, restrito à sua área.
@@ -253,7 +292,8 @@ Ver [Papéis e Permissões](/papeis/) para o quadro completo.
 ## Por onde seguir
 
 - [**Movimentações**](/modulos/movimentacoes/) — de onde vem o "realizado" que o orçamento acompanha.
-- [**Projetos**](/modulos/projetos/) — onde os gastos de projeto são orçados e acompanhados (regra "projeto vence").
+- [**Projetos**](/modulos/projetos/) — onde os gastos de projeto são orçados e acompanhados. Em qual centro de custo cada gasto de projeto conta está explicado no conceito "De que centro de custo é o gasto de um projeto", na seção **Acompanhar: previsto × realizado**.
+- [**Minha área**](/modulos/minha-area/) — a verba, o gasto e o saldo de um centro de custo, numa tela só.
 - [**Relatórios**](/modulos/relatorios/) — o relatório de execução e a prestação de contas com Execução por Centro de Custo.
 - [**Configurações → Fluxo de Aprovações → aba Orçamento**](/configuracoes/aprovacoes/#aba-orcamento) — quem aprova, quórum, limiar de revisão e alertas.
 - [**Papéis e Permissões**](/papeis/) — quem vê, quem elabora e quem aprova o orçamento.

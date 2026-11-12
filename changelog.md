@@ -11,6 +11,36 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.155.3] — 2026-11-12
+
+### Corrigido
+
+- No fechamento do orçamento, projetos cancelados que tiveram gasto pago com financiador ou receitas próprias continuam aparecendo no bloco de projetos, marcados como cancelados, na tela e na planilha. Assim, o total do fechamento sempre bate com a soma dos blocos.
+
+## [1.155.2] — 2026-11-12
+
+### Modificado
+
+- O gasto de projeto passa a ser separado pela fonte de cada lançamento: o que foi pago com o caixa geral da organização conta no centro de custo do lançamento; o que foi pago com dinheiro de financiador ou com receitas do próprio projeto fica no orçamento do projeto. Projetos que misturam as duas coisas são separados lançamento a lançamento.
+
+## [1.155.1] — 2026-11-12
+
+### Corrigido
+
+- A aba Fechamento da planilha de execução do orçamento agora mostra cada centro de custo com o previsto e o realizado, os projetos com orçamento próprio, o que ficou sem centro de custo e o total do ano, com os mesmos números da tela de fechamento. Centros com verba anual simples aparecem com a verba como despesa prevista.
+
+## [1.155.0] — 2026-11-12
+
+<!-- destaque: Nova tela Minha área: verba, gasto e saldo de cada centro de custo num lugar só. -->
+
+### Adicionado
+
+- Agora dá para definir a verba do ano de um centro de custo com um valor só, sem detalhar por categoria e mês. Quem responde por uma área ganha a tela "Minha área", com a verba, o que já foi gasto, o que está comprometido e quanto sobra, além de um aviso quando o gasto chega perto do limite.
+
+### Modificado
+
+- Os gastos de projetos tocados com o caixa da organização passam a contar no centro de custo de cada lançamento. Projetos com orçamento próprio continuam separados. O total da organização não muda; muda apenas em qual área cada gasto aparece.
+
 ## [1.154.1] — 2026-11-12
 
 ### Modificado

@@ -1,6 +1,27 @@
 {
   "versoes": [
     {
+      "versao": "1.155.3",
+      "data": "2026-11-12",
+      "destaque": false
+    },
+    {
+      "versao": "1.155.2",
+      "data": "2026-11-12",
+      "destaque": false
+    },
+    {
+      "versao": "1.155.1",
+      "data": "2026-11-12",
+      "destaque": false
+    },
+    {
+      "versao": "1.155.0",
+      "data": "2026-11-12",
+      "destaque": true,
+      "resumo": "Nova tela Minha área: verba, gasto e saldo de cada centro de custo num lugar só."
+    },
+    {
       "versao": "1.154.1",
       "data": "2026-11-12",
       "destaque": false

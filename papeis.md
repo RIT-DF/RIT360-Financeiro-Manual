@@ -72,7 +72,8 @@ O **Gestor de Centro de Custo** é para quem responde pelo dia a dia financeiro 
 
 - **Criar e editar** lançamentos vinculados ao(s) seu(s) centro(s) de custo
 - **Ver** as movimentações e os relatórios daquele CC
-- **Elaborar e acompanhar o orçamento** do(s) seu(s) centro(s) de custo (o previsto × realizado da sua área) — ver [Orçamento](/modulos/orcamento/)
+- **Elaborar e acompanhar o orçamento** do(s) seu(s) centro(s) de custo (o previsto × realizado da sua área, e a verba do ano em valor único, quando a área não é detalhada) — ver [Orçamento](/modulos/orcamento/)
+- **Ver a tela [Minha área](/modulos/minha-area/)** do(s) seu(s) centro(s) de custo: verba, gasto, comprometido e saldo, só de leitura
 
 **O que ele *não* pode fazer:**
 
