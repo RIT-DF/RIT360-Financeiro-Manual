@@ -11,6 +11,16 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.156.0] — 2026-11-12
+
+<!-- destaque: O Orçamento anual mudou: agora tem abas Receitas, Despesas e Resumo e mostra só as linhas que você preencheu. -->
+
+### Modificado
+
+- O Orçamento anual agora tem as abas Receitas, Despesas e Resumo, e mostra só as linhas que você preencheu. Para incluir outra, use "Adicionar categoria".
+- Você escolhe ver as linhas por centro de custo ou por categoria. Por categoria, aparece o total de cada uma na organização e quanto vai para cada centro.
+- O Resumo mostra, só para consulta, os projetos com financiador ou receitas próprias, com o previsto e o realizado de cada um.
+
 ## [1.155.5] — 2026-11-12
 
 ### Corrigido

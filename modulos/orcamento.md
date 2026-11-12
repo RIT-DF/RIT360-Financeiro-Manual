@@ -60,11 +60,21 @@ Para montar um orçamento:
 
 1. No menu, abra **Orçamento**.
 2. Escolha o **ano** do orçamento (o ano seguinte, tipicamente, montado nos últimos meses do ano corrente).
-3. Lance as **receitas previstas** — o que a OSC pretende arrecadar — e as **despesas previstas** — o que pretende gastar — cada linha vinculada a um **centro de custo** e a uma **categoria**.
-4. Para cada linha, informe o **valor anual**. O sistema **distribui automaticamente** esse valor pelos 12 meses (divisão igual), e você pode **ajustar mês a mês** quando o gasto não é uniforme — por exemplo, concentrar a despesa de um evento no mês em que ele acontece.
-5. Se quiser, adicione a **linha de contingência** de cada centro de custo (a reserva para imprevistos daquela área).
-6. Para tirar linhas do rascunho, use **Remover linha**. O sistema pede confirmação mostrando a categoria e o valor anual. Para várias de uma vez, marque as linhas (há **selecionar todas** em cada centro de custo) e use **Remover selecionadas**. A confirmação diz quantas linhas e o total anual que sai, e o resultado separa as removidas das recusadas.
-7. Acompanhe, no rodapé, o **resultado previsto** — a diferença entre o total de receitas e o total de despesas previstas, indicando **superávit** (sobra) ou **déficit** (falta) planejado para o ano.
+3. A tela tem três abas: **Receitas**, **Despesas** e **Resumo**. Em Receitas e Despesas aparecem só as linhas que existem na versão; uma linha zerada que já existe continua aparecendo. Para incluir outra, clique em **Adicionar categoria**: abre uma busca nas categorias ativas do tipo da aba e cria a linha. Um grupo vazio mostra o mesmo botão.
+4. Escolha como agrupar as linhas:
+   - **Por centro de custo** (é o padrão quando há centros ativos): cada centro abre e fecha, e mostra o subtotal no título.
+   - **Por categoria**: cada categoria mostra o total da organização e, ao expandir, quanto vai para cada centro. Nessa visão, a edição é feita nessas linhas, e **Adicionar centro de custo** inclui mais um centro na categoria.
+
+   Categorias com categoria-mãe ficam agrupadas sob ela, com subtotal. A aba, o agrupamento e os grupos abertos ficam lembrados no seu navegador.
+5. Lance as **receitas previstas** — o que a OSC pretende arrecadar — na aba Receitas, e as **despesas previstas** — o que pretende gastar — na aba Despesas, cada linha vinculada a uma **categoria** e a um **centro de custo**.
+6. Para cada linha, informe o **valor anual**. O sistema **distribui automaticamente** esse valor pelos 12 meses (divisão igual), e você pode **ajustar mês a mês**, com **Editar meses**, quando o gasto não é uniforme — por exemplo, concentrar a despesa de um evento no mês em que ele acontece.
+7. Se quiser, adicione a **linha de contingência** de cada centro de custo (a reserva para imprevistos daquela área). Ela aparece na aba Despesas só quando já existe; se ainda não há, use **Adicionar reserva de contingência**, também na aba Despesas.
+8. Para tirar linhas do rascunho, use **Remover linha**. O sistema pede confirmação mostrando a categoria e o valor anual. Para várias de uma vez, marque as linhas (há **selecionar todas** em cada grupo) e use **Remover selecionadas**. A confirmação diz quantas linhas e o total anual que sai, e o resultado separa as removidas das recusadas.
+9. Acompanhe o **resultado previsto** na aba **Resumo** — a diferença entre o total de receitas e o total de despesas previstas, indicando **superávit** (sobra) ou **déficit** (falta) planejado para o ano.
+
+O **Resumo** reúne o consolidado, o resultado previsto, o previsto × realizado e o fechamento. Ele traz também um bloco só de consulta com os **projetos que têm financiador ou receitas próprias**: para cada um, o previsto (a soma das rubricas do projeto), o realizado do fechamento e um link para a página do projeto. O orçamento de cada projeto continua sendo editado na própria página do projeto, não aqui.
+
+Categoria desativada que ainda tem linha no orçamento continua aparecendo, com a etiqueta **Inativa**.
 
 > 💡 **Distribuir por 12 e ajustar depois**
 >
@@ -73,7 +83,7 @@ Para montar um orçamento:
 ### Verba do ano em valor único
 {: #verba-do-ano-valor-unico }
 
-Para um centro de custo que não precisa de detalhe, dá para definir **uma verba do ano só**, sem escolher categoria nem mês. Na área do centro, no campo **Verba do ano (valor único)**, informe o valor e salve. Zerar o valor remove a verba.
+Para um centro de custo que não precisa de detalhe, dá para definir **uma verba do ano só**, sem escolher categoria nem mês. Na visão por centro de custo, o título do centro tem o campo compacto **Verba do ano (valor único)**, que aparece só para centro sem linhas detalhadas. Informe o valor e salve. Zerar o valor remove a verba.
 
 Quem pode elaborar o orçamento daquele centro grava a verba, e só enquanto a versão está em **rascunho** e o ano está aberto.
 
@@ -84,7 +94,8 @@ Quem pode elaborar o orçamento daquele centro grava a verba, e só enquanto a v
 Algumas regras para a verba única:
 
 - **Vale só depois da aprovação**, como as demais linhas do orçamento. Uma revisão do orçamento copia a verba junto com as linhas.
-- **Um centro usa verba única ou linhas detalhadas, nunca os dois.** Se o centro tem verba única e você decide detalhar por categoria e mês (botão **Detalhar por categoria e mês**), a tela avisa antes que a verba passará a ser a soma das linhas e que o valor único deixa de valer naquela versão. Enquanto você não preencher nenhuma linha, a verba continua como está.
+- **Um centro usa verba única ou linhas detalhadas, nunca os dois.** Se o centro tem verba única e você usa **Adicionar categoria** nele, a tela avisa antes que a verba passará a ser a soma das linhas e que o valor único deixa de valer naquela versão. Você confirma com **Detalhar e adicionar**; se cancelar, a verba continua como está.
+- **Aparece no rodapé da aba Despesas.** Lá a linha **Verba simples (sem categoria)** entra no total, para que o número bata com o do Resumo.
 - **Conta uma vez só nos totais.** O total da organização, o fechamento e o relatório de execução somam a verba do centro uma única vez.
 - **Não aparece mês a mês.** A verba única vale para o ano inteiro e não entra na visão do previsto mês a mês.
 - **Na planilha**, há uma aba própria, **Verba sem categoria**. A importação de volta não lê essa aba: a verba única é definida na tela do Orçamento.
