@@ -144,7 +144,7 @@ Ações administrativas sobre sua própria conta, cada uma com botão independen
 
 - **Alterar senha** — pede a **senha atual**, a nova senha e a confirmação; ao concluir, **os outros aparelhos são desconectados**. Senha forte (8+ caracteres, mix de letras, números e símbolos) é exigida. Veja o passo a passo logo abaixo.
 - **Alterar e-mail de acesso** — troca o e-mail com o qual você entra no sistema (self-service). Pede a **senha atual** — ou, se você só entra pelo Google, um **código enviado ao seu e-mail atual**. Veja o passo a passo logo abaixo.
-- **Encerrar todas as sessões** — desconecta sua conta de todos os dispositivos onde está logada. Útil se você perdeu acesso a um celular ou suspeita de uso indevido.
+- **Encerrar todas as sessões** — desconecta sua conta de todos os dispositivos onde está logada. Útil se você perdeu acesso a um celular ou suspeita de uso indevido. É o único jeito de sair de todos de uma vez: o botão **Sair** do menu e a saída automática por inatividade encerram só o aparelho em que acontecem, e os outros continuam conectados.
 - **Excluir minha conta (LGPD)** — exerce o **direito ao esquecimento**. Ao confirmar, sua conta entra em uma **carência de 30 dias**; passado o prazo, seus dados pessoais (nome, e-mail, telefone, CPF, RG, avatar) são **anonimizados de forma irreversível**. Por obrigação legal, **registros financeiros e de auditoria são retidos por 5 anos sem identificação pessoal**.
 
 ### Como trocar a senha {#como-trocar-a-senha}

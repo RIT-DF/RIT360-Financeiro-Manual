@@ -63,7 +63,8 @@ Para montar um orçamento:
 3. Lance as **receitas previstas** — o que a OSC pretende arrecadar — e as **despesas previstas** — o que pretende gastar — cada linha vinculada a um **centro de custo** e a uma **categoria**.
 4. Para cada linha, informe o **valor anual**. O sistema **distribui automaticamente** esse valor pelos 12 meses (divisão igual), e você pode **ajustar mês a mês** quando o gasto não é uniforme — por exemplo, concentrar a despesa de um evento no mês em que ele acontece.
 5. Se quiser, adicione a **linha de contingência** de cada centro de custo (a reserva para imprevistos daquela área).
-6. Acompanhe, no rodapé, o **resultado previsto** — a diferença entre o total de receitas e o total de despesas previstas, indicando **superávit** (sobra) ou **déficit** (falta) planejado para o ano.
+6. Para tirar linhas do rascunho, use **Remover linha**. O sistema pede confirmação mostrando a categoria e o valor anual. Para várias de uma vez, marque as linhas (há **selecionar todas** em cada centro de custo) e use **Remover selecionadas**. A confirmação diz quantas linhas e o total anual que sai, e o resultado separa as removidas das recusadas.
+7. Acompanhe, no rodapé, o **resultado previsto** — a diferença entre o total de receitas e o total de despesas previstas, indicando **superávit** (sobra) ou **déficit** (falta) planejado para o ano.
 
 > 💡 **Distribuir por 12 e ajustar depois**
 >

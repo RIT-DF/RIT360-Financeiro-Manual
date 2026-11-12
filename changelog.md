@@ -11,6 +11,18 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.155.4] — 2026-11-12
+
+### Corrigido
+
+- Sair do app num aparelho, pelo botão Sair ou por inatividade, não desconecta mais você nos outros aparelhos. Para sair de todos de uma vez, use "Encerrar todas as sessões" em Meu Perfil.
+- No detalhe de pedidos e reembolsos aprovados, a área de ações não mostra mais por um instante "aguardando confirmação do tesoureiro" para quem pode pagar.
+- No assistente do orçamento, categorias de centro de custo desativado não aparecem mais com o nome cortado, e cada categoria mostra em quantos meses teve gasto.
+
+### Modificado
+
+- Remover uma linha do orçamento agora pede confirmação. Também dá para marcar várias linhas e removê-las de uma vez, vendo antes quantas são e o total.
+
 ## [1.155.3] — 2026-11-12
 
 ### Corrigido
