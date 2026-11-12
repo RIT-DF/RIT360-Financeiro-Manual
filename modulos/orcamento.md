@@ -7,7 +7,7 @@ task: gerir-orcamento-anual
 role: [presidente, tesoureiro, gestor-centro-custo]
 routes: [/orcamento]
 screenshots: [orcamento-elaboracao, orcamento-previsto-realizado, orcamento-reconciliacao]
-source_docs: [PRODUCT.md#orcamento]
+source_docs: [PRODUCT.md#orcamento, changelog v1.154.0]
 last_verified: 2026-07-26
 status: publicado
 ---
@@ -76,6 +76,65 @@ Quando a sua OSC já tem **pelo menos dois anos** de movimentações registradas
 > ✓ **Dica · Gere, depois questione linha por linha**
 >
 > A geração automática é um ótimo ponto de partida, não a palavra final. Ela repete o passado; o seu trabalho é decidir o que muda no ano que vem — o projeto novo que entra, a fonte de recurso que acaba, a economia que você quer fazer. Gere o rascunho, e então percorra cada linha perguntando "isso ainda faz sentido para o ano que vem?".
+
+### Montar com o assistente
+
+Em vez de começar da folha em branco, a tela do Orçamento tem um assistente que monta uma proposta do ano com você. Ele aparece só para quem elabora o orçamento da organização inteira, como Presidente e Tesoureiro (ver [Papéis e Permissões](/papeis/)), e só enquanto a versão do ano está em **rascunho**. O Gestor de Centro de Custo, que cuida só da sua área, não vê o assistente. Depois de enviada para aprovação ou aprovada, a versão deixa de mostrá-lo.
+
+> 💡 **Por que isso importa**
+>
+> Quem monta o orçamento à mão precisa lembrar de tudo o que a OSC gastou e recebeu no ano anterior, e quase sempre esquece alguma coisa. O assistente parte dos lançamentos que a organização já tem, mesmo que sejam poucos meses, e pergunta o que os lançamentos não dizem sozinhos: o que de fato entra, o que tem de ser pago, quais projetos já estão comprometidos. O resultado é uma proposta mês a mês que você revisa, em vez de um formulário para preencher.
+
+#### Passo a passo
+
+1. Abra **Orçamento**, escolha o ano do rascunho e clique em **Montar com o assistente**.
+2. Ele lê os lançamentos dos **últimos 12 meses** e diz quantos meses encontrou com movimentação. Lançamentos ligados a **projetos** ficam de fora dessa leitura.
+3. Se alguma categoria tem histórico incompleto, ele pergunta **uma vez** por categoria o que fazer com os meses sem dado: **repetir a média** nesses meses, **informar outro valor por mês** ou **deixar como estimativa**. Se a mesma resposta vale para todas, use **aplicar a todas**.
+4. Responde as perguntas, nesta ordem:
+   - **O que entra**: valor, meses e certeza (**garantida**, **provável** ou **incerta**).
+   - **O que é obrigatório pagar**.
+   - **Projetos comprometidos**.
+   - **O que seria bom ter**.
+   - **Três perguntas abertas**, para o que ficou de fora.
+
+   Toda pergunta pode ser pulada. Se a organização orça por **centro de custo**, as despesas são informadas por centro.
+5. Revise a proposta em cinco blocos: **receitas**, **obrigatórias**, **projetos**, **desejáveis** e **resumo**.
+6. Escolha como aplicar ao rascunho e confirme.
+
+**Como a proposta se fecha.** Cada despesa é classificada como **essencial**, **importante** ou **desejável**. Só receita **garantida** e **provável** conta no total; receita **incerta** fica à parte. Se as despesas não cabem no que entra, a proposta mostra quanto falta e o que sairia: primeiro as **desejáveis**, depois as **importantes**. Despesa **essencial** nunca é cortada automaticamente.
+
+**De onde veio cada valor.** Cada linha diz se o valor veio do **histórico**, da sua **resposta** ou de uma **estimativa**. Estimativas aparecem marcadas como "estimativa, confira". Se você editar a linha, essa marcação some, mesmo que o valor continue sendo estimativa.
+
+**Se o rascunho já tem linhas**, você escolhe entre:
+
+- **Substituir**: a proposta toma o lugar das linhas do rascunho. A reserva de contingência é mantida.
+- **Só acrescentar**: entram apenas as linhas que ainda não existem no rascunho.
+
+**Aplicar grava no rascunho.** A proposta não é enviada para aprovação: o envio continua sendo seu, e o fluxo de aprovação segue igual. Se alguma linha for recusada, **nada é gravado**.
+
+> ✓ **Dica · Pule o que não sabe**
+>
+> Pular uma pergunta é válido, e dá para fechar o assistente e retomar depois. O que faltar aparece como estimativa, marcada na revisão, para você conferir antes de aplicar.
+
+> ✓ **Dica · Responda antes de gerar**
+>
+> Cada proposta gerada consome uma unidade da cota mensal de uso do assistente da organização. Responda as perguntas com calma e revise o resultado, em vez de gerar uma proposta nova a cada ajuste. (Ver [Assistente com IA](/modulos/assistente/).)
+
+> ⚠️ **Atenção · Mês sem lançamento não é zero**
+>
+> Um mês sem movimentação no histórico **não** entra como gasto zero. Se a organização tem poucos meses de lançamento, a média sai só desses meses. Confira a quantidade de meses que o assistente informa antes de aceitar a média.
+
+> ⚠️ **Atenção · Receita incerta não fecha o orçamento**
+>
+> Uma receita marcada como **incerta** não entra no total. Se as despesas não couberem, a proposta mostra o que sairia. Marque como **provável** só o que a organização de fato espera receber.
+
+> ⚠️ **Atenção · Substituir troca o que já estava no rascunho**
+>
+> Se você já montou parte do orçamento à mão, prefira **só acrescentar**. Substituir traz a proposta no lugar das linhas que estavam no rascunho. A reserva de contingência é mantida.
+
+> 📖 **Conceito · O que vai para o serviço de IA**
+>
+> Vão apenas **totais por categoria, centro de custo e mês**, e as respostas que você deu. **Nomes, descrições de lançamentos e documentos não são enviados.** A [Política de Privacidade](/privacidade/) descreve os provedores de IA usados pelo sistema.
 
 ## Acompanhar: previsto × realizado
 

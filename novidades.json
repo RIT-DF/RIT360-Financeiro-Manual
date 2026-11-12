@@ -1,6 +1,12 @@
 {
   "versoes": [
     {
+      "versao": "1.154.0",
+      "data": "2026-11-12",
+      "destaque": true,
+      "resumo": "Novo assistente que monta o orçamento do ano com você, a partir de perguntas simples."
+    },
+    {
       "versao": "1.153.7",
       "data": "2026-11-06",
       "destaque": false

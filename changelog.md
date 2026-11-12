@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.154.0] — 2026-11-12
+
+<!-- destaque: Novo assistente que monta o orçamento do ano com você, a partir de perguntas simples. -->
+
+### Adicionado
+
+- Agora a tela do Orçamento tem um assistente que ajuda a montar o orçamento do ano. Ele usa os lançamentos que a organização já tem, mesmo que sejam poucos meses, e faz perguntas simples sobre o que entra, o que é obrigatório pagar, os projetos e o que seria bom ter. Depois mostra uma proposta mês a mês, indica o que sairia primeiro se o dinheiro não der e marca o que é estimativa. Você revisa por partes e aplica ao rascunho. Dá para parar e continuar depois.
+
 ## [1.153.7] — 2026-11-06
 
 ### Modificado
