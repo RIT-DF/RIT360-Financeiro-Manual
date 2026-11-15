@@ -11,6 +11,17 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.162.1] — 2026-11-15
+
+### Modificado
+
+- Na aba **Deliberação e parecer** da Comissão Fiscal, cada voto aparece num bloco próprio: o nome, o voto numa etiqueta colorida e a fundamentação embaixo. No voto anônimo, o mesmo bloco aparece sem o nome.
+- O placar da votação usa o singular quando há um só, como em "1 voto registrado · 1 elegível".
+
+### Corrigido
+
+- Na votação nominal da Comissão Fiscal, a fundamentação de cada voto aparecia duas vezes, uma com o nome de quem votou e outra sem o nome. Agora ela aparece uma vez só, junto do nome.
+
 ## [1.162.0] — 2026-11-15
 
 <!-- destaque: O tesoureiro agora abre o período da comissão fiscal e pode conferir tudo antes, com explicação em linguagem simples. -->
