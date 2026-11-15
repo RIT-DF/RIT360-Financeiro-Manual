@@ -193,6 +193,21 @@ O RIT360 Financeiro suporta **categorias-mãe com sub-categorias** — útil par
 
 O modo automático de integração com WooCommerce (em Configurações → Organização) usa exatamente esse padrão: cria sub-categorias sob a categoria-mãe escolhida para cada categoria do WC.
 
+## Investimento: a marca da categoria
+{: #investimento }
+
+Cada **categoria de despesa** pode ser marcada como **Investimento**, com a caixa de mesmo nome no formulário da categoria. É uma marca que separa, no orçamento anual, o que é **custeio** (gasto do dia a dia) do que é **investimento** (obras, equipamentos e outros bens que a OSC adquire para uso prolongado).
+
+- **Marcada** — os gastos desta categoria aparecem como investimento no orçamento.
+- **Sem marca** — contam como **custeio**. É o padrão de todas as categorias.
+- **Subcategorias** — herdam a marca da categoria-mãe. Na subcategoria a caixa aparece bloqueada, com o aviso "Herdado da categoria-mãe". Para mudar, edite a categoria-mãe.
+
+Essa marca aparece no Resumo do orçamento, na seção **Custeio × investimento (despesas)**, e nos limites de despesa que juntam categorias dos dois tipos (ver [Orçamento → Metas e limites](/modulos/orcamento/#metas-e-limites)).
+
+> 📖 **Conceito · Marca de gestão, não classificação contábil**
+>
+> A marca de investimento serve para o planejamento e a prestação de contas da OSC. O RIT360 Financeiro não é um sistema contábil: a classificação oficial do patrimônio e das despesas continua sendo a da contabilidade da OSC.
+
 ## Acompanhar quanto da despesa vai para cada finalidade
 
 Algumas OSCs precisam comprovar que uma **parcela mínima da despesa** foi aplicada em determinada finalidade. É o caso de quem tem CEBAS na área da saúde, que precisa demonstrar que 60% da despesa foi em saúde — mas vale para qualquer certificação, convênio ou estatuto que imponha proporção.

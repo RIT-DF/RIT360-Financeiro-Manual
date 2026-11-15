@@ -11,6 +11,24 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.167.0] — 2026-11-15
+
+### Adicionado
+
+- No **Orçamento anual**, além das estimativas, dá para criar **metas de receita** (na aba Receitas, com **Nova meta**) e **limites de despesa** (na aba Despesas, com **Novo limite**).
+- Cada meta ou limite pode somar várias categorias e valer para um centro de custo ou para a organização inteira.
+- Meta e limite contam só o que passar das estimativas das categorias. Exemplo: a estimativa de Contratos é R$ 3.500 por mês, para o contrato garantido, e a meta Novos contratos é R$ 7.000 por mês. Com R$ 5.000 recebidos no mês, R$ 1.500 contam para a meta.
+- Uma categoria não entra em duas metas nem em dois limites do mesmo centro de custo. A tela recusa a sobreposição e diz onde a categoria já está.
+- O limite pode valer para cada mês, com **Vale para cada mês**. A sobra de um mês não passa para o seguinte.
+- Meta e limite só avisam, nunca bloqueiam. A meta avisa quando o que entrou fica abaixo do ritmo esperado até o mês (70% por padrão, configurável). O limite avisa a 80% e a 100%.
+- O resumo do orçamento mostra dois resultados previstos: **Só com o garantido** e **Se as metas se cumprirem**.
+- Nas categorias de despesa há a marca **Investimento**, herdada pelas subcategorias. O orçamento separa custeio de investimento.
+- As planilhas de exportação e de importação carregam metas, limites e a marca de investimento. Planilha antiga entra como estimativa.
+
+### Modificado
+
+- As linhas que já existiam no orçamento viram estimativas, com os mesmos valores e os mesmos totais.
+
 ## [1.166.1] — 2026-11-15
 
 ### Corrigido

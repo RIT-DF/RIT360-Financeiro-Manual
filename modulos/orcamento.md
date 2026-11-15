@@ -7,8 +7,8 @@ task: gerir-orcamento-anual
 role: [presidente, tesoureiro, gestor-centro-custo]
 routes: [/orcamento]
 screenshots: [orcamento-elaboracao, orcamento-previsto-realizado, orcamento-reconciliacao]
-source_docs: [PRODUCT.md#orcamento, changelog v1.154.0, changelog v1.155.0]
-last_verified: 2026-07-26
+source_docs: [PRODUCT.md#orcamento, changelog v1.154.0, changelog v1.155.0, changelog v1.167.0]
+last_verified: 2026-11-15
 status: publicado
 ---
 
@@ -29,6 +29,16 @@ O módulo de **Orçamento** é onde a OSC monta o seu **orçamento anual** — q
 > 📖 **Conceito · Previsto × Realizado**
 >
 > **Previsto** é o que você planejou no início do ano: "vamos arrecadar R$ 120.000 e gastar R$ 30.000 com o centro de custo Administração". **Realizado** é o que de fato aconteceu, calculado a partir das movimentações registradas. A graça do módulo está em ver os dois lado a lado, a qualquer momento: previsto para o ano, realizado até agora, e o quanto disso já foi consumido em percentual.
+
+> 📖 **Conceito · Estimativa, meta e limite**
+>
+> Cada linha do orçamento é de um de três tipos, e a diferença entre eles é o que a linha **significa**:
+>
+> - **Estimativa** — o que a OSC espera receber ou gastar, garantido ou previsto. É a linha de sempre: uma receita ou uma despesa por categoria e centro de custo.
+> - **Meta de receita** — o que a OSC quer alcançar **além** do garantido. Ex.: "Novos recursos", R$ 100 mil no ano.
+> - **Limite de despesa** — o teto que a OSC não quer ultrapassar em uma área. Ex.: "Material e manutenção", com um valor máximo para o ano ou para cada mês.
+>
+> Meta e limite são uma camada **por cima** das estimativas: o que já estava previsto é atendido primeiro. Os detalhes estão em [Metas e limites](#metas-e-limites).
 
 > 📖 **Conceito · Baseline (linha de base)**
 >
@@ -60,7 +70,7 @@ Para montar um orçamento:
 
 1. No menu, abra **Orçamento**.
 2. Escolha o **ano** do orçamento (o ano seguinte, tipicamente, montado nos últimos meses do ano corrente).
-3. A tela tem três abas: **Receitas**, **Despesas** e **Resumo**. Em Receitas e Despesas aparecem só as linhas que existem na versão; uma linha zerada que já existe continua aparecendo. Para incluir outra, clique em **Adicionar categoria**: abre uma busca nas categorias ativas do tipo da aba e cria a linha. Um grupo vazio mostra o mesmo botão.
+3. A tela tem três abas: **Receitas**, **Despesas** e **Resumo**. Em Receitas e Despesas aparecem só as linhas que existem na versão; uma linha zerada que já existe continua aparecendo. Para incluir outra, clique em **Adicionar categoria**: abre uma busca nas categorias ativas do tipo da aba e cria a linha. Um grupo vazio mostra o mesmo botão. Na aba **Receitas** aparece também o bloco **Metas de receita**, e na aba **Despesas**, o bloco **Limites de despesa** (ver [Metas e limites](#metas-e-limites)).
 4. Escolha como agrupar as linhas:
    - **Por centro de custo** (é o padrão quando há centros ativos): cada centro abre e fecha, e mostra o subtotal no título.
    - **Por categoria**: cada categoria mostra o total da organização e, ao expandir, quanto vai para cada centro. Nessa visão, a edição é feita nessas linhas, e **Adicionar centro de custo** inclui mais um centro na categoria.
@@ -70,7 +80,7 @@ Para montar um orçamento:
 6. Para cada linha, informe o **valor anual**. O sistema **distribui automaticamente** esse valor pelos 12 meses (divisão igual), e você pode **ajustar mês a mês**, com **Editar meses**, quando o gasto não é uniforme — por exemplo, concentrar a despesa de um evento no mês em que ele acontece.
 7. Se quiser, adicione a **linha de contingência** de cada centro de custo (a reserva para imprevistos daquela área). Ela aparece na aba Despesas só quando já existe; se ainda não há, use **Adicionar reserva de contingência**, também na aba Despesas.
 8. Para tirar linhas do rascunho, use **Remover linha**. O sistema pede confirmação mostrando a categoria e o valor anual. Para várias de uma vez, marque as linhas (há **selecionar todas** em cada grupo) e use **Remover selecionadas**. A confirmação diz quantas linhas e o total anual que sai, e o resultado separa as removidas das recusadas.
-9. Acompanhe o **resultado previsto** na aba **Resumo** — a diferença entre o total de receitas e o total de despesas previstas, indicando **superávit** (sobra) ou **déficit** (falta) planejado para o ano.
+9. Acompanhe o **resultado previsto** na aba **Resumo**. Ele aparece em dois números, lado a lado: **Só com o garantido** (as receitas estimadas menos todas as despesas previstas) e **Se as metas se cumprirem** (o mesmo, somando as metas de receita). Cada um indica **superávit** (sobra) ou **déficit** (falta) planejado para o ano. Ver [Metas e limites](#metas-e-limites).
 
 O **Resumo** reúne o consolidado, o resultado previsto, o previsto × realizado e o fechamento. Ele traz também um bloco só de consulta com os **projetos que têm financiador ou receitas próprias**: para cada um, o previsto (a soma das rubricas do projeto), o realizado do fechamento e um link para a página do projeto. O orçamento de cada projeto continua sendo editado na própria página do projeto, não aqui.
 
@@ -167,6 +177,71 @@ Em vez de começar da folha em branco, a tela do Orçamento tem um assistente qu
 >
 > Vão apenas **totais por categoria, centro de custo e mês**, e as respostas que você deu. **Nomes, descrições de lançamentos e documentos não são enviados.** A [Política de Privacidade](/privacidade/) descreve os provedores de IA usados pelo sistema.
 
+## Metas e limites
+{: #metas-e-limites }
+
+Além das estimativas, o orçamento anual aceita dois tipos de linha que expressam o que a OSC **quer** e o que ela **não quer ultrapassar**:
+
+- **Metas de receita** (na aba Receitas, com **Nova meta**) — o que a OSC quer receber além do garantido.
+- **Limites de despesa** (na aba Despesas, com **Novo limite**) — o teto de gasto de uma área.
+
+Cada meta ou limite tem um **nome** (por exemplo, "Novos recursos"), reúne **uma ou mais categorias** e pode valer para um **centro de custo** ou para a **organização inteira** (sem centro de custo escolhido). Assim, uma meta pode juntar categorias de centros de custo diferentes, e sem centro de custo ela vale para a organização inteira.
+
+> 📖 **Conceito · Meta e limite contam só o que passa da estimativa**
+>
+> A estimativa é atendida **primeiro**. O que entra numa categoria cobre antes a estimativa dela, e só o excedente conta para a meta ou para o limite que usa essa categoria. Assim, nenhum real é contado duas vezes: o garantido continua garantido, e a meta mede só o que veio além.
+
+> 💡 **Exemplo · Novos contratos**
+>
+> A categoria **Contratos** tem uma estimativa de **R$ 3.500 por mês**, que é o contrato garantido. A OSC também cria a meta **Novos contratos**, de **R$ 7.000 por mês**, sobre a mesma categoria, para os contratos novos.
+>
+> Em um mês, entram **R$ 5.000** nessa categoria. Os primeiros **R$ 3.500** cobrem a estimativa do garantido, e os **R$ 1.500** restantes são o que conta para a meta. A tela mostra a meta com esse andamento, e não os R$ 5.000 inteiros.
+
+Algumas regras:
+
+- **Uma categoria não entra em duas metas nem em dois limites do mesmo centro de custo.** Se você tentar, a tela recusa e informa onde a categoria já está. Um mesmo número nunca é cobrado duas vezes.
+- **Meta e limite só avisam, nunca bloqueiam.** Nada deixa de ser lançado, pago ou aprovado por causa de uma meta ou de um limite. Eles geram aviso e aparecem no acompanhamento.
+- **Previsão descoberta fica à mostra.** Se a estimativa não se cumprir (o contrato garantido não pagou, por exemplo), ela aparece descoberta, e a meta continua sem crédito por aquele valor. A tela não esconde o buraco.
+
+### Como o limite funciona
+
+Ao criar um limite, escolha uma das formas de valor:
+
+- **Valor do ano (dividido pelos meses)** — um total anual, distribuído pelos 12 meses.
+- **Mês a mês** — um valor para cada mês.
+- **Vale para cada mês** — um valor só, que vale como teto em **cada um dos 12 meses**. A sobra de um mês **não** passa para o seguinte: se o teto é R$ 1.500 e no mês sobrou R$ 500, o próximo mês continua com teto de R$ 1.500.
+
+O limite avisa a **80%** e a **100%** do total anual. No limite que vale para cada mês, o aviso sai quando o mês passa de 100% do teto.
+
+Exemplo: o limite **Alimentação**, de R$ 1.500 por mês, cobrindo a categoria Alimentação. Em abril, se o gasto chegar a R$ 1.900, o acompanhamento mostra que o mês passou do limite, com R$ 1.900 de R$ 1.500.
+
+### Como a meta acompanha o ano
+
+A meta avisa quando o que entrou acima das estimativas fica **abaixo de 70% do esperado até o mês**. Esse percentual é o padrão e pode ser mudado em [Fluxo de Aprovações → aba Orçamento](/configuracoes/aprovacoes/#aba-orcamento), no campo **Meta abaixo do ritmo (%)**. No último mês do ano, a comparação é com o total da meta. O aviso não bloqueia nada: ele só chama a atenção de quem acompanha o orçamento.
+
+> 💡 **Exemplo · Novos recursos**
+>
+> Uma meta de **R$ 100 mil no ano**, cobrindo as categorias **Doações**, **Recursos públicos** e **Eventos**, e sem centro de custo, para valer para a organização inteira. Entram nela só os valores dessas três categorias que passarem das estimativas delas. Por exemplo: com R$ 36 mil acima das estimativas até junho, quando o esperado eram R$ 48 mil (75%), o acompanhamento mostra quanto falta para o ano. Assim, a OSC acompanha o conjunto de captação como um único objetivo, sem misturar com a previsão garantida de cada fonte.
+
+### Só com o garantido × se as metas se cumprirem
+
+No **Resumo**, o bloco **Garantido, metas e limites** mostra dois resultados previstos:
+
+- **Só com o garantido** — as receitas estimadas menos **todas** as despesas previstas (estimativas, verbas e limites). As metas não entram.
+- **Se as metas se cumprirem** — o mesmo cálculo, somando as metas de receita.
+
+Quem aprova o orçamento vê quanto do equilíbrio depende das metas. Se o primeiro número é negativo, o orçamento só fecha se as metas acontecerem.
+
+### Investimento e custeio
+
+As despesas podem ser marcadas como **investimento** no cadastro de categorias (ver [Categorias](/configuracoes/categorias/#investimento)). O que não é marcado conta como **custeio**. No Resumo, a seção **Custeio × investimento (despesas)** mostra os dois totais, por exemplo: *"Previsto — Custeio: R$ 310 mil · Investimento: R$ 12 mil"*. Um limite que junta categorias de custeio e de investimento aparece como **Custeio e investimento**.
+
+Isso é uma marca de gestão, não de contabilidade. O RIT360 Financeiro não substitui a contabilidade da OSC.
+
+> ⚠️ **Atenção · Meta e limite não mudam o total do orçamento**
+>
+> Metas e limites entram nos totais da versão como qualquer outra linha, e são revisados e aprovados junto com ela. Eles não criam dinheiro novo: uma meta de receita é uma expectativa acima do garantido, e um limite é um teto dentro do que já está previsto.
+
 ## Acompanhar: previsto × realizado
 
 [![Acompanhamento previsto contra realizado](/assets/screenshots/orcamento-previsto-realizado.png)](/assets/screenshots/orcamento-previsto-realizado.png)
@@ -179,6 +254,8 @@ Depois de aprovado, o orçamento vira painel de acompanhamento. Para cada **cent
 - 🔴 **Vermelho** — estourou o previsto (passou de **100%**).
 
 O semáforo deixa a diretoria enxergar de relance onde está o aperto, sem abrir linha por linha — e agir a tempo, não no fim do ano.
+
+As **metas de receita** e os **limites de despesa** aparecem na mesma tela, com andamento próprio: quanto da meta já entrou acima das estimativas, quanto do limite já foi usado acima das estimativas, e, no limite mensal, o que aconteceu em cada mês (ver [Metas e limites](#metas-e-limites)).
 
 Para acompanhar uma área específica, use a tela [Minha área](/modulos/minha-area/): ela junta, para um centro de custo e um ano, a verba, o gasto, o comprometido e o saldo.
 
@@ -250,6 +327,7 @@ Quando o ano acaba e a prestação de contas está pronta, você usa **Encerrar 
 O módulo conversa com planilhas e relatórios para caber no fluxo que a sua OSC já usa:
 
 - **Exportar e importar em XLSX** — leve o orçamento para uma planilha (Excel, Google Sheets) para trabalhar offline, discutir com a diretoria ou preparar em conjunto, e depois **importe de volta**. Útil para OSCs que montam o orçamento em reunião, na planilha, antes de oficializar no sistema. A verba de valor único vem numa aba própria, **Verba sem categoria**, que a importação não lê (ver [Verba do ano em valor único](#verba-do-ano-valor-unico)).
+ As metas, os limites e a marca de investimento das categorias também saem na planilha e voltam pela importação. Uma planilha antiga, sem essas informações, entra com as linhas como **estimativas**.
 - **Relatório de execução** — um relatório do previsto × realizado do ano, exportável em **PDF** (para anexar à prestação de contas ou enviar a financiadores) e em **Excel** (para análise).
 - **Execução por Centro de Custo na prestação de contas** — a prestação de contas da OSC ganhou uma seção **"Execução por Centro de Custo"**, mostrando, para cada área, o previsto, o realizado e o quanto foi consumido. Ver [Relatórios → Exportação](/modulos/relatorios/#exportação).
 
@@ -259,6 +337,8 @@ O RIT360 Financeiro avisa **sozinho** quando um centro de custo ou categoria pas
 
 - Ao ultrapassar **80%** do previsto — aviso de que o consumo está alto (semáforo amarelo).
 - Ao ultrapassar **100%** do previsto — aviso de que estourou (semáforo vermelho).
+
+As metas e os limites também geram avisos, com regras próprias: a meta avisa quando fica abaixo do ritmo esperado, e o limite avisa a 80% e a 100% (ver [Metas e limites](#metas-e-limites)). Nenhum aviso bloqueia lançamento, pagamento ou aprovação.
 
 Os avisos vão para o **gestor do centro de custo** (quem responde por aquela área) e para o **tesoureiro** (quem cuida do financeiro consolidado) — as duas pessoas que precisam decidir o que fazer. Você não precisa ficar olhando o painel todo dia: o sistema chama a sua atenção quando algo pede atenção.
 
