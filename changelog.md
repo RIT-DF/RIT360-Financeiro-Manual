@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.159.1] — 2026-11-14
+
+### Corrigido
+
+- Na comparação com os demonstrativos contábeis, contas de cartão de crédito não entram mais no saldo de caixa e equivalentes do app, já que a contabilidade as lança como dívida. O relatório mostra quais contas foram somadas e quais ficaram de fora.
+- O histórico do período, a data de emissão dos pareceres, o caderno exportado, o parecer em PDF e as datas dos demonstrativos agora aparecem no fuso horário da organização.
+- O editor das observações da gestão aparece exatamente para quem pode publicá-las.
+
 ## [1.159.0] — 2026-11-14
 
 ### Adicionado
