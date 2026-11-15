@@ -11,6 +11,12 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.159.2] — 2026-11-14
+
+### Adicionado
+
+- Na conciliação do extrato, agora dá para escolher uma categoria e aplicá-la de uma vez a todas as linhas marcadas para criar, ao lado dos aplicadores de projeto e de centro de custo. Categoria de receita vai para as entradas e de despesa para as saídas. Um aviso diz quantas linhas receberam a categoria e quantas ficaram de fora.
+
 ## [1.159.1] — 2026-11-14
 
 ### Corrigido
