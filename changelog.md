@@ -11,6 +11,22 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.157.1] — 2026-11-14
+
+### Corrigido
+
+- Na lista de pedidos de pagamento, um pedido parcelado ou recorrente que ainda não tem parcela gerada agora mostra "Este pedido ainda não tem parcela gerada para pagar." em vez de dizer que as parcelas foram canceladas.
+
+## [1.157.0] — 2026-11-14
+
+<!-- destaque: A gestão agora pode deixar observações para a comissão fiscal no período em análise. -->
+
+### Adicionado
+
+- Na Comissão Fiscal, quem administra as finanças pode escrever observações para a comissão no período em análise ou em revisão, explicando o contexto antes da leitura. O texto pode ser complementado durante a análise; cada publicação fica guardada como versão, com autor e data, e a comissão pode abrir as versões anteriores.
+- A comissão recebe um único aviso no dia seguinte a cada dia com publicação, dizendo quantas versões foram publicadas e por quem.
+- O parecer fiscal em PDF passa a trazer a seção "Observações da gestão".
+
 ## [1.156.2] — 2026-11-14
 
 ### Corrigido

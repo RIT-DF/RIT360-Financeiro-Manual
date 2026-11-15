@@ -1,6 +1,17 @@
 {
   "versoes": [
     {
+      "versao": "1.157.1",
+      "data": "2026-11-14",
+      "destaque": false
+    },
+    {
+      "versao": "1.157.0",
+      "data": "2026-11-14",
+      "destaque": true,
+      "resumo": "A gestão agora pode deixar observações para a comissão fiscal no período em análise."
+    },
+    {
       "versao": "1.156.2",
       "data": "2026-11-14",
       "destaque": false
