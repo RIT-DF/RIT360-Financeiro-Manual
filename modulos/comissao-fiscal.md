@@ -155,6 +155,60 @@ Além dos lançamentos operacionais, o Conselho Fiscal deve analisar as peças c
 
 A tesouraria faz o upload dos PDFs assinados com certificado digital. A comissão pode abrir os arquivos em tela cheia e checar se os números contábeis batem com os relatórios gerenciais do RIT360.
 
+### Comparação com o app {#comparacao-com-o-app}
+
+Ao anexar um demonstrativo, o RIT360 Financeiro lê o arquivo automaticamente e compara os números dele com os lançamentos do app. Abaixo do documento aparece **Comparação com o app**, com um resultado geral:
+
+- **Convergente**: as linhas comparadas batem, centavo a centavo.
+- **Divergente**: pelo menos uma linha não bate. A tela mostra o valor do documento, o valor do app e a diferença.
+- **Não comparado**: nenhuma linha pôde ser comparada. A tela diz o motivo, por exemplo *"o documento ainda não foi lido"*.
+
+> 💡 **Por que isso importa**
+>
+> O balanço e o balancete são o retrato que a contabilidade faz da OSC. Se o caixa dela não bate com o que o app mostra no mesmo dia, a diferença aparece agora, na conferência da comissão, e não depois, numa auditoria externa. A comparação não decide qual dos dois está certo, mas mostra onde olhar.
+
+#### O que é comparado {#comparacao-o-que-e-comparado}
+
+- **Caixa e equivalentes de caixa na data-base:** o total de caixa, bancos e aplicações de liquidez imediata na data do documento, comparado ao saldo das contas do app nessa mesma data. Contas de **cartão de crédito** ficam de fora da soma, porque a contabilidade as lança como dívida. A tela mostra quais contas foram somadas e quais ficaram de fora.
+- **Entradas e saídas de caixa:** só são comparadas se o documento traz a **Demonstração dos Fluxos de Caixa** (ou um demonstrativo de movimentação de caixa). Sem fluxo de caixa, as duas linhas ficam como **Não comparado**, com o motivo *"o documento não traz fluxo de caixa"*.
+
+#### Por que a DRE não entra na comparação {#comparacao-por-que-nao-dre}
+
+> 📖 **Conceito · Competência não é caixa**
+>
+> A DRE registra receita e despesa no mês em que o fato acontece (regime de **competência**). O app registra quando o dinheiro efetivamente entra ou sai (regime de **caixa**). Exemplo: em outubro a OSC presta um serviço e emite uma nota de R$ 5.000,00. A DRE de outubro mostra R$ 5.000,00 de receita. O cliente só paga em dezembro, e o app só registra a entrada em dezembro. Os dois estão certos. Por isso a comparação usa só o caixa, que é a mesma base dos dois lados, e valores da DRE, como o resultado ou o superávit, não são usados como se fossem caixa.
+
+#### Como ler cada linha {#comparacao-como-ler}
+
+- **Documento**, **App** e **Diferença** aparecem lado a lado. A diferença só aparece quando a linha é Divergente.
+- **Origem no documento** indica a página e o rótulo de onde o número foi lido, por exemplo *página 3 · "Caixa e equivalentes de caixa"*. Quando o documento está em milhares de reais, a tela avisa que o valor foi convertido para reais.
+- Valores com **D** ou **C** no fim, como *3.927,30D*, são lidos. Nas contas de caixa, D é saldo positivo e C é saldo negativo. Nas entradas e saídas, vale só o valor absoluto. Um valor com D ou C junto de sinal ou de parênteses é ambíguo: não é interpretado, a linha fica **Não comparado** e a tela mostra o texto que foi lido.
+
+> 💡 **Dica · Diferença pequena costuma ser conta que existe só de um lado**
+>
+> Quando a diferença é pequena, a causa mais comum é uma conta que existe de um lado só, como uma carteira de pagamento online cadastrada no app e ainda não contabilizada pela contabilidade. Antes de concluir que há erro, abra **Contas lado a lado**. Ela mostra as contas de cada lado, sem comparar uma a uma, e a conta que aparece de um lado e não do outro costuma explicar a diferença.
+
+#### Ler de novo e corrigir valor lido {#comparacao-ler-de-novo-e-corrigir}
+
+- **Ler de novo** refaz a leitura automática do arquivo. Use quando a leitura falhou. O botão aparece para quem pode anexar demonstrativos (a gestão) e para quem integra a comissão.
+- **Corrigir valor lido** muda o número usado na comparação quando a leitura pegou o valor errado. O arquivo não muda. Digite o valor como está no documento, no formato brasileiro, por exemplo `1.234,56`. A data-base e as datas do intervalo têm correção própria, pelo botão **Corrigir**.
+
+> ⚠️ **Armadilha · Corrigir até a linha ficar convergente**
+>
+> **O erro:** ajustar o valor lido até a comparação bater, sem conferir o número impresso no documento.
+>
+> **A consequência:** a tela passa a mostrar Convergente, mas a conferência deixa de dizer o que o demonstrativo diz. A correção fica registrada com o seu nome e a data, e o valor original continua guardado, então quem olhar depois vê quem mudou o quê. Corrija só quando a leitura errou, e confira a correção contra o PDF.
+
+> ⚠️ **Armadilha · Anexar planilha em vez de PDF**
+>
+> **O erro:** anexar o balancete em planilha (XLSX), achando que a comparação será feita.
+>
+> **A consequência:** a planilha é aceita como anexo, mas a leitura automática não lê planilhas. A linha fica **Não comparado**, com o motivo *"formato não legível pela leitura automática (envie em PDF)"*. Peça à contabilidade o PDF do demonstrativo, ou exporte a planilha em PDF. Imagens em JPG e PNG são lidas.
+
+> ⚠️ **Atenção · A leitura usa a cota do assistente**
+>
+> Cada leitura consome uma unidade da cota mensal de pedidos do [Assistente](/modulos/assistente/), que é da organização, não de cada pessoa. Há também um limite de leituras por hora. Quando a cota acaba, a leitura para com o motivo *"a cota mensal do assistente acabou"*, e a comparação fica como **Não comparado** até uma nova leitura ser feita com cota disponível. Releia só quando houver motivo: uma leitura que deu certo não precisa ser refeita.
+
 ---
 
 ## 8. Formulação e Julgamento de Diligências
@@ -226,6 +280,110 @@ No canto superior direito, clique em **"Caderno de Fiscalização"**:
 
 ---
 
+## 10. Observações da gestão para a comissão {#observacoes-da-gestao}
+
+Logo no topo do espaço de trabalho, acima da Pré-análise e das abas, fica o bloco **Observações da gestão para a comissão**. É onde quem administra as finanças explica o contexto do período antes de a comissão começar a ler.
+
+<!-- CAPTURA PENDENTE: bloco "Observações da gestão" no topo do espaço de trabalho, com uma versão atual e o botão "Escrever nova versão". -->
+
+> 💡 **Por que isso importa**
+>
+> Um conselheiro que abre o período sem saber que a conta bancária foi trocada no meio do ano, que uma compra foi parcelada por acordo com o fornecedor ou que um projeto terminou em setembro gasta horas tentando explicar uma diferença que a gestão já conhecia. Uma observação escrita antes da leitura vira contexto, e não suspeita. E como cada publicação fica registrada com autor e data, a explicação tem o mesmo peso de um documento.
+
+### Quem escreve e quando {#observacoes-quem-e-quando}
+
+- **Quem escreve:** quem tem permissão para administrar o período fiscal ou para responder diligências, em geral o tesoureiro e o presidente.
+- **Quem não escreve:** quem tem o papel de Comissão Fiscal. O conselheiro lê o bloco e abre diligência quando precisa, mas não escreve observações da gestão, mesmo que tenha outro papel na OSC.
+- **Quando:** enquanto o período está **em análise** ou **em revisão**.
+- **A trava na votação:** quando o período entra em **deliberação**, o botão de escrever some e o bloco fica só para leitura. As versões já publicadas continuam visíveis.
+
+> ⚠️ **Atenção · Depois que a votação começa, não há como explicar**
+>
+> **O erro:** deixar para escrever as observações quando a comissão já está votando.
+>
+> **A consequência:** a votação acontece sem o contexto da gestão, porque na deliberação não se publica mais nenhuma versão. Publique antes de a comissão começar a votar, mesmo que a explicação seja curta.
+
+### Rascunho e versões {#observacoes-rascunho-e-versoes}
+
+Ao escrever, o texto fica como **rascunho**. A comissão **não vê** o rascunho: nada aparece para ela até a primeira publicação. Ao publicar, o texto vira uma **versão**, com o nome de quem publicou e a data e a hora, no fuso horário da OSC.
+
+- A versão mais recente aparece como **Versão atual**.
+- As anteriores ficam recolhidas em **Ver versões anteriores (N)**, e a comissão pode abri-las.
+- Para mudar o que está publicado, clique em **Escrever nova versão**. Ao publicar, a versão anterior passa para as versões anteriores.
+
+> 📖 **Conceito · Versão publicada é registro, não rascunho**
+>
+> Uma versão publicada não pode ser alterada nem apagada. Por isso o bloco não tem botão de apagar. Se algo saiu errado, publique uma versão nova que corrige, e diga nela o que mudou. As duas ficam no histórico, com quem publicou e quando.
+
+### O aviso diário à comissão {#observacoes-aviso-diario}
+
+A comissão não precisa ficar conferindo a tela. Em cada dia com publicação, ela recebe **um único aviso no dia seguinte**, com a quantidade de versões e quem publicou. Por exemplo: *"2 versões das observações da gestão foram publicadas em 12/11/2026 por Ana Pereira e João Lima."* Se a gestão publicou três vezes no mesmo dia, o aviso é um só, com a contagem de três.
+
+### Como aparecem no parecer em PDF {#observacoes-no-parecer}
+
+O parecer fiscal em PDF tem uma seção **Observações da gestão**, com a versão atual, o autor e a data, e as versões anteriores, se houver. Se a gestão não publicou nada, a seção diz: *"A gestão não registrou observações neste período."*
+
+> ✓ **Dica · Escreva o que a comissão precisa para ler**
+>
+> Três coisas costumam poupar diligências: o que mudou no período (conta bancária, fornecedor, projeto, equipe da tesouraria); o que está pendente e por quê, como uma nota aguardando o fornecedor; e onde a comissão deve olhar com mais atenção. Não é o lugar para pedir um voto. A decisão é da comissão.
+
+---
+
+## 11. Pré-análise {#pre-analise}
+
+Logo abaixo das observações da gestão, a **Pré-análise** roda sete verificações automáticas sobre os lançamentos do período. Para cada uma, mostra o resultado e os itens que a sustentam.
+
+<!-- CAPTURA PENDENTE: Pré-análise com a lista das sete verificações, uma delas expandida com pontos. -->
+
+> 💡 **Por que isso importa**
+>
+> Conferir centenas de lançamentos à mão para achar a despesa sem nota, o pagamento repetido ou a linha do extrato que ninguém lançou é o trabalho que mais cansa um voluntário. A Pré-análise faz essa varredura antes da primeira nota e mostra por onde começar. Ela ajuda a escolher onde olhar; não diz o que está certo ou errado.
+
+> 🔒 **O que a Pré-análise não é**
+>
+> Ela **não substitui a análise da comissão** e **nunca sugere voto**. Um ponto sinalizado não é irregularidade comprovada, e a ausência de pontos não é aprovação.
+
+### As sete verificações {#pre-analise-verificacoes}
+
+| Verificação | O que procura |
+|---|---|
+| **Despesa sem comprovante** | Despesas do período sem comprovante anexado e sem dispensa pela categoria (a mesma regra da aba Comprovantes). |
+| **Linha do extrato sem lançamento** | Linhas do extrato importado sem lançamento vinculado ou correspondente (a mesma regra da aba Extrato bancário). |
+| **Pedido aprovado pelo próprio solicitante** | Lançamentos ligados a pedido de pagamento ou reembolso em que quem pediu também aprovou. Quem pagou não é verificado. |
+| **Possível duplicidade** | Lançamentos do mesmo tipo, com mesmo valor e mesmo favorecido, com datas a até 3 dias uma da outra. Lançamentos sem favorecido não entram. |
+| **Lançamento alterado depois da abertura do período** | Alterações, cancelamentos e estornos registrados a partir do dia em que o período foi aberto. Mostra só os nomes dos campos alterados. |
+| **Centro de custo acima do orçado** | Despesa realizada no ano, até o fim do período, comparada à prevista no orçamento aprovado para o mesmo intervalo. |
+| **Divergência com demonstrativo contábil** | Demonstrativos anexados comparados com o app: caixa e equivalentes na data-base e entradas e saídas de caixa do intervalo, em centavos. Ver [Comparação com o app](#comparacao-com-o-app). |
+
+### O que cada resultado significa {#pre-analise-resultados}
+
+| Resultado | Quando aparece | O que fazer |
+|---|---|---|
+| **Nada encontrado** | A verificação rodou e não achou nenhum item. | Nada a fazer nessa verificação. |
+| **1 ponto** ou **N pontos** | Há itens. Clique na linha da verificação para abrir a lista. | Abra cada item e confira o lançamento. |
+| **Não se aplica** | A verificação não tem base no período: por exemplo, centro de custo sem orçamento aprovado para o ano, ou divergência sem nenhum demonstrativo anexado. | Veja se falta o orçamento ou o demonstrativo, se for o caso. |
+| **Não foi possível verificar** | A verificação falhou. O motivo aparece ao lado, quando há um. | Não é sinal de período limpo. Use **Verificar de novo**. |
+| **Verificando…** | A verificação ainda está rodando. | Aguarde. |
+
+> ⚠️ **Armadilha · Tratar "Nada encontrado" como período limpo**
+>
+> **O erro:** concluir que o período está livre de problemas porque a Pré-análise não encontrou nada.
+>
+> **A consequência:** a verificação só enxerga o que os dados registram. Uma duplicidade entre dois lançamentos sem favorecido não aparece, e a verificação de alterações só cobre o que aconteceu depois da abertura do período. "Nada encontrado" diz o que foi verificado; não diz que não há nada.
+
+> 💡 **Dica · Verifique de novo antes de confiar**
+>
+> O topo da Pré-análise mostra a hora da última verificação. Se a tesouraria lançou ou corrigiu algo depois dela, clique em **Verificar de novo**. O botão refaz as verificações, inclusive a comparação com os demonstrativos contábeis.
+
+### Abrir diligência a partir de um ponto {#pre-analise-diligencia}
+
+Cada ponto pode virar uma diligência. Clique em **Abrir diligência** ao lado do item: a aba **Diligências** abre com título e descrição já preenchidos e, quando o ponto é um lançamento, com ele vinculado. Revise o texto antes de enviar, porque a pergunta é da comissão e quem responde é a tesouraria.
+
+- O botão aparece só para membros da comissão do período, enquanto o período está em análise ou em revisão.
+- Quando o ponto é um lançamento, o título leva a ele em Movimentações, para conferir antes de decidir.
+
+---
+
 ## Dicas Prontas e Armadilhas Reais
 
 > 💡 **Dica de ouro: Comece pelas maiores despesas (Curva ABC)**
@@ -260,6 +418,12 @@ O conselheiro não "apaga" nem "estorna" o lançamento. Ele recusa o ateste e ab
 ### 4. Como os associados da OSC têm acesso ao parecer?
 Após a conclusão do período, o parecer fica disponível em [Documentos](/modulos/documentos/) e pode ser impresso ou projetado durante a Assembleia Geral de prestação de contas. Se a OSC tiver ativado a [Página Pública de Transparência](/configuracoes/pagina-publica/), o parecer oficial homologado também pode ser disponibilizado para download aberto.
 
+### 5. A gestão pode apagar ou corrigir uma observação já publicada?
+Não. Cada publicação vira uma versão, que não pode ser alterada nem apagada. Para corrigir, a gestão publica uma nova versão e diz o que mudou. A versão anterior continua acessível em *Ver versões anteriores*.
+
+### 6. A Pré-análise mostrou "Não foi possível verificar". Está tudo certo?
+Não. O resultado diz que a verificação falhou, não que não há nada a apontar. Clique em **Verificar de novo**. Se a falha persistir, anote na ata que aquela verificação não foi concluída, e não presuma que o período está limpo.
+
 ---
 
 ## Glossário dos Termos da Fiscalização
@@ -271,3 +435,7 @@ Após a conclusão do período, o parecer fica disponível em [Documentos](/modu
 - **Hash SHA-256**: Código alfanumérico único gerado matematicamente a partir do conteúdo do parecer. Se uma única vírgula for alterada no documento após a emissão, o hash muda completamente, garantindo inviolabilidade perante terceiros.
 - **Impedimento Ético**: Situação em que o conselheiro fiscal fica temporariamente impedido de manifestar-se ou votar em atos ou despesas das quais tenha participado como executor, solicitante ou beneficiário.
 - **Parecer Favorável com Ressalva**: Juízo do conselho que aprova as contas no seu conjunto, mas aponta impropriedades pontuais de natureza formal que devem ser corrigidas pela diretoria nos exercícios futuros.
+- **Pré-análise**: Conjunto de verificações automáticas sobre os lançamentos do período. Aponta onde olhar; não substitui a análise da comissão e não sugere voto.
+- **Data-base**: Data a que se refere o demonstrativo contábil (em geral, o fim do exercício ou do mês). Os saldos de caixa são comparados nessa data.
+- **Competência × caixa**: Competência é o momento em que a receita ou a despesa acontece; caixa é o momento em que o dinheiro entra ou sai. A DRE usa competência; o app, caixa.
+- **Convergente / Divergente**: Resultado da comparação entre um demonstrativo e o app. Convergente quando os valores batem; divergente quando há diferença.

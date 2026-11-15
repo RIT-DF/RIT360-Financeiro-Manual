@@ -51,6 +51,7 @@ A tesouraria apresenta; a Comissão Fiscal **confere e atesta**. Os relatórios 
 
 - Compare o relatório do período com as movimentações que o sustentam.
 - Observe os **pontos de atenção** sinalizados — eles indicam onde olhar com mais cuidado.
+- Comece pelas **Observações da gestão**, que explicam o contexto do período, e depois confira a **Pré-análise**, que aponta onde olhar: [Observações da gestão](/modulos/comissao-fiscal/#observacoes-da-gestao) e [Pré-análise](/modulos/comissao-fiscal/#pre-analise).
 - Consulte as prestações já entregues na área de **[Documentos](/modulos/documentos/)**, filtrando por "Prestação de contas": a lista mostra quem pediu e quando, e você baixa o PDF direto — sem precisar pedir o arquivo à tesouraria.
 
 > 🧭 **Como o RIT360 Financeiro ajuda · Relatórios para conferência**
@@ -70,6 +71,7 @@ O parecer fiscal é a entrega do conselho — a opinião sobre a regularidade da
 - [ ] Trilha de auditoria consultada onde houve dúvida.
 - [ ] Relatórios comparados com as movimentações que os sustentam.
 - [ ] Pontos de atenção examinados.
+- [ ] Observações da gestão lidas e Pré-análise conferida. "Nada encontrado" não é o mesmo que período limpo.
 - [ ] Parecer emitido nos prazos do estatuto.
 - [ ] Independência preservada — sem acumular função executiva ou de aprovação.
 

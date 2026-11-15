@@ -418,7 +418,7 @@ Lançar todo mês a mesma conta de luz, o mesmo aluguel ou a mesma papelaria é 
 [![Trecho do formulário de novo lançamento com o botão "Preencher a partir do arquivo", a orientação para anexar a foto ou o PDF do comprovante e a área de anexos logo abaixo](/assets/screenshots/mov-preencher-do-arquivo-desktop.png)](/assets/screenshots/mov-preencher-do-arquivo-desktop.png)
 *O botão fica acima da área de anexos*
 
-Perto dos anexos há o botão **Preencher a partir do arquivo**, com a orientação *"Anexe a foto ou o PDF do comprovante para usar a leitura."* Depois de anexar o comprovante, ele lê o documento e propõe os campos; o que veio do documento fica **marcado**, e **nada que você já digitou é trocado sem você escolher**. A leitura é feita por inteligência artificial de terceiros (ver [Privacidade](/privacidade/)) — **confira valor, data e favorecido** antes de salvar.
+Perto dos anexos há o botão **Preencher a partir do arquivo**, com a orientação *"Anexe a foto ou o PDF do comprovante para usar a leitura."* Depois de anexar o comprovante, ele lê o documento e propõe os campos; o que veio do documento fica **marcado**, e **nada que você já digitou é trocado sem você escolher**. A leitura é feita por inteligência artificial de terceiros (ver [Privacidade](/privacidade/)) — **confira valor, data e favorecido** antes de salvar. Se o valor vier num formato que o sistema não consegue interpretar com segurança, o campo fica em branco para você preencher, em vez de receber um número possivelmente errado.
 
 #### Conta com projeto e centro de custo padrão
 {: #conta-com-projeto-e-centro-de-custo-padrao }
@@ -936,6 +936,39 @@ Nenhum dos dois toca nas linhas que você vai conciliar, ignorar ou ainda não d
 *Categoria e centro de custo lado a lado, na linha marcada para criar lançamento*
 
 > 🔎 **Não tem o arquivo OFX?** Se você só tem o **saldo final** que aparece na tela do banco, use o **[Caça-diferenças](/modulos/caca-diferencas/)**: informe o saldo e ele aponta na hora onde está a diferença, com correção em um clique. É a conferência rápida "pelo número", complementar a esta conciliação por extrato.
+
+### Categoria em lote {#conciliacao-categoria-em-lote}
+
+Quando o extrato traz muitas linhas do mesmo tipo, como mensalidades de associados, tarifas ou compras no mesmo fornecedor, escolher a categoria linha a linha é o que mais atrasa a conciliação. O aplicador de categoria faz isso de uma vez, ao lado dos aplicadores de projeto e de centro de custo.
+
+> 💡 **Por que isso importa**
+>
+> A categoria é o que separa a receita por origem e a despesa por tipo nos relatórios e na prestação de contas. Uma linha sem a categoria certa entra no total, mas some da leitura por tipo de gasto ou de receita. Aplicar em lote acelera a conferência sem tirar a decisão de você: quem escolhe a categoria é você, e o sistema não escolhe por conta própria.
+
+Como aplicar:
+
+1. Marque para criar as linhas do grupo **Novos** que viram receita ou despesa. O aplicador só aparece quando há alguma linha marcada para criar.
+2. No topo do grupo, abra o seletor **Selecione a categoria…**. As categorias aparecem em dois grupos, **Receitas** e **Despesas**, e só as ativas são listadas.
+3. Clique em **Aplicar a todas as marcadas para criar**.
+4. Leia o aviso que aparece em seguida: quantas linhas receberam a categoria e quantas ficaram de fora, com o motivo.
+
+As regras:
+
+- Categoria de **receita** vai só para as entradas (valor positivo) marcadas para criar. Categoria de **despesa** vai só para as saídas (valor negativo ou zero).
+- Transferências, linhas conciliadas, ignoradas e as que ainda não foram decididas **não mudam**.
+- O aviso segue este formato: *"Categoria aplicada a 14 linhas. 3 linhas de saída ficaram como estavam: a categoria é de receita."*
+
+> ✓ **Dica · Um lote misto pede duas aplicações**
+>
+> Se o extrato tem entradas e saídas, aplique primeiro a categoria de receita e depois a de despesa. Cada aplicação aceita só o seu sentido, então uma única aplicação não cobre o extrato inteiro.
+
+> ⚠️ **Armadilha · Ler o aviso e seguir em frente**
+>
+> **O erro:** aplicar a categoria de receita, ver a mensagem de sucesso e confirmar a conciliação com as saídas ainda sem a categoria que você queria.
+>
+> **A consequência:** essas linhas seguem sem a categoria pretendida, e a conferência por categoria perde essa parte do extrato. Quando o aviso disser que linhas ficaram de fora, aplique a outra categoria nelas antes de confirmar.
+
+**Quando dá errado:** se a lista de categorias não carregar, a tela mostra *"Não foi possível carregar as categorias para aplicar em lote."* com o botão **Tentar novamente**. Nenhuma linha muda enquanto isso.
 
 ## Conciliação manual
 {: #conciliacao-manual }

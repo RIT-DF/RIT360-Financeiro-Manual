@@ -106,6 +106,7 @@ A prestação de contas é o produto visível do tesoureiro. Boa prestação de 
 O maior risco para um tesoureiro honesto é ser **o único que enxerga** o financeiro. Quando só uma pessoa vê o caixa, qualquer erro vira suspeita.
 
 - Garanta que a diretoria e o conselho fiscal tenham acesso de leitura ao financeiro.
+- Antes de a comissão começar a votar, escreva as **observações da gestão** explicando o contexto do período. Depois que a votação começa, não é mais possível publicar: [como funciona](/modulos/comissao-fiscal/#observacoes-da-gestao).
 - Trate a transparência como o que **protege a sua reputação**, não como fiscalização incômoda.
 
 > 🧭 **Como o RIT360 Financeiro ajuda · Cuidado com os dados de quem recebe**

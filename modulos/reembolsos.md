@@ -312,7 +312,7 @@ Pedir o mesmo tipo de reembolso todo mês (o lanche da reunião, a papelaria da 
 
 Perto do fim do formulário há o botão **Preencher a partir do arquivo**, com a orientação *"Anexe a foto ou o PDF do comprovante para usar a leitura."* Ele só serve depois que você anexa o comprovante: o sistema lê a foto ou o PDF e propõe os campos do formulário. O que veio do documento fica **marcado**, e **nada que você já digitou é trocado sem você escolher**.
 
-A leitura do comprovante é feita por inteligência artificial de terceiros; o que é enviado e para quem está em [Privacidade](/privacidade/). Como em qualquer preenchimento automático, **confira valor, data e descrição** antes de enviar: o sistema lê o documento, mas quem responde pelo pedido é você.
+A leitura do comprovante é feita por inteligência artificial de terceiros; o que é enviado e para quem está em [Privacidade](/privacidade/). Como em qualquer preenchimento automático, **confira valor, data e descrição** antes de enviar: o sistema lê o documento, mas quem responde pelo pedido é você. Se o valor vier num formato que o sistema não consegue interpretar com segurança, o campo fica em branco para você preencher, em vez de receber um número possivelmente errado.
 
 ### Envio rápido de comprovantes via Bot do Telegram
 

@@ -99,6 +99,43 @@ Funciona do mesmo jeito que já funciona para reembolsos — ver [Reembolsos →
 >
 > Selecionar um número muito grande de pedidos de uma vez trava o botão de pagar, com o aviso de quantos são permitidos por vez. Nesse caso, pague em duas levas: selecione uma parte, pague, e repita com o restante.
 
+### Pagar pedido recorrente ou parcelado {#pagar-pedido-de-serie}
+
+Um pedido recorrente ou parcelado não é pago de uma vez. Cada ocorrência, ou parcela, é um lançamento próprio, com vencimento próprio. Pagar o pedido significa pagar **uma** delas por vez, a que de fato saiu do caixa.
+
+<!-- CAPTURA PENDENTE: formulário de pagamento de pedido parcelado, com o campo "Parcela a pagar" aberto mostrando as opções. -->
+
+> 💡 **Por que isso importa**
+>
+> Escolher a parcela certa no momento do pagamento mantém o histórico do pedido igual ao que aconteceu no banco. Corrigir depois exige estorno, e o pedido passa a contar uma história diferente da do extrato até lá.
+
+Como pagar:
+
+1. Na aba **Aprovado**, clique em pagar no pedido recorrente ou parcelado. Também dá para usar **Confirmar pagamento** no detalhe do pedido.
+2. Confira o campo **Parcela a pagar** (em pedido parcelado) ou **Ocorrência a pagar** (em pedido recorrente). Cada opção mostra a posição e o vencimento, por exemplo *parcela 3 de 6, vencimento 10/11/2026*. A mais antiga em aberto já vem marcada.
+3. Se o pagamento é de outra parcela, troque a seleção antes de confirmar.
+4. Informe a data do pagamento e a conta de onde o dinheiro saiu, e confirme. O valor é o da parcela escolhida, não o total do pedido.
+
+> 📖 **Exemplo · Aluguel do salão em seis parcelas**
+>
+> Um pedido de aluguel do salão é parcelado em 6 vezes de R$ 850,00. As parcelas 1 e 2 já foram pagas. Em 12/11/2026, o formulário abre com *parcela 3 de 6, vencimento 10/11/2026* marcada, porque é a mais antiga em aberto. Você paga R$ 850,00 dessa parcela. A parcela 4, com vencimento em 10/12/2026, continua em aberto e é a próxima a aparecer marcada, no próximo pagamento.
+
+> ⚠️ **Armadilha · Pagar a parcela marcada sem conferir o vencimento**
+>
+> **O erro:** confirmar com a parcela pré-selecionada quando você está pagando outra, por exemplo a parcela antecipada num acordo com o fornecedor.
+>
+> **A consequência:** o sistema marca como paga a parcela errada. Ocorrências pagas não são canceladas; para desfazer, é preciso estornar o lançamento em Movimentações. Troque a seleção antes de confirmar.
+
+> 💡 **Dica · No lote, cada pedido de série sai na parcela mais antiga**
+>
+> Ao pagar vários pedidos de uma vez, cada pedido recorrente ou parcelado é pago na ocorrência em aberto de vencimento mais antigo, e a confirmação mostra qual é. Se você precisa pagar uma parcela que não é a mais antiga, faça esse pagamento pelo formulário do pedido, fora do lote.
+
+#### Quando dá errado {#pagar-serie-quando-dar-errado}
+
+- **"Este pedido ainda não tem parcela gerada para pagar."** A série existe, mas ainda não gerou nenhuma parcela. Não é cancelamento: não há o que pagar até a parcela aparecer. No lote, o pedido sai com esse motivo. O botão de pagar fica desabilitado e o motivo aparece ao lado.
+- **"Este pedido não tem ocorrência a pagar: as ocorrências foram canceladas ou estornadas. Para pagar este fornecedor, abra um novo pedido."** Todas as parcelas foram canceladas ou estornadas. Abra um novo pedido para o mesmo fornecedor.
+- **"Não foi possível conferir as parcelas deste pedido. Nada foi pago; recarregue a página e tente de novo."** A consulta das parcelas falhou. Nada foi pago, e a tela não decidiu nada por você: recarregue e tente de novo.
+
 ### Cards de resumo no topo
 
 De acordo com seu papel, você vê cards que viram atalhos para as listas filtradas:
@@ -375,14 +412,14 @@ Pagar o mesmo fornecedor pelo mesmo tipo de serviço (manutenção, material de 
 
 ### Preencher a partir do arquivo {#preencher-a-partir-do-arquivo}
 
-Perto do fim do formulário há o botão **Preencher a partir do arquivo**, com a orientação *"Anexe a foto ou o PDF do comprovante para usar a leitura."* Depois de anexar o boleto, a nota ou o recibo, o botão lê o documento e propõe os campos; o que veio do documento fica **marcado**, e **nada que você já digitou é trocado sem você escolher**. A leitura é feita por inteligência artificial de terceiros (ver [Privacidade](/privacidade/)). Se a leitura propuser **dados de pagamento** (PIX, conta, código de barras), confira cada um contra o documento: um dígito lido errado paga a conta errada.
+Perto do fim do formulário há o botão **Preencher a partir do arquivo**, com a orientação *"Anexe a foto ou o PDF do comprovante para usar a leitura."* Depois de anexar o boleto, a nota ou o recibo, o botão lê o documento e propõe os campos; o que veio do documento fica **marcado**, e **nada que você já digitou é trocado sem você escolher**. A leitura é feita por inteligência artificial de terceiros (ver [Privacidade](/privacidade/)). Se a leitura propuser **dados de pagamento** (PIX, conta, código de barras), confira cada um contra o documento: um dígito lido errado paga a conta errada. Se o valor vier num formato que o sistema não consegue interpretar com segurança, o campo fica em branco para você preencher, em vez de receber um número possivelmente errado.
 
 ### Envio rápido de faturas e boletos via Bot do Telegram
 
 Assim como nos reembolsos, você pode cadastrar um novo pedido de pagamento enviando o documento diretamente para o **Bot do RIT360 no Telegram** (`@rit360financeiro_bot`):
 
 1. **Envie a foto ou arquivo:** Encaminhe o boleto bancário, a fatura em PDF ou a foto da nota fiscal do fornecedor na conversa com o bot.
-2. **Extração inteligente com IA:** O sistema extrai automaticamente o valor, a data de vencimento e os dados do favorecido/fornecedor (inclusive linha digitável quando identificada).
+2. **Extração inteligente com IA:** O sistema extrai automaticamente o valor, a data de vencimento e os dados do favorecido/fornecedor (inclusive linha digitável quando identificada). Se o valor vier num formato que não dá para interpretar com segurança, o campo fica em branco para você preencher.
 3. **Confirmação e criação de rascunho:** Após sua conferência rápida pelo chat, o bot salva um **Rascunho de Pedido de Compra e Pagamento** com o anexo pronto.
 4. **Envio:** Basta abrir a aba **Rascunho** no sistema, escolher o centro de custo ou categoria se necessário, e clicar em **Enviar para aprovação**.
 

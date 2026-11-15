@@ -68,7 +68,7 @@ Há dois jeitos de começar:
 1. **Por frase.** Escreva, por exemplo, *"lança uma despesa de limpeza de 300 reais"*.
 2. **Por documento.** Use o clipe para anexar a **foto ou o PDF do comprovante, nota ou boleto** (até **10 MB**).
 
-Em qualquer dos dois, o Assistente mostra um **resumo do que entendeu** e o botão **Abrir formulário**. Ao clicar, abre o formulário de **lançamento**, de **reembolso** ou de **pedido**, já preenchido, com o aviso de que há **campos preenchidos pelo assistente** (quando vieram de um arquivo, o aviso é **Lido do documento**). Confira, complete o que faltar e salve **do jeito de sempre**.
+Em qualquer dos dois, o Assistente mostra um **resumo do que entendeu** e o botão **Abrir formulário**. Ao clicar, abre o formulário de **lançamento**, de **reembolso** ou de **pedido**, já preenchido, com o aviso de que há **campos preenchidos pelo assistente** (quando vieram de um arquivo, o aviso é **Lido do documento**). Confira, complete o que faltar e salve **do jeito de sempre**. Se o valor lido do documento vier num formato que o sistema não consegue interpretar com segurança, o campo fica em branco para você preencher, em vez de receber um número possivelmente errado.
 
 > 📖 **Conceito · Nada é gravado até você salvar**
 >
