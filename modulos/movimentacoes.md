@@ -841,7 +841,7 @@ Enquanto há importação em andamento, a aba **se atualiza sozinha**; há tamb�
 
 ## Conciliação bancária (extrato OFX) {#conciliacao-bancaria-ofx}
 
-Se você baixa o **extrato do banco em formato OFX** (a maioria dos bancos oferece), pode conciliá-lo com seus lançamentos no RIT360 Financeiro — em vez de marcar conta por conta como paga.
+Se você baixa o **extrato do banco em formato OFX** (a maioria dos bancos oferece), pode conciliá-lo com seus lançamentos no RIT360 Financeiro — em vez de marcar conta por conta como paga. Se o banco só entrega o extrato em PDF ou imagem, veja [Conciliação por extrato em PDF ou imagem](#conciliacao-extrato-pdf).
 
 > 🎥 **Vídeo tutorial · Conciliar o extrato do banco**
 >
@@ -969,6 +969,68 @@ As regras:
 > **A consequência:** essas linhas seguem sem a categoria pretendida, e a conferência por categoria perde essa parte do extrato. Quando o aviso disser que linhas ficaram de fora, aplique a outra categoria nelas antes de confirmar.
 
 **Quando dá errado:** se a lista de categorias não carregar, a tela mostra *"Não foi possível carregar as categorias para aplicar em lote."* com o botão **Tentar novamente**. Nenhuma linha muda enquanto isso.
+
+## Conciliação por extrato em PDF ou imagem {#conciliacao-extrato-pdf}
+
+> 🧪 **Em teste.** A leitura de extrato em PDF ou imagem está em fase de testes. Ela mostra o selo **PDF/imagem: Em teste** no campo de envio. Para o extrato em OFX, nada muda: a conciliação segue como descrita acima.
+
+Nem todo banco oferece o extrato em OFX. Muitos só deixam baixar o **PDF** ou a **tela** do extrato. Para esses casos, a conciliação aceita o arquivo em PDF ou em imagem (JPG ou PNG), e depois segue o mesmo fluxo do OFX: grupos **Conciliados**, **Em revisão** e **Novos**, com as mesmas decisões.
+
+**Acesso:** tela de **Conciliação**, a partir das movimentações, como no OFX.
+
+**Formatos e limites:**
+
+| Arquivo | Limite |
+|---|---|
+| OFX ou QFX | 5 MB |
+| PDF, JPG ou PNG | 10 MB |
+| PDF com texto | até 30 páginas |
+| PDF digitalizado (foto ou varredura) | até 5 páginas |
+
+[![Passo 1 da conciliação por extrato: conta, arquivo PDF e o selo PDF/imagem: Em teste](/assets/screenshots/conciliacao-extrato-escolha.png)](/assets/screenshots/conciliacao-extrato-escolha.png)
+*Passo 1: escolha a conta, envie o arquivo e confira o selo de teste*
+
+**Como funciona:**
+
+1. Escolha a **conta** e envie o arquivo. Antes do envio, o sistema mostra um aviso.
+2. Leia o aviso. Ele diz qual provedor de IA vai ler o extrato, e que os números de CPF e CNPJ são retirados antes do envio.
+3. Confirme o envio. A leitura gera uma **prévia** antes de qualquer gravação.
+4. Confira a prévia linha a linha. Corrija o que estiver errado.
+5. Siga com as decisões, exatamente como no OFX.
+
+[![Aviso antes do envio, que nomeia o provedor de leitura e explica a retirada de CPF e CNPJ](/assets/screenshots/conciliacao-extrato-aviso.png)](/assets/screenshots/conciliacao-extrato-aviso.png)
+*O aviso antes do envio: quem lê, o que é retirado e o que acontece com o arquivo original*
+
+> 📖 **Conceito · O que é enviado, e o que fica guardado**
+>
+> - **PDF com texto:** antes do envio, os números de CPF e CNPJ são retirados **só da cópia** que vai para a IA. Esse é o único caso em que há retirada.
+> - **Imagem:** a imagem segue **inteira**, sem retirada. Não confie na retirada para fotos de extrato.
+> - **O original fica guardado sem alteração**, e você pode abri-lo depois, a partir da própria conciliação.
+> - Cada leitura consome uma unidade da **cota mensal do assistente** da organização.
+
+**Prova das contas.** O sistema confere se as linhas lidas fecham com o extrato. Só a prévia de um extrato que fecha segue adiante.
+
+- Quando **as contas fecham**, a prévia mostra *"As contas fecham: nenhum valor ficou de fora"*.
+- Quando **não fecham**, a prévia não segue. Se o extrato não traz o **saldo inicial** e o **saldo final** que a conferência precisa, a tela pede que você os informe.
+
+[![Passo 2: prévia da leitura, com a faixa de fase de testes, o aviso de contas que fecham e as linhas editáveis ao lado do trecho lido](/assets/screenshots/conciliacao-extrato-previa.png)](/assets/screenshots/conciliacao-extrato-previa.png)
+*Passo 2: cada linha editável, e à direita o trecho que a leitura entendeu, com o valor e a data que ela usou*
+
+> 💡 **Dica · Contas fechando não garantem datas e descrições**
+>
+> A prova das contas confere **valores**. Ela não garante que a data ou a descrição de cada linha foi lida certo. Por isso a faixa da prévia pede que você confira cada lançamento com o extrato antes de seguir. Compare cada linha com o trecho ao lado, principalmente as datas.
+
+**Corrigir a prévia.** Cada linha é editável: data, descrição e valor. O trecho lido fica ao lado, para você comparar.
+
+> ⚠️ **Armadilha · Corrigir a descrição muda a identidade da linha**
+>
+> **O erro:** corrigir a descrição de uma linha da prévia e, depois, reenviar o mesmo extrato sem a mesma correção.
+>
+> **A consequência:** a descrição faz parte da chave que identifica a linha. Reenviar o mesmo extrato sem a mesma correção pode **duplicar** a linha. O aviso de sobreposição aponta essa situação. Quando ele aparecer, reproduza a mesma correção antes de confirmar.
+
+**Reenviar não duplica, desde que a correção seja a mesma.** Reenviar o mesmo extrato com as mesmas linhas não cria lançamentos repetidos. A exceção é a da armadilha acima.
+
+**Quando dá errado:** se a leitura não puder seguir, a tela mostra o motivo. Quando o problema for o arquivo, o caminho mais seguro é o OFX do banco, se ele existir.
 
 ## Conciliação manual
 {: #conciliacao-manual }

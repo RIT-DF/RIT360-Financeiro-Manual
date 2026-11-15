@@ -9,10 +9,8 @@ permalink: /modulos/comissao-fiscal/
 
 O módulo **Comissão Fiscal** é o ambiente de trabalho onde os conselheiros fiscais da OSC examinam lançamentos, conferem comprovantes e extratos bancários, formulam diligências à tesouraria e emitem o parecer oficial conclusivo sobre a prestação de contas.
 
-<!-- CAPTURA PENDENTE: espaço de trabalho do período com as abas no topo, a faixa de seis cards e a aba Resumo abertos (imagem de 1.160.0). -->
-
-[![Painel de Fiscalização — Workspace](/assets/screenshots/comissao-fiscal-workspace.png)](/assets/screenshots/comissao-fiscal-workspace.png)
-*Painel de Fiscalização — imagem anterior à reorganização de 1.160.0; a captura nova está pendente*
+[![Espaço de trabalho do período: abas no topo, faixa de seis cards, aba Resumo e painel lateral](/assets/screenshots/comissao-fiscal-workspace-resumo.png)](/assets/screenshots/comissao-fiscal-workspace-resumo.png)
+*O espaço de trabalho do período: as abas no topo, a faixa de seis cards, a aba Resumo aberta e o painel lateral com as observações da gestão e a conversa*
 
 > 💡 **Por que isso importa**
 >
@@ -51,9 +49,58 @@ Cada período exibe seu intervalo de datas, a periodicidade estatutária e o sel
 | **Em deliberação** | A instrução e as diligências foram encerradas. O período está aberto para votação dos conselheiros. | Registrar o voto individual (favorável, com ressalvas ou desfavorável) e justificar. |
 | **Concluído** | A deliberação colegiada foi finalizada e o parecer oficial foi emitido/homologado. | Consultar o parecer assinado, o histórico de votos e baixar o Caderno de Fiscalização. |
 
-> 💡 **Como abrir um novo período**
+### Abrir um período encerrado {#abrir-periodo}
+
+Se a OSC estiver configurada para **abertura manual**, o período é aberto pela tela da própria Comissão Fiscal, no formulário **Abrir período encerrado**: informe a data inicial e a final e clique em **Abrir para análise**. O sistema cria o período e vincula os mandatos vigentes.
+
+[![Formulário Abrir período encerrado, com o alerta de intervalo sem período](/assets/screenshots/comissao-fiscal-abrir-periodo.png)](/assets/screenshots/comissao-fiscal-abrir-periodo.png)
+*O formulário de abertura, com o alerta de que há 14 dias sem período entre o anterior e este*
+
+- **Quem abre:** o **tesoureiro** e o **presidente** abrem o período direto. A **diretoria** também abre, desde que tenha a permissão para isso.
+- **Quem não abre:** quem é membro da **Comissão Fiscal** não abre período. A comissão só recebe o período depois que ele é aberto.
+- **Aviso à comissão:** ao abrir, a comissão recebe um aviso com as datas do período e o nome de quem abriu.
+- **Intervalo sem período:** se houver um espaço de tempo entre o fim do período anterior e a data inicial deste, a tela mostra um alerta com a quantidade de dias e a data de fim do período anterior. O alerta **não impede** a abertura: você decide se o intervalo é esperado.
+
+> ⚠️ **Armadilha · Abrir antes de a conciliação estar pronta**
 >
-> Se a OSC estiver configurada para **abertura manual**, o Presidente da Comissão Fiscal ou o Administrador da OSC pode clicar no botão **"+ Novo período fiscal"**, informar o título do exercício (ex.: *"Exercício Fiscal 2026"*), selecionar as datas inicial e final e confirmar. O sistema criará o período e vinculará automaticamente os mandatos vigentes.
+> **O erro:** abrir o período enquanto a tesouraria ainda importa extratos ou corrige lançamentos.
+>
+> **A consequência:** a comissão começa a atestar sobre contas que ainda mudam. Use a seção seguinte, **Conferir antes de abrir**, para arrumar o que for preciso antes de abrir.
+
+---
+
+## 2-B. Conferir antes de abrir {#conferir-antes-de-abrir}
+
+Antes de abrir o período para a comissão, a gestão pode rodar as **verificações da Comissão Fiscal** sobre um intervalo de datas e arrumar o que aparecer. O bloco **Conferir antes de abrir** fica no topo da tela de Comissão Fiscal, acima da lista de períodos.
+
+[![Bloco Conferir antes de abrir, com as sete verificações e a explicação em linguagem simples](/assets/screenshots/comissao-fiscal-conferir-antes.png)](/assets/screenshots/comissao-fiscal-conferir-antes.png)
+*A conferência de um intervalo: cada verificação com a quantidade de pontos, e a explicação em linguagem simples logo abaixo*
+
+**Quem usa:** a gestão, incluindo o **tesoureiro**. Membro da Comissão Fiscal não vê este bloco, porque a conferência é da gestão antes da leitura.
+
+**O que faz:**
+
+1. Informe a data de início e a data de fim e clique em **Conferir**.
+2. O sistema roda as **sete verificações** no intervalo e mostra, para cada uma, a quantidade de pontos ou **Nada encontrado**.
+3. Duas verificações — **Lançamento alterado depois da abertura do período** e **Divergência com demonstrativo contábil** — aparecem como **Não se aplica: antes de abrir** enquanto o período ainda não existe. Elas só ganham resultado depois que o período é aberto.
+
+**Nada é aberto nem enviado à comissão.** A conferência é só da gestão, e serve para você arrumar as pendências antes de abrir.
+
+**A explicação em linguagem simples.** Abaixo das verificações, a IA escreve o que corrigir, usando só os pontos que a conferência encontrou. Ela diz, por exemplo, que cada despesa sem comprovante precisa de um anexo, e que cada linha do extrato sem lançamento precisa de uma movimentação ou de uma conciliação com o lançamento que já existe. Ela **não diz se as contas estão certas**.
+
+- Cada explicação traz quem a gerou e a data e a hora.
+- **Gerar de novo** cria outra explicação. Faça isso depois de corrigir algo, para que o texto reflita a situação atual.
+- A explicação **consome a cota mensal do assistente** da organização, a cada geração.
+
+> 💡 **Dica · Conferir, corrigir, conferir de novo**
+>
+> Rode a conferência, arrume os pontos que aparecerem e rode de novo no mesmo intervalo. Só então gere a explicação final. Assim a explicação fala do que está pendente, e não do que você já corrigiu.
+
+> ⚠️ **Armadilha · Tratar "Nada encontrado" como período limpo**
+>
+> **O erro:** achar que, se a conferência não encontrou pontos, a comissão não terá o que apontar.
+>
+> **A consequência:** as duas verificações que dependem do período aberto ainda não rodaram. "Nada encontrado" vale só para o que foi verificado naquele momento.
 
 ---
 
@@ -80,7 +127,8 @@ Três pontos da organização:
 
 Na mesma página, o painel lateral **Conversa com a gestão** também está em todas as abas. Veja a seção 12.
 
-<!-- CAPTURA PENDENTE: barra de abas em uma linha e a faixa de seis cards, em tela de computador e em celular. -->
+[![No celular, as abas numa linha que rola e a faixa de cards, com o botão Conversa com a gestão](/assets/screenshots/comissao-fiscal-abas-mobile.png)](/assets/screenshots/comissao-fiscal-abas-mobile.png)
+*No celular: a barra de abas rola para o lado, e a conversa abre pelo botão próprio*
 
 ---
 
@@ -88,7 +136,8 @@ Na mesma página, o painel lateral **Conversa com a gestão** também está em t
 
 Os três pilares aparecem na faixa de cards, sob as abas. Cada um olha as contas por um ângulo, descrito a seguir:
 
-<!-- CAPTURA PENDENTE: faixa de cards com os três pilares de conformidade destacados. -->
+[![Faixa de seis cards, com os três pilares de conformidade destacados](/assets/screenshots/comissao-fiscal-faixa-cards.png)](/assets/screenshots/comissao-fiscal-faixa-cards.png)
+*Os três últimos cards são os pilares: comprovantes, extrato bancário e projetos e finalidade*
 
 O semáforo analisa 100% dos lançamentos do período sob três ângulos obrigatórios:
 
@@ -185,7 +234,8 @@ A tesouraria faz o upload dos PDFs assinados com certificado digital. A comissã
 
 Na aba, cada documento vira **uma linha**, com o tipo, o título, o resultado geral da comparação (Convergente, Divergente ou Não comparado) e uma frase que diz o essencial. Por exemplo, para a DRE: *"A DRE não traz saldo de caixa; ela é usada como apoio, não é comparada."* O detalhe de cada comparação fica recolhido em **Ver detalhes**.
 
-<!-- CAPTURA PENDENTE: aba Demonstrativos contábeis com os documentos em linhas, uma delas com a frase da DRE, e a linha de um balanço com "Ver detalhes" aberto. -->
+[![Aba Demonstrativos contábeis, com o balanço em linha, o resultado Divergente e os detalhes abertos](/assets/screenshots/comissao-fiscal-demonstrativos.png)](/assets/screenshots/comissao-fiscal-demonstrativos.png)
+*Um balanço em linha, com o resultado Divergente e os detalhes abertos, onde ficam Ler de novo e Corrigir valor lido*
 
 ### Comparação com o app {#comparacao-com-o-app}
 
@@ -318,7 +368,8 @@ No canto superior direito, clique em **"Caderno de Fiscalização"**:
 
 O bloco **Observações da gestão para a comissão** fica na aba **Resumo** e também fixado no topo do painel lateral **Conversa com a gestão**, que aparece em todas as abas. É onde quem administra as finanças explica o contexto do período antes de a comissão começar a ler.
 
-<!-- CAPTURA PENDENTE: bloco "Observações da gestão" no topo do painel lateral, com uma versão atual e o botão "Escrever nova versão". -->
+[![Painel lateral com o bloco Observações da gestão para a comissão e a conversa, ainda sem mensagens](/assets/screenshots/comissao-fiscal-conversa.png)](/assets/screenshots/comissao-fiscal-conversa.png)
+*O painel lateral: o botão Escrever observações no topo, e a conversa com a gestão logo abaixo*
 
 > 💡 **Por que isso importa**
 >
@@ -383,9 +434,13 @@ O texto segue regras fixas:
 - **Não inventa.** Cada afirmação vem de um fato verificado pelo sistema.
 - **Explicação da gestão é atribuída a ela.** O texto escreve, por exemplo, "a gestão explica que… confira", e não trata a explicação como prova.
 - **Cada ponto de atenção traz onde conferir**: a aba e o item.
+- **Os pontos de atenção vêm agrupados por verificação**, com a mesma contagem da lista técnica. Assim, o número que o texto cita bate com o que você vê ao abrir a lista.
 - **Verificação sem nada a apontar** é dita com o que foi verificado, não com um "tudo certo".
 
-<!-- CAPTURA PENDENTE: aba Resumo com o texto gerado da pré-análise, a data e o autor da versão, e o aviso de "pode estar desatualizada" em outra versão. -->
+[![Texto da pré-análise com versão, data e autor, pontos de atenção agrupados por verificação e Ver versões anteriores](/assets/screenshots/comissao-fiscal-pre-analise-texto.png)](/assets/screenshots/comissao-fiscal-pre-analise-texto.png)
+*O texto da pré-análise: versão, data e autor no topo, os pontos de atenção agrupados por verificação, e as versões anteriores recolhidas*
+<!-- Recapturar o texto da pré-análise após a correção da issue #462. -->
+
 
 A lista técnica, recolhida abaixo do texto, mostra por verificação o resultado e os pontos. O texto resume essa lista.
 
@@ -407,7 +462,7 @@ A lista técnica, recolhida abaixo do texto, mostra por verificação o resultad
 | **Linha do extrato sem lançamento** | Linhas do extrato importado sem lançamento vinculado ou correspondente (a mesma regra da aba Extrato bancário). |
 | **Pedido aprovado pelo próprio solicitante** | Lançamentos ligados a pedido de pagamento ou reembolso em que quem pediu também aprovou. Quem pagou não é verificado. |
 | **Possível duplicidade** | Lançamentos do mesmo tipo, com mesmo valor e mesmo favorecido, com datas a até 3 dias uma da outra. Lançamentos sem favorecido não entram. |
-| **Lançamento alterado depois da abertura do período** | Alterações, cancelamentos e estornos registrados a partir do dia em que o período foi aberto. Mostra só os nomes dos campos alterados. |
+| **Lançamento alterado depois da abertura do período** | Alterações, cancelamentos e estornos registrados a partir do dia em que o período foi aberto. Mostra só os campos alterados, com o nome que eles têm em português na tela (por exemplo, valor ou data). Marcar um lançamento como conciliado com o extrato **não** conta como alteração. |
 | **Centro de custo acima do orçado** | Despesa realizada no ano, até o fim do período, comparada à prevista no orçamento aprovado para o mesmo intervalo. |
 | **Divergência com demonstrativo contábil** | Demonstrativos anexados comparados com o app: caixa e equivalentes na data-base e entradas e saídas de caixa do intervalo, em centavos. Ver [Comparação com o app](#comparacao-com-o-app). |
 
