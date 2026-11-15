@@ -47,7 +47,8 @@ Cada período exibe seu intervalo de datas, a periodicidade estatutária e o sel
 | **Aberto para análise** | A tesouraria encerrou a escrituração do período e liberou as contas para a comissão fiscal. | Analisar lançamentos, abrir comprovantes, emitir atestes e registrar diligências. |
 | **Em diligência** | A comissão enviou questionamentos formais e está aguardando o envio de esclarecimentos ou documentos adicionais pela tesouraria. | Acompanhar prazos e analisar as respostas que forem protocoladas. |
 | **Em deliberação** | A instrução e as diligências foram encerradas. O período está aberto para votação dos conselheiros. | Registrar o voto individual (favorável, com ressalvas ou desfavorável) e justificar. |
-| **Concluído** | A deliberação colegiada foi finalizada e o parecer oficial foi emitido/homologado. | Consultar o parecer assinado, o histórico de votos e baixar o Caderno de Fiscalização. |
+| **Concluído** | A deliberação colegiada foi finalizada e o parecer oficial foi emitido/homologado. | Consultar o parecer assinado, o registro da deliberação e baixar o Caderno de Fiscalização. |
+| **Encerrado sem parecer** | O prazo de deliberação terminou sem votos suficientes para uma conclusão válida. Não há aprovação tácita. | Baixar o Termo de Encerramento na aba Deliberação e parecer. |
 
 ### Abrir um período encerrado {#abrir-periodo}
 
@@ -58,7 +59,7 @@ Se a OSC estiver configurada para **abertura manual**, o período é aberto pela
 
 - **Quem abre:** o **tesoureiro** e o **presidente** abrem o período direto. A **diretoria** também abre, desde que tenha a permissão para isso.
 - **Quem não abre:** quem é membro da **Comissão Fiscal** não abre período. A comissão só recebe o período depois que ele é aberto.
-- **Aviso à comissão:** ao abrir, a comissão recebe um aviso com as datas do período e o nome de quem abriu.
+- **Aviso à comissão:** ao abrir, a comissão recebe um aviso com as datas do período e o nome de quem abriu. Se esse aviso não tiver saído na hora, quem administra a comissão vê um alerta no **Resumo**; a rotina diária reenvia o aviso e o alerta some quando o reenvio acontece.
 - **Intervalo sem período:** se houver um espaço de tempo entre o fim do período anterior e a data inicial deste, a tela mostra um alerta com a quantidade de dias e a data de fim do período anterior. O alerta **não impede** a abertura: você decide se o intervalo é esperado.
 
 > ⚠️ **Armadilha · Abrir antes de a conciliação estar pronta**
@@ -116,8 +117,7 @@ Ao abrir um período, o espaço de trabalho mostra, logo abaixo do título, a **
 | **Finalidade e projetos** | A distribuição das despesas por projeto, rubrica e finalidade. |
 | **Demonstrativos contábeis** | Os balanços, DRE, balancetes e notas anexados, cada um com o resultado da comparação com o app. |
 | **Diligências** | Os questionamentos formais à tesouraria e as respostas. |
-| **Deliberação e parecer** | Os votos, o quórum e a emissão do parecer. |
-| **Histórico** | Tudo o que aconteceu no período, em ordem. |
+| **Deliberação e parecer** | Os votos, o quórum, a emissão do parecer e o Termo de Encerramento, quando o prazo termina sem parecer. |
 
 Três pontos da organização:
 
@@ -339,19 +339,22 @@ O sistema calcula em tempo real o quórum estatutário (Maioria Simples, Maioria
 
 > ⚠️ **Silêncio Institucional e Ausência de Aprovação Tácita**
 >
-> Se o prazo final de deliberação vencer e algum conselheiro titular não tiver registrado seu voto, **o sistema não presume aprovação**. A situação passa a constar como *Pendente por decurso de prazo*, exigindo que o Presidente da Comissão convoque o suplente correspondente ou certifique a ocorrência na ata.
+> Se o prazo final de deliberação vencer sem votos suficientes para uma conclusão, **o sistema não presume aprovação**. Ele gera o **Termo de Encerramento**: um documento que registra os votos dados, quem não votou e a conclusão *sem decisão válida*. O termo não é parecer e não aprova nem reprova as contas. Ele fica disponível para baixar na aba **Deliberação e parecer**.
 
 ### Emissão do Parecer Final
-Aprovada a deliberação, há duas modalidades de formalização do documento:
+Aprovada a deliberação, há duas maneiras de o parecer ser emitido:
+
+0. **Emissão automática no fim do prazo**: se o prazo de deliberação vencer e os votos registrados alcançarem o apoio mínimo, o parecer é emitido sem nenhuma ação manual. Na aba **Deliberação e parecer** ele aparece como *Emitido no encerramento do prazo*, e o registro mostra quem não votou.
 
 1. **Emissão Direta pelo RIT360 (Recomendado)**:
    - O sistema compila o cabeçalho oficial da OSC, os dados do exercício, o extrato do semáforo dos 3 pilares, a lista de diligências saneadas, as ressalvas remanescentes, os votos (com o nome de cada conselheiro na modalidade Nominal; só o placar na Anônima) e a conclusão final.
+   - No lugar de linhas para assinatura à mão, o PDF traz o **Registro eletrônico da deliberação**: cada membro aparece com a sua situação. Quem votou aparece com a data e a hora do voto (votos registrados antes desta mudança aparecem como *Votou, sem hora registrada*). Quem não votou aparece como *Não votou*, e quem estava impedido aparece com o motivo. Na modalidade Anônima, o registro mostra quem votou e quando, mas não como votou.
    - O parecer é gerado em formato PDF assinado eletronicamente com carimbo de data/hora e **código verificador de integridade SHA-256**, permitindo que qualquer pessoa confirme a autenticidade do documento escaneando o QR Code ou digitando o hash no site oficial.
 2. **Anexo de Parecer Físico / Externo** (aba **Anexar parecer externo**):
    - Use quando a comissão deliberou em reunião e assinou a ata ou o parecer **fora do sistema** — por exemplo, uma via em papel assinada na reunião prévia à Assembleia. Digitalize e anexe o **PDF** (até **20 MB**), escolhendo o **desfecho das contas**, e clique em **Anexar parecer e concluir o período**.
    - **O parecer externo só pode ser anexado depois da deliberação da comissão.** Enquanto os votos necessários não forem registrados, o botão fica indisponível, com a explicação *"O parecer externo também depende da deliberação da comissão: N de N votos necessários registrados… Anexe o arquivo depois que a votação terminar."* O motivo: um documento externo não pode substituir a votação; ele só formaliza o que a comissão já decidiu.
    - No envio, o sistema calcula a **impressão digital do arquivo (SHA-256)** e a guarda. Depois, ao conferir o parecer, ele confere se o arquivo guardado **não mudou desde o envio**. O PDF fica guardado de forma protegida e **não pode ser substituído depois**. Por isso, confira o arquivo antes de anexar: errar o arquivo não tem como corrigir pela mesma tela.
-   - No histórico do período, o parecer aparece marcado como **"Emitido fora do sistema"**, com o botão **Baixar parecer externo preservado** e o código SHA-256.
+   - Na aba **Deliberação e parecer**, o parecer aparece marcado como **"Emitido fora do sistema"**, com o botão **Baixar parecer externo preservado** e o código SHA-256.
 
 > 💡 **Voto anônimo e parecer**
 >
@@ -509,7 +512,7 @@ No computador, o painel fica ao lado do conteúdo. No celular, ele abre numa gav
 - **Mensagem não se edita nem se apaga.** Se algo saiu errado, escreva outra mensagem dizendo o que mudou.
 - **Transformar em diligência:** em cada mensagem, quem pode abrir diligência tem essa ação. Ela leva o texto, e o lançamento citado, para o formulário de diligência, onde a pergunta pode ser revisada antes do envio.
 - **Aviso no dia seguinte:** a gestão recebe um aviso quando a comissão faz perguntas novas, e a comissão recebe um aviso quando a gestão responde. Em cada dia há um único aviso, com a contagem.
-- **Onde fica registrado:** as mensagens aparecem no **Histórico** do período e na fotografia do parecer.
+- **Onde fica registrado:** cada mensagem fica guardada no período, com autor e data, e não pode ser apagada.
 
 > 💡 **Dica · Pergunta curta na conversa, questionamento formal na diligência**
 >

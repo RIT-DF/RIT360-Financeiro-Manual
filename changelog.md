@@ -11,6 +11,23 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.163.0] — 2026-11-15
+
+### Adicionado
+
+- Na Comissão Fiscal, quando o prazo de análise vence e os votos dados alcançam o apoio mínimo, o parecer é emitido automaticamente, e o registro mostra quem não votou.
+- Na Comissão Fiscal, quando o prazo vence sem votos suficientes, o sistema gera um **Termo de Encerramento** em PDF, com os votos dados, quem não votou e a conclusão "sem decisão válida". O termo pode ser baixado na aba **Deliberação e parecer**. Silêncio continua não sendo aprovação.
+
+### Modificado
+
+- No PDF do parecer, as linhas para assinatura à mão deram lugar ao **Registro eletrônico da deliberação**. Cada membro da comissão aparece com a sua situação: se votou e quando votou (data e hora, para votos registrados a partir desta versão), ou quem não votou ou estava impedido.
+- Na Comissão Fiscal, o aviso enviado no encerramento do prazo diz o que aconteceu: parecer emitido ou período encerrado sem parecer.
+- Na Comissão Fiscal, o aviso de que os avisos de abertura do período não foram enviados agora aparece no **Resumo**.
+
+### Removido
+
+- A aba **Histórico** saiu da Comissão Fiscal.
+
 ## [1.162.1] — 2026-11-15
 
 ### Modificado
