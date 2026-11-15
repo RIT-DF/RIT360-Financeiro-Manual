@@ -11,6 +11,36 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.168.1] — 2026-11-15
+
+### Adicionado
+
+- Cada estimativa do orçamento pode levar uma **observação**, para explicar o número. A observação se escreve na própria linha, enquanto o orçamento está em rascunho.
+- O orçamento tem um campo de **observações do plano**, para quem aprova. Ele fica em destaque na aprovação e é copiado quando o orçamento é revisado.
+
+### Modificado
+
+- Quando a categoria não tem centro de custo, o valor fica direto na linha da categoria, sem o nível **Sem centro de custo** embaixo.
+
+## [1.168.0] — 2026-11-15
+
+### Adicionado
+
+- No **Orçamento anual**, o limite de despesa pode ser **Só anual** ou **Mês a mês**. No modo mês a mês, cada mês tem um teto próprio. O atalho **Preencher os 12 meses** coloca o mesmo valor nos doze meses, e depois é possível ajustar mês a mês. Teto zero num mês quer dizer "sem gasto adicional previsto".
+- A planilha exportada tem as abas **Estimativas**, **Metas e limites** e **Observações**.
+
+### Modificado
+
+- A linha de uma categoria-mãe passa a contar também o que é lançado nas subcategorias que não têm linha própria no mesmo centro de custo. Antes, contava só o lançado na própria mãe. Cada real conta em uma linha só, a mais próxima na árvore. A mudança vale também para orçamentos já aprovados.
+- Quando uma meta ou um limite cobre a categoria, a estimativa conta só até o próprio valor. Ela não acusa mais estouro pelo que pertence à meta ou ao limite.
+- Os limites que já existiam passaram a ser **Mês a mês**.
+- A linha sem centro de custo passa a se chamar **Sem centro de custo**.
+- A importação da planilha aceita os formatos anteriores.
+
+### Removido
+
+- Saiu a opção **Vale para cada mês** do limite de despesa.
+
 ## [1.167.0] — 2026-11-15
 
 ### Adicionado

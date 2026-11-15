@@ -7,7 +7,7 @@ task: gerir-orcamento-anual
 role: [presidente, tesoureiro, gestor-centro-custo]
 routes: [/orcamento]
 screenshots: [orcamento-elaboracao, orcamento-previsto-realizado, orcamento-reconciliacao]
-source_docs: [PRODUCT.md#orcamento, changelog v1.154.0, changelog v1.155.0, changelog v1.167.0]
+source_docs: [PRODUCT.md#orcamento, changelog v1.154.0, changelog v1.155.0, changelog v1.167.0, changelog v1.168.0, changelog v1.168.1]
 last_verified: 2026-11-15
 status: publicado
 ---
@@ -36,7 +36,7 @@ O módulo de **Orçamento** é onde a OSC monta o seu **orçamento anual** — q
 >
 > - **Estimativa** — o que a OSC espera receber ou gastar, garantido ou previsto. É a linha de sempre: uma receita ou uma despesa por categoria e centro de custo.
 > - **Meta de receita** — o que a OSC quer alcançar **além** do garantido. Ex.: "Novos recursos", R$ 100 mil no ano.
-> - **Limite de despesa** — o teto que a OSC não quer ultrapassar em uma área. Ex.: "Material e manutenção", com um valor máximo para o ano ou para cada mês.
+> - **Limite de despesa** — o teto que a OSC não quer ultrapassar em uma área. Ex.: "Material e manutenção", com um valor máximo para o ano, ou um teto para cada mês.
 >
 > Meta e limite são uma camada **por cima** das estimativas: o que já estava previsto é atendido primeiro. Os detalhes estão em [Metas e limites](#metas-e-limites).
 
@@ -76,6 +76,8 @@ Para montar um orçamento:
    - **Por categoria**: cada categoria mostra o total da organização e, ao expandir, quanto vai para cada centro. Nessa visão, a edição é feita nessas linhas, e **Adicionar centro de custo** inclui mais um centro na categoria.
 
    Categorias com categoria-mãe ficam agrupadas sob ela, com subtotal. A aba, o agrupamento e os grupos abertos ficam lembrados no seu navegador.
+
+   Na visão **Por centro de custo**, as linhas sem centro ficam no grupo **Sem centro de custo**. Quando a categoria não tem centro de custo, o valor fica direto na linha da categoria, sem um nível de centro embaixo.
 5. Lance as **receitas previstas** — o que a OSC pretende arrecadar — na aba Receitas, e as **despesas previstas** — o que pretende gastar — na aba Despesas, cada linha vinculada a uma **categoria** e a um **centro de custo**.
 6. Para cada linha, informe o **valor anual**. O sistema **distribui automaticamente** esse valor pelos 12 meses (divisão igual), e você pode **ajustar mês a mês**, com **Editar meses**, quando o gasto não é uniforme — por exemplo, concentrar a despesa de um evento no mês em que ele acontece.
 7. Se quiser, adicione a **linha de contingência** de cada centro de custo (a reserva para imprevistos daquela área). Ela aparece na aba Despesas só quando já existe; se ainda não há, use **Adicionar reserva de contingência**, também na aba Despesas.
@@ -89,6 +91,15 @@ Categoria desativada que ainda tem linha no orçamento continua aparecendo, com 
 > 💡 **Distribuir por 12 e ajustar depois**
 >
 > Comece sempre pelo valor anual — é mais fácil pensar "vamos gastar uns R$ 24.000 no ano com o aluguel" do que preencher 12 campos. O sistema divide em R$ 2.000/mês. Só então você ajusta os meses que fogem do padrão: o 13º do funcionário em dezembro, a taxa anual que cai em março, o gasto do evento em setembro. O resto pode ficar na média.
+
+### Observações: da linha e do plano
+
+Duas observações ajudam quem aprova a entender o orçamento:
+
+- **Na linha** — cada estimativa pode levar uma nota, no campo **Observação da linha**, com até 500 caracteres. Por exemplo: "inclui o reajuste previsto para agosto". A nota se escreve enquanto o orçamento está em rascunho.
+- **No plano** — um texto geral do orçamento, até 5.000 caracteres, no campo **Observações do plano**. Quem monta o orçamento escreve e edita enquanto está em rascunho. Quem aprova vê o texto em destaque, e ele é copiado quando o orçamento é revisado.
+
+Metas e limites também têm o campo **Observação para quem aprova (opcional)**, com até 500 caracteres (ver [Metas e limites](#metas-e-limites)).
 
 ### Verba do ano em valor único
 {: #verba-do-ano-valor-unico }
@@ -205,15 +216,18 @@ Algumas regras:
 
 ### Como o limite funciona
 
-Ao criar um limite, escolha uma das formas de valor:
+Ao criar um limite, escolha uma das duas formas de valor:
 
-- **Valor do ano (dividido pelos meses)** — um total anual, distribuído pelos 12 meses.
-- **Mês a mês** — um valor para cada mês.
-- **Vale para cada mês** — um valor só, que vale como teto em **cada um dos 12 meses**. A sobra de um mês **não** passa para o seguinte: se o teto é R$ 1.500 e no mês sobrou R$ 500, o próximo mês continua com teto de R$ 1.500.
+- **Só anual** — um valor para o ano, conferido no acumulado. Não há teto por mês.
+- **Mês a mês** — um teto próprio em cada mês, conferido mês a mês e no ano. A sobra de um mês **não** passa para o seguinte: se o teto é R$ 1.500 e no mês sobrou R$ 500, o próximo mês continua com teto de R$ 1.500.
 
-O limite avisa a **80%** e a **100%** do total anual. No limite que vale para cada mês, o aviso sai quando o mês passa de 100% do teto.
+No modo **Mês a mês**, para não digitar doze valores, use **Preencher os 12 meses**: informe um valor e ele vai para todos os meses. Depois, ajuste só os meses que fogem do padrão. **Teto zero** num mês quer dizer "sem gasto adicional previsto" naquele mês.
 
-Exemplo: o limite **Alimentação**, de R$ 1.500 por mês, cobrindo a categoria Alimentação. Em abril, se o gasto chegar a R$ 1.900, o acompanhamento mostra que o mês passou do limite, com R$ 1.900 de R$ 1.500.
+Os limites que já existiam antes desta mudança ficaram como **Mês a mês**, com o mesmo teto em cada mês.
+
+O limite avisa a **80%** e a **100%** do total anual. No modo mês a mês, cada mês também é conferido contra o próprio teto.
+
+Exemplo: o limite **Alimentação**, em **Mês a mês**, com teto de R$ 1.500 em cada mês, cobrindo a categoria Alimentação. Em abril, se o gasto chegar a R$ 1.900, o acompanhamento mostra que o mês passou do limite, com R$ 1.900 de R$ 1.500.
 
 ### Como a meta acompanha o ano
 
@@ -255,9 +269,11 @@ Depois de aprovado, o orçamento vira painel de acompanhamento. Para cada **cent
 
 O semáforo deixa a diretoria enxergar de relance onde está o aperto, sem abrir linha por linha — e agir a tempo, não no fim do ano.
 
-As **metas de receita** e os **limites de despesa** aparecem na mesma tela, com andamento próprio: quanto da meta já entrou acima das estimativas, quanto do limite já foi usado acima das estimativas, e, no limite mensal, o que aconteceu em cada mês (ver [Metas e limites](#metas-e-limites)).
+As **metas de receita** e os **limites de despesa** aparecem na mesma tela, com andamento próprio: quanto da meta já entrou acima das estimativas, quanto do limite já foi usado acima das estimativas, e, no limite mês a mês, o que aconteceu em cada mês (ver [Metas e limites](#metas-e-limites)).
 
 Para acompanhar uma área específica, use a tela [Minha área](/modulos/minha-area/): ela junta, para um centro de custo e um ano, a verba, o gasto, o comprometido e o saldo.
+
+**Categoria-mãe.** A linha de uma categoria-mãe conta também o que é lançado nas subcategorias que não têm linha própria no mesmo centro de custo. Cada real conta em uma linha só: a da categoria mais próxima na árvore que tem linha no orçamento. A regra vale também para orçamentos já aprovados.
 
 > 📖 **Conceito · De que centro de custo é o gasto de um projeto**
 >
@@ -298,7 +314,7 @@ A vida muda ao longo do ano, e às vezes o orçamento precisa mudar junto — en
 - Ajustes **pequenos** (abaixo de um limiar configurável pela OSC) são aplicados direto.
 - Ajustes **acima do limiar** voltam para **aprovação** — a diretoria precisa concordar de novo antes de o novo número valer.
 - Uma revisão **copia as verbas de valor único** junto com as linhas do orçamento (ver [Verba do ano em valor único](#verba-do-ano-valor-unico)).
-- **Metas e limites** também são copiados na revisão e contam no limiar como qualquer linha: aumentar uma meta ou um limite pesa no cálculo de quanto o orçamento mudou. Quem pode criar e alterar metas e limites são as mesmas pessoas que podem mexer nas linhas daquele centro de custo (ou do orçamento todo, quando a meta ou o limite vale para a organização inteira).
+- **Metas e limites** também são copiados na revisão e contam no limiar como qualquer linha: aumentar uma meta ou um limite pesa no cálculo de quanto o orçamento mudou. Quem pode criar e alterar metas e limites são as mesmas pessoas que podem mexer nas linhas daquele centro de custo (ou do orçamento todo, quando a meta ou o limite vale para a organização inteira). A **observação do plano** também é copiada.
 
 > 📖 **Conceito · O limiar de revisão**
 >
@@ -327,8 +343,7 @@ Quando o ano acaba e a prestação de contas está pronta, você usa **Encerrar 
 
 O módulo conversa com planilhas e relatórios para caber no fluxo que a sua OSC já usa:
 
-- **Exportar e importar em XLSX** — leve o orçamento para uma planilha (Excel, Google Sheets) para trabalhar offline, discutir com a diretoria ou preparar em conjunto, e depois **importe de volta**. Útil para OSCs que montam o orçamento em reunião, na planilha, antes de oficializar no sistema. A verba de valor único vem numa aba própria, **Verba sem categoria**, que a importação não lê (ver [Verba do ano em valor único](#verba-do-ano-valor-unico)).
- As metas, os limites e a marca de investimento das categorias também saem na planilha e voltam pela importação. Uma planilha antiga, sem essas informações, entra com as linhas como **estimativas**.
+- **Exportar e importar em XLSX** — leve o orçamento para uma planilha (Excel, Google Sheets) para trabalhar offline, discutir com a diretoria ou preparar em conjunto, e depois **importe de volta**. Útil para OSCs que montam o orçamento em reunião, na planilha, antes de oficializar no sistema. A planilha tem três abas: **Estimativas** (as linhas do orçamento, com a observação de cada uma), **Metas e limites** (cada meta e cada limite, com o jeito de preencher e os valores de cada mês) e **Observações** (o texto do plano). A verba de valor único vem numa aba própria, **Verba sem categoria**, que a importação não lê (ver [Verba do ano em valor único](#verba-do-ano-valor-unico)). A importação aceita também as planilhas dos formatos anteriores: uma planilha antiga, sem as abas novas, entra com as linhas como **estimativas**.
 - **Relatório de execução** — um relatório do previsto × realizado do ano, exportável em **PDF** (para anexar à prestação de contas ou enviar a financiadores) e em **Excel** (para análise).
 - **Execução por Centro de Custo na prestação de contas** — a prestação de contas da OSC ganhou uma seção **"Execução por Centro de Custo"**, mostrando, para cada área, o previsto, o realizado e o quanto foi consumido. Ver [Relatórios → Exportação](/modulos/relatorios/#exportação).
 
