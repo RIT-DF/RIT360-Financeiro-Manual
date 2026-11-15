@@ -298,6 +298,7 @@ A vida muda ao longo do ano, e às vezes o orçamento precisa mudar junto — en
 - Ajustes **pequenos** (abaixo de um limiar configurável pela OSC) são aplicados direto.
 - Ajustes **acima do limiar** voltam para **aprovação** — a diretoria precisa concordar de novo antes de o novo número valer.
 - Uma revisão **copia as verbas de valor único** junto com as linhas do orçamento (ver [Verba do ano em valor único](#verba-do-ano-valor-unico)).
+- **Metas e limites** também são copiados na revisão e contam no limiar como qualquer linha: aumentar uma meta ou um limite pesa no cálculo de quanto o orçamento mudou. Quem pode criar e alterar metas e limites são as mesmas pessoas que podem mexer nas linhas daquele centro de custo (ou do orçamento todo, quando a meta ou o limite vale para a organização inteira).
 
 > 📖 **Conceito · O limiar de revisão**
 >
