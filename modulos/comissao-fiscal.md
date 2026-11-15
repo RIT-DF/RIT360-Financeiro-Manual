@@ -339,14 +339,19 @@ O sistema calcula em tempo real o quórum estatutário (Maioria Simples, Maioria
 
 > ⚠️ **Silêncio Institucional e Ausência de Aprovação Tácita**
 >
-> Se o prazo final de deliberação vencer sem votos suficientes para uma conclusão, **o sistema não presume aprovação**. Ele gera o **Termo de Encerramento**: um documento que registra os votos dados, quem não votou e a conclusão *sem decisão válida*. O termo não é parecer e não aprova nem reprova as contas. Ele fica disponível para baixar na aba **Deliberação e parecer**.
+> Se todos os membros votarem sem que os votos alcancem o apoio mínimo, **o sistema não presume aprovação**. Ele gera na hora o **Termo de Encerramento**. O mesmo acontece se o prazo final de deliberação vencer sem votos suficientes para uma conclusão: o termo sai no fim do prazo. Ele é um documento que registra os votos dados, quem não votou e a conclusão *sem decisão válida*. O termo não é parecer e não aprova nem reprova as contas. Ele fica disponível para baixar na aba **Deliberação e parecer**.
 
 ### Emissão do Parecer Final
-Aprovada a deliberação, há duas maneiras de o parecer ser emitido:
+O parecer é emitido pelo sistema, sem ação manual, em uma destas situações:
 
-0. **Emissão automática no fim do prazo**: se o prazo de deliberação vencer e os votos registrados alcançarem o apoio mínimo, o parecer é emitido sem nenhuma ação manual. Na aba **Deliberação e parecer** ele aparece como *Emitido no encerramento do prazo*, e o registro mostra quem não votou.
-
-1. **Emissão Direta pelo RIT360 (Recomendado)**:
+1. **Emissão automática pelo RIT360** (sem nenhuma ação manual):
+   - **Ao último voto**: quando todos os membros com direito a voto já votaram e os votos alcançam o apoio mínimo, o parecer sai na hora. Na aba **Deliberação e parecer** ele aparece com o selo *Emitido porque todos votaram*.
+   - **No fim do prazo**: quando o prazo de deliberação termina e os votos alcançam o apoio mínimo, o parecer sai no encerramento do prazo. Na aba **Deliberação e parecer** ele aparece com o selo *Emitido no encerramento do prazo*, e o registro mostra quem não votou.
+   - Enquanto faltar voto de algum membro com direito a voto e o prazo não tiver terminado, nenhum parecer é emitido. Quem não votou bloqueia a emissão até o fim do prazo.
+   - Se todos votarem sem alcançar o apoio mínimo, sai o Termo de Encerramento na hora. Se o prazo terminar com votos insuficientes, ele sai no encerramento do prazo.
+   - Com nenhum membro apto a votar, a rodada só encerra no prazo.
+   - O aviso dessas emissões e encerramentos vai a quem pode ver a Comissão Fiscal.
+   - O parecer sai sempre com o texto padrão.
    - O sistema compila o cabeçalho oficial da OSC, os dados do exercício, o extrato do semáforo dos 3 pilares, a lista de diligências saneadas, as ressalvas remanescentes, os votos (com o nome de cada conselheiro na modalidade Nominal; só o placar na Anônima) e a conclusão final.
    - No lugar de linhas para assinatura à mão, o PDF traz o **Registro eletrônico da deliberação**: cada membro aparece com a sua situação. Quem votou aparece com a data e a hora do voto (votos registrados antes desta mudança aparecem como *Votou, sem hora registrada*). Quem não votou aparece como *Não votou*, e quem estava impedido aparece com o motivo. Na modalidade Anônima, o registro mostra quem votou e quando, mas não como votou.
    - O parecer é gerado em formato PDF assinado eletronicamente com carimbo de data/hora e **código verificador de integridade SHA-256**, permitindo que qualquer pessoa confirme a autenticidade do documento escaneando o QR Code ou digitando o hash no site oficial.

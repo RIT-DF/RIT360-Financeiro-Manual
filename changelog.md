@@ -11,6 +11,17 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.164.0] — 2026-11-15
+
+### Modificado
+
+- Na Comissão Fiscal, o parecer não é mais emitido por botão. Ele sai automaticamente quando todos os membros com direito a voto votam ou quando o prazo termina. Enquanto faltar voto e o prazo não tiver terminado, nenhum parecer é emitido.
+- Se todos votarem sem alcançar o apoio mínimo, o sistema gera na hora o **Termo de Encerramento**. A tela mostra quantos membros ainda faltam votar.
+
+### Removido
+
+- Na Comissão Fiscal, saíram a emissão manual do parecer e a edição do texto da minuta. O parecer sai sempre com o texto padrão.
+
 ## [1.163.0] — 2026-11-15
 
 ### Adicionado
