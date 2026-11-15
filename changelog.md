@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.156.2] — 2026-11-14
+
+### Corrigido
+
+- Agora dá para pagar pedidos de pagamento recorrentes e parcelados direto na lista de pedidos e no botão "Confirmar pagamento" do pedido: você escolhe a parcela que está pagando, e a mais antiga em aberto já vem marcada. Antes, esse pagamento só funcionava pela tela de Movimentações.
+- No pagamento em lote, cada pedido parcelado é pago na parcela mais antiga em aberto, e a confirmação mostra qual é. Pedidos sem parcela a pagar ficam fora do lote, com o motivo.
+- Quando um pagamento é recusado, a tela mostra o motivo exato.
+
 ## [1.156.1] — 2026-11-12
 
 ### Corrigido
