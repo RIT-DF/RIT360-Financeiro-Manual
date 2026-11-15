@@ -31,7 +31,7 @@ A seção superior da página define como os períodos de fiscalização são es
 | Campo | O que define | Opções disponíveis |
 |---|---|---|
 | **Periodicidade** | A frequência oficial com que as contas devem ser submetidas ao parecer do Conselho Fiscal, conforme o estatuto. | **Anual** (padrão na maioria das OSCs), **Semestral**, **Quadrimestral**, **Trimestral** ou **Mensal**. |
-| **Abertura de Períodos** | Como os ciclos de fiscalização são iniciados no sistema. | • **Manual**: O Presidente ou a Comissão abre o período quando a escrituração contábil e a conciliação estiverem prontas.<br>• **Automática**: O sistema abre o período automaticamente ao final de cada exercício/mês. |
+| **Abertura de Períodos** | Como os ciclos de fiscalização são iniciados no sistema. | • **Manual**: O Tesoureiro ou o Presidente abre o período quando a escrituração contábil e a conciliação estiverem prontas (a diretoria com a permissão de gerir períodos também pode). Membro da Comissão Fiscal não abre período. Antes de abrir, use "Conferir antes de abrir".<br>• **Automática**: O sistema abre o período automaticamente ao final de cada exercício/mês. |
 | **Antecedência para Alerta** | Quantos dias antes da data limite da assembleia o sistema começa a alertar os conselheiros sobre pendências. | 15, 30, 45 ou 60 dias. |
 
 > ⚠️ **Armadilha · Abrir período com lançamentos pendentes de conciliação**

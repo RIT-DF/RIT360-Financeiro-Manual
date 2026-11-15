@@ -39,6 +39,7 @@ Visão rápida do que cada papel pode fazer. **✓** = pode operar · **👁** =
 | Configurar a OSC (dados, usuários, papéis, fluxo de aprovação) | ✓ | — | — | — | — | — |
 | Configurar parâmetros e mandatos da Comissão Fiscal (`config.fiscal_council`) | ✓ | — | — | — | — | — |
 | Atuar no módulo Comissão Fiscal (atestes, diligências, parecer) | 👁 | — | 👁 | ✓ | — | — |
+| Abrir período da Comissão Fiscal e conferir antes de abrir | ✓ | ✓ | conforme permissão | — | — | — |
 | Aprovar reembolsos / pedidos | conforme o fluxo | conforme o fluxo | — | — | conforme o fluxo | conforme o fluxo |
 | Solicitar pedido de compra e pagamento | ✓ | ✓ | — | — | ✓ | — |
 | Solicitar o **próprio** reembolso | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
