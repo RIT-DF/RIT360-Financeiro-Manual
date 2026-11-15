@@ -11,6 +11,13 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.159.3] — 2026-11-14
+
+### Corrigido
+
+- A comparação com os demonstrativos contábeis passou a entender valores com D ou C no fim (débito e crédito), como "3.927,30D", padrão em balanços e balancetes. Antes eles apareciam como "não encontrados". Documentos já lidos foram comparados de novo sem nova leitura.
+- Quando um valor ou uma data foi lido no documento mas não pôde ser interpretado, o relatório agora mostra o texto lido, em vez de dizer que não foi encontrado.
+
 ## [1.159.2] — 2026-11-14
 
 ### Adicionado
