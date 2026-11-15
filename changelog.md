@@ -11,6 +11,12 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.159.4] — 2026-11-14
+
+### Corrigido
+
+- A leitura automática de notas, recibos e boletos agora entende corretamente valores como "45.90" e "1,234.56", no app, no assistente e no Telegram. Antes, "45.90" podia virar R$ 4.590,00. Quando o valor vem num formato que não dá para entender com segurança, o campo fica em branco para você preencher, em vez de mostrar um valor errado.
+
 ## [1.159.3] — 2026-11-14
 
 ### Corrigido
