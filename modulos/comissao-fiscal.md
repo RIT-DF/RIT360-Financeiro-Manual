@@ -358,11 +358,14 @@ O parecer é emitido pelo sistema, sem ação manual, em uma destas situações:
    - O sistema compila o cabeçalho oficial da OSC, os dados do exercício, o extrato do semáforo dos 3 pilares, a lista de diligências saneadas, as ressalvas remanescentes, os votos (com o nome de cada conselheiro na modalidade Nominal; só o placar na Anônima) e a conclusão final.
    - No lugar de linhas para assinatura à mão, o PDF traz o **Registro eletrônico da deliberação**: cada membro aparece com a sua situação. Quem votou aparece com a data e a hora do voto (votos registrados antes desta mudança aparecem como *Votou, sem hora registrada*). Quem não votou aparece como *Não votou*, e quem estava impedido aparece com o motivo. Na modalidade Anônima, o registro mostra quem votou e quando, mas não como votou.
    - O parecer é gerado em formato PDF assinado eletronicamente com carimbo de data/hora e **código verificador de integridade SHA-256**, permitindo que qualquer pessoa confirme a autenticidade do documento escaneando o QR Code ou digitando o hash no site oficial.
-2. **Anexo de Parecer Físico / Externo** (aba **Anexar parecer externo**):
-   - Use quando a comissão deliberou em reunião e assinou a ata ou o parecer **fora do sistema** — por exemplo, uma via em papel assinada na reunião prévia à Assembleia. Digitalize e anexe o **PDF** (até **20 MB**), escolhendo o **desfecho das contas**, e clique em **Anexar parecer e concluir o período**.
-   - **O parecer externo só pode ser anexado depois da deliberação da comissão.** Enquanto os votos necessários não forem registrados, o botão fica indisponível, com a explicação *"O parecer externo também depende da deliberação da comissão: N de N votos necessários registrados… Anexe o arquivo depois que a votação terminar."* O motivo: um documento externo não pode substituir a votação; ele só formaliza o que a comissão já decidiu.
-   - No envio, o sistema calcula a **impressão digital do arquivo (SHA-256)** e a guarda. Depois, ao conferir o parecer, ele confere se o arquivo guardado **não mudou desde o envio**. O PDF fica guardado de forma protegida e **não pode ser substituído depois**. Por isso, confira o arquivo antes de anexar: errar o arquivo não tem como corrigir pela mesma tela.
-   - Na aba **Deliberação e parecer**, o parecer aparece marcado como **"Emitido fora do sistema"**, com o botão **Baixar parecer externo preservado** e o código SHA-256.
+2. **Documento assinado anexado ao parecer** (no cartão do parecer, na aba **Deliberação e parecer**):
+   - Depois que o parecer do sistema é emitido, **só os membros da comissão** podem anexar documentos assinados fora do sistema, como a ata ou o parecer em papel. O tesoureiro e o presidente não anexam.
+   - Cada documento recebe um título e fica guardado com código de integridade (SHA-256). Um mesmo parecer pode receber mais de um documento.
+   - Um documento anexado **não pode ser substituído**. Por isso, confira o arquivo antes de enviar.
+   - Anexar **não encerra o período** e não muda a conclusão do parecer nem a situação do período.
+   - Quem pode ver a Comissão Fiscal baixa os documentos anexados pelo botão **Baixar documento assinado**.
+   - O Termo de Encerramento não recebe anexo.
+   - Pareceres externos anexados antes desta versão continuam valendo e podem ser baixados.
 
 > 💡 **Voto anônimo e parecer**
 >

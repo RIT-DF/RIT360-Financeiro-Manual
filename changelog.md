@@ -11,6 +11,27 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.166.1] — 2026-11-15
+
+### Corrigido
+
+- Anexar documento assinado ao parecer da Comissão Fiscal falhava ao enviar. Agora o envio funciona.
+
+## [1.166.0] — 2026-11-15
+
+### Adicionado
+
+- Na Comissão Fiscal, depois que o parecer do sistema é emitido, os membros da comissão podem anexar ao cartão do parecer um ou mais documentos assinados, como a ata ou o parecer em papel. Cada documento recebe um título e fica guardado com código de integridade (SHA-256). Um documento anexado não pode ser substituído.
+- Quem pode ver a Comissão Fiscal baixa os documentos anexados pelo botão **Baixar documento assinado**.
+
+### Modificado
+
+- Na Comissão Fiscal, anexar um documento assinado não encerra mais o período e não muda a conclusão do parecer. Os pareceres externos anexados antes desta versão continuam valendo e podem ser baixados.
+
+### Removido
+
+- Saiu a aba **Anexar parecer externo** da Comissão Fiscal.
+
 ## [1.165.0] — 2026-11-15
 
 ### Adicionado
