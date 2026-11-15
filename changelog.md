@@ -11,6 +11,18 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.159.0] — 2026-11-14
+
+### Adicionado
+
+- Os demonstrativos contábeis anexados à Comissão Fiscal agora são lidos automaticamente e comparados com o app: o saldo de caixa na data do documento e, quando houver fluxo de caixa, as entradas e saídas do período. Cada comparação mostra se os valores batem, a diferença e de onde saiu o número.
+- Quem é da gestão ou da comissão pode corrigir um valor lido; o valor original fica guardado, com quem corrigiu e quando.
+- A Pré-análise ganhou a verificação "Divergência com demonstrativo contábil".
+
+### Corrigido
+
+- A Pré-análise, lançada na versão 1.158.0, podia não carregar no período da comissão.
+
 ## [1.158.0] — 2026-11-14
 
 ### Adicionado
