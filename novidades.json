@@ -1,6 +1,17 @@
 {
   "versoes": [
     {
+      "versao": "1.162.0",
+      "data": "2026-11-15",
+      "destaque": true,
+      "resumo": "O tesoureiro agora abre o período da comissão fiscal e pode conferir tudo antes, com explicação em linguagem simples."
+    },
+    {
+      "versao": "1.161.0",
+      "data": "2026-11-15",
+      "destaque": false
+    },
+    {
       "versao": "1.160.1",
       "data": "2026-11-15",
       "destaque": false

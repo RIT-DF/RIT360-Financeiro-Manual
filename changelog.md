@@ -11,6 +11,39 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.162.0] — 2026-11-15
+
+<!-- destaque: O tesoureiro agora abre o período da comissão fiscal e pode conferir tudo antes, com explicação em linguagem simples. -->
+
+### Adicionado
+
+- Na Comissão Fiscal, o bloco **Conferir antes de abrir** mostra, antes de abrir o período, o que ainda precisa ser arrumado. Ele confere as verificações do intervalo de datas escolhido e traz uma explicação em linguagem simples sobre o que corrigir. A comissão não vê esse bloco.
+- Quando há um intervalo sem período entre o período anterior e o novo, a conferência mostra um alerta com a quantidade de meses ou dias. O alerta é só um aviso e não impede a abertura.
+
+### Modificado
+
+- O tesoureiro e o presidente abrem o período da Comissão Fiscal diretamente. Quem integra a comissão não abre período.
+- O aviso enviado à comissão quando um período é aberto traz as datas do período e quem abriu.
+- Na verificação de lançamentos alterados depois da abertura, os campos aparecem com nomes em português. Conciliar um lançamento deixou de contar como alteração, assim como a ligação com um pedido da loja.
+- Na prévia do extrato em PDF ou foto, a descrição aparece inteira e o valor vem formatado.
+
+## [1.161.0] — 2026-11-15
+
+### Adicionado
+
+- A conciliação por extrato aceita também **PDF e foto** (JPG ou PNG), além de OFX e QFX. O recurso está **em teste**, por isso aparece com o selo "Em teste" e um aviso.
+- Antes da leitura, o app informa qual provedor de inteligência artificial vai ler o extrato.
+- Em PDF com texto, CPF e CNPJ são retirados da cópia enviada à inteligência artificial. Esses números voltam marcados antes da prévia e de qualquer gravação. Foto e PDF sem texto são enviados inteiros, com um aviso.
+- O original do extrato fica guardado sem alterações, em área privada.
+- Conferência dos saldos: o extrato só segue para a prévia quando todas as contas fecham (saldo de cada linha, saldo do dia, totais e saldo inicial mais lançamentos igual ao saldo final). Se o documento não traz saldo, o app pede o saldo inicial e o final.
+- Prévia com o trecho lido ao lado do que foi entendido. Cada lançamento pode ser corrigido antes de conciliar, e daí em diante o caminho é o mesmo do OFX.
+- Lançamentos iguais no mesmo dia são diferenciados pela posição no extrato. Reenviar o mesmo extrato não duplica nada, e o app avisa quando o período se sobrepõe a um extrato já importado.
+- Novo tipo de uso do assistente: "extrato".
+
+### Corrigido
+
+- Na Comissão Fiscal, os pontos de atenção do Resumo passam a mostrar todos os pontos encontrados, com a mesma contagem da lista técnica.
+
 ## [1.160.1] — 2026-11-15
 
 ### Modificado
