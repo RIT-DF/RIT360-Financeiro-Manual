@@ -11,6 +11,17 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.165.0] — 2026-11-15
+
+### Adicionado
+
+- Na Comissão Fiscal, quem abre o período (o tesoureiro ou o presidente) escolhe o **prazo da comissão**. O campo vem preenchido com o prazo padrão das configurações e aceita datas a partir de amanhã. Na abertura automática nada muda: o prazo continua sendo o padrão das configurações.
+- Com o período aberto, quem abriu pode usar **Alterar prazo** para mudar a data, também para datas a partir de amanhã, com motivo opcional. A alteração fica registrada, e a comissão recebe um aviso do novo prazo.
+
+### Modificado
+
+- Nas configurações da Comissão Fiscal, o campo de dias passou a se chamar **Prazo padrão sugerido (dias)**.
+
 ## [1.164.0] — 2026-11-15
 
 ### Modificado

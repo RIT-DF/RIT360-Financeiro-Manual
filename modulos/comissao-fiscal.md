@@ -52,7 +52,7 @@ Cada período exibe seu intervalo de datas, a periodicidade estatutária e o sel
 
 ### Abrir um período encerrado {#abrir-periodo}
 
-Se a OSC estiver configurada para **abertura manual**, o período é aberto pela tela da própria Comissão Fiscal, no formulário **Abrir período encerrado**: informe a data inicial e a final e clique em **Abrir para análise**. O sistema cria o período e vincula os mandatos vigentes.
+Se a OSC estiver configurada para **abertura manual**, o período é aberto pela tela da própria Comissão Fiscal, no formulário **Abrir período encerrado**: informe a data inicial, a data final e o **Prazo da comissão**, e clique em **Abrir para análise**. O sistema cria o período e vincula os mandatos vigentes.
 
 [![Formulário Abrir período encerrado, com o alerta de intervalo sem período](/assets/screenshots/comissao-fiscal-abrir-periodo.png)](/assets/screenshots/comissao-fiscal-abrir-periodo.png)
 *O formulário de abertura, com o alerta de que há 14 dias sem período entre o anterior e este*
@@ -61,6 +61,9 @@ Se a OSC estiver configurada para **abertura manual**, o período é aberto pela
 - **Quem não abre:** quem é membro da **Comissão Fiscal** não abre período. A comissão só recebe o período depois que ele é aberto.
 - **Aviso à comissão:** ao abrir, a comissão recebe um aviso com as datas do período e o nome de quem abriu. Se esse aviso não tiver saído na hora, quem administra a comissão vê um alerta no **Resumo**; a rotina diária reenvia o aviso e o alerta some quando o reenvio acontece.
 - **Intervalo sem período:** se houver um espaço de tempo entre o fim do período anterior e a data inicial deste, a tela mostra um alerta com a quantidade de dias e a data de fim do período anterior. O alerta **não impede** a abertura: você decide se o intervalo é esperado.
+- **Prazo da comissão:** o campo vem com a sugestão de hoje mais o prazo padrão das configurações. Você pode escolher outra data, a partir de amanhã. Data de hoje ou anterior não é aceita.
+- **Alterar prazo:** com o período aberto, quem abriu pode clicar em **Alterar prazo**, escolher outra data a partir de amanhã e, se quiser, escrever um motivo (opcional). A alteração fica registrada e a comissão recebe um aviso com o novo prazo. O botão fica desativado depois que sai o parecer ou o Termo de Encerramento da rodada, e também quando o período já está encerrado.
+- **Abertura automática:** o período abre sozinho com o prazo padrão das configurações, sem escolha de data.
 
 > ⚠️ **Armadilha · Abrir antes de a conciliação estar pronta**
 >
