@@ -11,6 +11,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.158.0] — 2026-11-14
+
+### Adicionado
+
+- A Comissão Fiscal ganhou a Pré-análise: seis verificações automáticas sobre os lançamentos do período. Elas procuram despesa sem comprovante, linha do extrato sem lançamento, pedido aprovado pelo próprio solicitante, possível duplicidade, lançamento alterado depois da abertura do período e centro de custo acima do orçado. Cada verificação mostra o resultado e os itens que a sustentam; quando não há nada, a tela diz o que foi verificado.
+- De cada ponto da Pré-análise, quem pode abrir diligência abre uma com o formulário já preenchido.
+- A Pré-análise não substitui a análise da comissão nem sugere voto.
+
 ## [1.157.1] — 2026-11-14
 
 ### Corrigido
