@@ -9,8 +9,10 @@ permalink: /modulos/comissao-fiscal/
 
 O módulo **Comissão Fiscal** é o ambiente de trabalho onde os conselheiros fiscais da OSC examinam lançamentos, conferem comprovantes e extratos bancários, formulam diligências à tesouraria e emitem o parecer oficial conclusivo sobre a prestação de contas.
 
+<!-- CAPTURA PENDENTE: espaço de trabalho do período com as abas no topo, a faixa de seis cards e a aba Resumo abertos (imagem de 1.160.0). -->
+
 [![Painel de Fiscalização — Workspace](/assets/screenshots/comissao-fiscal-workspace.png)](/assets/screenshots/comissao-fiscal-workspace.png)
-*Painel de Fiscalização — Cabeçalho com métricas, semáforo dos Três Pilares e abas de conferência*
+*Painel de Fiscalização — imagem anterior à reorganização de 1.160.0; a captura nova está pendente*
 
 > 💡 **Por que isso importa**
 >
@@ -55,12 +57,38 @@ Cada período exibe seu intervalo de datas, a periodicidade estatutária e o sel
 
 ---
 
-## 3. O Semáforo dos Três Pilares da Conformidade
+## 2-A. As abas do espaço de trabalho {#abas}
 
-Ao abrir um período em análise, o cabeçalho do painel apresenta o **Semáforo dos Três Pilares** — a régua visual que resume instantaneamente a saúde fiscal das contas:
+Ao abrir um período, o espaço de trabalho mostra, logo abaixo do título, a **barra de abas**. Elas ficam sempre nesta ordem, e a página abre na primeira:
 
-[![Workspace com Semáforo dos Três Pilares](/assets/screenshots/comissao-fiscal-workspace.png)](/assets/screenshots/comissao-fiscal-workspace.png)
-*Cabeçalho do workspace: resumo financeiro e semáforo percentual dos 3 pilares*
+| Aba | O que você encontra nela |
+|---|---|
+| **Resumo** | A pré-análise do período, com o botão **Gerar pré-análise**, os números de apoio e as observações da gestão. É a aba inicial. |
+| **Comprovantes** | Cada despesa do período, com o comprovante anexado e o ateste. |
+| **Extrato bancário** | As linhas do extrato importado e a conciliação com os lançamentos. |
+| **Finalidade e projetos** | A distribuição das despesas por projeto, rubrica e finalidade. |
+| **Demonstrativos contábeis** | Os balanços, DRE, balancetes e notas anexados, cada um com o resultado da comparação com o app. |
+| **Diligências** | Os questionamentos formais à tesouraria e as respostas. |
+| **Deliberação e parecer** | Os votos, o quórum e a emissão do parecer. |
+| **Histórico** | Tudo o que aconteceu no período, em ordem. |
+
+Três pontos da organização:
+
+- **A aba aberta fica no endereço da página.** Dá para voltar com o botão do navegador, guardar o link ou mandá-lo a um colega, e ele abre na mesma aba.
+- **Em todas as abas, uma faixa de seis cards** fica sob a barra: receitas realizadas, despesas realizadas, superávit ou déficit, comprovantes, extrato bancário e projetos e finalidade. Os três últimos são os pilares de conformidade (seção 3) e levam à aba correspondente ao clicar.
+- **No celular, a barra de abas rola para o lado**, em uma única linha. Se a aba aberta estiver fora da tela, ela já aparece ao abrir a página.
+
+Na mesma página, o painel lateral **Conversa com a gestão** também está em todas as abas. Veja a seção 12.
+
+<!-- CAPTURA PENDENTE: barra de abas em uma linha e a faixa de seis cards, em tela de computador e em celular. -->
+
+---
+
+## 3. Os Três Pilares da Conformidade
+
+Os três pilares aparecem na faixa de cards, sob as abas. Cada um olha as contas por um ângulo, descrito a seguir:
+
+<!-- CAPTURA PENDENTE: faixa de cards com os três pilares de conformidade destacados. -->
 
 O semáforo analisa 100% dos lançamentos do período sob três ângulos obrigatórios:
 
@@ -155,9 +183,13 @@ Além dos lançamentos operacionais, o Conselho Fiscal deve analisar as peças c
 
 A tesouraria faz o upload dos PDFs assinados com certificado digital. A comissão pode abrir os arquivos em tela cheia e checar se os números contábeis batem com os relatórios gerenciais do RIT360.
 
+Na aba, cada documento vira **uma linha**, com o tipo, o título, o resultado geral da comparação (Convergente, Divergente ou Não comparado) e uma frase que diz o essencial. Por exemplo, para a DRE: *"A DRE não traz saldo de caixa; ela é usada como apoio, não é comparada."* O detalhe de cada comparação fica recolhido em **Ver detalhes**.
+
+<!-- CAPTURA PENDENTE: aba Demonstrativos contábeis com os documentos em linhas, uma delas com a frase da DRE, e a linha de um balanço com "Ver detalhes" aberto. -->
+
 ### Comparação com o app {#comparacao-com-o-app}
 
-Ao anexar um demonstrativo, o RIT360 Financeiro lê o arquivo automaticamente e compara os números dele com os lançamentos do app. Abaixo do documento aparece **Comparação com o app**, com um resultado geral:
+Ao anexar um demonstrativo, o RIT360 Financeiro lê o arquivo automaticamente e compara os números dele com os lançamentos do app. Ao abrir **Ver detalhes** da linha, aparece **Comparação com o app**, com um resultado geral:
 
 - **Convergente**: as linhas comparadas batem, centavo a centavo.
 - **Divergente**: pelo menos uma linha não bate. A tela mostra o valor do documento, o valor do app e a diferença.
@@ -189,6 +221,8 @@ Ao anexar um demonstrativo, o RIT360 Financeiro lê o arquivo automaticamente e 
 > Quando a diferença é pequena, a causa mais comum é uma conta que existe de um lado só, como uma carteira de pagamento online cadastrada no app e ainda não contabilizada pela contabilidade. Antes de concluir que há erro, abra **Contas lado a lado**. Ela mostra as contas de cada lado, sem comparar uma a uma, e a conta que aparece de um lado e não do outro costuma explicar a diferença.
 
 #### Ler de novo e corrigir valor lido {#comparacao-ler-de-novo-e-corrigir}
+
+Esses dois recursos ficam dentro de **Ver detalhes**, na linha do documento.
 
 - **Ler de novo** refaz a leitura automática do arquivo. Use quando a leitura falhou. O botão aparece para quem pode anexar demonstrativos (a gestão) e para quem integra a comissão.
 - **Corrigir valor lido** muda o número usado na comparação quando a leitura pegou o valor errado. O arquivo não muda. Digite o valor como está no documento, no formato brasileiro, por exemplo `1.234,56`. A data-base e as datas do intervalo têm correção própria, pelo botão **Corrigir**.
@@ -282,9 +316,9 @@ No canto superior direito, clique em **"Caderno de Fiscalização"**:
 
 ## 10. Observações da gestão para a comissão {#observacoes-da-gestao}
 
-Logo no topo do espaço de trabalho, acima da Pré-análise e das abas, fica o bloco **Observações da gestão para a comissão**. É onde quem administra as finanças explica o contexto do período antes de a comissão começar a ler.
+O bloco **Observações da gestão para a comissão** fica na aba **Resumo** e também fixado no topo do painel lateral **Conversa com a gestão**, que aparece em todas as abas. É onde quem administra as finanças explica o contexto do período antes de a comissão começar a ler.
 
-<!-- CAPTURA PENDENTE: bloco "Observações da gestão" no topo do espaço de trabalho, com uma versão atual e o botão "Escrever nova versão". -->
+<!-- CAPTURA PENDENTE: bloco "Observações da gestão" no topo do painel lateral, com uma versão atual e o botão "Escrever nova versão". -->
 
 > 💡 **Por que isso importa**
 >
@@ -331,9 +365,31 @@ O parecer fiscal em PDF tem uma seção **Observações da gestão**, com a vers
 
 ## 11. Pré-análise {#pre-analise}
 
-Logo abaixo das observações da gestão, a **Pré-análise** roda sete verificações automáticas sobre os lançamentos do período. Para cada uma, mostra o resultado e os itens que a sustentam.
+Na aba **Resumo**, a **Pré-análise** roda sete verificações automáticas sobre os lançamentos do período e mostra o resultado de cada uma com os itens que a sustentam. Ela tem duas partes: o **texto da pré-análise**, em linguagem clara, e, recolhida logo abaixo dele, a **lista técnica** das verificações.
 
-<!-- CAPTURA PENDENTE: Pré-análise com a lista das sete verificações, uma delas expandida com pontos. -->
+### O texto da pré-análise {#pre-analise-texto}
+
+- **Gerar pré-análise** está disponível para quem é da comissão ou da gestão. Ao clicar, o sistema refaz as verificações, lê os demonstrativos do período que ainda não foram lidos, reúne as observações da gestão e as respostas dela na conversa, e então escreve o texto com o que está em ordem e o que merece atenção. Cada geração consome cota do assistente da organização.
+- O texto **fica guardado** com data, hora e nome de quem gerou. Todos que abrem o Resumo veem a mesma versão.
+- **Gerar de novo** cria uma versão nova. As anteriores ficam recolhidas, para consulta.
+- Se os dados mudaram depois da última geração, o Resumo avisa que a pré-análise **pode estar desatualizada**. Gere de novo antes de usar o texto.
+- Junto do texto aparecem números de apoio já calculados, como o saldo de caixa do balanço comparado ao do app e a contagem de pontos por verificação.
+- Sem pré-análise gerada, o Resumo mostra os números de apoio e um convite para gerar.
+- Quando a geração falha, a tela diz o motivo: assistente desligado, cota acabada ou IA indisponível. Nunca aparece um texto vazio no lugar.
+
+O texto segue regras fixas:
+
+- **Nunca sugere voto** e nunca diz que as contas estão corretas.
+- **Não inventa.** Cada afirmação vem de um fato verificado pelo sistema.
+- **Explicação da gestão é atribuída a ela.** O texto escreve, por exemplo, "a gestão explica que… confira", e não trata a explicação como prova.
+- **Cada ponto de atenção traz onde conferir**: a aba e o item.
+- **Verificação sem nada a apontar** é dita com o que foi verificado, não com um "tudo certo".
+
+<!-- CAPTURA PENDENTE: aba Resumo com o texto gerado da pré-análise, a data e o autor da versão, e o aviso de "pode estar desatualizada" em outra versão. -->
+
+A lista técnica, recolhida abaixo do texto, mostra por verificação o resultado e os pontos. O texto resume essa lista.
+
+<!-- CAPTURA PENDENTE: lista técnica das sete verificações, uma delas expandida com pontos agrupados. -->
 
 > 💡 **Por que isso importa**
 >
@@ -360,7 +416,7 @@ Logo abaixo das observações da gestão, a **Pré-análise** roda sete verifica
 | Resultado | Quando aparece | O que fazer |
 |---|---|---|
 | **Nada encontrado** | A verificação rodou e não achou nenhum item. | Nada a fazer nessa verificação. |
-| **1 ponto** ou **N pontos** | Há itens. Clique na linha da verificação para abrir a lista. | Abra cada item e confira o lançamento. |
+| **1 ponto** ou **N pontos** | Há itens. Cada verificação mostra a quantidade no cabeçalho do grupo; clique nele para ver os pontos. Grupos com mais de três pontos vêm recolhidos. | Abra cada item e confira o lançamento. |
 | **Não se aplica** | A verificação não tem base no período: por exemplo, centro de custo sem orçamento aprovado para o ano, ou divergência sem nenhum demonstrativo anexado. | Veja se falta o orçamento ou o demonstrativo, se for o caso. |
 | **Não foi possível verificar** | A verificação falhou. O motivo aparece ao lado, quando há um. | Não é sinal de período limpo. Use **Verificar de novo**. |
 | **Verificando…** | A verificação ainda está rodando. | Aguarde. |
@@ -381,6 +437,28 @@ Cada ponto pode virar uma diligência. Clique em **Abrir diligência** ao lado d
 
 - O botão aparece só para membros da comissão do período, enquanto o período está em análise ou em revisão.
 - Quando o ponto é um lançamento, o título leva a ele em Movimentações, para conferir antes de decidir.
+
+---
+
+## 12. Conversa com a gestão {#conversa}
+
+A **Conversa com a gestão** é um painel lateral que aparece em todas as abas do período. A comissão faz perguntas, e a gestão responde. Cada mensagem mostra quem escreveu, de qual lado (comissão ou gestão) e a data e a hora.
+
+No computador, o painel fica ao lado do conteúdo. No celular, ele abre numa gaveta, pelo botão com o contador de mensagens novas.
+
+<!-- CAPTURA PENDENTE: painel "Conversa com a gestão" aberto, com observações fixadas no topo e duas perguntas e respostas. -->
+
+- **Quem escreve:** quem é da comissão no período, para perguntar, e quem é da gestão, para responder.
+- **Quem lê:** quem pode ver a Comissão Fiscal.
+- **Quando escrever:** enquanto o período está em **análise** ou em **revisão**. Fora disso, a conversa fica só para leitura.
+- **Mensagem não se edita nem se apaga.** Se algo saiu errado, escreva outra mensagem dizendo o que mudou.
+- **Transformar em diligência:** em cada mensagem, quem pode abrir diligência tem essa ação. Ela leva o texto, e o lançamento citado, para o formulário de diligência, onde a pergunta pode ser revisada antes do envio.
+- **Aviso no dia seguinte:** a gestão recebe um aviso quando a comissão faz perguntas novas, e a comissão recebe um aviso quando a gestão responde. Em cada dia há um único aviso, com a contagem.
+- **Onde fica registrado:** as mensagens aparecem no **Histórico** do período e na fotografia do parecer.
+
+> 💡 **Dica · Pergunta curta na conversa, questionamento formal na diligência**
+>
+> A conversa serve para esclarecer rápido. Quando a resposta precisa virar parte do processo, com prazo e registro formal, use **Transformar em diligência**. Lembre que o prazo de uma diligência conta em dias úteis (seção 8).
 
 ---
 
