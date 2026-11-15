@@ -533,9 +533,9 @@ Nas [Novidades](/changelog/) deste manual. Toda nova versão lançada é registr
 
 Cada módulo deste manual tem uma seção **Conceitos essenciais** que cobre os termos relevantes em linguagem simples. Movimentações cobre regime de caixa e estorno; Reembolsos cobre quórum e auto-aprovação; Pedidos cobre recorrente vs parcelado.
 
-### Posso anexar o parecer da Comissão Fiscal feito fora do sistema antes da votação?
+### Posso usar um parecer da Comissão Fiscal feito fora do sistema?
 
-Não. O parecer externo (PDF assinado em reunião) só pode ser anexado **depois da deliberação da comissão**, e o sistema guarda a impressão digital do arquivo para provar que ele **não mudou** desde o envio. Antes disso, o botão fica indisponível, com a explicação de quantos votos faltam. Ver [Comissão Fiscal → Emissão do parecer final](/modulos/comissao-fiscal/#emissão-do-parecer-final).
+Sim, mas só como **anexo**: um documento externo não substitui a votação nem encerra o período. O parecer oficial é sempre o do sistema, e ele sai sozinho quando todos os membros com direito a voto votam ou quando o prazo termina. Depois disso, os membros da comissão podem anexar ao cartão do parecer a ata ou o parecer assinado em papel. O sistema guarda a impressão digital do arquivo, para provar que ele **não mudou** desde o envio. Ver [Comissão Fiscal → Emissão do parecer final](/modulos/comissao-fiscal/#emissão-do-parecer-final).
 
 ### Meu voto na Comissão Fiscal é anônimo. Alguém consegue saber como votei?
 
