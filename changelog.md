@@ -11,6 +11,37 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.160.1] — 2026-11-15
+
+### Modificado
+
+- Na Comissão Fiscal, as abas agora ficam numa linha só. No celular, a linha rola para o lado, e a aba aberta fica visível ao abrir a página.
+
+### Corrigido
+
+- Na pré-análise, os pontos de atenção agora ficam agrupados por verificação, com a quantidade de pontos em cada grupo. Grupos com mais de três pontos vêm recolhidos. O texto gerado não muda.
+- O controle de uso do assistente passou a aceitar os motivos de encerramento que antes eram recusados: arquivo indisponível, arquivo grande, manual indisponível e pergunta fora do manual. Com isso, a leitura de demonstrativos e as consultas ao manual não falham mais ao registrar o encerramento.
+
+## [1.160.0] — 2026-11-15
+
+<!-- destaque: A Comissão Fiscal agora abre no Resumo, com pré-análise explicada e conversa com a gestão. -->
+
+### Adicionado
+
+- Botão **Gerar pré-análise** no Resumo da Comissão Fiscal. O texto é escrito em linguagem clara a partir das verificações do período, das observações da gestão e das respostas da gestão na conversa. Ele aponta o que merece atenção e diz onde conferir. Não sugere voto e não diz que as contas estão corretas.
+- A pré-análise fica guardada com data, hora e nome de quem gerou, e todos que abrem o Resumo veem a mesma versão. Gerar de novo cria uma versão nova e mantém as anteriores. Quando os dados mudam depois da última geração, o Resumo avisa que a pré-análise pode estar desatualizada.
+- Conversa com a gestão: um painel lateral, presente em todas as abas, em que a comissão faz perguntas e a gestão responde, com autor, papel e data. Mensagens não podem ser editadas nem apagadas. A conversa só recebe mensagens enquanto o período está em análise ou em revisão.
+- Em cada mensagem, quem pode abrir diligência tem a ação "Transformar em diligência", que leva o texto (e o lançamento citado, se houver) para o formulário de diligência.
+- Aviso no dia seguinte: a gestão recebe um aviso quando a comissão faz perguntas novas, e a comissão recebe um aviso quando a gestão responde. Há um único aviso por dia, com a contagem do dia.
+- As mensagens da conversa aparecem no Histórico do período.
+
+### Modificado
+
+- As abas da Comissão Fiscal ficam no topo do período, nesta ordem: Resumo, Comprovantes, Extrato bancário, Finalidade e projetos, Demonstrativos contábeis, Diligências, Deliberação e parecer e Histórico. A página abre no Resumo, e a aba aberta fica no endereço, para voltar e compartilhar o link.
+- Em todas as abas, uma faixa compacta mostra seis números: receitas realizadas, despesas realizadas, superávit ou déficit, comprovantes, extrato bancário e projetos e finalidade.
+- As observações da gestão e a pré-análise saíram do topo da página e passaram para o Resumo.
+- Na aba Demonstrativos contábeis, cada documento aparece numa linha, com o resultado geral e uma frase clara. A DRE informa que não traz saldo de caixa e é usada só como apoio. Os detalhes da comparação ficam recolhidos em "Ver detalhes".
+
 ## [1.159.4] — 2026-11-14
 
 ### Corrigido
