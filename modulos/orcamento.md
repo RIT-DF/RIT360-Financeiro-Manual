@@ -7,7 +7,7 @@ task: gerir-orcamento-anual
 role: [presidente, tesoureiro, gestor-centro-custo]
 routes: [/orcamento]
 screenshots: [orcamento-elaboracao, orcamento-previsto-realizado, orcamento-reconciliacao]
-source_docs: [PRODUCT.md#orcamento, changelog v1.154.0, changelog v1.155.0, changelog v1.167.0, changelog v1.168.0, changelog v1.168.1]
+source_docs: [PRODUCT.md#orcamento, changelog v1.154.0, changelog v1.155.0, changelog v1.167.0, changelog v1.168.0, changelog v1.168.1, changelog v1.169.0]
 last_verified: 2026-11-15
 status: publicado
 ---
@@ -346,6 +346,17 @@ O módulo conversa com planilhas e relatórios para caber no fluxo que a sua OSC
 - **Exportar e importar em XLSX** — leve o orçamento para uma planilha (Excel, Google Sheets) para trabalhar offline, discutir com a diretoria ou preparar em conjunto, e depois **importe de volta**. Útil para OSCs que montam o orçamento em reunião, na planilha, antes de oficializar no sistema. A planilha tem três abas: **Estimativas** (as linhas do orçamento, com a marca de investimento e a observação de cada uma), **Metas e limites** (cada meta e cada limite, com o jeito de preencher e os valores de cada mês) e **Observações** (o texto do plano). A verba de valor único vem numa aba própria, **Verba sem categoria**, que a importação não lê (ver [Verba do ano em valor único](#verba-do-ano-valor-unico)). A importação aceita também as planilhas dos formatos anteriores: uma planilha antiga, sem as abas novas, entra com as linhas como **estimativas**.
 - **Relatório de execução** — um relatório do previsto × realizado do ano, exportável em **PDF** (para anexar à prestação de contas ou enviar a financiadores) e em **Excel** (para análise).
 - **Execução por Centro de Custo na prestação de contas** — a prestação de contas da OSC ganhou uma seção **"Execução por Centro de Custo"**, mostrando, para cada área, o previsto, o realizado e o quanto foi consumido. Ver [Relatórios → Exportação](/modulos/relatorios/#exportação).
+
+### PDF da proposta e PDF da execução {#pdf-do-orcamento}
+
+Na tela do orçamento, ao lado de **Exportar planilha**, há dois botões que geram o orçamento em PDF, pronto para ler, imprimir ou enviar:
+
+- **PDF da proposta** — o plano como vai para aprovação. Traz a capa com o logo da organização, os indicadores em cards, as metas e os limites explicados em frases, o quadro por categoria com o total e a observação de cada linha, o gráfico mensal, as **observações do plano** e o anexo mês a mês.
+- **PDF da execução** — o acompanhamento do ano. Traz o previsto contra o realizado até o último mês fechado, os **pontos de atenção**, o quadro por categoria, o gráfico mensal e o anexo mês a mês.
+
+A visão por **centro de custo** aparece nos dois PDFs só quando o orçamento usa centros de custo.
+
+O PDF é preparado em segundo plano. Logo depois do pedido, a tela abre a página do documento, que traz o download quando o arquivo estiver pronto. Ele também fica na página **Documentos**, do menu, e o aviso chega quando estiver pronto.
 
 ## Alertas automáticos
 

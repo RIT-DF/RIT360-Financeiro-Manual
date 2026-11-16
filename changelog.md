@@ -11,6 +11,23 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.169.0] — 2026-11-15
+
+### Adicionado
+
+- No **Orçamento anual**, os botões **PDF da proposta** e **PDF da execução** geram um documento em PDF. Ele traz a capa com o logo da organização, os indicadores em cards, as metas e os limites explicados em frases, um quadro por categoria com o total e a observação de cada linha, o gráfico mensal e um anexo mês a mês.
+- A **proposta** traz as observações do plano, para a aprovação. A **execução** traz o previsto contra o realizado até o último mês fechado e os pontos de atenção.
+- A visão por centro de custo só aparece no PDF quando o orçamento usa centros de custo.
+- O PDF é preparado em segundo plano. A tela abre a página do documento logo após o pedido, e o aviso chega quando o arquivo está pronto. O documento também aparece na página **Documentos**.
+
+### Corrigido
+
+- O texto da IA na **conferência antes de abrir** e na **pré-análise** da Comissão Fiscal:
+  - cita a quantidade total de pontos de cada verificação, como "28 despesas estão sem comprovante", e não só os que aparecem na lista;
+  - deixou de falar em "pontos omitidos" e em "lista de pontos detalhados". Quando há mais pontos do que a tela mostra, o texto orienta a conferir a lista completa na tela;
+  - junta numa frase só as verificações que não se aplicam;
+  - só diz que a gestão explicou algo quando a própria gestão escreveu essa explicação ou resposta.
+
 ## [1.168.1] — 2026-11-15
 
 ### Adicionado
