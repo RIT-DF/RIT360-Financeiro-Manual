@@ -5,7 +5,7 @@ parent: "Módulos"
 permalink: /modulos/comissao-fiscal/
 ---
 
-> Disponível para membros da **Comissão Fiscal** e em modo consulta para **Presidente** e **Diretor**.
+> Disponível para membros da **Comissão Fiscal** e em modo consulta para **Presidente** e **Diretor**. Quando todos os votos já foram dados ou o prazo de deliberação terminou e o parecer do sistema está publicado, o **Presidente** e o **Tesoureiro** com acesso ativo à organização também podem gerar uma nova apresentação do PDF, sem reabrir a votação.
 
 O módulo **Comissão Fiscal** é o ambiente de trabalho onde os conselheiros fiscais da OSC examinam lançamentos, conferem comprovantes e extratos bancários, formulam diligências à tesouraria e emitem o parecer oficial conclusivo sobre a prestação de contas.
 
@@ -16,7 +16,7 @@ O módulo **Comissão Fiscal** é o ambiente de trabalho onde os conselheiros fi
 >
 > A maioria dos conselheiros fiscais é formada por **voluntários que atuam intensamente apenas uma ou duas vezes ao ano**, às vésperas da Assembleia Geral Ordinária de prestação de contas. 
 >
-> No passado, esse trabalho exigia folhear pastas físicas com centenas de notas grampeadas a extratos em papel. No RIT360 Financeiro, todo o processo é digital: você analisa a conformidade das contas em qualquer computador, cruza movimentações com o extrato bancário em segundos, confere comprovantes com um clique e gera o **Caderno de Fiscalização** e o **Parecer Conclusivo** com validade jurídica e integridade criptográfica.
+> No passado, esse trabalho exigia folhear pastas físicas com centenas de notas grampeadas a extratos em papel. No RIT360 Financeiro, todo o processo é digital: você analisa a conformidade das contas em qualquer computador, cruza movimentações com o extrato bancário, confere comprovantes e gera o **Caderno de Fiscalização** e o **Parecer Conclusivo**, com registro eletrônico da deliberação e informações de integridade do arquivo.
 
 > 🔒 **Regra de ouro: A Comissão Fiscal vê tudo e não opera nada**
 >
@@ -75,36 +75,25 @@ Se a OSC estiver configurada para **abertura manual**, o período é aberto pela
 
 ## 2-B. Conferir antes de abrir {#conferir-antes-de-abrir}
 
-Antes de abrir o período para a comissão, a gestão pode rodar as **verificações da Comissão Fiscal** sobre um intervalo de datas e arrumar o que aparecer. O bloco **Conferir antes de abrir** fica no topo da tela de Comissão Fiscal, acima da lista de períodos.
+Antes de abrir um período para a Comissão Fiscal, o Presidente ou o Tesoureiro pode conferir um intervalo de datas. Isso ajuda a localizar pendências enquanto ainda há tempo para corrigi-las, sem iniciar a deliberação da comissão.
 
-[![Bloco Conferir antes de abrir, com as sete verificações e a explicação em linguagem simples](/assets/screenshots/comissao-fiscal-conferir-antes.png)](/assets/screenshots/comissao-fiscal-conferir-antes.png)
-*A conferência de um intervalo: cada verificação com a quantidade de pontos, e a explicação em linguagem simples logo abaixo*
+Na tela **Comissão Fiscal**, clique em **Conferir antes de abrir**. A conferência abre em uma janela ampla; no celular, ela aparece como um painel que sobe pela parte inferior da tela. Informe as datas e clique em **Conferir**. O sistema roda as **sete verificações** no intervalo e mostra, para cada uma, a quantidade de pontos ou **Nada encontrado**. Duas verificações — **Lançamento alterado depois da abertura do período** e **Divergência com demonstrativo contábil** — aparecem como **Não se aplica: antes de abrir** enquanto o período ainda não existe; elas só ganham resultado depois que ele é aberto. A conferência não abre um período nem envia informação à comissão.
 
-**Quem usa:** a gestão, incluindo o **tesoureiro**. Membro da Comissão Fiscal não vê este bloco, porque a conferência é da gestão antes da leitura.
+Você pode fechar a janela e voltar a ela depois: o resultado da consulta continua disponível para a organização. Ao trocar de organização, os resultados anteriores não são reaproveitados. Se quiser conferir novamente o mesmo intervalo, clique em **Conferir**; a consulta é refeita.
 
-**O que faz:**
+### Pedir uma explicação dos resultados
 
-1. Informe a data de início e a data de fim e clique em **Conferir**.
-2. O sistema roda as **sete verificações** no intervalo e mostra, para cada uma, a quantidade de pontos ou **Nada encontrado**.
-3. Duas verificações — **Lançamento alterado depois da abertura do período** e **Divergência com demonstrativo contábil** — aparecem como **Não se aplica: antes de abrir** enquanto o período ainda não existe. Elas só ganham resultado depois que o período é aberto.
+Depois da consulta, use a ação de explicação por IA se quiser um resumo em linguagem simples dos pontos encontrados. A explicação usa somente os pontos da conferência; por exemplo, pode indicar que uma despesa está sem comprovante ou que uma linha do extrato precisa ser conciliada. Ela **não diz se as contas estão certas**. Cada explicação registra quem a gerou e a data e a hora. Gerar outra explicação consome novamente a cota mensal do assistente da organização; fechar e reabrir a janela não gera outra explicação automaticamente.
 
-**Nada é aberto nem enviado à comissão.** A conferência é só da gestão, e serve para você arrumar as pendências antes de abrir.
-
-**A explicação em linguagem simples.** Abaixo das verificações, a IA escreve o que corrigir, usando só os pontos que a conferência encontrou. Ela diz, por exemplo, que cada despesa sem comprovante precisa de um anexo, e que cada linha do extrato sem lançamento precisa de uma movimentação ou de uma conciliação com o lançamento que já existe. Ela **não diz se as contas estão certas**.
-
-- Cada explicação traz quem a gerou e a data e a hora.
-- **Gerar de novo** cria outra explicação. Faça isso depois de corrigir algo, para que o texto reflita a situação atual.
-- A explicação **consome a cota mensal do assistente** da organização, a cada geração.
-
-> 💡 **Dica · Conferir, corrigir, conferir de novo**
+> 💡 **Dica · Confira de novo depois de corrigir**
 >
-> Rode a conferência, arrume os pontos que aparecerem e rode de novo no mesmo intervalo. Só então gere a explicação final. Assim a explicação fala do que está pendente, e não do que você já corrigiu.
+> Use **Conferir** novamente após ajustar lançamentos ou documentos. Isso atualiza os resultados para o intervalo escolhido. Gere uma nova explicação somente se ela ajudar a interpretar o resultado atualizado.
 
 > ⚠️ **Armadilha · Tratar "Nada encontrado" como período limpo**
 >
-> **O erro:** achar que, se a conferência não encontrou pontos, a comissão não terá o que apontar.
+> **O erro:** considerar que a conferência substitui a leitura da comissão ou cobre verificações que só existem dentro de um período aberto.
 >
-> **A consequência:** as duas verificações que dependem do período aberto ainda não rodaram. "Nada encontrado" vale só para o que foi verificado naquele momento.
+> **A consequência:** a conferência prévia é uma ajuda para a gestão; ela não é parecer, não abre o período e não decide se as contas estão corretas. Depois de abrir, a comissão ainda realiza a própria análise.
 
 ---
 
@@ -344,8 +333,8 @@ O sistema calcula em tempo real o quórum estatutário (Maioria Simples, Maioria
 >
 > Se todos os membros votarem sem que os votos alcancem o apoio mínimo, **o sistema não presume aprovação**. Ele gera na hora o **Termo de Encerramento**. O mesmo acontece se o prazo final de deliberação vencer sem votos suficientes para uma conclusão: o termo sai no fim do prazo. Ele é um documento que registra os votos dados, quem não votou e a conclusão *sem decisão válida*. O termo não é parecer e não aprova nem reprova as contas. Ele fica disponível para baixar na aba **Deliberação e parecer**.
 
-### Emissão do Parecer Final
-O parecer é emitido pelo sistema, sem ação manual, em uma destas situações:
+### Emissão e nova apresentação do parecer
+O sistema emite o parecer original automaticamente quando a deliberação chega a uma conclusão válida — após todos votarem ou no encerramento do prazo, conforme o caso. Se não houver votos suficientes, é emitido o Termo de Encerramento, sem aprovação tácita.
 
 1. **Emissão automática pelo RIT360** (sem nenhuma ação manual):
    - **Ao último voto**: quando todos os membros com direito a voto já votaram e os votos alcançam o apoio mínimo, o parecer sai na hora. Na aba **Deliberação e parecer** ele aparece com o selo *Emitido porque todos votaram*.
@@ -354,11 +343,21 @@ O parecer é emitido pelo sistema, sem ação manual, em uma destas situações:
    - Se todos votarem sem alcançar o apoio mínimo, sai o Termo de Encerramento na hora. Se o prazo terminar com votos insuficientes, ele sai no encerramento do prazo.
    - Com nenhum membro apto a votar, a rodada só encerra no prazo.
    - O aviso dessas emissões e encerramentos vai a quem pode ver a Comissão Fiscal.
-   - O parecer sai sempre com o texto padrão.
-   - O sistema compila o cabeçalho oficial da OSC, os dados do exercício, o extrato do semáforo dos 3 pilares, a lista de diligências saneadas, as ressalvas remanescentes, os votos (com o nome de cada conselheiro na modalidade Nominal; só o placar na Anônima) e a conclusão final.
-   - No lugar de linhas para assinatura à mão, o PDF traz o **Registro eletrônico da deliberação**: cada membro aparece com a sua situação. Quem votou aparece com a data e a hora do voto (votos registrados antes desta mudança aparecem como *Votou, sem hora registrada*). Quem não votou aparece como *Não votou*, e quem estava impedido aparece com o motivo. Na modalidade Anônima, o registro mostra quem votou e quando, mas não como votou.
-   - O parecer é gerado em formato PDF assinado eletronicamente com carimbo de data/hora e **código verificador de integridade SHA-256**, permitindo que qualquer pessoa confirme a autenticidade do documento escaneando o QR Code ou digitando o hash no site oficial.
-2. **Documento assinado anexado ao parecer** (no cartão do parecer, na aba **Deliberação e parecer**):
+   - O parecer reúne a identificação institucional e do exercício, um resumo da votação, os votos e justificativas, a situação final e o texto do parecer. O voto nominal identifica os membros; o voto anônimo não mostra como cada pessoa votou.
+   - O PDF não reproduz os lançamentos nem os detalhes financeiros, as observações da gestão ou os pilares de análise. Esses materiais continuam disponíveis nas respectivas áreas do período.
+   - O documento inclui o registro eletrônico da deliberação: mostra a situação de cada membro; quem votou aparece com data e hora. Votos registrados antes da gravação de horários aparecem como *Votou, sem hora registrada*. Quem não votou aparece como *Não votou* e quem estava impedido aparece com o motivo. Na modalidade Anônima, o registro mostra quem votou e quando, mas não como votou.
+   - No final, o documento apresenta a assinatura eletrônica e informações de integridade. O hash impresso no PDF identifica o snapshot congelado usado na deliberação. O hash do próprio PDF fica disponível na tela do sistema e é conferido durante o download. Eles ajudam a comparar integridade, mas não são certificado digital nem apontam para um verificador público.
+   - A aparência do PDF segue o padrão institucional do relatório de Prestação de Contas.
+2. **Nova apresentação de um parecer já publicado**:
+   - Depois que todos os votos foram dados ou o prazo terminou e o parecer do sistema foi publicado, o Presidente ou o Tesoureiro com acesso ativo à organização pode solicitar uma versão atualizada da apresentação em PDF. Membros da Comissão Fiscal com permissão de deliberação também podem fazê-lo.
+   - A nova apresentação usa o mesmo snapshot congelado e os mesmos votos. Ela não reabre a votação, não altera a conclusão nem substitui o parecer original. Baixe o original ou a apresentação atualizada pela ação correspondente.
+   - Se a geração falhar, use a opção de tentar novamente. A tentativa continua vinculada ao mesmo parecer publicado.
+   - Essa permissão não dá ao Presidente ou ao Tesoureiro acesso para votar, revisar votos ou emitir o parecer original.
+
+> 💡 **Exemplo · Atualizar a apresentação de 2025**
+>
+> Se a votação das contas de 2025 já terminou e o parecer foi publicado, o Presidente ou o Tesoureiro pode gerar o PDF atualizado depois de uma mudança visual do documento. O PDF original continua disponível; a nova cópia apresenta os mesmos votos e a mesma conclusão, sem abrir outra votação.
+3. **Documento assinado anexado ao parecer** (no cartão do parecer, na aba **Deliberação e parecer**):
    - Depois que o parecer do sistema é emitido, **só os membros da comissão** podem anexar documentos assinados fora do sistema, como a ata ou o parecer em papel. O tesoureiro e o presidente não anexam.
    - Cada documento recebe um título e fica guardado com código de integridade (SHA-256). Um mesmo parecer pode receber mais de um documento.
    - Um documento anexado **não pode ser substituído**. Por isso, confira o arquivo antes de enviar.
@@ -420,7 +419,7 @@ A comissão não precisa ficar conferindo a tela. Em cada dia com publicação, 
 
 ### Como aparecem no parecer em PDF {#observacoes-no-parecer}
 
-O parecer fiscal em PDF tem uma seção **Observações da gestão**, com a versão atual, o autor e a data, e as versões anteriores, se houver. Se a gestão não publicou nada, a seção diz: *"A gestão não registrou observações neste período."*
+As observações da gestão ficam preservadas no espaço de trabalho e no dossiê da análise. Elas não são incluídas no PDF do parecer, que registra a deliberação e sua conclusão.
 
 > ✓ **Dica · Escreva o que a comissão precisa para ler**
 >
@@ -579,7 +578,7 @@ Não. O resultado diz que a verificação falhou, não que não há nada a apont
 - **Conciliação OFX**: Cruzamento digital entre os registros contábeis do sistema e o arquivo padronizado de extrato bancário (OFX) fornecido pelas instituições financeiras.
 - **Caderno de Fiscalização**: Livro eletrônico consolidado que reúne toda a documentação comprobatória, extratos, demonstrativos, diligências e pareceres do exercício.
 - **Diligência**: Expediente oficial de fiscalização destinado a requerer esclarecimentos ou complementação de documentos antes do encerramento da instrução.
-- **Hash SHA-256**: Código alfanumérico único gerado matematicamente a partir do conteúdo do parecer. Se uma única vírgula for alterada no documento após a emissão, o hash muda completamente, garantindo inviolabilidade perante terceiros.
+- **Hash SHA-256**: Código calculado para conferir a integridade de um conteúdo. No parecer, o hash impresso identifica o snapshot dos dados congelados; o hash do PDF fica na tela do sistema e é conferido durante o download. Hash não é certificado digital nem consulta pública de autenticidade.
 - **Impedimento Ético**: Situação em que o conselheiro fiscal fica temporariamente impedido de manifestar-se ou votar em atos ou despesas das quais tenha participado como executor, solicitante ou beneficiário.
 - **Parecer Favorável com Ressalva**: Juízo do conselho que aprova as contas no seu conjunto, mas aponta impropriedades pontuais de natureza formal que devem ser corrigidas pela diretoria nos exercícios futuros.
 - **Pré-análise**: Conjunto de verificações automáticas sobre os lançamentos do período. Aponta onde olhar; não substitui a análise da comissão e não sugere voto.

@@ -11,6 +11,13 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/){:
 
 ---
 
+## [1.170.3] — 2026-11-16
+
+### Adicionado
+
+- O parecer fiscal em PDF tem apresentação institucional, com capa da prestação de contas, resumo da votação e votos com suas justificativas. Presidente e Tesoureiro ativos também podem gerar ou retomar a apresentação de um parecer do sistema já emitido, sem receber permissão para votar e sem alterar o arquivo original ou a deliberação.
+- A conferência antes de abrir o período fica recolhida atrás de um botão e abre em uma janela ampla que se adapta a computador e celular. As verificações continuam as mesmas.
+
 ## [1.169.0] — 2026-11-15
 
 ### Adicionado
